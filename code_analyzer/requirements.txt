@@ -1,19 +1,19 @@
 # Vector Database and Graph Database
-qdrant-client==1.7.0
-neo4j==5.14.0
+qdrant-client>=1.7.1
+neo4j>=5.14.0
 
 # Code Analysis
-tree-sitter==0.20.4
-javalang==0.13.0
-sqlparse==0.4.4
+tree-sitter>=0.20.4
+javalang>=0.13.0
+sqlparse>=0.4.4
 
 # Embeddings and AI
-sentence-transformers==2.2.2
-transformers==4.35.0
-torch==2.1.0
+sentence-transformers>=2.2.2
+transformers>=4.35.0
+torch>=2.1.0
 
 # Utilities
-python-dotenv==1.0.0
-tqdm==4.66.1
-pandas==2.1.3
-numpy==1.26.2
+python-dotenv>=1.0.0
+tqdm>=4.66.1
+pandas>=2.1.3
+numpy>=1.26.2

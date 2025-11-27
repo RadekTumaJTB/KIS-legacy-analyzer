@@ -1,8 +1,8 @@
 """SQL code chunker."""
 import sqlparse
 from typing import List
-from .base_chunker import BaseChunker
-from ..models import CodeChunk, ChunkType
+from chunkers.base_chunker import BaseChunker
+from models import CodeChunk, ChunkType
 
 
 class SQLChunker(BaseChunker):

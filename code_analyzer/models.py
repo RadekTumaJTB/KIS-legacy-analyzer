@@ -26,6 +26,7 @@ class DependencyType(Enum):
     REFERENCES = "references"
     INCLUDES = "includes"
     QUERIES = "queries"
+    CONTAINS = "contains"  # For JSP page containing scriptlets
 
 
 @dataclass
@@ -47,6 +48,20 @@ class CodeChunk:
 
     def to_dict(self) -> Dict:
         """Convert to dictionary for storage."""
+        # Convert metadata values to JSON-serializable types
+        serializable_metadata = {}
+        for key, value in (self.metadata or {}).items():
+            if isinstance(value, set):
+                serializable_metadata[key] = list(value)
+            elif isinstance(value, list):
+                # Handle lists that might contain sets
+                serializable_metadata[key] = [
+                    list(item) if isinstance(item, set) else item
+                    for item in value
+                ]
+            else:
+                serializable_metadata[key] = value
+
         return {
             "id": self.id,
             "file_path": self.file_path,
@@ -58,9 +73,9 @@ class CodeChunk:
             "language": self.language,
             "package": self.package,
             "module": self.module,
-            "imports": self.imports,
-            "dependencies": self.dependencies,
-            "metadata": self.metadata
+            "imports": list(self.imports) if isinstance(self.imports, set) else self.imports,
+            "dependencies": list(self.dependencies) if isinstance(self.dependencies, set) else self.dependencies,
+            "metadata": serializable_metadata
         }
 
 

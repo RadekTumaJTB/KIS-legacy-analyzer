@@ -1,7 +1,7 @@
 """Analyze dependencies between code chunks."""
 import re
 from typing import List, Dict, Set
-from ..models import CodeChunk, Dependency, DependencyType
+from models import CodeChunk, Dependency, DependencyType
 
 
 class DependencyAnalyzer:
@@ -61,23 +61,39 @@ class DependencyAnalyzer:
         # Analyze extends/implements from metadata
         if chunk.metadata:
             if "extends" in chunk.metadata and chunk.metadata["extends"]:
-                target_id = self._find_chunk_by_name(chunk.metadata["extends"])
-                if target_id:
-                    dependencies.append(Dependency(
-                        source_id=chunk.id,
-                        target_id=target_id,
-                        dependency_type=DependencyType.EXTENDS
-                    ))
-
-            if "implements" in chunk.metadata:
-                for interface in chunk.metadata["implements"]:
-                    target_id = self._find_chunk_by_name(interface)
+                extends_value = chunk.metadata["extends"]
+                # Handle both string and list of extends
+                if isinstance(extends_value, list):
+                    for ext in extends_value:
+                        target_id = self._find_chunk_by_name(ext)
+                        if target_id:
+                            dependencies.append(Dependency(
+                                source_id=chunk.id,
+                                target_id=target_id,
+                                dependency_type=DependencyType.EXTENDS
+                            ))
+                else:
+                    target_id = self._find_chunk_by_name(extends_value)
                     if target_id:
                         dependencies.append(Dependency(
                             source_id=chunk.id,
                             target_id=target_id,
-                            dependency_type=DependencyType.IMPLEMENTS
+                            dependency_type=DependencyType.EXTENDS
                         ))
+
+            if "implements" in chunk.metadata and chunk.metadata["implements"]:
+                implements_value = chunk.metadata["implements"]
+                # Ensure implements is iterable
+                if isinstance(implements_value, (list, tuple)):
+                    for interface in implements_value:
+                        if interface:  # Skip None or empty strings
+                            target_id = self._find_chunk_by_name(interface)
+                            if target_id:
+                                dependencies.append(Dependency(
+                                    source_id=chunk.id,
+                                    target_id=target_id,
+                                    dependency_type=DependencyType.IMPLEMENTS
+                                ))
 
         # Analyze method calls in content
         method_calls = self._extract_method_calls(chunk.content)
@@ -97,6 +113,18 @@ class DependencyAnalyzer:
         """Analyze JSP-specific dependencies."""
         dependencies = []
 
+        # For JSP_PAGE: connect to its scriptlets
+        if chunk.chunk_type.value == "jsp_page" and chunk.metadata:
+            if "scriptlet_ids" in chunk.metadata:
+                for scriptlet_id in chunk.metadata["scriptlet_ids"]:
+                    if scriptlet_id in self.chunk_registry:
+                        dependencies.append(Dependency(
+                            source_id=chunk.id,
+                            target_id=scriptlet_id,
+                            dependency_type=DependencyType.CONTAINS,
+                            metadata={"relationship": "page_contains_scriptlet"}
+                        ))
+
         # Analyze includes
         if chunk.metadata and "includes" in chunk.metadata:
             for include in chunk.metadata["includes"]:
@@ -109,7 +137,31 @@ class DependencyAnalyzer:
                         metadata={"file": include}
                     ))
 
-        # Analyze Java references in scriptlets
+        # Analyze imports (similar to Java)
+        for imp in chunk.imports:
+            target_id = self._find_chunk_by_import(imp)
+            if target_id:
+                dependencies.append(Dependency(
+                    source_id=chunk.id,
+                    target_id=target_id,
+                    dependency_type=DependencyType.IMPORTS,
+                    metadata={"import": imp}
+                ))
+
+        # Analyze useBeans
+        if chunk.metadata and "use_beans" in chunk.metadata:
+            for bean_class in chunk.metadata["use_beans"]:
+                class_name = bean_class.split('.')[-1]
+                target_id = self._find_chunk_by_name(class_name)
+                if target_id:
+                    dependencies.append(Dependency(
+                        source_id=chunk.id,
+                        target_id=target_id,
+                        dependency_type=DependencyType.REFERENCES,
+                        metadata={"useBean": bean_class}
+                    ))
+
+        # Analyze Java references (class instantiations, type references)
         java_refs = self._extract_java_references(chunk.content)
         for ref in java_refs:
             target_id = self._find_chunk_by_name(ref)
@@ -120,6 +172,32 @@ class DependencyAnalyzer:
                     dependency_type=DependencyType.REFERENCES,
                     metadata={"reference": ref}
                 ))
+
+        # Analyze method calls in JSP/scriptlets (similar to Java)
+        method_calls = self._extract_method_calls(chunk.content)
+        for method_call in method_calls:
+            target_id = self._find_chunk_by_name(method_call)
+            if target_id and target_id != chunk.id:
+                dependencies.append(Dependency(
+                    source_id=chunk.id,
+                    target_id=target_id,
+                    dependency_type=DependencyType.CALLS,
+                    metadata={"method": method_call}
+                ))
+
+        # Extract more Java patterns from scriptlets
+        if chunk.chunk_type.value == "jsp_scriptlet":
+            # Static method calls: ClassName.methodName()
+            static_calls = self._extract_static_calls(chunk.content)
+            for class_name in static_calls:
+                target_id = self._find_chunk_by_name(class_name)
+                if target_id:
+                    dependencies.append(Dependency(
+                        source_id=chunk.id,
+                        target_id=target_id,
+                        dependency_type=DependencyType.CALLS,
+                        metadata={"static_call": class_name}
+                    ))
 
         return dependencies
 
@@ -151,10 +229,35 @@ class DependencyAnalyzer:
 
     def _extract_java_references(self, content: str) -> Set[str]:
         """Extract Java class references from JSP."""
-        # Look for class instantiation and type references
-        pattern = r'new\s+([A-Z]\w+)|([A-Z]\w+)\s+\w+\s*='
-        matches = re.findall(pattern, content)
-        return {match[0] or match[1] for match in matches if match[0] or match[1]}
+        refs = set()
+
+        # Pattern 1: new ClassName()
+        new_pattern = r'new\s+([A-Z][a-zA-Z0-9_]*)'
+        refs.update(re.findall(new_pattern, content))
+
+        # Pattern 2: ClassName variableName =
+        type_pattern = r'([A-Z][a-zA-Z0-9_]*)\s+\w+\s*='
+        refs.update(re.findall(type_pattern, content))
+
+        # Pattern 3: (ClassName) cast
+        cast_pattern = r'\(\s*([A-Z][a-zA-Z0-9_]*)\s*\)'
+        refs.update(re.findall(cast_pattern, content))
+
+        # Pattern 4: ClassName.staticField or ClassName.staticMethod
+        static_ref_pattern = r'([A-Z][a-zA-Z0-9_]*)\.[a-zA-Z]'
+        refs.update(re.findall(static_ref_pattern, content))
+
+        # Pattern 5: instanceof ClassName
+        instanceof_pattern = r'instanceof\s+([A-Z][a-zA-Z0-9_]*)'
+        refs.update(re.findall(instanceof_pattern, content))
+
+        return refs
+
+    def _extract_static_calls(self, content: str) -> Set[str]:
+        """Extract static method calls (ClassName.methodName)."""
+        # Pattern: ClassName.methodName(
+        pattern = r'([A-Z][a-zA-Z0-9_]*)\.\w+\s*\('
+        return set(re.findall(pattern, content))
 
     def _extract_table_references(self, content: str) -> Set[str]:
         """Extract table references from SQL."""

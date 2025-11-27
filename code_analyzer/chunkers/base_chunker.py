@@ -1,7 +1,7 @@
 """Base chunker interface."""
 from abc import ABC, abstractmethod
 from typing import List
-from ..models import CodeChunk
+from models import CodeChunk
 
 
 class BaseChunker(ABC):

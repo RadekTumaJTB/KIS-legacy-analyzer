@@ -5,11 +5,11 @@ from pathlib import Path
 from typing import List
 from tqdm import tqdm
 
-from .config import SOURCES_DIR, OUTPUT_DIR, REPORT_DIR
-from .models import CodeChunk
-from .chunkers import JavaChunker, JSPChunker, SQLChunker
-from .analyzers import DependencyAnalyzer
-from .storage import QdrantStore, Neo4jStore
+from config import SOURCES_DIR, OUTPUT_DIR, REPORT_DIR
+from models import CodeChunk
+from chunkers import JavaChunker, JSPChunker, SQLChunker
+from analyzers import DependencyAnalyzer
+from storage import QdrantStore, Neo4jStore
 
 
 class CodeAnalyzerPipeline:

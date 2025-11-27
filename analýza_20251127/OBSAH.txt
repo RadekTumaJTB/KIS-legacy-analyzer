@@ -1,0 +1,106 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║                 ANALÝZA APLIKACE KIS - OBSAH                          ║
+║                     Datum: 2025-11-27                                ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+📂 STRUKTURA SLOŽKY
+═══════════════════
+
+📄 README.md                    - Hlavní dokumentace a návod
+📄 SUMMARY.md                   - Souhrn analýzy s metrikami
+📄 analysis_report.json         - JSON data (494 KB)
+📄 OBSAH.txt                    - Tento soubor
+
+📁 bpmn_business/               - Business Process BPMN diagramy (15 souborů)
+   ├── INDEX.md                 - Index business procesů
+   ├── DokladyGenSub_PROCESS.md - Generování sub-dokladů
+   ├── DokladyProcess_PROCESS.md - Zpracování dokladů
+   ├── DocCis_PROCESS.md        - Správa číselníků dokumentů
+   └── ... dalších 11 procesů
+
+📁 process_flows/               - 🆕 Procesní flow s detaily (15 souborů)
+   ├── INDEX.md                 - Index procesních flow
+   ├── DokladyProcess_FLOW.md   - Proces + SQL + Java detaily
+   ├── ProtiPoziceParovani_FLOW.md
+   └── ... dalších 13 flow
+
+📁 pages/                       - Katalog JSP stránek
+   ├── CATALOG.md               - Seznam 1,288 stránek
+   ├── DETAILED_ANALYSIS.md     - 🆕 Detailní analýza (SQL, Java, business logika)
+   ├── DESCRIPTIONS.md          - Popisy funkcionalit 100 stránek
+   ├── FUNCTIONAL_SUMMARY.md    - Funkční souhrn podle domén
+   └── SUMMARY_BY_CATEGORY.md   - Souhrn podle kategorií
+
+📁 components/                  - Katalog komponent
+   └── CATALOG.md               - 2,042 Java tříd
+
+📁 dependencies/                - Analýza závislostí
+   └── ANALYSIS.md              - Závislosti a problémy
+
+
+📊 STATISTIKY
+═════════════
+
+Kód:
+  • JSP stránky:       1,288
+  • JSP scriptlety:   31,138
+  • Java třídy:        2,042
+  • Java metody:      61,055
+  • SQL tabulky:      46,962
+
+Závislosti:
+  • imports:          94,265
+  • contains:         15,569
+  • references:        2,245
+  • calls:             1,563
+  • extends:             172
+  • includes:              4
+  ─────────────────────────
+  CELKEM:            113,818
+
+
+⚠️ IDENTIFIKOVANÉ PROBLÉMY
+═══════════════════════════
+
+✓ Žádné kruhové závislosti
+
+⚠ 8 tříd s vysokou vazbou (>20 závislostí):
+  • ExcelThread: 133 závislostí
+  • UcSkupModuleImpl: 50 závislostí
+  • DokumentModuleImpl: 49 závislostí
+  • PbModuleImpl: 40 závislostí
+
+
+🎯 JAK POUŽÍVAT TUTO DOKUMENTACI
+═════════════════════════════════
+
+Pro projektové manažery:
+  1. Začněte s README.md
+  2. Prozkoumejte bpmn_business/INDEX.md
+  3. Studujte business process diagramy
+
+Pro architekty:
+  1. dependencies/ANALYSIS.md
+  2. components/CATALOG.md
+  3. analysis_report.json
+
+Pro vývojáře:
+  1. pages/CATALOG.md a DESCRIPTIONS.md
+  2. bpmn_business/ pro business kontext
+  3. Neo4J databáze pro detailní závislosti
+
+
+📋 DALŠÍ KROKY
+══════════════
+
+☑ Analýza dokončena
+☐ Code review s vývojovým týmem
+☐ Odsouhlasení migračního plánu
+☐ Vytvoření PoC pro vybrané moduly
+☐ Zahájení fáze 1 migrace
+
+
+═══════════════════════════════════════════════════════════════════════
+Vygenerováno pomocí AI-powered kódových analyzérů
+Verze: 1.0.0
+═══════════════════════════════════════════════════════════════════════

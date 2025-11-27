@@ -1,8 +1,8 @@
 """Java code chunker."""
 import javalang
 from typing import List, Optional
-from .base_chunker import BaseChunker
-from ..models import CodeChunk, ChunkType
+from chunkers.base_chunker import BaseChunker
+from models import CodeChunk, ChunkType
 
 
 class JavaChunker(BaseChunker):

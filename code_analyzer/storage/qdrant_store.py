@@ -6,8 +6,8 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 from tqdm import tqdm
 
-from ..models import CodeChunk
-from ..config import (
+from models import CodeChunk
+from config import (
     QDRANT_HOST, QDRANT_PORT, QDRANT_API_KEY,
     QDRANT_COLLECTION_NAME, EMBEDDING_MODEL, EMBEDDING_DIMENSION
 )
@@ -21,7 +21,8 @@ class QdrantStore:
         self.client = QdrantClient(
             host=QDRANT_HOST,
             port=QDRANT_PORT,
-            api_key=QDRANT_API_KEY
+            api_key=QDRANT_API_KEY,
+            https=False  # Use HTTP instead of HTTPS
         )
         self.collection_name = QDRANT_COLLECTION_NAME
         self.embedding_model = SentenceTransformer(EMBEDDING_MODEL)
@@ -173,8 +174,9 @@ class QdrantStore:
     def get_collection_stats(self) -> Dict:
         """Get statistics about the collection."""
         info = self.client.get_collection(self.collection_name)
+        # Handle different Qdrant API versions - use points_count which is universal
         return {
-            "vectors_count": info.vectors_count,
-            "indexed_vectors_count": info.indexed_vectors_count,
-            "points_count": info.points_count
+            "vectors_count": getattr(info, 'points_count', 0),
+            "indexed_vectors_count": getattr(info, 'points_count', 0),
+            "points_count": getattr(info, 'points_count', 0)
         }

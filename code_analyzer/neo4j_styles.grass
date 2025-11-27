@@ -1,0 +1,109 @@
+node {
+  diameter: 50px;
+  color: #A5ABB6;
+  border-color: #9AA1AC;
+  border-width: 2px;
+  text-color-internal: #FFFFFF;
+  font-size: 10px;
+}
+
+relationship {
+  color: #A5ABB6;
+  shaft-width: 1px;
+  font-size: 8px;
+  padding: 3px;
+  text-color-external: #000000;
+  text-color-internal: #FFFFFF;
+  caption: '<type>';
+}
+
+node.JavaClass {
+  color: #3B82F6;
+  border-color: #2563EB;
+  diameter: 60px;
+  caption: '{name}';
+  text-color-internal: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+node.JavaMethod {
+  color: #8B5CF6;
+  border-color: #7C3AED;
+  diameter: 30px;
+  caption: '{name}';
+  text-color-internal: #FFFFFF;
+  font-size: 9px;
+}
+
+node.JavaInterface {
+  color: #06B6D4;
+  border-color: #0891B2;
+  diameter: 55px;
+  caption: '{name}';
+  text-color-internal: #FFFFFF;
+  font-size: 11px;
+}
+
+node.JspPage {
+  color: #10B981;
+  border-color: #059669;
+  diameter: 50px;
+  caption: '{name}';
+  text-color-internal: #FFFFFF;
+  font-size: 11px;
+}
+
+node.JspScriptlet {
+  color: #F59E0B;
+  border-color: #D97706;
+  diameter: 25px;
+  caption: '{name}';
+  text-color-internal: #000000;
+  font-size: 8px;
+}
+
+node.SqlTable {
+  color: #EF4444;
+  border-color: #DC2626;
+  diameter: 45px;
+  caption: '{name}';
+  text-color-internal: #FFFFFF;
+  font-size: 10px;
+}
+
+node.SqlProcedure {
+  color: #F97316;
+  border-color: #EA580C;
+  diameter: 40px;
+  caption: '{name}';
+  text-color-internal: #FFFFFF;
+  font-size: 10px;
+}
+
+node.SqlPackage {
+  color: #A16207;
+  border-color: #854D0E;
+  diameter: 50px;
+  caption: '{name}';
+  text-color-internal: #FFFFFF;
+  font-size: 11px;
+}
+
+node.SqlView {
+  color: #EC4899;
+  border-color: #DB2777;
+  diameter: 40px;
+  caption: '{name}';
+  text-color-internal: #FFFFFF;
+  font-size: 10px;
+}
+
+node.CodeChunk {
+  color: #6B7280;
+  border-color: #4B5563;
+  diameter: 35px;
+  caption: '{chunk_type}';
+  text-color-internal: #FFFFFF;
+  font-size: 9px;
+}

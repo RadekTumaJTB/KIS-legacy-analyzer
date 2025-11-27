@@ -3,8 +3,8 @@ from typing import List, Dict
 from neo4j import GraphDatabase
 from tqdm import tqdm
 
-from ..models import CodeChunk, Dependency
-from ..config import NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD
+from models import CodeChunk, Dependency
+from config import NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD
 
 
 class Neo4jStore:
@@ -86,12 +86,19 @@ class Neo4jStore:
             dependencies: List of Dependency objects
             batch_size: Number of dependencies to create per batch
         """
+        import json
+
         print(f"Creating {len(dependencies)} dependency relationships...")
 
         with self.driver.session() as session:
             for i in tqdm(range(0, len(dependencies), batch_size)):
                 batch = dependencies[i:i + batch_size]
-                dep_data = [dep.to_dict() for dep in batch]
+                # Convert metadata to JSON string for Neo4j compatibility
+                dep_data = []
+                for dep in batch:
+                    dep_dict = dep.to_dict()
+                    dep_dict['metadata'] = json.dumps(dep_dict['metadata']) if dep_dict['metadata'] else "{}"
+                    dep_data.append(dep_dict)
 
                 session.run("""
                     UNWIND $dependencies AS dep
