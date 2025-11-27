@@ -67,7 +67,7 @@ Komplexní re-engineering analýza zahrnující:
 
 ### ⚡ Quick Modernization - Java 17 Upgrade ⭐⭐⭐ DOPORUČENO PRO START!
 
-**Soubory:** [REENGINEERING_ANALYSIS_AI_QUICK.md](REENGINEERING_ANALYSIS_AI_QUICK.md)
+**Soubory:** [REENGINEERING_ANALYSIS_AI_QUICK.md](REENGINEERING_ANALYSIS_AI_QUICK.md) | [🇨🇿 Česká verze](REENGINEERING_ANALYSIS_AI_QUICK_CZ.md)
 
 **🎯 Rychlá modernizace místo full re-engineeringu:**
 

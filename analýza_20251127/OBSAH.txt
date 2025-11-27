@@ -14,6 +14,7 @@
 📄 REENGINEERING_ANALYSIS_AI.md - 🤖 AI-asistovaná migrace (60% rychlejší!)
 📄 REENGINEERING_ANALYSIS_AI.json - 🤖 AI re-engineering data (JSON)
 📄 REENGINEERING_ANALYSIS_AI_QUICK.md - ⚡ QUICK Modernization (Java 17 + libs, 1.5-2 měs!)
+📄 REENGINEERING_ANALYSIS_AI_QUICK_CZ.md - ⚡ QUICK Modernization (ČESKY)
 📄 OBSAH.txt                    - Tento soubor
 
 📁 bpmn_business/               - Business Process BPMN diagramy (15 souborů)
