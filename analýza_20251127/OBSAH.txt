@@ -13,6 +13,7 @@
 📄 REENGINEERING_ANALYSIS.json  - 🆕 Re-engineering data (JSON)
 📄 REENGINEERING_ANALYSIS_AI.md - 🤖 AI-asistovaná migrace (60% rychlejší!)
 📄 REENGINEERING_ANALYSIS_AI.json - 🤖 AI re-engineering data (JSON)
+📄 REENGINEERING_ANALYSIS_AI_QUICK.md - ⚡ QUICK Modernization (Java 17 + libs, 1.5-2 měs!)
 📄 OBSAH.txt                    - Tento soubor
 
 📁 bpmn_business/               - Business Process BPMN diagramy (15 souborů)
@@ -97,12 +98,13 @@ Pro vývojáře:
   4. Neo4J databáze pro detailní závislosti
 
 Pro stakeholdery a rozhodování:
-  1. REENGINEERING_ANALYSIS_AI.md - 🤖 8-11 měsíců s AI! (vs. 21-31 bez AI)
-  2. Úspora nákladů: €480k-€750k (55-60%)
-  3. REENGINEERING_ANALYSIS.md - tradiční plán pro srovnání
+  1. ⚡ REENGINEERING_ANALYSIS_AI_QUICK.md - DOPORUČENO! 1.5-2 měsíce, €36k-48k
+  2. 🤖 REENGINEERING_ANALYSIS_AI.md - Full re-engineering: 8-11 měsíců, €400k-€600k
+  3. REENGINEERING_ANALYSIS.md - Tradiční přístup pro srovnání
   4. Rizika a mitigační opatření
 
-💡 DOPORUČENÍ: Začít s AI-asistovanou migrací = 3x rychlejší + levnější!
+💡 DOPORUČENÍ PRO START: Quick Modernization (Java 17 + libs) = nejrychlejší ROI!
+   Poté lze postupně pokračovat na full re-engineering.
 
 
 📋 DALŠÍ KROKY
