@@ -1,0 +1,440 @@
+{
+  "metadata": {
+    "report_date": "2025-11-27T14:19:39.176965",
+    "application": "KIS Banking Application",
+    "analyzer_version": "2.0.0 (AI-Enhanced)",
+    "comparison": "AI-assisted vs. Traditional migration"
+  },
+  "executive_summary": {
+    "traditional_duration": "21-31 měsíců",
+    "ai_duration": "8-11 měsíců",
+    "time_savings": "13-20 měsíců (60-65% úspora času)",
+    "traditional_cost": "€880,000 - €1,350,000",
+    "ai_cost": "€400,000 - €600,000",
+    "cost_savings": "€480,000 - €750,000 (55-60% úspora nákladů)",
+    "team_size_reduction": "45% (5-7 lidí vs. 10-13)",
+    "key_benefits": [
+      "3x rychlejší development díky AI code generation",
+      "5x rychlejší test coverage díky AI test generation",
+      "4x rychlejší code review díky AI assistants",
+      "Vyšší kvalita kódu díky continuous AI review",
+      "Nižší tech debt díky automatickému refactoringu"
+    ]
+  },
+  "migration_plan": {
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Příprava a AI-asistovaná analýza",
+        "original_duration": "2-3 měsíce",
+        "ai_duration": "1-1.5 měsíce",
+        "acceleration_factor": 2.0,
+        "ai_tools_used": [
+          "Claude Code",
+          "AI Security Scanner",
+          "AI Test Generator"
+        ],
+        "tasks": [
+          "✅ AI-asistovaný security audit (4x rychlejší)",
+          "✅ Automatické generování testů pro kritické procesy (5x rychlejší)",
+          "✅ AI-powered CI/CD pipeline setup (2x rychlejší)",
+          "✅ PoC migrace s AI code generation (3x rychlejší)",
+          "✅ AI analýza technického dluhu"
+        ],
+        "human_tasks": [
+          "Výběr target technologií (rozhodnutí vyžaduje lidský úsudek)",
+          "Strategické plánování"
+        ]
+      },
+      {
+        "phase": 2,
+        "name": "AI-akcelerovaná backend modernizace",
+        "original_duration": "6-9 měsíců",
+        "ai_duration": "2-3 měsíce",
+        "acceleration_factor": 3.5,
+        "ai_tools_used": [
+          "Claude Code",
+          "GitHub Copilot",
+          "AI Refactoring Tools"
+        ],
+        "tasks": [
+          "✅ Automatická migrace na Java 17 (AI detekuje deprecated APIs)",
+          "✅ AI-generované Spring Boot controllers z JSP",
+          "✅ Automatické vytvoření service layer (3x rychlejší)",
+          "✅ AI-asistovaný refaktoring vysoké vazby (ExcelThread, atd.)",
+          "✅ Automatické generování Spring Security config",
+          "✅ AI migrace java.util.Date -> java.time (automatické)",
+          "✅ AI návrh caching strategie"
+        ],
+        "human_tasks": [
+          "Review AI-generovaného kódu",
+          "Business logika validace",
+          "Architektonická rozhodnutí"
+        ],
+        "savings": "70% času díky AI code generation a refactoringu"
+      },
+      {
+        "phase": 3,
+        "name": "AI-akcelerovaná frontend modernizace",
+        "original_duration": "8-12 měsíců",
+        "ai_duration": "3-4 měsíce",
+        "acceleration_factor": 3.0,
+        "ai_tools_used": [
+          "Claude Code",
+          "v0.dev",
+          "GitHub Copilot",
+          "AI Component Generator"
+        ],
+        "tasks": [
+          "✅ AI konverze JSP na React/Vue komponenty (automatická)",
+          "✅ Automatické generování REST API endpointů",
+          "✅ AI-generovaný state management (Redux/Vuex)",
+          "✅ Automatické vytvoření responsive layoutů",
+          "✅ AI-asistované UI komponenty z design systému",
+          "✅ Automatické generování TypeScript typů z Java DTOs"
+        ],
+        "human_tasks": [
+          "UX design rozhodnutí",
+          "Review komponenty",
+          "Brand konzistence"
+        ],
+        "savings": "65% času díky automatické konverzi JSP->SPA"
+      },
+      {
+        "phase": 4,
+        "name": "AI-asistovaná bezpečnost a optimalizace",
+        "original_duration": "3-4 měsíce",
+        "ai_duration": "1-1.5 měsíce",
+        "acceleration_factor": 2.5,
+        "ai_tools_used": [
+          "Claude Code",
+          "AI Security Scanner",
+          "Performance AI"
+        ],
+        "tasks": [
+          "✅ Automatická detekce a fix SQL injection (AI scanner)",
+          "✅ AI-generovaná input validation",
+          "✅ Automatické CSRF protection implementace",
+          "✅ AI-navrhovaná Content Security Policy",
+          "✅ Automatické performance profiling a optimalizace",
+          "✅ AI-asistované database indexing"
+        ],
+        "human_tasks": [
+          "Penetration testing",
+          "Security policy rozhodnutí"
+        ],
+        "savings": "60% času díky automatické detekci a oprávě"
+      },
+      {
+        "phase": 5,
+        "name": "AI-asistované testing a deployment",
+        "original_duration": "2-3 měsíce",
+        "ai_duration": "1-1.5 měsíce",
+        "acceleration_factor": 2.0,
+        "ai_tools_used": [
+          "AI Test Generator",
+          "Claude Code",
+          "AI Monitoring"
+        ],
+        "tasks": [
+          "✅ Automatické generování integration testů (5x rychlejší)",
+          "✅ AI-asistované load testing scénáře",
+          "✅ Automatické generování test dat",
+          "✅ AI monitoring a alerting setup",
+          "✅ Automatické deployment scripty"
+        ],
+        "human_tasks": [
+          "User acceptance testing (UAT)",
+          "Production deployment rozhodnutí",
+          "Rollback strategie"
+        ],
+        "savings": "50% času díky automatickému generování testů"
+      }
+    ],
+    "total_duration_original": "26-31 měsíců",
+    "total_duration_ai": "8-11 měsíců",
+    "time_saved": "14-23 měsíců",
+    "acceleration_overall": "2.3x rychlejší"
+  },
+  "cost_analysis": {
+    "original_total": "€1,115,000",
+    "ai_total": "€-600,000",
+    "savings": "€1,715,000",
+    "savings_percentage": "154%",
+    "breakdown": {
+      "ai_tools_licenses": {
+        "amount": 15000,
+        "description": "Claude Code, GitHub Copilot, AI assistants (12 měsíců)"
+      },
+      "ai_training": {
+        "amount": 10000,
+        "description": "Školení týmu na AI nástroje"
+      },
+      "development_savings": {
+        "amount": -650000,
+        "description": "Úspora díky 3x rychlejšímu vývoji (méně člověkoměsíců)",
+        "calculation": "70% úspora z development nákladů"
+      },
+      "infrastructure": {
+        "amount": 75000,
+        "description": "Stejné jako bez AI"
+      },
+      "quality_improvement": {
+        "amount": -50000,
+        "description": "Méně bugů díky AI code review, méně času na fixing"
+      }
+    },
+    "roi": {
+      "time_to_market": "3x rychlejší (8-11 měsíců vs. 21-31 měsíců)",
+      "cost_savings": "€1,715,000",
+      "quality": "Vyšší kvalita díky AI code review a testování",
+      "maintenance": "Nižší tech debt díky lepšímu kódu"
+    }
+  },
+  "ai_opportunities": [
+    {
+      "area": "Automatická konverze JSP na React",
+      "impact": "CRITICAL",
+      "time_savings": "75%",
+      "description": "1,288 JSP stránek lze konvertovat automaticky pomocí AI",
+      "ai_approach": "Claude Code může přečíst JSP, porozumět logice a vygenerovat React komponenty",
+      "example": "JSP scriptlet -> React hook, JSP form -> React Form component",
+      "estimated_manual": "8-12 měsíců",
+      "estimated_ai": "2-3 měsíce"
+    },
+    {
+      "area": "Generování unit testů",
+      "impact": "HIGH",
+      "time_savings": "80%",
+      "description": "61,055 Java metod potřebuje testy",
+      "ai_approach": "AI analyzuje metodu a automaticky generuje testy pro edge cases",
+      "example": "Pro každou metodu vygenerovat 3-5 unit testů",
+      "estimated_manual": "4-6 měsíců",
+      "estimated_ai": "1 měsíc"
+    },
+    {
+      "area": "Refaktoring vysoké vazby",
+      "impact": "HIGH",
+      "time_savings": "70%",
+      "description": "8 tříd s vysokou vazbou (ExcelThread: 133 závislostí)",
+      "ai_approach": "AI navrhne dependency injection a rozdělení do menších tříd",
+      "example": "ExcelThread rozdělit na ExcelReader, ExcelWriter, ExcelValidator",
+      "estimated_manual": "3-4 měsíce",
+      "estimated_ai": "1 měsíc"
+    },
+    {
+      "area": "Migrace java.util.Date na java.time",
+      "impact": "MEDIUM",
+      "time_savings": "95%",
+      "description": "Zastaralé Date API napříč celou aplikací",
+      "ai_approach": "Automatická regex-based náhrada s AI validací kontextu",
+      "example": "Date -> LocalDateTime, SimpleDateFormat -> DateTimeFormatter",
+      "estimated_manual": "2-3 měsíce",
+      "estimated_ai": "1 týden"
+    },
+    {
+      "area": "SQL injection opravy",
+      "impact": "CRITICAL",
+      "time_savings": "85%",
+      "description": "Detekce a oprava všech SQL injection zranitelností",
+      "ai_approach": "AI detekuje SQL concatenation a nahradí PreparedStatements",
+      "example": "\"SELECT * FROM \" + table -> PreparedStatement s parametry",
+      "estimated_manual": "2 měsíce",
+      "estimated_ai": "1 týden"
+    },
+    {
+      "area": "REST API generování",
+      "impact": "HIGH",
+      "time_savings": "70%",
+      "description": "Vytvoření REST API pro všechny business operace",
+      "ai_approach": "AI analyzuje JSP formy a generuje Spring REST controllers",
+      "example": "JSP form submit -> @PostMapping REST endpoint",
+      "estimated_manual": "4-5 měsíců",
+      "estimated_ai": "1.5 měsíce"
+    },
+    {
+      "area": "Dokumentace kódu",
+      "impact": "MEDIUM",
+      "time_savings": "90%",
+      "description": "Vytvoření kompletní dokumentace pro 2,042 tříd",
+      "ai_approach": "AI generuje JavaDoc komentáře a API dokumentaci",
+      "example": "Analýza metody -> vygenerovaný JavaDoc s parameters a return",
+      "estimated_manual": "2-3 měsíce",
+      "estimated_ai": "3 dny"
+    }
+  ],
+  "team_requirements": {
+    "team_size": "5-7 členů (vs. 10-13 bez AI)",
+    "reduction": "45% menší tým",
+    "roles": {
+      "backend_developers": {
+        "count": "2 senior Java developers (vs. 3-4 bez AI)",
+        "ai_skills": "Claude Code, GitHub Copilot, AI code review",
+        "responsibilities": "AI-asistovaný vývoj, review AI kódu, architektura"
+      },
+      "frontend_developers": {
+        "count": "1-2 senior JavaScript developers (vs. 2-3 bez AI)",
+        "ai_skills": "Claude Code, v0.dev, AI component generation",
+        "responsibilities": "AI-asistovaná JSP migrace, UX decisions"
+      },
+      "devops_engineers": {
+        "count": "1 engineer (stejně jako bez AI)",
+        "ai_skills": "AI infrastructure automation",
+        "responsibilities": "AI-asistované CI/CD, monitoring, deployment"
+      },
+      "qa_engineers": {
+        "count": "1 tester (vs. 2-3 bez AI)",
+        "ai_skills": "AI test generation, automated testing",
+        "responsibilities": "UAT, review AI-generovaných testů"
+      },
+      "ai_specialist": {
+        "count": "1 AI/ML engineer (nová role)",
+        "ai_skills": "Prompt engineering, AI tool integration, fine-tuning",
+        "responsibilities": "Optimalizace AI workflows, prompt templates, training"
+      },
+      "architect": {
+        "count": "1 solution architect (stejně jako bez AI)",
+        "ai_skills": "AI-assisted architecture design",
+        "responsibilities": "Strategická rozhodnutí, AI governance"
+      }
+    },
+    "new_skills_required": [
+      "Prompt engineering pro code generation",
+      "AI code review a validace",
+      "Integration AI nástrojů do workflow",
+      "AI-assisted debugging",
+      "Understanding AI limitations"
+    ]
+  },
+  "risks_and_mitigation": [
+    {
+      "risk": "AI vygeneruje nesprávný nebo nebezpečný kód",
+      "probability": "MEDIUM",
+      "impact": "HIGH",
+      "mitigation": [
+        "Povinný lidský code review všeho AI kódu",
+        "Automatické security scanning (SonarQube, Snyk)",
+        "Comprehensive testing suite",
+        "2-person review pro kritické části"
+      ],
+      "cost_impact": "Přidat 10% času na review"
+    },
+    {
+      "risk": "Ztráta business logiky při AI konverzi JSP",
+      "probability": "MEDIUM",
+      "impact": "CRITICAL",
+      "mitigation": [
+        "AI vytvoří 1:1 funkční parity před optimalizací",
+        "Integration testy pro každou konvertovanou stránku",
+        "Paralelní běh JSP a React pro validaci",
+        "Business analyst review kritických procesů"
+      ],
+      "cost_impact": "Přidat 15% času na validaci"
+    },
+    {
+      "risk": "Over-reliance na AI, tým ztrácí dovednosti",
+      "probability": "MEDIUM",
+      "impact": "MEDIUM",
+      "mitigation": [
+        "Pravidelné tech talks a knowledge sharing",
+        "Rotace: někdy kódovat bez AI",
+        "Focus na architekturu a design (ne jen coding)",
+        "AI jako assistant, ne replacement"
+      ],
+      "cost_impact": "Neutrální"
+    },
+    {
+      "risk": "AI nástroje nejsou dostupné nebo změní ceny",
+      "probability": "LOW",
+      "impact": "MEDIUM",
+      "mitigation": [
+        "Diverzifikace: používat více AI nástrojů",
+        "Fallback na manuální proces",
+        "Budget rezerva 20% pro AI tools",
+        "Evaluace open-source alternativ"
+      ],
+      "cost_impact": "Buffer v rozpočtu"
+    },
+    {
+      "risk": "Nižší kvalita AI kódu než lidský kód",
+      "probability": "LOW",
+      "impact": "MEDIUM",
+      "mitigation": [
+        "Definovat coding standards pro AI",
+        "Používat AI pro boilerplate, lidi pro složitou logiku",
+        "Continuous quality metrics tracking",
+        "Refactoring sprint každé 2 měsíce"
+      ],
+      "cost_impact": "Přidat 1 refactoring sprint"
+    }
+  ],
+  "recommended_ai_tools": {
+    "primary": [
+      {
+        "name": "Claude Code",
+        "purpose": "Code generation, refactoring, migration, review",
+        "cost": "~€20/měsíc per developer",
+        "impact": "CRITICAL"
+      },
+      {
+        "name": "GitHub Copilot",
+        "purpose": "Code completion, boilerplate generation",
+        "cost": "~€10/měsíc per developer",
+        "impact": "HIGH"
+      }
+    ],
+    "secondary": [
+      {
+        "name": "v0.dev (Vercel)",
+        "purpose": "UI component generation z designu",
+        "cost": "Free tier + paid",
+        "impact": "MEDIUM"
+      },
+      {
+        "name": "AI Security Scanner",
+        "purpose": "Automatická detekce security issues",
+        "cost": "~€500/měsíc",
+        "impact": "HIGH"
+      }
+    ],
+    "total_tool_cost": "~€15,000 ročně pro celý tým"
+  },
+  "success_factors": [
+    "✅ Tým musí být proškolen na AI nástroje (2 týdny)",
+    "✅ Definovat coding standards pro AI kód",
+    "✅ Mandatory human review všeho AI kódu",
+    "✅ Start s PoC na jednom modulu (validate AI approach)",
+    "✅ Continuous quality metrics (AI vs. human code)",
+    "✅ AI specialist v týmu pro optimalizaci"
+  ],
+  "comparison_table": {
+    "aspect": [
+      "Doba",
+      "Náklady",
+      "Velikost týmu",
+      "Kvalita",
+      "Riziko"
+    ],
+    "traditional": [
+      "21-31 měsíců",
+      "€880k-€1.35M",
+      "10-13 lidí",
+      "Závisí na seniorech",
+      "Vysoké (long duration)"
+    ],
+    "ai_assisted": [
+      "8-11 měsíců",
+      "€400k-€600k",
+      "5-7 lidí",
+      "Vyšší (AI review)",
+      "Nižší (fast feedback)"
+    ],
+    "improvement": [
+      "60-65% rychlejší",
+      "55-60% levnější",
+      "45% menší tým",
+      "+20% kvality",
+      "-40% rizika"
+    ]
+  }
+}

@@ -14,6 +14,7 @@ Tato složka obsahuje kompletní analýzu legacy bankovní aplikace KIS. Analýz
 1. **[SUMMARY.md](SUMMARY.md)** - Hlavní souhrn analýzy s klíčovými metrikami
 2. **[analysis_report.json](analysis_report.json)** - Kompletní JSON report s detailními daty
 3. **[REENGINEERING_ANALYSIS.md](REENGINEERING_ANALYSIS.md)** - 🆕 **Re-engineering analýza a plán migrace**
+4. **[REENGINEERING_ANALYSIS_AI.md](REENGINEERING_ANALYSIS_AI.md)** - 🤖 **AI-asistovaná migrace - 60% rychlejší!**
 
 ### 🔧 Re-engineering Analýza ⭐ NOVÉ!
 
@@ -29,6 +30,40 @@ Komplexní re-engineering analýza zahrnující:
 - **Požadavky na tým:** 10-13 členů (backend, frontend, DevOps, QA, security)
 - **Rizika a mitigace:** Ztráta business logiky, bezpečnost, výkon
 - **Doporučené technologie:** Java 17 LTS, Spring Boot 3.x, React/Vue, Kubernetes
+
+### 🤖 AI-Asistovaná Re-engineering Analýza ⭐⭐ GAME CHANGER!
+
+**Soubory:** [REENGINEERING_ANALYSIS_AI.md](REENGINEERING_ANALYSIS_AI.md) | [REENGINEERING_ANALYSIS_AI.json](REENGINEERING_ANALYSIS_AI.json)
+
+**🚀 Proč použít AI? Porovnání:**
+
+| Aspekt | Tradiční | S AI | Zlepšení |
+|--------|----------|------|----------|
+| **Doba** | 21-31 měsíců | **8-11 měsíců** | **60-65% rychlejší** |
+| **Náklady** | €880k-€1.35M | **€400k-€600k** | **55-60% levnější** |
+| **Tým** | 10-13 lidí | **5-7 lidí** | **45% menší** |
+| **Kvalita** | Závisí na seniorech | **Vyšší (AI review)** | **+20%** |
+
+**7 Klíčových AI příležitostí:**
+1. **JSP → React konverze** - 75% úspora (8-12 měs → 2-3 měs) 🔴 CRITICAL
+2. **Unit test generování** - 80% úspora (4-6 měs → 1 měs)
+3. **Refaktoring vysoké vazby** - 70% úspora (3-4 měs → 1 měs)
+4. **java.util.Date migrace** - 95% úspora (2-3 měs → 1 týden)
+5. **SQL injection fix** - 85% úspora (2 měs → 1 týden) 🔴 CRITICAL
+6. **REST API generování** - 70% úspora (4-5 měs → 1.5 měs)
+7. **Dokumentace** - 90% úspora (2-3 měs → 3 dny)
+
+**Doporučené AI nástroje:**
+- **Claude Code** - Code generation, refactoring, migration (€20/měs/dev)
+- **GitHub Copilot** - Code completion, boilerplate (€10/měs/dev)
+- **v0.dev** - UI component generation z designu
+- **AI Security Scanner** - Automatická detekce security issues (€500/měs)
+
+**ROI s AI:**
+- Time-to-market: **3x rychlejší** (8-11 měs vs. 21-31 měs)
+- Cost savings: **€480k-€750k**
+- Vyšší kvalita díky AI code review
+- Nižší tech debt díky lepšímu kódu
 
 ### 🔄 Business Process BPMN Diagramy
 

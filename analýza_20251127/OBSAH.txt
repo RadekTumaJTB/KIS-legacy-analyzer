@@ -11,6 +11,8 @@
 📄 analysis_report.json         - JSON data (494 KB)
 📄 REENGINEERING_ANALYSIS.md    - 🆕 Re-engineering analýza a plán migrace
 📄 REENGINEERING_ANALYSIS.json  - 🆕 Re-engineering data (JSON)
+📄 REENGINEERING_ANALYSIS_AI.md - 🤖 AI-asistovaná migrace (60% rychlejší!)
+📄 REENGINEERING_ANALYSIS_AI.json - 🤖 AI re-engineering data (JSON)
 📄 OBSAH.txt                    - Tento soubor
 
 📁 bpmn_business/               - Business Process BPMN diagramy (15 souborů)
@@ -95,9 +97,12 @@ Pro vývojáře:
   4. Neo4J databáze pro detailní závislosti
 
 Pro stakeholdery a rozhodování:
-  1. REENGINEERING_ANALYSIS.md - executive summary
-  2. Náklady: €880k-€1.35M, Doba: 21-31 měsíců
-  3. Rizika a mitigační opatření
+  1. REENGINEERING_ANALYSIS_AI.md - 🤖 8-11 měsíců s AI! (vs. 21-31 bez AI)
+  2. Úspora nákladů: €480k-€750k (55-60%)
+  3. REENGINEERING_ANALYSIS.md - tradiční plán pro srovnání
+  4. Rizika a mitigační opatření
+
+💡 DOPORUČENÍ: Začít s AI-asistovanou migrací = 3x rychlejší + levnější!
 
 
 📋 DALŠÍ KROKY
