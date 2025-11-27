@@ -9,6 +9,8 @@
 📄 README.md                    - Hlavní dokumentace a návod
 📄 SUMMARY.md                   - Souhrn analýzy s metrikami
 📄 analysis_report.json         - JSON data (494 KB)
+📄 REENGINEERING_ANALYSIS.md    - 🆕 Re-engineering analýza a plán migrace
+📄 REENGINEERING_ANALYSIS.json  - 🆕 Re-engineering data (JSON)
 📄 OBSAH.txt                    - Tento soubor
 
 📁 bpmn_business/               - Business Process BPMN diagramy (15 souborů)
@@ -76,18 +78,26 @@ Závislosti:
 
 Pro projektové manažery:
   1. Začněte s README.md
-  2. Prozkoumejte bpmn_business/INDEX.md
-  3. Studujte business process diagramy
+  2. REENGINEERING_ANALYSIS.md - plán migrace a náklady
+  3. Prozkoumejte bpmn_business/INDEX.md
+  4. Studujte business process diagramy
 
 Pro architekty:
-  1. dependencies/ANALYSIS.md
-  2. components/CATALOG.md
-  3. analysis_report.json
+  1. REENGINEERING_ANALYSIS.md - technologie a plán
+  2. dependencies/ANALYSIS.md
+  3. components/CATALOG.md
+  4. analysis_report.json
 
 Pro vývojáře:
   1. pages/CATALOG.md a DESCRIPTIONS.md
   2. bpmn_business/ pro business kontext
-  3. Neo4J databáze pro detailní závislosti
+  3. REENGINEERING_ANALYSIS.md - doporučení migrace
+  4. Neo4J databáze pro detailní závislosti
+
+Pro stakeholdery a rozhodování:
+  1. REENGINEERING_ANALYSIS.md - executive summary
+  2. Náklady: €880k-€1.35M, Doba: 21-31 měsíců
+  3. Rizika a mitigační opatření
 
 
 📋 DALŠÍ KROKY

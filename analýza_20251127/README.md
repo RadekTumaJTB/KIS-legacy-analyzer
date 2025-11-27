@@ -13,6 +13,22 @@ Tato složka obsahuje kompletní analýzu legacy bankovní aplikace KIS. Analýz
 
 1. **[SUMMARY.md](SUMMARY.md)** - Hlavní souhrn analýzy s klíčovými metrikami
 2. **[analysis_report.json](analysis_report.json)** - Kompletní JSON report s detailními daty
+3. **[REENGINEERING_ANALYSIS.md](REENGINEERING_ANALYSIS.md)** - 🆕 **Re-engineering analýza a plán migrace**
+
+### 🔧 Re-engineering Analýza ⭐ NOVÉ!
+
+**Soubory:** [REENGINEERING_ANALYSIS.md](REENGINEERING_ANALYSIS.md) | [REENGINEERING_ANALYSIS.json](REENGINEERING_ANALYSIS.json)
+
+Komplexní re-engineering analýza zahrnující:
+- **Identifikace technologií:** Java 7, JSP 2.x, Servlet 2.x/3.x
+- **Analýza frameworků:** JDBC, logging, collections, date/time API
+- **JSP problémy:** 99 scriptletů, 97 mixed concerns, 4 SQL v JSP
+- **Bezpečnostní rizika:** SQL injection, XSS, input validation
+- **Výkonnostní problémy:** 8 tříd s vysokou vazbou (ExcelThread: 133 závislostí)
+- **5-fázový plán migrace:** 21-31 měsíců, €880k-€1.35M
+- **Požadavky na tým:** 10-13 členů (backend, frontend, DevOps, QA, security)
+- **Rizika a mitigace:** Ztráta business logiky, bezpečnost, výkon
+- **Doporučené technologie:** Java 17 LTS, Spring Boot 3.x, React/Vue, Kubernetes
 
 ### 🔄 Business Process BPMN Diagramy
 
