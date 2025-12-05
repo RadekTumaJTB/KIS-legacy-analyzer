@@ -1,53 +1,111 @@
-version: '3.8'
+# KIS Banking Application - Production Stack
+# Linux (Docker) + Oracle 23c Free + KIS Application
 
 services:
-  qdrant:
-    image: qdrant/qdrant:latest
-    container_name: kis-qdrant
+  # Oracle Database 23c Free Edition
+  oracle:
+    image: gvenzl/oracle-free:23-slim
+    container_name: kis-oracle
+    hostname: kis-oracle
     ports:
-      - "6333:6333"  # HTTP API
-      - "6334:6334"  # gRPC API
-    volumes:
-      - qdrant_storage:/qdrant/storage
+      - "1521:1521"  # Oracle listener
+      - "5500:5500"  # EM Express web console
     environment:
-      - QDRANT__SERVICE__HTTP_PORT=6333
-      - QDRANT__SERVICE__GRPC_PORT=6334
+      # Database configuration
+      - ORACLE_PASSWORD=kis_oracle_2024
+      - ORACLE_DATABASE=KISDB
+      - ORACLE_CHARACTERSET=AL32UTF8
+      # Performance tuning
+      - ORACLE_SGA_TARGET=2G
+      - ORACLE_PGA_AGGREGATE_TARGET=1G
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+      - oracle_backup:/opt/oracle/backup
     restart: unless-stopped
     networks:
-      - kis-network
+      - kis-production
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
 
-  neo4j:
-    image: neo4j:5.14
-    container_name: kis-neo4j
+  # KIS Banking Application (Java 17 + Spring Boot)
+  kis-app:
+    build:
+      context: ./docker-test
+      dockerfile: Dockerfile
+    image: kis-banking-app:2.0.0
+    container_name: kis-app
+    hostname: kis-app
     ports:
-      - "7474:7474"  # HTTP
-      - "7687:7687"  # Bolt
+      - "8080:8080"  # Application HTTP port
     environment:
-      - NEO4J_AUTH=neo4j/kis_password_2024
-      - NEO4J_PLUGINS=["apoc"]
-      - NEO4J_dbms_memory_heap_max__size=2G
-      - NEO4J_dbms_memory_pagecache_size=1G
+      # JVM Configuration
+      - JAVA_OPTS=-Xmx2g -Xms512m -XX:+UseG1GC -XX:MaxGCPauseMillis=200
+
+      # Spring Boot Profile
+      - SPRING_PROFILES_ACTIVE=prod
+
+      # Database Connection
+      - DB_HOST=kis-oracle
+      - DB_PORT=1521
+      - DB_SERVICE=FREEPDB1
+      - DB_USER=kis_user
+      - DB_PASSWORD=kis_user_2024
+
+      # Application Paths (platform-independent)
+      - EXPORT_BASE_PATH=/app/data/exports
+      - TEMPLATE_BASE_PATH=/app/data/templates
+      - BACKUP_BASE_PATH=/app/data/backup
+
+      # Logging
+      - LOG_LEVEL_ROOT=INFO
+      - LOG_LEVEL_APP=DEBUG
     volumes:
-      - neo4j_data:/data
-      - neo4j_logs:/logs
-      - neo4j_import:/var/lib/neo4j/import
-      - neo4j_plugins:/plugins
+      # Application data
+      - kis_app_data:/app/data
+      - kis_app_logs:/app/logs
+      - kis_app_config:/app/config
+
+      # Templates (Excel files)
+      - kis_app_templates:/app/data/templates
+    depends_on:
+      oracle:
+        condition: service_healthy
     restart: unless-stopped
     networks:
-      - kis-network
+      - kis-production
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
 
+# Persistent volumes for production data
 volumes:
-  qdrant_storage:
+  # Oracle database files
+  oracle_data:
     driver: local
-  neo4j_data:
-    driver: local
-  neo4j_logs:
-    driver: local
-  neo4j_import:
-    driver: local
-  neo4j_plugins:
+  oracle_backup:
     driver: local
 
+  # KIS application data
+  kis_app_data:
+    driver: local
+  kis_app_logs:
+    driver: local
+  kis_app_config:
+    driver: local
+  kis_app_templates:
+    driver: local
+
+# Production network (isolated from analytics)
 networks:
-  kis-network:
+  kis-production:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 172.21.0.0/16
