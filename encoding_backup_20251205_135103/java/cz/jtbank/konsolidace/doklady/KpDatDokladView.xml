@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatDokladView"
+   SelectList="KpDatDoklad.ID, 
+       KpDatDoklad.NL_ERROR, 
+       KpDatDoklad.NL_KROK, 
+
+       KpDatDoklad.ID_KTGUCETNISPOLECNOST, 
+       KpDatDoklad.ID_KTGDOKLAD, 
+
+       KpDatDoklad.S_MENA, 
+       KpDatDoklad.DT_DATUM, 
+  
+     KpDatDoklad.S_POPIS, 
+       KpDatDoklad.ID_PARENT, 
+   
+    KpDatDoklad.DT_VYTVORENO, 
+       KpDatDoklad.S_UZIVATEL, 
+
+       KpDatDoklad.DT_PLATNOSTMUSTEK, 
+       KpDatDoklad.S_UZIVATELMUSTEK, 
+
+       KpDatDoklad.NL_WARNING, 
+       KpDatDoklad.DT_DATUMPOCSTAV, 
+
+       KpDatDoklad.ID_SUBKONSOLIDACE, 
+       KpDatDoklad.ID_KTGSUBKONSOLIDACEETAPA, 
+
+       KpDatDoklad.NL_POCETTRANSAKCI, 
+       KpDatDoklad.ND_ZJ, 
+
+       KpDatDoklad.ND_VJ, 
+       KpDatDoklad.DT_MAXTRANSAKCE, 
+
+       KpDatDoklad.C_SUBSMER, 
+       KpDatDoklad.DT_SUBDATUM"
+   FromList="DB_JT.KP_DAT_DOKLAD KpDatDoklad"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatDokladViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatDoklad"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatDoklad" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatDoklad"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlError"
+      IsNotNull="true"
+      EntityAttrName="NlError"
+      EntityUsage="KpDatDoklad"
+      AliasName="NL_ERROR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlKrok"
+      EntityAttrName="NlKrok"
+      EntityUsage="KpDatDoklad"
+      AliasName="NL_KROK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDatDoklad"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgdoklad"
+      EntityAttrName="IdKtgdoklad"
+      EntityUsage="KpDatDoklad"
+      AliasName="ID_KTGDOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="KpDatDoklad"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatDoklad"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpDatDoklad"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdParent"
+      IsNotNull="true"
+      EntityAttrName="IdParent"
+      EntityUsage="KpDatDoklad"
+      AliasName="ID_PARENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtVytvoreno"
+      EntityAttrName="DtVytvoreno"
+      EntityUsage="KpDatDoklad"
+      AliasName="DT_VYTVORENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpDatDoklad"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostmustek"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostmustek"
+      EntityUsage="KpDatDoklad"
+      AliasName="DT_PLATNOSTMUSTEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatelmustek"
+      IsNotNull="true"
+      EntityAttrName="SUzivatelmustek"
+      EntityUsage="KpDatDoklad"
+      AliasName="S_UZIVATELMUSTEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlWarning"
+      IsNotNull="true"
+      EntityAttrName="NlWarning"
+      EntityUsage="KpDatDoklad"
+      AliasName="NL_WARNING"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumpocstav"
+      EntityAttrName="DtDatumpocstav"
+      EntityUsage="KpDatDoklad"
+      AliasName="DT_DATUMPOCSTAV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSubkonsolidace"
+      IsNotNull="true"
+      EntityAttrName="IdSubkonsolidace"
+      EntityUsage="KpDatDoklad"
+      AliasName="ID_SUBKONSOLIDACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgsubkonsolidaceetapa"
+      EntityAttrName="IdKtgsubkonsolidaceetapa"
+      EntityUsage="KpDatDoklad"
+      AliasName="ID_KTGSUBKONSOLIDACEETAPA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlPocettransakci"
+      EntityAttrName="NlPocettransakci"
+      EntityUsage="KpDatDoklad"
+      AliasName="NL_POCETTRANSAKCI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdZj"
+      EntityAttrName="NdZj"
+      EntityUsage="KpDatDoklad"
+      AliasName="ND_ZJ"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdVj"
+      EntityAttrName="NdVj"
+      EntityUsage="KpDatDoklad"
+      AliasName="ND_VJ"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtMaxtransakce"
+      EntityAttrName="DtMaxtransakce"
+      EntityUsage="KpDatDoklad"
+      AliasName="DT_MAXTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CSubsmer"
+      EntityAttrName="CSubsmer"
+      EntityUsage="KpDatDoklad"
+      AliasName="C_SUBSMER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSubdatum"
+      EntityAttrName="DtSubdatum"
+      EntityUsage="KpDatDoklad"
+      AliasName="DT_SUBDATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

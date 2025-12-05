@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpParametry"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_PARAMETRY"
+   AliasName="KpParametry"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="132"
+   RowClass="cz.jtbank.konsolidace.admin.KpParametryImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.admin.common.KpParametryImplMsgBundle" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="CNgPovoleno"
+      IsNotNull="true"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_NG_POVOLENO"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_PARAMETRY"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtNgDatumDo"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_NG_DATUM_DO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNgHodiny"
+      Precision="5"
+      Type="java.lang.String"
+      ColumnName="S_NG_HODINY"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="5" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUzivatel"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_UZIVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtZmena"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_ZMENA"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="RowID"
+      IsUpdateable="false"
+      Type="oracle.jbo.domain.RowID"
+      ColumnName="ROWID"
+      ColumnType="ROWID"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_PARAMETRY"
+      PrimaryKey="true" >
+   </Attribute>
+   <Attribute
+      Name="DtNgDatumMustek"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_NG_DATUM_MUSTEK"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetniskupina"
+      Precision="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISKUPINA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetniskupina2"
+      Precision="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISKUPINA2"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdKapital"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_KAPITAL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdTolerancevazby"
+      Precision="5"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_TOLERANCEVAZBY"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtGenerovani"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_GENEROVANI"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetniskupina3"
+      Precision="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISKUPINA3"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetniskupina4"
+      Precision="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISKUPINA4"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlMaxxls"
+      Precision="5"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_MAXXLS"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetniskupina6"
+      Precision="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISKUPINA6"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetniskupina7"
+      Precision="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISKUPINA7"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CReloadprotistran"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_RELOADPROTISTRAN"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_PARAMETRY"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtGensubkonsolidaci"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_GENSUBKONSOLIDACI"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CReloadolap"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_RELOADOLAP"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_PARAMETRY"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="AppserverPassword"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="APPSERVER_PASSWORD"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtUnifikovanedoklady"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_UNIFIKOVANEDOKLADY"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CMenuMuBanka"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_MENU_MU_BANKA"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_PARAMETRY"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetniskupina8"
+      Precision="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISKUPINA8"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_PARAMETRY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="SysC007826" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.DtNgDatumDo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C007826" />
+         <Attr Name="_checkCondition" Value="&#34;DT_NG_DATUM_DO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC007825" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.CNgPovoleno" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C007825" />
+         <Attr Name="_checkCondition" Value="&#34;C_NG_POVOLENO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002052" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.DtNgDatumDo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002052" />
+         <Attr Name="_checkCondition" Value="&#34;DT_NG_DATUM_DO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0010166" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.CNgPovoleno" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0010166" />
+         <Attr Name="_checkCondition" Value="&#34;C_NG_POVOLENO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0010168" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.CNgPovoleno" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0010168" />
+         <Attr Name="_checkCondition" Value=" c_NG_povoleno in ( &#39;0&#39;, &#39;1&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC003245" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.DtNgDatumDo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C003245" />
+         <Attr Name="_checkCondition" Value="&#34;DT_NG_DATUM_DO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002051" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.CNgPovoleno" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002051" />
+         <Attr Name="_checkCondition" Value="&#34;C_NG_POVOLENO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC007827" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.CNgPovoleno" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C007827" />
+         <Attr Name="_checkCondition" Value=" c_NG_povoleno in ( &#39;0&#39;, &#39;1&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0010167" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.DtNgDatumDo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0010167" />
+         <Attr Name="_checkCondition" Value="&#34;DT_NG_DATUM_DO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC003246" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.CNgPovoleno" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C003246" />
+         <Attr Name="_checkCondition" Value=" c_NG_povoleno in ( &#39;0&#39;, &#39;1&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="KpparametryPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.RowID" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="KPPARAMETRY_PRIMARY_KEY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002053" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.CNgPovoleno" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002053" />
+         <Attr Name="_checkCondition" Value=" c_NG_povoleno in ( &#39;0&#39;, &#39;1&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC003244" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.CNgPovoleno" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C003244" />
+         <Attr Name="_checkCondition" Value="&#34;C_NG_POVOLENO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002322" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.CNgPovoleno" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002322" />
+         <Attr Name="_checkCondition" Value="&#34;C_NG_POVOLENO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002323" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.DtNgDatumDo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002323" />
+         <Attr Name="_checkCondition" Value="&#34;DT_NG_DATUM_DO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002324" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.CNgPovoleno" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002324" />
+         <Attr Name="_checkCondition" Value=" c_NG_povoleno in ( &#39;0&#39;, &#39;1&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpparametrySkupina" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.admin.KpParametry.IdKtgucetniskupina" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPPARAMETRY_SKUPINA" />
+         <Attr Name="_referencedKey" Value="PK_KPKTGUCETNISKUPINA" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

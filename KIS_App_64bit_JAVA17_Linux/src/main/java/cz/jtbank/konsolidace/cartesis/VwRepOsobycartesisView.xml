@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepOsobycartesisView"
+   SelectList="VwRepOsobycartesis.ID, 
+       VwRepOsobycartesis.CELE_JMENO, 
+       VwRepOsobycartesis.S_EMAIL, 
+       VwRepOsobycartesis.S_TELEFONFORMATED"
+   FromList="DB_JT.VW_REP_OSOBYCARTESIS VwRepOsobycartesis"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.cartesis.VwRepOsobycartesisViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepOsobycartesis"
+      Entity="cz.jtbank.konsolidace.cartesis.VwRepOsobycartesis" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwRepOsobycartesis"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CeleJmeno"
+      EntityAttrName="CeleJmeno"
+      EntityUsage="VwRepOsobycartesis"
+      AliasName="CELE_JMENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SEmail"
+      EntityAttrName="SEmail"
+      EntityUsage="VwRepOsobycartesis"
+      AliasName="S_EMAIL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="STelefonformated"
+      EntityAttrName="STelefonformated"
+      EntityUsage="VwRepOsobycartesis"
+      AliasName="S_TELEFONFORMATED"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

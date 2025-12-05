@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatDanovesazbyView"
+   SelectList="KpDatDanovesazby.ID, 
+       KpDatDanovesazby.S_STAT, 
+      
+ KpDatDanovesazby.ND_PASMOOD, 
+       KpDatDanovesazby.ND_PASMODO, 
+
+       KpDatDanovesazby.S_MENA, 
+       KpDatDanovesazby.ND_SAZBADANE, 
+
+       KpDatDanovesazby.DT_PLATNOSTOD, 
+       KpDatDanovesazby.DT_PLATNOSTDO"
+   FromList="DB_JT.KP_DAT_DANOVESAZBY KpDatDanovesazby"
+   OrderBy="S_STAT,S_MENA,ND_PASMOOD,DT_PLATNOSTOD DESC"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.KpDatDanovesazbyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatDanovesazby"
+      Entity="cz.jtbank.konsolidace.ucskup.KpDatDanovesazby" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="S_STAT,S_MENA,ND_PASMOOD,DT_PLATNOSTOD DESC" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatDanovesazby"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SStat"
+      IsNotNull="true"
+      EntityAttrName="SStat"
+      EntityUsage="KpDatDanovesazby"
+      AliasName="S_STAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdPasmood"
+      IsNotNull="true"
+      EntityAttrName="NdPasmood"
+      EntityUsage="KpDatDanovesazby"
+      AliasName="ND_PASMOOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdPasmodo"
+      IsNotNull="true"
+      EntityAttrName="NdPasmodo"
+      EntityUsage="KpDatDanovesazby"
+      AliasName="ND_PASMODO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="KpDatDanovesazby"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdSazbadane"
+      IsNotNull="true"
+      EntityAttrName="NdSazbadane"
+      EntityUsage="KpDatDanovesazby"
+      AliasName="ND_SAZBADANE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDatDanovesazby"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDatDanovesazby"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

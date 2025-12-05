@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwLogUcetnispolecnostView"
+   SelectList="VwLogUcetnispolecnost.ID, 
+       VwLogUcetnispolecnost.S_NAZEV, 
+
+       VwLogUcetnispolecnost.S_ICO, 
+       VwLogUcetnispolecnost.C_EXTSYSTEM, 
+
+       VwLogUcetnispolecnost.S_DBLINK, 
+       VwLogUcetnispolecnost.ID_CISSUBJECT, 
+
+       VwLogUcetnispolecnost.SUBJECT, 
+       VwLogUcetnispolecnost.S_MENA, 
+
+       VwLogUcetnispolecnost.ID_KATEGORIE, 
+       VwLogUcetnispolecnost.SPOLKAT, 
+
+       VwLogUcetnispolecnost.ID_ZODPOVEDNAUCETNI, 
+       VwLogUcetnispolecnost.ZODPOVEDNAUCETNI, 
+
+       VwLogUcetnispolecnost.DT_DATUMARCHIVACE, 
+       VwLogUcetnispolecnost.C_OPCE, 
+
+       VwLogUcetnispolecnost.ID_CISOPCE, 
+       VwLogUcetnispolecnost.CISOPCE, 
+
+       VwLogUcetnispolecnost.ID_CISNOMINEE, 
+       VwLogUcetnispolecnost.NOMINEE, 
+
+       VwLogUcetnispolecnost.ID_ODPOVEDNAOSOBA, 
+       VwLogUcetnispolecnost.ODPOVEDNAOSOBA, 
+
+       VwLogUcetnispolecnost.ID_TOPMNG, 
+       VwLogUcetnispolecnost.TOPMNG, 
+
+       VwLogUcetnispolecnost.ID_ADMINISTRATOR, 
+       VwLogUcetnispolecnost.ADMINISTRATOR, 
+
+       VwLogUcetnispolecnost.ID_CISKATSPOL, 
+       VwLogUcetnispolecnost.KATSPOL, 
+
+       VwLogUcetnispolecnost.S_POZNAMKA, 
+       VwLogUcetnispolecnost.S_COUNTRY, 
+
+       VwLogUcetnispolecnost.ID_TYPPROJEKTU, 
+       VwLogUcetnispolecnost.C_ONLINE, 
+
+       VwLogUcetnispolecnost.DT_ONLINEOD, 
+       VwLogUcetnispolecnost.DT_DATUMZMENY, 
+
+       VwLogUcetnispolecnost.S_UZIVATEL"
+   FromList="DB_JT.VW_LOG_UCETNISPOLECNOST VwLogUcetnispolecnost"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.VwLogUcetnispolecnostViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.ucskup.common.VwLogUcetnispolecnostViewRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwLogUcetnispolecnost"
+      Entity="cz.jtbank.konsolidace.ucskup.VwLogUcetnispolecnost" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      EntityAttrName="Id"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      EntityAttrName="SIco"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CExtsystem"
+      EntityAttrName="CExtsystem"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="C_EXTSYSTEM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SDblink"
+      EntityAttrName="SDblink"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="S_DBLINK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCissubject"
+      EntityAttrName="IdCissubject"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Subject"
+      EntityAttrName="Subject"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="SUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKategorie"
+      EntityAttrName="IdKategorie"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ID_KATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolkat"
+      EntityAttrName="Spolkat"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="SPOLKAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdZodpovednaucetni"
+      EntityAttrName="IdZodpovednaucetni"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ID_ZODPOVEDNAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Zodpovednaucetni"
+      EntityAttrName="Zodpovednaucetni"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ZODPOVEDNAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumarchivace"
+      EntityAttrName="DtDatumarchivace"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="DT_DATUMARCHIVACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="COpce"
+      EntityAttrName="COpce"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="C_OPCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisopce"
+      EntityAttrName="IdCisopce"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ID_CISOPCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Cisopce"
+      EntityAttrName="Cisopce"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="CISOPCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisnominee"
+      EntityAttrName="IdCisnominee"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ID_CISNOMINEE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Nominee"
+      EntityAttrName="Nominee"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="NOMINEE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdpovednaosoba"
+      EntityAttrName="IdOdpovednaosoba"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ID_ODPOVEDNAOSOBA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odpovednaosoba"
+      EntityAttrName="Odpovednaosoba"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ODPOVEDNAOSOBA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTopmng"
+      EntityAttrName="IdTopmng"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ID_TOPMNG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Topmng"
+      EntityAttrName="Topmng"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="TOPMNG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdministrator"
+      EntityAttrName="IdAdministrator"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ID_ADMINISTRATOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Administrator"
+      EntityAttrName="Administrator"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ADMINISTRATOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCiskatspol"
+      EntityAttrName="IdCiskatspol"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ID_CISKATSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Katspol"
+      EntityAttrName="Katspol"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="KATSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SCountry"
+      EntityAttrName="SCountry"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="S_COUNTRY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypprojektu"
+      EntityAttrName="IdTypprojektu"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="ID_TYPPROJEKTU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="COnline"
+      EntityAttrName="COnline"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="C_ONLINE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtOnlineod"
+      EntityAttrName="DtOnlineod"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="DT_ONLINEOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzmeny"
+      EntityAttrName="DtDatumzmeny"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="DT_DATUMZMENY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="VwLogUcetnispolecnost"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

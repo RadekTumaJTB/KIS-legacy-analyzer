@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisSubject"
+   SelectList="KpTmpCissubject.ID, 
+       KpTmpCissubject.S_POPIS"
+   FromList="DB_JT.KP_CIS_SUBJECT KpTmpCissubject"
+   Where="ID &#60; 200"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.budget.KpCisSubjectImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpTmpCissubject"
+      Entity="cz.jtbank.konsolidace.mustky.KpTmpCissubject" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="ID &#60; 200" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsUpdateable="false"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpTmpCissubject"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      IsUpdateable="false"
+      EntityAttrName="SPopis"
+      EntityUsage="KpTmpCissubject"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

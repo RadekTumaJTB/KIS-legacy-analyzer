@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatVyjimkyzamykanitopView"
+   SelectList="KpDatVyjimkyzamykanitop.ID_KTGUCETNISPOLECNOST, 
+       KpDatVyjimkyzamykanitop.DT_DATUM"
+   FromList="DB_JT.KP_DAT_VYJIMKYZAMYKANITOP KpDatVyjimkyzamykanitop"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatVyjimkyzamykanitopViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatVyjimkyzamykanitop"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatVyjimkyzamykanitop" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDatVyjimkyzamykanitop"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatVyjimkyzamykanitop"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

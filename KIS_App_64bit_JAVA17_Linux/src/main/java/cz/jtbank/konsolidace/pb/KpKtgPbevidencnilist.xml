@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpKtgPbevidencnilist"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_KTG_PBEVIDENCNILIST"
+   AliasName="KpKtgPbevidencnilist"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilistImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdAdminspolecnost"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_ADMINSPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdBanker"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_BANKER"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdBankerzastupce"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_BANKERZASTUPCE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdAdministrator"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_ADMINISTRATOR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdSkupina"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_SKUPINA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdUcetschvalil1"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_UCETSCHVALIL1"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdUcetschvalil2"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_UCETSCHVALIL2"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CPrivatniklient"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_PRIVATNIKLIENT"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdStatutschvalil1"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_STATUTSCHVALIL1"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdStatutschvalil2"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_STATUTSCHVALIL2"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CDodatekkomunikace"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_DODATEKKOMUNIKACE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CKomisionarskasmlouva"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_KOMISIONARSKASMLOUVA"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CNakupprodejpl"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_NAKUPPRODEJPL"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CSpravaportfolia"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_SPRAVAPORTFOLIA"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CEperspektiva"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_EPERSPEKTIVA"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPoznamka"
+      Precision="250"
+      Type="java.lang.String"
+      ColumnName="S_POZNAMKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="250" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtStatutschvalil"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_STATUTSCHVALIL"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_KTG_PBEVIDENCNILIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpKtgPbskupina"
+      Association="cz.jtbank.konsolidace.pb.FkPbevidencnilistSkupinaAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.pb.FkPbevidencnilistSkupinaAssoc.KpKtgPbskupina"
+      AssociationOtherEnd="cz.jtbank.konsolidace.pb.FkPbevidencnilistSkupinaAssoc.KpKtgPbevidencnilist"
+      Type="cz.jtbank.konsolidace.pb.KpKtgPbskupinaImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnPbevidencnilistId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilist.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_PBEVIDENCNILIST_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkPbevidencnilist" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilist.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_PBEVIDENCNILIST" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkPbevidencnilistSs1" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilist.IdStatutschvalil1" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_PBEVIDENCNILIST_SS1" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkPbevidencnilistZb" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilist.IdBankerzastupce" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_PBEVIDENCNILIST_ZB" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkPbevidencnilistUs2" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilist.IdUcetschvalil2" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_PBEVIDENCNILIST_US2" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkPbevidencnilistAdminspol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilist.IdAdminspolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_PBEVIDENCNILIST_ADMINSPOL" />
+         <Attr Name="_referencedKey" Value="PK_KTGEVIADMINSPOL" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkPbevidencnilistUs1" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilist.IdUcetschvalil1" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_PBEVIDENCNILIST_US1" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkPbevidencnilistSs2" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilist.IdStatutschvalil2" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_PBEVIDENCNILIST_SS2" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkPbevidencnilistSkupina" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilist.IdSkupina" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_PBEVIDENCNILIST_SKUPINA" />
+         <Attr Name="_referencedKey" Value="PK_CISPBSKUPINA" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkPbevidencnilistPb" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilist.IdBanker" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_PBEVIDENCNILIST_PB" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

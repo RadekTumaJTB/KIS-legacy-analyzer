@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwKpDokladbilanceprojekt"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT"
+   AliasName="VwKpDokladbilanceprojekt"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojektImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="List"
+      Precision="64"
+      Type="java.lang.String"
+      ColumnName="LIST"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="64" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Radektext"
+      Precision="4000"
+      Type="java.lang.String"
+      ColumnName="RADEKTEXT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="4000" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Projekt"
+      Precision="143"
+      Type="java.lang.String"
+      ColumnName="PROJEKT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="143" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlRadek"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_RADEK"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkalocal"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKALOCAL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlSloupec"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_SLOUPEC"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SLocale"
+      IsNotNull="true"
+      Precision="6"
+      Type="java.lang.String"
+      ColumnName="S_LOCALE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="6" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkamena"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKAMENA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDokladpolozka"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLADPOLOZKA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgprojekt"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGPROJEKT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADBILANCEPROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwkpdokladbilanceprojektPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojekt.List" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojekt.Radektext" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojekt.Projekt" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojekt.NlRadek" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojekt.SMena" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojekt.NlSloupec" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojekt.SLocale" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojekt.IdDoklad" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojekt.IdKtgprojekt" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWKPDOKLADBILANCEPROJEKT_PRIMA" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

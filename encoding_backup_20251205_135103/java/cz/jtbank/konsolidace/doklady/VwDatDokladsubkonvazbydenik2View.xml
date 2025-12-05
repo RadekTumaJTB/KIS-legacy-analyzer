@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatDokladsubkonvazbydenik2View"
+   BindingStyle="JDBC"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwDatDokladsubkonvazbydenik2ViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+select den.NL_PORADILIST, 
+       den.NL_RADEK,
+	   sum(den.ND_CASTKA * decode(den.NL_PORADILIST,5,db_jt.kurzy.f_getMenaAvgKurs(?,?,d.S_MENA,?),db_jt.kurzy.f_getMenaKurs(?,?,d.S_MENA,?))
+) nd_castka
+from (select us.id from db_jt.kp_ktg_ucetniSpolecnost us where us.id>9999 and db_jt.f_jeSpolecnostClenKonsolidace(us.ID,?,?)>0 
+	  union select ? from dual) s, 
+	 db_jt.kp_dat_doklad d, 
+	 db_jt.KP_DAT_DOKLADSUBKONVAZBYDENIK den 
+where d.DT_DATUM = ?
+  and d.ID_KTGUCETNISPOLECNOST = s.ID 
+  and d.NL_KROK = 200 
+  and d.ID = den.ID_DOKLAD 
+  and den.ID_KTGUCETNISPOLECNOSTFROM = ?
+  and den.C_TYP = 'V'
+group by den.NL_PORADILIST, den.NL_RADEK
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <ViewAttribute
+      Name="NlPoradilist"
+      IsPersistent="false"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      AliasName="NL_PORADILIST"
+      ColumnType="VARCHAR2"
+      Expression="NL_PORADILIST"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      IsPersistent="false"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2"
+      Expression="NL_RADEK"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastka"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2"
+      Expression="ND_CASTKA"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+</ViewObject>

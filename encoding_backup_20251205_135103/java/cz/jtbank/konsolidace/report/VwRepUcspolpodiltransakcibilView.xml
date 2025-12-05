@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepUcspolpodiltransakcibilView"
+   SelectList="VwRepUcspolpodiltransakcibil.ID, 
+       VwRepUcspolpodiltransakcibil.SPOLECNOST, 
+
+       VwRepUcspolpodiltransakcibil.CELEK, 
+       VwRepUcspolpodiltransakcibil.CAST, 
+
+       VwRepUcspolpodiltransakcibil.PODIL, 
+       VwRepUcspolpodiltransakcibil.DATUM"
+   FromList="DB_JT.VW_REP_UCSPOLPODILTRANSAKCIBIL VwRepUcspolpodiltransakcibil"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepUcspolpodiltransakcibilViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepUcspolpodiltransakcibil"
+      Entity="cz.jtbank.konsolidace.report.VwRepUcspolpodiltransakcibil" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwRepUcspolpodiltransakcibil"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwRepUcspolpodiltransakcibil"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Celek"
+      EntityAttrName="Celek"
+      EntityUsage="VwRepUcspolpodiltransakcibil"
+      AliasName="CELEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Cast1"
+      EntityAttrName="Cast1"
+      EntityUsage="VwRepUcspolpodiltransakcibil"
+      AliasName="CAST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Podil"
+      EntityAttrName="Podil"
+      EntityUsage="VwRepUcspolpodiltransakcibil"
+      AliasName="PODIL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datum"
+      EntityAttrName="Datum"
+      EntityUsage="VwRepUcspolpodiltransakcibil"
+      AliasName="DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

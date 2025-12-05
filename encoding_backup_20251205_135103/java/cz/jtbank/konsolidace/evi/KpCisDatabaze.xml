@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisDatabaze"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_DATABAZE"
+   AliasName="KpCisDatabaze"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.evi.KpCisDatabazeImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_DATABAZE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SDblink"
+      IsUnique="true"
+      IsNotNull="true"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_DBLINK"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_DATABAZE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_DATABAZE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpRelDblinkappuser"
+      Association="cz.jtbank.konsolidace.evi.FkReldblinkappuserDblinkAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkReldblinkappuserDblinkAssoc.KpRelDblinkappuser"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkReldblinkappuserDblinkAssoc.KpCisDatabaze"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpcisdatabazeDblink" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpCisDatabaze.SDblink" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISDATABAZE_DBLINK" />
+         <Attr Name="_checkCondition" Value="&#34;S_DBLINK&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpcisdatabaze" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpCisDatabaze.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPCISDATABAZE" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpcisdatabazeId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpCisDatabaze.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISDATABAZE_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CuKpcisdatabazeDblink" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpCisDatabaze.SDblink" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CU_KPCISDATABAZE_DBLINK" />
+         <Attr Name="_isUnique" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

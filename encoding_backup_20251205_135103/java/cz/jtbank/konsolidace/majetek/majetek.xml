@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="majetek"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.majetek" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="KpCisMajetkovaucasttyptran"
+      FullName="cz.jtbank.konsolidace.majetek.KpCisMajetkovaucasttyptran"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisMajetkovaucasttyptranView"
+      FullName="cz.jtbank.konsolidace.majetek.KpCisMajetkovaucasttyptranView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisMajetkovaucastzpusob"
+      FullName="cz.jtbank.konsolidace.majetek.KpCisMajetkovaucastzpusob"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisMajetkovaucastzpusobView"
+      FullName="cz.jtbank.konsolidace.majetek.KpCisMajetkovaucastzpusobView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpMajetkovaucast"
+      FullName="cz.jtbank.konsolidace.majetek.VwKpMajetkovaucast"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpMajetkovaucastView"
+      FullName="cz.jtbank.konsolidace.majetek.VwKpMajetkovaucastView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpMajetkovaucasthistor"
+      FullName="cz.jtbank.konsolidace.majetek.VwKpMajetkovaucasthistor"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpMajetkovaucasthistorView"
+      FullName="cz.jtbank.konsolidace.majetek.VwKpMajetkovaucasthistorView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="MajetekModule"
+      FullName="cz.jtbank.konsolidace.majetek.MajetekModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="KpKtgDokladmajucastvyjimka"
+      FullName="cz.jtbank.konsolidace.majetek.KpKtgDokladmajucastvyjimka"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgDokladmajucastvyjimkaView"
+      FullName="cz.jtbank.konsolidace.majetek.KpKtgDokladmajucastvyjimkaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDefKontrolamajetkovaucast"
+      FullName="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucast"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDefKontrolamajetkovaucastView"
+      FullName="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucastView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpMajetkovaucastprehledView"
+      FullName="cz.jtbank.konsolidace.majetek.VwKpMajetkovaucastprehledView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwInvesticeZakladnijmeni"
+      FullName="cz.jtbank.konsolidace.majetek.VwInvesticeZakladnijmeni"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

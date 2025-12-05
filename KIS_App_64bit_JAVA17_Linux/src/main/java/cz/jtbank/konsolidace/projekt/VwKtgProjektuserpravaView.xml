@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKtgProjektuserpravaView"
+   SelectList="VwKtgProjektuserprava.ID, 
+       VwKtgProjektuserprava.S_NAZEV, 
+
+       VwKtgProjektuserprava.S_CISLOOLD, 
+       VwKtgProjektuserprava.ID_STATUS, 
+
+       VwKtgProjektuserprava.STATUS, 
+       VwKtgProjektuserprava.DT_DATUMSTATUSZMENA, 
+
+       VwKtgProjektuserprava.ID_NAVRHUJE, 
+       VwKtgProjektuserprava.NAVRHUJE, 
+
+       VwKtgProjektuserprava.ID_SPONZOR, 
+       VwKtgProjektuserprava.SPONZOR, 
+
+       VwKtgProjektuserprava.ID_TOP, 
+       VwKtgProjektuserprava.TOP, 
+
+       VwKtgProjektuserprava.ID_PMANAGER, 
+       VwKtgProjektuserprava.PMANAGER, 
+
+       VwKtgProjektuserprava.ID_KATEGORIE, 
+       VwKtgProjektuserprava.KATEGORIE, 
+
+       VwKtgProjektuserprava.S_MENANAKLADY, 
+       VwKtgProjektuserprava.DT_STARTOCENENI, 
+
+       VwKtgProjektuserprava.DT_KONECOCENENI, 
+       VwKtgProjektuserprava.ID_FREKVENCE, 
+
+       VwKtgProjektuserprava.FREKVENCE, 
+       VwKtgProjektuserprava.S_POPIS, 
+
+       VwKtgProjektuserprava.DT_PLATNOSTOD, 
+       VwKtgProjektuserprava.DT_PLATNOSTDO, 
+
+       VwKtgProjektuserprava.ID_PROJEKTNAVRH, 
+       VwKtgProjektuserprava.S_USERID, 
+
+       VwKtgProjektuserprava.DT_MEMORANDUMDALSI, 
+       VwKtgProjektuserprava.NL_MEMORANDUMMESICU, 
+
+       VwKtgProjektuserprava.C_MEMORANDUMSPLNENO, 
+       VwKtgProjektuserprava.ID_APPUSER, 
+
+       VwKtgProjektuserprava.ID_MNGSEGMENT, 
+       VwKtgProjektuserprava.MNGSEGMENT, 
+
+       VwKtgProjektuserprava.ND_CASTKAPRECENENI, 
+       VwKtgProjektuserprava.ID_TYPBILANCE, 
+
+       VwKtgProjektuserprava.C_SLEDUJEBUDGET, 
+       VwKtgProjektuserprava.ID_TYPBUDGETU, 
+
+       VwKtgProjektuserprava.TYPBILANCE, 
+       VwKtgProjektuserprava.TYPBUDGETU, 
+
+       VwKtgProjektuserprava.NL_CNTSLD, 
+       VwKtgProjektuserprava.ID_MNGSEGMENTBOSS, 
+
+       VwKtgProjektuserprava.MNGSEGMENTBOSS"
+   FromList="DB_JT.VW_KTG_PROJEKTUSERPRAVA VwKtgProjektuserprava"
+   OrderBy="S_NAZEV"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   RowClass="cz.jtbank.konsolidace.projekt.VwKtgProjektuserpravaViewRowImpl"
+   ComponentClass="cz.jtbank.konsolidace.projekt.VwKtgProjektuserpravaViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKtgProjektuserprava"
+      Entity="cz.jtbank.konsolidace.projekt.VwKtgProjektuserprava" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="S_NAZEV" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SCisloold"
+      EntityAttrName="SCisloold"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="S_CISLOOLD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdStatus"
+      EntityAttrName="IdStatus"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_STATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Status"
+      EntityAttrName="Status"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="STATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumstatuszmena"
+      EntityAttrName="DtDatumstatuszmena"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="DT_DATUMSTATUSZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdNavrhuje"
+      EntityAttrName="IdNavrhuje"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_NAVRHUJE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Navrhuje"
+      EntityAttrName="Navrhuje"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="NAVRHUJE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSponzor"
+      EntityAttrName="IdSponzor"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_SPONZOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Sponzor"
+      EntityAttrName="Sponzor"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="SPONZOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTop"
+      EntityAttrName="IdTop"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_TOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Top"
+      EntityAttrName="Top"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="TOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPmanager"
+      EntityAttrName="IdPmanager"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_PMANAGER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pmanager"
+      EntityAttrName="Pmanager"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="PMANAGER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKategorie"
+      EntityAttrName="IdKategorie"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_KATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Kategorie"
+      EntityAttrName="Kategorie"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="KATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucspol"
+      IsPersistent="false"
+      EntityAttrName="Ucspol"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="UCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenanaklady"
+      EntityAttrName="SMenanaklady"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="S_MENANAKLADY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtStartoceneni"
+      EntityAttrName="DtStartoceneni"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="DT_STARTOCENENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtKonecoceneni"
+      EntityAttrName="DtKonecoceneni"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="DT_KONECOCENENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdFrekvence"
+      EntityAttrName="IdFrekvence"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_FREKVENCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Frekvence"
+      EntityAttrName="Frekvence"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="FREKVENCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjektnavrh"
+      EntityAttrName="IdProjektnavrh"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_PROJEKTNAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUserid"
+      EntityAttrName="SUserid"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="S_USERID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Dir"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="DIR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtMemorandumdalsi"
+      EntityAttrName="DtMemorandumdalsi"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="DT_MEMORANDUMDALSI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlMemorandummesicu"
+      EntityAttrName="NlMemorandummesicu"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="NL_MEMORANDUMMESICU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CMemorandumsplneno"
+      EntityAttrName="CMemorandumsplneno"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="C_MEMORANDUMSPLNENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAppuser"
+      IsNotNull="true"
+      EntityAttrName="IdAppuser"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_APPUSER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegment"
+      EntityAttrName="IdMngsegment"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_MNGSEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mngsegment"
+      EntityAttrName="Mngsegment"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="MNGSEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkapreceneni"
+      EntityAttrName="NdCastkapreceneni"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ND_CASTKAPRECENENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypbilance"
+      EntityAttrName="IdTypbilance"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_TYPBILANCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CSledujebudget"
+      EntityAttrName="CSledujebudget"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="C_SLEDUJEBUDGET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypbudgetu"
+      EntityAttrName="IdTypbudgetu"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_TYPBUDGETU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typbilance"
+      EntityAttrName="Typbilance"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="TYPBILANCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typbudgetu"
+      EntityAttrName="Typbudgetu"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="TYPBUDGETU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DirAll"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="VIEW_ATTR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlCntsld"
+      EntityAttrName="NlCntsld"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="NL_CNTSLD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypkategorie"
+      IsPersistent="false"
+      EntityAttrName="IdTypkategorie"
+      EntityUsage="VwKtgProjektuserprava"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typkategorie"
+      IsPersistent="false"
+      EntityAttrName="Typkategorie"
+      EntityUsage="VwKtgProjektuserprava"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdNaklady"
+      IsPersistent="false"
+      EntityAttrName="NdNaklady"
+      EntityUsage="VwKtgProjektuserprava"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdInvestice"
+      IsPersistent="false"
+      EntityAttrName="NdInvestice"
+      EntityUsage="VwKtgProjektuserprava"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenainvestice"
+      IsPersistent="false"
+      EntityAttrName="SMenainvestice"
+      EntityUsage="VwKtgProjektuserprava"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdOceneni"
+      IsPersistent="false"
+      EntityAttrName="NdOceneni"
+      EntityUsage="VwKtgProjektuserprava"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenaoceneni"
+      IsPersistent="false"
+      EntityAttrName="SMenaoceneni"
+      EntityUsage="VwKtgProjektuserprava"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdIfrssegment"
+      IsPersistent="false"
+      EntityAttrName="IdIfrssegment"
+      EntityUsage="VwKtgProjektuserprava"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdIfrssubsegment"
+      IsPersistent="false"
+      EntityAttrName="IdIfrssubsegment"
+      EntityUsage="VwKtgProjektuserprava"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ifrssegment"
+      IsPersistent="false"
+      EntityAttrName="Ifrssegment"
+      EntityUsage="VwKtgProjektuserprava"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ifrssubsegment"
+      IsPersistent="false"
+      EntityAttrName="Ifrssubsegment"
+      EntityUsage="VwKtgProjektuserprava"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegmentboss"
+      EntityAttrName="IdMngsegmentboss"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="ID_MNGSEGMENTBOSS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mngsegmentboss"
+      EntityAttrName="Mngsegmentboss"
+      EntityUsage="VwKtgProjektuserprava"
+      AliasName="MNGSEGMENTBOSS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig>
+   <AppModuleConfigBag>
+      <AppModuleConfig name="DokladyModuleLocal">
+         <DeployPlatform>LOCAL</DeployPlatform>
+         <DBconnection>jdbc:oracle:thin:@//exadata10test-scan.jtfg.com:1521/KISTEST1</DBconnection>
+         <password>jt_server</password>
+         <JDBCName>KISTEST1_EXA10_TEST_2025</JDBCName>
+         <jbo.project>business</jbo.project>
+         <AppModuleJndiName>cz.jtbank.konsolidace.doklady.DokladyModule</AppModuleJndiName>
+         <user>appserver</user>
+         <java.naming.factory.initial>oracle.jbo.common.JboInitialContextFactory</java.naming.factory.initial>
+         <ApplicationName>cz.jtbank.konsolidace.doklady.DokladyModule</ApplicationName>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <ConnectionDefinition name="KISOTEST_EXA9">
+      <ENTRY name="JDBC_PORT" value="1521"/>
+      <ENTRY name="ConnectionType" value="JDBC"/>
+      <ENTRY name="HOSTNAME" value="localhost"/>
+      <ENTRY name="user" value="appserver"/>
+      <ENTRY name="ConnectionName" value="KISOTEST_EXA9"/>
+      <ENTRY name="URL" value="jdbc:oracle:thin:@//EXADATA9-SCAN.JTFG.COM:1521/KISOTEST"/>
+      <ENTRY name="SID" value="ORCL"/>
+      <ENTRY name="JdbcDriver" value="oracle.jdbc.driver.OracleDriver"/>
+      <ENTRY name="password">{904}054628B6AAF0BF5D97E8A4588DDFFB3B90361B3D7144F1C641</ENTRY>
+      <ENTRY name="ORACLE_JDBC_TYPE" value="thin"/>
+      <ENTRY name="DeployPassword" value="true"/>
+   </ConnectionDefinition>
+   <ConnectionDefinition name="KIS_PROD_EXA10_priamo">
+      <ENTRY name="JDBC_PORT" value="1521"/>
+      <ENTRY name="ConnectionType" value="JDBC"/>
+      <ENTRY name="HOSTNAME" value="czpae00028"/>
+      <ENTRY name="DeployPassword" value="true"/>
+      <ENTRY name="user" value="appserver"/>
+      <ENTRY name="ConnectionName" value="KIS_PROD_EXA10_priamo"/>
+      <ENTRY name="URL" value="jdbc:oracle:thin:@//EXADATA10-SCAN.JTFG.COM:1521/KIS_EXA "/>
+      <ENTRY name="SID" value="kis"/>
+      <ENTRY name="JdbcDriver" value="oracle.jdbc.driver.OracleDriver"/>
+      <ENTRY name="password">{904}05F1D22DCFD15AFB58B40CDED2B4F3B8926C616F254CE6494A</ENTRY>
+      <ENTRY name="ORACLE_JDBC_TYPE" value="thin"/>
+      <ENTRY name="DeployPassword" value="true"/>
+   </ConnectionDefinition>
+   <ConnectionDefinition name="KIS_PROD_DB_proxy">
+      <ENTRY name="JDBC_PORT" value="1621"/>
+      <ENTRY name="ConnectionType" value="JDBC"/>
+      <ENTRY name="HOSTNAME" value="czpav00726.jtfg.com"/>
+      <ENTRY name="DeployPassword" value="true"/>
+      <ENTRY name="user" value="appserver"/>
+      <ENTRY name="ConnectionName" value="KIS_PROD_DB_proxy"/>
+      <ENTRY name="URL" value="jdbc:oracle:thin:@//czpav01175.jtfg.com:1621/KIS_EXA"/>
+      <ENTRY name="SID" value="KIS_EXA"/>
+      <ENTRY name="JdbcDriver" value="oracle.jdbc.driver.OracleDriver"/>
+      <ENTRY name="password">{904}058C9B5307B9E50C1940E083683CE9DEDC98C2229366E8AC1E</ENTRY>
+      <ENTRY name="ORACLE_JDBC_TYPE" value="thin"/>
+      <ENTRY name="DeployPassword" value="true"/>
+   </ConnectionDefinition>
+   <ConnectionDefinition name="KISTEST1_EXA10_TEST_2025">
+      <ENTRY name="JDBC_PORT" value="1521"/>
+      <ENTRY name="ConnectionType" value="JDBC"/>
+      <ENTRY name="HOSTNAME" value="localhost"/>
+      <ENTRY name="user" value="appserver"/>
+      <ENTRY name="ConnectionName" value="KISTEST1_EXA10_TEST_2025"/>
+      <ENTRY name="URL" value="jdbc:oracle:thin:@//exadata10test-scan.jtfg.com:1521/KISTEST1"/>
+      <ENTRY name="SID" value="ORCL"/>
+      <ENTRY name="password">
+         <![CDATA[{904}05E9031F2FD8D90166AB0FCFF232C95BD6431B6D5E815771AE]]>
+      </ENTRY>
+      <ENTRY name="JdbcDriver" value="oracle.jdbc.driver.OracleDriver"/>
+      <ENTRY name="ORACLE_JDBC_TYPE" value="thin"/>
+      <ENTRY name="DeployPassword" value="true"/>
+   </ConnectionDefinition>
+</BC4JConfig>

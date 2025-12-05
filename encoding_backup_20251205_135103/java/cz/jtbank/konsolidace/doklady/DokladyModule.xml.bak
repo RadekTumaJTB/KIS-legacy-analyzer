@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="DokladyModule"
+   ComponentClass="cz.jtbank.konsolidace.doklady.DokladyModuleImpl"
+   ComponentInterface="cz.jtbank.konsolidace.doklady.common.DokladyModule" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="VwKpDokladView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ViewJtSpol1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.ViewJtSpol" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladvzajemvazbyView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladvzajemvazbyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ViewExcelDetail1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.ViewExcelDetail" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ViewExcelDetailCZB1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.ViewExcelDetailCZB" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDokladprotokolView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpDatDokladprotokolView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDokladView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpDatDokladView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladmanualView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladmanualView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladzahlaviView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladzahlaviView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladfrontaView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladfrontaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladbilancepocstavView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladbilancepocstavView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ViewJtSpolUserPrava1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.ViewJtSpolUserPrava" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpGuidokladvazbyspolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpGuidokladvazbyspolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpTmpDokladvazbyView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpTmpDokladvazbyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladuverovapoziceView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladuverovapoziceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladmenovapoziceView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladmenovapoziceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladzustatkyuctuView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladzustatkyuctuView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladmenovapoziceSpecialView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladmenovapoziceSpecialView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladuverovapoziceSpecialView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladuverovapoziceSpecialView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladprotistranaView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladprotistranaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpParametryView1"
+      ViewObjectName="cz.jtbank.konsolidace.admin.KpParametryView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwSubkonDokladpolozkaView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwSubkonDokladpolozkaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgSubkonsolidaceetapaView1"
+      ViewObjectName="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidaceetapaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpSubkonsolidaceView1"
+      ViewObjectName="cz.jtbank.konsolidace.subkons.VwKpSubkonsolidaceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladpolozkadenikView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladpolozkadenikView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDokladvazbyView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpDatDokladvazbyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgAppuserView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KtgAppuserView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatSchvalenoooView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpDatSchvalenoooView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgEmailzpravyView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KpKtgEmailzpravyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDokladzdrojdatagregaceView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregaceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisMenaView1"
+      ViewObjectName="cz.jtbank.konsolidace.fininv.KpCisMenaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatDokladzdrojdatagregaceView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwDatDokladzdrojdatagregaceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwProtistranaView1"
+      ViewObjectName="cz.jtbank.konsolidace.protistrany.VwProtistranaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatAuditView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpDatAuditView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpTmpGuiView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpTmpGuiView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatSchvalovakView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwDatSchvalovakView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatSchvalovakradekView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwDatSchvalovakradekView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKtgOdborView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwKtgOdborView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpEmailParamView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpEmailParamView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="CisLocaleView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.CisLocaleView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladvvexcelView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladvvexcelView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatManualnizdrojdatView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpDatManualnizdrojdatView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladvazbyvyparovaneView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladvazbyvyparovaneView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladvazbynevyparovaneView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladvazbynevyparovaneView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladdetailProjektView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailProjektView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladdetailOdborView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailOdborView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDoczastupView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpDatDoczastupView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDokladsubkonvazbydenikView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonvazbydenikView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDokladsubkonvazbydenikKurzView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonvazbydenikKurzView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDokladsubkonvazbydenikView2"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonvazbydenikView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpSubkonsolidaceView2"
+      ViewObjectName="cz.jtbank.konsolidace.subkons.VwKpSubkonsolidaceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatBudgetView1"
+      ViewObjectName="cz.jtbank.konsolidace.budget.VwDatBudgetView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatBudgetpolozkaView1"
+      ViewObjectName="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatBudgettransakceView1"
+      ViewObjectName="cz.jtbank.konsolidace.budget.VwDatBudgettransakceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatBudgetpolozkadata1View1"
+      ViewObjectName="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata1View" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatBudgetpolozkadata2View1"
+      ViewObjectName="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata2View" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisTyptransakceView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpCisTyptransakceEditView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDokladView2"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpDatDokladView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwSubkonDokladpolozkaView2"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwSubkonDokladpolozkaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKalendarakciView1"
+      ViewObjectName="cz.jtbank.konsolidace.admin.KpKalendarakciView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelSubkonsolidaceclenView1"
+      ViewObjectName="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclenView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladdetailDslrView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladdetailDslrsumView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsumView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgProjektView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.KpKtgProjektView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpProjektdokladView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpProjektdokladView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpProjektdokladdetailView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpProjektdokladdetailView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwTmpProjekttogenView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwTmpProjekttogenView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladbilanceprotistranaView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprotistranaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladbilanceprojektView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojektView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladbilanceodborView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceodborView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladmanodborprojektView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladmanodborprojektView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladspolodborprojektView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladspolodborprojektView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatBudgetzastupView1"
+      ViewObjectName="cz.jtbank.konsolidace.budget.KpDatBudgetzastupView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpTmpVyjimkyprotokoluView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpTmpVyjimkyprotokoluView" >
+   </ViewUsage>
+</AppModule>

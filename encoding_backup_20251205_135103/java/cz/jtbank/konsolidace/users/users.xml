@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="users"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.users" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="UsersModule"
+      FullName="cz.jtbank.konsolidace.users.UsersModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="KpRelAppuserSpolecnostpravo"
+      FullName="cz.jtbank.konsolidace.users.KpRelAppuserSpolecnostpravo"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelAppuserSpolecnostpravoView"
+      FullName="cz.jtbank.konsolidace.users.KpRelAppuserSpolecnostpravoView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisSpolecnostpravo"
+      FullName="cz.jtbank.konsolidace.users.KpCisSpolecnostpravo"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisSpolecnostpravoView"
+      FullName="cz.jtbank.konsolidace.users.KpCisSpolecnostpravoView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KtgAppuser"
+      FullName="cz.jtbank.konsolidace.users.KtgAppuser"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KtgAppuserView"
+      FullName="cz.jtbank.konsolidace.users.KtgAppuserView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgEmailzpravy"
+      FullName="cz.jtbank.konsolidace.users.KpKtgEmailzpravy"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgEmailzpravyView"
+      FullName="cz.jtbank.konsolidace.users.KpKtgEmailzpravyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisEmailzpravy"
+      FullName="cz.jtbank.konsolidace.users.KpCisEmailzpravy"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisEmailzpravyView"
+      FullName="cz.jtbank.konsolidace.users.KpCisEmailzpravyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpTmpAppuserspolVyjimky"
+      FullName="cz.jtbank.konsolidace.users.KpTmpAppuserspolVyjimky"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpTmpAppuserspolVyjimkyView"
+      FullName="cz.jtbank.konsolidace.users.KpTmpAppuserspolVyjimkyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KtgAppuserNadrizenaView"
+      FullName="cz.jtbank.konsolidace.users.KtgAppuserNadrizenaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KtgAppuserEditView"
+      FullName="cz.jtbank.konsolidace.users.KtgAppuserEditView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelAppuserskupina"
+      FullName="cz.jtbank.konsolidace.users.KpRelAppuserskupina"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkRelappuserskupinaUserAssoc"
+      FullName="cz.jtbank.konsolidace.users.FkRelappuserskupinaUserAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpRelAppuserskupinaView"
+      FullName="cz.jtbank.konsolidace.users.KpRelAppuserskupinaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KtgAppuserIExterniView"
+      FullName="cz.jtbank.konsolidace.users.KtgAppuserIExterniView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

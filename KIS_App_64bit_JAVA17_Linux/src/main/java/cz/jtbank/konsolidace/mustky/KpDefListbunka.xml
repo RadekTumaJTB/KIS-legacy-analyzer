@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDefListbunka"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DEF_LISTBUNKA"
+   AliasName="KpDefListbunka"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.mustky.KpDefListbunkaImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_LISTBUNKA"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCislist"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISLIST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_LISTBUNKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCisradektyp"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISRADEKTYP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_LISTBUNKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlRadek"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_RADEK"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_LISTBUNKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlSloupec"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_SLOUPEC"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_LISTBUNKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CTyp"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_TYP"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_DEF_LISTBUNKA"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SZkratka"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_ZKRATKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DEF_LISTBUNKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="NnKpdeflistbunkaId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefListbunka.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFLISTBUNKA_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdeflistbunkaRadek" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefListbunka.NlRadek" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFLISTBUNKA_RADEK" />
+         <Attr Name="_checkCondition" Value="&#34;NL_RADEK&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdeflistbunkaSloupec" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefListbunka.NlSloupec" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFLISTBUNKA_SLOUPEC" />
+         <Attr Name="_checkCondition" Value="&#34;NL_SLOUPEC&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpdeflistbunkaTyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefListbunka.CTyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPDEFLISTBUNKA_TYP" />
+         <Attr Name="_checkCondition" Value=" c_typ is not null and c_typ in ( &#39;V&#39;, &#39;R&#39;, &#39;0&#39;, &#39;I&#39;) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdeflistbunkaRadektyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefListbunka.IdCisradektyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFLISTBUNKA_RADEKTYP" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISRADEKTYP&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdeflistbunkaListtyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefListbunka.IdCislist" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFLISTBUNKA_LISTTYP" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISLIST&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpdeflistbunka" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefListbunka.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPDEFLISTBUNKA" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpdeflistbunkaRadektyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefListbunka.IdCisradektyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPDEFLISTBUNKA_RADEKTYP" />
+         <Attr Name="_referencedKey" Value="PK_KPRADEKTEXT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpdeflistbunkaListtyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefListbunka.IdCislist" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPDEFLISTBUNKA_LISTTYP" />
+         <Attr Name="_referencedKey" Value="PK_KPCISLIST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

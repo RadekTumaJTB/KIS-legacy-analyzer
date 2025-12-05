@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="IfrsModule"
+   ComponentClass="cz.jtbank.konsolidace.ifrs.IfrsModuleImpl"
+   ComponentInterface="cz.jtbank.konsolidace.ifrs.common.IfrsModule" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="VwJtSpolecnostpravidlaifrsView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravidlaifrsView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ViewJtSpol1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.ViewJtSpol" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisIfrstyppravidloView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidloView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwJtSpolecnostpravifrsdetailView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravifrsdetailView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisIfrstyppravidlodetailView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidlodetailView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisMenaView1"
+      ViewObjectName="cz.jtbank.konsolidace.fininv.KpCisMenaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwJtSpolecnostpravifrshistorView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravifrshistorView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ViewJtSpol2"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.ViewJtSpol" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ViewJtSpolUserPrava1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.ViewJtSpolUserPrava" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwProtistranaView1"
+      ViewObjectName="cz.jtbank.konsolidace.protistrany.VwProtistranaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisIfrssegmentView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpCisIfrssegmentView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisIfrssubsegmentView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpCisIfrssubsegmentView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisMngsegmentView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpCisMngsegmentView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatMngsegmentbossView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentbossView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgAppuserView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KtgAppuserView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKtgProjektView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.VwKtgProjektView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgProjektView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.KpKtgProjektView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKtgUcetnispolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwKtgUcetnispolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgOdborView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpKtgOdborView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKtgOdborView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwKtgOdborView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelProjektucspolView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.KpRelProjektucspolView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpMajetkovaucastprehledView1"
+      ViewObjectName="cz.jtbank.konsolidace.majetek.VwKpMajetkovaucastprehledView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatSegmentzastupView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpDatSegmentzastupView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisSegmentzastuptypView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpCisSegmentzastuptypView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostLinkView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpKtgUcetnispolecnostLinkView" >
+   </ViewUsage>
+</AppModule>

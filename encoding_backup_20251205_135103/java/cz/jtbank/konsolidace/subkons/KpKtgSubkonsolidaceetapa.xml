@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpKtgSubkonsolidaceetapa"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_KTG_SUBKONSOLIDACEETAPA"
+   AliasName="KpKtgSubkonsolidaceetapa"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidaceetapaImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLIDACEETAPA"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgsubkonsolidace"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGSUBKONSOLIDACE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLIDACEETAPA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlPoradi"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_PORADI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLIDACEETAPA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SZkratka"
+      IsNotNull="true"
+      Precision="32"
+      Type="java.lang.String"
+      ColumnName="S_ZKRATKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_SUBKONSOLIDACEETAPA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="32" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="256"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_SUBKONSOLIDACEETAPA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="256" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="NnKpsubkonsetapaSpol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidaceetapa.IdKtgsubkonsolidace" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBKONSETAPA_SPOL" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGSUBKONSOLIDACE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpsubkonsolidaceetapaId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidaceetapa.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBKONSOLIDACEETAPA_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpsubkonsetapaPoradi" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidaceetapa.NlPoradi" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBKONSETAPA_PORADI" />
+         <Attr Name="_checkCondition" Value="&#34;NL_PORADI&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpsubkonsolidaceetapa" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidaceetapa.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPSUBKONSOLIDACEETAPA" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpsubkonsetapaZkratka" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidaceetapa.SZkratka" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBKONSETAPA_ZKRATKA" />
+         <Attr Name="_checkCondition" Value="&#34;S_ZKRATKA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpsubkonsetapaSpol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidaceetapa.IdKtgsubkonsolidace" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPSUBKONSETAPA_SPOL" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

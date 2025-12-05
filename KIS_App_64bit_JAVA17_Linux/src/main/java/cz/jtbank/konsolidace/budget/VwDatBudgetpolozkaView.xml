@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatBudgetpolozkaView"
+   SelectList="VwDatBudgetpolozka.ID, 
+       VwDatBudgetpolozka.ID_BUDGET, 
+
+       VwDatBudgetpolozka.ID_CISTYPTRAN, 
+       VwDatBudgetpolozka.ND_CASTKA, 
+
+       VwDatBudgetpolozka.S_MENA, 
+       VwDatBudgetpolozka.ID_ODBOROO, 
+
+       VwDatBudgetpolozka.ODBOROO, 
+       VwDatBudgetpolozka.ID_UCSPOLOO, 
+
+       VwDatBudgetpolozka.UCSPOLOO, 
+       VwDatBudgetpolozka.ID_UCSPOLTOP, 
+
+       VwDatBudgetpolozka.UCSPOLTOP, 
+       VwDatBudgetpolozka.ID_GESTOR, 
+
+       VwDatBudgetpolozka.GESTOR, 
+       VwDatBudgetpolozka.DT_SCHVALENOODBOR, 
+
+       VwDatBudgetpolozka.DT_SCHVALENOGESTOR, 
+       VwDatBudgetpolozka.DT_SCHVALENOUCSPOL, 
+
+       VwDatBudgetpolozka.DT_SCHVALENOTOP, 
+       VwDatBudgetpolozka.S_POZNAMKA, 
+
+       VwDatBudgetpolozka.DT_PLATNOSTOD, 
+       VwDatBudgetpolozka.DT_PLATNOSTDO, 
+
+       VwDatBudgetpolozka.BUDGET, 
+       VwDatBudgetpolozka.TYPTRAN, 
+
+       VwDatBudgetpolozka.HISTORIE, 
+       VwDatBudgetpolozka.DT_SCHVALITDO, 
+
+       VwDatBudgetpolozka.ID_ODBOROOSCH, 
+       VwDatBudgetpolozka.ODBOROOSCH, 
+
+       VwDatBudgetpolozka.ID_UCSPOLOOSCH, 
+       VwDatBudgetpolozka.UCSPOLOOSCH, 
+
+       VwDatBudgetpolozka.ID_UCSPOLTOPSCH, 
+       VwDatBudgetpolozka.UCSPOLTOPSCH, 
+
+       VwDatBudgetpolozka.ID_GESTORSCH, 
+       VwDatBudgetpolozka.GESTORSCH"
+   FromList="DB_JT.VW_DAT_BUDGETPOLOZKA VwDatBudgetpolozka"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkaViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatBudgetpolozka"
+      Entity="cz.jtbank.konsolidace.budget.VwDatBudgetpolozka" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdBudget"
+      IsNotNull="true"
+      EntityAttrName="IdBudget"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ID_BUDGET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCistyptran"
+      IsNotNull="true"
+      EntityAttrName="IdCistyptran"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ID_CISTYPTRAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastka"
+      EntityAttrName="NdCastka"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdboroo"
+      EntityAttrName="IdOdboroo"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ID_ODBOROO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odboroo"
+      EntityAttrName="Odboroo"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ODBOROO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoloo"
+      EntityAttrName="IdUcspoloo"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ID_UCSPOLOO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucspoloo"
+      EntityAttrName="Ucspoloo"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="UCSPOLOO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoltop"
+      EntityAttrName="IdUcspoltop"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ID_UCSPOLTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucspoltop"
+      EntityAttrName="Ucspoltop"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="UCSPOLTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdGestor"
+      EntityAttrName="IdGestor"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ID_GESTOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Gestor"
+      EntityAttrName="Gestor"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="GESTOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenoodbor"
+      EntityAttrName="DtSchvalenoodbor"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="DT_SCHVALENOODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenogestor"
+      EntityAttrName="DtSchvalenogestor"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="DT_SCHVALENOGESTOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenoucspol"
+      EntityAttrName="DtSchvalenoucspol"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="DT_SCHVALENOUCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenotop"
+      EntityAttrName="DtSchvalenotop"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="DT_SCHVALENOTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Budget"
+      EntityAttrName="Budget"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="BUDGET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typtran"
+      EntityAttrName="Typtran"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="TYPTRAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Historie"
+      EntityAttrName="Historie"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="HISTORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalitdo"
+      EntityAttrName="DtSchvalitdo"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="DT_SCHVALITDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdboroosch"
+      EntityAttrName="IdOdboroosch"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ID_ODBOROOSCH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odboroosch"
+      EntityAttrName="Odboroosch"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ODBOROOSCH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoloosch"
+      EntityAttrName="IdUcspoloosch"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ID_UCSPOLOOSCH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucspoloosch"
+      EntityAttrName="Ucspoloosch"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="UCSPOLOOSCH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoltopsch"
+      EntityAttrName="IdUcspoltopsch"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ID_UCSPOLTOPSCH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucspoltopsch"
+      EntityAttrName="Ucspoltopsch"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="UCSPOLTOPSCH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdGestorsch"
+      EntityAttrName="IdGestorsch"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="ID_GESTORSCH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Gestorsch"
+      EntityAttrName="Gestorsch"
+      EntityUsage="VwDatBudgetpolozka"
+      AliasName="GESTORSCH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

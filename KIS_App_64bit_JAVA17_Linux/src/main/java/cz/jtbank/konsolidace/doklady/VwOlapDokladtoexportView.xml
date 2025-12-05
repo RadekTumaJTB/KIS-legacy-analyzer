@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwOlapDokladtoexportView"
+   SelectList="VwOlapDokladtoexport.ID, 
+       VwOlapDokladtoexport.ID_KTGUCETNISPOLECNOST, 
+
+       VwOlapDokladtoexport.UCETNISPOLECNOST, 
+       VwOlapDokladtoexport.DT_DATUM, 
+
+       VwOlapDokladtoexport.S_MENA, 
+       VwOlapDokladtoexport.NL_KROK, 
+
+       VwOlapDokladtoexport.DT_VYTVORENO, 
+       VwOlapDokladtoexport.S_UZIVATEL, 
+
+       VwOlapDokladtoexport.SUBKONSOLIDACE"
+   FromList="DB_JT.VW_OLAP_DOKLADTOEXPORT VwOlapDokladtoexport"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwOlapDokladtoexportViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwOlapDokladtoexport"
+      Entity="cz.jtbank.konsolidace.doklady.VwOlapDokladtoexport" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwOlapDokladtoexport"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwOlapDokladtoexport"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucetnispolecnost"
+      EntityAttrName="Ucetnispolecnost"
+      EntityUsage="VwOlapDokladtoexport"
+      AliasName="UCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwOlapDokladtoexport"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwOlapDokladtoexport"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlKrok"
+      EntityAttrName="NlKrok"
+      EntityUsage="VwOlapDokladtoexport"
+      AliasName="NL_KROK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtVytvoreno"
+      EntityAttrName="DtVytvoreno"
+      EntityUsage="VwOlapDokladtoexport"
+      AliasName="DT_VYTVORENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="VwOlapDokladtoexport"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Subkonsolidace"
+      EntityAttrName="Subkonsolidace"
+      EntityUsage="VwOlapDokladtoexport"
+      AliasName="SUBKONSOLIDACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

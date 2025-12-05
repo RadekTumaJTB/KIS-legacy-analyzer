@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisRadektextlangMilosView"
+   SelectList="KpCisRadektextlang.ID, 
+       KpCisRadektextlang.S_LOCALE, 
+       KpCisRadektextlang.S_POPIS, 
+       KpDefListbunka.C_TYP, 
+       KpDefListbunka.ID AS ID1"
+   FromList="DB_JT.KP_CIS_RADEKTEXTLANG KpCisRadektextlang, DB_JT.KP_DEF_LISTBUNKA KpDefListbunka"
+   Where="KpCisRadektextlang.ID BETWEEN 15000 AND 19999 AND KpCisRadektextlang.ID = KpDefListbunka.ID_CISRADEKTYP"
+   OrderBy="KpCisRadektextlang.ID ASC"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpCisRadektextlangMilosViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisRadektextlang"
+      Entity="cz.jtbank.konsolidace.doklady.KpCisRadektextlang"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpCisRadektextlang.ID BETWEEN 15000 AND 19999 AND KpCisRadektextlang.ID = KpDefListbunka.ID_CISRADEKTYP" />
+         <Attr Name="_queryOrderBy" Value="KpCisRadektextlang.ID ASC" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpDefListbunka"
+      Entity="cz.jtbank.konsolidace.mustky.KpDefListbunka"
+      SourceUsage="cz.jtbank.konsolidace.doklady.KpCisRadektextlangMilosView.KpCisRadektextlang"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.doklady.KpCisRadektextlang.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.mustky.KpDefListbunka.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisRadektextlang"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SLocale"
+      IsNotNull="true"
+      EntityAttrName="SLocale"
+      EntityUsage="KpCisRadektextlang"
+      AliasName="S_LOCALE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisRadektextlang"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CTyp"
+      EntityAttrName="CTyp"
+      EntityUsage="KpDefListbunka"
+      AliasName="C_TYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id1"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDefListbunka"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKtgProjektOverviewView"
+   SelectList="VwKtgProjekt.ID, 
+       VwKtgProjekt.S_NAZEV, 
+       VwKtgProjekt.S_CISLOOLD, 
+
+       VwKtgProjekt.ID_STATUS, 
+       VwKtgProjekt.STATUS, 
+
+       VwKtgProjekt.DT_DATUMSTATUSZMENA, 
+       VwKtgProjekt.ID_NAVRHUJE, 
+
+       VwKtgProjekt.NAVRHUJE, 
+       VwKtgProjekt.ID_SPONZOR, 
+
+       VwKtgProjekt.SPONZOR, 
+       VwKtgProjekt.ID_TOP, 
+ 
+      VwKtgProjekt.TOP, 
+       VwKtgProjekt.ID_PMANAGER, 
+  
+     VwKtgProjekt.PMANAGER, 
+       VwKtgProjekt.ID_KATEGORIE, 
+
+       VwKtgProjekt.KATEGORIE, 
+       VwKtgProjekt.S_MENANAKLADY, 
+
+       VwKtgProjekt.DT_STARTOCENENI, 
+       VwKtgProjekt.DT_KONECOCENENI, 
+
+       VwKtgProjekt.ID_FREKVENCE, 
+       VwKtgProjekt.FREKVENCE, 
+
+       VwKtgProjekt.S_POPIS, 
+       VwKtgProjekt.DT_PLATNOSTOD, 
+
+       VwKtgProjekt.DT_PLATNOSTDO, 
+       VwKtgProjekt.ID_PROJEKTNAVRH, 
+
+       VwKtgProjekt.DT_MEMORANDUMDALSI, 
+       VwKtgProjekt.NL_MEMORANDUMMESICU, 
+
+       VwKtgProjekt.C_MEMORANDUMSPLNENO, 
+       VwKtgProjekt.ID_MNGSEGMENT, 
+
+       VwKtgProjekt.MNGSEGMENT, 
+       VwKtgProjekt.ND_CASTKAPRECENENI, 
+
+       VwKtgProjekt.ID_TYPBILANCE, 
+       VwKtgProjekt.C_SLEDUJEBUDGET, 
+
+       VwKtgProjekt.ID_TYPBUDGETU, 
+       VwKtgProjekt.TYPBILANCE, 
+
+       VwKtgProjekt.TYPBUDGETU, 
+       VwKtgProjekt.NL_CNTSLD, 
+
+       VwKtgProjekt.ID_MNGSEGMENTBOSS, 
+       VwKtgProjekt.MNGSEGMENTBOSS"
+   FromList="DB_JT.VW_KTG_PROJEKT VwKtgProjekt"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.VwKtgProjektOverviewViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKtgProjekt"
+      Entity="cz.jtbank.konsolidace.projekt.VwKtgProjekt" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="VwKtgProjekt"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SCisloold"
+      EntityAttrName="SCisloold"
+      EntityUsage="VwKtgProjekt"
+      AliasName="S_CISLOOLD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdStatus"
+      EntityAttrName="IdStatus"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_STATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Status"
+      EntityAttrName="Status"
+      EntityUsage="VwKtgProjekt"
+      AliasName="STATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumstatuszmena"
+      EntityAttrName="DtDatumstatuszmena"
+      EntityUsage="VwKtgProjekt"
+      AliasName="DT_DATUMSTATUSZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdNavrhuje"
+      EntityAttrName="IdNavrhuje"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_NAVRHUJE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Navrhuje"
+      EntityAttrName="Navrhuje"
+      EntityUsage="VwKtgProjekt"
+      AliasName="NAVRHUJE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSponzor"
+      EntityAttrName="IdSponzor"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_SPONZOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Sponzor"
+      EntityAttrName="Sponzor"
+      EntityUsage="VwKtgProjekt"
+      AliasName="SPONZOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTop"
+      EntityAttrName="IdTop"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_TOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Top"
+      EntityAttrName="Top"
+      EntityUsage="VwKtgProjekt"
+      AliasName="TOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPmanager"
+      EntityAttrName="IdPmanager"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_PMANAGER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pmanager"
+      EntityAttrName="Pmanager"
+      EntityUsage="VwKtgProjekt"
+      AliasName="PMANAGER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKategorie"
+      EntityAttrName="IdKategorie"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_KATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Kategorie"
+      EntityAttrName="Kategorie"
+      EntityUsage="VwKtgProjekt"
+      AliasName="KATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucspol"
+      IsPersistent="false"
+      EntityAttrName="Ucspol"
+      EntityUsage="VwKtgProjekt"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenanaklady"
+      EntityAttrName="SMenanaklady"
+      EntityUsage="VwKtgProjekt"
+      AliasName="S_MENANAKLADY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtStartoceneni"
+      EntityAttrName="DtStartoceneni"
+      EntityUsage="VwKtgProjekt"
+      AliasName="DT_STARTOCENENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtKonecoceneni"
+      EntityAttrName="DtKonecoceneni"
+      EntityUsage="VwKtgProjekt"
+      AliasName="DT_KONECOCENENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdFrekvence"
+      EntityAttrName="IdFrekvence"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_FREKVENCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Frekvence"
+      EntityAttrName="Frekvence"
+      EntityUsage="VwKtgProjekt"
+      AliasName="FREKVENCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwKtgProjekt"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwKtgProjekt"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwKtgProjekt"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjektnavrh"
+      EntityAttrName="IdProjektnavrh"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_PROJEKTNAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtMemorandumdalsi"
+      EntityAttrName="DtMemorandumdalsi"
+      EntityUsage="VwKtgProjekt"
+      AliasName="DT_MEMORANDUMDALSI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlMemorandummesicu"
+      EntityAttrName="NlMemorandummesicu"
+      EntityUsage="VwKtgProjekt"
+      AliasName="NL_MEMORANDUMMESICU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CMemorandumsplneno"
+      EntityAttrName="CMemorandumsplneno"
+      EntityUsage="VwKtgProjekt"
+      AliasName="C_MEMORANDUMSPLNENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegment"
+      EntityAttrName="IdMngsegment"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_MNGSEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mngsegment"
+      EntityAttrName="Mngsegment"
+      EntityUsage="VwKtgProjekt"
+      AliasName="MNGSEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkapreceneni"
+      EntityAttrName="NdCastkapreceneni"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ND_CASTKAPRECENENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypbilance"
+      EntityAttrName="IdTypbilance"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_TYPBILANCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CSledujebudget"
+      EntityAttrName="CSledujebudget"
+      EntityUsage="VwKtgProjekt"
+      AliasName="C_SLEDUJEBUDGET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypbudgetu"
+      EntityAttrName="IdTypbudgetu"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_TYPBUDGETU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typbilance"
+      EntityAttrName="Typbilance"
+      EntityUsage="VwKtgProjekt"
+      AliasName="TYPBILANCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typbudgetu"
+      EntityAttrName="Typbudgetu"
+      EntityUsage="VwKtgProjekt"
+      AliasName="TYPBUDGETU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlCntsld"
+      EntityAttrName="NlCntsld"
+      EntityUsage="VwKtgProjekt"
+      AliasName="NL_CNTSLD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegmentboss"
+      EntityAttrName="IdMngsegmentboss"
+      EntityUsage="VwKtgProjekt"
+      AliasName="ID_MNGSEGMENTBOSS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mngsegmentboss"
+      EntityAttrName="Mngsegmentboss"
+      EntityUsage="VwKtgProjekt"
+      AliasName="MNGSEGMENTBOSS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

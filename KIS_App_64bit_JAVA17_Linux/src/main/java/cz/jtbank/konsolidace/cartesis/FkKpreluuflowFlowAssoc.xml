@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+
+<Association
+   Name="FkKpreluuflowFlowAssoc" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+   </DesignTime>
+   <AssociationEnd
+      Name="KpCisFlow"
+      Cardinality="1"
+      Source="true"
+      Owner="cz.jtbank.konsolidace.cartesis.KpCisFlow" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.cartesis.KpCisFlow.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_minCardinality" Value="1" />
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="KpCisFlow" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.cartesis.KpCisFlow.PkKpcisflow" />
+      </DesignTime>
+   </AssociationEnd>
+   <AssociationEnd
+      Name="KpRelUcetunifflow"
+      Cardinality="-1"
+      Owner="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflow" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflow.IdCisflow" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="KpRelUcetunifflow" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflow.FkKpreluuflowFlow" />
+      </DesignTime>
+   </AssociationEnd>
+</Association>

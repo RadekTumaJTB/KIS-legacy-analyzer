@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwExtSpolecnostArchCesta"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_EXT_SPOLECNOST_ARCH_CESTA"
+   AliasName="VwExtSpolecnostArchCesta"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.protistrany.VwExtSpolecnostArchCestaImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdExt"
+      IsUnique="true"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_EXT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_EXT_SPOLECNOST_ARCH_CESTA"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazevExt"
+      Precision="200"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV_EXT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_EXT_SPOLECNOST_ARCH_CESTA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="200" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNumber0"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_NUMBER0"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_EXT_SPOLECNOST_ARCH_CESTA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDatabaze"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DATABAZE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_EXT_SPOLECNOST_ARCH_CESTA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDblink"
+      IsNotNull="true"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="ID_DBLINK"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_EXT_SPOLECNOST_ARCH_CESTA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdProtistrana"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_PROTISTRANA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_EXT_SPOLECNOST_ARCH_CESTA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdSpolecnost"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_SPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_EXT_SPOLECNOST_ARCH_CESTA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SCesta"
+      Precision="70"
+      Type="java.lang.String"
+      ColumnName="S_CESTA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_EXT_SPOLECNOST_ARCH_CESTA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="70" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwextspolecnostarchcestaPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.protistrany.VwExtSpolecnostArchCesta.IdExt" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWEXTSPOLECNOSTARCHCESTA_PRIMA" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="MajetekModule"
+   ComponentClass="cz.jtbank.konsolidace.majetek.MajetekModuleImpl"
+   ComponentInterface="cz.jtbank.konsolidace.majetek.common.MajetekModule" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="KpCisMajetkovaucasttyptranView1"
+      ViewObjectName="cz.jtbank.konsolidace.majetek.KpCisMajetkovaucasttyptranView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisMajetkovaucastzpusobView1"
+      ViewObjectName="cz.jtbank.konsolidace.majetek.KpCisMajetkovaucastzpusobView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpMajetkovaucastView1"
+      ViewObjectName="cz.jtbank.konsolidace.majetek.VwKpMajetkovaucastView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpMajetkovaucasthistorView1"
+      ViewObjectName="cz.jtbank.konsolidace.majetek.VwKpMajetkovaucasthistorView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ViewJtSpol1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.ViewJtSpol" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwFinancniinvesticeView1"
+      ViewObjectName="cz.jtbank.konsolidace.fininv.VwFinancniinvesticeView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwFinancniinvemiseView1"
+      ViewObjectName="cz.jtbank.konsolidace.fininv.VwFinancniinvemiseView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisMenaView1"
+      ViewObjectName="cz.jtbank.konsolidace.fininv.KpCisMenaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ViewJtSpolUserPrava1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.ViewJtSpolUserPrava" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpParametryView1"
+      ViewObjectName="cz.jtbank.konsolidace.admin.KpParametryView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgDokladmajucastvyjimkaView1"
+      ViewObjectName="cz.jtbank.konsolidace.majetek.KpKtgDokladmajucastvyjimkaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpTmpCissubjectView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpTmpCissubjectView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgSpolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDefKontrolamajetkovaucastView1"
+      ViewObjectName="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucastView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpMajetkovaucastprehledView1"
+      ViewObjectName="cz.jtbank.konsolidace.majetek.VwKpMajetkovaucastprehledView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwInvesticeZakladnijmeni1"
+      ViewObjectName="cz.jtbank.konsolidace.majetek.VwInvesticeZakladnijmeni" >
+   </ViewUsage>
+</AppModule>

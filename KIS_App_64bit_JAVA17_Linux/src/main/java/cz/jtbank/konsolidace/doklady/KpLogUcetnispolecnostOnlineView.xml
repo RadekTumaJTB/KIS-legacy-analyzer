@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpLogUcetnispolecnostOnlineView"
+   SelectList="KpLogUcetnispolecnostOnline.ID, 
+       KpLogUcetnispolecnostOnline.C_ONLINE, 
+
+       KpLogUcetnispolecnostOnline.DT_ONLINEOD, 
+       KpLogUcetnispolecnostOnline.S_DUVODOFFLINE, 
+
+       KpLogUcetnispolecnostOnline.ID_APPUSER, 
+       KpLogUcetnispolecnostOnline.DT_DATUMZMENY, 
+
+       s_titulypred || &#39; &#39; || s_krestni || &#39; &#39; || s_prijmeni 
+|| &#39; &#39; || s_titulypo AS APP_USER, 
+       KtgAppuser.ID AS ID1"
+   FromList="DB_JT.KP_LOG_UCETNISPOLECNOST_ONLINE KpLogUcetnispolecnostOnline, DB_JT.KTG_APPUSER KtgAppuser"
+   Where="KpLogUcetnispolecnostOnline.ID_APPUSER = KtgAppuser.ID"
+   OrderBy="DT_DATUMZMENY ASC"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpLogUcetnispolecnostOnlineViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.doklady.common.KpLogUcetnispolecnostOnlineViewRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpLogUcetnispolecnostOnline"
+      Entity="cz.jtbank.konsolidace.doklady.KpLogUcetnispolecnostOnline" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpLogUcetnispolecnostOnline.ID_APPUSER = KtgAppuser.ID" />
+         <Attr Name="_queryOrderBy" Value="DT_DATUMZMENY ASC" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KtgAppuser"
+      Entity="cz.jtbank.konsolidace.users.KtgAppuser"
+      SourceUsage="cz.jtbank.konsolidace.doklady.KpLogUcetnispolecnostOnlineView.KpLogUcetnispolecnostOnline"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.doklady.KpLogUcetnispolecnostOnline.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      EntityAttrName="Id"
+      EntityUsage="KpLogUcetnispolecnostOnline"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="COnline"
+      EntityAttrName="COnline"
+      EntityUsage="KpLogUcetnispolecnostOnline"
+      AliasName="C_ONLINE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtOnlineod"
+      EntityAttrName="DtOnlineod"
+      EntityUsage="KpLogUcetnispolecnostOnline"
+      AliasName="DT_ONLINEOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SDuvodoffline"
+      EntityAttrName="SDuvodoffline"
+      EntityUsage="KpLogUcetnispolecnostOnline"
+      AliasName="S_DUVODOFFLINE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAppuser"
+      EntityAttrName="IdAppuser"
+      EntityUsage="KpLogUcetnispolecnostOnline"
+      AliasName="ID_APPUSER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzmeny"
+      EntityAttrName="DtDatumzmeny"
+      EntityUsage="KpLogUcetnispolecnostOnline"
+      AliasName="DT_DATUMZMENY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="AppUser"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="APP_USER"
+      ColumnType="VARCHAR2"
+      Expression="s_titulypred || &#39; &#39; || s_krestni || &#39; &#39; || s_prijmeni || &#39; &#39; || s_titulypo"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id1"
+      EntityAttrName="Id"
+      EntityUsage="KtgAppuser"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

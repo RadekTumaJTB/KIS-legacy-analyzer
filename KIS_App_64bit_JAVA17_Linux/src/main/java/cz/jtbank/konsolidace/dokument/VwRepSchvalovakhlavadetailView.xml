@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepSchvalovakhlavadetailView"
+   SelectList="VwRepSchvalovakhlavadetail.ID, 
+       VwRepSchvalovakhlavadetail.ID_DOKUMENT, 
+
+       VwRepSchvalovakhlavadetail.ID_ODBOR, 
+       VwRepSchvalovakhlavadetail.S_NAZEV_ODBOR, 
+
+       VwRepSchvalovakhlavadetail.ID_PROJEKT, 
+       VwRepSchvalovakhlavadetail.S_NAZEV_ROEJEKT, 
+
+       VwRepSchvalovakhlavadetail.ND_CASTKA, 
+       VwRepSchvalovakhlavadetail.ID_ODBOROO, 
+
+       VwRepSchvalovakhlavadetail.DT_SCHVALENOODBOR, 
+      
+ VwRepSchvalovakhlavadetail.ID_PROJEKTMAN, 
+       VwRepSchvalovakhlavadetail.DT_SCHVALENOPROJEKT, 
+
+       VwRepSchvalovakhlavadetail.ID_UCSPOLOO, 
+       VwRepSchvalovakhlavadetail.DT_SCHVALENOUCSPOL, 
+
+       VwRepSchvalovakhlavadetail.ID_UCSPOLTOP, 
+       VwRepSchvalovakhlavadetail.DT_SCHVALENOTOP, 
+
+       VwRepSchvalovakhlavadetail.S_KOMENTAR, 
+       VwRepSchvalovakhlavadetail.DT_DATUMPREFAKT, 
+
+       VwRepSchvalovakhlavadetail.ID_PREFAKT, 
+       VwRepSchvalovakhlavadetail.C_KPREFAKT, 
+
+       VwRepSchvalovakhlavadetail.DT_DATUMZADANI, 
+       VwRepSchvalovakhlavadetail.C_REMOVED, 
+
+       VwRepSchvalovakhlavadetail.C_ZOBJEDNAVKY, 
+       VwRepSchvalovakhlavadetail.ID_ZAMITNUTO, 
+
+       VwRepSchvalovakhlavadetail.DT_ZAMITNUTO, 
+       VwRepSchvalovakhlavadetail.S_ZAMITNUTO, 
+
+       VwRepSchvalovakhlavadetail.ID_DOKUMENTORIG, 
+       VwRepSchvalovakhlavadetail.ID_ODBOROOREAL, 
+
+       VwRepSchvalovakhlavadetail.ID_PROJEKTMANREAL, 
+      
+ VwRepSchvalovakhlavadetail.ID_UCSPOLOOREAL, 
+       VwRepSchvalovakhlavadetail.ID_UCSPOLTOPREAL, 
+
+       VwRepSchvalovakhlavadetail.ID_TYPTRANSAKCE, 
+       VwRepSchvalovakhlavadetail.RO, 
+
+       VwRepSchvalovakhlavadetail.PM, 
+       VwRepSchvalovakhlavadetail.OO, 
+
+       VwRepSchvalovakhlavadetail.TOP, 
+       VwRepSchvalovakhlavadetail.RRO, 
+
+       VwRepSchvalovakhlavadetail.RPM, 
+       VwRepSchvalovakhlavadetail.ROO, 
+
+       VwRepSchvalovakhlavadetail.RTOP, 
+       VwRepSchvalovakhlavadetail.ZA"
+   FromList="DB_JT.VW_REP_SCHVALOVAKHLAVADETAIL VwRepSchvalovakhlavadetail"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.VwRepSchvalovakhlavadetailViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepSchvalovakhlavadetail"
+      Entity="cz.jtbank.konsolidace.dokument.VwRepSchvalovakhlavadetail" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokument"
+      IsNotNull="true"
+      EntityAttrName="IdDokument"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_DOKUMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdbor"
+      EntityAttrName="IdOdbor"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_ODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazevOdbor"
+      EntityAttrName="SNazevOdbor"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="S_NAZEV_ODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjekt"
+      EntityAttrName="IdProjekt"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_PROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazevRoejekt"
+      EntityAttrName="SNazevRoejekt"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="S_NAZEV_ROEJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastka"
+      EntityAttrName="NdCastka"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdboroo"
+      EntityAttrName="IdOdboroo"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_ODBOROO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenoodbor"
+      EntityAttrName="DtSchvalenoodbor"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="DT_SCHVALENOODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjektman"
+      EntityAttrName="IdProjektman"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_PROJEKTMAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenoprojekt"
+      EntityAttrName="DtSchvalenoprojekt"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="DT_SCHVALENOPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoloo"
+      EntityAttrName="IdUcspoloo"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_UCSPOLOO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenoucspol"
+      EntityAttrName="DtSchvalenoucspol"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="DT_SCHVALENOUCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoltop"
+      EntityAttrName="IdUcspoltop"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_UCSPOLTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenotop"
+      EntityAttrName="DtSchvalenotop"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="DT_SCHVALENOTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKomentar"
+      EntityAttrName="SKomentar"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="S_KOMENTAR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumprefakt"
+      EntityAttrName="DtDatumprefakt"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="DT_DATUMPREFAKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPrefakt"
+      EntityAttrName="IdPrefakt"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_PREFAKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CKprefakt"
+      EntityAttrName="CKprefakt"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="C_KPREFAKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzadani"
+      EntityAttrName="DtDatumzadani"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="DT_DATUMZADANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CRemoved"
+      EntityAttrName="CRemoved"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="C_REMOVED"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CZobjednavky"
+      EntityAttrName="CZobjednavky"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="C_ZOBJEDNAVKY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdZamitnuto"
+      EntityAttrName="IdZamitnuto"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZamitnuto"
+      EntityAttrName="DtZamitnuto"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="DT_ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZamitnuto"
+      EntityAttrName="SZamitnuto"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="S_ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokumentorig"
+      EntityAttrName="IdDokumentorig"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_DOKUMENTORIG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdborooreal"
+      EntityAttrName="IdOdborooreal"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_ODBOROOREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjektmanreal"
+      EntityAttrName="IdProjektmanreal"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_PROJEKTMANREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspolooreal"
+      EntityAttrName="IdUcspolooreal"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_UCSPOLOOREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoltopreal"
+      EntityAttrName="IdUcspoltopreal"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_UCSPOLTOPREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyptransakce"
+      EntityAttrName="IdTyptransakce"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ID_TYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ro"
+      EntityAttrName="Ro"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="RO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pm"
+      EntityAttrName="Pm"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="PM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Oo"
+      EntityAttrName="Oo"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="OO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Top"
+      EntityAttrName="Top"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="TOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Rro"
+      EntityAttrName="Rro"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="RRO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Rpm"
+      EntityAttrName="Rpm"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="RPM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Roo"
+      EntityAttrName="Roo"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ROO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Rtop"
+      EntityAttrName="Rtop"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="RTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Za"
+      EntityAttrName="Za"
+      EntityUsage="VwRepSchvalovakhlavadetail"
+      AliasName="ZA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

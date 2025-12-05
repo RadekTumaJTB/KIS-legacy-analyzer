@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="evi"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.evi" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="KpCisEvidoidentifikace"
+      FullName="cz.jtbank.konsolidace.evi.KpCisEvidoidentifikace"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisEvidoidentifikaceView"
+      FullName="cz.jtbank.konsolidace.evi.KpCisEvidoidentifikaceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisEvidovaneinformace"
+      FullName="cz.jtbank.konsolidace.evi.KpCisEvidovaneinformace"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisEvidovaneinformaceView"
+      FullName="cz.jtbank.konsolidace.evi.KpCisEvidovaneinformaceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisEviobchodnirejstrik"
+      FullName="cz.jtbank.konsolidace.evi.KpCisEviobchodnirejstrik"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisEviobchodnirejstrikView"
+      FullName="cz.jtbank.konsolidace.evi.KpCisEviobchodnirejstrikView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisEvistatus"
+      FullName="cz.jtbank.konsolidace.evi.KpCisEvistatus"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisEvistatusView"
+      FullName="cz.jtbank.konsolidace.evi.KpCisEvistatusView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisEvitypstatzastupce"
+      FullName="cz.jtbank.konsolidace.evi.KpCisEvitypstatzastupce"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisEvitypstatzastupceView"
+      FullName="cz.jtbank.konsolidace.evi.KpCisEvitypstatzastupceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatEvibanky"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvibanky"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatEvibankyView"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvibankyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatEvidoidentifikace"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvidoidentifikace"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatEvidoidentifikaceView"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvidoidentifikaceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatEvidokument"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvidokument"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatEvidokumentView"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvidokumentView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatEvikomisionarskesmlouvy"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvikomisionarskesmlouvy"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatEvikomisionarskesmlouvyView"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvikomisionarskesmlouvyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatEvikorespondence"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvikorespondence"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatEvikorespondenceView"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvikorespondenceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatEviobchodnirejstrik"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEviobchodnirejstrik"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatEviobchodnirejstrikView"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEviobchodnirejstrikView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatEvizplnomocneni"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvizplnomocneni"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatEvizplnomocneniView"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEvizplnomocneniView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgEviadminspolecnost"
+      FullName="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnost"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgEviadminspolecnostView"
+      FullName="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnostView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgEviexterniadmin"
+      FullName="cz.jtbank.konsolidace.evi.KpKtgEviexterniadmin"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgEviexterniadminView"
+      FullName="cz.jtbank.konsolidace.evi.KpKtgEviexterniadminView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgEvisidlo"
+      FullName="cz.jtbank.konsolidace.evi.KpKtgEvisidlo"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgEvisidloView"
+      FullName="cz.jtbank.konsolidace.evi.KpKtgEvisidloView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgEvistatutarnizastupce"
+      FullName="cz.jtbank.konsolidace.evi.KpKtgEvistatutarnizastupce"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgEvistatutarnizastupceView"
+      FullName="cz.jtbank.konsolidace.evi.KpKtgEvistatutarnizastupceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelTypspolevidinfo"
+      FullName="cz.jtbank.konsolidace.evi.KpRelTypspolevidinfo"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelTypspolevidinfoView"
+      FullName="cz.jtbank.konsolidace.evi.KpRelTypspolevidinfoView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="EviModule"
+      FullName="cz.jtbank.konsolidace.evi.EviModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="VwKtgEviadminspolecnostView"
+      FullName="cz.jtbank.konsolidace.evi.VwKtgEviadminspolecnostView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkKtgeviadminspolExtadminAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkKtgeviadminspolExtadminAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkKtgeviadminspolStatusAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkKtgeviadminspolStatusAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpRelDblinkappuser"
+      FullName="cz.jtbank.konsolidace.evi.KpRelDblinkappuser"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelDblinkappuserView"
+      FullName="cz.jtbank.konsolidace.evi.KpRelDblinkappuserView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisDatabaze"
+      FullName="cz.jtbank.konsolidace.evi.KpCisDatabaze"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkReldblinkappuserDblinkAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkReldblinkappuserDblinkAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpCisDatabazeView"
+      FullName="cz.jtbank.konsolidace.evi.KpCisDatabazeView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkEvibankyAdminspolAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkEvibankyAdminspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkEvidoidentifikaceIddoAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkEvidoidentifikaceIddoAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkEvidoidentifikaceAdminspolAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkEvidoidentifikaceAdminspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkEvidokumentAdminspolAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkEvidokumentAdminspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkEvikomissmlouvyAdminspolAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkEvikomissmlouvyAdminspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkEvikorespondenceAdminspolAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkEvikorespondenceAdminspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkEvizplnomocneniAdminspolAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkEvizplnomocneniAdminspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkKtgevisidloAdminspolAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkKtgevisidloAdminspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkKtgevistatzastupAdminspolAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkKtgevistatzastupAdminspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkKtgevistatzastupceTypAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkKtgevistatzastupceTypAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="VwKpEviobchodnirejstrik3m"
+      FullName="cz.jtbank.konsolidace.evi.VwKpEviobchodnirejstrik3m"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpEviobchodnirejstrik3mView"
+      FullName="cz.jtbank.konsolidace.evi.VwKpEviobchodnirejstrik3mView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpLogEviadminspolecnost"
+      FullName="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnost"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpLogEviadminspolecnostView"
+      FullName="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnostView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgPodpisovevzoryquaestor"
+      FullName="cz.jtbank.konsolidace.evi.VwKtgPodpisovevzoryquaestor"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKtgPodpisovevzoryquaestorView"
+      FullName="cz.jtbank.konsolidace.evi.VwKtgPodpisovevzoryquaestorView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatEviadmindodavatel"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEviadmindodavatel"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatEviadmindodavatelView"
+      FullName="cz.jtbank.konsolidace.evi.KpDatEviadmindodavatelView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkEviadminspolSpolAssoc"
+      FullName="cz.jtbank.konsolidace.evi.FkEviadminspolSpolAssoc"
+      ObjectType="Association" >
+   </Containee>
+</JboPackage>

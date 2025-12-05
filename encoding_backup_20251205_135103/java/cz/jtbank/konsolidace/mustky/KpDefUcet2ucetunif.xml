@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDefUcet2ucetunif"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DEF_UCET2UCETUNIF"
+   AliasName="KpDefUcet2ucetunif"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunifImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_UCET2UCETUNIF"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCisucetunif"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISUCETUNIF"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_UCET2UCETUNIF" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcetprimsystem"
+      IsNotNull="true"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_UCETPRIMSYSTEM"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DEF_UCET2UCETUNIF" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISSUBJECT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_UCET2UCETUNIF" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DEF_UCET2UCETUNIF" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DEF_UCET2UCETUNIF" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CUcetsuma"
+      IsNotNull="true"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_UCETSUMA"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_DEF_UCET2UCETUNIF"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SEvidovatprotistranu"
+      Precision="4"
+      Type="java.lang.String"
+      ColumnName="S_EVIDOVATPROTISTRANU"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DEF_UCET2UCETUNIF" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="4" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CTestovatmajucast"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_TESTOVATMAJUCAST"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_DEF_UCET2UCETUNIF"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisUcetunif"
+      Association="cz.jtbank.konsolidace.mustky.FkUcet2ucetunifUuAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.mustky.FkUcet2ucetunifUuAssoc.KpCisUcetunif"
+      AssociationOtherEnd="cz.jtbank.konsolidace.mustky.FkUcet2ucetunifUuAssoc.KpDefUcet2ucetunif"
+      Type="cz.jtbank.konsolidace.mustky.KpCisUcetunifImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpdefucet2ucetSuma" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif.CUcetsuma" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFUCET2UCET_SUMA" />
+         <Attr Name="_checkCondition" Value="&#34;C_UCETSUMA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnUcet2ucetunifId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_UCET2UCETUNIF_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkUcet2ucetunif" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_UCET2UCETUNIF" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnUcet2ucetunifIduu" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif.IdCisucetunif" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_UCET2UCETUNIF_IDUU" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISUCETUNIF&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnUcet2ucetunifSubj" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif.IdCissubject" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_UCET2UCETUNIF_SUBJ" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISSUBJECT&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnUcet2ucetunifUcet" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif.SUcetprimsystem" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_UCET2UCETUNIF_UCET" />
+         <Attr Name="_checkCondition" Value="&#34;S_UCETPRIMSYSTEM&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpdefucet2ucetunifTestmu" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif.CTestovatmajucast" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPDEFUCET2UCETUNIF_TESTMU" />
+         <Attr Name="_checkCondition" Value=" c_testovatMajUcast is not null and  c_testovatMajUcast in ( &#39;0&#39;, &#39;1&#39; )" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpdefucet2ucetunifSuma" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif.CUcetsuma" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPDEFUCET2UCETUNIF_SUMA" />
+         <Attr Name="_referencedKey" Value="PK_KPCISUCETSUMATYP" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkUcet2ucetunifUu" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif.IdCisucetunif" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_UCET2UCETUNIF_UU" />
+         <Attr Name="_referencedKey" Value="PK_KPUCETUNIF" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkUcet2ucetunifSubj" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif.IdCissubject" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_UCET2UCETUNIF_SUBJ" />
+         <Attr Name="_referencedKey" Value="PK_KPSUBJECT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

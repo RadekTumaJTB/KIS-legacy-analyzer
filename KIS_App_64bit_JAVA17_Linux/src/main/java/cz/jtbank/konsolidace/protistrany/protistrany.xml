@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="protistrany"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.protistrany" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="VwProtistrana"
+      FullName="cz.jtbank.konsolidace.protistrany.VwProtistrana"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwProtistranaView"
+      FullName="cz.jtbank.konsolidace.protistrany.VwProtistranaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwProtistranadetail"
+      FullName="cz.jtbank.konsolidace.protistrany.VwProtistranadetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwProtistranadetailView"
+      FullName="cz.jtbank.konsolidace.protistrany.VwProtistranadetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="ProtistranyModule"
+      FullName="cz.jtbank.konsolidace.protistrany.ProtistranyModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="VwKpVyjimkyprotistrany"
+      FullName="cz.jtbank.konsolidace.protistrany.VwKpVyjimkyprotistrany"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpVyjimkyprotistranyView"
+      FullName="cz.jtbank.konsolidace.protistrany.VwKpVyjimkyprotistranyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisDatabaze"
+      FullName="cz.jtbank.konsolidace.protistrany.KpCisDatabaze"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisDatabazeView"
+      FullName="cz.jtbank.konsolidace.protistrany.KpCisDatabazeView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgSpolecnost"
+      FullName="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnost"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgSpolecnostView"
+      FullName="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwProtistranahistorie"
+      FullName="cz.jtbank.konsolidace.protistrany.VwProtistranahistorie"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwProtistranahistorieView"
+      FullName="cz.jtbank.konsolidace.protistrany.VwProtistranahistorieView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpSpolecnostspravceko"
+      FullName="cz.jtbank.konsolidace.protistrany.VwKpSpolecnostspravceko"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpSpolecnostspravcekoView"
+      FullName="cz.jtbank.konsolidace.protistrany.VwKpSpolecnostspravcekoView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgSpolecnostGroup"
+      FullName="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostGroup"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpspolgroupSpolAssoc"
+      FullName="cz.jtbank.konsolidace.protistrany.FkKpspolgroupSpolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpKtgSpolecnostGroupView"
+      FullName="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostGroupView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpSpolecnostInGroupView"
+      FullName="cz.jtbank.konsolidace.protistrany.VwKpSpolecnostInGroupView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisCustomerGroupView"
+      FullName="cz.jtbank.konsolidace.protistrany.KpCisCustomerGroupView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisCustomerGroup"
+      FullName="cz.jtbank.konsolidace.protistrany.KpCisCustomerGroup"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelSpolecnostskupinaic"
+      FullName="cz.jtbank.konsolidace.protistrany.KpRelSpolecnostskupinaic"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkRelspolskupinaicSpolAssoc"
+      FullName="cz.jtbank.konsolidace.protistrany.FkRelspolskupinaicSpolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkRelspolskupinaicClenAssoc"
+      FullName="cz.jtbank.konsolidace.protistrany.FkRelspolskupinaicClenAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpRelSpolecnostskupinaicView"
+      FullName="cz.jtbank.konsolidace.protistrany.KpRelSpolecnostskupinaicView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgSpolecnostvprechodu"
+      FullName="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostvprechodu"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKtgspolvprechoduSpolAssoc"
+      FullName="cz.jtbank.konsolidace.protistrany.FkKtgspolvprechoduSpolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpKtgSpolecnostvprechoduView"
+      FullName="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostvprechoduView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpSManual"
+      FullName="cz.jtbank.konsolidace.protistrany.KpSManual"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpSManualView"
+      FullName="cz.jtbank.konsolidace.protistrany.KpSManualView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwExtSpolecnostArchCesta"
+      FullName="cz.jtbank.konsolidace.protistrany.VwExtSpolecnostArchCesta"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwExtSpolecnostArchCestaView"
+      FullName="cz.jtbank.konsolidace.protistrany.VwExtSpolecnostArchCestaView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

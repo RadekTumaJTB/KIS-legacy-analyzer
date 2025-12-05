@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisSegmentzastuptyp"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_SEGMENTZASTUPTYP"
+   AliasName="KpCisSegmentzastuptyp"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.ifrs.KpCisSegmentzastuptypImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_SEGMENTZASTUPTYP"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_SEGMENTZASTUPTYP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpDatSegmentzastup"
+      Association="cz.jtbank.konsolidace.ifrs.FkSegmentzastupTypAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.ifrs.FkSegmentzastupTypAssoc.KpDatSegmentzastup"
+      AssociationOtherEnd="cz.jtbank.konsolidace.ifrs.FkSegmentzastupTypAssoc.KpCisSegmentzastuptyp"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="PkCissegmentzastuptyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpCisSegmentzastuptyp.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_CISSEGMENTZASTUPTYP" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

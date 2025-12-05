@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepDocnezauctovanoView"
+   SelectList="VwRepDocnezauctovano.MESIC, 
+       VwRepDocnezauctovano.ZODPOVEDNAUCETNI, 
+       VwRepDocnezauctovano.NEZAUCTOVANYCH, 
+       VwRepDocnezauctovano.SCHVALENYCH, 
+       VwRepDocnezauctovano.POMER"
+   FromList="DB_JT.VW_REP_DOCNEZAUCTOVANO VwRepDocnezauctovano"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepDocnezauctovanoViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepDocnezauctovano"
+      Entity="cz.jtbank.konsolidace.report.VwRepDocnezauctovano" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Mesic"
+      EntityAttrName="Mesic"
+      EntityUsage="VwRepDocnezauctovano"
+      AliasName="MESIC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Zodpovednaucetni"
+      EntityAttrName="Zodpovednaucetni"
+      EntityUsage="VwRepDocnezauctovano"
+      AliasName="ZODPOVEDNAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Nezauctovanych"
+      EntityAttrName="Nezauctovanych"
+      EntityUsage="VwRepDocnezauctovano"
+      AliasName="NEZAUCTOVANYCH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Schvalenych"
+      EntityAttrName="Schvalenych"
+      EntityUsage="VwRepDocnezauctovano"
+      AliasName="SCHVALENYCH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pomer"
+      EntityAttrName="Pomer"
+      EntityUsage="VwRepDocnezauctovano"
+      AliasName="POMER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

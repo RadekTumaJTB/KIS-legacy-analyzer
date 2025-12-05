@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisTyptransakceExcelView"
+   SelectList="KpCisTyptransakcegroup.ID AS ID_GROUP, 
+       KpCisTyptransakcegroup.S_KOD 
+AS S_KODGROUP, 
+       KpCisTyptransakce.ID_TYPTRANSAKCEGROUP, 
+
+       KpCisTyptransakce.ID, 
+       KpCisTyptransakce.S_KOD, 
+
+       KpCisTyptransakce.S_POPIS, 
+       KpCisTyptransakce.ID_GESTOR_CZ, 
+
+       KpCisTyptransakce.ID_GESTOR_SK, 
+       KpCisTyptransakce.ID_GESTOR_Z"
+   FromList="DB_JT.KP_CIS_TYPTRANSAKCEGROUP KpCisTyptransakcegroup, DB_JT.KP_CIS_TYPTRANSAKCE KpCisTyptransakce"
+   Where="KpCisTyptransakce.ID_TYPTRANSAKCEGROUP = KpCisTyptransakcegroup.ID (+)"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.budget.KpCisTyptransakceExcelViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisTyptransakcegroup"
+      Entity="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpCisTyptransakce.ID_TYPTRANSAKCEGROUP = KpCisTyptransakcegroup.ID (+)" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpCisTyptransakce"
+      Entity="cz.jtbank.konsolidace.dokument.KpCisTyptransakce"
+      SourceUsage="cz.jtbank.konsolidace.budget.KpCisTyptransakceExcelView.KpCisTyptransakcegroup"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.Id" />
+            <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.SKod" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.Id" />
+            <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.SKod" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdGroup"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisTyptransakcegroup"
+      AliasName="ID_GROUP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKodgroup"
+      IsNotNull="true"
+      EntityAttrName="SKod"
+      EntityUsage="KpCisTyptransakcegroup"
+      AliasName="S_KODGROUP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyptransakcegroup"
+      EntityAttrName="IdTyptransakcegroup"
+      EntityUsage="KpCisTyptransakce"
+      AliasName="ID_TYPTRANSAKCEGROUP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisTyptransakce"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKod"
+      EntityAttrName="SKod"
+      EntityUsage="KpCisTyptransakce"
+      AliasName="S_KOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisTyptransakce"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdGestorCz"
+      EntityAttrName="IdGestorCz"
+      EntityUsage="KpCisTyptransakce"
+      AliasName="ID_GESTOR_CZ"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdGestorSk"
+      EntityAttrName="IdGestorSk"
+      EntityUsage="KpCisTyptransakce"
+      AliasName="ID_GESTOR_SK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdGestorZ"
+      EntityAttrName="IdGestorZ"
+      EntityUsage="KpCisTyptransakce"
+      AliasName="ID_GESTOR_Z"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

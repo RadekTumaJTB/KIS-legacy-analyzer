@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatSchvalovakView"
+   SelectList="VwDatSchvalovak.ID, 
+       VwDatSchvalovak.ID_KTGUCETNISPOLECNOST, 
+
+       VwDatSchvalovak.DT_DATUMZADANI, 
+       VwDatSchvalovak.ID_ZADAVATEL, 
+
+       VwDatSchvalovak.S_POPIS, 
+       VwDatSchvalovak.ID_TYPTRANSAKCE, 
+
+       VwDatSchvalovak.S_MENA, 
+       VwDatSchvalovak.SPOLECNOST, 
+
+       VwDatSchvalovak.ZADAVATEL, 
+       VwDatSchvalovak.ROWID, 
+
+       VwDatSchvalovak.TYPTRAN, 
+       VwDatSchvalovak.S_PISEMNE, 
+
+       VwDatSchvalovak.C_TYPIZOVANATRAN, 
+       VwDatSchvalovak.DT_TYPIZOVANAOD, 
+
+       VwDatSchvalovak.DT_TYPIZOVANADO, 
+       VwDatSchvalovak.DT_DATUMZAUCTOVANI, 
+
+       VwDatSchvalovak.ID_ZODPOVEDNAUCETNI, 
+       VwDatSchvalovak.ID_SPOLECNOST, 
+
+       VwDatSchvalovak.S_CISLODOKLADU, 
+       VwDatSchvalovak.DT_DATUMSPLATNOSTI, 
+
+       VwDatSchvalovak.PROTISTRANA, 
+       VwDatSchvalovak.ID_APPUSER, 
+
+       VwDatSchvalovak.ID_ZAUCT, 
+       VwDatSchvalovak.ZAUCTOVATEL, 
+
+       VwDatSchvalovak.POCETRADKU, 
+       VwDatSchvalovak.SUMARADKU, 
+
+       VwDatSchvalovak.ND_OBJ_CASTKA_VOLNA, 
+       VwDatSchvalovak.ID_CISSTATUS, 
+
+       VwDatSchvalovak.DOCSTATUS, 
+       VwDatSchvalovak.C_POKLADNITRANSAKCE, 
+
+       VwDatSchvalovak.ID_GESTOR, 
+       VwDatSchvalovak.DT_GESTORSCHVALENO, 
+
+       VwDatSchvalovak.GESTOR, 
+       VwDatSchvalovak.ID_CISDOKUMENT, 
+
+       VwDatSchvalovak.DT_POZADDATUMUHRADY, 
+       VwDatSchvalovak.DT_REALDATUMUHRADY, 
+
+       VwDatSchvalovak.EXISTUJE_NRADEK, 
+       VwDatSchvalovak.POSPLATNOSTI, 
+
+       VwDatSchvalovak.DT_GESTORZAMITNUTO, 
+       VwDatSchvalovak.S_GESTORZAMITNUTO, 
+
+       VwDatSchvalovak.DT_ZADAVATELZAMITNUTO, 
+       VwDatSchvalovak.S_ZADAVATELZAMITNUTO, 
+
+       VwDatSchvalovak.ID_TYPIZLINK, 
+       VwDatSchvalovak.S_DUVODZRUSENI, 
+
+       VwDatSchvalovak.ID_UCSPOLUHRADA, 
+       VwDatSchvalovak.UCSPOLUHRADA, 
+
+       VwDatSchvalovak.ID_ADMINISTRATOR, 
+       VwDatSchvalovak.DT_ZAUCTUHRADA, 
+
+       VwDatSchvalovak.ID_ZAUCTUHRADA, 
+       VwDatSchvalovak.ID_UHRADAUCETNI, 
+
+       VwDatSchvalovak.ID_UHRADAADMIN, 
+       VwDatSchvalovak.ZAUCTUHRADA, 
+
+       VwDatSchvalovak.ID_TYPPRECENENI, 
+       VwDatSchvalovak.TYPPRECENENI, 
+
+       VwDatSchvalovak.S_UCET, 
+       VwDatSchvalovak.S_UCET2, 
+
+       VwDatSchvalovak.APPUSER, 
+       VwDatSchvalovak.C_DPH, 
+
+       VwDatSchvalovak.ID_BUDGET, 
+       VwDatSchvalovak.ID_TTDEVELOPER, 
+
+       VwDatSchvalovak.ID_CISUHRADA, 
+       VwDatSchvalovak.UHRADA, 
+
+       VwDatSchvalovak.DT_UCETNIZAMITNUTO, 
+       VwDatSchvalovak.S_UCETNIZAMITNUTO, 
+
+       VwDatSchvalovak.ZODPOVEDNAUCETNI, 
+       VwDatSchvalovak.C_SPECIAL, 
+
+       VwDatSchvalovak.ID_KTGUCETNISPOLECNOST2, 
+       VwDatSchvalovak.SPOLECNOST2, 
+
+       VwDatSchvalovak.S_UCETB, 
+       VwDatSchvalovak.S_UCETB2, 
+
+       VwDatSchvalovak.C_TISKMAJETEK, 
+       VwDatSchvalovak.CERPAT_REZERVU, 
+
+       VwDatSchvalovak.DT_NAVYSENI_SCHVALENO, 
+       VwDatSchvalovak.DT_NAVYSENI_ZAMITNUTO, 
+
+       VwDatSchvalovak.S_NAVYSENI_ZAMITNUTO, 
+       VwDatSchvalovak.ID_NAVYSENI_MB, 
+
+       VwDatSchvalovak.MASTER_BUDGETER, 
+       VwDatSchvalovak.ID_KATEGORIE, 
+
+       VwDatSchvalovak.CISLOFA, 
+       VwDatSchvalovak.DATPRIJ, 
+
+       VwDatSchvalovak.DATDPH, 
+       VwDatSchvalovak.CASTKA, 
+
+       VwDatSchvalovak.FEIS_PRENOS, 
+       VwDatSchvalovak.DATODES, 
+
+       VwDatSchvalovak.TYP_FKT, 
+       VwDatSchvalovak.C_CAPEX_OPEX, 
+
+       VwDatSchvalovak.S_FEISTEXT, 
+       VwDatSchvalovak.DATVYSTAVENI"
+   FromList="DB_JT.VW_DAT_SCHVALOVAK VwDatSchvalovak"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.VwDatSchvalovakViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.dokument.common.VwDatSchvalovakViewRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatSchvalovak"
+      Entity="cz.jtbank.konsolidace.dokument.VwDatSchvalovak" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzadani"
+      EntityAttrName="DtDatumzadani"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_DATUMZADANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdZadavatel"
+      EntityAttrName="IdZadavatel"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_ZADAVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyptransakce"
+      EntityAttrName="IdTyptransakce"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_TYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Zadavatel"
+      EntityAttrName="Zadavatel"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ZADAVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typtran"
+      EntityAttrName="Typtran"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="TYPTRAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPisemne"
+      EntityAttrName="SPisemne"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_PISEMNE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CTypizovanatran"
+      EntityAttrName="CTypizovanatran"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="C_TYPIZOVANATRAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtTypizovanaod"
+      EntityAttrName="DtTypizovanaod"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_TYPIZOVANAOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtTypizovanado"
+      EntityAttrName="DtTypizovanado"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_TYPIZOVANADO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzauctovani"
+      EntityAttrName="DtDatumzauctovani"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_DATUMZAUCTOVANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdZodpovednaucetni"
+      EntityAttrName="IdZodpovednaucetni"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_ZODPOVEDNAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSpolecnost"
+      EntityAttrName="IdSpolecnost"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SCislodokladu"
+      EntityAttrName="SCislodokladu"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_CISLODOKLADU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumsplatnosti"
+      EntityAttrName="DtDatumsplatnosti"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_DATUMSPLATNOSTI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Protistrana"
+      EntityAttrName="Protistrana"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="PROTISTRANA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAppuser"
+      EntityAttrName="IdAppuser"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_APPUSER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdZauct"
+      EntityAttrName="IdZauct"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_ZAUCT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Zauctovatel"
+      EntityAttrName="Zauctovatel"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ZAUCTOVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pocetradku"
+      EntityAttrName="Pocetradku"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="POCETRADKU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Sumaradku"
+      EntityAttrName="Sumaradku"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="SUMARADKU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdObjCastkaVolna"
+      EntityAttrName="NdObjCastkaVolna"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ND_OBJ_CASTKA_VOLNA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisstatus"
+      EntityAttrName="IdCisstatus"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_CISSTATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Docstatus"
+      EntityAttrName="Docstatus"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DOCSTATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPokladnitransakce"
+      EntityAttrName="CPokladnitransakce"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="C_POKLADNITRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdGestor"
+      EntityAttrName="IdGestor"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_GESTOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtGestorschvaleno"
+      EntityAttrName="DtGestorschvaleno"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_GESTORSCHVALENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Gestor"
+      EntityAttrName="Gestor"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="GESTOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisdokument"
+      IsNotNull="true"
+      EntityAttrName="IdCisdokument"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_CISDOKUMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPozaddatumuhrady"
+      EntityAttrName="DtPozaddatumuhrady"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_POZADDATUMUHRADY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtRealdatumuhrady"
+      EntityAttrName="DtRealdatumuhrady"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_REALDATUMUHRADY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ExistujeNradek"
+      EntityAttrName="ExistujeNradek"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="EXISTUJE_NRADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Posplatnosti"
+      EntityAttrName="Posplatnosti"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="POSPLATNOSTI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtGestorzamitnuto"
+      EntityAttrName="DtGestorzamitnuto"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_GESTORZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SGestorzamitnuto"
+      EntityAttrName="SGestorzamitnuto"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_GESTORZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZadavatelzamitnuto"
+      EntityAttrName="DtZadavatelzamitnuto"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_ZADAVATELZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZadavatelzamitnuto"
+      EntityAttrName="SZadavatelzamitnuto"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_ZADAVATELZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypizlink"
+      EntityAttrName="IdTypizlink"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_TYPIZLINK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SDuvodzruseni"
+      EntityAttrName="SDuvodzruseni"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_DUVODZRUSENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoluhrada"
+      EntityAttrName="IdUcspoluhrada"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_UCSPOLUHRADA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucspoluhrada"
+      EntityAttrName="Ucspoluhrada"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="UCSPOLUHRADA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdministrator"
+      EntityAttrName="IdAdministrator"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_ADMINISTRATOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZauctuhrada"
+      EntityAttrName="DtZauctuhrada"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_ZAUCTUHRADA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdZauctuhrada"
+      EntityAttrName="IdZauctuhrada"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_ZAUCTUHRADA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUhradaucetni"
+      EntityAttrName="IdUhradaucetni"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_UHRADAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUhradaadmin"
+      EntityAttrName="IdUhradaadmin"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_UHRADAADMIN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Zauctuhrada"
+      EntityAttrName="Zauctuhrada"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ZAUCTUHRADA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyppreceneni"
+      EntityAttrName="IdTyppreceneni"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_TYPPRECENENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typpreceneni"
+      EntityAttrName="Typpreceneni"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="TYPPRECENENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      EntityAttrName="SUcet"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet2"
+      EntityAttrName="SUcet2"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_UCET2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Appuser"
+      EntityAttrName="Appuser"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="APPUSER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CDph"
+      EntityAttrName="CDph"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="C_DPH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdBudget"
+      EntityAttrName="IdBudget"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_BUDGET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTtdeveloper"
+      EntityAttrName="IdTtdeveloper"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_TTDEVELOPER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisuhrada"
+      EntityAttrName="IdCisuhrada"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_CISUHRADA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Uhrada"
+      EntityAttrName="Uhrada"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="UHRADA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtUcetnizamitnuto"
+      EntityAttrName="DtUcetnizamitnuto"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_UCETNIZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetnizamitnuto"
+      EntityAttrName="SUcetnizamitnuto"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_UCETNIZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Zodpovednaucetni"
+      EntityAttrName="Zodpovednaucetni"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ZODPOVEDNAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CSpecial"
+      EntityAttrName="CSpecial"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="C_SPECIAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost2"
+      EntityAttrName="IdKtgucetnispolecnost2"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_KTGUCETNISPOLECNOST2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost2"
+      EntityAttrName="Spolecnost2"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="SPOLECNOST2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetb"
+      EntityAttrName="SUcetb"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_UCETB"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetb2"
+      EntityAttrName="SUcetb2"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_UCETB2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CTiskmajetek"
+      EntityAttrName="CTiskmajetek"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="C_TISKMAJETEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CerpatRezervu"
+      EntityAttrName="CerpatRezervu"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="CERPAT_REZERVU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtNavyseniSchvaleno"
+      EntityAttrName="DtNavyseniSchvaleno"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_NAVYSENI_SCHVALENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtNavyseniZamitnuto"
+      EntityAttrName="DtNavyseniZamitnuto"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DT_NAVYSENI_ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNavyseniZamitnuto"
+      EntityAttrName="SNavyseniZamitnuto"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_NAVYSENI_ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdNavyseniMb"
+      EntityAttrName="IdNavyseniMb"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_NAVYSENI_MB"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="MasterBudgeter"
+      EntityAttrName="MasterBudgeter"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="MASTER_BUDGETER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKategorie"
+      EntityAttrName="IdKategorie"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="ID_KATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Cislofa"
+      EntityAttrName="Cislofa"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="CISLOFA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datprij"
+      EntityAttrName="Datprij"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DATPRIJ"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datdph"
+      EntityAttrName="Datdph"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DATDPH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Castka"
+      EntityAttrName="Castka"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="FeisPrenos"
+      EntityAttrName="FeisPrenos"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="FEIS_PRENOS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datodes"
+      EntityAttrName="Datodes"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DATODES"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="TypFkt"
+      EntityAttrName="TypFkt"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="TYP_FKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CCapexOpex"
+      EntityAttrName="CCapexOpex"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="C_CAPEX_OPEX"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SFeistext"
+      EntityAttrName="SFeistext"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="S_FEISTEXT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datvystaveni"
+      EntityAttrName="Datvystaveni"
+      EntityUsage="VwDatSchvalovak"
+      AliasName="DATVYSTAVENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

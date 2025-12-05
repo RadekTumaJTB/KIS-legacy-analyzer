@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwKtgUversplatkyhist"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_KTG_UVERSPLATKYHIST"
+   AliasName="VwKtgUversplatkyhist"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.projekt.VwKtgUversplatkyhistImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="DtDatum"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUM"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_KTG_UVERSPLATKYHIST"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkaLns"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKA_LNS"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KTG_UVERSPLATKYHIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkaRed"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKA_RED"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KTG_UVERSPLATKYHIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkaInt"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKA_INT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KTG_UVERSPLATKYHIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPoznamka"
+      Precision="35"
+      Type="java.lang.String"
+      ColumnName="S_POZNAMKA"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_KTG_UVERSPLATKYHIST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="35" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdExtsystem"
+      IsNotNull="true"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="ID_EXTSYSTEM"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_KTG_UVERSPLATKYHIST"
+      PrimaryKey="true"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumbackup"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMBACKUP"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_KTG_UVERSPLATKYHIST"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwktguversplatkyhistPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.VwKtgUversplatkyhist.DtDatum" />
+         <Item Value="cz.jtbank.konsolidace.projekt.VwKtgUversplatkyhist.IdExtsystem" />
+         <Item Value="cz.jtbank.konsolidace.projekt.VwKtgUversplatkyhist.DtDatumbackup" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWKTGUVERSPLATKYHIST_PRIMARY_K" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

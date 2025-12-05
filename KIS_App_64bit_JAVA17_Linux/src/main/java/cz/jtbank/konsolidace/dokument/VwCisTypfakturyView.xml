@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwCisTypfakturyView"
+   SelectList="VwCisTypfaktury.ID, 
+       VwCisTypfaktury.TFID, 
+       VwCisTypfaktury.POPIS, 
+       VwCisTypfaktury.ID_KTGUCETNISPOLECNOST, 
+       VwCisTypfaktury.STREDISKO, 
+       VwCisTypfaktury.C_PLATNOST, 
+       VwCisTypfaktury.FEIS_PRENOS"
+   FromList="DB_JT.VW_CIS_TYPFAKTURY VwCisTypfaktury"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.VwCisTypfakturyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwCisTypfaktury"
+      Entity="cz.jtbank.konsolidace.dokument.VwCisTypfaktury" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwCisTypfaktury"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Tfid"
+      IsNotNull="true"
+      EntityAttrName="Tfid"
+      EntityUsage="VwCisTypfaktury"
+      AliasName="TFID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Popis"
+      EntityAttrName="Popis"
+      EntityUsage="VwCisTypfaktury"
+      AliasName="POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwCisTypfaktury"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Stredisko"
+      EntityAttrName="Stredisko"
+      EntityUsage="VwCisTypfaktury"
+      AliasName="STREDISKO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPlatnost"
+      EntityAttrName="CPlatnost"
+      EntityUsage="VwCisTypfaktury"
+      AliasName="C_PLATNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="FeisPrenos"
+      EntityAttrName="FeisPrenos"
+      EntityUsage="VwCisTypfaktury"
+      AliasName="FEIS_PRENOS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

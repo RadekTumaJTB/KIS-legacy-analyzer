@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDefUcetvazbaucet"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DEF_UCETVAZBAUCET"
+   AliasName="KpDefUcetvazbaucet"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucetImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_UCETVAZBAUCET"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgdoklad"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGDOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_UCETVAZBAUCET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcet1"
+      IsNotNull="true"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_UCET_1"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DEF_UCETVAZBAUCET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcet2"
+      IsNotNull="true"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_UCET_2"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DEF_UCETVAZBAUCET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DEF_UCETVAZBAUCET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DEF_UCETVAZBAUCET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="256"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DEF_UCETVAZBAUCET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="256" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_UZIVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DEF_UCETVAZBAUCET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtZmena"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_ZMENA"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DEF_UCETVAZBAUCET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTyp"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TYP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_UCETVAZBAUCET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisUcetvazbaucettyp"
+      Association="cz.jtbank.konsolidace.mustky.FkKpdefucetvazbaucetAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.mustky.FkKpdefucetvazbaucetAssoc.KpCisUcetvazbaucettyp"
+      AssociationOtherEnd="cz.jtbank.konsolidace.mustky.FkKpdefucetvazbaucetAssoc.KpDefUcetvazbaucet"
+      Type="cz.jtbank.konsolidace.mustky.KpCisUcetvazbaucettypImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpdefucetvazbaucetUziv" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.SUzivatel" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFUCETVAZBAUCET_UZIV" />
+         <Attr Name="_checkCondition" Value="&#34;S_UZIVATEL&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefucetvazbaucetUcet2" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.SUcet2" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFUCETVAZBAUCET_UCET2" />
+         <Attr Name="_checkCondition" Value="&#34;S_UCET_2&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CKpdefucetvazuKrizeniOddo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.DtPlatnostod" />
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="C_KPDEFUCETVAZU_KRIZENI_ODDO" />
+         <Attr Name="_checkCondition" Value=" dt_platnostOd &#60;= dt_platnostDo " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpdefucetvazbaucet" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPDEFUCETVAZBAUCET" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefucetvazbaucetPlatdo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFUCETVAZBAUCET_PLATDO" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefucetvazbaucetDoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.IdKtgdoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFUCETVAZBAUCET_DOKLAD" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGDOKLAD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefucetvazbaucetUcet" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.SUcet1" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFUCETVAZBAUCET_UCET" />
+         <Attr Name="_checkCondition" Value="&#34;S_UCET_1&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefucetvazbaucetId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFUCETVAZBAUCET_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefucetvazbaucetPlatod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.DtPlatnostod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFUCETVAZBAUCET_PLATOD" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpdefucetvazbaucetDoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.IdKtgdoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPDEFUCETVAZBAUCET_DOKLAD" />
+         <Attr Name="_referencedKey" Value="PK_KPKTGDOKLAD" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpdefucetvazbaucet" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet.IdTyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPDEFUCETVAZBAUCET" />
+         <Attr Name="_referencedKey" Value="PK_CISUCETVAZBAUCETTYP" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

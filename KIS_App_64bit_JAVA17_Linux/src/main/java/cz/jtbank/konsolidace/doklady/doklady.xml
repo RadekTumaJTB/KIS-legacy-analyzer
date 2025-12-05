@@ -1,0 +1,1157 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="doklady"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.doklady" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="VwJtSpolecnost"
+      FullName="cz.jtbank.konsolidace.doklady.VwJtSpolecnost"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="ViewJtSpol"
+      FullName="cz.jtbank.konsolidace.doklady.ViewJtSpol"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="DokladyModule"
+      FullName="cz.jtbank.konsolidace.doklady.DokladyModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="VwHkExcelDetail"
+      FullName="cz.jtbank.konsolidace.doklady.VwHkExcelDetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="ViewExcelDetail"
+      FullName="cz.jtbank.konsolidace.doklady.ViewExcelDetail"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="ViewExcelDetailCZB"
+      FullName="cz.jtbank.konsolidace.doklady.ViewExcelDetailCZB"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDoklad"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDoklad"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladuverovapozice"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladuverovapozice"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladuverovapoziceView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladuverovapoziceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladmenovapozice"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladmenovapozice"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladmenovapoziceView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladmenovapoziceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprotistrana"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprotistrana"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprotistranaView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprotistranaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladzustatkyuctu"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladzustatkyuctu"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladzustatkyuctuView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladzustatkyuctuView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvzajemvazby"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvzajemvazby"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvzajemvazbyView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvzajemvazbyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladprotokol"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladprotokol"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladprotokolView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladprotokolView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDoklad"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDoklad"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkDokladprotokolDokladAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkDokladprotokolDokladAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladmanual"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladmanual"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladmanualView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladmanualView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladmenovapoziceSpecialView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladmenovapoziceSpecialView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladuverovapoziceSpecialView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladuverovapoziceSpecialView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladzahlavi"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladzahlavi"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladzahlaviView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladzahlaviView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladfronta"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladfronta"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladfrontaView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladfrontaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladbilancepocstav"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladbilancepocstav"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladbilancepocstavView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladbilancepocstavView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwJtSpolecnostuserpravo"
+      FullName="cz.jtbank.konsolidace.doklady.VwJtSpolecnostuserpravo"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="ViewJtSpolUserPrava"
+      FullName="cz.jtbank.konsolidace.doklady.ViewJtSpolUserPrava"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvazbyvyparovane"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvazbyvyparovane"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvazbyvyparovaneView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvazbyvyparovaneView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvazbynevyparovane"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvazbynevyparovane"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvazbynevyparovaneView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvazbynevyparovaneView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladvazby"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladvazby"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkDokladvazbyDokladAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkDokladvazbyDokladAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladvazbyView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladvazbyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcetnispolecnost"
+      FullName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpdokladSpolecnostAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpdokladSpolecnostAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcetnispolecnostView"
+      FullName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpGuidokladvazbyspolecnost"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpGuidokladvazbyspolecnost"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpGuidokladvazbyspolecnostView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpGuidokladvazbyspolecnostView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpTmpDokladvazby"
+      FullName="cz.jtbank.konsolidace.doklady.KpTmpDokladvazby"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpTmpDokladvazbyView"
+      FullName="cz.jtbank.konsolidace.doklady.KpTmpDokladvazbyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwSubkonDokladpolozka"
+      FullName="cz.jtbank.konsolidace.doklady.VwSubkonDokladpolozka"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwSubkonDokladpolozkaView"
+      FullName="cz.jtbank.konsolidace.doklady.VwSubkonDokladpolozkaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkKpdatdokladSubkonAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpdatdokladSubkonAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladpolozkadenik"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladpolozkadenik"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladpolozkadenikView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladpolozkadenikView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatSchvalenooo"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatSchvalenooo"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatSchvalenoooView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatSchvalenoooView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkDatooodokladAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkDatooodokladAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladzdrojdatagregace"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregace"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpzdrojdatagUcspolecnostAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpzdrojdatagUcspolecnostAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladzdrojdatagregaceView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregaceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatDokladzdrojdatagregace"
+      FullName="cz.jtbank.konsolidace.doklady.VwDatDokladzdrojdatagregace"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatDokladzdrojdatagregaceView"
+      FullName="cz.jtbank.konsolidace.doklady.VwDatDokladzdrojdatagregaceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpTmpGui"
+      FullName="cz.jtbank.konsolidace.doklady.KpTmpGui"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpTmpGuiView"
+      FullName="cz.jtbank.konsolidace.doklady.KpTmpGuiView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpEmailParam"
+      FullName="cz.jtbank.konsolidace.doklady.KpEmailParam"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpEmailParamView"
+      FullName="cz.jtbank.konsolidace.doklady.KpEmailParamView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="CisLocale"
+      FullName="cz.jtbank.konsolidace.doklady.CisLocale"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpucspolecnostLocaleAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpucspolecnostLocaleAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="CisLocaleView"
+      FullName="cz.jtbank.konsolidace.doklady.CisLocaleView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladsublog"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladsublog"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladsublogView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladsublogView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvvexcel"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvvexcel"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvvexcelView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvvexcelView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatManualnizdrojdat"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatManualnizdrojdat"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpmanzdSpolecnostAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpmanzdSpolecnostAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkKpmanzdUnifspolecnostAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpmanzdUnifspolecnostAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatManualnizdrojdatView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatManualnizdrojdatView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladdetailProjekt"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailProjekt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladdetailProjektView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailProjektView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladdetailOdbor"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailOdbor"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladdetailOdborView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailOdborView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladsubkonvazbydenik"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonvazbydenik"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladsubkonvazbydenikView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonvazbydenikView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladsubkonvazbydenikKurzView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonvazbydenikKurzView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladdetailDslr"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslr"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladdetailDslrView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladdetailDslrsum"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladdetailDslrsumView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsumView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpProjektdoklad"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpProjektdoklad"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpProjektdokladView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpProjektdokladView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpProjektdokladdetail"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpProjektdokladdetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpProjektdokladdetailView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpProjektdokladdetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwTmpProjekttogen"
+      FullName="cz.jtbank.konsolidace.doklady.VwTmpProjekttogen"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwTmpProjekttogenView"
+      FullName="cz.jtbank.konsolidace.doklady.VwTmpProjekttogenView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladbilanceprotistrana"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprotistrana"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladbilanceprotistranaView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprotistranaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladbilanceprojekt"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojekt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladbilanceprojektView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojektView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladbilanceodbor"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceodbor"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladbilanceodborView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceodborView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladmanodborprojekt"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladmanodborprojekt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladmanodborprojektView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladmanodborprojektView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladspolodborprojekt"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladspolodborprojekt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladspolodborprojektView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladspolodborprojektView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpTmpVyjimkyprotokolu"
+      FullName="cz.jtbank.konsolidace.doklady.KpTmpVyjimkyprotokolu"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkTmpvyjimkyprotokoluUsspolAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkTmpvyjimkyprotokoluUsspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpTmpVyjimkyprotokoluView"
+      FullName="cz.jtbank.konsolidace.doklady.KpTmpVyjimkyprotokoluView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladmanodborprojekt2"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladmanodborprojekt2"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladmanodborprojekt2View"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladmanodborprojekt2View"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwCisReadek"
+      FullName="cz.jtbank.konsolidace.doklady.VwCisReadek"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwCisReadekView"
+      FullName="cz.jtbank.konsolidace.doklady.VwCisReadekView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehled"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehled"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledrozklad"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledrozklad"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledrozkladView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledrozkladView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledobdobi"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledobdobi"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledobdobiView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledobdobiView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledprotistrana"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledprotistrana"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledprotistranaView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledprotistranaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehleducet"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehleducet"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehleducetView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehleducetView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisRadektextlang"
+      FullName="cz.jtbank.konsolidace.doklady.KpCisRadektextlang"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpradektextlangLocaleAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpradektextlangLocaleAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpCisRadektextlangKamilView"
+      FullName="cz.jtbank.konsolidace.doklady.KpCisRadektextlangKamilView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledobdobimesic"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledobdobimesic"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledobdobimesicView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledobdobimesicView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledvazby"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledvazby"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledvazbyView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledvazbyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladpolozkadeniksuma"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladpolozkadeniksuma"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladpolozkadeniksumaView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladpolozkadeniksumaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpSubkonprehledclen"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpSubkonprehledclen"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpSubkonprehledclenView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpSubkonprehledclenView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwLogGenerovanizamek"
+      FullName="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamek"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwLogGenerovanizamekView"
+      FullName="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatGenzamekzamitnuti"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatGenzamekzamitnuti"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpgenzamekzamitUcspolAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpgenzamekzamitUcspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatGenzamekzamitnutiView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatGenzamekzamitnutiView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpSpolecnostzamekgen"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpSpolecnostzamekgen"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpSpolecnostzamekgenView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpSpolecnostzamekgenView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpSpolecnostzamekgendatum"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpSpolecnostzamekgendatum"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpSpolecnostzamekgendatumView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpSpolecnostzamekgendatumView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcetnispolecnostExtendedView"
+      FullName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostExtendedView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="XMena"
+      FullName="cz.jtbank.konsolidace.doklady.XMena"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="XMenaView"
+      FullName="cz.jtbank.konsolidace.doklady.XMenaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladzustatkyuctuproti2"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladzustatkyuctuproti2"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladzustatkyuctuproti2View"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladzustatkyuctuproti2View"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatVyjimkyzamykanitop"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatVyjimkyzamykanitop"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpvyjimkyzamykaniUcspolAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpvyjimkyzamykaniUcspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatVyjimkyzamykanitopView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatVyjimkyzamykanitopView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpVyjimkyzamykanitop"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpVyjimkyzamykanitop"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpVyjimkyzamykanitopView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpVyjimkyzamykanitopView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpTmpVazbyVyjimky"
+      FullName="cz.jtbank.konsolidace.doklady.KpTmpVazbyVyjimky"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKptmpvazbyvyjimkyUcspolAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKptmpvazbyvyjimkyUcspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpTmpVazbyVyjimkyView"
+      FullName="cz.jtbank.konsolidace.doklady.KpTmpVazbyVyjimkyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladautoChybamustku"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladautoChybamustku"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladautoChybamustkuView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladautoChybamustkuView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpLogUcetnispolecnostOnline"
+      FullName="cz.jtbank.konsolidace.doklady.KpLogUcetnispolecnostOnline"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpLogUcetnispolecnostOnlineView"
+      FullName="cz.jtbank.konsolidace.doklady.KpLogUcetnispolecnostOnlineView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatKapitalskupiny"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatKapitalskupiny"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatKapitalskupinyView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatKapitalskupinyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatKapitalskupinyMaxView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatKapitalskupinyMaxView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatProjektdoklad"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatProjektdoklad"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatProjektdokladView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatProjektdokladView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladautoUnifucty"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladautoUnifucty"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladautoUnifuctyView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladautoUnifuctyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetmusteknakladchybi"
+      FullName="cz.jtbank.konsolidace.doklady.VwDatBudgetmusteknakladchybi"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetmusteknakladchybiView"
+      FullName="cz.jtbank.konsolidace.doklady.VwDatBudgetmusteknakladchybiView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwOlapDokladtoexport"
+      FullName="cz.jtbank.konsolidace.doklady.VwOlapDokladtoexport"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwOlapDokladtoexportView"
+      FullName="cz.jtbank.konsolidace.doklady.VwOlapDokladtoexportView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDefQuestorvazbaproduct"
+      FullName="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproduct"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDefQuestorvazbaproductView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproductView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladvazbySubkonsView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladvazbySubkonsView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvazbyprehled"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvazbyprehled"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvazbyprehledView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvazbyprehledView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatVazbyzamek"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkVzUcspoltoAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkVzUcspoltoAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkVzUcspolfromAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkVzUcspolfromAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatVazbyzamekView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatVazbyzamekView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisZamek"
+      FullName="cz.jtbank.konsolidace.doklady.KpCisZamek"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpgenzamekzamitCiszamekAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpgenzamekzamitCiszamekAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpCisZamekView"
+      FullName="cz.jtbank.konsolidace.doklady.KpCisZamekView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvazbauserindex"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvazbauserindex"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvazbauserindexView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladvazbauserindexView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatDokladsubkonvazbydenikView"
+      FullName="cz.jtbank.konsolidace.doklady.VwDatDokladsubkonvazbydenikView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwSubkonDokladpolozkaNewView"
+      FullName="cz.jtbank.konsolidace.doklady.VwSubkonDokladpolozkaNewView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatDokladsubkonvazbydenik2View"
+      FullName="cz.jtbank.konsolidace.doklady.VwDatDokladsubkonvazbydenik2View"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkKpucspolCentralaAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpucspolCentralaAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladautoPodnikatel"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladautoPodnikatel"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladautoPodnikatelView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladautoPodnikatelView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisRadektextlangMilosView"
+      FullName="cz.jtbank.konsolidace.doklady.KpCisRadektextlangMilosView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwLogGenerovanizamekprotokol"
+      FullName="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokol"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwLogGenerovanizamekprotokolView"
+      FullName="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokolView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladspolodborprojMis"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladspolodborprojMis"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladspolodborprojMisView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladspolodborprojMisView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpUcspolpocetzamku"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpUcspolpocetzamku"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpUcspolpocetzamkuView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpUcspolpocetzamkuView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwJtSpolecnostuserpravoView"
+      FullName="cz.jtbank.konsolidace.doklady.VwJtSpolecnostuserpravoView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladvazbySkupinyViewOld"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladvazbySkupinyViewOld"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladvazbySkupinyView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladvazbySkupinyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcetnispolecnostZamky"
+      FullName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostZamky"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpktgucspolzamkyUcspolAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpktgucspolzamkyUcspolAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcetnispolecnostZamkyView"
+      FullName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostZamkyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladsubkonlogdoklady"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdoklady"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpdokladsubkonlogdDokclAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkKpdokladsubkonlogdDokclAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladsubkonlogdokladyView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdokladyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpKonsolidacefronta"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpKonsolidacefronta"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpKonsolidacefrontaView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpKonsolidacefrontaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladrozdily"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladrozdily"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladrozdilyView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladrozdilyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladautoChybamustkuSumView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladautoChybamustkuSumView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladpolozka"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladpolozka"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladpolozkaView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladpolozkaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladprehledprotistranaSum"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladprehledprotistranaSum"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="DatKurzlistExportView"
+      FullName="cz.jtbank.konsolidace.doklady.DatKurzlistExportView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladzdrojdatagregaceAgr1View"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregaceAgr1View"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladzdrojdatagregaceVazby1View"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregaceVazby1View"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladzdrojdatagregaceMis1View"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregaceMis1View"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladzdrojdatagregaceShares1View"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregaceShares1View"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatGenerovanizamek"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatGenerovanizamek"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkGzUcslopAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkGzUcslopAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkGzCiszamekAssoc"
+      FullName="cz.jtbank.konsolidace.doklady.FkGzCiszamekAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatGenerovanizamekView"
+      FullName="cz.jtbank.konsolidace.doklady.KpDatGenerovanizamekView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwCashflow"
+      FullName="cz.jtbank.konsolidace.doklady.VwCashflow"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwCashflowView"
+      FullName="cz.jtbank.konsolidace.doklady.VwCashflowView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladuverovapozice2011"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladuverovapozice2011"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladuverovapozice2011View"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladuverovapozice2011View"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladuverovapozice2011SpecialView"
+      FullName="cz.jtbank.konsolidace.doklady.VwKpDokladuverovapozice2011SpecialView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="TmpKpDokladuverovapoziceEsc"
+      FullName="cz.jtbank.konsolidace.doklady.TmpKpDokladuverovapoziceEsc"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="TMP_KP_DOKLADUVEROVAPOZICE_ESC"
+      FullName="cz.jtbank.konsolidace.doklady.TMP_KP_DOKLADUVEROVAPOZICE_ESC"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

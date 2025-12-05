@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpKtgProjektView"
+   SelectList="KpKtgProjekt.ID, 
+       KpKtgProjekt.S_NAZEV, 
+       KpKtgProjekt.S_CISLOOLD, 
+
+       KpKtgProjekt.ID_STATUS, 
+       KpKtgProjekt.DT_DATUMSTATUSZMENA, 
+
+       KpKtgProjekt.ID_NAVRHUJE, 
+       KpKtgProjekt.ID_SPONZOR, 
+
+       KpKtgProjekt.ID_TOP, 
+       KpKtgProjekt.ID_PMANAGER, 
+
+       KpKtgProjekt.ID_KATEGORIE, 
+       KpKtgProjekt.ID_KTGUCETNISPOLECNOST, 
+
+       KpKtgProjekt.S_MENANAKLADY, 
+       KpKtgProjekt.DT_STARTOCENENI, 
+
+       KpKtgProjekt.ID_FREKVENCE, 
+       KpKtgProjekt.DT_KONECOCENENI, 
+
+       KpKtgProjekt.S_POPIS, 
+       KpKtgProjekt.S_UZIVATEL, 
+
+       KpKtgProjekt.DT_PLATNOSTOD, 
+       KpKtgProjekt.DT_PLATNOSTDO, 
+
+       KpKtgProjekt.ROWID, 
+       KpKtgProjekt.ND_DOCUROVEN1, 
+
+       KpKtgProjekt.ID_PROJEKTNAVRH, 
+       KpKtgProjekt.DT_MEMORANDUMDALSI, 
+
+       KpKtgProjekt.NL_MEMORANDUMMESICU, 
+       KpKtgProjekt.ID_MNGSEGMENT, 
+
+       KpKtgProjekt.ID_TYPBILANCE, 
+       KpKtgProjekt.ID_TYPBUDGETU, 
+
+       KpKtgProjekt.C_SLEDUJEBUDGET, 
+       KpKtgProjekt.ND_BUDGETNAVYSENI_PM, 
+
+       KpKtgProjekt.ND_BUDGETNAVYSENI_TOP, 
+       KpKtgProjekt.ID_MNGSEGMENTBOSS"
+   FromList="DB_JT.KP_KTG_PROJEKT KpKtgProjekt"
+   OrderBy="KpKtgProjekt.S_NAZEV"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.KpKtgProjektViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpKtgProjekt"
+      Entity="cz.jtbank.konsolidace.projekt.KpKtgProjekt" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="KpKtgProjekt.S_NAZEV" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgProjekt"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SCisloold"
+      EntityAttrName="SCisloold"
+      EntityUsage="KpKtgProjekt"
+      AliasName="S_CISLOOLD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdStatus"
+      EntityAttrName="IdStatus"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_STATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumstatuszmena"
+      EntityAttrName="DtDatumstatuszmena"
+      EntityUsage="KpKtgProjekt"
+      AliasName="DT_DATUMSTATUSZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdNavrhuje"
+      EntityAttrName="IdNavrhuje"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_NAVRHUJE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSponzor"
+      EntityAttrName="IdSponzor"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_SPONZOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTop"
+      EntityAttrName="IdTop"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_TOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPmanager"
+      EntityAttrName="IdPmanager"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_PMANAGER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKategorie"
+      EntityAttrName="IdKategorie"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_KATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenanaklady"
+      EntityAttrName="SMenanaklady"
+      EntityUsage="KpKtgProjekt"
+      AliasName="S_MENANAKLADY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtStartoceneni"
+      EntityAttrName="DtStartoceneni"
+      EntityUsage="KpKtgProjekt"
+      AliasName="DT_STARTOCENENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdFrekvence"
+      EntityAttrName="IdFrekvence"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_FREKVENCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtKonecoceneni"
+      EntityAttrName="DtKonecoceneni"
+      EntityUsage="KpKtgProjekt"
+      AliasName="DT_KONECOCENENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpKtgProjekt"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpKtgProjekt"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpKtgProjekt"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpKtgProjekt"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdDocuroven1"
+      EntityAttrName="NdDocuroven1"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ND_DOCUROVEN1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjektnavrh"
+      EntityAttrName="IdProjektnavrh"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_PROJEKTNAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtMemorandumdalsi"
+      EntityAttrName="DtMemorandumdalsi"
+      EntityUsage="KpKtgProjekt"
+      AliasName="DT_MEMORANDUMDALSI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlMemorandummesicu"
+      EntityAttrName="NlMemorandummesicu"
+      EntityUsage="KpKtgProjekt"
+      AliasName="NL_MEMORANDUMMESICU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegment"
+      EntityAttrName="IdMngsegment"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_MNGSEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypbilance"
+      EntityAttrName="IdTypbilance"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_TYPBILANCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypbudgetu"
+      EntityAttrName="IdTypbudgetu"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_TYPBUDGETU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CSledujebudget"
+      EntityAttrName="CSledujebudget"
+      EntityUsage="KpKtgProjekt"
+      AliasName="C_SLEDUJEBUDGET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdBudgetnavyseniPm"
+      EntityAttrName="NdBudgetnavyseniPm"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ND_BUDGETNAVYSENI_PM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdBudgetnavyseniTop"
+      EntityAttrName="NdBudgetnavyseniTop"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ND_BUDGETNAVYSENI_TOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegmentboss"
+      EntityAttrName="IdMngsegmentboss"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID_MNGSEGMENTBOSS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="ifrs"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.ifrs" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="VwJtSpolecnostpravidlaifrs"
+      FullName="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravidlaifrs"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwJtSpolecnostpravidlaifrsView"
+      FullName="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravidlaifrsView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="IfrsModule"
+      FullName="cz.jtbank.konsolidace.ifrs.IfrsModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="KpCisIfrstyppravidlo"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidlo"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisIfrstyppravidloView"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidloView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwJtSpolecnostpravifrsdetail"
+      FullName="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravifrsdetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwJtSpolecnostpravifrsdetailView"
+      FullName="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravifrsdetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisIfrstyppravidlodetail"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidlodetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisIfrstyppravidlodetailView"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidlodetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwJtSpolecnostpravifrshistor"
+      FullName="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravifrshistor"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwJtSpolecnostpravifrshistorView"
+      FullName="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravifrshistorView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisIfrssegment"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisIfrssegment"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisIfrssegmentView"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisIfrssegmentView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisIfrssubsegment"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisIfrssubsegment"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpcisifrssubsegmentIdsegAssoc"
+      FullName="cz.jtbank.konsolidace.ifrs.FkKpcisifrssubsegmentIdsegAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpCisIfrssubsegmentView"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisIfrssubsegmentView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisMngsegment"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisMngsegment"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisMngsegmentView"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisMngsegmentView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatMngsegmentboss"
+      FullName="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentboss"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkMngsegmentbossMngsegAssoc"
+      FullName="cz.jtbank.konsolidace.ifrs.FkMngsegmentbossMngsegAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatMngsegmentbossView"
+      FullName="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentbossView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatSegmentzastup"
+      FullName="cz.jtbank.konsolidace.ifrs.KpDatSegmentzastup"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatSegmentzastupView"
+      FullName="cz.jtbank.konsolidace.ifrs.KpDatSegmentzastupView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisSegmentzastuptyp"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisSegmentzastuptyp"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisSegmentzastuptypView"
+      FullName="cz.jtbank.konsolidace.ifrs.KpCisSegmentzastuptypView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkSegmentzastupTypAssoc"
+      FullName="cz.jtbank.konsolidace.ifrs.FkSegmentzastupTypAssoc"
+      ObjectType="Association" >
+   </Containee>
+</JboPackage>

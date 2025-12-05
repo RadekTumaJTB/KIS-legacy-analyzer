@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelAppuserskupinaView"
+   SelectList="KpRelAppuserskupina.ID_UCETNISKUPINA, 
+       KpRelAppuserskupina.ID_KTGAPPUSER, 
+       KtgAppuser.ID AS ID_AU, 
+       S_TITULYPRED || &#39; &#39; || S_KRESTNI || &#39; &#39; || S_PRIJMENI || &#39; &#39; || S_TITULYPO AS JMENO"
+   FromList="DB_JT.KP_REL_APPUSERSKUPINA KpRelAppuserskupina, DB_JT.KTG_APPUSER KtgAppuser"
+   Where="KpRelAppuserskupina.ID_KTGAPPUSER = KtgAppuser.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.users.KpRelAppuserskupinaViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelAppuserskupina"
+      Entity="cz.jtbank.konsolidace.users.KpRelAppuserskupina" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KtgAppuser"
+      Entity="cz.jtbank.konsolidace.users.KtgAppuser"
+      Association="cz.jtbank.konsolidace.users.FkRelappuserskupinaUserAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.users.FkRelappuserskupinaUserAssoc.KtgAppuser"
+      SourceUsage="cz.jtbank.konsolidace.users.KpRelAppuserskupinaView.KpRelAppuserskupina"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.users.KpRelAppuserskupina.IdKtgappuser" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdUcetniskupina"
+      IsNotNull="true"
+      EntityAttrName="IdUcetniskupina"
+      EntityUsage="KpRelAppuserskupina"
+      AliasName="ID_UCETNISKUPINA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgappuser"
+      IsNotNull="true"
+      EntityAttrName="IdKtgappuser"
+      EntityUsage="KpRelAppuserskupina"
+      AliasName="ID_KTGAPPUSER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAU"
+      EntityAttrName="Id"
+      EntityUsage="KtgAppuser"
+      AliasName="ID_AU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Jmeno"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="JMENO"
+      ColumnType="VARCHAR2"
+      Expression="S_TITULYPRED || &#39; &#39; || S_KRESTNI || &#39; &#39; || S_PRIJMENI || &#39; &#39; || S_TITULYPO"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+</ViewObject>

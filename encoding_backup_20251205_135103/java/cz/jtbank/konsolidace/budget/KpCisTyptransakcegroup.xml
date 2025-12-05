@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisTyptransakcegroup"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_TYPTRANSAKCEGROUP"
+   AliasName="KpCisTyptransakcegroup"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroupImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCEGROUP"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SKod"
+      IsUnique="true"
+      IsNotNull="true"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_KOD"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCEGROUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="15" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCEGROUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCEGROUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCEGROUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CDeveloper"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_DEVELOPER"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCEGROUP"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="SysC0011969" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.SKod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0011969" />
+         <Attr Name="_checkCondition" Value="&#34;S_KOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0013361" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0013361" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0011968" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0011968" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001731" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.SKod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C001731" />
+         <Attr Name="_checkCondition" Value="&#34;S_KOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001733" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C001733" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0013360" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.DtPlatnostod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0013360" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001730" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C001730" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkCistyptransakcegroup" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_CISTYPTRANSAKCEGROUP" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001732" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.DtPlatnostod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C001732" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="UnCistyptransakcegroupKod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup.SKod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="UN_CISTYPTRANSAKCEGROUP_KOD" />
+         <Attr Name="_isUnique" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

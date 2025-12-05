@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpTmpSubvazbyvyjimkyView"
+   SelectList="KpTmpSubvazbyvyjimky.ID_KTGSUBKONSOLIDACE, 
+       KpTmpSubvazbyvyjimky.DT_DATUM, 
+       KpTmpSubvazbyvyjimky.ID_KTGUCETNISPOLECNOST_1, 
+       KpTmpSubvazbyvyjimky.ID_KTGUCETNISPOLECNOST_2"
+   FromList="DB_JT.KP_TMP_SUBVAZBYVYJIMKY KpTmpSubvazbyvyjimky"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimkyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpTmpSubvazbyvyjimky"
+      Entity="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgsubkonsolidace"
+      IsNotNull="true"
+      EntityAttrName="IdKtgsubkonsolidace"
+      EntityUsage="KpTmpSubvazbyvyjimky"
+      AliasName="ID_KTGSUBKONSOLIDACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpTmpSubvazbyvyjimky"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost1"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost1"
+      EntityUsage="KpTmpSubvazbyvyjimky"
+      AliasName="ID_KTGUCETNISPOLECNOST_1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost2"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost2"
+      EntityUsage="KpTmpSubvazbyvyjimky"
+      AliasName="ID_KTGUCETNISPOLECNOST_2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

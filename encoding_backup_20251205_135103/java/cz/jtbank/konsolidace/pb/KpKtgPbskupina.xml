@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpKtgPbskupina"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_KTG_PBSKUPINA"
+   AliasName="KpKtgPbskupina"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.pb.KpKtgPbskupinaImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_PBSKUPINA"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      IsNotNull="true"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_PBSKUPINA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpKtgPbevidencnilist"
+      Association="cz.jtbank.konsolidace.pb.FkPbevidencnilistSkupinaAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.pb.FkPbevidencnilistSkupinaAssoc.KpKtgPbevidencnilist"
+      AssociationOtherEnd="cz.jtbank.konsolidace.pb.FkPbevidencnilistSkupinaAssoc.KpKtgPbskupina"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="NnCispbskupinaPopis" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbskupina.SPopis" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_CISPBSKUPINA_POPIS" />
+         <Attr Name="_checkCondition" Value="&#34;S_POPIS&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnCispbskupinaId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbskupina.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_CISPBSKUPINA_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkCispbskupina" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPbskupina.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_CISPBSKUPINA" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

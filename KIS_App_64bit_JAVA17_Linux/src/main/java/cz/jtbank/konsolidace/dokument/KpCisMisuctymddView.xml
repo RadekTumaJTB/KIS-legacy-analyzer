@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisMisuctymddView"
+   SelectList="KpCisMisuctymdd.ID, 
+       KpCisMisuctymdd.S_UCET, 
+       KpCisMisuctymdd.S_POPIS, 
+
+       KpCisMisuctymdd.ID_TYPTRANSAKCE, 
+       KpCisMisuctymdd.ID_CISSUBJECT, 
+
+       KpTmpCissubject.S_POPIS AS SPOPIS1, 
+       KpTmpCissubject.ID 
+AS ID1, 
+       KpCisTyptransakce.S_POPIS AS SPOPIS2, 
+      
+ KpCisTyptransakce.ID AS ID2"
+   FromList="DB_JT.KP_CIS_MISUCTYMDD KpCisMisuctymdd, DB_JT.KP_CIS_SUBJECT KpTmpCissubject, DB_JT.KP_CIS_TYPTRANSAKCE KpCisTyptransakce"
+   Where="KpCisMisuctymdd.ID_CISSUBJECT = KpTmpCissubject.ID AND KpCisMisuctymdd.ID_TYPTRANSAKCE = KpCisTyptransakce.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.KpCisMisuctymddViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisMisuctymdd"
+      Entity="cz.jtbank.konsolidace.dokument.KpCisMisuctymdd" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpCisMisuctymdd.ID_CISSUBJECT = KpTmpCissubject.ID AND KpCisMisuctymdd.ID_TYPTRANSAKCE = KpCisTyptransakce.ID" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpTmpCissubject"
+      Entity="cz.jtbank.konsolidace.mustky.KpTmpCissubject"
+      SourceUsage="cz.jtbank.konsolidace.dokument.KpCisMisuctymddView.KpCisMisuctymdd"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.dokument.KpCisMisuctymdd.Id" />
+            <Item Value="cz.jtbank.konsolidace.dokument.KpCisMisuctymdd.SPopis" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCissubject.Id" />
+            <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCissubject.SPopis" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpCisTyptransakce"
+      Entity="cz.jtbank.konsolidace.dokument.KpCisTyptransakce"
+      Association="cz.jtbank.konsolidace.dokument.FkMisuctymddTtAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.dokument.FkMisuctymddTtAssoc.KpCisTyptransakce"
+      SourceUsage="cz.jtbank.konsolidace.dokument.KpCisMisuctymddView.KpCisMisuctymdd"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.dokument.KpCisMisuctymdd.IdTyptransakce" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisMisuctymdd"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      EntityAttrName="SUcet"
+      EntityUsage="KpCisMisuctymdd"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisMisuctymdd"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyptransakce"
+      EntityAttrName="IdTyptransakce"
+      EntityUsage="KpCisMisuctymdd"
+      AliasName="ID_TYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCissubject"
+      EntityAttrName="IdCissubject"
+      EntityUsage="KpCisMisuctymdd"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis1"
+      EntityAttrName="SPopis"
+      EntityUsage="KpTmpCissubject"
+      AliasName="SPOPIS1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id1"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpTmpCissubject"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis2"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisTyptransakce"
+      AliasName="SPOPIS2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id2"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisTyptransakce"
+      AliasName="ID2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

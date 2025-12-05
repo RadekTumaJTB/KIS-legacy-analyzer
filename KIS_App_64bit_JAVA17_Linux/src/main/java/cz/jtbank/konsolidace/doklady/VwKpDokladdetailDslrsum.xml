@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwKpDokladdetailDslrsum"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+   AliasName="VwKpDokladdetailDslrsum"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsumImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="SNazev"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlRadek"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_RADEK"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Textradek"
+      Precision="4000"
+      Type="java.lang.String"
+      ColumnName="TEXTRADEK"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="4000" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkamena"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKAMENA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkalocal"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKALOCAL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMenaucspol"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENAUCSPOL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkaczk"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKACZK"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Protistrana"
+      Precision="256"
+      Type="java.lang.String"
+      ColumnName="PROTISTRANA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="256" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatum"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUM"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlPoradilist"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_PORADILIST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SLocale"
+      IsNotNull="true"
+      Precision="6"
+      Type="java.lang.String"
+      ColumnName="S_LOCALE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="6" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcet"
+      IsNotNull="true"
+      Precision="15"
+      Type="java.lang.String"
+      ColumnName="S_UCET"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgspolecnost"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGSPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISSUBJECT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcetoriginal"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_UCETORIGINAL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopisoriginal"
+      Precision="64"
+      Type="java.lang.String"
+      ColumnName="S_POPISORIGINAL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="64" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgprojekt"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGPROJEKT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwkpdokladdetaildslrsumPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.NlRadek" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.SMena" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.SMenaucspol" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.Protistrana" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.DtDatum" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.IdKtgucetnispolecnost" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.NlPoradilist" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.SLocale" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.SUcet" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.IdKtgspolecnost" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.IdCissubject" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.SUcetoriginal" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum.IdKtgprojekt" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWKPDOKLADDETAILDSLRSUM_PRIMAR" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

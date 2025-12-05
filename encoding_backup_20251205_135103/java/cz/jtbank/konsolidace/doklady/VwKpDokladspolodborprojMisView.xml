@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpDokladspolodborprojMisView"
+   SelectList="VwKpDokladspolodborprojMis.S_UCET, 
+       VwKpDokladspolodborprojMis.S_MENA, 
+
+       VwKpDokladspolodborprojMis.ND_CASTKALOCAL, 
+       VwKpDokladspolodborprojMis.ND_CASTKAMENA, 
+
+       VwKpDokladspolodborprojMis.ND_CASTKACZK, 
+       VwKpDokladspolodborprojMis.ID_DOKLAD, 
+
+       VwKpDokladspolodborprojMis.ID_KTGSPOLECNOST, 
+       
+VwKpDokladspolodborprojMis.ID_KTGODBOR, 
+       VwKpDokladspolodborprojMis.ID_KTGPROJEKT, 
+
+       VwKpDokladspolodborprojMis.SPOLECNOST, 
+       VwKpDokladspolodborprojMis.S_ICO, 
+
+       VwKpDokladspolodborprojMis.ODBOR, 
+       VwKpDokladspolodborprojMis.PROJEKT, 
+
+       VwKpDokladspolodborprojMis.TEXTRADEK, 
+       VwKpDokladspolodborprojMis.S_LOCALE, 
+
+       VwKpDokladspolodborprojMis.LIST, 
+       VwKpDokladspolodborprojMis.CLENJTFGKONS, 
+
+       VwKpDokladspolodborprojMis.S_UCETUNIF, 
+       VwKpDokladspolodborprojMis.S_SPRAVCE, 
+
+       VwKpDokladspolodborprojMis.S_KO, 
+       VwKpDokladspolodborprojMis.PROJEKTANO, 
+
+       VwKpDokladspolodborprojMis.MNGSEGMENT, 
+       VwKpDokladspolodborprojMis.MNGSEGMENTBOSS, 
+
+       VwKpDokladspolodborprojMis.PMANAGER, 
+       VwKpDokladspolodborprojMis.MNGSEGMENT_PS, 
+
+       VwKpDokladspolodborprojMis.MNGSEGMENTBOSS_PS, 
+      
+ VwKpDokladspolodborprojMis.C_MIS, 
+       VwKpDokladspolodborprojMis.ID_TYPTRANSAKCE, 
+
+       VwKpDokladspolodborprojMis.TYPTRANSAKCE, 
+       VwKpDokladspolodborprojMis.S_POPISORIGINAL"
+   FromList="DB_JT.VW_KP_DOKLADSPOLODBORPROJ_MIS VwKpDokladspolodborprojMis"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwKpDokladspolodborprojMisViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpDokladspolodborprojMis"
+      Entity="cz.jtbank.konsolidace.doklady.VwKpDokladspolodborprojMis" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkaczk"
+      EntityAttrName="NdCastkaczk"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="ND_CASTKACZK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      EntityAttrName="SIco"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odbor"
+      EntityAttrName="Odbor"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="ODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Projekt"
+      EntityAttrName="Projekt"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="PROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Textradek"
+      EntityAttrName="Textradek"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="TEXTRADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SLocale"
+      IsNotNull="true"
+      EntityAttrName="SLocale"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="S_LOCALE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="List"
+      EntityAttrName="List"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="LIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Clenjtfgkons"
+      EntityAttrName="Clenjtfgkons"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="CLENJTFGKONS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetunif"
+      EntityAttrName="SUcetunif"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="S_UCETUNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SSpravce"
+      EntityAttrName="SSpravce"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="S_SPRAVCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKo"
+      EntityAttrName="SKo"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="S_KO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Projektano"
+      EntityAttrName="Projektano"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="PROJEKTANO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mngsegment"
+      EntityAttrName="Mngsegment"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="MNGSEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mngsegmentboss"
+      EntityAttrName="Mngsegmentboss"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="MNGSEGMENTBOSS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pmanager"
+      EntityAttrName="Pmanager"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="PMANAGER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="MngsegmentPs"
+      EntityAttrName="MngsegmentPs"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="MNGSEGMENT_PS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="MngsegmentbossPs"
+      EntityAttrName="MngsegmentbossPs"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="MNGSEGMENTBOSS_PS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CMis"
+      EntityAttrName="CMis"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="C_MIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyptransakce"
+      EntityAttrName="IdTyptransakce"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="ID_TYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typtransakce"
+      EntityAttrName="Typtransakce"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="TYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopisoriginal"
+      EntityAttrName="SPopisoriginal"
+      EntityUsage="VwKpDokladspolodborprojMis"
+      AliasName="S_POPISORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

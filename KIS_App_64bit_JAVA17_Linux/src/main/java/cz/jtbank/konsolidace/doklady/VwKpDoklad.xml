@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwKpDoklad"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_KP_DOKLAD"
+   AliasName="VwKpDoklad"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.VwKpDokladImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="NlRadek"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_RADEK"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLAD"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLAD"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkalocal"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKALOCAL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLAD" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkamena"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKAMENA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLAD" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdOpravnacastkalocal"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_OPRAVNACASTKALOCAL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLAD" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdOpravnacastkamena"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_OPRAVNACASTKAMENA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLAD" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDoklad"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLAD"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="256"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLAD"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="256" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SList"
+      Precision="64"
+      Type="java.lang.String"
+      ColumnName="S_LIST"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLAD"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="64" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SRadektext"
+      Precision="256"
+      Type="java.lang.String"
+      ColumnName="S_RADEKTEXT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLAD"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="256" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlPoradilist"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_PORADILIST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLAD"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlError"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_ERROR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLAD" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlWarning"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_WARNING"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLAD" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Koef"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="KOEF"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLAD" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SLocale"
+      Precision="6"
+      Type="java.lang.String"
+      ColumnName="S_LOCALE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_DOKLAD"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="6" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwkpdokladPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDoklad.NlRadek" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDoklad.SMena" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDoklad.NlPoradilist" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDoklad.IdDoklad" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDoklad.SLocale" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDoklad.SRadektext" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDoklad.SList" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDoklad.SPopis" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWKPDOKLAD_PRIMARY_KEY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

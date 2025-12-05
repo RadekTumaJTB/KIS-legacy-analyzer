@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpTmpCislist"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_LIST"
+   AliasName="KpTmpCislist"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.mustky.KpTmpCislistImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_LIST"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTmpcissubject"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TMPCISSUBJECT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_LIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SZkratka"
+      IsNotNull="true"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_ZKRATKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_LIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="64"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_LIST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="64" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="ReportKod"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="REPORT_KOD"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_LIST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpTmpCissubject"
+      Association="cz.jtbank.konsolidace.mustky.FkKptmpcislistSubjAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.mustky.FkKptmpcislistSubjAssoc.KpTmpCissubject"
+      AssociationOtherEnd="cz.jtbank.konsolidace.mustky.FkKptmpcislistSubjAssoc.KpTmpCislist"
+      Type="cz.jtbank.konsolidace.mustky.KpTmpCissubjectImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpTmpDefdoklad"
+      Association="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladListAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladListAssoc.KpTmpDefdoklad"
+      AssociationOtherEnd="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladListAssoc.KpTmpCislist"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKptmpcislistId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCislist.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPTMPCISLIST_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpcislistId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCislist.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISLIST_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpcislistZkratka" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCislist.SZkratka" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISLIST_ZKRATKA" />
+         <Attr Name="_checkCondition" Value="&#34;S_ZKRATKA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKptmpcislist" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCislist.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPTMPCISLIST" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKptmpcislistZkratka" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCislist.SZkratka" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPTMPCISLIST_ZKRATKA" />
+         <Attr Name="_checkCondition" Value="&#34;S_ZKRATKA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKptmpcislistSubj" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCislist.IdTmpcissubject" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPTMPCISLIST_SUBJ" />
+         <Attr Name="_checkCondition" Value="&#34;ID_TMPCISSUBJECT&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKptmpcislistSubj" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCislist.IdTmpcissubject" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPTMPCISLIST_SUBJ" />
+         <Attr Name="_referencedKey" Value="PK_KPTMPSUBJECT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

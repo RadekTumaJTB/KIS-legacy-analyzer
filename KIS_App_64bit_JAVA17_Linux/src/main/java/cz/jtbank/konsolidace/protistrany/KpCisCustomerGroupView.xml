@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisCustomerGroupView"
+   SelectList="KpCisCustomerGroup.CUST_GROUP_NAME, 
+       KpCisCustomerGroup.CUST_GROUP_CODE, 
+       KpCisCustomerGroup.CUST_STRUC_NAME, 
+       KpCisCustomerGroup.CUST_STRUC_CODE, 
+       KpCisCustomerGroup.DT_PLATNOSTOD, 
+       KpCisCustomerGroup.DT_PLATNOSTDO"
+   FromList="DB_JT.KP_CIS_CUSTOMER_GROUP KpCisCustomerGroup"
+   OrderBy="CUST_GROUP_CODE,CUST_STRUC_CODE"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.protistrany.KpCisCustomerGroupViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisCustomerGroup"
+      Entity="cz.jtbank.konsolidace.protistrany.KpCisCustomerGroup" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="CUST_GROUP_CODE,CUST_STRUC_CODE" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="CustGroupName"
+      IsNotNull="true"
+      EntityAttrName="CustGroupName"
+      EntityUsage="KpCisCustomerGroup"
+      AliasName="CUST_GROUP_NAME"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CustGroupCode"
+      IsNotNull="true"
+      EntityAttrName="CustGroupCode"
+      EntityUsage="KpCisCustomerGroup"
+      AliasName="CUST_GROUP_CODE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CustStrucName"
+      IsNotNull="true"
+      EntityAttrName="CustStrucName"
+      EntityUsage="KpCisCustomerGroup"
+      AliasName="CUST_STRUC_NAME"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CustStrucCode"
+      IsNotNull="true"
+      EntityAttrName="CustStrucCode"
+      EntityUsage="KpCisCustomerGroup"
+      AliasName="CUST_STRUC_CODE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpCisCustomerGroup"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpCisCustomerGroup"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

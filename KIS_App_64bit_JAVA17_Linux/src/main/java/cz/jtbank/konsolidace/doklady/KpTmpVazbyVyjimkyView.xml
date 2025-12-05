@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpTmpVazbyVyjimkyView"
+   SelectList="KpTmpVazbyVyjimky.ID_KTGUCETNISPOLECNOST, 
+       KpTmpVazbyVyjimky.ID_KTGAPPUSER"
+   FromList="DB_JT.KP_TMP_VAZBY_VYJIMKY KpTmpVazbyVyjimky"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpTmpVazbyVyjimkyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpTmpVazbyVyjimky"
+      Entity="cz.jtbank.konsolidace.doklady.KpTmpVazbyVyjimky" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpTmpVazbyVyjimky"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgappuser"
+      IsNotNull="true"
+      EntityAttrName="IdKtgappuser"
+      EntityUsage="KpTmpVazbyVyjimky"
+      AliasName="ID_KTGAPPUSER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

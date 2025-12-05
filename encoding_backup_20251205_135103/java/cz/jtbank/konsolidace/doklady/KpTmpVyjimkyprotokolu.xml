@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpTmpVyjimkyprotokolu"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_TMP_VYJIMKYPROTOKOLU"
+   AliasName="KpTmpVyjimkyprotokolu"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.KpTmpVyjimkyprotokoluImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_TMP_VYJIMKYPROTOKOLU"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CPeriodicita"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_PERIODICITA"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_TMP_VYJIMKYPROTOKOLU"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SKedni"
+      IsNotNull="true"
+      Precision="6"
+      Type="java.lang.String"
+      ColumnName="S_KEDNI"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_TMP_VYJIMKYPROTOKOLU" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="6" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpKtgUcetnispolecnost"
+      Association="cz.jtbank.konsolidace.doklady.FkTmpvyjimkyprotokoluUsspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkTmpvyjimkyprotokoluUsspolAssoc.KpKtgUcetnispolecnost"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkTmpvyjimkyprotokoluUsspolAssoc.KpTmpVyjimkyprotokolu"
+      Type="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnTmpvyjimkyprotokoluKedni" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpTmpVyjimkyprotokolu.SKedni" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_TMPVYJIMKYPROTOKOLU_KEDNI" />
+         <Attr Name="_checkCondition" Value="&#34;S_KEDNI&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnTmpvyjimkyprotokoluPeriod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpTmpVyjimkyprotokolu.CPeriodicita" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_TMPVYJIMKYPROTOKOLU_PERIOD" />
+         <Attr Name="_checkCondition" Value=" c_periodicita is not null and c_periodicita in (&#39;M&#39;, &#39;Y&#39;) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkTmpvyjimkyprotokolu" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpTmpVyjimkyprotokolu.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_TMPVYJIMKYPROTOKOLU" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkTmpvyjimkyprotokoluUsspol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpTmpVyjimkyprotokolu.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_TMPVYJIMKYPROTOKOLU_USSPOL" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

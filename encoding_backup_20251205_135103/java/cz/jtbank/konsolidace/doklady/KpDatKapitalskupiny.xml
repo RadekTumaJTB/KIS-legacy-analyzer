@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatKapitalskupiny"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_KAPITALSKUPINY"
+   AliasName="KpDatKapitalskupiny"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.KpDatKapitalskupinyImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_KAPITALSKUPINY"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdSkupinapozice"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_SKUPINAPOZICE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_KAPITALSKUPINY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CDynamicky"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_DYNAMICKY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_DAT_KAPITALSKUPINY"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_KAPITALSKUPINY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastka"
+      IsNotNull="true"
+      Precision="18"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_KAPITALSKUPINY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="NnKpkapitalskupinyDtod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatKapitalskupiny.DtPlatnostod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPKAPITALSKUPINY_DTOD" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpkapitalskupinySkup" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatKapitalskupiny.IdSkupinapozice" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPKAPITALSKUPINY_SKUP" />
+         <Attr Name="_checkCondition" Value="&#34;ID_SKUPINAPOZICE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpkapitalskupinyCastka" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatKapitalskupiny.NdCastka" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPKAPITALSKUPINY_CASTKA" />
+         <Attr Name="_checkCondition" Value="&#34;ND_CASTKA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpkapitalskupiny" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatKapitalskupiny.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPKAPITALSKUPINY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpkapitalskupinyId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatKapitalskupiny.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPKAPITALSKUPINY_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

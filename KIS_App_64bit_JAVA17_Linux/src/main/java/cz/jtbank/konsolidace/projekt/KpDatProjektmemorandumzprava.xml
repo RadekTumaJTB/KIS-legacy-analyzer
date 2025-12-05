@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatProjektmemorandumzprava"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_PROJEKTMEMORANDUMZPRAVA"
+   AliasName="KpDatProjektmemorandumzprava"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.projekt.KpDatProjektmemorandumzpravaImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_PROJEKTMEMORANDUMZPRAVA"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgprojekt"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGPROJEKT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_PROJEKTMEMORANDUMZPRAVA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatum"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUM"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_PROJEKTMEMORANDUMZPRAVA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SZprava"
+      Precision="1000"
+      Type="java.lang.String"
+      ColumnName="S_ZPRAVA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DAT_PROJEKTMEMORANDUMZPRAVA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1000" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="PkProjektmemzprava" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektmemorandumzprava.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_PROJEKTMEMZPRAVA" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnProjektmemzpravaDatum" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektmemorandumzprava.DtDatum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_PROJEKTMEMZPRAVA_DATUM" />
+         <Attr Name="_checkCondition" Value="&#34;DT_DATUM&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnProjektmemzpravaIdprojekt" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektmemorandumzprava.IdKtgprojekt" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_PROJEKTMEMZPRAVA_IDPROJEKT" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGPROJEKT&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnProjektmemzpravaId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektmemorandumzprava.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_PROJEKTMEMZPRAVA_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkProjektmemzpravaIdprojekt" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektmemorandumzprava.IdKtgprojekt" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_PROJEKTMEMZPRAVA_IDPROJEKT" />
+         <Attr Name="_referencedKey" Value="PK_KPPROJEKT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

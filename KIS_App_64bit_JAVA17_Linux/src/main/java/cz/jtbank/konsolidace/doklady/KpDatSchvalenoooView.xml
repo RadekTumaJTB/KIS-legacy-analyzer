@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatSchvalenoooView"
+   SelectList="KpDatSchvalenooo.NL_KROK, 
+       KpDatSchvalenooo.ID_DOKLAD, 
+       KpDatSchvalenooo.DT_TIMESTAMP"
+   FromList="DB_JT.KP_DAT_DOKLADZAMEK KpDatSchvalenooo"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatSchvalenoooViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatSchvalenooo"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatSchvalenooo" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="NlKrok"
+      IsNotNull="true"
+      EntityAttrName="NlKrok"
+      EntityUsage="KpDatSchvalenooo"
+      AliasName="NL_KROK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="KpDatSchvalenooo"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtTimestamp"
+      IsNotNull="true"
+      EntityAttrName="DtTimestamp"
+      EntityUsage="KpDatSchvalenooo"
+      AliasName="DT_TIMESTAMP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

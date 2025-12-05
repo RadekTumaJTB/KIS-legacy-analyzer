@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatGenerovanizamekView"
+   SelectList="KpDatGenerovanizamek.ID_CISDOKLAD, 
+       KpDatGenerovanizamek.ID_KTGUCETNISPOLECNOST, 
+
+       KpDatGenerovanizamek.DT_DATUM, 
+       KpDatGenerovanizamek.ID_CISZAMEK, 
+
+       KpDatGenerovanizamek.ID_KTGAPPUSER, 
+       KpDatGenerovanizamek.DT_DATUMZMENY, 
+
+       KpDatGenerovanizamek.C_ZAMCENO, 
+       KpDatGenerovanizamek.NL_KROK, 
+
+       KpDatGenerovanizamek.ROWID"
+   FromList="DB_JT.KP_DAT_GENEROVANIZAMEK KpDatGenerovanizamek"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatGenerovanizamekViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatGenerovanizamek"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatGenerovanizamek" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdCisdoklad"
+      IsNotNull="true"
+      EntityAttrName="IdCisdoklad"
+      EntityUsage="KpDatGenerovanizamek"
+      AliasName="ID_CISDOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDatGenerovanizamek"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatGenerovanizamek"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCiszamek"
+      IsNotNull="true"
+      EntityAttrName="IdCiszamek"
+      EntityUsage="KpDatGenerovanizamek"
+      AliasName="ID_CISZAMEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgappuser"
+      EntityAttrName="IdKtgappuser"
+      EntityUsage="KpDatGenerovanizamek"
+      AliasName="ID_KTGAPPUSER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzmeny"
+      EntityAttrName="DtDatumzmeny"
+      EntityUsage="KpDatGenerovanizamek"
+      AliasName="DT_DATUMZMENY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CZamceno"
+      IsNotNull="true"
+      EntityAttrName="CZamceno"
+      EntityUsage="KpDatGenerovanizamek"
+      AliasName="C_ZAMCENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlKrok"
+      EntityAttrName="NlKrok"
+      EntityUsage="KpDatGenerovanizamek"
+      AliasName="NL_KROK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="KpDatGenerovanizamek"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpTmpDokladvazbyView"
+   SelectList="KpTmpDokladvazby.ID_DOKLAD, 
+       KpTmpDokladvazby.ID_KTGUCETNISKUPINA, 
+       KpTmpDokladvazby.ROWID, 
+       KpDatDoklad.ID_KTGDOKLAD, 
+       KpDatDoklad.ID"
+   FromList="DB_JT.KP_TMP_DOKLADVAZBY KpTmpDokladvazby, DB_JT.KP_DAT_DOKLAD KpDatDoklad"
+   Where="KpTmpDokladvazby.ID_DOKLAD = KpDatDoklad.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpTmpDokladvazbyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpTmpDokladvazby"
+      Entity="cz.jtbank.konsolidace.doklady.KpTmpDokladvazby" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpTmpDokladvazby.ID_DOKLAD = KpDatDoklad.ID" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpDatDoklad"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatDoklad"
+      SourceUsage="cz.jtbank.konsolidace.doklady.KpTmpDokladvazbyView.KpTmpDokladvazby"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdDoklad"
+      EntityAttrName="IdDoklad"
+      EntityUsage="KpTmpDokladvazby"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina"
+      EntityAttrName="IdKtgucetniskupina"
+      EntityUsage="KpTmpDokladvazby"
+      AliasName="ID_KTGUCETNISKUPINA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="KpTmpDokladvazby"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgdoklad"
+      EntityAttrName="IdKtgdoklad"
+      EntityUsage="KpDatDoklad"
+      AliasName="ID_KTGDOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatDoklad"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

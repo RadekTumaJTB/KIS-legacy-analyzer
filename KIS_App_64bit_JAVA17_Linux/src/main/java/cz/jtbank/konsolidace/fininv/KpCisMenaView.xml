@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisMenaView"
+   SelectList="KpCisMena.ID, 
+       KpCisMena.S_POPIS"
+   FromList="DB_JT.KP_CIS_MENA KpCisMena"
+   OrderBy="S_POPIS"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.fininv.KpCisMenaViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisMena"
+      Entity="cz.jtbank.konsolidace.fininv.KpCisMena" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="S_POPIS" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsUpdateable="false"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisMena"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      IsUpdateable="false"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisMena"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

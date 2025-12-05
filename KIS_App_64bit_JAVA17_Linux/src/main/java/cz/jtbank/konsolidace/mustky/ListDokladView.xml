@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="ListDokladView"
+   SelectList="KpTmpDefdoklad.NL_PORADI, 
+       KpTmpDefdoklad.ID, 
+       KpTmpCislist.S_POPIS, 
+       KpTmpCislist.ID AS ID1, 
+       KpTmpCislist.S_ZKRATKA"
+   FromList="DB_JT.KP_DEF_DOKLAD KpTmpDefdoklad, DB_JT.KP_CIS_LIST KpTmpCislist"
+   Where="KpTmpDefdoklad.ID_CISLIST = KpTmpCislist.ID"
+   OrderBy="KpTmpDefdoklad.NL_PORADI"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.mustky.ListDokladViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpTmpDefdoklad"
+      Entity="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpTmpDefdoklad.ID_CISLIST = KpTmpCislist.ID" />
+         <Attr Name="_queryOrderBy" Value="KpTmpDefdoklad.NL_PORADI" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpTmpCislist"
+      Entity="cz.jtbank.konsolidace.mustky.KpTmpCislist"
+      Association="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladListAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladListAssoc.KpTmpCislist"
+      SourceUsage="cz.jtbank.konsolidace.mustky.ListDokladView.KpTmpDefdoklad"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad.IdTmpcislist" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCislist.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="NlPoradi"
+      IsNotNull="true"
+      EntityAttrName="NlPoradi"
+      EntityUsage="KpTmpDefdoklad"
+      AliasName="NL_PORADI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpTmpDefdoklad"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpTmpCislist"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id1"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpTmpCislist"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZkratka"
+      IsNotNull="true"
+      EntityAttrName="SZkratka"
+      EntityUsage="KpTmpCislist"
+      AliasName="S_ZKRATKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

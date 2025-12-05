@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepSpolecnostcartesisView"
+   SelectList="VwRepSpolecnostcartesis.DT_DATUM, 
+       VwRepSpolecnostcartesis.ID_KTGSPOLECNOST, 
+
+       VwRepSpolecnostcartesis.S_NAZEV, 
+       VwRepSpolecnostcartesis.ID_KTGUCETNISPOLECNOST, 
+
+       VwRepSpolecnostcartesis.COMPANYPROFILE, 
+       VwRepSpolecnostcartesis.S_MENA, 
+
+       VwRepSpolecnostcartesis.S_COUNTRY, 
+       VwRepSpolecnostcartesis.IFRS_SEGMENT, 
+
+       VwRepSpolecnostcartesis.MNG_SEGMENT, 
+       VwRepSpolecnostcartesis.IFRS_OD, 
+
+       VwRepSpolecnostcartesis.IFRS_DO, 
+       VwRepSpolecnostcartesis.KATPS, 
+
+       VwRepSpolecnostcartesis.C_AKTIVNI, 
+       VwRepSpolecnostcartesis.CMETHOD, 
+
+       VwRepSpolecnostcartesis.AMETHOD, 
+       VwRepSpolecnostcartesis.ACCNTED, 
+
+       VwRepSpolecnostcartesis.DEG, 
+       VwRepSpolecnostcartesis.DAG, 
+
+       VwRepSpolecnostcartesis.CG, 
+       VwRepSpolecnostcartesis.ID_ZODPOVEDNAUCETNI, 
+
+       VwRepSpolecnostcartesis.ID_SPRAVCEKONSOLIDACE, 
+     
+  VwRepSpolecnostcartesis.ID_ODPOVEDNAOSOBA, 
+       VwRepSpolecnostcartesis.DT_IN1_RKC, 
+
+       VwRepSpolecnostcartesis.DT_OUT1_RKC, 
+       VwRepSpolecnostcartesis.DT_IN2_JTFG, 
+
+       VwRepSpolecnostcartesis.DT_OUT2_JTFG, 
+       VwRepSpolecnostcartesis.DT_IN2_TECHNO, 
+
+       VwRepSpolecnostcartesis.DT_OUT2_TECHNO, 
+       VwRepSpolecnostcartesis.DT_IN4_MNG, 
+
+       VwRepSpolecnostcartesis.DT_OUT4_MNG, 
+       VwRepSpolecnostcartesis.CMETHOD_1, 
+
+       VwRepSpolecnostcartesis.CMETHOD_2J, 
+       VwRepSpolecnostcartesis.CMETHOD_2T, 
+
+       VwRepSpolecnostcartesis.CMETHOD_4, 
+       VwRepSpolecnostcartesis.ID_KTGUCETNISPOLECNOSTMATKA"
+   FromList="DB_JT.VW_REP_SPOLECNOSTCARTESIS VwRepSpolecnostcartesis"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.cartesis.VwRepSpolecnostcartesisViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepSpolecnostcartesis"
+      Entity="cz.jtbank.konsolidace.cartesis.VwRepSpolecnostcartesis" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Companyprofile"
+      EntityAttrName="Companyprofile"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="COMPANYPROFILE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SCountry"
+      EntityAttrName="SCountry"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="S_COUNTRY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IfrsSegment"
+      EntityAttrName="IfrsSegment"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="IFRS_SEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="MngSegment"
+      EntityAttrName="MngSegment"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="MNG_SEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IfrsOd"
+      EntityAttrName="IfrsOd"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="IFRS_OD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IfrsDo"
+      EntityAttrName="IfrsDo"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="IFRS_DO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Katps"
+      EntityAttrName="Katps"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="KATPS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CAktivni"
+      EntityAttrName="CAktivni"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="C_AKTIVNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Cmethod"
+      EntityAttrName="Cmethod"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="CMETHOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Amethod"
+      EntityAttrName="Amethod"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="AMETHOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Accnted"
+      EntityAttrName="Accnted"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="ACCNTED"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Deg"
+      EntityAttrName="Deg"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="DEG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Dag"
+      EntityAttrName="Dag"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="DAG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Cg"
+      EntityAttrName="Cg"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="CG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdZodpovednaucetni"
+      EntityAttrName="IdZodpovednaucetni"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="ID_ZODPOVEDNAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSpravcekonsolidace"
+      EntityAttrName="IdSpravcekonsolidace"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="ID_SPRAVCEKONSOLIDACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdpovednaosoba"
+      EntityAttrName="IdOdpovednaosoba"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="ID_ODPOVEDNAOSOBA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtIn1Rkc"
+      EntityAttrName="DtIn1Rkc"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="DT_IN1_RKC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtOut1Rkc"
+      EntityAttrName="DtOut1Rkc"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="DT_OUT1_RKC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtIn2Jtfg"
+      EntityAttrName="DtIn2Jtfg"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="DT_IN2_JTFG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtOut2Jtfg"
+      EntityAttrName="DtOut2Jtfg"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="DT_OUT2_JTFG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtIn2Techno"
+      EntityAttrName="DtIn2Techno"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="DT_IN2_TECHNO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtOut2Techno"
+      EntityAttrName="DtOut2Techno"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="DT_OUT2_TECHNO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtIn4Mng"
+      EntityAttrName="DtIn4Mng"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="DT_IN4_MNG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtOut4Mng"
+      EntityAttrName="DtOut4Mng"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="DT_OUT4_MNG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Cmethod1"
+      EntityAttrName="Cmethod1"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="CMETHOD_1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Cmethod2j"
+      EntityAttrName="Cmethod2j"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="CMETHOD_2J"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Cmethod2t"
+      EntityAttrName="Cmethod2t"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="CMETHOD_2T"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Cmethod4"
+      EntityAttrName="Cmethod4"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="CMETHOD_4"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnostmatka"
+      EntityAttrName="IdKtgucetnispolecnostmatka"
+      EntityUsage="VwRepSpolecnostcartesis"
+      AliasName="ID_KTGUCETNISPOLECNOSTMATKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

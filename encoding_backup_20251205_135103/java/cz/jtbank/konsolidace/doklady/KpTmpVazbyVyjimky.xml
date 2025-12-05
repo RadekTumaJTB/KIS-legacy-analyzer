@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpTmpVazbyVyjimky"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_TMP_VAZBY_VYJIMKY"
+   AliasName="KpTmpVazbyVyjimky"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.KpTmpVazbyVyjimkyImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_TMP_VAZBY_VYJIMKY"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgappuser"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGAPPUSER"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_TMP_VAZBY_VYJIMKY"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpKtgUcetnispolecnost"
+      Association="cz.jtbank.konsolidace.doklady.FkKptmpvazbyvyjimkyUcspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKptmpvazbyvyjimkyUcspolAssoc.KpKtgUcetnispolecnost"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKptmpvazbyvyjimkyUcspolAssoc.KpTmpVazbyVyjimky"
+      Type="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKptmpvazbyvyjimkyUser" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpTmpVazbyVyjimky.IdKtgappuser" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPTMPVAZBYVYJIMKY_USER" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGAPPUSER&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKptmpvazbyvyjimkyUcspol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpTmpVazbyVyjimky.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPTMPVAZBYVYJIMKY_UCSPOL" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGUCETNISPOLECNOST&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKptmpvazbyvyjimky" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpTmpVazbyVyjimky.IdKtgucetnispolecnost" />
+         <Item Value="cz.jtbank.konsolidace.doklady.KpTmpVazbyVyjimky.IdKtgappuser" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPTMPVAZBYVYJIMKY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKptmpvazbyvyjimkyUser" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpTmpVazbyVyjimky.IdKtgappuser" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPTMPVAZBYVYJIMKY_USER" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKptmpvazbyvyjimkyUcspol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpTmpVazbyVyjimky.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPTMPVAZBYVYJIMKY_UCSPOL" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

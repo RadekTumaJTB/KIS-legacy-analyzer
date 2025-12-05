@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="ViewExcelDetailCZB"
+   SelectList="VwHkExcelDetail.ID_INTERNI, 
+       VwHkExcelDetail.TEXTRADEK, 
+
+       VwHkExcelDetail.UCET, 
+       VwHkExcelDetail.S_MENA, 
+
+       VwHkExcelDetail.ND_CASTKALOCAL, 
+       VwHkExcelDetail.ND_CASTKAMENA, 
+
+       VwHkExcelDetail.ID_EXTSYSTEM, 
+       VwHkExcelDetail.S_POPIS, 
+
+       VwHkExcelDetail.ID_DOKLAD, 
+       VwHkExcelDetail.S_EXTPROTISTRANA, 
+
+       VwHkExcelDetail.DATUM, 
+       VwHkExcelDetail.S_EXTPROTISTRANA_EO, 
+
+       VwHkExcelDetail.S_EXTPROTISTRANA_BANKA, 
+       VwHkExcelDetail.S_EXTPROTISTRANA_EMITENT, 
+
+       VwHkExcelDetail.S_EXTPROTISTRANAICO, 
+       VwHkExcelDetail.S_EXTPROTISTRANAICO_EO, 
+
+       VwHkExcelDetail.S_EXTPROTISTRANAICO_BANKA, 
+       VwHkExcelDetail.S_EXTPROTISTRANAICO_EMITENT, 
+
+       VwHkExcelDetail.C_MENOVAPOZICE, 
+       VwHkExcelDetail.C_UVEROVAPOZICE, 
+
+       VwHkExcelDetail.TESTICO, 
+       VwHkExcelDetail.S_EVIDOVATPROTISTRANU, 
+
+       VwHkExcelDetail.ID, 
+       VwHkExcelDetail.POCATECNISTAV, 
+
+       VwHkExcelDetail.S_UCET, 
+       VwHkExcelDetail.S_LOCALE, 
+
+       VwHkExcelDetail.ID_KTGPROJEKT, 
+       VwHkExcelDetail.ID_KTGODBOR"
+   FromList="DB_JT.VW_KP_DOKLADDETAIL VwHkExcelDetail"
+   Where="(( id_interni is null ) or ( s_extprotistrana is not null ))"
+   OrderBy="sign( nvl(id_interni,0)), id_interni desc"
+   BindingStyle="JDBC"
+   CustomQuery="false"
+   RowClass="cz.jtbank.konsolidace.doklady.ViewExcelDetailCZBRowImpl"
+   ComponentClass="cz.jtbank.konsolidace.doklady.ViewExcelDetailCZBImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   RowInterface="cz.jtbank.konsolidace.doklady.common.ViewExcelDetailCZBRow"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwHkExcelDetail"
+      Entity="cz.jtbank.konsolidace.doklady.VwHkExcelDetail" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="(( id_interni is null ) or ( s_extprotistrana is not null ))" />
+         <Attr Name="_queryOrderBy" Value="sign( nvl(id_interni,0)), id_interni desc" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdInterni"
+      EntityAttrName="IdInterni"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="ID_INTERNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Textradek"
+      EntityAttrName="Textradek"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="TEXTRADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucet"
+      EntityAttrName="Ucet"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdExtsystem"
+      IsNotNull="true"
+      EntityAttrName="IdExtsystem"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="ID_EXTSYSTEM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SExtprotistrana"
+      EntityAttrName="SExtprotistrana"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_EXTPROTISTRANA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datum"
+      EntityAttrName="Datum"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SExtprotistranaEo"
+      EntityAttrName="SExtprotistranaEo"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_EXTPROTISTRANA_EO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SExtprotistranaBanka"
+      EntityAttrName="SExtprotistranaBanka"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_EXTPROTISTRANA_BANKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SExtprotistranaEmitent"
+      EntityAttrName="SExtprotistranaEmitent"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_EXTPROTISTRANA_EMITENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SExtprotistranaico"
+      EntityAttrName="SExtprotistranaico"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_EXTPROTISTRANAICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SExtprotistranaicoEo"
+      EntityAttrName="SExtprotistranaicoEo"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_EXTPROTISTRANAICO_EO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SExtprotistranaicoBanka"
+      EntityAttrName="SExtprotistranaicoBanka"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_EXTPROTISTRANAICO_BANKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SExtprotistranaicoEmitent"
+      EntityAttrName="SExtprotistranaicoEmitent"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_EXTPROTISTRANAICO_EMITENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CMenovapozice"
+      EntityAttrName="CMenovapozice"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="C_MENOVAPOZICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CUverovapozice"
+      EntityAttrName="CUverovapozice"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="C_UVEROVAPOZICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Testico"
+      EntityAttrName="Testico"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="TESTICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SEvidovatprotistranu"
+      EntityAttrName="SEvidovatprotistranu"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_EVIDOVATPROTISTRANU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pocatecnistav"
+      EntityAttrName="Pocatecnistav"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="POCATECNISTAV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SLocale"
+      IsNotNull="true"
+      EntityAttrName="SLocale"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="S_LOCALE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="VwHkExcelDetail"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

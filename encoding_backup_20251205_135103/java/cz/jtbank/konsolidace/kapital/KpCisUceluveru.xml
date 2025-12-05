@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisUceluveru"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_UCELUVERU"
+   AliasName="KpCisUceluveru"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.kapital.KpCisUceluveruImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_UCELUVERU"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SExtid"
+      IsUnique="true"
+      IsNotNull="true"
+      Precision="2"
+      Type="java.lang.String"
+      ColumnName="S_EXTID"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_UCELUVERU" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="2" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CKomercni"
+      IsNotNull="true"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_KOMERCNI"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_UCELUVERU"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="CnKpcisuceluveruKomercni" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisUceluveru.CKomercni" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPCISUCELUVERU_KOMERCNI" />
+         <Attr Name="_checkCondition" Value=" c_komercni in (&#39;0&#39;,&#39;1&#39;) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpcisuceluveruExtid" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisUceluveru.SExtid" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISUCELUVERU_EXTID" />
+         <Attr Name="_checkCondition" Value="&#34;S_EXTID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpcisuceluveruId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisUceluveru.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISUCELUVERU_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpcisuceluveruKomercni" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisUceluveru.CKomercni" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISUCELUVERU_KOMERCNI" />
+         <Attr Name="_checkCondition" Value="&#34;C_KOMERCNI&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpcisuceluveru" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisUceluveru.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPCISUCELUVERU" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="UnKpcisuceluveruExtid" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisUceluveru.SExtid" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="UN_KPCISUCELUVERU_EXTID" />
+         <Attr Name="_isUnique" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

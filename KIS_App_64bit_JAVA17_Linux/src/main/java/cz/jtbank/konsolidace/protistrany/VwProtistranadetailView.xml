@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwProtistranadetailView"
+   SelectList="VwProtistranadetail.S_NAZEV, 
+       VwProtistranadetail.S_ICO, 
+
+       VwProtistranadetail.ID, 
+       VwProtistranadetail.ID_SPOLECNOST, 
+
+       VwProtistranadetail.S_DBLINK, 
+       VwProtistranadetail.DETAILPROTISTRANA, 
+
+       VwProtistranadetail.DT_ZMENA, 
+       VwProtistranadetail.S_NUMBER0, 
+
+       VwProtistranadetail.FIRMA_ID, 
+       VwProtistranadetail.EO_ID, 
+
+       VwProtistranadetail.BANKA_ID, 
+       VwProtistranadetail.KID, 
+
+       VwProtistranadetail.DOID, 
+       VwProtistranadetail.PLATINST, 
+
+       VwProtistranadetail.ROWID, 
+       VwProtistranadetail.DATUMZALOZENI, 
+
+       VwProtistranadetail.ULICE, 
+       VwProtistranadetail.PSC, 
+
+       VwProtistranadetail.MESTO, 
+       VwProtistranadetail.STAT, 
+
+       VwProtistranadetail.DIC, 
+       VwProtistranadetail.UCETSCP, 
+
+       VwProtistranadetail.REGRMS, 
+       VwProtistranadetail.EKONOM_SEKTOR, 
+
+       VwProtistranadetail.TYPOSOBY"
+   FromList="DB_JT.VW_PROTISTRANADETAIL VwProtistranadetail"
+   OrderBy="VwProtistranadetail.S_NAZEV"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.protistrany.VwProtistranadetailViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.protistrany.common.VwProtistranadetailViewRowImplMsgBundle"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwProtistranadetail"
+      Entity="cz.jtbank.konsolidace.protistrany.VwProtistranadetail" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="VwProtistranadetail.S_NAZEV" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwProtistranadetail"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      EntityAttrName="SIco"
+      EntityUsage="VwProtistranadetail"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwProtistranadetail"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSpolecnost"
+      EntityAttrName="IdSpolecnost"
+      EntityUsage="VwProtistranadetail"
+      AliasName="ID_SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SDblink"
+      IsNotNull="true"
+      EntityAttrName="SDblink"
+      EntityUsage="VwProtistranadetail"
+      AliasName="S_DBLINK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Detailprotistrana"
+      EntityAttrName="Detailprotistrana"
+      EntityUsage="VwProtistranadetail"
+      AliasName="DETAILPROTISTRANA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZmena"
+      EntityAttrName="DtZmena"
+      EntityUsage="VwProtistranadetail"
+      AliasName="DT_ZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNumber0"
+      EntityAttrName="SNumber0"
+      EntityUsage="VwProtistranadetail"
+      AliasName="S_NUMBER0"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="FirmaId"
+      EntityAttrName="FirmaId"
+      EntityUsage="VwProtistranadetail"
+      AliasName="FIRMA_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="EoId"
+      EntityAttrName="EoId"
+      EntityUsage="VwProtistranadetail"
+      AliasName="EO_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="BankaId"
+      EntityAttrName="BankaId"
+      EntityUsage="VwProtistranadetail"
+      AliasName="BANKA_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Kid"
+      EntityAttrName="Kid"
+      EntityUsage="VwProtistranadetail"
+      AliasName="KID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Doid"
+      EntityAttrName="Doid"
+      EntityUsage="VwProtistranadetail"
+      AliasName="DOID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Platinst"
+      EntityAttrName="Platinst"
+      EntityUsage="VwProtistranadetail"
+      AliasName="PLATINST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="VwProtistranadetail"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datumzalozeni"
+      EntityAttrName="Datumzalozeni"
+      EntityUsage="VwProtistranadetail"
+      AliasName="DATUMZALOZENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ulice"
+      EntityAttrName="Ulice"
+      EntityUsage="VwProtistranadetail"
+      AliasName="ULICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Psc"
+      EntityAttrName="Psc"
+      EntityUsage="VwProtistranadetail"
+      AliasName="PSC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mesto"
+      EntityAttrName="Mesto"
+      EntityUsage="VwProtistranadetail"
+      AliasName="MESTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Stat"
+      EntityAttrName="Stat"
+      EntityUsage="VwProtistranadetail"
+      AliasName="STAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Dic"
+      EntityAttrName="Dic"
+      EntityUsage="VwProtistranadetail"
+      AliasName="DIC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucetscp"
+      EntityAttrName="Ucetscp"
+      EntityUsage="VwProtistranadetail"
+      AliasName="UCETSCP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Regrms"
+      EntityAttrName="Regrms"
+      EntityUsage="VwProtistranadetail"
+      AliasName="REGRMS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="EkonomSektor"
+      EntityAttrName="EkonomSektor"
+      EntityUsage="VwProtistranadetail"
+      AliasName="EKONOM_SEKTOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typosoby"
+      EntityAttrName="Typosoby"
+      EntityUsage="VwProtistranadetail"
+      AliasName="TYPOSOBY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

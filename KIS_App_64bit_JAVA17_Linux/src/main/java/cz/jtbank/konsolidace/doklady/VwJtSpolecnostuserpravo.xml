@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwJtSpolecnostuserpravo"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO"
+   AliasName="VwJtSpolecnostuserpravo"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.VwJtSpolecnostuserpravoImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazev"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SSouborpredpona"
+      IsNotNull="true"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_SOUBORPREDPONA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISSUBJECT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Lastclosedate"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="LASTCLOSEDATE"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CAutomatickegenerovani"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_AUTOMATICKEGENEROVANI"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CRkc"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_RKC"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SpinId"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="SPIN_ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="TopasId"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="TOPAS_ID"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="QuestId"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="QUEST_ID"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SDblink"
+      IsNotNull="true"
+      Precision="32"
+      Type="java.lang.String"
+      ColumnName="S_DBLINK"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="32" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SZkratka"
+      Precision="35"
+      Type="java.lang.String"
+      ColumnName="S_ZKRATKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="35" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKategorie"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KATEGORIE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgcisspolecnostpravo"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGCISSPOLECNOSTPRAVO"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUserid"
+      IsNotNull="true"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_USERID"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="RowID"
+      IsUpdateable="false"
+      Type="oracle.jbo.domain.RowID"
+      ColumnName="ROWID"
+      ColumnType="ROWID"
+      SQLType="VARCHAR"
+      PrimaryKey="true" >
+   </Attribute>
+   <Attribute
+      Name="IdKtgprojekt"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGPROJEKT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgodbor"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGODBOR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="COnline"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_ONLINE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="StdUostart"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="STD_UOSTART"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="StdUokonec"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="STD_UOKONEC"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdMngsegment"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_MNGSEGMENT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCiskatspol"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISKATSPOL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Zodpovednaucetni"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="ZODPOVEDNAUCETNI"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Odpovednaosoba"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="ODPOVEDNAOSOBA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Administrator"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="ADMINISTRATOR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Topmng"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="TOPMNG"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Mngsegmentboss"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="MNGSEGMENTBOSS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CPocitejmupozici"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_POCITEJMUPOZICI"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+</Entity>

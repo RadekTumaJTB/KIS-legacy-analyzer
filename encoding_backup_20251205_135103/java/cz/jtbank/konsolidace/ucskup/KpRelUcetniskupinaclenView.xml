@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelUcetniskupinaclenView"
+   SelectList="KpRelUcetniskupinaclen.ID_KTGUCETNISKUPINA, 
+       KpRelUcetniskupinaclen.ID_KTGUCETNISPOLECNOST"
+   FromList="DB_JT.KP_REL_UCETNISKUPINACLEN KpRelUcetniskupinaclen"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.KpRelUcetniskupinaclenViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelUcetniskupinaclen"
+      Entity="cz.jtbank.konsolidace.ucskup.KpRelUcetniskupinaclen" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgucetniskupina"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetniskupina"
+      EntityUsage="KpRelUcetniskupinaclen"
+      AliasName="ID_KTGUCETNISKUPINA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpRelUcetniskupinaclen"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

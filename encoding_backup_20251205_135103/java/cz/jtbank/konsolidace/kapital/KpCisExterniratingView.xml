@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisExterniratingView"
+   SelectList="KpCisExternirating.ID, 
+       KpCisExternirating.S_POPIS, 
+       KpCisExternirating.KATEGORIEKOEF"
+   FromList="DB_JT.KP_CIS_EXTERNIRATING KpCisExternirating"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KpCisExterniratingViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisExternirating"
+      Entity="cz.jtbank.konsolidace.kapital.KpCisExternirating" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisExternirating"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      IsNotNull="true"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisExternirating"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Kategoriekoef"
+      IsNotNull="true"
+      EntityAttrName="Kategoriekoef"
+      EntityUsage="KpCisExternirating"
+      AliasName="KATEGORIEKOEF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

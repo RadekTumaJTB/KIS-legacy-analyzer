@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwRelGestortransakce"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_REL_GESTORTRANSAKCE"
+   AliasName="VwRelGestortransakce"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.dokument.VwRelGestortransakceImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REL_GESTORTRANSAKCE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdMng"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_MNG"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REL_GESTORTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopisMng"
+      IsNotNull="true"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_POPIS_MNG"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REL_GESTORTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTran"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TRAN"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REL_GESTORTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SKodTran"
+      Precision="15"
+      Type="java.lang.String"
+      ColumnName="S_KOD_TRAN"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REL_GESTORTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="15" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SKomentTran"
+      Precision="2000"
+      Type="java.lang.String"
+      ColumnName="S_KOMENT_TRAN"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REL_GESTORTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="2000" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdUsr"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_USR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REL_GESTORTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNameUsr"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnName="S_NAME_USR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REL_GESTORTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwrelgestortransakcePrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.VwRelGestortransakce.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWRELGESTORTRANSAKCE_PRIMARY_K" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

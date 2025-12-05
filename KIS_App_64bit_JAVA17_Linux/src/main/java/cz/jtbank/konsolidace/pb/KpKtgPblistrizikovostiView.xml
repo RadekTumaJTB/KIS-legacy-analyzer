@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpKtgPblistrizikovostiView"
+   SelectList="KpKtgPblistrizikovosti.ID, 
+       KpKtgPblistrizikovosti.ID_ADMINSPOLECNOST, 
+
+       KpKtgPblistrizikovosti.DT_DATUM, 
+       KpKtgPblistrizikovosti.S_STANOVISKOSPRAVCE, 
+
+       KpKtgPblistrizikovosti.NL_NAVRHKATEGORIE, 
+       KpKtgPblistrizikovosti.DT_NAVRHKATEGORIE, 
+
+       KpKtgPblistrizikovosti.S_STANOVISKORO, 
+       KpKtgPblistrizikovosti.S_STANOVISKOTOP, 
+
+       KpKtgPblistrizikovosti.NL_KATEGORIE, 
+       KpKtgPblistrizikovosti.DT_KATEGORIE"
+   FromList="DB_JT.KP_KTG_PBLISTRIZIKOVOSTI KpKtgPblistrizikovosti"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.pb.KpKtgPblistrizikovostiViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpKtgPblistrizikovosti"
+      Entity="cz.jtbank.konsolidace.pb.KpKtgPblistrizikovosti" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgPblistrizikovosti"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdminspolecnost"
+      EntityAttrName="IdAdminspolecnost"
+      EntityUsage="KpKtgPblistrizikovosti"
+      AliasName="ID_ADMINSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpKtgPblistrizikovosti"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SStanoviskospravce"
+      EntityAttrName="SStanoviskospravce"
+      EntityUsage="KpKtgPblistrizikovosti"
+      AliasName="S_STANOVISKOSPRAVCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlNavrhkategorie"
+      EntityAttrName="NlNavrhkategorie"
+      EntityUsage="KpKtgPblistrizikovosti"
+      AliasName="NL_NAVRHKATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtNavrhkategorie"
+      EntityAttrName="DtNavrhkategorie"
+      EntityUsage="KpKtgPblistrizikovosti"
+      AliasName="DT_NAVRHKATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SStanoviskoro"
+      EntityAttrName="SStanoviskoro"
+      EntityUsage="KpKtgPblistrizikovosti"
+      AliasName="S_STANOVISKORO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SStanoviskotop"
+      EntityAttrName="SStanoviskotop"
+      EntityUsage="KpKtgPblistrizikovosti"
+      AliasName="S_STANOVISKOTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlKategorie"
+      EntityAttrName="NlKategorie"
+      EntityUsage="KpKtgPblistrizikovosti"
+      AliasName="NL_KATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtKategorie"
+      EntityAttrName="DtKategorie"
+      EntityUsage="KpKtgPblistrizikovosti"
+      AliasName="DT_KATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

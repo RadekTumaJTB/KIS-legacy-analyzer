@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpRelAppuserSpolecnostpravo"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_REL_APPUSER_SPOLECNOSTPRAVO"
+   AliasName="KpRelAppuserSpolecnostpravo"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.users.KpRelAppuserSpolecnostpravoImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdKtgcisspolecnostpravo"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGCISSPOLECNOSTPRAVO"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_APPUSER_SPOLECNOSTPRAVO"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUserid"
+      IsNotNull="true"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_USERID"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_REL_APPUSER_SPOLECNOSTPRAVO"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_APPUSER_SPOLECNOSTPRAVO"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="NnReluserspolpravo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.users.KpRelAppuserSpolecnostpravo.SUserid" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_RELUSERSPOLPRAVO" />
+         <Attr Name="_checkCondition" Value="&#34;S_USERID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkRelappuserspolecnostpravo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.users.KpRelAppuserSpolecnostpravo.SUserid" />
+         <Item Value="cz.jtbank.konsolidace.users.KpRelAppuserSpolecnostpravo.IdKtgucetnispolecnost" />
+         <Item Value="cz.jtbank.konsolidace.users.KpRelAppuserSpolecnostpravo.IdKtgcisspolecnostpravo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_RELAPPUSERSPOLECNOSTPRAVO" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnReluserspolpravospol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.users.KpRelAppuserSpolecnostpravo.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_RELUSERSPOLPRAVOSPOL" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGUCETNISPOLECNOST&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnRelspolpravo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.users.KpRelAppuserSpolecnostpravo.IdKtgcisspolecnostpravo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_RELSPOLPRAVO" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGCISSPOLECNOSTPRAVO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkReluserspolpravospol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.users.KpRelAppuserSpolecnostpravo.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_RELUSERSPOLPRAVOSPOL" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

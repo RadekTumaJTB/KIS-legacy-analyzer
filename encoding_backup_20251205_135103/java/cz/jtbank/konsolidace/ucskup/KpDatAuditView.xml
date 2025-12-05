@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatAuditView"
+   SelectList="KpDatAudit.ID_KTGUCETNISPOLECNOST, 
+       KpDatAudit.DT_DATUM, 
+
+       KpDatAudit.C_POVINNOST, 
+       KpDatAudit.S_AUDITOR, 
+
+       KpDatAudit.ND_CENASTAT, 
+       KpDatAudit.S_MENASTAT, 
+
+       KpDatAudit.S_AUDITBALIK, 
+       KpDatAudit.ND_CENABALIK, 
+
+       KpDatAudit.S_MENABALIK, 
+       KpDatAudit.ND_CENASTATBALIK, 
+
+       KpDatAudit.S_MENASTATBALIK, 
+       KpDatAudit.DT_TERMINPRIZNANI, 
+
+       KpDatAudit.C_PODANOPRIZNANI"
+   FromList="DB_JT.KP_DAT_AUDIT KpDatAudit"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.KpDatAuditViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatAudit"
+      Entity="cz.jtbank.konsolidace.ucskup.KpDatAudit" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDatAudit"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatAudit"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPovinnost"
+      EntityAttrName="CPovinnost"
+      EntityUsage="KpDatAudit"
+      AliasName="C_POVINNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SAuditor"
+      EntityAttrName="SAuditor"
+      EntityUsage="KpDatAudit"
+      AliasName="S_AUDITOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCenastat"
+      EntityAttrName="NdCenastat"
+      EntityUsage="KpDatAudit"
+      AliasName="ND_CENASTAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenastat"
+      EntityAttrName="SMenastat"
+      EntityUsage="KpDatAudit"
+      AliasName="S_MENASTAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SAuditbalik"
+      EntityAttrName="SAuditbalik"
+      EntityUsage="KpDatAudit"
+      AliasName="S_AUDITBALIK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCenabalik"
+      EntityAttrName="NdCenabalik"
+      EntityUsage="KpDatAudit"
+      AliasName="ND_CENABALIK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenabalik"
+      EntityAttrName="SMenabalik"
+      EntityUsage="KpDatAudit"
+      AliasName="S_MENABALIK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCenastatbalik"
+      EntityAttrName="NdCenastatbalik"
+      EntityUsage="KpDatAudit"
+      AliasName="ND_CENASTATBALIK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenastatbalik"
+      EntityAttrName="SMenastatbalik"
+      EntityUsage="KpDatAudit"
+      AliasName="S_MENASTATBALIK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtTerminpriznani"
+      EntityAttrName="DtTerminpriznani"
+      EntityUsage="KpDatAudit"
+      AliasName="DT_TERMINPRIZNANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPodanopriznani"
+      EntityAttrName="CPodanopriznani"
+      EntityUsage="KpDatAudit"
+      AliasName="C_PODANOPRIZNANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

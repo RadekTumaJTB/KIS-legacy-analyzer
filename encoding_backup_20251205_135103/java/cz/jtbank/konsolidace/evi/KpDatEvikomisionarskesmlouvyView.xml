@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatEvikomisionarskesmlouvyView"
+   SelectList="KpDatEvikomisionarskesmlouvy.ID, 
+       KpDatEvikomisionarskesmlouvy.DT_PLATNOSTOD, 
+
+       KpDatEvikomisionarskesmlouvy.DT_PLATNOSTDO, 
+       KpDatEvikomisionarskesmlouvy.S_POZNAMKA, 
+
+       KpDatEvikomisionarskesmlouvy.ID_ADMINSPOLECNOST, 
+   
+    KpDatEvikomisionarskesmlouvy.C_NAVRH"
+   FromList="DB_JT.KP_DAT_EVIKOMISIONARSKESMLOUVY KpDatEvikomisionarskesmlouvy"
+   OrderBy="KpDatEvikomisionarskesmlouvy.DT_PLATNOSTOD DESC,KpDatEvikomisionarskesmlouvy.DT_PLATNOSTDO"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.evi.KpDatEvikomisionarskesmlouvyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatEvikomisionarskesmlouvy"
+      Entity="cz.jtbank.konsolidace.evi.KpDatEvikomisionarskesmlouvy" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="KpDatEvikomisionarskesmlouvy.DT_PLATNOSTOD DESC,KpDatEvikomisionarskesmlouvy.DT_PLATNOSTDO" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatEvikomisionarskesmlouvy"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDatEvikomisionarskesmlouvy"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDatEvikomisionarskesmlouvy"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="KpDatEvikomisionarskesmlouvy"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdminspolecnost"
+      EntityAttrName="IdAdminspolecnost"
+      EntityUsage="KpDatEvikomisionarskesmlouvy"
+      AliasName="ID_ADMINSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CNavrh"
+      EntityAttrName="CNavrh"
+      EntityUsage="KpDatEvikomisionarskesmlouvy"
+      AliasName="C_NAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

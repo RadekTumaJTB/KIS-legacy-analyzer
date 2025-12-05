@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatSegmentzastupView"
+   SelectList="KpDatSegmentzastup.ID, 
+       KpDatSegmentzastup.ID_KOHO, 
+ 
+      KpDatSegmentzastup.ID_KDO, 
+       KpDatSegmentzastup.DT_PLATNOSTOD, 
+
+       KpDatSegmentzastup.DT_PLATNOSTDO, 
+       KpDatSegmentzastup.NL_TYP, 
+
+       KpCisSegmentzastuptyp.S_POPIS, 
+       KpCisSegmentzastuptyp.ID 
+AS ID1, 
+       KpDatSegmentzastup.C_FWDEMAIL"
+   FromList="DB_JT.KP_DAT_SEGMENTZASTUP KpDatSegmentzastup, DB_JT.KP_CIS_SEGMENTZASTUPTYP KpCisSegmentzastuptyp"
+   Where="KpDatSegmentzastup.NL_TYP = KpCisSegmentzastuptyp.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ifrs.KpDatSegmentzastupViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatSegmentzastup"
+      Entity="cz.jtbank.konsolidace.ifrs.KpDatSegmentzastup" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpDatSegmentzastup.NL_TYP = KpCisSegmentzastuptyp.ID" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpCisSegmentzastuptyp"
+      Entity="cz.jtbank.konsolidace.ifrs.KpCisSegmentzastuptyp"
+      SourceUsage="cz.jtbank.konsolidace.ifrs.KpDatSegmentzastupView.KpDatSegmentzastup"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.ifrs.KpDatSegmentzastup.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.ifrs.KpCisSegmentzastuptyp.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatSegmentzastup"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKoho"
+      EntityAttrName="IdKoho"
+      EntityUsage="KpDatSegmentzastup"
+      AliasName="ID_KOHO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKdo"
+      EntityAttrName="IdKdo"
+      EntityUsage="KpDatSegmentzastup"
+      AliasName="ID_KDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDatSegmentzastup"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDatSegmentzastup"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlTyp"
+      EntityAttrName="NlTyp"
+      EntityUsage="KpDatSegmentzastup"
+      AliasName="NL_TYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisSegmentzastuptyp"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id1"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisSegmentzastuptyp"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CFwdemail"
+      EntityAttrName="CFwdemail"
+      EntityUsage="KpDatSegmentzastup"
+      AliasName="C_FWDEMAIL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

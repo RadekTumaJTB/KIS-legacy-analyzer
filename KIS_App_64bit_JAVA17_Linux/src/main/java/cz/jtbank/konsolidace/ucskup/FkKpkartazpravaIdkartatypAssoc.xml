@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+
+<Association
+   Name="FkKpkartazpravaIdkartatypAssoc" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+   </DesignTime>
+   <AssociationEnd
+      Name="KpDatKartatyp"
+      Cardinality="1"
+      Source="true"
+      Owner="cz.jtbank.konsolidace.ucskup.KpDatKartatyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ucskup.KpDatKartatyp.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_minCardinality" Value="1" />
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="KpDatKartatyp" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.ucskup.KpDatKartatyp.PkKpkartatyp" />
+      </DesignTime>
+   </AssociationEnd>
+   <AssociationEnd
+      Name="KpDatKartaspolzprava"
+      Cardinality="-1"
+      Owner="cz.jtbank.konsolidace.ucskup.KpDatKartaspolzprava" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ucskup.KpDatKartaspolzprava.IdKartatyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="KpDatKartaspolzprava" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.ucskup.KpDatKartaspolzprava.FkKpkartazpravaIdkartatyp" />
+      </DesignTime>
+   </AssociationEnd>
+</Association>

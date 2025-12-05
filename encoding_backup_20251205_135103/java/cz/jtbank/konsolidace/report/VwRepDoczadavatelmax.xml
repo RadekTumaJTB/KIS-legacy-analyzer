@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwRepDoczadavatelmax"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_REP_DOCZADAVATELMAX"
+   AliasName="VwRepDoczadavatelmax"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.report.VwRepDoczadavatelmaxImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Mesic"
+      Precision="7"
+      Type="java.lang.String"
+      ColumnName="MESIC"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_DOCZADAVATELMAX"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Zadavatel"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="ZADAVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_DOCZADAVATELMAX"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pocet"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="POCET"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REP_DOCZADAVATELMAX" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwrepdoczadavatelmaxPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.report.VwRepDoczadavatelmax.Mesic" />
+         <Item Value="cz.jtbank.konsolidace.report.VwRepDoczadavatelmax.Zadavatel" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWREPDOCZADAVATELMAX_PRIMARY_K" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

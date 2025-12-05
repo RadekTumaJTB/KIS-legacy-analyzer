@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpKtgSubkonsolpravidlodetail"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL"
+   AliasName="KpKtgSubkonsolpravidlodetail"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetailImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgsubkonsolidacepravidlo"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGSUBKONSOLIDACEPRAVIDLO"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdPoradi"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_PORADI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdPoradipodminka"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_PORADIPODMINKA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCisifrspravdetailtyp"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISIFRSPRAVDETAILTYP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPoznamka"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_POZNAMKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlRadek"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_RADEK"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlPoradilist"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_PORADILIST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastka"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SVzorec"
+      Precision="256"
+      Type="java.lang.String"
+      ColumnName="S_VZOREC"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="256" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcetzbytek"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_UCETZBYTEK"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPodminka"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_PODMINKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtZmena"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_ZMENA"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_UZIVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgsubkonsolidace"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGSUBKONSOLIDACE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdProtistrana"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_PROTISTRANA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_SUBKONSOLPRAVIDLODETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpKtgSubkonsolidacepravidlo"
+      Association="cz.jtbank.konsolidace.subkons.FkKpsubkonpravdetailPravidloAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.subkons.FkKpsubkonpravdetailPravidloAssoc.KpKtgSubkonsolidacepravidlo"
+      AssociationOtherEnd="cz.jtbank.konsolidace.subkons.FkKpsubkonpravdetailPravidloAssoc.KpKtgSubkonsolpravidlodetail"
+      Type="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidacepravidloImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpsubkonpravdetailTyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.IdCisifrspravdetailtyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBKONPRAVDETAIL_TYP" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISIFRSPRAVDETAILTYP&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpsubkonpravdetailList" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.NlPoradilist" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPSUBKONPRAVDETAIL_LIST" />
+         <Attr Name="_checkCondition" Value=" nl_poradiList is not null and nl_poradiList in ( -1, 1, 2, 5 )" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpsubkonpravdetailPravidlo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.IdKtgsubkonsolidacepravidlo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBKONPRAVDETAIL_PRAVIDLO" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGSUBKONSOLIDACEPRAVIDLO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpsubkonpravdetailVzorec" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.NdCastka" />
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.SVzorec" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPSUBKONPRAVDETAIL_VZOREC" />
+         <Attr Name="_checkCondition" Value="    ( nd_castka is null and s_vzorec is not null ) or    ( nd_castka is not null and s_vzorec is null )   " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpsubkonpravdetail" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPSUBKONPRAVDETAIL" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpskonpravdetailPoradipod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.IdPoradipodminka" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSKONPRAVDETAIL_PORADIPOD" />
+         <Attr Name="_checkCondition" Value="&#34;ID_PORADIPODMINKA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpsubkonpravdetailRadek" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.NlRadek" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBKONPRAVDETAIL_RADEK" />
+         <Attr Name="_checkCondition" Value="&#34;NL_RADEK&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpsubkonpravdetailId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBKONPRAVDETAIL_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpsubkonpravdetailUzivatel" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.SUzivatel" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBKONPRAVDETAIL_UZIVATEL" />
+         <Attr Name="_checkCondition" Value="&#34;S_UZIVATEL&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpsubkonpravdetailPoradi" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.IdPoradi" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBKONPRAVDETAIL_PORADI" />
+         <Attr Name="_checkCondition" Value="&#34;ID_PORADI&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpsubkonpravdetailSubk" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.IdKtgsubkonsolidace" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPSUBKONPRAVDETAIL_SUBK" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpsubkonpravdetailSpol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPSUBKONPRAVDETAIL_SPOL" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpsubkonpravdetailTyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.IdCisifrspravdetailtyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPSUBKONPRAVDETAIL_TYP" />
+         <Attr Name="_referencedKey" Value="PK_KPIFRSTYPPRAVD" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKtgsubpravidlodetailPs" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.IdProtistrana" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KTGSUBPRAVIDLODETAIL_PS" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpsubkonpravdetailPravidlo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail.IdKtgsubkonsolidacepravidlo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPSUBKONPRAVDETAIL_PRAVIDLO" />
+         <Attr Name="_referencedKey" Value="PK_KPSUBKONPRAVIDLO" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

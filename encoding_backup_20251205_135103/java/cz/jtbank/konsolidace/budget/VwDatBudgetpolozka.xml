@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwDatBudgetpolozka"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_DAT_BUDGETPOLOZKA"
+   AliasName="VwDatBudgetpolozka"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkaImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdBudget"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_BUDGET"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCistyptran"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISTYPTRAN"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastka"
+      Precision="17"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdOdboroo"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_ODBOROO"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Odboroo"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="ODBOROO"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdUcspoloo"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_UCSPOLOO"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Ucspoloo"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="UCSPOLOO"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdUcspoltop"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_UCSPOLTOP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Ucspoltop"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="UCSPOLTOP"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdGestor"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_GESTOR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Gestor"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="GESTOR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtSchvalenoodbor"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_SCHVALENOODBOR"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtSchvalenogestor"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_SCHVALENOGESTOR"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtSchvalenoucspol"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_SCHVALENOUCSPOL"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtSchvalenotop"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_SCHVALENOTOP"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPoznamka"
+      Precision="250"
+      Type="java.lang.String"
+      ColumnName="S_POZNAMKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="250" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Budget"
+      Precision="212"
+      Type="java.lang.String"
+      ColumnName="BUDGET"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="212" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Typtran"
+      Precision="68"
+      Type="java.lang.String"
+      ColumnName="TYPTRAN"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="68" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Historie"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="HISTORIE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtSchvalitdo"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_SCHVALITDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdOdboroosch"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_ODBOROOSCH"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Odboroosch"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="ODBOROOSCH"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdUcspoloosch"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_UCSPOLOOSCH"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Ucspoloosch"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="UCSPOLOOSCH"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdUcspoltopsch"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_UCSPOLTOPSCH"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Ucspoltopsch"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="UCSPOLTOPSCH"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdGestorsch"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_GESTORSCH"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Gestorsch"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="GESTORSCH"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKA" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwdatbudgetpolozkaPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.VwDatBudgetpolozka.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWDATBUDGETPOLOZKA_PRIMARY_KEY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

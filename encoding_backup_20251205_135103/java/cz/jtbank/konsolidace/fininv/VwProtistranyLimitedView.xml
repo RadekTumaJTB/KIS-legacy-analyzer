@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwProtistranyLimitedView"
+   SelectList="VwProtistrana.ID, 
+       VwProtistrana.S_NAZEV, 
+       VwProtistrana.S_ICO, 
+
+       VwProtistrana.S_COUNTRY, 
+       VwProtistrana.C_INDICATOR_PC, 
+
+       VwProtistrana.S_EKONOM_SEKTOR, 
+       VwProtistrana.LISTGROUP, 
+
+       VwProtistrana.KATEGORIEKOEF, 
+       VwProtistrana.ROWID"
+   FromList="DB_JT.VW_PROTISTRANA VwProtistrana"
+   OrderBy="VwProtistrana.S_NAZEV"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.fininv.VwProtistranyLimitedViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwProtistrana"
+      Entity="cz.jtbank.konsolidace.protistrany.VwProtistrana"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="VwProtistrana.S_NAZEV" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwProtistrana"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="VwProtistrana"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      IsNotNull="true"
+      EntityAttrName="SIco"
+      EntityUsage="VwProtistrana"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SCountry"
+      EntityAttrName="SCountry"
+      EntityUsage="VwProtistrana"
+      AliasName="S_COUNTRY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CIndicatorPc"
+      EntityAttrName="CIndicatorPc"
+      EntityUsage="VwProtistrana"
+      AliasName="C_INDICATOR_PC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SEkonomSektor"
+      EntityAttrName="SEkonomSektor"
+      EntityUsage="VwProtistrana"
+      AliasName="S_EKONOM_SEKTOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Listgroup"
+      EntityAttrName="Listgroup"
+      EntityUsage="VwProtistrana"
+      AliasName="LISTGROUP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Kategoriekoef"
+      EntityAttrName="Kategoriekoef"
+      EntityUsage="VwProtistrana"
+      AliasName="KATEGORIEKOEF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="VwProtistrana"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

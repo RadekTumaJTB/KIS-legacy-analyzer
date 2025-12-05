@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpBunkadefiniceuctuhistView"
+   SelectList="VwKpBunkadefiniceuctuhist.ID, 
+       VwKpBunkadefiniceuctuhist.ID_PARENT, 
+
+       VwKpBunkadefiniceuctuhist.ID_DEFLISTBUNKA, 
+       VwKpBunkadefiniceuctuhist.S_UCET, 
+
+       VwKpBunkadefiniceuctuhist.C_VALIDOVATMASKU, 
+       VwKpBunkadefiniceuctuhist.C_UCETSUMA, 
+
+       VwKpBunkadefiniceuctuhist.S_EVIDOVATPROTISTRANU, 
+   
+    VwKpBunkadefiniceuctuhist.C_MENOVAPOZICE, 
+       VwKpBunkadefiniceuctuhist.C_UVEROVAPOZICE, 
+
+       VwKpBunkadefiniceuctuhist.S_UCETMINUS, 
+       VwKpBunkadefiniceuctuhist.DT_PLATNOSTOD, 
+
+       VwKpBunkadefiniceuctuhist.DT_PLATNOSTDO, 
+       VwKpBunkadefiniceuctuhist.ROWID"
+   FromList="DB_JT.VW_KP_MUSTEKBUNKADEFUCTUHISTOR VwKpBunkadefiniceuctuhist"
+   OrderBy="DT_PLATNOSTDO"
+   BindingStyle="JDBC"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuhistViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.mustky.common.VwKpBunkadefiniceuctuhistViewRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpBunkadefiniceuctuhist"
+      Entity="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuhist" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="DT_PLATNOSTDO" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdParent"
+      IsNotNull="true"
+      EntityAttrName="IdParent"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="ID_PARENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDeflistbunka"
+      IsNotNull="true"
+      EntityAttrName="IdDeflistbunka"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="ID_DEFLISTBUNKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CValidovatmasku"
+      EntityAttrName="CValidovatmasku"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="C_VALIDOVATMASKU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CUcetsuma"
+      IsNotNull="true"
+      EntityAttrName="CUcetsuma"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="C_UCETSUMA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SEvidovatprotistranu"
+      EntityAttrName="SEvidovatprotistranu"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="S_EVIDOVATPROTISTRANU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CMenovapozice"
+      EntityAttrName="CMenovapozice"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="C_MENOVAPOZICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CUverovapozice"
+      EntityAttrName="CUverovapozice"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="C_UVEROVAPOZICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetminus"
+      EntityAttrName="SUcetminus"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="S_UCETMINUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="VwKpBunkadefiniceuctuhist"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

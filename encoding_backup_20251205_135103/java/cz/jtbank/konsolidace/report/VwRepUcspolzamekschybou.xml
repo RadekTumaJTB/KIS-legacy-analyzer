@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwRepUcspolzamekschybou"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_REP_UCSPOLZAMEKSCHYBOU"
+   AliasName="VwRepUcspolzamekschybou"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybouImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="DtDatum"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUM"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_REP_UCSPOLZAMEKSCHYBOU"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazev"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_UCSPOLZAMEKSCHYBOU"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SHlaska"
+      Precision="512"
+      Type="java.lang.String"
+      ColumnName="S_HLASKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_UCSPOLZAMEKSCHYBOU"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="512" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REP_UCSPOLZAMEKSCHYBOU"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwrepucspolzamekschybouPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybou.DtDatum" />
+         <Item Value="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybou.SNazev" />
+         <Item Value="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybou.SHlaska" />
+         <Item Value="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybou.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWREPUCSPOLZAMEKSCHYBOU_PRIMAR" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

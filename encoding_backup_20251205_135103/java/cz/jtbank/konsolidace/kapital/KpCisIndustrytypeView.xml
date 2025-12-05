@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisIndustrytypeView"
+   SelectList="KpCisIndustrytype.S_CODE, 
+       KpCisIndustrytype.S_NAME, 
+       KpCisIndustrytype.C_INVESTICE"
+   FromList="DB_JT.KP_CIS_INDUSTRYTYPE KpCisIndustrytype"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KpCisIndustrytypeViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisIndustrytype"
+      Entity="cz.jtbank.konsolidace.kapital.KpCisIndustrytype" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SCode"
+      IsNotNull="true"
+      EntityAttrName="SCode"
+      EntityUsage="KpCisIndustrytype"
+      AliasName="S_CODE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SName"
+      IsNotNull="true"
+      EntityAttrName="SName"
+      EntityUsage="KpCisIndustrytype"
+      AliasName="S_NAME"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CInvestice"
+      IsNotNull="true"
+      EntityAttrName="CInvestice"
+      EntityUsage="KpCisIndustrytype"
+      AliasName="C_INVESTICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

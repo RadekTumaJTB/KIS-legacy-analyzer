@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwKpVyjimkyzamykanitop"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_KP_VYJIMKYZAMYKANITOP"
+   AliasName="VwKpVyjimkyzamykanitop"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.VwKpVyjimkyzamykanitopImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_VYJIMKYZAMYKANITOP"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Spolecnost"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="SPOLECNOST"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_VYJIMKYZAMYKANITOP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Top"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="TOP"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_VYJIMKYZAMYKANITOP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatum"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUM"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_KP_VYJIMKYZAMYKANITOP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Existuje"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="EXISTUJE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_VYJIMKYZAMYKANITOP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="OnLine"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="ON_LINE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_VYJIMKYZAMYKANITOP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Extsystem"
+      Precision="7"
+      Type="java.lang.String"
+      ColumnName="EXTSYSTEM"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_VYJIMKYZAMYKANITOP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Katspol"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="KATSPOL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_VYJIMKYZAMYKANITOP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwkpvyjimkyzamykanitopPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpVyjimkyzamykanitop.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWKPVYJIMKYZAMYKANITOP_PRIMARY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

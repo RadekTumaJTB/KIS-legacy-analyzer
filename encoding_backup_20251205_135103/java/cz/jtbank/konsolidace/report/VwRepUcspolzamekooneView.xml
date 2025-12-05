@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepUcspolzamekooneView"
+   SelectList="VwRepUcspolzamekoone.DT_DATUM, 
+       VwRepUcspolzamekoone.S_UZIVATEL, 
+       VwRepUcspolzamekoone.DT_TIMESTAMP, 
+       VwRepUcspolzamekoone.S_NAZEV, 
+       VwRepUcspolzamekoone.ID"
+   FromList="DB_JT.VW_REP_UCSPOLZAMEKOONE VwRepUcspolzamekoone"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepUcspolzamekooneViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepUcspolzamekoone"
+      Entity="cz.jtbank.konsolidace.report.VwRepUcspolzamekoone" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="DtDatum"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwRepUcspolzamekoone"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="VwRepUcspolzamekoone"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtTimestamp"
+      EntityAttrName="DtTimestamp"
+      EntityUsage="VwRepUcspolzamekoone"
+      AliasName="DT_TIMESTAMP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwRepUcspolzamekoone"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      EntityAttrName="Id"
+      EntityUsage="VwRepUcspolzamekoone"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

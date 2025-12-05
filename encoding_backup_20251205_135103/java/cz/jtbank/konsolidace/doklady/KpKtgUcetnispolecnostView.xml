@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpKtgUcetnispolecnostView"
+   SelectList="KpKtgUcetnispolecnost.ID, 
+       KpKtgUcetnispolecnost.ID_CISSUBJECT, 
+
+       KpKtgUcetnispolecnost.S_ICO, 
+       KpKtgUcetnispolecnost.SPIN_ID, 
+
+       KpKtgUcetnispolecnost.TOPAS_ID, 
+       KpKtgUcetnispolecnost.QUEST_ID, 
+
+       KpKtgUcetnispolecnost.C_EXTSYSTEM, 
+       KpKtgUcetnispolecnost.S_NAZEV, 
+
+       KpKtgUcetnispolecnost.C_POCITATROZVAHU, 
+       KpKtgUcetnispolecnost.S_SOUBORPREDPONA, 
+
+       KpKtgUcetnispolecnost.S_MENA, 
+       KpKtgUcetnispolecnost.S_DBLINK, 
+
+       KpKtgUcetnispolecnost.C_AUTOMATICKEGENEROVANI, 
+     
+  KpKtgUcetnispolecnost.ID_KATEGORIE, 
+       KpKtgUcetnispolecnost.C_RKC, 
+
+       KpKtgUcetnispolecnost.S_ZKRATKA, 
+       KpKtgUcetnispolecnost.DT_LASTCLOSEDATE, 
+
+       KpKtgUcetnispolecnost.DT_DATUMARCHIVACE, 
+       KpKtgUcetnispolecnost.C_OPCE, 
+
+       KpKtgUcetnispolecnost.ID_CISKATSPOL, 
+       KpKtgUcetnispolecnost.ID_ZODPOVEDNAUCETNI, 
+
+       KpKtgUcetnispolecnost.ID_ODPOVEDNAOSOBA, 
+       KpKtgUcetnispolecnost.ID_ADMINISTRATOR, 
+
+       KpKtgUcetnispolecnost.DT_RELATIVEDATE, 
+       KpKtgUcetnispolecnost.ID_TOPMNG, 
+
+       KpKtgUcetnispolecnost.S_POZNAMKA, 
+       KpKtgUcetnispolecnost.C_DANOVAZTRATA, 
+
+       KpKtgUcetnispolecnost.ID_CISOPCE, 
+       KpKtgUcetnispolecnost.S_LOCALE, 
+
+       KpKtgUcetnispolecnost.ND_DOCUROVEN2, 
+       KpKtgUcetnispolecnost.C_DOCDISPLAY, 
+
+       KpKtgUcetnispolecnost.C_PREHLEDDISPLAY, 
+       KpKtgUcetnispolecnost.ID_CISNOMINEE, 
+
+       KpKtgUcetnispolecnost.ID_TYPPROJEKTU, 
+       KpKtgUcetnispolecnost.DT_UCETNIOBDOBISTART, 
+
+       KpKtgUcetnispolecnost.DT_UCETNIOBDOBIKONEC, 
+       KpKtgUcetnispolecnost.C_ONLINE, 
+
+       KpKtgUcetnispolecnost.DT_ONLINEOD, 
+       KpKtgUcetnispolecnost.ID_CISDATABAZE, 
+
+       KpKtgUcetnispolecnost.NL_ROKPOCSTAVIMPORTSYSTEM, 
+   
+    KpKtgUcetnispolecnost.ID_KTGODBOR, 
+       KpKtgUcetnispolecnost.ID_KTGPROJEKT, 
+
+       KpKtgUcetnispolecnost.C_NOCNIZPRACOVANI, 
+       KpKtgUcetnispolecnost.ID_CISNASTROJUCETNIVYJIMKY, 
+
+       KpKtgUcetnispolecnost.S_SKUPINALIKE, 
+       KpKtgUcetnispolecnost.ND_BUDGETNAVYSENI_OO, 
+
+       KpKtgUcetnispolecnost.ND_BUDGETNAVYSENI_TOP, 
+       
+KpKtgUcetnispolecnost.S_DUVODOFFLINE, 
+       KpKtgUcetnispolecnost.S_UZIVATEL, 
+
+       KpKtgUcetnispolecnost.ID_MNGSEGMENT, 
+       KpKtgUcetnispolecnost.ID_SPRAVCEKONSOLIDACE, 
+
+       KpKtgUcetnispolecnost.ID_MNGSEGMENTBOSS, 
+       KpKtgUcetnispolecnost.ID_CENTRALA, 
+
+       KpKtgUcetnispolecnost.C_UCETNICTVI_V_IFRS, 
+       KpKtgUcetnispolecnost.C_IFRSPRIMARNI, 
+
+       KpKtgUcetnispolecnost.DT_UNIFIKOVANEDOKLADY, 
+       
+KpKtgUcetnispolecnost.C_FEIS_UCETTYP, 
+       KpKtgUcetnispolecnost.C_TESTOVATMAJUCAST"
+   FromList="DB_JT.KP_KTG_UCETNISPOLECNOST KpKtgUcetnispolecnost"
+   OrderBy="KpKtgUcetnispolecnost.S_NAZEV"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.doklady.common.KpKtgUcetnispolecnostViewRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpKtgUcetnispolecnost"
+      Entity="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="KpKtgUcetnispolecnost.S_NAZEV" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      EntityAttrName="IdCissubject"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      IsUnique="true"
+      IsNotNull="true"
+      EntityAttrName="SIco"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SpinId"
+      IsUnique="true"
+      EntityAttrName="SpinId"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="SPIN_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="TopasId"
+      IsUnique="true"
+      EntityAttrName="TopasId"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="TOPAS_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="QuestId"
+      IsUnique="true"
+      EntityAttrName="QuestId"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="QUEST_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CExtsystem"
+      EntityAttrName="CExtsystem"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_EXTSYSTEM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPocitatrozvahu"
+      EntityAttrName="CPocitatrozvahu"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_POCITATROZVAHU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SSouborpredpona"
+      IsNotNull="true"
+      EntityAttrName="SSouborpredpona"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_SOUBORPREDPONA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SDblink"
+      IsNotNull="true"
+      EntityAttrName="SDblink"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_DBLINK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CAutomatickegenerovani"
+      EntityAttrName="CAutomatickegenerovani"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_AUTOMATICKEGENEROVANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKategorie"
+      IsNotNull="true"
+      EntityAttrName="IdKategorie"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_KATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CRkc"
+      EntityAttrName="CRkc"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_RKC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZkratka"
+      EntityAttrName="SZkratka"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_ZKRATKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtLastclosedate"
+      EntityAttrName="DtLastclosedate"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="DT_LASTCLOSEDATE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumarchivace"
+      EntityAttrName="DtDatumarchivace"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="DT_DATUMARCHIVACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="COpce"
+      EntityAttrName="COpce"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_OPCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCiskatspol"
+      EntityAttrName="IdCiskatspol"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_CISKATSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdZodpovednaucetni"
+      EntityAttrName="IdZodpovednaucetni"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_ZODPOVEDNAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdpovednaosoba"
+      EntityAttrName="IdOdpovednaosoba"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_ODPOVEDNAOSOBA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdministrator"
+      EntityAttrName="IdAdministrator"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_ADMINISTRATOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtRelativedate"
+      EntityAttrName="DtRelativedate"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="DT_RELATIVEDATE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTopmng"
+      EntityAttrName="IdTopmng"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_TOPMNG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CDanovaztrata"
+      EntityAttrName="CDanovaztrata"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_DANOVAZTRATA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisopce"
+      EntityAttrName="IdCisopce"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_CISOPCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SLocale"
+      IsNotNull="true"
+      EntityAttrName="SLocale"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_LOCALE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdDocuroven2"
+      EntityAttrName="NdDocuroven2"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ND_DOCUROVEN2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CDocdisplay"
+      EntityAttrName="CDocdisplay"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_DOCDISPLAY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPrehleddisplay"
+      EntityAttrName="CPrehleddisplay"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_PREHLEDDISPLAY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisnominee"
+      EntityAttrName="IdCisnominee"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_CISNOMINEE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypprojektu"
+      EntityAttrName="IdTypprojektu"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_TYPPROJEKTU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtUcetniobdobistart"
+      IsNotNull="true"
+      EntityAttrName="DtUcetniobdobistart"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="DT_UCETNIOBDOBISTART"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtUcetniobdobikonec"
+      IsNotNull="true"
+      EntityAttrName="DtUcetniobdobikonec"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="DT_UCETNIOBDOBIKONEC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="COnline"
+      EntityAttrName="COnline"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_ONLINE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtOnlineod"
+      EntityAttrName="DtOnlineod"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="DT_ONLINEOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisdatabaze"
+      IsNotNull="true"
+      EntityAttrName="IdCisdatabaze"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_CISDATABAZE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRokpocstavimportsystem"
+      EntityAttrName="NlRokpocstavimportsystem"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="NL_ROKPOCSTAVIMPORTSYSTEM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CNocnizpracovani"
+      EntityAttrName="CNocnizpracovani"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_NOCNIZPRACOVANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisnastrojucetnivyjimky"
+      EntityAttrName="IdCisnastrojucetnivyjimky"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_CISNASTROJUCETNIVYJIMKY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SSkupinalike"
+      EntityAttrName="SSkupinalike"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_SKUPINALIKE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdBudgetnavyseniOo"
+      EntityAttrName="NdBudgetnavyseniOo"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ND_BUDGETNAVYSENI_OO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdBudgetnavyseniTop"
+      EntityAttrName="NdBudgetnavyseniTop"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ND_BUDGETNAVYSENI_TOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SDuvodoffline"
+      EntityAttrName="SDuvodoffline"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_DUVODOFFLINE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegment"
+      EntityAttrName="IdMngsegment"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_MNGSEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSpravcekonsolidace"
+      EntityAttrName="IdSpravcekonsolidace"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_SPRAVCEKONSOLIDACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegmentboss"
+      EntityAttrName="IdMngsegmentboss"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_MNGSEGMENTBOSS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCentrala"
+      EntityAttrName="IdCentrala"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID_CENTRALA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CUcetnictviVIfrs"
+      EntityAttrName="CUcetnictviVIfrs"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_UCETNICTVI_V_IFRS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CIfrsprimarni"
+      EntityAttrName="CIfrsprimarni"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_IFRSPRIMARNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtUnifikovanedoklady"
+      EntityAttrName="DtUnifikovanedoklady"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="DT_UNIFIKOVANEDOKLADY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CFeisUcettyp"
+      IsNotNull="true"
+      EntityAttrName="CFeisUcettyp"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_FEIS_UCETTYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CTestovatmajucast"
+      EntityAttrName="CTestovatmajucast"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="C_TESTOVATMAJUCAST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

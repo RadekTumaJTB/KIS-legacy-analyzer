@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwKpUcspolspravcekonsolidace"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE"
+   AliasName="VwKpUcspolspravcekonsolidace"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.subkons.VwKpUcspolspravcekonsolidaceImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdKtgucetniskupina"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISKUPINA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazev"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SIco"
+      IsNotNull="true"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_ICO"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Subject"
+      Precision="64"
+      Type="java.lang.String"
+      ColumnName="SUBJECT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="64" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SCountry"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_COUNTRY"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Spravcekonsolidace"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="SPRAVCEKONSOLIDACE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SkEmail"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnName="SK_EMAIL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SkTelefon"
+      Precision="25"
+      Type="java.lang.String"
+      ColumnName="SK_TELEFON"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="6" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Externiucetni"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="EXTERNIUCETNI"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="EuEmail"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnName="EU_EMAIL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="EuTelefon"
+      Precision="25"
+      Type="java.lang.String"
+      ColumnName="EU_TELEFON"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="6" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCissubtypclenstvi"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISSUBTYPCLENSTVI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="OdpovednaOsoba"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="ODPOVEDNA_OSOBA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="MngSegment"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="MNG_SEGMENT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SefSegmentu"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="SEF_SEGMENTU"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+</Entity>

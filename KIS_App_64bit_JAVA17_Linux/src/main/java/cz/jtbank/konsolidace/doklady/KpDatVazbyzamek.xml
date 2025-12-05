@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatVazbyzamek"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_VAZBYZAMEK"
+   AliasName="KpDatVazbyzamek"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.KpDatVazbyzamekImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdCisdoklad"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISDOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_VAZBYZAMEK"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnostfrom"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOSTFROM"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_VAZBYZAMEK"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnostto"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOSTTO"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_VAZBYZAMEK"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetniskupina"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISKUPINA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_VAZBYZAMEK"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatum"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUM"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_VAZBYZAMEK"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_UZIVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DAT_VAZBYZAMEK" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumzmeny"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMZMENY"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_VAZBYZAMEK" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpKtgUcetnispolecnost"
+      Association="cz.jtbank.konsolidace.doklady.FkVzUcspoltoAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkVzUcspoltoAssoc.KpKtgUcetnispolecnost"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkVzUcspoltoAssoc.KpDatVazbyzamek"
+      Type="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpKtgUcetnispolecnost1"
+      Association="cz.jtbank.konsolidace.doklady.FkVzUcspolfromAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkVzUcspolfromAssoc.KpKtgUcetnispolecnost1"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkVzUcspolfromAssoc.KpDatVazbyzamek1"
+      Type="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="SysC008294" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdCisdoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C008294" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISDOKLAD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC008296" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdKtgucetnispolecnostto" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C008296" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGUCETNISPOLECNOSTTO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC008298" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.DtDatum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C008298" />
+         <Attr Name="_checkCondition" Value="&#34;DT_DATUM&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC008305" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.DtDatumzmeny" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C008305" />
+         <Attr Name="_checkCondition" Value="&#34;DT_DATUMZMENY&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC008295" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdKtgucetnispolecnostfrom" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C008295" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGUCETNISPOLECNOSTFROM&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC008304" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.SUzivatel" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C008304" />
+         <Attr Name="_checkCondition" Value="&#34;S_UZIVATEL&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC008297" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdKtgucetniskupina" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C008297" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGUCETNISKUPINA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkVazbyzamek" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdCisdoklad" />
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdKtgucetnispolecnostfrom" />
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdKtgucetnispolecnostto" />
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdKtgucetniskupina" />
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.DtDatum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_VAZBYZAMEK" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkVzUcskup" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdKtgucetniskupina" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_VZ_UCSKUP" />
+         <Attr Name="_referencedKey" Value="PK_KPKTGUCETNISKUPINA" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkVzUcspolto" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdKtgucetnispolecnostto" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_VZ_UCSPOLTO" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkVzUcspolfrom" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdKtgucetnispolecnostfrom" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_VZ_UCSPOLFROM" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkVzCisdoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatVazbyzamek.IdCisdoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_VZ_CISDOKLAD" />
+         <Attr Name="_referencedKey" Value="PK_KPCISDOKLAD" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

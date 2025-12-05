@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpUcet2definiceView"
+   SelectList="VwKpUcet2definice.ID_DEFLISTBUNKAUCET, 
+       VwKpUcet2definice.S_UCET, 
+       VwKpUcet2definice.ID_CISSUBJECT, 
+       VwKpUcet2definice.BUNKA"
+   FromList="DB_JT.VW_KP_UCET2DEFINICE VwKpUcet2definice"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.mustky.VwKpUcet2definiceViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpUcet2definice"
+      Entity="cz.jtbank.konsolidace.mustky.VwKpUcet2definice" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdDeflistbunkaucet"
+      IsNotNull="true"
+      EntityAttrName="IdDeflistbunkaucet"
+      EntityUsage="VwKpUcet2definice"
+      AliasName="ID_DEFLISTBUNKAUCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="VwKpUcet2definice"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCissubject"
+      EntityAttrName="IdCissubject"
+      EntityUsage="VwKpUcet2definice"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Bunka"
+      EntityAttrName="Bunka"
+      EntityUsage="VwKpUcet2definice"
+      AliasName="BUNKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

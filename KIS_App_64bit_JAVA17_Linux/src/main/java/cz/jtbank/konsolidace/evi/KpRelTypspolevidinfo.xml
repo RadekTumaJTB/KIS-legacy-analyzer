@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpRelTypspolevidinfo"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_REL_TYPSPOLEVIDINFO"
+   AliasName="KpRelTypspolevidinfo"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.evi.KpRelTypspolevidinfoImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdTypspol"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TYPSPOL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_TYPSPOLEVIDINFO"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdEvidinfo"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_EVIDINFO"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_TYPSPOLEVIDINFO"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="NnReltypspolevidinfoEvidinfo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpRelTypspolevidinfo.IdEvidinfo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_RELTYPSPOLEVIDINFO_EVIDINFO" />
+         <Attr Name="_checkCondition" Value="&#34;ID_EVIDINFO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnReltypspolevidinfoTypspol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpRelTypspolevidinfo.IdTypspol" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_RELTYPSPOLEVIDINFO_TYPSPOL" />
+         <Attr Name="_checkCondition" Value="&#34;ID_TYPSPOL&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkReltypspolevidinfo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpRelTypspolevidinfo.IdTypspol" />
+         <Item Value="cz.jtbank.konsolidace.evi.KpRelTypspolevidinfo.IdEvidinfo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_RELTYPSPOLEVIDINFO" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

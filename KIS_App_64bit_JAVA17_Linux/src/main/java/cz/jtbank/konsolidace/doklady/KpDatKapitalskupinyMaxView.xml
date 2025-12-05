@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatKapitalskupinyMaxView"
+   BindingStyle="JDBC"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatKapitalskupinyMaxViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT KpDatKapitalskupiny.ID, 
+       KpDatKapitalskupiny.ID_SKUPINAPOZICE, 
+       KpDatKapitalskupiny.C_DYNAMICKY, 
+       KpDatKapitalskupiny.DT_PLATNOSTOD, 
+       KpDatKapitalskupiny.ND_CASTKA
+FROM DB_JT.KP_DAT_KAPITALSKUPINY KpDatKapitalskupiny
+where KpDatKapitalskupiny.ID_SKUPINAPOZICE = ?
+  and KpDatKapitalskupiny.DT_PLATNOSTOD = (select max(k.DT_PLATNOSTOD)
+                                           from DB_JT.KP_DAT_KAPITALSKUPINY k
+                                           where k.ID_SKUPINAPOZICE = KpDatKapitalskupiny.ID_SKUPINAPOZICE
+                                             and k.DT_PLATNOSTOD <= ?)
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatKapitalskupiny"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatKapitalskupiny"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatKapitalskupiny"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSkupinapozice"
+      IsNotNull="true"
+      EntityAttrName="IdSkupinapozice"
+      EntityUsage="KpDatKapitalskupiny"
+      AliasName="ID_SKUPINAPOZICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CDynamicky"
+      EntityAttrName="CDynamicky"
+      EntityUsage="KpDatKapitalskupiny"
+      AliasName="C_DYNAMICKY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDatKapitalskupiny"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastka"
+      IsNotNull="true"
+      EntityAttrName="NdCastka"
+      EntityUsage="KpDatKapitalskupiny"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

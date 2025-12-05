@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisUceluveruView"
+   SelectList="KpCisUceluveru.ID, 
+       KpCisUceluveru.S_EXTID, 
+       KpCisUceluveru.C_KOMERCNI"
+   FromList="DB_JT.KP_CIS_UCELUVERU KpCisUceluveru"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KpCisUceluveruViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisUceluveru"
+      Entity="cz.jtbank.konsolidace.kapital.KpCisUceluveru" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisUceluveru"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SExtid"
+      IsUnique="true"
+      IsNotNull="true"
+      EntityAttrName="SExtid"
+      EntityUsage="KpCisUceluveru"
+      AliasName="S_EXTID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CKomercni"
+      IsNotNull="true"
+      EntityAttrName="CKomercni"
+      EntityUsage="KpCisUceluveru"
+      AliasName="C_KOMERCNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

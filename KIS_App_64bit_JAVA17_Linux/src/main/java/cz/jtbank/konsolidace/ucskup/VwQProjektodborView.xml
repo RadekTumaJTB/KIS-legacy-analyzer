@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwQProjektodborView"
+   SelectList="VwQProjektodbor.ID, 
+       VwQProjektodbor.PO_CODE, 
+       VwQProjektodbor.PROJEKT_ID, 
+       VwQProjektodbor.ODBOR_ID, 
+       VwQProjektodbor.RS_CODE, 
+       VwQProjektodbor.RS_NAME, 
+       VwQProjektodbor.ID_KTGUCETNISPOLECNOST"
+   FromList="DB_JT.VW_Q_PROJEKTODBOR VwQProjektodbor"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.VwQProjektodborViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwQProjektodbor"
+      Entity="cz.jtbank.konsolidace.ucskup.VwQProjektodbor" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      EntityAttrName="Id"
+      EntityUsage="VwQProjektodbor"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="PoCode"
+      EntityAttrName="PoCode"
+      EntityUsage="VwQProjektodbor"
+      AliasName="PO_CODE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ProjektId"
+      EntityAttrName="ProjektId"
+      EntityUsage="VwQProjektodbor"
+      AliasName="PROJEKT_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="OdborId"
+      EntityAttrName="OdborId"
+      EntityUsage="VwQProjektodbor"
+      AliasName="ODBOR_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RsCode"
+      EntityAttrName="RsCode"
+      EntityUsage="VwQProjektodbor"
+      AliasName="RS_CODE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RsName"
+      EntityAttrName="RsName"
+      EntityUsage="VwQProjektodbor"
+      AliasName="RS_NAME"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwQProjektodbor"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

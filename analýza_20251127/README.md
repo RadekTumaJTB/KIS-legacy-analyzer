@@ -65,39 +65,179 @@ Komplexní re-engineering analýza zahrnující:
 - Vyšší kvalita díky AI code review
 - Nižší tech debt díky lepšímu kódu
 
-### ⚡ Quick Modernization - Java 17 Upgrade ⭐⭐⭐ DOPORUČENO PRO START!
+### ⚡ Quick Modernization - Java 17 Upgrade
 
-**Soubory:** [REENGINEERING_ANALYSIS_AI_QUICK.md](REENGINEERING_ANALYSIS_AI_QUICK.md) | [🇨🇿 Česká verze](REENGINEERING_ANALYSIS_AI_QUICK_CZ.md)
+**Soubory:**
+- [REENGINEERING_ANALYSIS_AI_QUICK.md](REENGINEERING_ANALYSIS_AI_QUICK.md) | [🇨🇿 Česká verze](REENGINEERING_ANALYSIS_AI_QUICK_CZ.md) - v1: Původní analýza (bez custom knihoven)
+- [REENGINEERING_ANALYSIS_AI_QUICK_CZ_v2.md](REENGINEERING_ANALYSIS_AI_QUICK_CZ_v2.md) | [📄 PDF](REENGINEERING_ANALYSIS_AI_QUICK_CZ_v2.pdf) - v2: S custom knihovnami
+- [🆕 REENGINEERING_ANALYSIS_AI_QUICK_CZ_v3.md](REENGINEERING_ANALYSIS_AI_QUICK_CZ_v3.md) | [📄 PDF](REENGINEERING_ANALYSIS_AI_QUICK_CZ_v3.pdf) ⭐⭐⭐ **DOPORUČENO: TŘI VARIANTY MIGRACE**
 
-**🎯 Rychlá modernizace místo full re-engineeringu:**
+**🎯 v3 - Porovnání Tří Variant:**
+Nová verze obsahuje **detailní porovnání 3 přístupů** k Java 17 migraci s custom knihovnami:
 
-| Aspekt | Full Re-engineering | Quick Modernization | Úspora |
-|--------|---------------------|---------------------|--------|
-| **Scope** | Celá aplikace | Java 17 + libs + refactoring | **85% menší scope** |
-| **Doba** | 8-11 měsíců | **1.5-2 měsíce** | **5-7x rychlejší** |
-| **Náklady** | €400k-€600k | **€36k-€48k** | **90% levnější** |
-| **Riziko** | MEDIUM-HIGH | **LOW** | **Minimální riziko** |
-| **Business value** | Dlouhodobý | **Okamžitý** | **Rychlý ROI** |
+**📊 Tři Varianty Migrace (v3):**
 
-**Co zahrnuje Quick Modernization:**
-1. **Java 17 LTS upgrade** - moderní platforma, bezpečnost, výkon
-2. **Apache POI 3.x → 5.2.5** - aktualizace deprecated knihovny
-3. **java.util.Date → java.time.*** - thread-safe, moderní API
-4. **Refaktoring 8 tříd s vysokou vazbou** - ExcelThread (133 deps) atd.
-5. **AI-asistovaná migrace** - 65-70% rychlejší než tradiční přístup
+| Varianta | Doba | Náklady | Riziko | Custom Libs | Doporučení |
+|----------|------|---------|--------|-------------|------------|
+| **A: Quick Win** | 2-3 měs | €74k-€111k | NÍZKÉ | Pouze syntax | ⭐⭐⭐ **START ZDE** |
+| **B: Phased** | 10-11 měs | €260k-€286k | STŘEDNÍ | 100% (po vlnách) | Po Option A |
+| **C: Full** | 8-9 měs | €192k-€216k | VYSOKÉ | 100% (najednou) | Pro zkušené týmy |
 
-**Klíčové výhody:**
-- ⚡ **Start možný okamžitě** - minimální příprava
-- 💰 **ROI 130-370x** na AI nástroje
-- 🔒 **Nízké riziko** - žádné breaking changes v architektuře
-- ✅ **Kompletní test coverage** - AI generuje testy
-- 🚀 **Základ pro další modernizaci** - platforma pro budoucnost
+**Varianta A: Quick Win - Minimální Upgrade**
+- ✅ Java 17 runtime upgrade
+- ✅ Deprecated libs update (POI, Collections)
+- ✅ Syntax fixes pro kompatibilitu
+- ❌ **BEZ** refaktoringu custom balíčků
+- ❌ **BEZ** refaktoringu high-coupling tříd
+- **Ideální pro:** Rychlý security upgrade, minimální investice
 
-**Doporučení: START S TÍMTO!** 🎯
-- Nejrychlejší path k moderní platformě
-- Minimální riziko vs. full re-engineering
-- Okamžitý business value (bezpečnost, výkon)
-- Poté lze postupně pokračovat na full re-engineering
+**Varianta B: Phased Migration - Postupná Modernizace**
+- ✅ Vše z Varianty A
+- ✅ Wave 1: Critical packages (3 měs) - excel, doklady
+- ✅ Wave 2: Medium priority (3 měs)
+- ✅ Wave 3: Low priority (2 měs)
+- **Ideální pro:** Kompletní modernizace s rozloženým rizikem
+
+**Varianta C: Full Migration - Kompletní Modernizace**
+- ✅ Všech 932 custom tříd paralelně
+- ✅ Rychlejší než B, ale vyšší riziko
+- ✅ Big-bang deployment
+- **Ideální pro:** Zkušené týmy, deadline pressure
+
+**🏆 Doporučená Strategie:**
+1. **START s Variantou A** (€74k-€111k, 2-3 měs) - Quick Win
+2. **EVALUATE po 3 měsících** - Funguje dobře?
+3. **DECIDE:** Pokračovat na B/C, nebo zastavit (hotovo!)
+
+**Výhody tohoto přístupu:**
+- ✅ Minimální investice na start
+- ✅ Flexibilita zastavit kdykoliv
+- ✅ De-risk: vyzkoušet před velkým commitem
+- ✅ 80/20 rule: 80% value za 20% nákladů
+
+---
+
+### 🐧 Windows → Linux Platform Migration ⭐ NOVÁ ANALÝZA
+
+**Soubory:**
+- [WINDOWS_TO_LINUX_MIGRATION_ANALYSIS.md](WINDOWS_TO_LINUX_MIGRATION_ANALYSIS.md) | [📄 PDF](WINDOWS_TO_LINUX_MIGRATION_ANALYSIS.pdf)
+
+**Současný stav:**
+- Platform: Windows Server 2023 (32-bit legacy)
+- Java: 1.7
+- OS Coupling: Střední vazba na Windows
+
+**Cíl:**
+- Platform: Linux (Red Hat UBI-minimal 10)
+- Architecture: 64-bit
+- Java: 17 LTS
+
+**Kritické Nálezy:**
+
+| Kategorie | Výskyty | Soubory | Risk Level | Migrovatelnost |
+|-----------|---------|---------|------------|----------------|
+| **File Paths** | 430 | 84 | ⚠️ STŘEDNÍ | ✅ Automatizovatelné |
+| **Encoding** | 6,525 | 644 | ⚠️ STŘEDNÍ | ✅ Automatizovatelné |
+| **JNI/Native** | 30 | 2 | ❌ VYSOKÉ | ⚠️ Vyžaduje rekompilaci |
+| **Process Management** | 15 | 1 | ✅ NÍZKÉ | ✅ Jednoduché |
+
+**Celkové Risk Assessment:** ⚠️ **STŘEDNÍ** → **Aplikace JE migrovatelná na Linux**
+
+**Effort & Cost Estimates:**
+
+| Phase | Effort | Cost | Duration |
+|-------|--------|------|----------|
+| **Manual Migration** | 15 týdnů | €60,800 | 15 týdnů |
+| **With AI (Claude/Copilot)** | 10 týdnů | €40,000 | 10 týdnů |
+| **Savings** | 5 týdnů | €20,800 | **34% rychlejší** |
+
+**Hlavní Problémy:**
+1. **430 Hardcoded Windows Paths** - `C:\exports\` → `/opt/kis-banking/exports/`
+2. **6,525 Encoding Issues** - `windows-1250` → `UTF-8` (644 JSP souborů)
+3. **30 JNI Calls** - 2 CSV export třídy vyžadují Pure Java replacement
+4. **15 CMD Scripts** - Konverze na bash scripty
+5. **32-bit → 64-bit** - JVM memory model změny
+
+**Doporučené Řešení:**
+- ✅ Pure Java replacement pro JNI (Apache Commons CSV)
+- ✅ Configuration-driven paths místo hardcoded C:\
+- ✅ Global UTF-8 encoding migration
+- ✅ Bash script conversion (.CMD → .sh)
+- ✅ Testing na Red Hat UBI-minimal 10
+
+**Migration Timeline:**
+- Phase 1: Preparation (2 týdny)
+- Phase 2: Code Migration (6-8 týdnů)
+- Phase 3: Testing (3 týdny)
+- Phase 4: Deployment (2 týdny)
+- **Total: 13-15 týdnů**
+
+**ROI s AI:**
+- 34% effort reduction (76 → 50 dev-days)
+- 34% cost savings (€60.8k → €40k)
+- 33% faster delivery (15 → 10 weeks)
+
+---
+
+### 🪟 Windows Server 2003 → 2008 Migration ⭐ NOVÁ ANALÝZA
+
+**Soubory:**
+- [WIN2003_TO_WIN2008_MIGRATION_ANALYSIS.md](WIN2003_TO_WIN2008_MIGRATION_ANALYSIS.md) | [📄 PDF](WIN2003_TO_WIN2008_MIGRATION_ANALYSIS.pdf)
+
+**Současný stav:**
+- Platform: Windows Server 2003 (32-bit)
+- Java: 1.4 (originální verze)
+- OS Coupling: Nízká vazba na Win 2003
+
+**Cíl:**
+- Platform: Windows Server 2008 (32-bit)
+- Java: 1.4 (zachováno)
+- UAC: User Account Control enabled
+
+**Kritické Nálezy:**
+
+| Kategorie | Výskyty | Soubory | Risk Level | Doporučení |
+|-----------|---------|---------|------------|-----------|
+| **Java 1.4 Deprecated APIs** | 6 | 1 | ❌ VYSOKÉ | Nahradit moderními alternativami |
+| **Protected File System** | 405 | 81 | ⚠️ STŘEDNÍ | Přesunout do %PROGRAMDATA% |
+| **File Encoding (win-1250)** | 6,525 | 644 | ✅ NÍZKÉ | Zachovat windows-1250 |
+
+**Celkové Risk Assessment:** ⚠️ **STŘEDNÍ** → **Aplikace JE migrovatelná na Win 2008**
+
+**Effort & Cost Estimates:**
+
+| Approach | Effort | Cost | Duration |
+|----------|--------|------|----------|
+| **Manual Migration** | 8 týdnů | €31,200 | 39 dev-days |
+| **With AI (Claude/Copilot)** | 5.5 týdnů | €21,840 | 27 dev-days |
+| **Savings** | 2.5 týdnů | €9,360 | **30% rychlejší** |
+
+**Hlavní Problémy:**
+1. **6 Java 1.4 Deprecated API** - `sun.misc.BASE64Encoder` v `idm.jsp` → `javax.xml.bind.DatatypeConverter`
+2. **405 Protected File System** - 81 Excel export tříd používá `C:\Windows\Temp\` → `%PROGRAMDATA%\KIS\`
+3. **6,525 Encoding Issues** - `windows-1250` je OK zachovat (Win 2008 podporuje)
+4. **UAC Virtualization** - Testing s non-admin users critical
+
+**Doporučené Řešení:**
+- ✅ Replace `sun.misc.BASE64Encoder` → `javax.xml.bind.DatatypeConverter` (Java 1.6+)
+- ✅ Centralizovaný PathManager utility pro UAC-safe paths
+- ✅ Refactoring 81 Excel export tříd
+- ✅ Comprehensive UAC testing s non-admin users
+- ✅ Zachovat windows-1250 encoding
+
+**Migration Timeline:**
+- Phase 1: Preparation (1 týden)
+- Phase 2: Code Migration (4 týdny) - Java 1.4 deprecated API + Protected FS
+- Phase 3: UAC Testing (2 týdny)
+- Phase 4: Deployment (1 týden)
+- **Total: 8 týdnů**
+
+**ROI s AI:**
+- 30% effort reduction (39 → 27 dev-days)
+- 30% cost savings (€31.2k → €21.8k)
+- 31% faster delivery (8 → 5.5 weeks)
+
+---
 
 ### 🔄 Business Process BPMN Diagramy
 
@@ -323,3 +463,187 @@ Pro dotazy k této analýze kontaktujte:
 ---
 
 **Poznámka:** Tato analýza byla vygenerována automaticky pomocí AI-powered kódových analyzérů. Všechny závěry by měly být ověřeny lidským code review.
+
+---
+
+## 🆕 Detailní Analýza Java 1.4 → Java 17 Migrace ⭐ NOVÁ ANALÝZA!
+
+**Soubory:**
+- [JAVA14_TO_JAVA17_DETAILED_CODE_ANALYSIS.md](JAVA14_TO_JAVA17_DETAILED_CODE_ANALYSIS.md) | [📄 PDF](JAVA14_TO_JAVA17_DETAILED_CODE_ANALYSIS.pdf)
+
+**Datum:** 5. prosince 2025  
+**Metoda:** Přímá analýza zdrojového kódu + Neo4J/Qdrant databáze
+
+### 🎯 Executive Summary
+
+**Celkem identifikovaných problémů:** 386+
+
+| Kategorie | Výskytů | Ovlivněné Soubory | Složitost |
+|-----------|---------|-------------------|-----------|
+| **Raw Types (bez generics)** | 7+ | 7 | STŘEDNÍ |
+| **Deprecated Date/Time** | 100+ | 50+ | VYSOKÁ |
+| **Thread Safety (StringBuffer)** | 20+ | 20+ | NÍZKÁ |
+| **Old-Style Loops** | 65+ | 20+ | NÍZKÁ |
+| **Manual Resource Management** | 175+ | 20+ | STŘEDNÍ |
+| **Boxing Issues** | 19+ | 4+ | NÍZKÁ |
+
+### 🔴 Kritické Nálezy
+
+#### 1. Static SimpleDateFormat - Thread-Safety Issue (KRITICKÉ!)
+
+**Problémové soubory:**
+- `cz/jtbank/konsolidace/common/Utils.java`
+- `cz/jtbank/konsolidace/jobs/GenerateAll.java`
+
+**Problém:**
+```java
+// ❌ THREAD-UNSAFE! Static SimpleDateFormat
+private static SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+
+public static String getTodaysDate() {
+    return sdf.format(new Date());  // ← RACE CONDITION!
+}
+```
+
+`SimpleDateFormat` není thread-safe → při concurrent access může způsobit **data corruption** nebo **DateTimeException**.
+
+**Řešení:**
+```java
+// ✅ Thread-safe DateTimeFormatter
+private static final DateTimeFormatter DATE_FORMATTER = 
+    DateTimeFormatter.ofPattern("dd.MM.yyyy");
+
+public static String getTodaysDate() {
+    return LocalDate.now().format(DATE_FORMATTER);
+}
+```
+
+**Priority:** 🔴 KRITICKÁ  
+**Úsilí:** 1 týden manuálně / 2 dny s AI
+
+---
+
+#### 2. Raw Types (Bez Generics)
+
+**Příklad z SchvalovakDTO.java:**
+```java
+// ❌ Java 1.4 - Raw type ArrayList
+private ArrayList radky = null;
+
+public ArrayList getRadky() {
+    return radky;  // ← Unsafe!
+}
+
+// ✅ Java 17 - Generic type
+private List<SchvalovakRadekDTO> radky = null;
+
+public List<SchvalovakRadekDTO> getRadky() {
+    return radky;  // ← Type-safe!
+}
+```
+
+**Nalezeno:** 7+ raw types ve 4 třídách  
+**Priority:** 🟡 VYSOKÁ  
+**Úsilí:** 2-3 dny manuálně / 2-4 hodiny s AI
+
+---
+
+### 📁 Top 50 Nejdůležitějších Souborů
+
+**Seřazeno podle počtu závislostí (high coupling):**
+
+| # | Třída | Závislostí | Java 1.4 Problémů | Priority |
+|---|-------|------------|-------------------|----------|
+| 1 | **ExcelThread** | 133 | 10+ | 🔴 KRITICKÁ |
+| 2 | **UcSkupModuleImpl** | 50 | 5+ | 🔴 VYSOKÁ |
+| 3 | **DokumentModuleImpl** | 49 | 5+ | 🔴 VYSOKÁ |
+| 4 | **Utils** | 25+ | 15+ | 🔴 KRITICKÁ |
+| 5 | **AutoProtokolNew** | 20+ | 20+ | 🔴 KRITICKÁ |
+
+**Kompletní seznam Top 50 v PDF reportu.**
+
+---
+
+### 💡 Doporučení pro Migraci
+
+#### Priority 1: KRITICKÉ (Musí být opraveno)
+
+1. **Static SimpleDateFormat** → `DateTimeFormatter`
+   - Složitost: VYSOKÁ
+   - Úsilí: 1 týden manuálně / 2 dny s AI
+   - Soubory: `Utils.java`, `GenerateAll.java`
+
+2. **ExcelThread Refaktoring** (133 dependencies)
+   - Složitost: VELMI VYSOKÁ
+   - Úsilí: 3-4 týdny manuálně / 1 týden s AI
+   - Poznámka: Pro Quick Win (Varianta A) není nutné
+
+#### Priority 2: VYSOKÁ
+
+1. **Raw Types → Generics**
+   - Složitost: NÍZKÁ
+   - Úsilí: 2-3 dny manuálně / 2-4 hodiny s AI
+   - Automatizovatelné s Claude Code
+
+2. **Deprecated Date/Time API**
+   - Složitost: STŘEDNÍ
+   - Úsilí: 1-2 týdny manuálně / 3-5 dnů s AI
+   - 100+ výskytů `java.util.Date`, 50+ `Calendar`
+
+#### Priority 3: STŘEDNÍ (Nice-to-have)
+
+1. **StringBuffer → StringBuilder** (20+ výskytů)
+2. **Enhanced For-Loops** (65+ old-style loops)
+3. **Try-With-Resources** (175+ manual close())
+
+---
+
+### 📊 Effort & Cost Estimates
+
+#### Manuální Migrace (Bez AI)
+
+| Kategorie | Úsilí | Náklady (@€800/den) |
+|-----------|-------|---------------------|
+| **Critical (P1)** | 4-5 týdnů | €16k-€20k |
+| **High (P2)** | 3-4 týdny | €12k-€16k |
+| **Medium (P3)** | 3-4 týdny | €12k-€16k |
+| **Low (P4)** | 3-4 týdny | €12k-€16k |
+| **TOTAL** | **13-17 týdnů** | **€52k-€68k** |
+
+#### S AI Asistencí (Claude Code + Copilot)
+
+| Kategorie | Úsilí | Úspora | Náklady (@€800/den) |
+|-----------|-------|--------|---------------------|
+| **Critical (P1)** | 1.5 týdnů | **70%** | €6k |
+| **High (P2)** | 1 týden | **70%** | €4k |
+| **Medium (P3)** | 1 týden | **70%** | €4k |
+| **Low (P4)** | 1 týden | **70%** | €4k |
+| **TOTAL** | **4.5 týdnů** | **70%** | **€18k** |
+
+**Úspora s AI:** €34k-€50k (65-73%)
+
+---
+
+### 🏆 Doporučená Strategie
+
+**Varianta A: Quick Win (Minimální Upgrade)**
+- ✅ Java 17 runtime upgrade
+- ✅ Fix kritické P1 issues (static SimpleDateFormat)
+- ✅ Raw types → generics
+- ✅ Deprecated libs (POI, Collections)
+- ❌ **BEZ** refaktoringu ExcelThread (133 deps)
+- ❌ **BEZ** kompletní Date/Time migrace
+
+**Úsilí:** 2-3 měsíce  
+**Náklady:** €74k-€111k  
+**Riziko:** NÍZKÉ
+
+---
+
+### 🔗 Související Analýzy
+
+- [REENGINEERING_ANALYSIS_AI_QUICK_CZ_v3.md](REENGINEERING_ANALYSIS_AI_QUICK_CZ_v3.md) - Tři varianty migrace (Quick Win, Phased, Full)
+- [WINDOWS_TO_LINUX_MIGRATION_ANALYSIS.md](WINDOWS_TO_LINUX_MIGRATION_ANALYSIS.md) - Platform migrace Windows → Linux
+- [WIN2003_TO_WIN2008_MIGRATION_ANALYSIS.md](WIN2003_TO_WIN2008_MIGRATION_ANALYSIS.md) - Win 2003 → 2008 migrace
+
+---

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KtgCennypapir"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KTG_CENNYPAPIR"
+   AliasName="KtgCennypapir"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.kapital.KtgCennypapirImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KTG_CENNYPAPIR"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SIsin"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_ISIN"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_CENNYPAPIR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_CENNYPAPIR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SIco"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_ICO"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_CENNYPAPIR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      IsNotNull="true"
+      Precision="35"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_CENNYPAPIR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="35" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CRegistrovany"
+      IsNotNull="true"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_REGISTROVANY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KTG_CENNYPAPIR"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CTypfrekvenceperiody"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_TYPFREKVENCEPERIODY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KTG_CENNYPAPIR"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlKuponfrekvence"
+      Precision="1"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_KUPONFREKVENCE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KTG_CENNYPAPIR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtKupondatum1"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_KUPONDATUM1"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KTG_CENNYPAPIR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtKupondatum2"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_KUPONDATUM2"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KTG_CENNYPAPIR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtKupondatum3"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_KUPONDATUM3"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KTG_CENNYPAPIR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtKupondatum4"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_KUPONDATUM4"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KTG_CENNYPAPIR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdKuponprocenta"
+      Precision="8"
+      Scale="4"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_KUPONPROCENTA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KTG_CENNYPAPIR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpRelCennypapirindex"
+      Association="cz.jtbank.konsolidace.kapital.FkRelcennypapirindexCpAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.kapital.FkRelcennypapirindexCpAssoc.KpRelCennypapirindex"
+      AssociationOtherEnd="cz.jtbank.konsolidace.kapital.FkRelcennypapirindexCpAssoc.KtgCennypapir"
+      Type="cz.jtbank.konsolidace.kapital.KpRelCennypapirindexImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="PkKtgcennypapir" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KtgCennypapir.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KTGCENNYPAPIR" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKtgcennypapirId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KtgCennypapir.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KTGCENNYPAPIR_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKtgcennypapirRegistrovany" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KtgCennypapir.CRegistrovany" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KTGCENNYPAPIR_REGISTROVANY" />
+         <Attr Name="_checkCondition" Value="&#34;C_REGISTROVANY&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKtgcennypapirPopis" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KtgCennypapir.SPopis" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KTGCENNYPAPIR_POPIS" />
+         <Attr Name="_checkCondition" Value="&#34;S_POPIS&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKtgcennypapirMena" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KtgCennypapir.SMena" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KTGCENNYPAPIR_MENA" />
+         <Attr Name="_referencedKey" Value="PK_KPCISMENA" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

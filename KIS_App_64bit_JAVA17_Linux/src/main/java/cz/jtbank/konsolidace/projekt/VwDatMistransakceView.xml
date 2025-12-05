@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatMistransakceView"
+   SelectList="KpDatMistransakce.ID, 
+       KpDatMistransakce.ID_KTGUCETNISPOLECNOST, 
+
+       KpDatMistransakce.ND_CASTKAMENA, 
+       KpDatMistransakce.ND_CASTKALOCAL, 
+
+       KpDatMistransakce.S_MENA, 
+       KpDatMistransakce.C_STRANA, 
+
+       KpDatMistransakce.S_UCET, 
+       KpDatMistransakce.S_POPIS, 
+
+       KpDatMistransakce.DT_DATUM, 
+       KpDatMistransakce.ID_KTGSPOLECNOST, 
+
+       KpDatMistransakce.S_PROTISTRANA, 
+       KpDatMistransakce.ID_KTGPROJEKT, 
+
+       KpDatMistransakce.ID_KTGODBOR, 
+       KpDatMistransakce.ID_DOKUMENT, 
+
+       KpDatMistransakce.ID_DOKUMENTRADEK, 
+       KpKtgUcetnispolecnost.S_NAZEV 
+AS UCSPOL, 
+       KpKtgUcetnispolecnost.ID AS IDUCSPOL, 
+   
+    KpKtgProjekt.ID AS ID1, 
+       KpKtgProjekt.ROWID"
+   FromList="DB_JT.KP_DAT_MISTRANSAKCE KpDatMistransakce, DB_JT.KP_KTG_UCETNISPOLECNOST KpKtgUcetnispolecnost, DB_JT.KP_KTG_PROJEKT KpKtgProjekt"
+   Where="KpDatMistransakce.ID_KTGUCETNISPOLECNOST = KpKtgUcetnispolecnost.ID AND KpDatMistransakce.ID_KTGPROJEKT = KpKtgProjekt.ID AND KpDatMistransakce.DT_DATUM BETWEEN KpKtgProjekt.DT_STARTOCENENI AND KpKtgProjekt.DT_KONECOCENENI"
+   OrderBy="DT_DATUM,KpKtgUcetnispolecnost.S_NAZEV,C_STRANA"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.VwDatMistransakceViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatMistransakce"
+      Entity="cz.jtbank.konsolidace.projekt.KpDatMistransakce" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpDatMistransakce.ID_KTGUCETNISPOLECNOST = KpKtgUcetnispolecnost.ID AND KpDatMistransakce.ID_KTGPROJEKT = KpKtgProjekt.ID AND KpDatMistransakce.DT_DATUM BETWEEN KpKtgProjekt.DT_STARTOCENENI AND KpKtgProjekt.DT_KONECOCENENI" />
+         <Attr Name="_queryOrderBy" Value="DT_DATUM,KpKtgUcetnispolecnost.S_NAZEV,C_STRANA" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgUcetnispolecnost"
+      Entity="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost"
+      SourceUsage="cz.jtbank.konsolidace.projekt.VwDatMistransakceView.KpDatMistransakce"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.projekt.KpDatMistransakce.Id" />
+            <Item Value="cz.jtbank.konsolidace.projekt.KpDatMistransakce.SMena" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.Id" />
+            <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.SMena" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgProjekt"
+      Entity="cz.jtbank.konsolidace.projekt.KpKtgProjekt"
+      SourceUsage="cz.jtbank.konsolidace.projekt.VwDatMistransakceView.KpKtgUcetnispolecnost"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.Id" />
+            <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.SNazev" />
+            <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdKategorie" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.projekt.KpKtgProjekt.Id" />
+            <Item Value="cz.jtbank.konsolidace.projekt.KpKtgProjekt.SNazev" />
+            <Item Value="cz.jtbank.konsolidace.projekt.KpKtgProjekt.IdKategorie" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatMistransakce"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDatMistransakce"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      IsNotNull="true"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="KpDatMistransakce"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      IsNotNull="true"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="KpDatMistransakce"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="KpDatMistransakce"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CStrana"
+      IsNotNull="true"
+      EntityAttrName="CStrana"
+      EntityUsage="KpDatMistransakce"
+      AliasName="C_STRANA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="KpDatMistransakce"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpDatMistransakce"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatMistransakce"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="KpDatMistransakce"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SProtistrana"
+      EntityAttrName="SProtistrana"
+      EntityUsage="KpDatMistransakce"
+      AliasName="S_PROTISTRANA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="KpDatMistransakce"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="KpDatMistransakce"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokument"
+      IsNotNull="true"
+      EntityAttrName="IdDokument"
+      EntityUsage="KpDatMistransakce"
+      AliasName="ID_DOKUMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokumentradek"
+      IsNotNull="true"
+      EntityAttrName="IdDokumentradek"
+      EntityUsage="KpDatMistransakce"
+      AliasName="ID_DOKUMENTRADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="UcSpol"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="UCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcSpol"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="IDUCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProj"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

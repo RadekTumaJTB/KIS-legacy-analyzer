@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDefDeveloperspolecnostView"
+   SelectList="KpDefDeveloperspolecnost.ID_KTGUCETNISPOLECNOST, 
+       KpKtgUcetnispolecnost.S_NAZEV, 
+       KpKtgUcetnispolecnost.ID"
+   FromList="DB_JT.KP_DEF_DEVELOPERSPOLECNOST KpDefDeveloperspolecnost, DB_JT.KP_KTG_UCETNISPOLECNOST KpKtgUcetnispolecnost"
+   Where="KpDefDeveloperspolecnost.ID_KTGUCETNISPOLECNOST = KpKtgUcetnispolecnost.ID"
+   OrderBy="KpKtgUcetnispolecnost.S_NAZEV"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.KpDefDeveloperspolecnostViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDefDeveloperspolecnost"
+      Entity="cz.jtbank.konsolidace.dokument.KpDefDeveloperspolecnost" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpDefDeveloperspolecnost.ID_KTGUCETNISPOLECNOST = KpKtgUcetnispolecnost.ID" />
+         <Attr Name="_queryOrderBy" Value="KpKtgUcetnispolecnost.S_NAZEV" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgUcetnispolecnost"
+      Entity="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost"
+      SourceUsage="cz.jtbank.konsolidace.dokument.KpDefDeveloperspolecnostView.KpDefDeveloperspolecnost"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDefDeveloperspolecnost"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

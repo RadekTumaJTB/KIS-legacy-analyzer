@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDefListbunkanastrojView"
+   SelectList="KpDefListbunkanastroj.ID, 
+       KpDefListbunkanastroj.ID_TYPNASTROJE, 
+
+       KpDefListbunkanastroj.ID_DEFLISTBUNKA, 
+       KpDefListbunkanastroj.DT_PLATNOSTOD, 
+
+       KpDefListbunkanastroj.DT_PLATNOSTDO, 
+       KpDefListbunkanastroj.C_KONTROLABANKA, 
+
+       KpDefListbunkanastroj.C_KONTROLAMIMOBANKU, 
+       KpDefListbunkanastroj.ID_PRODUKTDRUH, 
+
+       KpDefListbunkanastroj.ID_PRODUKTTYP"
+   FromList="DB_JT.KP_DEF_LISTBUNKANASTROJ KpDefListbunkanastroj"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KpDefListbunkanastrojViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDefListbunkanastroj"
+      Entity="cz.jtbank.konsolidace.kapital.KpDefListbunkanastroj" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDefListbunkanastroj"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypnastroje"
+      IsNotNull="true"
+      EntityAttrName="IdTypnastroje"
+      EntityUsage="KpDefListbunkanastroj"
+      AliasName="ID_TYPNASTROJE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDeflistbunka"
+      IsNotNull="true"
+      EntityAttrName="IdDeflistbunka"
+      EntityUsage="KpDefListbunkanastroj"
+      AliasName="ID_DEFLISTBUNKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDefListbunkanastroj"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDefListbunkanastroj"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CKontrolabanka"
+      IsNotNull="true"
+      EntityAttrName="CKontrolabanka"
+      EntityUsage="KpDefListbunkanastroj"
+      AliasName="C_KONTROLABANKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CKontrolamimobanku"
+      IsNotNull="true"
+      EntityAttrName="CKontrolamimobanku"
+      EntityUsage="KpDefListbunkanastroj"
+      AliasName="C_KONTROLAMIMOBANKU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProduktdruh"
+      EntityAttrName="IdProduktdruh"
+      EntityUsage="KpDefListbunkanastroj"
+      AliasName="ID_PRODUKTDRUH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProdukttyp"
+      EntityAttrName="IdProdukttyp"
+      EntityUsage="KpDefListbunkanastroj"
+      AliasName="ID_PRODUKTTYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

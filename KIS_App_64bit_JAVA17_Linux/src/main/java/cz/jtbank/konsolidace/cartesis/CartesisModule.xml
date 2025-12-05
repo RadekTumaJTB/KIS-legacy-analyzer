@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="CartesisModule"
+   ComponentClass="cz.jtbank.konsolidace.cartesis.CartesisModuleImpl"
+   ComponentInterface="cz.jtbank.konsolidace.cartesis.common.CartesisModule" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="VwRepSpolecnostcartesisView1"
+      ViewObjectName="cz.jtbank.konsolidace.cartesis.VwRepSpolecnostcartesisView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="DatKurzlistExportView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.DatKurzlistExportView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepOsobycartesisView1"
+      ViewObjectName="cz.jtbank.konsolidace.cartesis.VwRepOsobycartesisView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpParametryView1"
+      ViewObjectName="cz.jtbank.konsolidace.admin.KpParametryView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisFlowView1"
+      ViewObjectName="cz.jtbank.konsolidace.cartesis.KpCisFlowView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelUcetunifflowView1"
+      ViewObjectName="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflowView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisUcetunifView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpCisUcetunifView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisUcetuniflangView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpCisUcetuniflangView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="CisLocaleView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.CisLocaleView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatZdaFlowZustatekView1"
+      ViewObjectName="cz.jtbank.konsolidace.cartesis.KpDatZdaFlowZustatekView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladzahlaviView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladzahlaviView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatZdaFlowZustatekLocalView1"
+      ViewObjectName="cz.jtbank.konsolidace.cartesis.KpDatZdaFlowZustatekLocalView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatZdaFlowProtistranaView1"
+      ViewObjectName="cz.jtbank.konsolidace.cartesis.KpDatZdaFlowProtistranaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatZdaFlowProtistranaLocalView1"
+      ViewObjectName="cz.jtbank.konsolidace.cartesis.KpDatZdaFlowProtistranaLocalView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatZdaFlowSegmentLocalView1"
+      ViewObjectName="cz.jtbank.konsolidace.cartesis.KpDatZdaFlowSegmentLocalView" >
+   </ViewUsage>
+</AppModule>

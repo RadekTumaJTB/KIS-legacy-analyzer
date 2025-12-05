@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepUcspolucetniView"
+   SelectList="VwRepUcspolucetni.ZODPOVEDNAUCETNI, 
+       VwRepUcspolucetni.POCET"
+   FromList="DB_JT.VW_REP_UCSPOLUCETNI VwRepUcspolucetni"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepUcspolucetniViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepUcspolucetni"
+      Entity="cz.jtbank.konsolidace.report.VwRepUcspolucetni" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Zodpovednaucetni"
+      EntityAttrName="Zodpovednaucetni"
+      EntityUsage="VwRepUcspolucetni"
+      AliasName="ZODPOVEDNAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pocet"
+      EntityAttrName="Pocet"
+      EntityUsage="VwRepUcspolucetni"
+      AliasName="POCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

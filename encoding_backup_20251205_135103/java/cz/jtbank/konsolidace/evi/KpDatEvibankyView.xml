@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatEvibankyView"
+   SelectList="KpDatEvibanky.ID, 
+       KpDatEvibanky.IDBANKA, 
+       KpDatEvibanky.DT_PLATNOSTOD, 
+
+       KpDatEvibanky.DT_PLATNOSTDO, 
+       KpDatEvibanky.S_POZNAMKA, 
+
+       KpKtgSpolecnost.S_NAZEV AS SPOLECNOST, 
+       KpKtgSpolecnost.ID 
+AS ID_SPOL, 
+       KpDatEvibanky.ID_ADMINSPOLECNOST, 
+      
+ KpDatEvibanky.C_NAVRH"
+   FromList="DB_JT.KP_DAT_EVIBANKY KpDatEvibanky, DB_JT.KP_KTG_SPOLECNOST KpKtgSpolecnost"
+   Where="KpDatEvibanky.IDBANKA = KpKtgSpolecnost.ID (+)"
+   OrderBy="KpDatEvibanky.DT_PLATNOSTOD DESC,KpDatEvibanky.DT_PLATNOSTDO"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.evi.KpDatEvibankyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatEvibanky"
+      Entity="cz.jtbank.konsolidace.evi.KpDatEvibanky" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpDatEvibanky.IDBANKA = KpKtgSpolecnost.ID (+)" />
+         <Attr Name="_queryOrderBy" Value="KpDatEvibanky.DT_PLATNOSTOD DESC,KpDatEvibanky.DT_PLATNOSTDO" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgSpolecnost"
+      Entity="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnost"
+      SourceUsage="cz.jtbank.konsolidace.evi.KpDatEvibankyView.KpDatEvibanky"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpDatEvibanky.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnost.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatEvibanky"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Idbanka"
+      IsNotNull="true"
+      EntityAttrName="Idbanka"
+      EntityUsage="KpDatEvibanky"
+      AliasName="IDBANKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDatEvibanky"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDatEvibanky"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="KpDatEvibanky"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgSpolecnost"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSpol"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgSpolecnost"
+      AliasName="ID_SPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdminspolecnost"
+      EntityAttrName="IdAdminspolecnost"
+      EntityUsage="KpDatEvibanky"
+      AliasName="ID_ADMINSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CNavrh"
+      EntityAttrName="CNavrh"
+      EntityUsage="KpDatEvibanky"
+      AliasName="C_NAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

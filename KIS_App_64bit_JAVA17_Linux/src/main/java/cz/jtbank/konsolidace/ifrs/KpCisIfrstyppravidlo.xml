@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisIfrstyppravidlo"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_IFRSTYPPRAVIDLO"
+   AliasName="KpCisIfrstyppravidlo"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="132"
+   RowClass="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidloImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.ifrs.common.KpCisIfrstyppravidloImplMsgBundle" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_IFRSTYPPRAVIDLO"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SZkratka"
+      IsNotNull="true"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_ZKRATKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_IFRSTYPPRAVIDLO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="512"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_IFRSTYPPRAVIDLO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="512" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="BCheck"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="B_CHECK"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_IFRSTYPPRAVIDLO"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CTyp"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_TYP"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_IFRSTYPPRAVIDLO"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="NnKpifrstyppravidloId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidlo.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPIFRSTYPPRAVIDLO_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpifrstyppravidloCheck" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidlo.BCheck" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPIFRSTYPPRAVIDLO_CHECK" />
+         <Attr Name="_checkCondition" Value=" b_check is not null and b_check in ( &#39;0&#39;, &#39;1&#39;) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpifrstyppravidloZkratka" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidlo.SZkratka" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPIFRSTYPPRAVIDLO_ZKRATKA" />
+         <Attr Name="_checkCondition" Value="&#34;S_ZKRATKA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpifrstyppravidloTyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidlo.CTyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPIFRSTYPPRAVIDLO_TYP" />
+         <Attr Name="_checkCondition" Value=" c_typ is not null and c_typ in ( &#39;I&#39;, &#39;K&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpifrstyppravidlo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpCisIfrstyppravidlo.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPIFRSTYPPRAVIDLO" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

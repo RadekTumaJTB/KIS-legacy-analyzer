@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatBudgetmusteknakladchybiView"
+   SelectList="VwDatBudgetmusteknakladchybi.ID_CISSUBJECT, 
+       VwDatBudgetmusteknakladchybi.S_POPIS, 
+       VwDatBudgetmusteknakladchybi.S_UCET"
+   FromList="DB_JT.VW_DAT_BUDGETMUSTEKNAKLADCHYBI VwDatBudgetmusteknakladchybi"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwDatBudgetmusteknakladchybiViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatBudgetmusteknakladchybi"
+      Entity="cz.jtbank.konsolidace.doklady.VwDatBudgetmusteknakladchybi" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdCissubject"
+      EntityAttrName="IdCissubject"
+      EntityUsage="VwDatBudgetmusteknakladchybi"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwDatBudgetmusteknakladchybi"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="VwDatBudgetmusteknakladchybi"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

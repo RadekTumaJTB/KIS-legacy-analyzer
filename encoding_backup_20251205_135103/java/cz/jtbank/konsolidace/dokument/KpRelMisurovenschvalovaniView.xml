@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelMisurovenschvalovaniView"
+   SelectList="KpRelMisurovenschvalovani.ID_CISTYPTRANSAKCE, 
+       KpRelMisurovenschvalovani.NL_UROVEN, 
+       KpRelMisurovenschvalovani.ND_UROVENSCHVALOVANI, 
+       KpRelMisurovenschvalovani.ID_KTGUCETNISPOLECNOST, 
+       KpRelMisurovenschvalovani.ID_KTGPROJEKT"
+   FromList="DB_JT.KP_REL_MISUROVENSCHVALOVANI KpRelMisurovenschvalovani"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.KpRelMisurovenschvalovaniViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelMisurovenschvalovani"
+      Entity="cz.jtbank.konsolidace.dokument.KpRelMisurovenschvalovani"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdCistyptransakce"
+      IsNotNull="true"
+      EntityAttrName="IdCistyptransakce"
+      EntityUsage="KpRelMisurovenschvalovani"
+      AliasName="ID_CISTYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlUroven"
+      IsNotNull="true"
+      EntityAttrName="NlUroven"
+      EntityUsage="KpRelMisurovenschvalovani"
+      AliasName="NL_UROVEN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdUrovenschvalovani"
+      IsNotNull="true"
+      EntityAttrName="NdUrovenschvalovani"
+      EntityUsage="KpRelMisurovenschvalovani"
+      AliasName="ND_UROVENSCHVALOVANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpRelMisurovenschvalovani"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="KpRelMisurovenschvalovani"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

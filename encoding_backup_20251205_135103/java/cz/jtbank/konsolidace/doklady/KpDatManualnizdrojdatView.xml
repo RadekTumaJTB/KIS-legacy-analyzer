@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatManualnizdrojdatView"
+   SelectList="KpDatManualnizdrojdat.ID, 
+       KpDatManualnizdrojdat.ID_KTGUCETNISPOLECNOST, 
+
+       KpDatManualnizdrojdat.S_MENA, 
+       KpDatManualnizdrojdat.S_UCET, 
+
+       KpDatManualnizdrojdat.ND_CASTKAMENA, 
+       KpDatManualnizdrojdat.ND_CASTKALOCAL, 
+
+       KpDatManualnizdrojdat.S_POPIS, 
+       KpDatManualnizdrojdat.DT_DATUM, 
+
+       KpDatManualnizdrojdat.ID_KTGUCETNISPOLECNOSTUNIF, 
+  
+     KpDatManualnizdrojdat.ID_KTGSPOLECNOST, 
+       KpDatManualnizdrojdat.ID_KTGPROJEKT, 
+
+       KpDatManualnizdrojdat.ID_KTGODBOR, 
+       KpDatManualnizdrojdat.S_UZIVATEL, 
+
+       KpDatManualnizdrojdat.C_SETNULL, 
+       KpDatManualnizdrojdat.C_TYP, 
+
+       KpDatManualnizdrojdat.ID_KTGPROJEKTOLD, 
+       KpDatManualnizdrojdat.ID_KTGODBOROLD, 
+
+       KpDatManualnizdrojdat.DT_DATUMPLATNOSTOD, 
+       KpDatManualnizdrojdat.DT_DATUMPLATNOSTDO, 
+
+       KpDatManualnizdrojdat.S_UCETORIGINAL, 
+       KpDatManualnizdrojdat.ID_CISUCETUNIF, 
+
+       (select uu.S_UCET from db_jt.kp_cis_ucetUnif uu where 
+uu.ID = KpDatManualnizdrojdat.ID_CISUCETUNIF) AS SUU"
+   FromList="DB_JT.KP_DAT_MANUALNIZDROJDAT KpDatManualnizdrojdat"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatManualnizdrojdatViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatManualnizdrojdat"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatManualnizdrojdat" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      IsNotNull="true"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      IsNotNull="true"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnostunif"
+      EntityAttrName="IdKtgucetnispolecnostunif"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="ID_KTGUCETNISPOLECNOSTUNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CSetnull"
+      IsNotNull="true"
+      EntityAttrName="CSetnull"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="C_SETNULL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CTyp"
+      EntityAttrName="CTyp"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="C_TYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojektold"
+      EntityAttrName="IdKtgprojektold"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="ID_KTGPROJEKTOLD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodborold"
+      EntityAttrName="IdKtgodborold"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="ID_KTGODBOROLD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumplatnostod"
+      EntityAttrName="DtDatumplatnostod"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="DT_DATUMPLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumplatnostdo"
+      EntityAttrName="DtDatumplatnostdo"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="DT_DATUMPLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetoriginal"
+      EntityAttrName="SUcetoriginal"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="S_UCETORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisucetunif"
+      EntityAttrName="IdCisucetunif"
+      EntityUsage="KpDatManualnizdrojdat"
+      AliasName="ID_CISUCETUNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUU"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="20"
+      Type="java.lang.String"
+      AliasName="SUU"
+      ColumnType="VARCHAR2"
+      Expression="(select uu.S_UCET from db_jt.kp_cis_ucetUnif uu where uu.ID = KpDatManualnizdrojdat.ID_CISUCETUNIF)"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+</ViewObject>

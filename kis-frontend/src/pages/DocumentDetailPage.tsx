@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import DocumentDetail from '../components/DocumentDetail';
+import DocumentDetailEnhanced from '../components/DocumentDetailEnhanced';
 import './DocumentDetailPage.css';
 
 export default function DocumentDetailPage() {
@@ -13,7 +13,7 @@ export default function DocumentDetailPage() {
           ← Zpět na seznam
         </Link>
       </div>
-      <DocumentDetail documentId={documentId} />
+      <DocumentDetailEnhanced documentId={documentId} />
     </div>
   );
 }

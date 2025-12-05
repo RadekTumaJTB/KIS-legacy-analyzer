@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepUcspolpodiltransakciView"
+   SelectList="VwRepUcspolpodiltransakci.ID, 
+       VwRepUcspolpodiltransakci.SPOLECNOST, 
+
+       VwRepUcspolpodiltransakci.VYNOSY, 
+       VwRepUcspolpodiltransakci.VYNOSYPLUS, 
+
+       VwRepUcspolpodiltransakci.NAKLADY, 
+       VwRepUcspolpodiltransakci.NAKLADYPLUS, 
+
+       VwRepUcspolpodiltransakci.PODILVYNOSU, 
+       VwRepUcspolpodiltransakci.PODILNAKLADU, 
+
+       VwRepUcspolpodiltransakci.DATUM"
+   FromList="DB_JT.VW_REP_UCSPOLPODILTRANSAKCI VwRepUcspolpodiltransakci"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepUcspolpodiltransakciViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepUcspolpodiltransakci"
+      Entity="cz.jtbank.konsolidace.report.VwRepUcspolpodiltransakci" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwRepUcspolpodiltransakci"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwRepUcspolpodiltransakci"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Vynosy"
+      EntityAttrName="Vynosy"
+      EntityUsage="VwRepUcspolpodiltransakci"
+      AliasName="VYNOSY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Vynosyplus"
+      EntityAttrName="Vynosyplus"
+      EntityUsage="VwRepUcspolpodiltransakci"
+      AliasName="VYNOSYPLUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Naklady"
+      EntityAttrName="Naklady"
+      EntityUsage="VwRepUcspolpodiltransakci"
+      AliasName="NAKLADY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Nakladyplus"
+      EntityAttrName="Nakladyplus"
+      EntityUsage="VwRepUcspolpodiltransakci"
+      AliasName="NAKLADYPLUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Podilvynosu"
+      EntityAttrName="Podilvynosu"
+      EntityUsage="VwRepUcspolpodiltransakci"
+      AliasName="PODILVYNOSU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Podilnakladu"
+      EntityAttrName="Podilnakladu"
+      EntityUsage="VwRepUcspolpodiltransakci"
+      AliasName="PODILNAKLADU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datum"
+      EntityAttrName="Datum"
+      EntityUsage="VwRepUcspolpodiltransakci"
+      AliasName="DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

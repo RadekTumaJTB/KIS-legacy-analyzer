@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwJtSpolecnostpravifrshistorView"
+   SelectList="VwJtSpolecnostpravifrshistor.ID, 
+       VwJtSpolecnostpravifrshistor.ID_PARENT, 
+
+       VwJtSpolecnostpravifrshistor.ID_PORADI, 
+       VwJtSpolecnostpravifrshistor.ID_CISIFRSTYPPRAVIDLO, 
+
+       VwJtSpolecnostpravifrshistor.ID_KTGUCETNISPOLECNOST, 
+
+       VwJtSpolecnostpravifrshistor.DT_PLATNOSTOD, 
+       VwJtSpolecnostpravifrshistor.DT_PLATNOSTDO, 
+
+       VwJtSpolecnostpravifrshistor.S_POZNAMKA, 
+       VwJtSpolecnostpravifrshistor.C_VALIDNI, 
+
+       VwJtSpolecnostpravifrshistor.S_ERRORHLASKA, 
+       VwJtSpolecnostpravifrshistor.DT_ZMENADEFINICEDETAIL, 
+
+       VwJtSpolecnostpravifrshistor.DT_KONTROLA, 
+       VwJtSpolecnostpravifrshistor.S_VALIDACEUCET, 
+
+       VwJtSpolecnostpravifrshistor.ND_VALIDACEHODNOTA, 
+   
+    VwJtSpolecnostpravifrshistor.DT_ZMENA, 
+       VwJtSpolecnostpravifrshistor.S_UZIVATEL, 
+
+       VwJtSpolecnostpravifrshistor.S_POPIS, 
+       VwJtSpolecnostpravifrshistor.S_ZKRATKA, 
+
+       VwJtSpolecnostpravifrshistor.ROWID"
+   FromList="DB_JT.VW_JT_SPOLECNOSTPRAVIFRSHISTOR VwJtSpolecnostpravifrshistor"
+   OrderBy="DT_PLATNOSTDO"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravifrshistorViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwJtSpolecnostpravifrshistor"
+      Entity="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravifrshistor" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="DT_PLATNOSTDO" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdParent"
+      IsNotNull="true"
+      EntityAttrName="IdParent"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="ID_PARENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPoradi"
+      IsNotNull="true"
+      EntityAttrName="IdPoradi"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="ID_PORADI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisifrstyppravidlo"
+      IsNotNull="true"
+      EntityAttrName="IdCisifrstyppravidlo"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="ID_CISIFRSTYPPRAVIDLO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CValidni"
+      EntityAttrName="CValidni"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="C_VALIDNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SErrorhlaska"
+      EntityAttrName="SErrorhlaska"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="S_ERRORHLASKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZmenadefinicedetail"
+      IsNotNull="true"
+      EntityAttrName="DtZmenadefinicedetail"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="DT_ZMENADEFINICEDETAIL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtKontrola"
+      IsNotNull="true"
+      EntityAttrName="DtKontrola"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="DT_KONTROLA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SValidaceucet"
+      EntityAttrName="SValidaceucet"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="S_VALIDACEUCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdValidacehodnota"
+      EntityAttrName="NdValidacehodnota"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="ND_VALIDACEHODNOTA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZmena"
+      IsNotNull="true"
+      EntityAttrName="DtZmena"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="DT_ZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      EntityAttrName="SUzivatel"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZkratka"
+      IsNotNull="true"
+      EntityAttrName="SZkratka"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="S_ZKRATKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="VwJtSpolecnostpravifrshistor"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

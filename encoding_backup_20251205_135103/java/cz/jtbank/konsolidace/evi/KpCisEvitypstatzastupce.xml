@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisEvitypstatzastupce"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_EVITYPSTATZASTUPCE"
+   AliasName="KpCisEvitypstatzastupce"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.evi.KpCisEvitypstatzastupceImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_EVITYPSTATZASTUPCE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazev"
+      IsNotNull="true"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_EVITYPSTATZASTUPCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CSpojovatvazby"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_SPOJOVATVAZBY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_EVITYPSTATZASTUPCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpKtgEvistatutarnizastupce"
+      Association="cz.jtbank.konsolidace.evi.FkKtgevistatzastupceTypAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkKtgevistatzastupceTypAssoc.KpKtgEvistatutarnizastupce"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkKtgevistatzastupceTypAssoc.KpCisEvitypstatzastupce"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="NnEvitypstatzastupceId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpCisEvitypstatzastupce.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_EVITYPSTATZASTUPCE_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnEvitypstatzastupceNazev" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpCisEvitypstatzastupce.SNazev" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_EVITYPSTATZASTUPCE_NAZEV" />
+         <Attr Name="_checkCondition" Value="&#34;S_NAZEV&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkEvitypstatzastupce" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpCisEvitypstatzastupce.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_EVITYPSTATZASTUPCE" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

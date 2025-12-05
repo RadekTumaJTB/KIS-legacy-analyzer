@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepSchvalovakpostupDetailView"
+   SelectList="VwRepSchvalovakpostupDetail.ID, 
+       VwRepSchvalovakpostupDetail.ID_DOKUMENT, 
+
+       VwRepSchvalovakpostupDetail.ID_ODBOR, 
+       VwRepSchvalovakpostupDetail.ID_PROJEKT, 
+
+       VwRepSchvalovakpostupDetail.ND_CASTKA, 
+       VwRepSchvalovakpostupDetail.ID_ODBOROO, 
+
+       VwRepSchvalovakpostupDetail.DT_SCHVALENOODBOR, 
+     
+  VwRepSchvalovakpostupDetail.ID_PROJEKTMAN, 
+       VwRepSchvalovakpostupDetail.DT_SCHVALENOPROJEKT, 
+
+       VwRepSchvalovakpostupDetail.ID_UCSPOLOO, 
+       VwRepSchvalovakpostupDetail.DT_SCHVALENOUCSPOL, 
+
+       VwRepSchvalovakpostupDetail.ID_UCSPOLTOP, 
+       VwRepSchvalovakpostupDetail.DT_SCHVALENOTOP, 
+
+       VwRepSchvalovakpostupDetail.S_KOMENTAR, 
+       VwRepSchvalovakpostupDetail.DT_DATUMPREFAKT, 
+
+       VwRepSchvalovakpostupDetail.ID_PREFAKT, 
+       VwRepSchvalovakpostupDetail.C_KPREFAKT, 
+
+       VwRepSchvalovakpostupDetail.DT_DATUMZADANI, 
+       VwRepSchvalovakpostupDetail.C_REMOVED, 
+
+       VwRepSchvalovakpostupDetail.C_ZOBJEDNAVKY, 
+       VwRepSchvalovakpostupDetail.ID_ZAMITNUTO, 
+
+       VwRepSchvalovakpostupDetail.DT_ZAMITNUTO, 
+       VwRepSchvalovakpostupDetail.S_ZAMITNUTO, 
+
+       VwRepSchvalovakpostupDetail.ID_DOKUMENTORIG, 
+       
+VwRepSchvalovakpostupDetail.ID_ODBOROOREAL, 
+       VwRepSchvalovakpostupDetail.ID_PROJEKTMANREAL, 
+
+       VwRepSchvalovakpostupDetail.ID_UCSPOLOOREAL, 
+       
+VwRepSchvalovakpostupDetail.ID_UCSPOLTOPREAL, 
+       VwRepSchvalovakpostupDetail.ID_TYPTRANSAKCE, 
+
+       VwRepSchvalovakpostupDetail.RO, 
+       VwRepSchvalovakpostupDetail.PM, 
+
+       VwRepSchvalovakpostupDetail.OO, 
+       VwRepSchvalovakpostupDetail.TOP, 
+
+       VwRepSchvalovakpostupDetail.RRO, 
+       VwRepSchvalovakpostupDetail.RPM, 
+
+       VwRepSchvalovakpostupDetail.ROO, 
+       VwRepSchvalovakpostupDetail.RTOP, 
+
+       VwRepSchvalovakpostupDetail.ZA"
+   FromList="DB_JT.VW_REP_SCHVALOVAKPOSTUPDETAIL VwRepSchvalovakpostupDetail"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostupDetailViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepSchvalovakpostupDetail"
+      Entity="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostupDetail" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokument"
+      IsNotNull="true"
+      EntityAttrName="IdDokument"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_DOKUMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdbor"
+      EntityAttrName="IdOdbor"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_ODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjekt"
+      EntityAttrName="IdProjekt"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_PROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastka"
+      EntityAttrName="NdCastka"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdboroo"
+      EntityAttrName="IdOdboroo"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_ODBOROO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenoodbor"
+      EntityAttrName="DtSchvalenoodbor"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="DT_SCHVALENOODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjektman"
+      EntityAttrName="IdProjektman"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_PROJEKTMAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenoprojekt"
+      EntityAttrName="DtSchvalenoprojekt"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="DT_SCHVALENOPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoloo"
+      EntityAttrName="IdUcspoloo"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_UCSPOLOO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenoucspol"
+      EntityAttrName="DtSchvalenoucspol"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="DT_SCHVALENOUCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoltop"
+      EntityAttrName="IdUcspoltop"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_UCSPOLTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenotop"
+      EntityAttrName="DtSchvalenotop"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="DT_SCHVALENOTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKomentar"
+      EntityAttrName="SKomentar"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="S_KOMENTAR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumprefakt"
+      EntityAttrName="DtDatumprefakt"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="DT_DATUMPREFAKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPrefakt"
+      EntityAttrName="IdPrefakt"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_PREFAKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CKprefakt"
+      EntityAttrName="CKprefakt"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="C_KPREFAKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzadani"
+      EntityAttrName="DtDatumzadani"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="DT_DATUMZADANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CRemoved"
+      EntityAttrName="CRemoved"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="C_REMOVED"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CZobjednavky"
+      EntityAttrName="CZobjednavky"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="C_ZOBJEDNAVKY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdZamitnuto"
+      EntityAttrName="IdZamitnuto"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZamitnuto"
+      EntityAttrName="DtZamitnuto"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="DT_ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZamitnuto"
+      EntityAttrName="SZamitnuto"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="S_ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokumentorig"
+      EntityAttrName="IdDokumentorig"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_DOKUMENTORIG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdborooreal"
+      EntityAttrName="IdOdborooreal"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_ODBOROOREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjektmanreal"
+      EntityAttrName="IdProjektmanreal"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_PROJEKTMANREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspolooreal"
+      EntityAttrName="IdUcspolooreal"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_UCSPOLOOREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoltopreal"
+      EntityAttrName="IdUcspoltopreal"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_UCSPOLTOPREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyptransakce"
+      EntityAttrName="IdTyptransakce"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ID_TYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ro"
+      EntityAttrName="Ro"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="RO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pm"
+      EntityAttrName="Pm"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="PM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Oo"
+      EntityAttrName="Oo"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="OO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Top"
+      EntityAttrName="Top"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="TOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Rro"
+      EntityAttrName="Rro"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="RRO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Rpm"
+      EntityAttrName="Rpm"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="RPM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Roo"
+      EntityAttrName="Roo"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ROO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Rtop"
+      EntityAttrName="Rtop"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="RTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Za"
+      EntityAttrName="Za"
+      EntityUsage="VwRepSchvalovakpostupDetail"
+      AliasName="ZA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

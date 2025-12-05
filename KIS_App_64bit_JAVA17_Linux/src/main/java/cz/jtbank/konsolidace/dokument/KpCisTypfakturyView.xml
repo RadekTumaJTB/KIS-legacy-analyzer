@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisTypfakturyView"
+   SelectList="KpCisTypfaktury.ID, 
+       KpCisTypfaktury.S_POPIS, 
+       KpCisTypfaktury.TFID, 
+       KpCisTypfaktury.S_FEIS_POPIS, 
+       KpCisTypfaktury.ID_KTGUCETNISPOLECNOST, 
+       KpCisTypfaktury.STREDISKO, 
+       KpCisTypfaktury.C_PLATNOST"
+   FromList="DB_JT.KP_CIS_TYPFAKTURY KpCisTypfaktury"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.KpCisTypfakturyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisTypfaktury"
+      Entity="cz.jtbank.konsolidace.dokument.KpCisTypfaktury" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisTypfaktury"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisTypfaktury"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Tfid"
+      IsNotNull="true"
+      EntityAttrName="Tfid"
+      EntityUsage="KpCisTypfaktury"
+      AliasName="TFID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SFeisPopis"
+      EntityAttrName="SFeisPopis"
+      EntityUsage="KpCisTypfaktury"
+      AliasName="S_FEIS_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpCisTypfaktury"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Stredisko"
+      EntityAttrName="Stredisko"
+      EntityUsage="KpCisTypfaktury"
+      AliasName="STREDISKO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPlatnost"
+      EntityAttrName="CPlatnost"
+      EntityUsage="KpCisTypfaktury"
+      AliasName="C_PLATNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwKpDokladvazbauserindex"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_KP_DOKLADVAZBAUSERINDEX"
+   AliasName="VwKpDokladvazbauserindex"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.VwKpDokladvazbauserindexImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdDoklad"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADVAZBAUSERINDEX"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetniskupina"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISKUPINA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADVAZBAUSERINDEX"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnostfrom"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOSTFROM"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADVAZBAUSERINDEX"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnostto"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOSTTO"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADVAZBAUSERINDEX"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdSumlocal"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_SUMLOCAL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADVAZBAUSERINDEX" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdSummena"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_SUMMENA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_DOKLADVAZBAUSERINDEX" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwkpdokladvazbauserindexPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladvazbauserindex.IdDoklad" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladvazbauserindex.IdKtgucetniskupina" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladvazbauserindex.IdKtgucetnispolecnostfrom" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwKpDokladvazbauserindex.IdKtgucetnispolecnostto" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWKPDOKLADVAZBAUSERINDEX_PRIMA" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

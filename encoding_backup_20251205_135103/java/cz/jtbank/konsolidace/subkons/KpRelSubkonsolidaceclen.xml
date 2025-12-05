@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpRelSubkonsolidaceclen"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+   AliasName="KpRelSubkonsolidaceclen"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclenImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdKtgsubkonsolidace"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGSUBKONSOLIDACE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CClen"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_CLEN"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCissubtypclenstvi"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISSUBTYPCLENSTVI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdPomerucasti"
+      Precision="5"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_POMERUCASTI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CPropisujvazby"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_PROPISUJVAZBY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetniskupina"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISKUPINA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CEquity"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_EQUITY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtClenstviod"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_CLENSTVIOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtClenstvido"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_CLENSTVIDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDokladvazbyod"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DOKLADVAZBYOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDokladvazbydo"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DOKLADVAZBYDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CSmerclenstviod"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_SMERCLENSTVIOD"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CSmerdetailclenstviod"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_SMERDETAILCLENSTVIOD"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CSmerclenstvido"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_SMERCLENSTVIDO"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CSmerdetailclenstvido"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_SMERDETAILCLENSTVIDO"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_REL_SUBKONSOLIDACECLEN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisSubtypclenstvi"
+      Association="cz.jtbank.konsolidace.subkons.FkKprelsubkonclenTypclenstviAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.subkons.FkKprelsubkonclenTypclenstviAssoc.KpCisSubtypclenstvi"
+      AssociationOtherEnd="cz.jtbank.konsolidace.subkons.FkKprelsubkonclenTypclenstviAssoc.KpRelSubkonsolidaceclen"
+      Type="cz.jtbank.konsolidace.subkons.KpCisSubtypclenstviImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="CnKprelsubkonclenPropis" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.CPropisujvazby" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPRELSUBKONCLEN_PROPIS" />
+         <Attr Name="_checkCondition" Value=" c_propisujVazby is not null and c_propisujVazby in ( &#39;0&#39;, &#39;1&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpsubkonsolidaceclen" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.IdKtgucetniskupina" />
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.IdKtgsubkonsolidace" />
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.IdKtgucetnispolecnost" />
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.DtClenstviod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPSUBKONSOLIDACECLEN" />
+         <Attr Name="_isPrimary" Value="true" />
+         <Attr Name="_isNotNull" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CKprelsubkonclenClen" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.CEquity" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="C_KPRELSUBKONCLEN_CLEN" />
+         <Attr Name="_checkCondition" Value=" c_equity in ( &#39;0&#39;, &#39;1&#39;) and c_equity is not null " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKprelsubkonsolidaceSubk" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.IdKtgsubkonsolidace" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPRELSUBKONSOLIDACE_SUBK" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGSUBKONSOLIDACE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CKprelsubkonclenEquity" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.CClen" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="C_KPRELSUBKONCLEN_EQUITY" />
+         <Attr Name="_checkCondition" Value=" c_equity in ( &#39;0&#39;, &#39;1&#39;)  " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKprelsubkonsolidaceDatdo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.DtClenstvido" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPRELSUBKONSOLIDACE_DATDO" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKprelsubkonsolidaceSkup" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.IdKtgucetniskupina" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPRELSUBKONSOLIDACE_SKUP" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGUCETNISKUPINA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKprelsubkonsolidaceDatod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.DtClenstviod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPRELSUBKONSOLIDACE_DATOD" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKprelucetniskupinaclen" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPRELUCETNISKUPINACLEN" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKprelsubkonsolidaceSubk" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.IdKtgsubkonsolidace" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPRELSUBKONSOLIDACE_SUBK" />
+         <Attr Name="_referencedKey" Value="PK_KPSUBKONSOLIDACE" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKprelsubkonclenTypclenstvi" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.IdCissubtypclenstvi" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPRELSUBKONCLEN_TYPCLENSTVI" />
+         <Attr Name="_referencedKey" Value="PK_CISSUBTYPCLENSTVI" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKprelsubkonclenSkupina" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen.IdKtgucetniskupina" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPRELSUBKONCLEN_SKUPINA" />
+         <Attr Name="_referencedKey" Value="PK_KPKTGUCETNISKUPINA" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

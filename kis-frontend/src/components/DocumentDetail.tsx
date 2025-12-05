@@ -80,7 +80,7 @@ export default function DocumentDetail({ documentId }: Props) {
         <div className="info-card">
           <h3>🏢 Společnost</h3>
           <p className="company-name">{document.company.name}</p>
-          <p className="company-ico">IČO: {document.company.ico}</p>
+          <p className="company-ico">IČO: {document.company.registrationNumber}</p>
         </div>
 
         <div className="info-card">

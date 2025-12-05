@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpTmpCissubjectView"
+   SelectList="KpTmpCissubject.ID, 
+       KpTmpCissubject.S_POPIS, 
+       KpTmpKtgdoklad.ID AS ID1, 
+       KpTmpKtgdoklad.ID_CISDOKLAD, 
+       KpTmpKtgdoklad.S_POPIS AS SPOPIS1"
+   FromList="DB_JT.KP_CIS_SUBJECT KpTmpCissubject, DB_JT.KP_KTG_DOKLAD KpTmpKtgdoklad"
+   Where="KpTmpCissubject.ID = KpTmpKtgdoklad.ID_CISSUBJECT /*AND KpTmpKtgdoklad.ID_CISDOKLAD = 1*/"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.mustky.KpTmpCissubjectViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpTmpCissubject"
+      Entity="cz.jtbank.konsolidace.mustky.KpTmpCissubject"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpTmpCissubject.ID = KpTmpKtgdoklad.ID_CISSUBJECT /*AND KpTmpKtgdoklad.ID_CISDOKLAD = 1*/" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpTmpKtgdoklad"
+      Entity="cz.jtbank.konsolidace.mustky.KpTmpKtgdoklad"
+      Association="cz.jtbank.konsolidace.mustky.FkKptmpktgdokladSubjectAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.mustky.FkKptmpktgdokladSubjectAssoc.KpTmpKtgdoklad"
+      SourceUsage="cz.jtbank.konsolidace.mustky.KpTmpCissubjectView.KpTmpCissubject"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCissubject.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.mustky.KpTmpKtgdoklad.IdTmpcissubject" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpTmpCissubject"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpTmpCissubject"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id1"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpTmpKtgdoklad"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTmpcisdoklad"
+      IsNotNull="true"
+      EntityAttrName="IdTmpcisdoklad"
+      EntityUsage="KpTmpKtgdoklad"
+      AliasName="ID_CISDOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopisDoklad"
+      EntityAttrName="SPopis"
+      EntityUsage="KpTmpKtgdoklad"
+      AliasName="SPOPIS1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

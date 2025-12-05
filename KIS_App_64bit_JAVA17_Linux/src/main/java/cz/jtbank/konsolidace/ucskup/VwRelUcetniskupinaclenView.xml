@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRelUcetniskupinaclenView"
+   SelectList="VwRelUcetniskupinaclen.ID_KTGUCETNISKUPINA, 
+       VwRelUcetniskupinaclen.ID_KTGUCETNISPOLECNOST, 
+       VwRelUcetniskupinaclen.DT_PLATNOSTOD, 
+       VwRelUcetniskupinaclen.DT_PLATNOSTDO, 
+       VwRelUcetniskupinaclen.S_NAZEV"
+   FromList="DB_JT.VW_REL_UCETNISKUPINACLEN VwRelUcetniskupinaclen"
+   OrderBy="S_NAZEV"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.VwRelUcetniskupinaclenViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRelUcetniskupinaclen"
+      Entity="cz.jtbank.konsolidace.ucskup.VwRelUcetniskupinaclen" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="S_NAZEV" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgucetniskupina"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetniskupina"
+      EntityUsage="VwRelUcetniskupinaclen"
+      AliasName="ID_KTGUCETNISKUPINA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwRelUcetniskupinaclen"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwRelUcetniskupinaclen"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwRelUcetniskupinaclen"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwRelUcetniskupinaclen"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="DokumentModule"
+   ComponentClass="cz.jtbank.konsolidace.dokument.DokumentModuleImpl"
+   ComponentInterface="cz.jtbank.konsolidace.dokument.common.DokumentModule" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="KpKtgUsekView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpKtgUsekView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgOdborView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpKtgOdborView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisTyptransakceView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpCisTyptransakceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisDokumentView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpCisDokumentView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatSchvalovakradekView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwDatSchvalovakradekView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgProjektView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.KpKtgProjektView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisProjektkategorieView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.KpCisProjektkategorieView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisProjektjtView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.KpCisProjektjtView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisProjektskupView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.KpCisProjektskupView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisProjektpbView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.KpCisProjektpbView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisProjektuverView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.KpCisProjektuverView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgAppuserView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KtgAppuserView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisMenaView1"
+      ViewObjectName="cz.jtbank.konsolidace.fininv.KpCisMenaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKtgOdborView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwKtgOdborView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDoczastupView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpDatDoczastupView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisDokumentstatusView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpCisDokumentstatusView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisDokumentspoltypView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpCisDokumentspoltypView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelAppuserDocucspolView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpRelAppuserDocucspolView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpZemeucspolView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwKpZemeucspolView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisProjektcashflowtypView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.KpCisProjektcashflowtypView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisMisuctymddView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpCisMisuctymddView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisTyptransakceEditView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpCisTyptransakceEditView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisTyptransakcegroupView1"
+      ViewObjectName="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroupView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelProjektucspolView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.KpRelProjektucspolView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisIfrssegmentView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpCisIfrssegmentView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisIfrssubsegmentView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpCisIfrssubsegmentView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisMngsegmentView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpCisMngsegmentView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatBudgetView1"
+      ViewObjectName="cz.jtbank.konsolidace.budget.VwDatBudgetView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatBudgetprojektView1"
+      ViewObjectName="cz.jtbank.konsolidace.budget.VwDatBudgetprojektView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDefDeveloperspolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpDefDeveloperspolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisDokumentuhradaView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpCisDokumentuhradaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepSchvalovakpostupView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostupView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgSpolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpTmpCissubjectView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpTmpCissubjectView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostView2"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelMisurovenschvalovaniView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpRelMisurovenschvalovaniView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepSchvalovakpostupDetailView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostupDetailView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRelGestortransakceView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwRelGestortransakceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepSchvalovakhlavaView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakhlavaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepSchvalovakhlavadetailView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakhlavadetailView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRelGestortransakceSpolView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwRelGestortransakceSpolView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRelGestortransakceSpolView2"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwRelGestortransakceSpolView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatSchvalovakAllView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwDatSchvalovakAllView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisTypfakturyView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpCisTypfakturyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwDatSchvalovakView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwDatSchvalovakView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisTypTranCapexOpexView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpCisTypTranCapexOpexView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisBankarView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpCisBankarView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwCisTyptransakceView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.VwCisTyptransakceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostLinkView1"
+      ViewObjectName="cz.jtbank.konsolidace.dokument.KpKtgUcetnispolecnostLinkView" >
+   </ViewUsage>
+</AppModule>

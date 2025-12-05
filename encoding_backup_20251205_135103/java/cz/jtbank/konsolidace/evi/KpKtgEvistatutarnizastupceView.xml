@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpKtgEvistatutarnizastupceView"
+   SelectList="KpKtgEvistatutarnizastupce.ID, 
+       KpKtgEvistatutarnizastupce.ID_TYP, 
+
+       KpKtgEvistatutarnizastupce.ID_KTGSPOLECNOST, 
+       
+KpKtgEvistatutarnizastupce.S_POZNAMKA, 
+       KpKtgEvistatutarnizastupce.DT_PLATNOSTOD, 
+
+       KpKtgEvistatutarnizastupce.DT_PLATNOSTDO, 
+       KpKtgEvistatutarnizastupce.C_SPOJOVATVAZBY, 
+
+       KpKtgSpolecnost.S_NAZEV AS SPOLECNOST, 
+       KpKtgSpolecnost.ID 
+AS ID_SPOL, 
+       KpCisEvitypstatzastupce.S_NAZEV AS STATZASTUPCE, 
+
+       KpCisEvitypstatzastupce.ID AS ID_STATZASTUPCE, 
+     
+  KpKtgEvistatutarnizastupce.ID_ADMINSPOLECNOST, 
+       KpKtgEvistatutarnizastupce.C_NAVRH"
+   FromList="DB_JT.KP_KTG_EVISTATUTARNIZASTUPCE KpKtgEvistatutarnizastupce, DB_JT.KP_KTG_SPOLECNOST KpKtgSpolecnost, DB_JT.KP_CIS_EVITYPSTATZASTUPCE KpCisEvitypstatzastupce"
+   Where="KpKtgEvistatutarnizastupce.ID_KTGSPOLECNOST = KpKtgSpolecnost.ID (+) AND KpKtgEvistatutarnizastupce.ID_TYP = KpCisEvitypstatzastupce.ID (+)"
+   OrderBy="KpKtgEvistatutarnizastupce.DT_PLATNOSTOD DESC,KpKtgEvistatutarnizastupce.DT_PLATNOSTDO"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.evi.KpKtgEvistatutarnizastupceViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpKtgEvistatutarnizastupce"
+      Entity="cz.jtbank.konsolidace.evi.KpKtgEvistatutarnizastupce" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpKtgEvistatutarnizastupce.ID_KTGSPOLECNOST = KpKtgSpolecnost.ID (+) AND KpKtgEvistatutarnizastupce.ID_TYP = KpCisEvitypstatzastupce.ID (+)" />
+         <Attr Name="_queryOrderBy" Value="KpKtgEvistatutarnizastupce.DT_PLATNOSTOD DESC,KpKtgEvistatutarnizastupce.DT_PLATNOSTDO" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgSpolecnost"
+      Entity="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnost"
+      SourceUsage="cz.jtbank.konsolidace.evi.KpKtgEvistatutarnizastupceView.KpKtgEvistatutarnizastupce"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpKtgEvistatutarnizastupce.Id" />
+            <Item Value="cz.jtbank.konsolidace.evi.KpKtgEvistatutarnizastupce.IdKtgspolecnost" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnost.Id" />
+            <Item Value="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnost.IdKtgspolecnost" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpCisEvitypstatzastupce"
+      Entity="cz.jtbank.konsolidace.evi.KpCisEvitypstatzastupce"
+      SourceUsage="cz.jtbank.konsolidace.evi.KpKtgEvistatutarnizastupceView.KpKtgSpolecnost"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnost.Id" />
+            <Item Value="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnost.SNazev" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpCisEvitypstatzastupce.Id" />
+            <Item Value="cz.jtbank.konsolidace.evi.KpCisEvitypstatzastupce.SNazev" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgEvistatutarnizastupce"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyp"
+      IsNotNull="true"
+      EntityAttrName="IdTyp"
+      EntityUsage="KpKtgEvistatutarnizastupce"
+      AliasName="ID_TYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="KpKtgEvistatutarnizastupce"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="KpKtgEvistatutarnizastupce"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpKtgEvistatutarnizastupce"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpKtgEvistatutarnizastupce"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CSpojovatvazby"
+      EntityAttrName="CSpojovatvazby"
+      EntityUsage="KpKtgEvistatutarnizastupce"
+      AliasName="C_SPOJOVATVAZBY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgSpolecnost"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSpol"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgSpolecnost"
+      AliasName="ID_SPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="StatZastupce"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="KpCisEvitypstatzastupce"
+      AliasName="STATZASTUPCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdStatZastupce"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisEvitypstatzastupce"
+      AliasName="ID_STATZASTUPCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdminspolecnost"
+      EntityAttrName="IdAdminspolecnost"
+      EntityUsage="KpKtgEvistatutarnizastupce"
+      AliasName="ID_ADMINSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CNavrh"
+      EntityAttrName="CNavrh"
+      EntityUsage="KpKtgEvistatutarnizastupce"
+      AliasName="C_NAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

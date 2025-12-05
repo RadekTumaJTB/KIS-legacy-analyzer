@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwInvesticeZakladnijmeni"
+   OrderBy="ID"
+   BindingStyle="JDBC"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.majetek.VwInvesticeZakladnijmeniImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+select fi.ID, sum(emi.ND_ZAKLADNIJMENI) zj
+from db_jt.kp_ktg_financniinvestice fi,
+	 db_jt.kp_ktg_fininvesticeemise emi
+where fi.ID = emi.ID_KTGFINANCNIINVESTICE
+  and ? between emi.DT_PLATNOSTOD and emi.DT_PLATNOSTDO	
+group by fi.ID
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <ViewAttribute
+      Name="Id"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID"
+      ColumnType="VARCHAR2"
+      Expression="ID"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Zj"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ZJ"
+      ColumnType="VARCHAR2"
+      Expression="ZJ"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+</ViewObject>

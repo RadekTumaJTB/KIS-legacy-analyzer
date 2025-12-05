@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="DatKurzlistExportView"
+   OrderBy="DT_DATUM, TYP, BANKA, MENA"
+   BindingStyle="Oracle"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.doklady.DatKurzlistExportViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+select l.DT_DATUM,
+	   c.S_ZKRATKA banka,
+	   l.ID_CISMENA mena,
+	   l.ND_KURZ / l.NL_KVANTITA kurz,
+	   0 typ
+from DB_JT.DAT_KURZLIST l,
+	 DB_JT.CIS_BANKA c
+where l.DT_DATUM = last_day(l.DT_DATUM)
+  and l.ID_CISBANKA = c.ID
+union
+select l.DT_DATUM,
+	   c.S_ZKRATKA banka,
+	   l.ID_CISMENA mena,
+	   l.ND_KURZ / l.NL_KVANTITA kurz,
+	   1 typ
+from DB_JT.DAT_KURZLISTAVG l,
+	 DB_JT.CIS_BANKA c
+where l.DT_DATUM = last_day(l.DT_DATUM)
+  and l.ID_CISBANKA = c.ID
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <ViewAttribute
+      Name="DtDatum"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Date"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2"
+      Expression="DT_DATUM"
+      SQLType="DATE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Banka"
+      IsPersistent="false"
+      Precision="10"
+      Type="java.lang.String"
+      AliasName="BANKA"
+      ColumnType="VARCHAR2"
+      Expression="BANKA"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mena"
+      IsPersistent="false"
+      Precision="3"
+      Type="java.lang.String"
+      AliasName="MENA"
+      ColumnType="VARCHAR2"
+      Expression="MENA"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Kurz"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="KURZ"
+      ColumnType="VARCHAR2"
+      Expression="KURZ"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typ"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="TYP"
+      ColumnType="VARCHAR2"
+      Expression="TYP"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+</ViewObject>

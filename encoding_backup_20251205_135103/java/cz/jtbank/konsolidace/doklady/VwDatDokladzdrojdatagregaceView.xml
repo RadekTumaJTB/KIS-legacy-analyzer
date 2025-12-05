@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatDokladzdrojdatagregaceView"
+   SelectList="VwDatDokladzdrojdatagregace.ID, 
+       VwDatDokladzdrojdatagregace.ID_DOKLAD, 
+
+       VwDatDokladzdrojdatagregace.S_MENA, 
+       VwDatDokladzdrojdatagregace.S_UCET, 
+
+       VwDatDokladzdrojdatagregace.ID_KTGSPOLECNOST, 
+      
+ VwDatDokladzdrojdatagregace.ND_CASTKAMENA, 
+       VwDatDokladzdrojdatagregace.ND_CASTKALOCAL, 
+
+       VwDatDokladzdrojdatagregace.ID_DOKLADPOLOZKA, 
+      
+ VwDatDokladzdrojdatagregace.ID_DEFLISTBUNKA"
+   FromList="DB_JT.VW_DAT_DOKLADZDROJDATAGREGACE VwDatDokladzdrojdatagregace"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwDatDokladzdrojdatagregaceViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatDokladzdrojdatagregace"
+      Entity="cz.jtbank.konsolidace.doklady.VwDatDokladzdrojdatagregace" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwDatDokladzdrojdatagregace"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwDatDokladzdrojdatagregace"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="VwDatDokladzdrojdatagregace"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      EntityAttrName="SUcet"
+      EntityUsage="VwDatDokladzdrojdatagregace"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="VwDatDokladzdrojdatagregace"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwDatDokladzdrojdatagregace"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwDatDokladzdrojdatagregace"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokladpolozka"
+      EntityAttrName="IdDokladpolozka"
+      EntityUsage="VwDatDokladzdrojdatagregace"
+      AliasName="ID_DOKLADPOLOZKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDeflistbunka"
+      IsNotNull="true"
+      EntityAttrName="IdDeflistbunka"
+      EntityUsage="VwDatDokladzdrojdatagregace"
+      AliasName="ID_DEFLISTBUNKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

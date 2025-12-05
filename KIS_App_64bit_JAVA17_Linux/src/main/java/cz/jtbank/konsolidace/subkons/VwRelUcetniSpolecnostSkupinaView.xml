@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRelUcetniSpolecnostSkupinaView"
+   OrderBy="s_nazev"
+   BindingStyle="Oracle"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.subkons.VwRelUcetniSpolecnostSkupinaViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT distinct us.s_nazev, us.id, us.s_ico, c.id_ktgucetniskupina
+     FROM db_jt.kp_rel_subkonsolidaceclen c,
+          db_jt.kp_ktg_subkonsolidace s,
+          db_jt.kp_ktg_ucetnispolecnost us
+    WHERE us.ID = c.id_ktgucetnispolecnost
+      AND s.id_ktgucetnispolecnost = c.id_ktgsubkonsolidace
+AND c.c_clen = '1' and ( (sysdate between c.dt_clenstviOd and c.dt_clenstviDo) or ( sysdate - c.dt_clenstviDo < 365 ) )
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <ViewAttribute
+      Name="SNazev"
+      IsPersistent="false"
+      Precision="128"
+      Type="java.lang.String"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      Expression="S_NAZEV"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID"
+      ColumnType="VARCHAR2"
+      Expression="ID"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="20"
+      Type="java.lang.String"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2"
+      Expression="S_ICO"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_KTGUCETNISKUPINA"
+      ColumnType="VARCHAR2"
+      Expression="ID_KTGUCETNISKUPINA"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <AttrArray Name="KeyAttributes">
+      <Item Value="Id" />
+      <Item Value="IdKtgucetniskupina" />
+   </AttrArray>
+</ViewObject>

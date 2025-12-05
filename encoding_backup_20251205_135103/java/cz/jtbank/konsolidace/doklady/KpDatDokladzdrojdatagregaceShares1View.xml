@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatDokladzdrojdatagregaceShares1View"
+   OrderBy="id_doklad,dt_datum,s_ucet,ID_KTGUCETNISPOLECNOSTTO,s_mena"
+   BindingStyle="Oracle"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregaceShares1ViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+select to_date('31.12.2006','dd.mm.yyyy') dt_datum,
+	ff.s_kod flow,
+	   a.ID_DOKLAD,
+	   uu.S_UCET,
+	   a.S_MENA,
+	   nvl(a.ID_KTGUCETNISPOLECNOST,a.ID_KTGSPOLECNOST) ID_KTGUCETNISPOLECNOSTTO,
+	   sum(decode(uu.c_class,'A',1,'3',1,-1)*a.ND_CASTKALOCAL) ND_CASTKALOCAL,
+	   sum(decode(uu.c_class,'A',1,'3',1,-1)*a.ND_CASTKAMENA) ND_CASTKAMENA,
+      ( 
+         select mu.id_ktgUcetniSpolecnostKoupeno 
+         from db_jt.kp_dat_majetkovaucast mu, db_jt.kp_ktg_fininvesticeemise fe, db_jt.kp_ktg_financniinvestice fi 
+         where 
+         rownum = 1 and
+         fe.id = mu.id_ktgfininvesticeemise and
+         fi.id = fe.id_ktgfinancniinvestice and         
+         mu.id_ktgUcetniSpolecnost = d.id_ktgUcetniSpolecnost and
+         a.id_ktgSpolecnost = fi.id_ktgSpolecnost and 
+         mu.s_ucet = a.s_ucetunif and
+         sysdate between mu.dt_platnostod and mu.dt_platnostdo and
+         mu.id_ktgUcetnispolecnost is not null ) koupenoOd      
+from db_jt.kp_dat_dokladZdrojDatAgregace a,
+	 db_jt.kp_cis_ucetUnif uu,
+	db_jt.kp_rel_ucetunifflow rf,
+	db_jt.kp_cis_flow ff,
+    db_jt.kp_dat_doklad d
+where 
+	d.id = a.id_doklad and
+	uu.s_ucet = a.s_ucetunif and
+	rf.id_cisflow = ff.id   and
+	uu.id = rf.id_cisucetunif    and
+	a.ID_CISUCETUNIF = uu.ID
+  and uu.C_SHARES = '1'
+  and a.ID_KTGSPOLECNOST in (select distinct ID_KTGSPOLECNOST from db_jt.KP_REP_SPOLECNOSTCARTESIS)
+group by a.ID_DOKLAD,
+	   	 uu.S_UCET,
+	   	 a.S_MENA,
+		 a.ID_KTGUCETNISPOLECNOST,
+		 a.ID_KTGSPOLECNOST,
+       ff.s_kod, d.id_ktgUcetniSpolecnost, a.s_ucetunif
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <ViewAttribute
+      Name="DtDatum"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Date"
+      AliasName="DT_DATUM"
+      ColumnType="DATE"
+      Expression="DT_DATUM"
+      SQLType="DATE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Flow"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="5"
+      Type="java.lang.String"
+      AliasName="FLOW"
+      ColumnType="VARCHAR2"
+      Expression="FLOW"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsPersistent="false"
+      Precision="4"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2"
+      Expression="ID_DOKLAD"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsPersistent="false"
+      Precision="15"
+      Type="java.lang.String"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2"
+      Expression="S_UCET"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsPersistent="false"
+      Precision="3"
+      Type="java.lang.String"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2"
+      Expression="S_MENA"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnostto"
+      IsPersistent="false"
+      Precision="3"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_KTGUCETNISPOLECNOSTTO"
+      ColumnType="VARCHAR2"
+      Expression="ID_KTGUCETNISPOLECNOSTTO"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      IsPersistent="false"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2"
+      Expression="ND_CASTKALOCAL"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      IsPersistent="false"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2"
+      Expression="ND_CASTKAMENA"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Koupenood"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="KOUPENOOD"
+      ColumnType="VARCHAR2"
+      Expression="KOUPENOOD"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+</ViewObject>

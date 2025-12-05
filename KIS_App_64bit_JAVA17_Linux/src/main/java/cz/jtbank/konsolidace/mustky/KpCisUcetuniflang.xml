@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisUcetuniflang"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_UCETUNIFLANG"
+   AliasName="KpCisUcetuniflang"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.mustky.KpCisUcetuniflangImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdCisucetunif"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISUCETUNIF"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_UCETUNIFLANG"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SLocale"
+      IsNotNull="true"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_LOCALE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIFLANG"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="256"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIFLANG" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="256" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisUcetunif"
+      Association="cz.jtbank.konsolidace.mustky.FkKpucetuniflangUuAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.mustky.FkKpucetuniflangUuAssoc.KpCisUcetunif"
+      AssociationOtherEnd="cz.jtbank.konsolidace.mustky.FkKpucetuniflangUuAssoc.KpCisUcetuniflang"
+      Type="cz.jtbank.konsolidace.mustky.KpCisUcetunifImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpucetuniflangId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetuniflang.IdCisucetunif" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCETUNIFLANG_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISUCETUNIF&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucetuniflangLocale" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetuniflang.SLocale" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCETUNIFLANG_LOCALE" />
+         <Attr Name="_checkCondition" Value="&#34;S_LOCALE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpucetuniflang" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetuniflang.IdCisucetunif" />
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetuniflang.SLocale" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPUCETUNIFLANG" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucetuniflangLocale" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetuniflang.SLocale" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCETUNIFLANG_LOCALE" />
+         <Attr Name="_referencedKey" Value="PK_CISLOCALE" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucetuniflangUu" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetuniflang.IdCisucetunif" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCETUNIFLANG_UU" />
+         <Attr Name="_referencedKey" Value="PK_KPUCETUNIF" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

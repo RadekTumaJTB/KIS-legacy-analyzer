@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpTmpAppuserspolVyjimky"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_TMP_APPUSERSPOL_VYJIMKY"
+   AliasName="KpTmpAppuserspolVyjimky"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.users.KpTmpAppuserspolVyjimkyImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdAppuser"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_APPUSER"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_TMP_APPUSERSPOL_VYJIMKY"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CVsechno"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_VSECHNO"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_TMP_APPUSERSPOL_VYJIMKY"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="SysC0011669" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.users.KpTmpAppuserspolVyjimky.IdAppuser" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0011669" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

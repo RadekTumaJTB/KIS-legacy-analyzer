@@ -1,0 +1,1304 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpKtgUcetnispolecnost"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+   AliasName="KpKtgUcetnispolecnost"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="132"
+   RowClass="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.doklady.common.KpKtgUcetnispolecnostImplMsgBundle" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISSUBJECT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SIco"
+      IsUnique="true"
+      IsNotNull="true"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_ICO"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SpinId"
+      IsUnique="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="SPIN_ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="TopasId"
+      IsUnique="true"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="TOPAS_ID"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="QuestId"
+      IsUnique="true"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="QUEST_ID"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CExtsystem"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_EXTSYSTEM"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazev"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CPocitatrozvahu"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_POCITATROZVAHU"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SSouborpredpona"
+      IsNotNull="true"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_SOUBORPREDPONA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SDblink"
+      IsNotNull="true"
+      Precision="32"
+      Type="java.lang.String"
+      ColumnName="S_DBLINK"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="32" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CAutomatickegenerovani"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_AUTOMATICKEGENEROVANI"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKategorie"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KATEGORIE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CRkc"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_RKC"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SZkratka"
+      Precision="35"
+      Type="java.lang.String"
+      ColumnName="S_ZKRATKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="35" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtLastclosedate"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_LASTCLOSEDATE"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumarchivace"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMARCHIVACE"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="COpce"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_OPCE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCiskatspol"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISKATSPOL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdZodpovednaucetni"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_ZODPOVEDNAUCETNI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdOdpovednaosoba"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_ODPOVEDNAOSOBA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdAdministrator"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_ADMINISTRATOR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtRelativedate"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_RELATIVEDATE"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTopmng"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TOPMNG"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPoznamka"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_POZNAMKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CDanovaztrata"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_DANOVAZTRATA"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCisopce"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISOPCE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SLocale"
+      IsNotNull="true"
+      Precision="6"
+      Type="java.lang.String"
+      ColumnName="S_LOCALE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="6" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdDocuroven2"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_DOCUROVEN2"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CDocdisplay"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_DOCDISPLAY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CPrehleddisplay"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_PREHLEDDISPLAY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCisnominee"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISNOMINEE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTypprojektu"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TYPPROJEKTU"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtUcetniobdobistart"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_UCETNIOBDOBISTART"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtUcetniobdobikonec"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_UCETNIOBDOBIKONEC"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="COnline"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_ONLINE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtOnlineod"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_ONLINEOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCisdatabaze"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISDATABAZE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlRokpocstavimportsystem"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_ROKPOCSTAVIMPORTSYSTEM"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgodbor"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGODBOR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgprojekt"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGPROJEKT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CNocnizpracovani"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_NOCNIZPRACOVANI"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCisnastrojucetnivyjimky"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISNASTROJUCETNIVYJIMKY"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SSkupinalike"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_SKUPINALIKE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdBudgetnavyseniOo"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_BUDGETNAVYSENI_OO"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdBudgetnavyseniTop"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_BUDGETNAVYSENI_TOP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SDuvodoffline"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnName="S_DUVODOFFLINE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUzivatel"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_UZIVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdMngsegment"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_MNGSEGMENT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdSpravcekonsolidace"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_SPRAVCEKONSOLIDACE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdMngsegmentboss"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_MNGSEGMENTBOSS"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCentrala"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CENTRALA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CUcetnictviVIfrs"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_UCETNICTVI_V_IFRS"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CIfrsprimarni"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_IFRSPRIMARNI"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtUnifikovanedoklady"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_UNIFIKOVANEDOKLADY"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CFeisUcettyp"
+      IsNotNull="true"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_FEIS_UCETTYP"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CTestovatmajucast"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_TESTOVATMAJUCAST"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_UCETNISPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="CisLocale"
+      Association="cz.jtbank.konsolidace.doklady.FkKpucspolecnostLocaleAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpucspolecnostLocaleAssoc.CisLocale"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpucspolecnostLocaleAssoc.KpKtgUcetnispolecnost"
+      Type="cz.jtbank.konsolidace.doklady.CisLocaleImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="IdCentralaKpKtgUcetnispolecnost"
+      Association="cz.jtbank.konsolidace.doklady.FkKpucspolCentralaAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpucspolCentralaAssoc.IdCentralaKpKtgUcetnispolecnost"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpucspolCentralaAssoc.KpKtgUcetnispolecnost"
+      Type="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatDoklad"
+      Association="cz.jtbank.konsolidace.doklady.FkKpdokladSpolecnostAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpdokladSpolecnostAssoc.KpDatDoklad"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpdokladSpolecnostAssoc.KpKtgUcetnispolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatDoklad1"
+      Association="cz.jtbank.konsolidace.doklady.FkKpdatdokladSubkonAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpdatdokladSubkonAssoc.KpDatDoklad1"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpdatdokladSubkonAssoc.KpKtgUcetnispolecnost1"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatDokladzdrojdatagregace"
+      Association="cz.jtbank.konsolidace.doklady.FkKpzdrojdatagUcspolecnostAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpzdrojdatagUcspolecnostAssoc.KpDatDokladzdrojdatagregace"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpzdrojdatagUcspolecnostAssoc.KpKtgUcetnispolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatManualnizdrojdat"
+      Association="cz.jtbank.konsolidace.doklady.FkKpmanzdSpolecnostAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpmanzdSpolecnostAssoc.KpDatManualnizdrojdat"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpmanzdSpolecnostAssoc.KpKtgUcetnispolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatManualnizdrojdat1"
+      Association="cz.jtbank.konsolidace.doklady.FkKpmanzdUnifspolecnostAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpmanzdUnifspolecnostAssoc.KpDatManualnizdrojdat1"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpmanzdUnifspolecnostAssoc.KpKtgUcetnispolecnost1"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpTmpVyjimkyprotokolu"
+      Association="cz.jtbank.konsolidace.doklady.FkTmpvyjimkyprotokoluUsspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkTmpvyjimkyprotokoluUsspolAssoc.KpTmpVyjimkyprotokolu"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkTmpvyjimkyprotokoluUsspolAssoc.KpKtgUcetnispolecnost"
+      Type="cz.jtbank.konsolidace.doklady.KpTmpVyjimkyprotokoluImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatGenzamekzamitnuti"
+      Association="cz.jtbank.konsolidace.doklady.FkKpgenzamekzamitUcspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpgenzamekzamitUcspolAssoc.KpDatGenzamekzamitnuti"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpgenzamekzamitUcspolAssoc.KpKtgUcetnispolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatVyjimkyzamykanitop"
+      Association="cz.jtbank.konsolidace.doklady.FkKpvyjimkyzamykaniUcspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpvyjimkyzamykaniUcspolAssoc.KpDatVyjimkyzamykanitop"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpvyjimkyzamykaniUcspolAssoc.KpKtgUcetnispolecnost"
+      Type="cz.jtbank.konsolidace.doklady.KpDatVyjimkyzamykanitopImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpTmpVazbyVyjimky"
+      Association="cz.jtbank.konsolidace.doklady.FkKptmpvazbyvyjimkyUcspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKptmpvazbyvyjimkyUcspolAssoc.KpTmpVazbyVyjimky"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKptmpvazbyvyjimkyUcspolAssoc.KpKtgUcetnispolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatVazbyzamek"
+      Association="cz.jtbank.konsolidace.doklady.FkVzUcspoltoAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkVzUcspoltoAssoc.KpDatVazbyzamek"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkVzUcspoltoAssoc.KpKtgUcetnispolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatVazbyzamek1"
+      Association="cz.jtbank.konsolidace.doklady.FkVzUcspolfromAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkVzUcspolfromAssoc.KpDatVazbyzamek1"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkVzUcspolfromAssoc.KpKtgUcetnispolecnost1"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpKtgUcetnispolecnost"
+      Association="cz.jtbank.konsolidace.doklady.FkKpucspolCentralaAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpucspolCentralaAssoc.KpKtgUcetnispolecnost"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpucspolCentralaAssoc.IdCentralaKpKtgUcetnispolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpKtgUcetnispolecnostZamky"
+      Association="cz.jtbank.konsolidace.doklady.FkKpktgucspolzamkyUcspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpktgucspolzamkyUcspolAssoc.KpKtgUcetnispolecnostZamky"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpktgucspolzamkyUcspolAssoc.KpKtgUcetnispolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatGenerovanizamek"
+      Association="cz.jtbank.konsolidace.doklady.FkGzUcslopAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkGzUcslopAssoc.KpDatGenerovanizamek"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkGzUcslopAssoc.KpKtgUcetnispolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="CnKpucspolecnostAutgener" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.CAutomatickegenerovani" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPUCSPOLECNOST_AUTGENER" />
+         <Attr Name="_checkCondition" Value=" c_automatickeGenerovani is not null and c_automatickeGenerovani in ( &#39;0&#39;, &#39;1&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="UnKpucspolecnostIco" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.SIco" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="UN_KPUCSPOLECNOST_ICO" />
+         <Attr Name="_isUnique" Value="true" />
+         <Attr Name="_isDisabledConstraint" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpucspolecnost" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucspolecnostDblink" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.SDblink" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCSPOLECNOST_DBLINK" />
+         <Attr Name="_checkCondition" Value="&#34;S_DBLINK&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="UnKpucspolecnostSpinid" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.SpinId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="UN_KPUCSPOLECNOST_SPINID" />
+         <Attr Name="_isUnique" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucspolecnostMena" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.SMena" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCSPOLECNOST_MENA" />
+         <Attr Name="_checkCondition" Value="&#34;S_MENA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucspolecnostId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCSPOLECNOST_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucspolecnostUcobdstart" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.DtUcetniobdobistart" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCSPOLECNOST_UCOBDSTART" />
+         <Attr Name="_checkCondition" Value="&#34;DT_UCETNIOBDOBISTART&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpucspolecnostExtsystem" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.CExtsystem" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPUCSPOLECNOST_EXTSYSTEM" />
+         <Attr Name="_checkCondition" Value=" c_extSystem is not null and c_extSystem in ( &#39;Q&#39;, &#39;S&#39;, &#39;T&#39;, &#39;M&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpucspolecnostRozvaha" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.CPocitatrozvahu" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPUCSPOLECNOST_ROZVAHA" />
+         <Attr Name="_checkCondition" Value=" c_pocitatRozvahu is not null and c_pocitatRozvahu in ( &#39;0&#39;, &#39;1&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpktgucetspolTestmu" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.CTestovatmajucast" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPKTGUCETSPOL_TESTMU" />
+         <Attr Name="_checkCondition" Value=" c_testovatMajUcast is not null and  c_testovatMajUcast in ( &#39;0&#39;, &#39;1&#39; )" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpktgucspolFeistyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.CFeisUcettyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPKTGUCSPOL_FEISTYP" />
+         <Attr Name="_checkCondition" Value="&#34;C_FEIS_UCETTYP&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucspolecnostUcobdkonec" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.DtUcetniobdobikonec" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCSPOLECNOST_UCOBDKONEC" />
+         <Attr Name="_checkCondition" Value="&#34;DT_UCETNIOBDOBIKONEC&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucspolecnostSoubor" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.SSouborpredpona" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCSPOLECNOST_SOUBOR" />
+         <Attr Name="_checkCondition" Value="&#34;S_SOUBORPREDPONA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucspolecnostKateg" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdKategorie" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCSPOLECNOST_KATEG" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KATEGORIE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucspolecnostDb" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdCisdatabaze" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCSPOLECNOST_DB" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISDATABAZE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpktguctspollocale" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.SLocale" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPKTGUCTSPOLLOCALE" />
+         <Attr Name="_checkCondition" Value="&#34;S_LOCALE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpktgucetspolUcifrs" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.CUcetnictviVIfrs" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPKTGUCETSPOL_UCIFRS" />
+         <Attr Name="_checkCondition" Value=" c_ucetnictvi_v_IFRS is not null and  c_ucetnictvi_v_IFRS in ( &#39;0&#39;, &#39;1&#39; )" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucspolecnostSubject" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdCissubject" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCSPOLECNOST_SUBJECT" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISSUBJECT&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="UnKpucspolecnostQuestid" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.QuestId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="UN_KPUCSPOLECNOST_QUESTID" />
+         <Attr Name="_isUnique" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpucspolecnostNocni" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.CNocnizpracovani" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPUCSPOLECNOST_NOCNI" />
+         <Attr Name="_checkCondition" Value=" c_nocniZpracovani is not null and c_nocniZpracovani in ( &#39;0&#39;, &#39;1&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpucspolecnostRkc" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.CRkc" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPUCSPOLECNOST_RKC" />
+         <Attr Name="_checkCondition" Value=" c_rkc is not null and c_rkc in ( &#39;0&#39;, &#39;1&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="UnKpucspolecnostTopasid" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.TopasId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="UN_KPUCSPOLECNOST_TOPASID" />
+         <Attr Name="_isUnique" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucspolecnostIco" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.SIco" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCSPOLECNOST_ICO" />
+         <Attr Name="_checkCondition" Value="&#34;S_ICO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolecnostSubject" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdCissubject" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOLECNOST_SUBJECT" />
+         <Attr Name="_referencedKey" Value="PK_KPSUBJECT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolecnostDb" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdCisdatabaze" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOLECNOST_DB" />
+         <Attr Name="_referencedKey" Value="PK_KPCISDATABAZE" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKtgucetnispolecnostMngseg" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdMngsegment" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KTGUCETNISPOLECNOST_MNGSEG" />
+         <Attr Name="_referencedKey" Value="PK_KPCISMNGSEGMENT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolecnostKatspol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdCiskatspol" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOLECNOST_KATSPOL" />
+         <Attr Name="_referencedKey" Value="SYS_C002269" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKtgucetnispolTypproj" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdTypprojektu" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KTGUCETNISPOL_TYPPROJ" />
+         <Attr Name="_referencedKey" Value="PK_CISTYPPROJEKTU" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolOdbor" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdKtgodbor" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOL_ODBOR" />
+         <Attr Name="_referencedKey" Value="PK_KTGODBOR" />
+         <Attr Name="_isForeign" Value="true" />
+         <Attr Name="_isDisabledConstraint" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolAdmin" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdAdministrator" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOL_ADMIN" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolecnostLocale" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.SLocale" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOLECNOST_LOCALE" />
+         <Attr Name="_referencedKey" Value="PK_CISLOCALE" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolCentrala" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdCentrala" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOL_CENTRALA" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolZodpuc" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdZodpovednaucetni" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOL_ZODPUC" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolProjekt" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdKtgprojekt" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOL_PROJEKT" />
+         <Attr Name="_referencedKey" Value="PK_KPPROJEKT" />
+         <Attr Name="_isForeign" Value="true" />
+         <Attr Name="_isDisabledConstraint" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolOdpos" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdOdpovednaosoba" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOL_ODPOS" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolecnostKateg" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdKategorie" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOLECNOST_KATEG" />
+         <Attr Name="_referencedKey" Value="PK_KPSPOLECNOSTKATEGORIE" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpucspolSpravce" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.IdSpravcekonsolidace" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPUCSPOL_SPRAVCE" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

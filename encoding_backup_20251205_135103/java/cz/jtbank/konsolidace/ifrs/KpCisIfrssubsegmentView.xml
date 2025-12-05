@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisIfrssubsegmentView"
+   SelectList="KpCisIfrssubsegment.ID, 
+       KpCisIfrssubsegment.S_POPIS, 
+       KpCisIfrssubsegment.ID_IFRSSEGMENT, 
+       KpCisIfrssegment.S_POPIS AS SPOPIS1, 
+       KpCisIfrssegment.ID AS ID1"
+   FromList="DB_JT.KP_CIS_IFRSSUBSEGMENT KpCisIfrssubsegment, DB_JT.KP_CIS_IFRSSEGMENT KpCisIfrssegment"
+   Where="KpCisIfrssubsegment.ID_IFRSSEGMENT = KpCisIfrssegment.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ifrs.KpCisIfrssubsegmentViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisIfrssubsegment"
+      Entity="cz.jtbank.konsolidace.ifrs.KpCisIfrssubsegment" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpCisIfrssegment"
+      Entity="cz.jtbank.konsolidace.ifrs.KpCisIfrssegment"
+      Association="cz.jtbank.konsolidace.ifrs.FkKpcisifrssubsegmentIdsegAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.ifrs.FkKpcisifrssubsegmentIdsegAssoc.KpCisIfrssegment"
+      SourceUsage="cz.jtbank.konsolidace.ifrs.KpCisIfrssubsegmentView.KpCisIfrssubsegment"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.ifrs.KpCisIfrssubsegment.IdIfrssegment" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.ifrs.KpCisIfrssegment.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisIfrssubsegment"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      IsNotNull="true"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisIfrssubsegment"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdIfrssegment"
+      IsNotNull="true"
+      EntityAttrName="IdIfrssegment"
+      EntityUsage="KpCisIfrssubsegment"
+      AliasName="ID_IFRSSEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Segment"
+      IsNotNull="true"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisIfrssegment"
+      AliasName="SPOPIS1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSegment"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisIfrssegment"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

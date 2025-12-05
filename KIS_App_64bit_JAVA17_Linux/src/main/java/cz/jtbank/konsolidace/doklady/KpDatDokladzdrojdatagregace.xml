@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatDokladzdrojdatagregace"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE"
+   AliasName="KpDatDokladzdrojdatagregace"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregaceImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcet"
+      Precision="15"
+      Type="java.lang.String"
+      ColumnName="S_UCET"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgspolecnost"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGSPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCisradektext"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISRADEKTEXT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CMenovapozice"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_MENOVAPOZICE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CUverovapozice"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_UVEROVAPOZICE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkamena"
+      Precision="18"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKAMENA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkalocal"
+      Precision="18"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKALOCAL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkacnb"
+      Precision="18"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKACNB"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CList"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_LIST"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SEvidovatprotistranu"
+      Precision="4"
+      Type="java.lang.String"
+      ColumnName="S_EVIDOVATPROTISTRANU"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="4" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CKontokorent"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_KONTOKORENT"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDokladpolozka"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLADPOLOZKA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpKtgUcetnispolecnost"
+      Association="cz.jtbank.konsolidace.doklady.FkKpzdrojdatagUcspolecnostAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpzdrojdatagUcspolecnostAssoc.KpKtgUcetnispolecnost"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpzdrojdatagUcspolecnostAssoc.KpDatDokladzdrojdatagregace"
+      Type="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpzdrojdatagDoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregace.IdDoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPZDROJDATAG_DOKLAD" />
+         <Attr Name="_checkCondition" Value="&#34;ID_DOKLAD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpzdrojdatagId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregace.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPZDROJDATAG_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpzdrojdatag" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregace.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPZDROJDATAG" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpzdrojdatagUcspolecnost" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregace.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPZDROJDATAG_UCSPOLECNOST" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpzdrojdatagDoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregace.IdDoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPZDROJDATAG_DOKLAD" />
+         <Attr Name="_referencedKey" Value="PK_KPDOKLAD" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpzdrojdatagSpolecnost" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregace.IdKtgspolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPZDROJDATAG_SPOLECNOST" />
+         <Attr Name="_referencedKey" Value="PK_KPKTGSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpzdrojdatagRadektyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregace.IdCisradektext" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPZDROJDATAG_RADEKTYP" />
+         <Attr Name="_referencedKey" Value="PK_KPRADEKTEXT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

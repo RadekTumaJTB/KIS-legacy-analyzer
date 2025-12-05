@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDefKontrolamajetkovaucastView"
+   SelectList="KpDefKontrolamajetkovaucast.ID, 
+       KpDefKontrolamajetkovaucast.ID_CISSUBJECT, 
+
+       KpDefKontrolamajetkovaucast.S_UCETMASKA, 
+       KpDefKontrolamajetkovaucast.DT_PLATNOSTOD, 
+
+       KpDefKontrolamajetkovaucast.DT_PLATNOSTDO, 
+       KpDefKontrolamajetkovaucast.S_UZIVATEL, 
+
+       KpDefKontrolamajetkovaucast.DT_LAST_MODIFY"
+   FromList="DB_JT.KP_DEF_KONTROLAMAJETKOVAUCAST KpDefKontrolamajetkovaucast"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucastViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDefKontrolamajetkovaucast"
+      Entity="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucast" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDefKontrolamajetkovaucast"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      EntityAttrName="IdCissubject"
+      EntityUsage="KpDefKontrolamajetkovaucast"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetmaska"
+      EntityAttrName="SUcetmaska"
+      EntityUsage="KpDefKontrolamajetkovaucast"
+      AliasName="S_UCETMASKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDefKontrolamajetkovaucast"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDefKontrolamajetkovaucast"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpDefKontrolamajetkovaucast"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtLastModify"
+      EntityAttrName="DtLastModify"
+      EntityUsage="KpDefKontrolamajetkovaucast"
+      AliasName="DT_LAST_MODIFY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

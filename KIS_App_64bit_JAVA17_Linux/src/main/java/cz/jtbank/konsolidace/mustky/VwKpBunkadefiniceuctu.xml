@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwKpBunkadefiniceuctu"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU"
+   AliasName="VwKpBunkadefiniceuctu"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTmpdeflistbunka"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DEFLISTBUNKA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcet"
+      IsNotNull="true"
+      Precision="15"
+      Type="java.lang.String"
+      ColumnName="S_UCET"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="15" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CValidovatmasku"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_VALIDOVATMASKU"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CUcetsuma"
+      IsNotNull="true"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_UCETSUMA"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SEvidovatprotistranu"
+      IsNotNull="true"
+      Precision="4"
+      Type="java.lang.String"
+      ColumnName="S_EVIDOVATPROTISTRANU"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="4" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CMenovapozice"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_MENOVAPOZICE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CUverovapozice"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_UVEROVAPOZICE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="PocetUctu"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="POCET_UCTU"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SZkratka"
+      IsNotNull="true"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_ZKRATKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcetminus"
+      Precision="15"
+      Type="java.lang.String"
+      ColumnName="S_UCETMINUS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="15" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMustekuzivatel"
+      IsNotNull="true"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_MUSTEKUZIVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdParent"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_PARENT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgdoklad"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGDOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_KP_MUSTEKBUNKADEFINICEUCTU" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwkpbunkadefiniceuctuPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctu.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWKPBUNKADEFINICEUCTU_PRIMARY_" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="DbJtVwKpBunkadefiniceuctuIdDeflistbunkaCheck" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctu.IdTmpdeflistbunka" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="DB_JT_VW_KP_BUNKADEFINICEUCTU_" />
+         <Attr Name="_checkCondition" Value="&#34;ID_DEFLISTBUNKA&#34; IS NOT NULL" />
+         <Attr Name="_isNotNull" Value="true" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="UcSkupModule"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.UcSkupModuleImpl"
+   ComponentInterface="cz.jtbank.konsolidace.ucskup.common.UcSkupModule" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="KpKtgUcetniskupinaView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpKtgUcetniskupinaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelUcetniskupinaclenView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpRelUcetniskupinaclenView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpTmpCissubjectView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpTmpCissubjectView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisMenaView1"
+      ViewObjectName="cz.jtbank.konsolidace.fininv.KpCisMenaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisSpolecnostkategorieView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpCisSpolecnostkategorieView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisKatspolView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpCisKatspolView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgAppuserView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KtgAppuserView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRelUcetniskupinaclenView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwRelUcetniskupinaclenView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwProtistranaView1"
+      ViewObjectName="cz.jtbank.konsolidace.protistrany.VwProtistranaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladposlednisumView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwKpDokladposlednisumView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisStatView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpCisStatView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDanovesazbyView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpDatDanovesazbyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisFrekvencedphView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpCisFrekvencedphView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDaneView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpDatDaneView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisOpceView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpCisOpceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatAuditView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpDatAuditView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDokladZamekView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpDatDokladZamekView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpUcetnispolecnostprehledView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwKpUcetnispolecnostprehledView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisNomineeView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpCisNomineeView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisPrenosprioritaView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpCisPrenosprioritaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcspolpredavaniView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpKtgUcspolpredavaniView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKtgUcspolpredavaniView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwKtgUcspolpredavaniView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisPrenoskategorieView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpCisPrenoskategorieView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRelSubkonsolidaceclenView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwRelSubkonsolidaceclenView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="DatKurzlistavgView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.DatKurzlistavgView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="CisBankaView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.CisBankaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKtgUcetnispolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwKtgUcetnispolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatDokladView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpDatDokladView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpEmailParamView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpEmailParamView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgEmailzpravyView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KpKtgEmailzpravyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelSubkonsolidaceclenView1"
+      ViewObjectName="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclenView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisTypprojektuView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpCisTypprojektuView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="CisLocaleView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.CisLocaleView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgEviadminspolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladzustatkyuctuprotiView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwKpDokladzustatkyuctuprotiView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRelSpolecnostappuserView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwRelSpolecnostappuserView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwLogUcetnispolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwLogUcetnispolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisDatabazeView1"
+      ViewObjectName="cz.jtbank.konsolidace.protistrany.KpCisDatabazeView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpDokladzustatkyuctuproti2View1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.VwKpDokladzustatkyuctuproti2View" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgSpolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostLinkView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpKtgUcetnispolecnostLinkView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpLogUcetnispolecnostOnlineView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpLogUcetnispolecnostOnlineView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwQProjektodborView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwQProjektodborView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisMngsegmentView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpCisMngsegmentView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatMngsegmentbossView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentbossView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKtgProjektView1"
+      ViewObjectName="cz.jtbank.konsolidace.projekt.VwKtgProjektView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatKartatypView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpDatKartatypView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelSpolecnostkartatypView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpRelSpolecnostkartatypView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatKartapravidlaView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpDatKartapravidlaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatKartavyjimkyView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpDatKartavyjimkyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgAppuserIExterniView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KtgAppuserIExterniView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpSubkonsprehledView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwKpSubkonsprehledView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatKartaspolzpravaView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpDatKartaspolzpravaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRelSpolecnostKartaTypView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.VwRelSpolecnostKartaTypView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostZamkyView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostZamkyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisFeisPrenosView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpCisFeisPrenosView" >
+   </ViewUsage>
+</AppModule>

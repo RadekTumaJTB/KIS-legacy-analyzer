@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpTmpDefdoklad"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DEF_DOKLAD"
+   AliasName="KpTmpDefdoklad"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.mustky.KpTmpDefdokladImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_DOKLAD"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTmpktgdoklad"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TMPKTGDOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_DOKLAD" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTmpcislist"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TMPCISLIST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_DOKLAD" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlPoradi"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_PORADI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_DOKLAD" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpTmpKtgdoklad"
+      Association="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladDokladAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladDokladAssoc.KpTmpKtgdoklad"
+      AssociationOtherEnd="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladDokladAssoc.KpTmpDefdoklad"
+      Type="cz.jtbank.konsolidace.mustky.KpTmpKtgdokladImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpTmpCislist"
+      Association="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladListAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladListAssoc.KpTmpCislist"
+      AssociationOtherEnd="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladListAssoc.KpTmpDefdoklad"
+      Type="cz.jtbank.konsolidace.mustky.KpTmpCislistImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="PkKptmpdefdoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPTMPDEFDOKLAD" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKptmpdefdokladList" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad.IdTmpcislist" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPTMPDEFDOKLAD_LIST" />
+         <Attr Name="_checkCondition" Value="&#34;ID_TMPCISLIST&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefdokladId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFDOKLAD_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKptmpdefdokladPoradi" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad.NlPoradi" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPTMPDEFDOKLAD_PORADI" />
+         <Attr Name="_checkCondition" Value="&#34;NL_PORADI&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefdokladPoradi" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad.NlPoradi" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFDOKLAD_PORADI" />
+         <Attr Name="_checkCondition" Value="&#34;NL_PORADI&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKptmpdefdokladDoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad.IdTmpktgdoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPTMPDEFDOKLAD_DOKLAD" />
+         <Attr Name="_checkCondition" Value="&#34;ID_TMPKTGDOKLAD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKptmpdefdokladId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPTMPDEFDOKLAD_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKptmpdefdokladList" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad.IdTmpcislist" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPTMPDEFDOKLAD_LIST" />
+         <Attr Name="_referencedKey" Value="PK_KPTMPCISLIST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKptmpdefdokladDoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad.IdTmpktgdoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPTMPDEFDOKLAD_DOKLAD" />
+         <Attr Name="_referencedKey" Value="PK_KPTMPKTGDOKLAD" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

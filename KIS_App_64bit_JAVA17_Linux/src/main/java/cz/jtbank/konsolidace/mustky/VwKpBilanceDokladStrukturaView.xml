@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpBilanceDokladStrukturaView"
+   SelectList="VwKpBilanceDokladStruktura.LIST, 
+       VwKpBilanceDokladStruktura.RADEKTEXT, 
+
+       VwKpBilanceDokladStruktura.LISTPORADI, 
+       VwKpBilanceDokladStruktura.NL_RADEK, 
+
+       VwKpBilanceDokladStruktura.ID_KTGDEFLISTBUNKA, 
+     
+  VwKpBilanceDokladStruktura.ID_KTGDEFLISTBUNKAOPRAVNA, 
+    
+   VwKpBilanceDokladStruktura.C_TYP, 
+       VwKpBilanceDokladStruktura.S_LOCALE"
+   FromList="DB_JT.VW_KP_DOKLADSTRUKTURA VwKpBilanceDokladStruktura"
+   OrderBy="VwKpBilanceDokladStruktura.NL_RADEK"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.mustky.VwKpBilanceDokladStrukturaViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.mustky.common.VwKpBilanceDokladStrukturaViewRowImplMsgBundle"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpBilanceDokladStruktura"
+      Entity="cz.jtbank.konsolidace.mustky.VwKpBilanceDokladStruktura" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="VwKpBilanceDokladStruktura.NL_RADEK" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="List"
+      EntityAttrName="List"
+      EntityUsage="VwKpBilanceDokladStruktura"
+      AliasName="LIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Radektext"
+      EntityAttrName="Radektext"
+      EntityUsage="VwKpBilanceDokladStruktura"
+      AliasName="RADEKTEXT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Listporadi"
+      IsNotNull="true"
+      EntityAttrName="Listporadi"
+      EntityUsage="VwKpBilanceDokladStruktura"
+      AliasName="LISTPORADI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      IsNotNull="true"
+      EntityAttrName="NlRadek"
+      EntityUsage="VwKpBilanceDokladStruktura"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTmpktgdeflistbunka"
+      IsNotNull="true"
+      EntityAttrName="IdTmpktgdeflistbunka"
+      EntityUsage="VwKpBilanceDokladStruktura"
+      AliasName="ID_KTGDEFLISTBUNKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTmpktgdeflistbunkaopravna"
+      EntityAttrName="IdTmpktgdeflistbunkaopravna"
+      EntityUsage="VwKpBilanceDokladStruktura"
+      AliasName="ID_KTGDEFLISTBUNKAOPRAVNA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CTyp"
+      EntityAttrName="CTyp"
+      EntityUsage="VwKpBilanceDokladStruktura"
+      AliasName="C_TYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SLocale"
+      IsNotNull="true"
+      EntityAttrName="SLocale"
+      EntityUsage="VwKpBilanceDokladStruktura"
+      AliasName="S_LOCALE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewLinkAccessor
+      Name="VwKpBunkadefiniceuctuView"
+      ViewLink="cz.jtbank.konsolidace.mustky.ViewLinkStructBunka"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </ViewLinkAccessor>
+   <ViewLinkAccessor
+      Name="VwKpBunkadefiniceuctuView1"
+      ViewLink="cz.jtbank.konsolidace.mustky.ViewLinkStructBunkaOpr"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </ViewLinkAccessor>
+</ViewObject>

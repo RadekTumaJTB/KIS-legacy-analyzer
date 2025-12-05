@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatProjektdokladView"
+   SelectList="KpDatProjektdoklad.ID, 
+       KpDatProjektdoklad.ID_KTGPROJEKT, 
+       KpDatProjektdoklad.DT_DATUM, 
+       KpDatProjektdoklad.DT_DATUMVYTVORENI, 
+       KpDatProjektdoklad.C_DENNI"
+   FromList="DB_JT.KP_DAT_PROJEKTDOKLAD KpDatProjektdoklad"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatProjektdokladViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatProjektdoklad"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatProjektdoklad" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatProjektdoklad"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      IsNotNull="true"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="KpDatProjektdoklad"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatProjektdoklad"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumvytvoreni"
+      EntityAttrName="DtDatumvytvoreni"
+      EntityUsage="KpDatProjektdoklad"
+      AliasName="DT_DATUMVYTVORENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CDenni"
+      EntityAttrName="CDenni"
+      EntityUsage="KpDatProjektdoklad"
+      AliasName="C_DENNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

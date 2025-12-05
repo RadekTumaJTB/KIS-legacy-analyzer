@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisTyptransakcegroupView"
+   BindingStyle="Oracle"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroupViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT KpCisTyptransakcegroup.ID, 
+       KpCisTyptransakcegroup.S_KOD,
+       KpCisTyptransakcegroup.DT_PLATNOSTOD,
+       KpCisTyptransakcegroup.DT_PLATNOSTDO,
+       KpCisTyptransakcegroup.S_POPIS,
+       KpCisTyptransakcegroup.C_DEVELOPER
+FROM DB_JT.KP_CIS_TYPTRANSAKCEGROUP KpCisTyptransakcegroup
+union
+select null,null,null,null,null,null from dual
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisTyptransakcegroup"
+      Entity="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisTyptransakcegroup"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKod"
+      IsNotNull="true"
+      EntityAttrName="SKod"
+      EntityUsage="KpCisTyptransakcegroup"
+      AliasName="S_KOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsPersistent="false"
+      Precision="255"
+      Type="oracle.jbo.domain.Date"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2"
+      Expression="DT_PLATNOSTOD"
+      SQLType="DATE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsPersistent="false"
+      Precision="255"
+      Type="oracle.jbo.domain.Date"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2"
+      Expression="DT_PLATNOSTDO"
+      SQLType="DATE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2"
+      Expression="S_POPIS"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CDeveloper"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="1"
+      Type="java.lang.String"
+      AliasName="C_DEVELOPER"
+      ColumnType="CHAR"
+      Expression="C_DEVELOPER"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+</ViewObject>

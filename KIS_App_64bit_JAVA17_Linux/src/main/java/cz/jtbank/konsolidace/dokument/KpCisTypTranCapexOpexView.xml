@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisTypTranCapexOpexView"
+   SelectList="KpCisTypTranCapexOpex.C_ID, 
+       KpCisTypTranCapexOpex.S_POPIS, 
+       KpCisTypTranCapexOpex.S_KOMENTAR"
+   FromList="DB_JT.KP_CIS_TYP_TRAN_CAPEX_OPEX KpCisTypTranCapexOpex"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.KpCisTypTranCapexOpexViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisTypTranCapexOpex"
+      Entity="cz.jtbank.konsolidace.dokument.KpCisTypTranCapexOpex" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="CId"
+      IsNotNull="true"
+      EntityAttrName="CId"
+      EntityUsage="KpCisTypTranCapexOpex"
+      AliasName="C_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisTypTranCapexOpex"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKomentar"
+      EntityAttrName="SKomentar"
+      EntityUsage="KpCisTypTranCapexOpex"
+      AliasName="S_KOMENTAR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

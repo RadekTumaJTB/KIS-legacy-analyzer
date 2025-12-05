@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatBudgetschvalovaniView"
+   BindingStyle="Oracle"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.budget.VwDatBudgetschvalovaniViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT VwDatBudgetschvalovani.UROVEN, 
+       VwDatBudgetschvalovani.ID_BUDGET, 
+       VwDatBudgetschvalovani.BUDGET, 
+       VwDatBudgetschvalovani.ID_OSOBA, 
+       VwDatBudgetschvalovani.OSOBA, 
+       VwDatBudgetschvalovani.POCET, 
+       VwDatBudgetschvalovani.NIZSI
+FROM DB_JT.VW_DAT_BUDGETSCHVALOVANI VwDatBudgetschvalovani
+union
+select v.uroven,
+       v.id_budget,
+	   'Zástup pro '||v.budget,
+	   bz.ID_KDO id_osoba,
+	   (select u.S_TITULYPRED||' '||u.S_KRESTNI||' '||u.S_PRIJMENI||' '||u.S_TITULYPO from db_jt.ktg_appUser u where u.ID = bz.ID_KDO) || 
+	   ' (' || (select u.S_TITULYPRED||' '||u.S_KRESTNI||' '||u.S_PRIJMENI||' '||u.S_TITULYPO from db_jt.ktg_appUser u where u.ID = v.ID_OSOBA) || ')' osoba,
+	   v.pocet,
+	   v.nizsi 
+from db_jt.vw_dat_budgetSchvalovani v,
+     db_jt.kp_dat_budgetZastup bz
+where v.ID_OSOBA = bz.ID_KOHO
+  and sysdate between bz.DT_PLATNOSTOD and bz.DT_PLATNOSTDO
+  and bz.C_FWDEMAIL = '1'
+  and (bz.ID_BUDGET = v.ID_BUDGET or bz.ID_BUDGET is null)
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatBudgetschvalovani"
+      Entity="cz.jtbank.konsolidace.budget.VwDatBudgetschvalovani" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Uroven"
+      EntityAttrName="Uroven"
+      EntityUsage="VwDatBudgetschvalovani"
+      AliasName="UROVEN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdBudget"
+      EntityAttrName="IdBudget"
+      EntityUsage="VwDatBudgetschvalovani"
+      AliasName="ID_BUDGET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Budget"
+      EntityAttrName="Budget"
+      EntityUsage="VwDatBudgetschvalovani"
+      AliasName="BUDGET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOsoba"
+      EntityAttrName="IdOsoba"
+      EntityUsage="VwDatBudgetschvalovani"
+      AliasName="ID_OSOBA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Osoba"
+      EntityAttrName="Osoba"
+      EntityUsage="VwDatBudgetschvalovani"
+      AliasName="OSOBA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pocet"
+      EntityAttrName="Pocet"
+      EntityUsage="VwDatBudgetschvalovani"
+      AliasName="POCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Nizsi"
+      EntityAttrName="Nizsi"
+      EntityUsage="VwDatBudgetschvalovani"
+      AliasName="NIZSI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

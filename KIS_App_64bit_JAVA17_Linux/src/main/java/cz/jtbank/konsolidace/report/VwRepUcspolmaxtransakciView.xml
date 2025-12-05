@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepUcspolmaxtransakciView"
+   SelectList="VwRepUcspolmaxtransakci.SPOLECNOST, 
+       VwRepUcspolmaxtransakci.POCETTRANSAKCI, 
+
+       VwRepUcspolmaxtransakci.DATUM, 
+       VwRepUcspolmaxtransakci.POCETTRANSAKCIPROJEKT, 
+
+       VwRepUcspolmaxtransakci.POCETTRANSAKCIODBOR, 
+       
+VwRepUcspolmaxtransakci.PCTTRANSAKCIPROJEKT, 
+       VwRepUcspolmaxtransakci.PCTTRANSAKCIODBOR, 
+
+       VwRepUcspolmaxtransakci.C_ONLINE, 
+       VwRepUcspolmaxtransakci.POCETTRANSAKCIPROJEKTPLUS, 
+
+       VwRepUcspolmaxtransakci.PCTTRANSAKCIPROJEKTPLUS"
+   FromList="DB_JT.VW_REP_UCSPOLMAXTRANSAKCI VwRepUcspolmaxtransakci"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepUcspolmaxtransakciViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepUcspolmaxtransakci"
+      Entity="cz.jtbank.konsolidace.report.VwRepUcspolmaxtransakci" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwRepUcspolmaxtransakci"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pocettransakci"
+      EntityAttrName="Pocettransakci"
+      EntityUsage="VwRepUcspolmaxtransakci"
+      AliasName="POCETTRANSAKCI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datum"
+      IsNotNull="true"
+      EntityAttrName="Datum"
+      EntityUsage="VwRepUcspolmaxtransakci"
+      AliasName="DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pocettransakciprojekt"
+      EntityAttrName="Pocettransakciprojekt"
+      EntityUsage="VwRepUcspolmaxtransakci"
+      AliasName="POCETTRANSAKCIPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pocettransakciodbor"
+      EntityAttrName="Pocettransakciodbor"
+      EntityUsage="VwRepUcspolmaxtransakci"
+      AliasName="POCETTRANSAKCIODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pcttransakciprojekt"
+      EntityAttrName="Pcttransakciprojekt"
+      EntityUsage="VwRepUcspolmaxtransakci"
+      AliasName="PCTTRANSAKCIPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pcttransakciodbor"
+      EntityAttrName="Pcttransakciodbor"
+      EntityUsage="VwRepUcspolmaxtransakci"
+      AliasName="PCTTRANSAKCIODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="COnline"
+      EntityAttrName="COnline"
+      EntityUsage="VwRepUcspolmaxtransakci"
+      AliasName="C_ONLINE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pocettransakciprojektplus"
+      EntityAttrName="Pocettransakciprojektplus"
+      EntityUsage="VwRepUcspolmaxtransakci"
+      AliasName="POCETTRANSAKCIPROJEKTPLUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pcttransakciprojektplus"
+      EntityAttrName="Pcttransakciprojektplus"
+      EntityUsage="VwRepUcspolmaxtransakci"
+      AliasName="PCTTRANSAKCIPROJEKTPLUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

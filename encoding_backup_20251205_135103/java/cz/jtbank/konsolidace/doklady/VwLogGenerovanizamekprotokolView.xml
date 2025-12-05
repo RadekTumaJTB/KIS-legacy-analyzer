@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwLogGenerovanizamekprotokolView"
+   SelectList="VwLogGenerovanizamekprotokol.DT_DATUM, 
+       VwLogGenerovanizamekprotokol.NL_KROK, 
+
+       VwLogGenerovanizamekprotokol.AKCE, 
+       VwLogGenerovanizamekprotokol.UROVEN, 
+
+       VwLogGenerovanizamekprotokol.S_UZIVATEL, 
+       VwLogGenerovanizamekprotokol.DT_TIMESTAMP, 
+
+       VwLogGenerovanizamekprotokol.S_DUVOD, 
+       VwLogGenerovanizamekprotokol.ID_KTGUCETNISPOLECNOST, 
+
+       VwLogGenerovanizamekprotokol.S_NAZEV, 
+       VwLogGenerovanizamekprotokol.S_ICO, 
+
+       VwLogGenerovanizamekprotokol.ID_DOKLAD, 
+       VwLogGenerovanizamekprotokol.SOUBOR, 
+
+       VwLogGenerovanizamekprotokol.DT_VYTVORENO, 
+       VwLogGenerovanizamekprotokol.S_NAZEV_SKUPINA4"
+   FromList="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL VwLogGenerovanizamekprotokol"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokolViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwLogGenerovanizamekprotokol"
+      Entity="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokol" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="DtDatum"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlKrok"
+      EntityAttrName="NlKrok"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="NL_KROK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Akce"
+      EntityAttrName="Akce"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="AKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Uroven"
+      EntityAttrName="Uroven"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="UROVEN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtTimestamp"
+      EntityAttrName="DtTimestamp"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="DT_TIMESTAMP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SDuvod"
+      EntityAttrName="SDuvod"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="S_DUVOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      IsNotNull="true"
+      EntityAttrName="SIco"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Soubor"
+      EntityAttrName="Soubor"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="SOUBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtVytvoreno"
+      EntityAttrName="DtVytvoreno"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="DT_VYTVORENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazevSkupina4"
+      EntityAttrName="SNazevSkupina4"
+      EntityUsage="VwLogGenerovanizamekprotokol"
+      AliasName="S_NAZEV_SKUPINA4"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

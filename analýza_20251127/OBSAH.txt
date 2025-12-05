@@ -13,8 +13,14 @@
 📄 REENGINEERING_ANALYSIS.json  - 🆕 Re-engineering data (JSON)
 📄 REENGINEERING_ANALYSIS_AI.md - 🤖 AI-asistovaná migrace (60% rychlejší!)
 📄 REENGINEERING_ANALYSIS_AI.json - 🤖 AI re-engineering data (JSON)
-📄 REENGINEERING_ANALYSIS_AI_QUICK.md - ⚡ QUICK Modernization (Java 17 + libs, 1.5-2 měs!)
-📄 REENGINEERING_ANALYSIS_AI_QUICK_CZ.md - ⚡ QUICK Modernization (ČESKY)
+📄 REENGINEERING_ANALYSIS_AI_QUICK.md - ⚡ v1: Bez custom libs (1.5-2 měs)
+📄 REENGINEERING_ANALYSIS_AI_QUICK_CZ.md - ⚡ v1: ČESKY
+📄 REENGINEERING_ANALYSIS_AI_QUICK_CZ_v2.md - 🔧 v2: S custom libs (8-9 měs)
+📄 REENGINEERING_ANALYSIS_AI_QUICK_CZ_v2.pdf - 📄 v2 PDF
+📄 REENGINEERING_ANALYSIS_AI_QUICK_CZ_v3.md - 🎯 v3: TŘI VARIANTY ⭐⭐⭐
+📄 REENGINEERING_ANALYSIS_AI_QUICK_CZ_v3.pdf - 📄 v3 PDF ⭐⭐⭐
+📄 WIN2003_TO_WIN2008_MIGRATION_ANALYSIS.md - 🆕 Win 2003 → 2008 migrace
+📄 WIN2003_TO_WIN2008_MIGRATION_ANALYSIS.pdf - 📄 PDF (754 KB)
 📄 OBSAH.txt                    - Tento soubor
 
 📁 bpmn_business/               - Business Process BPMN diagramy (15 souborů)
@@ -99,13 +105,155 @@ Pro vývojáře:
   4. Neo4J databáze pro detailní závislosti
 
 Pro stakeholdery a rozhodování:
-  1. ⚡ REENGINEERING_ANALYSIS_AI_QUICK.md - DOPORUČENO! 1.5-2 měsíce, €36k-48k
-  2. 🤖 REENGINEERING_ANALYSIS_AI.md - Full re-engineering: 8-11 měsíců, €400k-€600k
-  3. REENGINEERING_ANALYSIS.md - Tradiční přístup pro srovnání
-  4. Rizika a mitigační opatření
+  1. 🎯 REENGINEERING_ANALYSIS_AI_QUICK_CZ_v3.md + PDF ⭐⭐⭐ DOPORUČENO!
+     TŘI VARIANTY s detailním popisem co/jak/kdy
+  2. 🔧 REENGINEERING_ANALYSIS_AI_QUICK_CZ_v2.md + PDF - Full migration detail
+  3. 🤖 REENGINEERING_ANALYSIS_AI.md - JSP→React re-engineering (8-11 měs)
+  4. REENGINEERING_ANALYSIS.md - Tradiční přístup (srovnání)
 
-💡 DOPORUČENÍ PRO START: Quick Modernization (Java 17 + libs) = nejrychlejší ROI!
-   Poté lze postupně pokračovat na full re-engineering.
+📊 NOVĚ v v3 - TŘI VARIANTY MIGRACE:
+
+┌─────────────┬──────────┬─────────────┬──────────┬───────────────┐
+│ Varianta    │ Doba     │ Náklady     │ Riziko   │ Custom Libs   │
+├─────────────┼──────────┼─────────────┼──────────┼───────────────┤
+│ A: Quick    │ 2-3 měs  │ €74k-111k   │ NÍZKÉ    │ Pouze syntax  │
+│ B: Phased   │ 10-11měs │ €260k-286k  │ STŘEDNÍ  │ 100% (waves)  │
+│ C: Full     │ 8-9 měs  │ €192k-216k  │ VYSOKÉ   │ 100% (all)    │
+└─────────────┴──────────┴─────────────┴──────────┴───────────────┘
+
+💡 DOPORUČENÁ STRATEGIE:
+   1. START s Variantou A (Quick Win) - €74k-111k, 2-3 měsíce
+   2. EVALUATE po 3 měsících - Funguje? Potřeba více?
+   3. DECIDE: Pokračovat (B/C) nebo zastavit (hotovo!)
+
+🎯 Proč tento přístup:
+   ✅ Minimální investice na start (€74k vs €192-286k)
+   ✅ Flexibilita zastavit kdykoliv
+   ✅ 80/20 rule: 80% value za 20% nákladů
+   ✅ De-risk před velkým commitem
+
+───────────────────────────────────────────────────────────────────────
+
+🐧 WINDOWS → LINUX PLATFORM MIGRATION ⭐ NOVÁ ANALÝZA!
+
+📄 WINDOWS_TO_LINUX_MIGRATION_ANALYSIS.md + PDF
+
+Současný stav:
+  • Platform: Windows Server 2023 (32-bit legacy)
+  • Java: 1.7
+  • OS Coupling: Střední vazba na Windows
+
+Cíl:
+  • Platform: Linux (Red Hat UBI-minimal 10)
+  • Architecture: 64-bit
+  • Java: 17 LTS
+
+Kritické Nálezy:
+┌──────────────────────┬────────┬────────┬───────────┬──────────────────┐
+│ Kategorie            │ Výskyty│ Soubory│ Risk      │ Migrovatelnost   │
+├──────────────────────┼────────┼────────┼───────────┼──────────────────┤
+│ File Paths           │  430   │   84   │ STŘEDNÍ   │ ✅ Automatizovat│
+│ Encoding (win-1250)  │ 6,525  │  644   │ STŘEDNÍ   │ ✅ Automatizovat│
+│ JNI/Native          │   30   │    2   │ VYSOKÉ    │ ⚠️ Rekompilace  │
+│ Process Management   │   15   │    1   │ NÍZKÉ     │ ✅ Jednoduché   │
+└──────────────────────┴────────┴────────┴───────────┴──────────────────┘
+
+Celkové Risk Assessment: ⚠️ STŘEDNÍ → ✅ JE MIGROVATELNÉ
+
+Effort & Cost Estimates:
+┌─────────────────────┬──────────┬──────────┬──────────┐
+│ Approach            │ Effort   │ Cost     │ Duration │
+├─────────────────────┼──────────┼──────────┼──────────┤
+│ Manual Migration    │ 15 týdnů │ €60,800  │ 15 týdnů │
+│ With AI (Claude)    │ 10 týdnů │ €40,000  │ 10 týdnů │
+│ Savings             │  5 týdnů │ €20,800  │ 34% ⚡   │
+└─────────────────────┴──────────┴──────────┴──────────┘
+
+Hlavní Problémy:
+  1. 430 Hardcoded Windows Paths → Linux paths
+  2. 6,525 Encoding Issues (windows-1250 → UTF-8) v JSP
+  3. 30 JNI Calls → Pure Java replacement (Apache Commons CSV)
+  4. 15 CMD Scripts → Bash conversion
+  5. 32-bit → 64-bit JVM migration
+
+Doporučené Řešení:
+  ✅ Pure Java replacement pro JNI
+  ✅ Configuration-driven paths
+  ✅ Global UTF-8 encoding migration
+  ✅ Bash script conversion
+  ✅ Testing na Red Hat UBI-minimal 10
+
+Migration Timeline (13-15 týdnů):
+  Phase 1: Preparation (2 týdny)
+  Phase 2: Code Migration (6-8 týdnů)
+  Phase 3: Testing (3 týdny)
+  Phase 4: Deployment (2 týdny)
+
+ROI s AI:
+  🚀 34% effort reduction (76 → 50 dev-days)
+  💰 34% cost savings (€60.8k → €40k)
+  ⚡ 33% faster delivery (15 → 10 weeks)
+
+
+───────────────────────────────────────────────────────────────────────
+
+🪟 WINDOWS SERVER 2003 → 2008 MIGRATION ⭐ NOVÁ ANALÝZA!
+
+📄 WIN2003_TO_WIN2008_MIGRATION_ANALYSIS.md + PDF
+
+Současný stav:
+  • Platform: Windows Server 2003 (32-bit)
+  • Java: 1.4 (originální verze)
+  • OS Coupling: Nízká vazba na Win 2003
+
+Cíl:
+  • Platform: Windows Server 2008 (32-bit)
+  • Java: 1.4 (zachováno)
+  • UAC: User Account Control enabled
+
+Kritické Nálezy:
+┌─────────────────────┬────────┬────────┬───────────┬──────────────────┐
+│ Kategorie           │ Výskyty│ Soubory│ Risk      │ Doporučení       │
+├─────────────────────┼────────┼────────┼───────────┼──────────────────┤
+│ Java 1.4 Deprecated │    6   │    1   │ VYSOKÉ    │ ❌ Nahradit API │
+│ Protected File Sys  │  405   │   81   │ STŘEDNÍ   │ ⚠️ Move to %PD% │
+│ Encoding (win-1250) │ 6,525  │  644   │ NÍZKÉ     │ ✅ Zachovat     │
+└─────────────────────┴────────┴────────┴───────────┴──────────────────┘
+
+Celkové Risk Assessment: ⚠️ STŘEDNÍ → ✅ JE MIGROVATELNÉ
+
+Effort & Cost Estimates:
+┌─────────────────────┬──────────┬──────────┬──────────┐
+│ Approach            │ Effort   │ Cost     │ Duration │
+├─────────────────────┼──────────┼──────────┼──────────┤
+│ Manual Migration    │ 8 týdnů  │ €31,200  │ 39 days  │
+│ With AI (Claude)    │ 5.5 týdnů│ €21,840  │ 27 days  │
+│ Savings             │ 2.5 týdnů│ €9,360   │ 30% ⚡   │
+└─────────────────────┴──────────┴──────────┴──────────┘
+
+Hlavní Problémy:
+  1. 6 Java 1.4 Deprecated API (sun.misc.BASE64Encoder → javax.xml.bind)
+  2. 405 Protected File System (C:\Windows\Temp → %PROGRAMDATA%\KIS\)
+  3. 6,525 Encoding Issues (windows-1250 OK - Win 2008 podporuje)
+  4. UAC Virtualization Testing
+
+Doporučené Řešení:
+  ✅ Replace sun.misc.BASE64Encoder → javax.xml.bind.DatatypeConverter
+  ✅ Centralizovaný PathManager utility pro UAC-safe paths
+  ✅ Refactoring 81 Excel export tříd
+  ✅ Comprehensive UAC testing s non-admin users
+  ✅ Zachovat windows-1250 encoding
+
+Migration Timeline (8 týdnů):
+  Phase 1: Preparation (1 týden)
+  Phase 2: Code Migration (4 týdny)
+  Phase 3: UAC Testing (2 týdny)
+  Phase 4: Deployment (1 týden)
+
+ROI s AI:
+  🚀 30% effort reduction (39 → 27 dev-days)
+  💰 30% cost savings (€31.2k → €21.8k)
+  ⚡ 31% faster delivery (8 → 5.5 weeks)
 
 
 📋 DALŠÍ KROKY

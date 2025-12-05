@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepUcspollastclosedateView"
+   SelectList="VwRepUcspollastclosedate.POCET, 
+       VwRepUcspollastclosedate.RADEK"
+   FromList="DB_JT.VW_REP_UCSPOLLASTCLOSEDATE VwRepUcspollastclosedate"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepUcspollastclosedateViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepUcspollastclosedate"
+      Entity="cz.jtbank.konsolidace.report.VwRepUcspollastclosedate" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Pocet"
+      EntityAttrName="Pocet"
+      EntityUsage="VwRepUcspollastclosedate"
+      AliasName="POCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Radek"
+      EntityAttrName="Radek"
+      EntityUsage="VwRepUcspollastclosedate"
+      AliasName="RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

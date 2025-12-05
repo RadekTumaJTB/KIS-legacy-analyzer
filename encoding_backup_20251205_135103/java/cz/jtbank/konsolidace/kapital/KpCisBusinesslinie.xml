@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisBusinesslinie"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_BUSINESSLINIE"
+   AliasName="KpCisBusinesslinie"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.kapital.KpCisBusinesslinieImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_BUSINESSLINIE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SKod"
+      IsNotNull="true"
+      Precision="5"
+      Type="java.lang.String"
+      ColumnName="S_KOD"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_BUSINESSLINIE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="5" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_BUSINESSLINIE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdBeta"
+      IsNotNull="true"
+      Precision="5"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_BETA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_BUSINESSLINIE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpDefUcetbusinesslinie"
+      Association="cz.jtbank.konsolidace.kapital.FkDefucetbusinesslinieBlAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.kapital.FkDefucetbusinesslinieBlAssoc.KpDefUcetbusinesslinie"
+      AssociationOtherEnd="cz.jtbank.konsolidace.kapital.FkDefucetbusinesslinieBlAssoc.KpCisBusinesslinie"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatOperacnirizikodetail"
+      Association="cz.jtbank.konsolidace.kapital.FkKpoperacnirizikodBuslineAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.kapital.FkKpoperacnirizikodBuslineAssoc.KpDatOperacnirizikodetail"
+      AssociationOtherEnd="cz.jtbank.konsolidace.kapital.FkKpoperacnirizikodBuslineAssoc.KpCisBusinesslinie"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="NnCisbusinesslinieId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisBusinesslinie.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_CISBUSINESSLINIE_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkCisbusinesslinie" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisBusinesslinie.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_CISBUSINESSLINIE" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnCisbusinesslinieKod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisBusinesslinie.SKod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_CISBUSINESSLINIE_KOD" />
+         <Attr Name="_checkCondition" Value="&#34;S_KOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnCisbusinesslinieBeta" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisBusinesslinie.NdBeta" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_CISBUSINESSLINIE_BETA" />
+         <Attr Name="_checkCondition" Value="&#34;ND_BETA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

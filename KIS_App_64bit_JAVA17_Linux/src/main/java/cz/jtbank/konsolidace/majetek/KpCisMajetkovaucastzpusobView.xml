@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisMajetkovaucastzpusobView"
+   SelectList="KpCisMajetkovaucastzpusob.ID, 
+       KpCisMajetkovaucastzpusob.S_POPIS"
+   FromList="DB_JT.KP_CIS_MAJETKOVAUCASTZPUSOB KpCisMajetkovaucastzpusob"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.majetek.KpCisMajetkovaucastzpusobViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisMajetkovaucastzpusob"
+      Entity="cz.jtbank.konsolidace.majetek.KpCisMajetkovaucastzpusob" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisMajetkovaucastzpusob"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      IsNotNull="true"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisMajetkovaucastzpusob"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

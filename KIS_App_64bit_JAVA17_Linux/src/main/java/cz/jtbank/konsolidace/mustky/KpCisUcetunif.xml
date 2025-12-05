@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisUcetunif"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_UCETUNIF"
+   AliasName="KpCisUcetunif"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.mustky.KpCisUcetunifImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_UCETUNIF"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcet"
+      IsNotNull="true"
+      Precision="15"
+      Type="java.lang.String"
+      ColumnName="S_UCET"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIF" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CPocitatvazby"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_POCITATVAZBY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIF"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CClass"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_CLASS"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIF"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CShares"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_SHARES"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIF"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CMultisegment"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_MULTISEGMENT"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIF"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CCountry"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_COUNTRY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIF"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CTypecounterparties"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_TYPECOUNTERPARTIES"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIF"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdLimitcounterpartiesdetal"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_LIMITCOUNTERPARTIESDETAL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_UCETUNIF" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CMaturity"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_MATURITY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIF"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CRiskPl"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_RISK_PL"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIF"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CRkc019"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_RKC_019"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_UCETUNIF"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisUcetuniflang"
+      Association="cz.jtbank.konsolidace.mustky.FkKpucetuniflangUuAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.mustky.FkKpucetuniflangUuAssoc.KpCisUcetuniflang"
+      AssociationOtherEnd="cz.jtbank.konsolidace.mustky.FkKpucetuniflangUuAssoc.KpCisUcetunif"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDefUcet2ucetunif"
+      Association="cz.jtbank.konsolidace.mustky.FkUcet2ucetunifUuAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.mustky.FkUcet2ucetunifUuAssoc.KpDefUcet2ucetunif"
+      AssociationOtherEnd="cz.jtbank.konsolidace.mustky.FkUcet2ucetunifUuAssoc.KpCisUcetunif"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="CnKpcisucetunifClass" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetunif.CClass" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPCISUCETUNIF_CLASS" />
+         <Attr Name="_checkCondition" Value=" c_class is not null and c_class in ( &#39;A&#39;, &#39;L&#39;, &#39;I&#39;, &#39;E&#39;, &#39;?&#39;, &#39;3&#39;, &#39;4&#39; ) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpucetunif" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetunif.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPUCETUNIF" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnCisucetunifTypecountry" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetunif.CTypecounterparties" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_CISUCETUNIF_TYPECOUNTRY" />
+         <Attr Name="_checkCondition" Value=" C_typeCounterParties  is not null and C_typeCounterParties in (&#39;0&#39;,&#39;1&#39;) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucetunifUcet" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetunif.SUcet" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCETUNIF_UCET" />
+         <Attr Name="_checkCondition" Value="&#34;S_UCET&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpucetunifId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetunif.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPUCETUNIF_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnCisucetunifVazby" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetunif.CPocitatvazby" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_CISUCETUNIF_VAZBY" />
+         <Attr Name="_checkCondition" Value=" c_pocitatVazby  is not null and c_pocitatVazby in (&#39;0&#39;,&#39;1&#39;) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnCisucetunifCountry" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetunif.CCountry" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_CISUCETUNIF_COUNTRY" />
+         <Attr Name="_checkCondition" Value=" c_country  is not null and c_country in (&#39;0&#39;,&#39;1&#39;) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnCisucetunifMaturity" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetunif.CMaturity" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_CISUCETUNIF_MATURITY" />
+         <Attr Name="_checkCondition" Value="C_Maturity  is not null and C_Maturity in (&#39;0&#39;,&#39;1&#39;)" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

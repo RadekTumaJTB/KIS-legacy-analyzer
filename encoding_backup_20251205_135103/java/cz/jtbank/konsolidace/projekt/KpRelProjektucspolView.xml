@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelProjektucspolView"
+   SelectList="KpRelProjektucspol.ID_KTGPROJEKT, 
+       KpRelProjektucspol.ID_KTGUCETNISPOLECNOST, 
+
+       KpRelProjektucspol.C_POUZITHV, 
+       KpKtgUcetnispolecnost.S_NAZEV, 
+
+       KpKtgUcetnispolecnost.ID, 
+       (SELECT u.S_KRESTNI||&#39; 
+&#39;||u.S_PRIJMENI FROM DB_JT.KTG_APPUSER u WHERE u.ID=KpKtgUcetnispolecnost.ID_ODPOVEDNAOSOBA) 
+AS OO, 
+       KpRelProjektucspol.DT_MATKAOD, 
+       KpRelProjektucspol.DT_MATKADO"
+   FromList="DB_JT.KP_REL_PROJEKTUCSPOL KpRelProjektucspol, DB_JT.KP_KTG_UCETNISPOLECNOST KpKtgUcetnispolecnost"
+   Where="KpRelProjektucspol.ID_KTGUCETNISPOLECNOST = KpKtgUcetnispolecnost.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.KpRelProjektucspolViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelProjektucspol"
+      Entity="cz.jtbank.konsolidace.projekt.KpRelProjektucspol" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpRelProjektucspol.ID_KTGUCETNISPOLECNOST = KpKtgUcetnispolecnost.ID" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgUcetnispolecnost"
+      Entity="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost"
+      SourceUsage="cz.jtbank.konsolidace.projekt.KpRelProjektucspolView.KpRelProjektucspol"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      IsNotNull="true"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="KpRelProjektucspol"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpRelProjektucspol"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPouzithv"
+      EntityAttrName="CPouzithv"
+      EntityUsage="KpRelProjektucspol"
+      AliasName="C_POUZITHV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="OO"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="OO"
+      ColumnType="VARCHAR2"
+      Expression="(SELECT u.S_KRESTNI||&#39; &#39;||u.S_PRIJMENI FROM DB_JT.KTG_APPUSER u WHERE u.ID=KpKtgUcetnispolecnost.ID_ODPOVEDNAOSOBA)"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtMatkaod"
+      EntityAttrName="DtMatkaod"
+      EntityUsage="KpRelProjektucspol"
+      AliasName="DT_MATKAOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtMatkado"
+      EntityAttrName="DtMatkado"
+      EntityUsage="KpRelProjektucspol"
+      AliasName="DT_MATKADO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

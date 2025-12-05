@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KtgAppuserIExterniView"
+   SelectList="KtgAppuser.ID, 
+       KtgAppuser.S_USERID, 
+       KtgAppuser.S_USERNAME, 
+
+       KtgAppuser.S_TITULYPRED, 
+       KtgAppuser.S_KRESTNI, 
+
+       KtgAppuser.S_PRIJMENI, 
+       KtgAppuser.S_TITULYPO, 
+
+       KtgAppuser.S_EMAIL, 
+       KtgAppuser.C_INDIKATOR, 
+ 
+      KtgAppuser.S_TELEFON, 
+       KtgAppuser.ID_CISDOCUCSPOL, 
+
+       KtgAppuser.ID_DOCUCSPOL, 
+       KtgAppuser.ID_DOCCOUNTRY, 
+
+       KtgAppuser.ID_NADRIZENAUCETNI, 
+       KtgAppuser.C_ARCHIVNI, 
+
+       KtgAppuser.C_OLAP, 
+       KtgAppuser.C_EXTERNI"
+   FromList="DB_JT.KTG_APPUSER KtgAppuser"
+   Where="C_ARCHIVNI &#60;&#62; &#39;1&#39;"
+   OrderBy="S_PRIJMENI, S_KRESTNI, S_USERNAME"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.users.KtgAppuserIExterniViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.users.common.KtgAppuserIExterniViewRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="KtgAppuser"
+      Entity="cz.jtbank.konsolidace.users.KtgAppuser" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="C_ARCHIVNI &#60;&#62; &#39;1&#39;" />
+         <Attr Name="_queryOrderBy" Value="S_PRIJMENI, S_KRESTNI, S_USERNAME" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      EntityAttrName="Id"
+      EntityUsage="KtgAppuser"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUserid"
+      EntityAttrName="SUserid"
+      EntityUsage="KtgAppuser"
+      AliasName="S_USERID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUsername"
+      EntityAttrName="SUsername"
+      EntityUsage="KtgAppuser"
+      AliasName="S_USERNAME"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="STitulypred"
+      EntityAttrName="STitulypred"
+      EntityUsage="KtgAppuser"
+      AliasName="S_TITULYPRED"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKrestni"
+      EntityAttrName="SKrestni"
+      EntityUsage="KtgAppuser"
+      AliasName="S_KRESTNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPrijmeni"
+      EntityAttrName="SPrijmeni"
+      EntityUsage="KtgAppuser"
+      AliasName="S_PRIJMENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="STitulypo"
+      EntityAttrName="STitulypo"
+      EntityUsage="KtgAppuser"
+      AliasName="S_TITULYPO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SEmail"
+      EntityAttrName="SEmail"
+      EntityUsage="KtgAppuser"
+      AliasName="S_EMAIL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CIndikator"
+      EntityAttrName="CIndikator"
+      EntityUsage="KtgAppuser"
+      AliasName="C_INDIKATOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="STelefon"
+      EntityAttrName="STelefon"
+      EntityUsage="KtgAppuser"
+      AliasName="S_TELEFON"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisdocucspol"
+      EntityAttrName="IdCisdocucspol"
+      EntityUsage="KtgAppuser"
+      AliasName="ID_CISDOCUCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDocucspol"
+      EntityAttrName="IdDocucspol"
+      EntityUsage="KtgAppuser"
+      AliasName="ID_DOCUCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoccountry"
+      EntityAttrName="IdDoccountry"
+      EntityUsage="KtgAppuser"
+      AliasName="ID_DOCCOUNTRY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdNadrizenaucetni"
+      EntityAttrName="IdNadrizenaucetni"
+      EntityUsage="KtgAppuser"
+      AliasName="ID_NADRIZENAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CArchivni"
+      EntityAttrName="CArchivni"
+      EntityUsage="KtgAppuser"
+      AliasName="C_ARCHIVNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="COlap"
+      EntityAttrName="COlap"
+      EntityUsage="KtgAppuser"
+      AliasName="C_OLAP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CExterni"
+      EntityAttrName="CExterni"
+      EntityUsage="KtgAppuser"
+      AliasName="C_EXTERNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

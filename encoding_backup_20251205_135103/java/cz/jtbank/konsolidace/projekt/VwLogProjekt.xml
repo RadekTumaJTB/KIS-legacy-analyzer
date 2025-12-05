@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwLogProjekt"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_LOG_PROJEKT"
+   AliasName="VwLogProjekt"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="132"
+   RowClass="cz.jtbank.konsolidace.projekt.VwLogProjektImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.projekt.common.VwLogProjektImplMsgBundle" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazev"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SCisloold"
+      Precision="6"
+      Type="java.lang.String"
+      ColumnName="S_CISLOOLD"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="6" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdStatus"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_STATUS"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Status"
+      Precision="64"
+      Type="java.lang.String"
+      ColumnName="STATUS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="64" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumstatuszmena"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMSTATUSZMENA"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdNavrhuje"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_NAVRHUJE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Navrhuje"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="NAVRHUJE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdSponzor"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_SPONZOR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Sponzor"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="SPONZOR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTop"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TOP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Top"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="TOP"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdPmanager"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_PMANAGER"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pmanager"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="PMANAGER"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKategorie"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KATEGORIE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Kategorie"
+      Precision="64"
+      Type="java.lang.String"
+      ColumnName="KATEGORIE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="64" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMenanaklady"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENANAKLADY"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtStartoceneni"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_STARTOCENENI"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtKonecoceneni"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_KONECOCENENI"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdFrekvence"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_FREKVENCE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Frekvence"
+      Precision="64"
+      Type="java.lang.String"
+      ColumnName="FREKVENCE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="64" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="250"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="250" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdProjektnavrh"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_PROJEKTNAVRH"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtMemorandumdalsi"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_MEMORANDUMDALSI"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlMemorandummesicu"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_MEMORANDUMMESICU"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CMemorandumsplneno"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_MEMORANDUMSPLNENO"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUzivatel"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_UZIVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtZmeny"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_ZMENY"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_LOG_PROJEKT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdMngsegment"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_MNGSEGMENT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Mngsegment"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="MNGSEGMENT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTypbilance"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TYPBILANCE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CSledujebudget"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_SLEDUJEBUDGET"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTypbudgetu"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TYPBUDGETU"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Typbilance"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="TYPBILANCE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Typbudgetu"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="TYPBUDGETU"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_PROJEKT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwlogprojektPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.VwLogProjekt.Id" />
+         <Item Value="cz.jtbank.konsolidace.projekt.VwLogProjekt.DtZmeny" />
+         <Item Value="cz.jtbank.konsolidace.projekt.VwLogProjekt.SUzivatel" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWLOGPROJEKT_PRIMARY_KEY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

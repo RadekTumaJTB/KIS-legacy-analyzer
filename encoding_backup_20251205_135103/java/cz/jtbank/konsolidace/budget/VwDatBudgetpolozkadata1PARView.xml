@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatBudgetpolozkadata1PARView"
+   BindingStyle="JDBC"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata1PARViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+select sum(
+         case
+           when (td.BUDGET_MENA = td.UCSPOL_MENA) then td.ND_CASTKALOCAL 
+           else db_jt.kurzy.f_getMenaKurs ('ČNB',td.BUDGET_MENA,td.UCSPOL_MENA,NULL) * td.ND_CASTKALOCAL
+		 end
+	   ) nd_castkalocal_zd,
+       td.BUDGET_MENA s_mena_zd,
+	   td.ID_BUDGET,
+	   td.ID_CISTYPTRANSAKCE id_cistyptran
+from DB_JT.VW_DAT_BUDGETTRANSAKCE td
+where (td.ID_KTGPROJEKT=1000001 or td.ID_KTGPROJEKT is null)
+  and td.SPOL_DOC = 0  
+  and trunc(td.DATUM) between trunc(to_date(?),'yyyy') and to_date(?) 
+and td.ID_BUDGET = ? and td.ID_CISTYPTRANSAKCE = ? 
+group by td.BUDGET_MENA,
+	   td.ID_BUDGET,
+	   td.ID_CISTYPTRANSAKCE
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <ViewAttribute
+      Name="NdCastkalocalZd"
+      IsPersistent="false"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ND_CASTKALOCAL_ZD"
+      ColumnType="VARCHAR2"
+      Expression="ND_CASTKALOCAL_ZD"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenaZd"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      AliasName="S_MENA_ZD"
+      ColumnType="VARCHAR2"
+      Expression="S_MENA_ZD"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdBudget"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_BUDGET"
+      ColumnType="VARCHAR2"
+      Expression="ID_BUDGET"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCistyptran"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_CISTYPTRAN"
+      ColumnType="VARCHAR2"
+      Expression="ID_CISTYPTRAN"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <AttrArray Name="KeyAttributes">
+      <Item Value="SMenaZd" />
+      <Item Value="IdBudget" />
+      <Item Value="IdCistyptran" />
+   </AttrArray>
+</ViewObject>

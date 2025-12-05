@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpDokladdetailOdborView"
+   SelectList="VwKpDokladdetailOdbor.UCET, 
+       VwKpDokladdetailOdbor.S_MENA, 
+
+       VwKpDokladdetailOdbor.ND_CASTKALOCAL, 
+       VwKpDokladdetailOdbor.ND_CASTKAMENA, 
+
+       VwKpDokladdetailOdbor.ID_DOKLAD, 
+       VwKpDokladdetailOdbor.S_UCET, 
+
+       VwKpDokladdetailOdbor.S_LOCALE, 
+       VwKpDokladdetailOdbor.ID_KTGODBOR, 
+
+       VwKpDokladdetailOdbor.ID_KTGSPOLECNOST, 
+       VwKpDokladdetailOdbor.S_UNIFSPOL, 
+
+       VwKtgOdbor.S_NAZEV || &#39; (&#39; || VwKtgOdbor.SPOLECNOST || 
+&#39;)&#39; AS ODBORNAZEV, 
+       VwKpDokladdetailOdbor.TEXTRADEK, 
+ 
+      VwKpDokladdetailOdbor.CLENJTFGKONS, 
+       VwKpDokladdetailOdbor.S_UCETUNIF"
+   FromList="DB_JT.VW_KP_DOKLADDETAIL_ODBOR VwKpDokladdetailOdbor, DB_JT.VW_KTG_ODBOR VwKtgOdbor"
+   Where="VwKpDokladdetailOdbor.ID_KTGODBOR = VwKtgOdbor.S_KOD (+)"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwKpDokladdetailOdborViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpDokladdetailOdbor"
+      Entity="cz.jtbank.konsolidace.doklady.VwKpDokladdetailOdbor"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="VwKpDokladdetailOdbor.ID_KTGODBOR = VwKtgOdbor.S_KOD (+)" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="VwKtgOdbor"
+      Entity="cz.jtbank.konsolidace.dokument.VwKtgOdbor"
+      SourceUsage="cz.jtbank.konsolidace.doklady.VwKpDokladdetailOdborView.VwKpDokladdetailOdbor"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Ucet"
+      EntityAttrName="Ucet"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SLocale"
+      IsNotNull="true"
+      EntityAttrName="SLocale"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="S_LOCALE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUnifspol"
+      EntityAttrName="SUnifspol"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="S_UNIFSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="OdborNazev"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="ODBORNAZEV"
+      ColumnType="VARCHAR2"
+      Expression="VwKtgOdbor.S_NAZEV || &#39; (&#39; || VwKtgOdbor.SPOLECNOST || &#39;)&#39;"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Textradek"
+      EntityAttrName="Textradek"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="TEXTRADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Clenjtfgkons"
+      EntityAttrName="Clenjtfgkons"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="CLENJTFGKONS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetunif"
+      EntityAttrName="SUcetunif"
+      EntityUsage="VwKpDokladdetailOdbor"
+      AliasName="S_UCETUNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

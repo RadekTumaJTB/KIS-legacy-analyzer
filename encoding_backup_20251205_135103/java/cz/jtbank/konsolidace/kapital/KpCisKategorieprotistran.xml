@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisKategorieprotistran"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_KATEGORIEPROTISTRAN"
+   AliasName="KpCisKategorieprotistran"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistranImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_KATEGORIEPROTISTRAN"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdSpolecnost"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_SPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_KATEGORIEPROTISTRAN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SExtid"
+      IsUnique="true"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_EXTID"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_KATEGORIEPROTISTRAN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazev"
+      IsNotNull="true"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_KATEGORIEPROTISTRAN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CLicence"
+      IsNotNull="true"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_LICENCE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_KATEGORIEPROTISTRAN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CSpolecnerizeny"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_SPOLECNERIZENY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_KATEGORIEPROTISTRAN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CLikvida"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_LIKVIDA"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_KATEGORIEPROTISTRAN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="NnKpciskatprotistranExtid" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran.SExtid" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISKATPROTISTRAN_EXTID" />
+         <Attr Name="_checkCondition" Value="&#34;S_EXTID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpciskatprotistranIdspol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran.IdSpolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISKATPROTISTRAN_IDSPOL" />
+         <Attr Name="_checkCondition" Value="&#34;ID_SPOLECNOST&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpciskatprotistranNazev" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran.SNazev" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISKATPROTISTRAN_NAZEV" />
+         <Attr Name="_checkCondition" Value="&#34;S_NAZEV&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="UnKpciskatprotistranExtid" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran.SExtid" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="UN_KPCISKATPROTISTRAN_EXTID" />
+         <Attr Name="_isUnique" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpciskatprotistranSpolriz" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran.CSpolecnerizeny" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPCISKATPROTISTRAN_SPOLRIZ" />
+         <Attr Name="_checkCondition" Value=" c_spolecneRizeny in (&#39;0&#39;,&#39;1&#39;) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpciskatprotistranId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISKATPROTISTRAN_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpciskatprotistran" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPCISKATPROTISTRAN" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpciskatprotistranLicence" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran.CLicence" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPCISKATPROTISTRAN_LICENCE" />
+         <Attr Name="_checkCondition" Value=" c_licence in (&#39;0&#39;,&#39;1&#39;) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpciskatprotistranLikvida" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran.CLikvida" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPCISKATPROTISTRAN_LIKVIDA" />
+         <Attr Name="_checkCondition" Value=" c_likvida in (&#39;0&#39;,&#39;1&#39;) " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpciskatprotistranLicence" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran.CLicence" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISKATPROTISTRAN_LICENCE" />
+         <Attr Name="_checkCondition" Value="&#34;C_LICENCE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpciskatprotistranIdspol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran.IdSpolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPCISKATPROTISTRAN_IDSPOL" />
+         <Attr Name="_referencedKey" Value="PK_KPKTGSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

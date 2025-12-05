@@ -1,0 +1,276 @@
+================================================================================
+KIS - COMPLETE DEPENDENCY LIST
+================================================================================
+
+Generated: 2025-12-05
+Source: 1,043 Java files
+Total unique imports: 222
+Total import statements: ~5,200
+
+================================================================================
+ORACLE ADF / JBO (23 unique imports, 3,146 occurrences)
+================================================================================
+
+oracle.jbo.*                                              (102)
+oracle.jbo.ApplicationModule                              (21)
+oracle.jbo.ConnectionMetadata                             (1)
+oracle.jbo.Key                                            (343)
+oracle.jbo.Row                                            (20)
+oracle.jbo.RowIterator                                    (51)
+oracle.jbo.ViewObject                                     (14)
+oracle.jbo.client.*                                       (90)
+oracle.jbo.client.Configuration                           (7)
+oracle.jbo.common.JboResourceBundle                       (75)
+oracle.jbo.domain.Date                                    (266)
+oracle.jbo.domain.Number                                  (485)
+oracle.jbo.domain.RowID                                   (45)
+oracle.jbo.server.*                                       (5)
+oracle.jbo.server.ApplicationModuleImpl                   (23)
+oracle.jbo.server.AttributeDefImpl                        (387)
+oracle.jbo.server.DBTransaction                           (23)
+oracle.jbo.server.EntityDefImpl                           (373)
+oracle.jbo.server.EntityImpl                              (373)
+oracle.jbo.server.TransactionEvent                        (2)
+oracle.jbo.server.ViewLinkImpl                            (4)
+oracle.jbo.server.ViewObjectImpl                          (423)
+oracle.jbo.server.ViewRowImpl                             (13)
+
+STATUS: ❌ Proprietární, vyžaduje Oracle licenci
+JAVA 17: ❌ Nekompatibilní
+MIGRACE: Spring Boot + JPA (6-12 měsíců, vysoké riziko)
+
+================================================================================
+APACHE POI - Excel Processing (10 unique imports, 211 occurrences)
+================================================================================
+
+org.apache.poi.hssf.model.*                               (2)
+org.apache.poi.hssf.record.*                              (2)
+org.apache.poi.hssf.usermodel.*                           (38)
+org.apache.poi.hssf.usermodel.HSSFCell                    (5)
+org.apache.poi.hssf.usermodel.HSSFCellStyle               (45)
+org.apache.poi.hssf.usermodel.HSSFFont                    (39)
+org.apache.poi.hssf.usermodel.HSSFSheet                   (3)
+org.apache.poi.hssf.util.*                                (3)
+org.apache.poi.hssf.util.HSSFColor                        (72)
+org.apache.poi.poifs.filesystem.POIFSFileSystem           (2)
+
+STATUS: ⚠️ Zastaralý HSSF (.xls) formát, pravděpodobně verze 3.x
+JAVA 17: ⚠️ Starší verze mohou mít problémy
+MIGRACE: Apache POI 5.2.5 XSSF (.xlsx) (2-4 týdny, nízké riziko)
+
+================================================================================
+APACHE LOG4J - Logging (3 unique imports, 101 occurrences)
+================================================================================
+
+org.apache.log4j.*                                        (98)
+org.apache.log4j.Logger                                   (2)
+org.apache.log4j.PropertyConfigurator                     (1)
+
+STATUS: 🔥 End of Life, CVE-2021-44228 (Log4Shell)
+JAVA 17: ❌ Kritické bezpečnostní riziko
+MIGRACE: SLF4J + Logback (1-2 týdny, nízké riziko) - OKAMŽITĚ!
+
+================================================================================
+JAVA STANDARD LIBRARY (21 unique imports, ~300 occurrences)
+================================================================================
+
+java.io.*                                                 (102)
+java.io.IOException                                       (2)
+java.net.*                                                (4)
+java.net.URL                                              (1)
+java.text.*                                               (81)
+java.text.SimpleDateFormat                                (16)
+java.util.*                                               (109)
+java.util.ArrayList                                       (2)
+java.util.Calendar                                        (1)
+java.util.Comparator                                      (1)
+java.util.Date                                            (1)
+java.util.HashMap                                         (2)
+java.util.HashSet                                         (1)
+java.util.Iterator                                        (2)
+java.util.List                                            (2)
+java.util.Map                                             (1)
+java.util.StringTokenizer                                 (1)
+java.util.TreeMap                                         (1)
+java.util.Vector                                          (3)
+java.util.Hashtable                                       (1)
+java.util.Properties                                      (1)
+
+STATUS: ✅ Standard JDK
+JAVA 17: ✅ Kompatibilní
+MIGRACE: Žádná nutná
+
+================================================================================
+JAVAX.* PACKAGES (11 unique imports, 12 occurrences)
+================================================================================
+
+javax.activation.*                                        (1)
+javax.mail.*                                              (1)
+javax.mail.Message                                        (1)
+javax.mail.Session                                        (1)
+javax.mail.Transport                                      (1)
+javax.mail.internet.*                                     (1)
+javax.mail.internet.InternetAddress                       (1)
+javax.mail.internet.MimeBodyPart                          (1)
+javax.mail.internet.MimeMessage                           (1)
+javax.mail.internet.MimeMultipart                         (1)
+javax.servlet.http.*                                      (1)
+javax.sql.*                                               (1)
+javax.xml.parsers.*                                       (1)
+
+STATUS: ⚠️ Deprecated, přesunuto do Jakarta EE
+JAVA 17: ❌ Vyžaduje změnu na jakarta.*
+MIGRACE: Jakarta Mail/Servlet (1 týden, nízké riziko)
+
+================================================================================
+SQL / DATABASE (8 unique imports, 27+ occurrences)
+================================================================================
+
+java.sql.*                                                (27)
+java.sql.CallableStatement                                (4)
+java.sql.Date                                             (1)
+java.sql.PreparedStatement                                (1)
+java.sql.ResultSet                                        (1)
+java.sql.SQLException                                     (4)
+java.sql.Statement                                        (1)
+java.sql.Types                                            (1)
+
+STATUS: ✅ Standard JDBC API
+JAVA 17: ✅ Kompatibilní (s novým JDBC driverem)
+MIGRACE: Upgrade na ojdbc11 (Oracle JDBC 21.9.0.0)
+
+================================================================================
+XML PROCESSING (3 unique imports, ~5 occurrences)
+================================================================================
+
+javax.xml.parsers.*                                       (1)
+org.xml.sax.*                                             (1)
+org.xml.sax.helpers.*                                     (1)
+
+STATUS: ✅ Standard Java XML API
+JAVA 17: ✅ Kompatibilní
+MIGRACE: Žádná nutná
+
+================================================================================
+SERVLET API (2 unique imports, 2 occurrences)
+================================================================================
+
+javax.servlet.http.*                                      (1)
+javax.servlet.http.HttpServlet                            (1)
+
+STATUS: ⚠️ Deprecated, přesunuto do Jakarta EE
+JAVA 17: ❌ Vyžaduje změnu na jakarta.servlet.*
+MIGRACE: Jakarta Servlet 6.0 (1 týden, nízké riziko)
+
+================================================================================
+CUSTOM JTBANK LIBRARIES (141 unique packages, 522 occurrences)
+================================================================================
+
+Top 20 nejvíce používaných custom balíčků:
+
+cz.jtbank.konsolidace.common                              (260)
+  - Logging.java (Log4j wrapper)
+  - Constants.java (Windows paths, hardcoded config)
+  - Utils.java
+  - KisException.java
+  - AutoProtokolNew.java
+  - SchvalovakDTO.java
+
+cz.jtbank.konsolidace.doklady                             (41)
+cz.jtbank.konsolidace.projekt                             (30)
+cz.jtbank.konsolidace.dokument                            (19)
+cz.jtbank.konsolidace.evi                                 (19)
+cz.jtbank.konsolidace.excel                               (18)
+  - Excel import/export (POI wrappers)
+
+cz.jtbank.konsolidace.budget                              (18)
+cz.jtbank.konsolidace.protistrany                         (16)
+cz.jtbank.konsolidace.users                               (15)
+cz.jtbank.konsolidace.ifrs                                (15)
+cz.jtbank.konsolidace.ucskup                              (12)
+cz.jtbank.konsolidace.fininv                              (11)
+cz.jtbank.konsolidace.subkons                             (9)
+cz.jtbank.konsolidace.mail                                (8)
+  - Mail.java (javax.mail wrapper)
+
+cz.jtbank.konsolidace.mustky                              (7)
+cz.jtbank.konsolidace.admin                               (7)
+cz.jtbank.konsolidace.cartesis                            (7)
+cz.jtbank.konsolidace.pb                                  (2)
+cz.jtbank.konsolidace.jobs                                (2)
+cz.jtbank.konsolidace.csv                                 (2)
+
+STATUS: ✅ Internal, ale závislé na Oracle ADF a zastaralých knihovnách
+JAVA 17: ⚠️ Vyžaduje refactoring (Constants.java, Logging.java)
+MIGRACE: Refactoring custom kódu (součást celkové migrace)
+
+================================================================================
+PROBLEMATICKÉ SOUBORY
+================================================================================
+
+1. cz/jtbank/konsolidace/common/Constants.java
+   - Hardcoded Windows paths: "D:\\"
+   - Hostname-based configuration
+   - Nekompatibilní s Linux/cloud
+   → MIGRACE: application.yml + environment variables
+
+2. cz/jtbank/konsolidace/common/Logging.java
+   - Závislost na Log4j 1.x
+   - Custom appender management
+   → MIGRACE: SLF4J wrapper
+
+3. cz/jtbank/konsolidace/mail/Mail.java
+   - Používá javax.mail
+   → MIGRACE: jakarta.mail
+
+4. cz/jtbank/konsolidace/excel/*.java (~18 souborů)
+   - Používá Apache POI HSSF
+   → MIGRACE: XSSF
+
+================================================================================
+SUMMARY BY CATEGORY
+================================================================================
+
+CATEGORY                  IMPORTS    OCCURRENCES    JAVA 17    PRIORITY
+─────────────────────────────────────────────────────────────────────────────
+Oracle ADF JBO              23         3,146         ❌         🔥 Critical
+Custom (cz.jtbank.*)       141          522         ⚠️          ⚠️  High
+Apache POI HSSF             10          211         ⚠️          📋 Medium
+Java Standard               21         ~300         ✅          ✅ OK
+Apache Log4j 1.x             3          101         ❌         🔥 URGENT
+javax.mail/servlet          11           12         ❌         ⚠️  High
+SQL/JDBC                     8          ~30         ✅          ✅ OK
+XML Processing               3           ~5         ✅          ✅ OK
+
+TOTAL:                     220        ~5,200
+
+================================================================================
+MIGRATION PRIORITIES
+================================================================================
+
+🔥 OKAMŽITĚ (Bezpečnost):
+1. Apache Log4j 1.x → SLF4J + Logback (101 importů)
+
+⚠️  VYSOKÁ (Java 17 prep):
+2. javax.mail → jakarta.mail (10 importů)
+3. javax.servlet → jakarta.servlet (2 importy)
+4. Constants.java Windows paths (260+ referencí)
+
+📋 STŘEDNÍ (Modernizace):
+5. Apache POI HSSF → XSSF (211 importů)
+6. Oracle JDBC upgrade (ojdbc11)
+
+🔥 KRITICKÁ (Dlouhodobá):
+7. Oracle ADF JBO → Spring Boot (3,146 importů, 60% kódu)
+
+================================================================================
+ESTIMATED EFFORT
+================================================================================
+
+Quick wins (1-3):        320-460 hours     6-9 týdnů      Nízké-Střední riziko
+Modernizace (4-6):       200-300 hours     4-6 týdnů      Nízké riziko
+ADF migrace (7):       3000-4500 hours   12-18 měsíců     Vysoké riziko
+
+TOTAL:                 3520-5260 hours   12-20 měsíců
+
+================================================================================

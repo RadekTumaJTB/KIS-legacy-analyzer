@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatDokladzdrojdatagregaceView"
+   SelectList="KpDatDokladzdrojdatagregace.ID, 
+       KpDatDokladzdrojdatagregace.ID_DOKLAD, 
+
+       KpDatDokladzdrojdatagregace.S_MENA, 
+       KpDatDokladzdrojdatagregace.S_UCET, 
+
+       KpDatDokladzdrojdatagregace.ID_KTGUCETNISPOLECNOST, 
+ 
+      KpDatDokladzdrojdatagregace.ID_KTGSPOLECNOST, 
+       KpDatDokladzdrojdatagregace.ID_CISRADEKTEXT, 
+
+       KpDatDokladzdrojdatagregace.C_MENOVAPOZICE, 
+       KpDatDokladzdrojdatagregace.C_UVEROVAPOZICE, 
+
+       KpDatDokladzdrojdatagregace.ND_CASTKAMENA, 
+       KpDatDokladzdrojdatagregace.ND_CASTKALOCAL, 
+
+       KpDatDokladzdrojdatagregace.ND_CASTKACNB, 
+       KpDatDokladzdrojdatagregace.C_LIST, 
+
+       KpDatDokladzdrojdatagregace.S_EVIDOVATPROTISTRANU, 
+ 
+      KpDatDokladzdrojdatagregace.C_KONTOKORENT, 
+       KpDatDokladzdrojdatagregace.ID_DOKLADPOLOZKA"
+   FromList="DB_JT.KP_DAT_DOKLADZDROJDATAGREGACE KpDatDokladzdrojdatagregace"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregaceViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatDokladzdrojdatagregace"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregace" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      EntityAttrName="SUcet"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisradektext"
+      EntityAttrName="IdCisradektext"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="ID_CISRADEKTEXT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CMenovapozice"
+      EntityAttrName="CMenovapozice"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="C_MENOVAPOZICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CUverovapozice"
+      EntityAttrName="CUverovapozice"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="C_UVEROVAPOZICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkacnb"
+      EntityAttrName="NdCastkacnb"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="ND_CASTKACNB"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CList"
+      EntityAttrName="CList"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="C_LIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SEvidovatprotistranu"
+      EntityAttrName="SEvidovatprotistranu"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="S_EVIDOVATPROTISTRANU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CKontokorent"
+      EntityAttrName="CKontokorent"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="C_KONTOKORENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokladpolozka"
+      EntityAttrName="IdDokladpolozka"
+      EntityUsage="KpDatDokladzdrojdatagregace"
+      AliasName="ID_DOKLADPOLOZKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

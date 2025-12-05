@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpTmpGuiView"
+   SelectList="KpTmpGui.ID_AKCE, 
+       KpTmpGui.S_UZIVATEL, 
+       KpTmpGui.ID_DOKLAD, 
+       KpTmpGui.DT_DATUM, 
+       KpTmpGui.ID_DOKLADEDITACE"
+   FromList="DB_JT.KP_TMP_GUI KpTmpGui"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpTmpGuiViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpTmpGui"
+      Entity="cz.jtbank.konsolidace.doklady.KpTmpGui" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdAkce"
+      IsNotNull="true"
+      EntityAttrName="IdAkce"
+      EntityUsage="KpTmpGui"
+      AliasName="ID_AKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpTmpGui"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      EntityAttrName="IdDoklad"
+      EntityUsage="KpTmpGui"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpTmpGui"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokladeditace"
+      EntityAttrName="IdDokladeditace"
+      EntityUsage="KpTmpGui"
+      AliasName="ID_DOKLADEDITACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

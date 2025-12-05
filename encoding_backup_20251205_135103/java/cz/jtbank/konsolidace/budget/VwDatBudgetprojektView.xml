@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatBudgetprojektView"
+   SelectList="VwDatBudgetprojekt.ID, 
+       VwDatBudgetprojekt.ID_KTGPROJEKT, 
+
+       VwDatBudgetprojekt.DT_PLATNOSTOD, 
+       VwDatBudgetprojekt.DT_PLATNOSTDO, 
+
+       VwDatBudgetprojekt.S_NAZEV, 
+       VwDatBudgetprojekt.ID_PMANAGER, 
+
+       VwDatBudgetprojekt.ID_UCSPOLOO, 
+       VwDatBudgetprojekt.ID_PROJEKTTOP, 
+
+       VwDatBudgetprojekt.S_MENA, 
+       VwDatBudgetprojekt.ID_KTGUCETNISPOLECNOST, 
+
+       VwDatBudgetprojekt.NAZEVUCSPOL, 
+       VwDatBudgetprojekt.DT_SCHVALITDO"
+   FromList="DB_JT.VW_DAT_BUDGETPROJEKT VwDatBudgetprojekt"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.budget.VwDatBudgetprojektViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatBudgetprojekt"
+      Entity="cz.jtbank.konsolidace.budget.VwDatBudgetprojekt" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPmanager"
+      EntityAttrName="IdPmanager"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="ID_PMANAGER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoloo"
+      EntityAttrName="IdUcspoloo"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="ID_UCSPOLOO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjekttop"
+      EntityAttrName="IdProjekttop"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="ID_PROJEKTTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Nazevucspol"
+      EntityAttrName="Nazevucspol"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="NAZEVUCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalitdo"
+      EntityAttrName="DtSchvalitdo"
+      EntityUsage="VwDatBudgetprojekt"
+      AliasName="DT_SCHVALITDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

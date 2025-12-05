@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatDokladsubkonvazbydenikView"
+   SelectList="KpDatDokladsubkonvazbydenik.ID_DOKLAD, 
+       KpDatDokladsubkonvazbydenik.C_TYP, 
+
+       KpDatDokladsubkonvazbydenik.ID_KTGUCETNISPOLECNOSTFROM, 
+
+       KpDatDokladsubkonvazbydenik.ID_KTGUCETNISPOLECNOSTTO, 
+
+       KpDatDokladsubkonvazbydenik.S_MENA, 
+       KpDatDokladsubkonvazbydenik.ND_CASTKA, 
+
+       KpDatDokladsubkonvazbydenik.ND_KURZ, 
+       KpDatDokladsubkonvazbydenik.NL_PORADILIST, 
+
+       KpDatDokladsubkonvazbydenik.NL_RADEK, 
+       KpDatDokladsubkonvazbydenik.NL_PARPORADILIST, 
+
+       KpDatDokladsubkonvazbydenik.NL_PARRADEK, 
+       KpDatDokladsubkonvazbydenik.ID_DOKLADVAZBY, 
+
+       KpDatDokladsubkonvazbydenik.ID_DOKLADVAZBYPAR, 
+     
+  KpDatDokladsubkonvazbydenik.ROWID"
+   FromList="DB_JT.KP_DAT_DOKLADSUBKONVAZBYDENIK KpDatDokladsubkonvazbydenik"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonvazbydenikViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatDokladsubkonvazbydenik"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonvazbydenik" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CTyp"
+      EntityAttrName="CTyp"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="C_TYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnostfrom"
+      EntityAttrName="IdKtgucetnispolecnostfrom"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="ID_KTGUCETNISPOLECNOSTFROM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnostto"
+      EntityAttrName="IdKtgucetnispolecnostto"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="ID_KTGUCETNISPOLECNOSTTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastka"
+      EntityAttrName="NdCastka"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdKurz"
+      EntityAttrName="NdKurz"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="ND_KURZ"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlPoradilist"
+      EntityAttrName="NlPoradilist"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="NL_PORADILIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      EntityAttrName="NlRadek"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlParporadilist"
+      EntityAttrName="NlParporadilist"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="NL_PARPORADILIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlParradek"
+      EntityAttrName="NlParradek"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="NL_PARRADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokladvazby"
+      EntityAttrName="IdDokladvazby"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="ID_DOKLADVAZBY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokladvazbypar"
+      EntityAttrName="IdDokladvazbypar"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="ID_DOKLADVAZBYPAR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="KpDatDokladsubkonvazbydenik"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

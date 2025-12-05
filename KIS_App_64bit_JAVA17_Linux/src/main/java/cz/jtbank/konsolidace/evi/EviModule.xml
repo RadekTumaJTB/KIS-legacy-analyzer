@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="EviModule"
+   ComponentClass="cz.jtbank.konsolidace.evi.EviModuleImpl"
+   ComponentInterface="cz.jtbank.konsolidace.evi.common.EviModule" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="KpCisEvidoidentifikaceView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpCisEvidoidentifikaceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisEvidovaneinformaceView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpCisEvidovaneinformaceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisEviobchodnirejstrikView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpCisEviobchodnirejstrikView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisEvistatusView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpCisEvistatusView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisEvitypstatzastupceView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpCisEvitypstatzastupceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatEvibankyView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpDatEvibankyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatEvidoidentifikaceView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpDatEvidoidentifikaceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatEvidokumentView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpDatEvidokumentView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatEvikomisionarskesmlouvyView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpDatEvikomisionarskesmlouvyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatEvikorespondenceView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpDatEvikorespondenceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatEviobchodnirejstrikView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpDatEviobchodnirejstrikView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatEvizplnomocneniView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpDatEvizplnomocneniView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgEviadminspolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgEviexterniadminView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpKtgEviexterniadminView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgEvisidloView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpKtgEvisidloView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgEvistatutarnizastupceView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpKtgEvistatutarnizastupceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelTypspolevidinfoView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpRelTypspolevidinfoView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKtgEviadminspolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.VwKtgEviadminspolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisStatView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpCisStatView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgAppuserView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KtgAppuserView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelDblinkappuserView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpRelDblinkappuserView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisDatabazeView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpCisDatabazeView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpEmailParamView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpEmailParamView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgSpolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwProtistranadetailView1"
+      ViewObjectName="cz.jtbank.konsolidace.protistrany.VwProtistranadetailView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgEmailzpravyView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KpKtgEmailzpravyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpEviobchodnirejstrik3mView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.VwKpEviobchodnirejstrik3mView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpLogEviadminspolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKtgPodpisovevzoryquaestorView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.VwKtgPodpisovevzoryquaestorView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatMngsegmentbossView1"
+      ViewObjectName="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentbossView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatEviadmindodavatelView1"
+      ViewObjectName="cz.jtbank.konsolidace.evi.KpDatEviadmindodavatelView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisMenaView1"
+      ViewObjectName="cz.jtbank.konsolidace.fininv.KpCisMenaView" >
+   </ViewUsage>
+</AppModule>

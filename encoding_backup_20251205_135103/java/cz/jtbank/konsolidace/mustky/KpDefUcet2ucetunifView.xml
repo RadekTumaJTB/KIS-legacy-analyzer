@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDefUcet2ucetunifView"
+   SelectList="KpDefUcet2ucetunif.ID, 
+       KpDefUcet2ucetunif.ID_CISUCETUNIF, 
+
+       KpDefUcet2ucetunif.S_UCETPRIMSYSTEM, 
+       KpDefUcet2ucetunif.ID_CISSUBJECT, 
+
+       KpDefUcet2ucetunif.DT_PLATNOSTOD, 
+       KpDefUcet2ucetunif.DT_PLATNOSTDO, 
+
+       KpDefUcet2ucetunif.C_UCETSUMA, 
+       KpDefUcet2ucetunif.S_EVIDOVATPROTISTRANU, 
+
+       KpTmpCisucetsumatyp.S_ZKRATKA, 
+       KpTmpCisucetsumatyp.ID 
+AS ID1, 
+       KpDefUcet2ucetunif.C_TESTOVATMAJUCAST"
+   FromList="DB_JT.KP_DEF_UCET2UCETUNIF KpDefUcet2ucetunif, DB_JT.KP_CIS_UCETSUMATYP KpTmpCisucetsumatyp"
+   Where="KpDefUcet2ucetunif.C_UCETSUMA = KpTmpCisucetsumatyp.ID (+)"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   RowClass="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunifViewRowImpl"
+   ComponentClass="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunifViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDefUcet2ucetunif"
+      Entity="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpDefUcet2ucetunif.C_UCETSUMA = KpTmpCisucetsumatyp.ID (+)" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpTmpCisucetsumatyp"
+      Entity="cz.jtbank.konsolidace.mustky.KpTmpCisucetsumatyp"
+      SourceUsage="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunifView.KpDefUcet2ucetunif"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCisucetsumatyp.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDefUcet2ucetunif"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisucetunif"
+      IsNotNull="true"
+      EntityAttrName="IdCisucetunif"
+      EntityUsage="KpDefUcet2ucetunif"
+      AliasName="ID_CISUCETUNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetprimsystem"
+      IsNotNull="true"
+      EntityAttrName="SUcetprimsystem"
+      EntityUsage="KpDefUcet2ucetunif"
+      AliasName="S_UCETPRIMSYSTEM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      EntityAttrName="IdCissubject"
+      EntityUsage="KpDefUcet2ucetunif"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDefUcet2ucetunif"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDefUcet2ucetunif"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CUcetsuma"
+      IsNotNull="true"
+      EntityAttrName="CUcetsuma"
+      EntityUsage="KpDefUcet2ucetunif"
+      AliasName="C_UCETSUMA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SEvidovatprotistranu"
+      EntityAttrName="SEvidovatprotistranu"
+      EntityUsage="KpDefUcet2ucetunif"
+      AliasName="S_EVIDOVATPROTISTRANU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZkratka"
+      IsNotNull="true"
+      EntityAttrName="SZkratka"
+      EntityUsage="KpTmpCisucetsumatyp"
+      AliasName="S_ZKRATKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id1"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpTmpCisucetsumatyp"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SymbolString"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="VIEW_ATTR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CTestovatmajucast"
+      EntityAttrName="CTestovatmajucast"
+      EntityUsage="KpDefUcet2ucetunif"
+      AliasName="C_TESTOVATMAJUCAST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

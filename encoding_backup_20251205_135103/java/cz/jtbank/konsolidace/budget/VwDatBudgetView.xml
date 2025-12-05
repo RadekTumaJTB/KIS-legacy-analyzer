@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatBudgetView"
+   SelectList="VwDatBudget.ID, 
+       VwDatBudget.ID_KTGODBOR, 
+       VwDatBudget.DT_PLATNOSTOD, 
+
+       VwDatBudget.DT_PLATNOSTDO, 
+       VwDatBudget.ID_ODBOROO, 
+
+       VwDatBudget.ID_UCSPOLOO, 
+       VwDatBudget.ID_UCSPOLTOP, 
+
+       VwDatBudget.S_KOD, 
+       VwDatBudget.S_NAZEV, 
+    
+   VwDatBudget.S_MENA, 
+       VwDatBudget.ID_KTGUCETNISPOLECNOST, 
+
+       VwDatBudget.NAZEVUCSPOL, 
+       VwDatBudget.DT_SCHVALITDO"
+   FromList="DB_JT.VW_DAT_BUDGET VwDatBudget"
+   OrderBy="DT_PLATNOSTOD DESC,NAZEVUCSPOL,S_KOD"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.budget.VwDatBudgetViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatBudget"
+      Entity="cz.jtbank.konsolidace.budget.VwDatBudget" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="DT_PLATNOSTOD DESC,NAZEVUCSPOL,S_KOD" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwDatBudget"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      IsNotNull="true"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="VwDatBudget"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwDatBudget"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwDatBudget"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdboroo"
+      EntityAttrName="IdOdboroo"
+      EntityUsage="VwDatBudget"
+      AliasName="ID_ODBOROO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoloo"
+      EntityAttrName="IdUcspoloo"
+      EntityUsage="VwDatBudget"
+      AliasName="ID_UCSPOLOO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoltop"
+      EntityAttrName="IdUcspoltop"
+      EntityUsage="VwDatBudget"
+      AliasName="ID_UCSPOLTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKod"
+      EntityAttrName="SKod"
+      EntityUsage="VwDatBudget"
+      AliasName="S_KOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwDatBudget"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwDatBudget"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwDatBudget"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Nazevucspol"
+      EntityAttrName="Nazevucspol"
+      EntityUsage="VwDatBudget"
+      AliasName="NAZEVUCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalitdo"
+      EntityAttrName="DtSchvalitdo"
+      EntityUsage="VwDatBudget"
+      AliasName="DT_SCHVALITDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

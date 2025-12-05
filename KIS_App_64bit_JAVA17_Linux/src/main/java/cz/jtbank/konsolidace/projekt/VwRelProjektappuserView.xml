@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRelProjektappuserView"
+   SelectList="VwRelProjektappuser.ID_KTGPROJEKT, 
+       VwRelProjektappuser.JMENO"
+   FromList="DB_JT.VW_REL_PROJEKTAPPUSER VwRelProjektappuser"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.VwRelProjektappuserViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRelProjektappuser"
+      Entity="cz.jtbank.konsolidace.projekt.VwRelProjektappuser" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      IsNotNull="true"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwRelProjektappuser"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Jmeno"
+      EntityAttrName="Jmeno"
+      EntityUsage="VwRelProjektappuser"
+      AliasName="JMENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

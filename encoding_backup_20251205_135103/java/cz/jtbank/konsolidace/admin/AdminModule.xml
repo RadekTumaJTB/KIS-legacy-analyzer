@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="AdminModule"
+   ComponentClass="cz.jtbank.konsolidace.admin.AdminModuleImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="KpParametryView1"
+      ViewObjectName="cz.jtbank.konsolidace.admin.KpParametryView" >
+   </ViewUsage>
+</AppModule>

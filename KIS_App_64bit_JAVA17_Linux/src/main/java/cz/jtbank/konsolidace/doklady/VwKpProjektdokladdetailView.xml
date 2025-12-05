@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpProjektdokladdetailView"
+   SelectList="VwKpProjektdokladdetail.ID, 
+       VwKpProjektdokladdetail.ID_PROJEKTDOKLAD, 
+
+       VwKpProjektdokladdetail.SPOLECNOST, 
+       VwKpProjektdokladdetail.UCET, 
+
+       VwKpProjektdokladdetail.TEXTRADEK, 
+       VwKpProjektdokladdetail.S_MENA, 
+
+       VwKpProjektdokladdetail.ND_CASTKAMENA, 
+       VwKpProjektdokladdetail.ND_CASTKANAKLADY, 
+
+       VwKpProjektdokladdetail.ID_EXTSYSTEM, 
+       VwKpProjektdokladdetail.S_POPIS, 
+
+       VwKpProjektdokladdetail.DATUM, 
+       VwKpProjektdokladdetail.S_UNIFSPOL, 
+
+       VwKpProjektdokladdetail.ID_KTGPROJEKT, 
+       VwKpProjektdokladdetail.ID_KTGODBOR, 
+
+       VwKpProjektdokladdetail.S_EVIDOVATPROTISTRANU, 
+     
+  VwKpProjektdokladdetail.C_MENOVAPOZICE, 
+       VwKpProjektdokladdetail.C_UVEROVAPOZICE, 
+
+       VwKpProjektdokladdetail.XIDSL, 
+       VwKpProjektdokladdetail.CLENJTFGKONS, 
+
+       VwKpProjektdokladdetail.UCETZACATEK, 
+       VwKpProjektdokladdetail.S_POPISORIGINAL, 
+
+       VwKpProjektdokladdetail.S_UCETORIGINAL"
+   FromList="DB_JT.VW_KP_PROJEKTDOKLADDETAIL VwKpProjektdokladdetail"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwKpProjektdokladdetailViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpProjektdokladdetail"
+      Entity="cz.jtbank.konsolidace.doklady.VwKpProjektdokladdetail" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjektdoklad"
+      IsNotNull="true"
+      EntityAttrName="IdProjektdoklad"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="ID_PROJEKTDOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucet"
+      EntityAttrName="Ucet"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Textradek"
+      EntityAttrName="Textradek"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="TEXTRADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkanaklady"
+      EntityAttrName="NdCastkanaklady"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="ND_CASTKANAKLADY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdExtsystem"
+      IsNotNull="true"
+      EntityAttrName="IdExtsystem"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="ID_EXTSYSTEM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datum"
+      EntityAttrName="Datum"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUnifspol"
+      EntityAttrName="SUnifspol"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="S_UNIFSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SEvidovatprotistranu"
+      EntityAttrName="SEvidovatprotistranu"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="S_EVIDOVATPROTISTRANU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CMenovapozice"
+      EntityAttrName="CMenovapozice"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="C_MENOVAPOZICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CUverovapozice"
+      EntityAttrName="CUverovapozice"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="C_UVEROVAPOZICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Xidsl"
+      EntityAttrName="Xidsl"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="XIDSL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Clenjtfgkons"
+      EntityAttrName="Clenjtfgkons"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="CLENJTFGKONS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucetzacatek"
+      EntityAttrName="Ucetzacatek"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="UCETZACATEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopisoriginal"
+      EntityAttrName="SPopisoriginal"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="S_POPISORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetoriginal"
+      EntityAttrName="SUcetoriginal"
+      EntityUsage="VwKpProjektdokladdetail"
+      AliasName="S_UCETORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

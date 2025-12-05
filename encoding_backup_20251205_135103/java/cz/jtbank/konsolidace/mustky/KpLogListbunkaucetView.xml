@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpLogListbunkaucetView"
+   SelectList="KpLogListbunkaucet.S_AKCE, 
+       KpLogListbunkaucet.S_UZIVATEL, 
+
+       KpLogListbunkaucet.ID_DEFLISTBUNKA, 
+       KpLogListbunkaucet.S_UCET, 
+
+       KpLogListbunkaucet.S_UCET_MINUS, 
+       KpLogListbunkaucet.C_UCETSUMA, 
+
+       KpLogListbunkaucet.ND_KOEFICIENT, 
+       KpLogListbunkaucet.C_VALIDOVATMASKU, 
+
+       KpLogListbunkaucet.ID_CISLIST, 
+       KpLogListbunkaucet.S_EVIDOVATPROTISTRANU, 
+
+       KpLogListbunkaucet.C_MENOVAPOZICE, 
+       KpLogListbunkaucet.C_UVEROVAPOZICE, 
+
+       KpLogListbunkaucet.DT_PLATNOSTOD, 
+       KpLogListbunkaucet.DT_PLATNOSTDO, 
+
+       KpLogListbunkaucet.S_ZMENIL, 
+       KpLogListbunkaucet.DT_LAST_MODIFY, 
+
+       KpLogListbunkaucet.ROWID"
+   FromList="DB_JT.KP_LOG_LISTBUNKAUCET KpLogListbunkaucet"
+   OrderBy="KpLogListbunkaucet.ID_DEFLISTBUNKA,KpLogListbunkaucet.DT_LAST_MODIFY"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.mustky.KpLogListbunkaucetViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpLogListbunkaucet"
+      Entity="cz.jtbank.konsolidace.mustky.KpLogListbunkaucet" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="KpLogListbunkaucet.ID_DEFLISTBUNKA,KpLogListbunkaucet.DT_LAST_MODIFY" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SAkce"
+      EntityAttrName="SAkce"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="S_AKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDeflistbunka"
+      EntityAttrName="IdDeflistbunka"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="ID_DEFLISTBUNKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      EntityAttrName="SUcet"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetMinus"
+      EntityAttrName="SUcetMinus"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="S_UCET_MINUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CUcetsuma"
+      EntityAttrName="CUcetsuma"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="C_UCETSUMA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdKoeficient"
+      EntityAttrName="NdKoeficient"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="ND_KOEFICIENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CValidovatmasku"
+      EntityAttrName="CValidovatmasku"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="C_VALIDOVATMASKU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCislist"
+      EntityAttrName="IdCislist"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="ID_CISLIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SEvidovatprotistranu"
+      EntityAttrName="SEvidovatprotistranu"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="S_EVIDOVATPROTISTRANU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CMenovapozice"
+      EntityAttrName="CMenovapozice"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="C_MENOVAPOZICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CUverovapozice"
+      EntityAttrName="CUverovapozice"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="C_UVEROVAPOZICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZmenil"
+      EntityAttrName="SZmenil"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="S_ZMENIL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtLastModify"
+      EntityAttrName="DtLastModify"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="DT_LAST_MODIFY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="KpLogListbunkaucet"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

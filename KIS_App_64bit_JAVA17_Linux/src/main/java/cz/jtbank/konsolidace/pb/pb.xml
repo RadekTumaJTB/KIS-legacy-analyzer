@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="pb"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.pb" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="KpCisPbkategorieklienta"
+      FullName="cz.jtbank.konsolidace.pb.KpCisPbkategorieklienta"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisPbkategorieklientaView"
+      FullName="cz.jtbank.konsolidace.pb.KpCisPbkategorieklientaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisPbstatusklienta"
+      FullName="cz.jtbank.konsolidace.pb.KpCisPbstatusklienta"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisPbstatusklientaView"
+      FullName="cz.jtbank.konsolidace.pb.KpCisPbstatusklientaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="PbModule"
+      FullName="cz.jtbank.konsolidace.pb.PbModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="KpKtgPbskupina"
+      FullName="cz.jtbank.konsolidace.pb.KpKtgPbskupina"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgPbskupinaView"
+      FullName="cz.jtbank.konsolidace.pb.KpKtgPbskupinaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatPbvyjimky"
+      FullName="cz.jtbank.konsolidace.pb.KpDatPbvyjimky"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatPbvyjimkyView"
+      FullName="cz.jtbank.konsolidace.pb.KpDatPbvyjimkyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgPbbeznyucet"
+      FullName="cz.jtbank.konsolidace.pb.KpKtgPbbeznyucet"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgPbbeznyucetView"
+      FullName="cz.jtbank.konsolidace.pb.KpKtgPbbeznyucetView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgPbevidencnilist"
+      FullName="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilist"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkPbevidencnilistSkupinaAssoc"
+      FullName="cz.jtbank.konsolidace.pb.FkPbevidencnilistSkupinaAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpKtgPbevidencnilistView"
+      FullName="cz.jtbank.konsolidace.pb.KpKtgPbevidencnilistView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgPblistrizikovosti"
+      FullName="cz.jtbank.konsolidace.pb.KpKtgPblistrizikovosti"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgPblistrizikovostiView"
+      FullName="cz.jtbank.konsolidace.pb.KpKtgPblistrizikovostiView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisPbriziko"
+      FullName="cz.jtbank.konsolidace.pb.KpCisPbriziko"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisPbrizikoView"
+      FullName="cz.jtbank.konsolidace.pb.KpCisPbrizikoView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelPbrizikovost"
+      FullName="cz.jtbank.konsolidace.pb.KpRelPbrizikovost"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkRelpbrizikovostRizikoAssoc"
+      FullName="cz.jtbank.konsolidace.pb.FkRelpbrizikovostRizikoAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkRelpbrizikovostListAssoc"
+      FullName="cz.jtbank.konsolidace.pb.FkRelpbrizikovostListAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpRelPbrizikovostView"
+      FullName="cz.jtbank.konsolidace.pb.KpRelPbrizikovostView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwAcKlientipb"
+      FullName="cz.jtbank.konsolidace.pb.VwAcKlientipb"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwAcKlientipbView"
+      FullName="cz.jtbank.konsolidace.pb.VwAcKlientipbView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpLogSubkonsolidaceView"
+   SelectList="KpLogSubkonsolidace.S_AKCE, 
+       KpLogSubkonsolidace.ID_KTGUCETNISPOLECNOST, 
+
+       KpLogSubkonsolidace.NL_PORADI, 
+       KpLogSubkonsolidace.ID_KTGUCETNISKUPINA, 
+
+       KpLogSubkonsolidace.S_MENA, 
+       KpLogSubkonsolidace.S_NAZEV, 
+
+       KpLogSubkonsolidace.DT_PLATNOSTOD, 
+       KpLogSubkonsolidace.DT_PLATNOSTDO, 
+
+       KpLogSubkonsolidace.DT_ZMENA, 
+       KpLogSubkonsolidace.S_UZIVATEL, 
+
+       KpLogSubkonsolidace.ROWID"
+   FromList="DB_JT.KP_LOG_SUBKONSOLIDACE KpLogSubkonsolidace"
+   OrderBy="KpLogSubkonsolidace.DT_ZMENA DESC"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.subkons.KpLogSubkonsolidaceViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.subkons.common.KpLogSubkonsolidaceViewRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpLogSubkonsolidace"
+      Entity="cz.jtbank.konsolidace.subkons.KpLogSubkonsolidace" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="KpLogSubkonsolidace.DT_ZMENA DESC" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SAkce"
+      EntityAttrName="SAkce"
+      EntityUsage="KpLogSubkonsolidace"
+      AliasName="S_AKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpLogSubkonsolidace"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlPoradi"
+      EntityAttrName="NlPoradi"
+      EntityUsage="KpLogSubkonsolidace"
+      AliasName="NL_PORADI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina"
+      EntityAttrName="IdKtgucetniskupina"
+      EntityUsage="KpLogSubkonsolidace"
+      AliasName="ID_KTGUCETNISKUPINA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="KpLogSubkonsolidace"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="KpLogSubkonsolidace"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpLogSubkonsolidace"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpLogSubkonsolidace"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZmena"
+      EntityAttrName="DtZmena"
+      EntityUsage="KpLogSubkonsolidace"
+      AliasName="DT_ZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpLogSubkonsolidace"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      EntityAttrName="RowID"
+      EntityUsage="KpLogSubkonsolidace"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDefKontrolamajetkovaucast"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DEF_KONTROLAMAJETKOVAUCAST"
+   AliasName="KpDefKontrolamajetkovaucast"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucastImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_KONTROLAMAJETKOVAUCAST"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISSUBJECT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_KONTROLAMAJETKOVAUCAST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcetmaska"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_UCETMASKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DEF_KONTROLAMAJETKOVAUCAST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DEF_KONTROLAMAJETKOVAUCAST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DEF_KONTROLAMAJETKOVAUCAST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_UZIVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DEF_KONTROLAMAJETKOVAUCAST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtLastModify"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_LAST_MODIFY"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DEF_KONTROLAMAJETKOVAUCAST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="NnKpdefkontrolamuId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucast.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFKONTROLAMU_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefkontrolamuPlatnostod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucast.DtPlatnostod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFKONTROLAMU_PLATNOSTOD" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefkontrolamuUser" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucast.SUzivatel" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFKONTROLAMU_USER" />
+         <Attr Name="_checkCondition" Value="&#34;S_UZIVATEL&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CKpdefkontrolamuKrizeniOddo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucast.DtPlatnostod" />
+         <Item Value="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucast.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="C_KPDEFKONTROLAMU_KRIZENI_ODDO" />
+         <Attr Name="_checkCondition" Value=" dt_platnostOd &#60;= dt_platnostDo " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefkontrolamuSubject" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucast.IdCissubject" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFKONTROLAMU_SUBJECT" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISSUBJECT&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefkontrolamuPlatnostdo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucast.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFKONTROLAMU_PLATNOSTDO" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpdefkontrolamu" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucast.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPDEFKONTROLAMU" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpdefkontrolamuSubject" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.majetek.KpDefKontrolamajetkovaucast.IdCissubject" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPDEFKONTROLAMU_SUBJECT" />
+         <Attr Name="_referencedKey" Value="PK_KPSUBJECT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

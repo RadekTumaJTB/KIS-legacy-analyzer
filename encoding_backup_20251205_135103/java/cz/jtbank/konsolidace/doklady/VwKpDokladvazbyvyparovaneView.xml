@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpDokladvazbyvyparovaneView"
+   SelectList="VwKpDokladvazbyvyparovane.ID, 
+       VwKpDokladvazbyvyparovane.ID_DOKLAD, 
+
+       VwKpDokladvazbyvyparovane.ID_KTGUCETNISKUPINA, 
+     
+  VwKpDokladvazbyvyparovane.ID_KTGUCETNISPOLECNOSTFROM, 
+    
+   VwKpDokladvazbyvyparovane.ID_KTGUCETNISPOLECNOSTTO, 
+     
+  VwKpDokladvazbyvyparovane.S_MENA, 
+       VwKpDokladvazbyvyparovane.S_UCET, 
+
+       VwKpDokladvazbyvyparovane.ND_CASTKAMENA, 
+       VwKpDokladvazbyvyparovane.ND_CASTKALOCAL, 
+
+       VwKpDokladvazbyvyparovane.ND_CASTKAVYPAROVAT, 
+      
+ VwKpDokladvazbyvyparovane.PAR_IDKTGUCETNISPOLECNOSTFROM, 
+  
+     VwKpDokladvazbyvyparovane.PAR_IDKTGUCETNISPOLECNOSTTO, 
+ 
+      VwKpDokladvazbyvyparovane.PAR_S_MENA, 
+       VwKpDokladvazbyvyparovane.PAR_S_UCET, 
+
+       VwKpDokladvazbyvyparovane.PAR_ND_CASTKAMENA, 
+       
+VwKpDokladvazbyvyparovane.PAR_ND_CASTKALOCAL, 
+       VwKpDokladvazbyvyparovane.PAR_ND_CASTKAVYPAROVAT, 
+
+       VwKpDokladvazbyvyparovane.S_POPIS, 
+       VwKpDokladvazbyvyparovane.PAR_S_POPIS, 
+
+       VwKpDokladvazbyvyparovane.NL_PORADILIST, 
+       VwKpDokladvazbyvyparovane.NL_RADEK, 
+
+       VwKpDokladvazbyvyparovane.PAR_NL_PORADILIST, 
+       
+VwKpDokladvazbyvyparovane.PAR_NL_RADEK, 
+       VwKpDokladvazbyvyparovane.ND_CASTKAMENAORIGINAL, 
+
+       VwKpDokladvazbyvyparovane.ND_CASTKALOCALORIGINAL, 
+  
+     VwKpDokladvazbyvyparovane.PAR_ND_CASTKAMENAORIGINAL, 
+  
+     VwKpDokladvazbyvyparovane.PAR_ND_CASTKALOCALORIGINAL, 
+ 
+      VwKpDokladvazbyvyparovane.S_LOCALE, 
+       VwKpDokladvazbyvyparovane.ID_PAR_1, 
+
+       VwKpDokladvazbyvyparovane.ID_PAR_2, 
+       VwKpDokladvazbyvyparovane.NL_USERINDEXVAZBA_1, 
+
+       VwKpDokladvazbyvyparovane.NL_USERINDEXVAZBA_2, 
+     
+  VwKpDokladvazbyvyparovane.S_UCTYORIGINAL_1, 
+       VwKpDokladvazbyvyparovane.S_UCTYORIGINAL_2, 
+
+       VwKpDokladvazbyvyparovane.C_POCITATVAZBY_1, 
+       VwKpDokladvazbyvyparovane.C_POCITATVAZBY_2"
+   FromList="DB_JT.VW_KP_DOKLADVAZBYVYPAROVANE VwKpDokladvazbyvyparovane"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwKpDokladvazbyvyparovaneViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpDokladvazbyvyparovane"
+      Entity="cz.jtbank.konsolidace.doklady.VwKpDokladvazbyvyparovane" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetniskupina"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ID_KTGUCETNISKUPINA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnostfrom"
+      EntityAttrName="IdKtgucetnispolecnostfrom"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ID_KTGUCETNISPOLECNOSTFROM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnostto"
+      EntityAttrName="IdKtgucetnispolecnostto"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ID_KTGUCETNISPOLECNOSTTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      EntityAttrName="SUcet"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkavyparovat"
+      EntityAttrName="NdCastkavyparovat"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ND_CASTKAVYPAROVAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParIdktgucetnispolecnostfrom"
+      EntityAttrName="ParIdktgucetnispolecnostfrom"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_IDKTGUCETNISPOLECNOSTFROM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParIdktgucetnispolecnostto"
+      EntityAttrName="ParIdktgucetnispolecnostto"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_IDKTGUCETNISPOLECNOSTTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParSMena"
+      EntityAttrName="ParSMena"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParSUcet"
+      EntityAttrName="ParSUcet"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParNdCastkamena"
+      EntityAttrName="ParNdCastkamena"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParNdCastkalocal"
+      EntityAttrName="ParNdCastkalocal"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParNdCastkavyparovat"
+      EntityAttrName="ParNdCastkavyparovat"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_ND_CASTKAVYPAROVAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParSPopis"
+      EntityAttrName="ParSPopis"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlPoradilist"
+      EntityAttrName="NlPoradilist"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="NL_PORADILIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      EntityAttrName="NlRadek"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParNlPoradilist"
+      EntityAttrName="ParNlPoradilist"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_NL_PORADILIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParNlRadek"
+      EntityAttrName="ParNlRadek"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_NL_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamenaoriginal"
+      EntityAttrName="NdCastkamenaoriginal"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ND_CASTKAMENAORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocaloriginal"
+      EntityAttrName="NdCastkalocaloriginal"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ND_CASTKALOCALORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParNdCastkamenaoriginal"
+      EntityAttrName="ParNdCastkamenaoriginal"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_ND_CASTKAMENAORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParNdCastkalocaloriginal"
+      EntityAttrName="ParNdCastkalocaloriginal"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="PAR_ND_CASTKALOCALORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SLocale"
+      IsNotNull="true"
+      EntityAttrName="SLocale"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="S_LOCALE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPar1"
+      EntityAttrName="IdPar1"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ID_PAR_1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPar2"
+      EntityAttrName="IdPar2"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="ID_PAR_2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlUserindexvazba1"
+      EntityAttrName="NlUserindexvazba1"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="NL_USERINDEXVAZBA_1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlUserindexvazba2"
+      EntityAttrName="NlUserindexvazba2"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="NL_USERINDEXVAZBA_2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUctyoriginal1"
+      EntityAttrName="SUctyoriginal1"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="S_UCTYORIGINAL_1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUctyoriginal2"
+      EntityAttrName="SUctyoriginal2"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="S_UCTYORIGINAL_2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPocitatvazby1"
+      EntityAttrName="CPocitatvazby1"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="C_POCITATVAZBY_1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPocitatvazby2"
+      EntityAttrName="CPocitatvazby2"
+      EntityUsage="VwKpDokladvazbyvyparovane"
+      AliasName="C_POCITATVAZBY_2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

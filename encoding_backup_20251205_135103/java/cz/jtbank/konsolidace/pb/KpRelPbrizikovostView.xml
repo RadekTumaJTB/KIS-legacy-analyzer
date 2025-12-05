@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelPbrizikovostView"
+   SelectList="KpRelPbrizikovost.ID_LISTRIZIKOVOSTI, 
+       KpRelPbrizikovost.ID_CISRIZIKO, 
+       KpRelPbrizikovost.C_VYSKYTRIZIKA, 
+       KpRelPbrizikovost.S_POZNAMKA"
+   FromList="DB_JT.KP_REL_PBRIZIKOVOST KpRelPbrizikovost"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.pb.KpRelPbrizikovostViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelPbrizikovost"
+      Entity="cz.jtbank.konsolidace.pb.KpRelPbrizikovost" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdListrizikovosti"
+      IsNotNull="true"
+      EntityAttrName="IdListrizikovosti"
+      EntityUsage="KpRelPbrizikovost"
+      AliasName="ID_LISTRIZIKOVOSTI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisriziko"
+      IsNotNull="true"
+      EntityAttrName="IdCisriziko"
+      EntityUsage="KpRelPbrizikovost"
+      AliasName="ID_CISRIZIKO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CVyskytrizika"
+      IsNotNull="true"
+      EntityAttrName="CVyskytrizika"
+      EntityUsage="KpRelPbrizikovost"
+      AliasName="C_VYSKYTRIZIKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="KpRelPbrizikovost"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

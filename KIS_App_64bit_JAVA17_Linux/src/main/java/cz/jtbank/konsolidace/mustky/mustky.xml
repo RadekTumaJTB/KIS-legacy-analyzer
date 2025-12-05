@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="mustky"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.mustky" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="KpTmpCissubject"
+      FullName="cz.jtbank.konsolidace.mustky.KpTmpCissubject"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpBilanceDokladStruktura"
+      FullName="cz.jtbank.konsolidace.mustky.VwKpBilanceDokladStruktura"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpBilanceDokladStrukturaView"
+      FullName="cz.jtbank.konsolidace.mustky.VwKpBilanceDokladStrukturaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpTmpCissubjectView"
+      FullName="cz.jtbank.konsolidace.mustky.KpTmpCissubjectView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="MustkyModule"
+      FullName="cz.jtbank.konsolidace.mustky.MustkyModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="KpTmpKtgdoklad"
+      FullName="cz.jtbank.konsolidace.mustky.KpTmpKtgdoklad"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKptmpktgdokladSubjectAssoc"
+      FullName="cz.jtbank.konsolidace.mustky.FkKptmpktgdokladSubjectAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpTmpDefdoklad"
+      FullName="cz.jtbank.konsolidace.mustky.KpTmpDefdoklad"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKptmpdefdokladDokladAssoc"
+      FullName="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladDokladAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpTmpCisdoklad"
+      FullName="cz.jtbank.konsolidace.mustky.KpTmpCisdoklad"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKptmpktgdokladDokladAssoc"
+      FullName="cz.jtbank.konsolidace.mustky.FkKptmpktgdokladDokladAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpTmpCislist"
+      FullName="cz.jtbank.konsolidace.mustky.KpTmpCislist"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKptmpdefdokladListAssoc"
+      FullName="cz.jtbank.konsolidace.mustky.FkKptmpdefdokladListAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkKptmpcislistSubjAssoc"
+      FullName="cz.jtbank.konsolidace.mustky.FkKptmpcislistSubjAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="ListDokladView"
+      FullName="cz.jtbank.konsolidace.mustky.ListDokladView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpTmpCisucetsumatyp"
+      FullName="cz.jtbank.konsolidace.mustky.KpTmpCisucetsumatyp"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpTmpCisucetsumatypView"
+      FullName="cz.jtbank.konsolidace.mustky.KpTmpCisucetsumatypView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpBunkadefiniceuctu"
+      FullName="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctu"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpBunkadefiniceuctuView"
+      FullName="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="ViewLinkStructBunka"
+      FullName="cz.jtbank.konsolidace.mustky.ViewLinkStructBunka"
+      ObjectType="ViewLink" >
+   </Containee>
+   <Containee
+      Name="ViewLinkStructBunkaOpr"
+      FullName="cz.jtbank.konsolidace.mustky.ViewLinkStructBunkaOpr"
+      ObjectType="ViewLink" >
+   </Containee>
+   <Containee
+      Name="VwKpBunkadefiniceuctuhist"
+      FullName="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuhist"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpBunkadefiniceuctuhistView"
+      FullName="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuhistView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDefUcetvazbaucet"
+      FullName="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDefUcetvazbaucetView"
+      FullName="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucetView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisUcetvazbaucettyp"
+      FullName="cz.jtbank.konsolidace.mustky.KpCisUcetvazbaucettyp"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisUcetvazbaucettypView"
+      FullName="cz.jtbank.konsolidace.mustky.KpCisUcetvazbaucettypView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkKpdefucetvazbaucetAssoc"
+      FullName="cz.jtbank.konsolidace.mustky.FkKpdefucetvazbaucetAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDefListbunka"
+      FullName="cz.jtbank.konsolidace.mustky.KpDefListbunka"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpLogListbunkaucet"
+      FullName="cz.jtbank.konsolidace.mustky.KpLogListbunkaucet"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpLogListbunkaucetView"
+      FullName="cz.jtbank.konsolidace.mustky.KpLogListbunkaucetView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisUcetunif"
+      FullName="cz.jtbank.konsolidace.mustky.KpCisUcetunif"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisUcetunifView"
+      FullName="cz.jtbank.konsolidace.mustky.KpCisUcetunifView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisUcetuniflang"
+      FullName="cz.jtbank.konsolidace.mustky.KpCisUcetuniflang"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpucetuniflangUuAssoc"
+      FullName="cz.jtbank.konsolidace.mustky.FkKpucetuniflangUuAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpCisUcetuniflangView"
+      FullName="cz.jtbank.konsolidace.mustky.KpCisUcetuniflangView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDefUcet2ucetunif"
+      FullName="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunif"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkUcet2ucetunifUuAssoc"
+      FullName="cz.jtbank.konsolidace.mustky.FkUcet2ucetunifUuAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDefUcet2ucetunifView"
+      FullName="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunifView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpUcet2definice"
+      FullName="cz.jtbank.konsolidace.mustky.VwKpUcet2definice"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpUcet2definiceView"
+      FullName="cz.jtbank.konsolidace.mustky.VwKpUcet2definiceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpTmpCissubjectAllView"
+      FullName="cz.jtbank.konsolidace.mustky.KpTmpCissubjectAllView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

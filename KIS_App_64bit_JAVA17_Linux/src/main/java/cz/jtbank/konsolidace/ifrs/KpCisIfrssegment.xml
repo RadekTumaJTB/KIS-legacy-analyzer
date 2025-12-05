@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisIfrssegment"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_IFRSSEGMENT"
+   AliasName="KpCisIfrssegment"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.ifrs.KpCisIfrssegmentImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_IFRSSEGMENT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      IsNotNull="true"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_IFRSSEGMENT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisIfrssubsegment"
+      Association="cz.jtbank.konsolidace.ifrs.FkKpcisifrssubsegmentIdsegAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.ifrs.FkKpcisifrssubsegmentIdsegAssoc.KpCisIfrssubsegment"
+      AssociationOtherEnd="cz.jtbank.konsolidace.ifrs.FkKpcisifrssubsegmentIdsegAssoc.KpCisIfrssegment"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpcisifrssegmentPopis" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpCisIfrssegment.SPopis" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISIFRSSEGMENT_POPIS" />
+         <Attr Name="_checkCondition" Value="&#34;S_POPIS&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpcisifrssegmentId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpCisIfrssegment.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPCISIFRSSEGMENT_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpcisifrssegment" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpCisIfrssegment.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPCISIFRSSEGMENT" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

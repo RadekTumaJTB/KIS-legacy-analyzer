@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KtgAppuser"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KTG_APPUSER"
+   AliasName="KtgAppuser"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="132"
+   RowClass="cz.jtbank.konsolidace.users.KtgAppuserImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.users.common.KtgAppuserImplMsgBundle" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KTG_APPUSER"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUserid"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_USERID"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUsername"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnName="S_USERNAME"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="STitulypred"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_TITULYPRED"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SKrestni"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_KRESTNI"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPrijmeni"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_PRIJMENI"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="STitulypo"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_TITULYPO"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SEmail"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnName="S_EMAIL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CIndikator"
+      Precision="5"
+      Type="java.lang.String"
+      ColumnName="C_INDIKATOR"
+      ColumnType="VARCHAR2"
+      SQLType="CHAR"
+      TableName="DB_JT.KTG_APPUSER"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="STelefon"
+      Precision="25"
+      Type="java.lang.String"
+      ColumnName="S_TELEFON"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="6" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCisdocucspol"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISDOCUCSPOL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDocucspol"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOCUCSPOL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDoccountry"
+      Precision="2"
+      Type="java.lang.String"
+      ColumnName="ID_DOCCOUNTRY"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="2" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdNadrizenaucetni"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_NADRIZENAUCETNI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KTG_APPUSER" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CArchivni"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_ARCHIVNI"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KTG_APPUSER"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="COlap"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_OLAP"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KTG_APPUSER"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CExterni"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_EXTERNI"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KTG_APPUSER"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpRelAppuserskupina"
+      Association="cz.jtbank.konsolidace.users.FkRelappuserskupinaUserAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.users.FkRelappuserskupinaUserAssoc.KpRelAppuserskupina"
+      AssociationOtherEnd="cz.jtbank.konsolidace.users.FkRelappuserskupinaUserAssoc.KtgAppuser"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="PkKtgappuser" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKtgappuser" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KTGAPPUSER" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKtgappusercisspol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.IdCisdocucspol" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KTGAPPUSERCISSPOL" />
+         <Attr Name="_referencedKey" Value="PK_CISDOCSPOLTYP" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

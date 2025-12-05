@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="projekt"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.projekt" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="KpKtgProjekt"
+      FullName="cz.jtbank.konsolidace.projekt.KpKtgProjekt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgProjektView"
+      FullName="cz.jtbank.konsolidace.projekt.KpKtgProjektView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektstatus"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektstatus"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektstatusView"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektstatusView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektkategorie"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektkategorie"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektkategorieView"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektkategorieView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektjt"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektjt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektjtView"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektjtView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektskup"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektskup"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektskupView"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektskupView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektpb"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektpb"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektpbView"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektpbView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektuver"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektuver"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektuverView"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektuverView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektfrekvence"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektfrekvence"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektfrekvenceView"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektfrekvenceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="ProjektModule"
+      FullName="cz.jtbank.konsolidace.projekt.ProjektModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="KpLogProjekt"
+      FullName="cz.jtbank.konsolidace.projekt.KpLogProjekt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpLogProjektView"
+      FullName="cz.jtbank.konsolidace.projekt.KpLogProjektView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatProjektnakladydetail"
+      FullName="cz.jtbank.konsolidace.projekt.KpDatProjektnakladydetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatProjektnakladydetailView"
+      FullName="cz.jtbank.konsolidace.projekt.KpDatProjektnakladydetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelAppuserProjekt"
+      FullName="cz.jtbank.konsolidace.projekt.KpRelAppuserProjekt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelAppuserProjektView"
+      FullName="cz.jtbank.konsolidace.projekt.KpRelAppuserProjektView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektcashflowtyp"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektcashflowtyp"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektcashflowtypView"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektcashflowtypView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatProjektcashflow"
+      FullName="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatProjektcashflowView"
+      FullName="cz.jtbank.konsolidace.projekt.KpDatProjektcashflowView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkKpprojcfIdtypAssoc"
+      FullName="cz.jtbank.konsolidace.projekt.FkKpprojcfIdtypAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektinouttyp"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektinouttyp"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpprojinoutIdtypAssoc"
+      FullName="cz.jtbank.konsolidace.projekt.FkKpprojinoutIdtypAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpCisProjektinouttypView"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisProjektinouttypView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelProjektcfexport"
+      FullName="cz.jtbank.konsolidace.projekt.KpRelProjektcfexport"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelProjektcfexportView"
+      FullName="cz.jtbank.konsolidace.projekt.KpRelProjektcfexportView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatProjektcashflowExportView"
+      FullName="cz.jtbank.konsolidace.projekt.KpDatProjektcashflowExportView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgProjektnavrh"
+      FullName="cz.jtbank.konsolidace.projekt.KpKtgProjektnavrh"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgProjektnavrhView"
+      FullName="cz.jtbank.konsolidace.projekt.KpKtgProjektnavrhView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgProjektnavrh"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgProjektnavrh"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKtgProjektnavrhView"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgProjektnavrhView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkKtgprojektNavrhAssoc"
+      FullName="cz.jtbank.konsolidace.projekt.FkKtgprojektNavrhAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkKpktgprojektStatusAssoc"
+      FullName="cz.jtbank.konsolidace.projekt.FkKpktgprojektStatusAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="VwKpProjekttransakce"
+      FullName="cz.jtbank.konsolidace.projekt.VwKpProjekttransakce"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpProjekttransakceView"
+      FullName="cz.jtbank.konsolidace.projekt.VwKpProjekttransakceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgProjekt"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgProjekt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKtgProjektView"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgProjektView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatProjekttransakcedoc"
+      FullName="cz.jtbank.konsolidace.projekt.VwDatProjekttransakcedoc"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatProjekttransakcedocView"
+      FullName="cz.jtbank.konsolidace.projekt.VwDatProjekttransakcedocView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgProjektuserprava"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgProjektuserprava"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKtgProjektuserpravaView"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgProjektuserpravaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgUver"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgUver"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKtgUverView"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgUverView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelProjektucspol"
+      FullName="cz.jtbank.konsolidace.projekt.KpRelProjektucspol"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelProjektucspolView"
+      FullName="cz.jtbank.konsolidace.projekt.KpRelProjektucspolView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgProjektmemorandum"
+      FullName="cz.jtbank.konsolidace.projekt.KpKtgProjektmemorandum"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgProjektmemorandumView"
+      FullName="cz.jtbank.konsolidace.projekt.KpKtgProjektmemorandumView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatProjektmemorandumzprava"
+      FullName="cz.jtbank.konsolidace.projekt.KpDatProjektmemorandumzprava"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatProjektmemorandumzpravaView"
+      FullName="cz.jtbank.konsolidace.projekt.KpDatProjektmemorandumzpravaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRelProjektappuser"
+      FullName="cz.jtbank.konsolidace.projekt.VwRelProjektappuser"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRelProjektappuserView"
+      FullName="cz.jtbank.konsolidace.projekt.VwRelProjektappuserView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwLogProjekt"
+      FullName="cz.jtbank.konsolidace.projekt.VwLogProjekt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwLogProjektView"
+      FullName="cz.jtbank.konsolidace.projekt.VwLogProjektView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatMistransakce"
+      FullName="cz.jtbank.konsolidace.projekt.KpDatMistransakce"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatMistransakceView"
+      FullName="cz.jtbank.konsolidace.projekt.VwDatMistransakceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgUversplatky"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgUversplatky"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKtgUversplatkyView"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgUversplatkyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgUversplatkyhist"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgUversplatkyhist"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKtgUversplatkyhistView"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgUversplatkyhistView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisTypprojektovebilance"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisTypprojektovebilance"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkProjektTypbilanceAssoc"
+      FullName="cz.jtbank.konsolidace.projekt.FkProjektTypbilanceAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpCisTypprojektovebilanceView"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisTypprojektovebilanceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisTypbudgetuprojektu"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisTypbudgetuprojektu"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkProjektTypbudgetuAssoc"
+      FullName="cz.jtbank.konsolidace.projekt.FkProjektTypbudgetuAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpCisTypbudgetuprojektuView"
+      FullName="cz.jtbank.konsolidace.projekt.KpCisTypbudgetuprojektuView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatProjektdokladdenik"
+      FullName="cz.jtbank.konsolidace.projekt.KpDatProjektdokladdenik"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatProjektdokladdenikView"
+      FullName="cz.jtbank.konsolidace.projekt.KpDatProjektdokladdenikView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatSlprojektdeveloper"
+      FullName="cz.jtbank.konsolidace.projekt.VwDatSlprojektdeveloper"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatSlprojektdeveloperView"
+      FullName="cz.jtbank.konsolidace.projekt.VwDatSlprojektdeveloperView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgProjektsimple"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgProjektsimple"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKtgProjektsimpleView"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgProjektsimpleView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgProjektOverviewView"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgProjektOverviewView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgProjektuserpravaOverviewView"
+      FullName="cz.jtbank.konsolidace.projekt.VwKtgProjektuserpravaOverviewView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

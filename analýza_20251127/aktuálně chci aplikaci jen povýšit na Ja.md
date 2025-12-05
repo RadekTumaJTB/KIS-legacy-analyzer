@@ -1,0 +1,1 @@
+aktuálně chci aplikaci jen povýšit na Java 17 a nahradit problematické třídy (ExcelThread, UcSkupModuleImpl, apod). a nepodporované knihovny (Apache POI 3.x, atd). Analýzu ulož jako REENGINEERING_ANALYSIS_AI_QUICK.md. K analýze použij QdrantDB a Neo4J databázi.

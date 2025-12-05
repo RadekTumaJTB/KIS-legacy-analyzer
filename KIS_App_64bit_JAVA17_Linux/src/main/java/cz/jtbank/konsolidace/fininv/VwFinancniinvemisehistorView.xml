@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwFinancniinvemisehistorView"
+   SelectList="VwFinancniinvemisehistor.ID, 
+       VwFinancniinvemisehistor.ID_KTGFINANCNIINVESTICE, 
+
+       VwFinancniinvemisehistor.ID_PARENT, 
+       VwFinancniinvemisehistor.DT_PLATNOSTOD, 
+
+       VwFinancniinvemisehistor.DT_PLATNOSTDO, 
+       VwFinancniinvemisehistor.NL_POCETKUSU, 
+
+       VwFinancniinvemisehistor.NL_NOMINAL, 
+       VwFinancniinvemisehistor.ND_ZAKLADNIJMENI, 
+
+       VwFinancniinvemisehistor.DT_ZMENA, 
+       VwFinancniinvemisehistor.S_UZIVATEL, 
+
+       VwFinancniinvemisehistor.ROWID, 
+       VwFinancniinvemisehistor.C_INVESTICE"
+   FromList="DB_JT.VW_FINANCNIINVEMISEHISTOR VwFinancniinvemisehistor"
+   OrderBy="DT_PLATNOSTDO"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.fininv.VwFinancniinvemisehistorViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.fininv.common.VwFinancniinvemisehistorViewRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwFinancniinvemisehistor"
+      Entity="cz.jtbank.konsolidace.fininv.VwFinancniinvemisehistor" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="DT_PLATNOSTDO" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgfinancniinvestice"
+      IsNotNull="true"
+      EntityAttrName="IdKtgfinancniinvestice"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="ID_KTGFINANCNIINVESTICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdParent"
+      IsNotNull="true"
+      EntityAttrName="IdParent"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="ID_PARENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlPocetkusu"
+      IsNotNull="true"
+      EntityAttrName="NlPocetkusu"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="NL_POCETKUSU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlNominal"
+      IsNotNull="true"
+      EntityAttrName="NlNominal"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="NL_NOMINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdZakladnijmeni"
+      IsNotNull="true"
+      EntityAttrName="NdZakladnijmeni"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="ND_ZAKLADNIJMENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZmena"
+      IsNotNull="true"
+      EntityAttrName="DtZmena"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="DT_ZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      EntityAttrName="SUzivatel"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CInvestice"
+      IsNotNull="true"
+      EntityAttrName="CInvestice"
+      EntityUsage="VwFinancniinvemisehistor"
+      AliasName="C_INVESTICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

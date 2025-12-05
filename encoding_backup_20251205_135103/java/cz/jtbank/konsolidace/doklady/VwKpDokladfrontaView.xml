@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpDokladfrontaView"
+   SelectList="VwKpDokladfronta.ID, 
+       VwKpDokladfronta.DATUM, 
+       
+VwKpDokladfronta.S_STAV, 
+       VwKpDokladfronta.S_NAZEV, 
+ 
+      VwKpDokladfronta.ADATUM, 
+       VwKpDokladfronta.AUZIVATEL, 
+
+       VwKpDokladfronta.AID1, 
+       VwKpDokladfronta.AID2, 
+
+       VwKpDokladfronta.ROWID, 
+       VwKpDokladfronta.S_SQLERROR, 
+
+       VwKpDokladfronta.L_POKUS, 
+       VwKpDokladfronta.DT_NEXT_POKUS, 
+
+       VwKpDokladfronta.IDSPOLECNOST, 
+       VwKpDokladfronta.AJENOMPS, 
+
+       VwKpDokladfronta.IDSUBKONSOLIDACE, 
+       VwKpDokladfronta.AIDUZIVATELMUSTEK, 
+
+       VwKpDokladfronta.AGUIFLAG, 
+       VwKpDokladfronta.KROK"
+   FromList="DB_JT.VW_KP_DOKLADFRONTA VwKpDokladfronta"
+   OrderBy="ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   RowClass="cz.jtbank.konsolidace.doklady.VwKpDokladfrontaViewRowImpl"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwKpDokladfrontaViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.doklady.common.VwKpDokladfrontaViewRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpDokladfronta"
+      Entity="cz.jtbank.konsolidace.doklady.VwKpDokladfronta" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="ID" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datum"
+      EntityAttrName="Datum"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SStav"
+      EntityAttrName="SStav"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="S_STAV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Adatum"
+      EntityAttrName="Adatum"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="ADATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Auzivatel"
+      EntityAttrName="Auzivatel"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="AUZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Aid1"
+      EntityAttrName="Aid1"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="AID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Aid2"
+      EntityAttrName="Aid2"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="AID2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SSqlerror"
+      EntityAttrName="SSqlerror"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="S_SQLERROR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LPokus"
+      EntityAttrName="LPokus"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="L_POKUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtNextPokus"
+      EntityAttrName="DtNextPokus"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="DT_NEXT_POKUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DeleteMe"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="DELETE_ME"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Idspolecnost"
+      IsNotNull="true"
+      EntityAttrName="Idspolecnost"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="IDSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ajenomps"
+      EntityAttrName="Ajenomps"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="AJENOMPS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Idsubkonsolidace"
+      EntityAttrName="Idsubkonsolidace"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="IDSUBKONSOLIDACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Aiduzivatelmustek"
+      EntityAttrName="Aiduzivatelmustek"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="AIDUZIVATELMUSTEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Aguiflag"
+      EntityAttrName="Aguiflag"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="AGUIFLAG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Krok"
+      EntityAttrName="Krok"
+      EntityUsage="VwKpDokladfronta"
+      AliasName="KROK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

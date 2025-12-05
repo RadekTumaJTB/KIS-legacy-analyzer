@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatSchvalenooo"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_DOKLADZAMEK"
+   AliasName="KpDatSchvalenooo"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.KpDatSchvalenoooImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="DtTimestamp"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_TIMESTAMP"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_DOKLADZAMEK" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlKrok"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_KROK"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADZAMEK"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADZAMEK"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpDatDoklad"
+      Association="cz.jtbank.konsolidace.doklady.FkDatooodokladAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkDatooodokladAssoc.KpDatDoklad"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkDatooodokladAssoc.KpDatSchvalenooo"
+      Type="cz.jtbank.konsolidace.doklady.KpDatDokladImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnDatzamekdatum" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatSchvalenooo.DtTimestamp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_DATZAMEKDATUM" />
+         <Attr Name="_checkCondition" Value="&#34;DT_TIMESTAMP&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnDatzamektyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatSchvalenooo.NlKrok" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_DATZAMEKTYP" />
+         <Attr Name="_checkCondition" Value="&#34;NL_KROK&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnDatzamekdoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatSchvalenooo.IdDoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_DATZAMEKDOKLAD" />
+         <Attr Name="_checkCondition" Value="&#34;ID_DOKLAD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkDatzamek" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatSchvalenooo.IdDoklad" />
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatSchvalenooo.NlKrok" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_DATZAMEK" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkDatzamekdoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatSchvalenooo.IdDoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_DATZAMEKDOKLAD" />
+         <Attr Name="_referencedKey" Value="PK_KPDOKLAD" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

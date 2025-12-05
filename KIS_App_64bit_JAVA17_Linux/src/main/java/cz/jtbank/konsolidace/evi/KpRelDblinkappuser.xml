@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpRelDblinkappuser"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_REL_DBLINKAPPUSER"
+   AliasName="KpRelDblinkappuser"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.evi.KpRelDblinkappuserImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="SDblink"
+      IsNotNull="true"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_DBLINK"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_REL_DBLINKAPPUSER"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdAppuser"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_APPUSER"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_DBLINKAPPUSER"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisDatabaze"
+      Association="cz.jtbank.konsolidace.evi.FkReldblinkappuserDblinkAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkReldblinkappuserDblinkAssoc.KpCisDatabaze"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkReldblinkappuserDblinkAssoc.KpRelDblinkappuser"
+      Type="cz.jtbank.konsolidace.evi.KpCisDatabazeImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="PkReldblinkappuser" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpRelDblinkappuser.SDblink" />
+         <Item Value="cz.jtbank.konsolidace.evi.KpRelDblinkappuser.IdAppuser" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_RELDBLINKAPPUSER" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkReldblinkappuserDblink" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpRelDblinkappuser.SDblink" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_RELDBLINKAPPUSER_DBLINK" />
+         <Attr Name="_referencedKey" Value="CU_KPCISDATABAZE_DBLINK" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkReldblinkappuserAppuser" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpRelDblinkappuser.IdAppuser" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_RELDBLINKAPPUSER_APPUSER" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

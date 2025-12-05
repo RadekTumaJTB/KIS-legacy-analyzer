@@ -1,0 +1,62 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: kis-bff
+
+  # Redis Cache Configuration
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      timeout: 2000ms
+
+  # Jackson JSON Configuration
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+
+  # Security (disabled for now - will enable later)
+  security:
+    enabled: false
+
+# Feign Client Configuration
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 10000
+        loggerLevel: basic
+
+# Core Backend Services URLs
+services:
+  core-backend:
+    url: ${CORE_BACKEND_URL:http://localhost:8080}
+
+# Management Endpoints (Actuator)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    export:
+      prometheus:
+        enabled: true
+
+# Logging
+logging:
+  level:
+    cz.jtbank.kis.bff: DEBUG
+    org.springframework.cloud.openfeign: DEBUG
+    org.springframework.web: INFO
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'

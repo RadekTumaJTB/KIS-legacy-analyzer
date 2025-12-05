@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatKartaspolzpravaView"
+   SelectList="KpDatKartaspolzprava.ID, 
+       KpDatKartaspolzprava.ID_KTGUCETNISPOLECNOST, 
+       KpDatKartaspolzprava.ID_KARTATYP, 
+       KpDatKartaspolzprava.DT_DATUM, 
+       KpDatKartaspolzprava.S_ZPRAVA"
+   FromList="DB_JT.KP_DAT_KARTASPOLZPRAVA KpDatKartaspolzprava"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.KpDatKartaspolzpravaViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatKartaspolzprava"
+      Entity="cz.jtbank.konsolidace.ucskup.KpDatKartaspolzprava" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatKartaspolzprava"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDatKartaspolzprava"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKartatyp"
+      IsNotNull="true"
+      EntityAttrName="IdKartatyp"
+      EntityUsage="KpDatKartaspolzprava"
+      AliasName="ID_KARTATYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatKartaspolzprava"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZprava"
+      EntityAttrName="SZprava"
+      EntityUsage="KpDatKartaspolzprava"
+      AliasName="S_ZPRAVA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

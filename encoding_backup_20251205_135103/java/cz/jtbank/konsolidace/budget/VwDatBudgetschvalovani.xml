@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwDatBudgetschvalovani"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_DAT_BUDGETSCHVALOVANI"
+   AliasName="VwDatBudgetschvalovani"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.budget.VwDatBudgetschvalovaniImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Uroven"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="UROVEN"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETSCHVALOVANI"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdBudget"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_BUDGET"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETSCHVALOVANI"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Budget"
+      Precision="212"
+      Type="java.lang.String"
+      ColumnName="BUDGET"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETSCHVALOVANI" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="212" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdOsoba"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_OSOBA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETSCHVALOVANI"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Osoba"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="OSOBA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETSCHVALOVANI"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pocet"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="POCET"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETSCHVALOVANI" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Nizsi"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="NIZSI"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_DAT_BUDGETSCHVALOVANI"
+      PrimaryKey="true"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwdatbudgetschvalovaniPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.VwDatBudgetschvalovani.Uroven" />
+         <Item Value="cz.jtbank.konsolidace.budget.VwDatBudgetschvalovani.IdBudget" />
+         <Item Value="cz.jtbank.konsolidace.budget.VwDatBudgetschvalovani.IdOsoba" />
+         <Item Value="cz.jtbank.konsolidace.budget.VwDatBudgetschvalovani.Nizsi" />
+         <Item Value="cz.jtbank.konsolidace.budget.VwDatBudgetschvalovani.Osoba" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWDATBUDGETSCHVALOVANI_PRIMARY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

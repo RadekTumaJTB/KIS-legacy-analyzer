@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepUcspolzamekooView"
+   SelectList="VwRepUcspolzamekoo.DT_DATUM, 
+       VwRepUcspolzamekoo.S_UZIVATEL, 
+       VwRepUcspolzamekoo.DT_TIMESTAMP, 
+       VwRepUcspolzamekoo.S_NAZEV, 
+       VwRepUcspolzamekoo.ID"
+   FromList="DB_JT.VW_REP_UCSPOLZAMEKOO VwRepUcspolzamekoo"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepUcspolzamekooViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepUcspolzamekoo"
+      Entity="cz.jtbank.konsolidace.report.VwRepUcspolzamekoo" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwRepUcspolzamekoo"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="VwRepUcspolzamekoo"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtTimestamp"
+      EntityAttrName="DtTimestamp"
+      EntityUsage="VwRepUcspolzamekoo"
+      AliasName="DT_TIMESTAMP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwRepUcspolzamekoo"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwRepUcspolzamekoo"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpRelUcetunifflow"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_REL_UCETUNIFFLOW"
+   AliasName="KpRelUcetunifflow"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflowImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdCisucetunif"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISUCETUNIF"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_UCETUNIFFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCisflow"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISFLOW"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_UCETUNIFFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisFlow"
+      Association="cz.jtbank.konsolidace.cartesis.FkKpreluuflowFlowAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.cartesis.FkKpreluuflowFlowAssoc.KpCisFlow"
+      AssociationOtherEnd="cz.jtbank.konsolidace.cartesis.FkKpreluuflowFlowAssoc.KpRelUcetunifflow"
+      Type="cz.jtbank.konsolidace.cartesis.KpCisFlowImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpreluuflowUu" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflow.IdCisucetunif" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPRELUUFLOW_UU" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISUCETUNIF&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpreluuflowFlow" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflow.IdCisflow" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPRELUUFLOW_FLOW" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISFLOW&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpreluuflow" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflow.IdCisucetunif" />
+         <Item Value="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflow.IdCisflow" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPRELUUFLOW" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpreluuflowUu" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflow.IdCisucetunif" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPRELUUFLOW_UU" />
+         <Attr Name="_referencedKey" Value="PK_KPUCETUNIF" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpreluuflowFlow" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflow.IdCisflow" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPRELUUFLOW_FLOW" />
+         <Attr Name="_referencedKey" Value="PK_KPCISFLOW" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpLogBudgetnavyseniView"
+   SelectList="KpLogBudgetnavyseni.ID_BUDGETPOLOZKA, 
+       KpLogBudgetnavyseni.ND_NAVYSENI, 
+       KpLogBudgetnavyseni.S_MENA, 
+       KpLogBudgetnavyseni.ND_NOVAUROVEN, 
+       KpLogBudgetnavyseni.ID_DOKUMENT, 
+       KpLogBudgetnavyseni.DT_DATUMZMENY"
+   FromList="DB_JT.KP_LOG_BUDGETNAVYSENI KpLogBudgetnavyseni"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.budget.KpLogBudgetnavyseniViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpLogBudgetnavyseni"
+      Entity="cz.jtbank.konsolidace.budget.KpLogBudgetnavyseni" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdBudgetpolozka"
+      EntityAttrName="IdBudgetpolozka"
+      EntityUsage="KpLogBudgetnavyseni"
+      AliasName="ID_BUDGETPOLOZKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdNavyseni"
+      EntityAttrName="NdNavyseni"
+      EntityUsage="KpLogBudgetnavyseni"
+      AliasName="ND_NAVYSENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="KpLogBudgetnavyseni"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdNovauroven"
+      EntityAttrName="NdNovauroven"
+      EntityUsage="KpLogBudgetnavyseni"
+      AliasName="ND_NOVAUROVEN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokument"
+      EntityAttrName="IdDokument"
+      EntityUsage="KpLogBudgetnavyseni"
+      AliasName="ID_DOKUMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzmeny"
+      EntityAttrName="DtDatumzmeny"
+      EntityUsage="KpLogBudgetnavyseni"
+      AliasName="DT_DATUMZMENY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

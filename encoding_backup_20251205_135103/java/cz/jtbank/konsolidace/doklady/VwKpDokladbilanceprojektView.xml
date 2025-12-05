@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpDokladbilanceprojektView"
+   SelectList="VwKpDokladbilanceprojekt.LIST, 
+       VwKpDokladbilanceprojekt.RADEKTEXT, 
+
+       VwKpDokladbilanceprojekt.PROJEKT, 
+       VwKpDokladbilanceprojekt.NL_RADEK, 
+
+       VwKpDokladbilanceprojekt.ND_CASTKALOCAL, 
+       VwKpDokladbilanceprojekt.S_MENA, 
+
+       VwKpDokladbilanceprojekt.NL_SLOUPEC, 
+       VwKpDokladbilanceprojekt.S_LOCALE, 
+
+       VwKpDokladbilanceprojekt.ID_DOKLAD, 
+       VwKpDokladbilanceprojekt.ND_CASTKAMENA, 
+
+       VwKpDokladbilanceprojekt.ID_DOKLADPOLOZKA, 
+       VwKpDokladbilanceprojekt.ID_KTGPROJEKT"
+   FromList="DB_JT.VW_KP_DOKLADBILANCEPROJEKT VwKpDokladbilanceprojekt"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojektViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpDokladbilanceprojekt"
+      Entity="cz.jtbank.konsolidace.doklady.VwKpDokladbilanceprojekt" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="List"
+      EntityAttrName="List"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="LIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Radektext"
+      EntityAttrName="Radektext"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="RADEKTEXT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Projekt"
+      EntityAttrName="Projekt"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="PROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      EntityAttrName="NlRadek"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlSloupec"
+      EntityAttrName="NlSloupec"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="NL_SLOUPEC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SLocale"
+      IsNotNull="true"
+      EntityAttrName="SLocale"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="S_LOCALE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokladpolozka"
+      EntityAttrName="IdDokladpolozka"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="ID_DOKLADPOLOZKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwKpDokladbilanceprojekt"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,206 @@
+================================================================================
+QUICK REFERENCE: javax → jakarta Migration Patterns
+================================================================================
+
+MIGRATION PATTERN #1: javax.mail → jakarta.mail
+------------------------------------------------
+BEFORE:
+  import javax.mail.*;
+  import javax.mail.internet.*;
+  import javax.mail.Message;
+  import javax.mail.Session;
+  import javax.mail.Transport;
+  import javax.mail.internet.InternetAddress;
+  import javax.mail.internet.MimeBodyPart;
+  import javax.mail.internet.MimeMessage;
+  import javax.mail.internet.MimeMultipart;
+
+AFTER:
+  import jakarta.mail.*;
+  import jakarta.mail.internet.*;
+  import jakarta.mail.Message;
+  import jakarta.mail.Session;
+  import jakarta.mail.Transport;
+  import jakarta.mail.internet.InternetAddress;
+  import jakarta.mail.internet.MimeBodyPart;
+  import jakarta.mail.internet.MimeMessage;
+  import jakarta.mail.internet.MimeMultipart;
+
+AFFECTED FILES: Mail.java
+IMPACT: Email sending functionality
+
+
+MIGRATION PATTERN #2: javax.activation → jakarta.activation
+------------------------------------------------------------
+BEFORE:
+  import javax.activation.*;
+  import javax.activation.DataHandler;
+  import javax.activation.FileDataSource;
+
+AFTER:
+  import jakarta.activation.*;
+  import jakarta.activation.DataHandler;
+  import jakarta.activation.FileDataSource;
+
+AFFECTED FILES: Mail.java
+IMPACT: Email attachments (DataHandler, FileDataSource)
+
+
+MIGRATION PATTERN #3: javax.servlet → jakarta.servlet
+------------------------------------------------------
+BEFORE:
+  import javax.servlet.http.*;
+  import javax.servlet.http.HttpServlet;
+  import javax.servlet.ServletConfig;
+  import javax.servlet.ServletException;
+
+AFTER:
+  import jakarta.servlet.http.*;
+  import jakarta.servlet.http.HttpServlet;
+  import jakarta.servlet.ServletConfig;
+  import jakarta.servlet.ServletException;
+
+AFFECTED FILES: Utils.java, AutoStart.java
+IMPACT: HTTP request handling, servlet lifecycle
+
+
+NO MIGRATION PATTERN #1: javax.sql (Part of JDK)
+-------------------------------------------------
+KEEP AS IS:
+  import javax.sql.*;
+  import javax.sql.DataSource;
+  import javax.sql.PooledConnection;
+
+REASON: Part of JDK, not moved to Jakarta EE
+AFFECTED FILES: GeneratorThread.java
+IMPACT: None
+
+
+NO MIGRATION PATTERN #2: javax.xml.parsers (Part of JDK)
+---------------------------------------------------------
+KEEP AS IS:
+  import javax.xml.parsers.*;
+  import javax.xml.parsers.SAXParser;
+  import javax.xml.parsers.SAXParserFactory;
+
+REASON: Part of JDK, not moved to Jakarta EE
+AFFECTED FILES: UsersParser.java, UsersHandler.java, UsersModuleImpl.java
+IMPACT: None
+
+================================================================================
+MAVEN DEPENDENCIES
+================================================================================
+
+ADD TO pom.xml:
+---------------
+<!-- Jakarta Mail API -->
+<dependency>
+    <groupId>jakarta.mail</groupId>
+    <artifactId>jakarta.mail-api</artifactId>
+    <version>2.1.1</version>
+</dependency>
+
+<!-- Jakarta Mail Implementation -->
+<dependency>
+    <groupId>org.eclipse.angus</groupId>
+    <artifactId>angus-mail</artifactId>
+    <version>2.0.1</version>
+</dependency>
+
+<!-- Jakarta Activation -->
+<dependency>
+    <groupId>jakarta.activation</groupId>
+    <artifactId>jakarta.activation-api</artifactId>
+    <version>2.1.1</version>
+</dependency>
+
+<!-- Jakarta Servlet (already present) -->
+<dependency>
+    <groupId>jakarta.servlet</groupId>
+    <artifactId>jakarta.servlet-api</artifactId>
+    <version>6.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+
+REMOVE FROM pom.xml (if present):
+----------------------------------
+<!-- OLD - Remove these -->
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>mail</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>servlet-api</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>javax.activation</groupId>
+    <artifactId>activation</artifactId>
+</dependency>
+
+================================================================================
+VERIFICATION COMMANDS
+================================================================================
+
+# Check for remaining javax.mail imports
+grep -r "import javax\.mail" src/main/java/
+
+# Check for remaining javax.activation imports
+grep -r "import javax\.activation" src/main/java/
+
+# Check for remaining javax.servlet imports
+grep -r "import javax\.servlet" src/main/java/
+
+# Verify jakarta imports present
+grep -r "import jakarta\." src/main/java/
+
+# All checks should show:
+# - No javax.mail/activation/servlet found
+# - Jakarta imports present in Mail.java, Utils.java, AutoStart.java
+
+================================================================================
+BUILD & TEST
+================================================================================
+
+# Clean and compile
+mvn clean compile
+
+# Run tests
+mvn test
+
+# Package
+mvn clean package
+
+================================================================================
+KEY RULES
+================================================================================
+
+1. javax.mail → jakarta.mail (MUST MIGRATE)
+2. javax.activation → jakarta.activation (MUST MIGRATE)
+3. javax.servlet → jakarta.servlet (MUST MIGRATE)
+4. javax.sql → NO CHANGE (Part of JDK)
+5. javax.xml.parsers → NO CHANGE (Part of JDK)
+6. javax.naming → NO CHANGE (Part of JDK)
+
+================================================================================
+TESTING PRIORITIES
+================================================================================
+
+PRIORITY 1 (CRITICAL):
+- Email sending (Mail.java)
+- Email with attachments
+- SMTP connection
+- Czech character encoding
+
+PRIORITY 2 (HIGH):
+- Servlet startup (AutoStart.java)
+- HTTP request handling (Utils.java)
+
+PRIORITY 3 (MEDIUM):
+- XML parsing (verify unchanged)
+- Database connections (verify unchanged)
+
+================================================================================

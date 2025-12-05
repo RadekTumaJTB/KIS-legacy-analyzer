@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatDokladzdrojdatagregaceAgr1View"
+   OrderBy="s_ucet, s_mena"
+   BindingStyle="Oracle"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregaceAgr1ViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+select a.ID_DOKLAD,
+	   a.S_UCET,
+	   a.S_MENA,
+	   sum(decode(c_list,'A',1,'3',1,-1)*a.ND_CASTKALOCAL) ND_CASTKALOCAL,
+	   sum(decode(c_list,'A',1,'3',1,-1)*a.ND_CASTKAMENA) ND_CASTKAMENA,
+      f.s_kod 
+from 
+	db_jt.kp_dat_dokladZdrojDatAgregace a, 
+   db_jt.Kp_Cis_Ucetunif uf, 
+	db_jt.kp_rel_ucetunifflow rf,
+	db_jt.kp_cis_flow f
+where 
+	uf.s_ucet = a.s_ucetunif and
+	rf.id_cisflow = f.id   and
+	uf.id = rf.id_cisucetunif 
+group by a.ID_DOKLAD,
+	   	 a.S_UCET,
+	   	 a.S_MENA,
+          f.s_kod
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2"
+      Expression="ID_DOKLAD"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsPersistent="false"
+      Precision="15"
+      Type="java.lang.String"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2"
+      Expression="S_UCET"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsPersistent="false"
+      Precision="3"
+      Type="java.lang.String"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2"
+      Expression="S_MENA"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2"
+      Expression="ND_CASTKALOCAL"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2"
+      Expression="ND_CASTKAMENA"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKod"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="5"
+      Type="java.lang.String"
+      AliasName="S_KOD"
+      ColumnType="VARCHAR2"
+      Expression="S_KOD"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="5" />
+      </DesignTime>
+   </ViewAttribute>
+</ViewObject>

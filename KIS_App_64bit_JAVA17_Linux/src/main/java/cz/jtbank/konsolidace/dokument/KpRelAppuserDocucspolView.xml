@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelAppuserDocucspolView"
+   SelectList="KpRelAppuserDocucspol.ID_APPUSER, 
+       KpRelAppuserDocucspol.ID_KTGUCETNISPOLECNOST"
+   FromList="DB_JT.KP_REL_APPUSER_DOCUCSPOL KpRelAppuserDocucspol"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.KpRelAppuserDocucspolViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelAppuserDocucspol"
+      Entity="cz.jtbank.konsolidace.dokument.KpRelAppuserDocucspol" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdAppuser"
+      IsNotNull="true"
+      EntityAttrName="IdAppuser"
+      EntityUsage="KpRelAppuserDocucspol"
+      AliasName="ID_APPUSER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpRelAppuserDocucspol"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

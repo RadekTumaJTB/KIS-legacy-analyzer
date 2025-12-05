@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="ucskup"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.ucskup" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="KpKtgUcetniskupina"
+      FullName="cz.jtbank.konsolidace.ucskup.KpKtgUcetniskupina"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcetniskupinaView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpKtgUcetniskupinaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelUcetniskupinaclen"
+      FullName="cz.jtbank.konsolidace.ucskup.KpRelUcetniskupinaclen"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelUcetniskupinaclenView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpRelUcetniskupinaclenView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="UcSkupModule"
+      FullName="cz.jtbank.konsolidace.ucskup.UcSkupModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="KpCisSpolecnostkategorie"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisSpolecnostkategorie"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisSpolecnostkategorieView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisSpolecnostkategorieView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisKatspol"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisKatspol"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisKatspolView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisKatspolView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkKpucetniskupinaclenSkupinaAssoc"
+      FullName="cz.jtbank.konsolidace.ucskup.FkKpucetniskupinaclenSkupinaAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="VwRelUcetniskupinaclen"
+      FullName="cz.jtbank.konsolidace.ucskup.VwRelUcetniskupinaclen"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRelUcetniskupinaclenView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwRelUcetniskupinaclenView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladposlednisum"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKpDokladposlednisum"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladposlednisumView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKpDokladposlednisumView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisStat"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisStat"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisStatView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisStatView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDanovesazby"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatDanovesazby"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatDanovesazbyView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatDanovesazbyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisFrekvencedph"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisFrekvencedph"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisFrekvencedphView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisFrekvencedphView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDane"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatDane"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatDaneView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatDaneView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisOpce"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisOpce"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisOpceView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisOpceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatAudit"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatAudit"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatAuditView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatAuditView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkDanovesazbyStatAssoc"
+      FullName="cz.jtbank.konsolidace.ucskup.FkDanovesazbyStatAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladzamek"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatDokladzamek"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladZamekView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatDokladZamekView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpUcetnispolecnostprehled"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKpUcetnispolecnostprehled"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpUcetnispolecnostprehledView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKpUcetnispolecnostprehledView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisNominee"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisNominee"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisNomineeView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisNomineeView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisPrenospriorita"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisPrenospriorita"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisPrenosprioritaView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisPrenosprioritaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcspolpredavani"
+      FullName="cz.jtbank.konsolidace.ucskup.KpKtgUcspolpredavani"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKtgucspolpredavaniPrioAssoc"
+      FullName="cz.jtbank.konsolidace.ucskup.FkKtgucspolpredavaniPrioAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcspolpredavaniView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpKtgUcspolpredavaniView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgUcspolpredavani"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKtgUcspolpredavani"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKtgUcspolpredavaniView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKtgUcspolpredavaniView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisPrenoskategorie"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisPrenoskategorie"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisPrenoskategorieView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisPrenoskategorieView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRelSubkonsolidaceclen"
+      FullName="cz.jtbank.konsolidace.ucskup.VwRelSubkonsolidaceclen"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRelSubkonsolidaceclenView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwRelSubkonsolidaceclenView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="DatKurzlistavg"
+      FullName="cz.jtbank.konsolidace.ucskup.DatKurzlistavg"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="DatKurzlistavgView"
+      FullName="cz.jtbank.konsolidace.ucskup.DatKurzlistavgView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="CisBanka"
+      FullName="cz.jtbank.konsolidace.ucskup.CisBanka"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKurzlistavgCisbankaAssoc"
+      FullName="cz.jtbank.konsolidace.ucskup.FkKurzlistavgCisbankaAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="CisBankaView"
+      FullName="cz.jtbank.konsolidace.ucskup.CisBankaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKtgUcetnispolecnost"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKtgUcetnispolecnost"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKtgUcetnispolecnostView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKtgUcetnispolecnostView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisTypprojektu"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisTypprojektu"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisTypprojektuView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisTypprojektuView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladzustatkyuctuproti"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKpDokladzustatkyuctuproti"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladzustatkyuctuprotiView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKpDokladzustatkyuctuprotiView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRelSpolecnostappuser"
+      FullName="cz.jtbank.konsolidace.ucskup.VwRelSpolecnostappuser"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRelSpolecnostappuserView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwRelSpolecnostappuserView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwLogUcetnispolecnost"
+      FullName="cz.jtbank.konsolidace.ucskup.VwLogUcetnispolecnost"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwLogUcetnispolecnostView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwLogUcetnispolecnostView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcetnispolecnostLink"
+      FullName="cz.jtbank.konsolidace.ucskup.KpKtgUcetnispolecnostLink"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcetnispolecnostLinkView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpKtgUcetnispolecnostLinkView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwQProjektodbor"
+      FullName="cz.jtbank.konsolidace.ucskup.VwQProjektodbor"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwQProjektodborView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwQProjektodborView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkKtgucskupCisbankaAssoc"
+      FullName="cz.jtbank.konsolidace.ucskup.FkKtgucskupCisbankaAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatKartatyp"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatKartatyp"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatKartatypView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatKartatypView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelSpolecnostkartatyp"
+      FullName="cz.jtbank.konsolidace.ucskup.KpRelSpolecnostkartatyp"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKprelspolkartatypIdkartatAssoc"
+      FullName="cz.jtbank.konsolidace.ucskup.FkKprelspolkartatypIdkartatAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpRelSpolecnostkartatypView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpRelSpolecnostkartatypView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatKartapravidla"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatKartapravidla"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpkartapravidlaIdkartatypAssoc"
+      FullName="cz.jtbank.konsolidace.ucskup.FkKpkartapravidlaIdkartatypAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatKartapravidlaView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatKartapravidlaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatKartavyjimky"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatKartavyjimky"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpkartavyjimkyIdkartatypAssoc"
+      FullName="cz.jtbank.konsolidace.ucskup.FkKpkartavyjimkyIdkartatypAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatKartavyjimkyView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatKartavyjimkyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpSubkonsprehled"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKpSubkonsprehled"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpSubkonsprehledView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwKpSubkonsprehledView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatKartaspolzprava"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatKartaspolzprava"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpkartazpravaIdkartatypAssoc"
+      FullName="cz.jtbank.konsolidace.ucskup.FkKpkartazpravaIdkartatypAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatKartaspolzpravaView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpDatKartaspolzpravaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRelSpolecnostKartaTypView"
+      FullName="cz.jtbank.konsolidace.ucskup.VwRelSpolecnostKartaTypView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisFeisPrenos"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisFeisPrenos"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisFeisPrenosView"
+      FullName="cz.jtbank.konsolidace.ucskup.KpCisFeisPrenosView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

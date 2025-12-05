@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpCisTyptransakce"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_CIS_TYPTRANSAKCE"
+   AliasName="KpCisTyptransakce"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="132"
+   RowClass="cz.jtbank.konsolidace.dokument.KpCisTyptransakceImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.dokument.common.KpCisTyptransakceImplMsgBundle" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="50"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SKod"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="S_KOD"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="15" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdGestorCz"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_GESTOR_CZ"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdGestorSk"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_GESTOR_SK"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdGestorZ"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_GESTOR_Z"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTyptransakcegroup"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TYPTRANSAKCEGROUP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CProzastupce"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_PROZASTUPCE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdBudgetnavyseniGestor"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_BUDGETNAVYSENI_GESTOR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CDeveloper"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_DEVELOPER"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SKomentar"
+      Precision="2000"
+      Type="java.lang.String"
+      ColumnName="S_KOMENTAR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="2000" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CSpecial"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_SPECIAL"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CPodvojnemis"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_PODVOJNEMIS"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdUrovenprojekt"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_UROVENPROJEKT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdUrovenspolecnost"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_UROVENSPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdUroventop"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_UROVENTOP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMenaup"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENAUP"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMenaus"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENAUS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMenaut"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENAUT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CTiskmajetek"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_TISKMAJETEK"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CBudgetovat"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_BUDGETOVAT"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CCapexOpex"
+      IsNotNull="true"
+      Precision="32"
+      Type="java.lang.String"
+      ColumnName="C_CAPEX_OPEX"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisMisuctymdd"
+      Association="cz.jtbank.konsolidace.dokument.FkMisuctymddTtAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.dokument.FkMisuctymddTtAssoc.KpCisMisuctymdd"
+      AssociationOtherEnd="cz.jtbank.konsolidace.dokument.FkMisuctymddTtAssoc.KpCisTyptransakce"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpRelMisurovenschvalovani"
+      Association="cz.jtbank.konsolidace.dokument.FkKprelmisurovenTtAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.dokument.FkKprelmisurovenTtAssoc.KpRelMisurovenschvalovani"
+      AssociationOtherEnd="cz.jtbank.konsolidace.dokument.FkKprelmisurovenTtAssoc.KpCisTyptransakce"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="SysC0013358" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.DtPlatnostod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0013358" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001727" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.DtPlatnostod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C001727" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002222" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002222" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC004424" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C004424" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0013359" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0013359" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002623" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002623" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC004425" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.DtPlatnostod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C004425" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002622" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.DtPlatnostod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002622" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0079969" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.CCapexOpex" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0079969" />
+         <Attr Name="_checkCondition" Value="&#34;C_CAPEX_OPEX&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001728" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C001728" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002224" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002224" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC004426" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C004426" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001726" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C001726" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC004427" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.CCapexOpex" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C004427" />
+         <Attr Name="_checkCondition" Value="&#34;C_CAPEX_OPEX&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkCistyptransakce" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_CISTYPTRANSAKCE" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002621" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002621" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC003036" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C003036" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0011374" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0011374" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002223" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.DtPlatnostod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C002223" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkCistyptransakceTtgroup" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.IdTyptransakcegroup" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_CISTYPTRANSAKCE_TTGROUP" />
+         <Attr Name="_referencedKey" Value="PK_CISTYPTRANSAKCEGROUP" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkTyptransakceMenaup" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.SMenaup" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_TYPTRANSAKCE_MENAUP" />
+         <Attr Name="_referencedKey" Value="PK_KPCISMENA" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkTyptransakceMenaus" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.SMenaus" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_TYPTRANSAKCE_MENAUS" />
+         <Attr Name="_referencedKey" Value="PK_KPCISMENA" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkTyptransakceMenaut" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.KpCisTyptransakce.SMenaut" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_TYPTRANSAKCE_MENAUT" />
+         <Attr Name="_referencedKey" Value="PK_KPCISMENA" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

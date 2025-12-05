@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="MustkyModule"
+   ComponentClass="cz.jtbank.konsolidace.mustky.MustkyModuleImpl"
+   ComponentInterface="cz.jtbank.konsolidace.mustky.common.MustkyModule" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="KpTmpCissubjectView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpTmpCissubjectView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpBilanceDokladStrukturaView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.VwKpBilanceDokladStrukturaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ListDokladView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.ListDokladView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpTmpCisucetsumatypView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpTmpCisucetsumatypView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpBunkadefiniceuctuView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpBunkadefiniceuctuView2"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpBunkadefiniceuctuView3"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpBunkadefiniceuctuView4"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpBunkadefiniceuctuhistView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuhistView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="CisLocaleView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.CisLocaleView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDefUcetvazbaucetView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucetView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisUcetvazbaucettypView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpCisUcetvazbaucettypView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpLogListbunkaucetView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpLogListbunkaucetView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisUcetunifView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpCisUcetunifView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisUcetuniflangView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpCisUcetuniflangView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDefUcet2ucetunifView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpDefUcet2ucetunifView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpUcet2definiceView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.VwKpUcet2definiceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpTmpCissubjectAllView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpTmpCissubjectAllView" >
+   </ViewUsage>
+   <ViewLinkUsage
+      Name="ViewLinkStructBunka1"
+      ViewLinkObjectName="cz.jtbank.konsolidace.mustky.ViewLinkStructBunka"
+      SrcViewUsageName="cz.jtbank.konsolidace.mustky.MustkyModule.VwKpBilanceDokladStrukturaView1"
+      DstViewUsageName="cz.jtbank.konsolidace.mustky.MustkyModule.VwKpBunkadefiniceuctuView3" >
+      <DesignTime>
+         <Attr Name="_isCodegen" Value="true" />
+         <Attr Name="_version" Value="9.0.4.13.65" />
+      </DesignTime>
+   </ViewLinkUsage>
+   <ViewLinkUsage
+      Name="ViewLinkStructBunkaOpr1"
+      ViewLinkObjectName="cz.jtbank.konsolidace.mustky.ViewLinkStructBunkaOpr"
+      SrcViewUsageName="cz.jtbank.konsolidace.mustky.MustkyModule.VwKpBilanceDokladStrukturaView1"
+      DstViewUsageName="cz.jtbank.konsolidace.mustky.MustkyModule.VwKpBunkadefiniceuctuView4" >
+      <DesignTime>
+         <Attr Name="_isCodegen" Value="true" />
+         <Attr Name="_version" Value="9.0.4.13.65" />
+      </DesignTime>
+   </ViewLinkUsage>
+</AppModule>

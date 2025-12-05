@@ -1,0 +1,13 @@
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/dto/document/CompanySummaryDTO.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/dto/document/UserSummaryDTO.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/controller/DocumentBFFController.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/controller/HealthController.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/dto/document/ApprovalChainItemDTO.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/dto/document/DocumentMetadataDTO.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/dto/document/DocumentSummaryDTO.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/dto/document/DocumentDetailDTO.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/dto/document/DocumentDTO.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/dto/document/RelatedTransactionDTO.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/service/DocumentAggregationService.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/dto/document/DocumentLineItemDTO.java
+/Users/radektuma/DEV/KIS/kis-bff-simple/src/main/java/cz/jtbank/kis/bff/KisBffApplication.java

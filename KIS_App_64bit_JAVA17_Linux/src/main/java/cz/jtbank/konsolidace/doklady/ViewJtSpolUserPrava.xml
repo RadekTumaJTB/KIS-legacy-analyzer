@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="ViewJtSpolUserPrava"
+   SelectList="VwJtSpolecnostuserpravo.ID, 
+       VwJtSpolecnostuserpravo.S_NAZEV, 
+
+       VwJtSpolecnostuserpravo.S_SOUBORPREDPONA, 
+       VwJtSpolecnostuserpravo.ID_CISSUBJECT, 
+
+       VwJtSpolecnostuserpravo.S_MENA, 
+       VwJtSpolecnostuserpravo.LASTCLOSEDATE, 
+
+       VwJtSpolecnostuserpravo.C_AUTOMATICKEGENEROVANI, 
+   
+    VwJtSpolecnostuserpravo.C_RKC, 
+       VwJtSpolecnostuserpravo.SPIN_ID, 
+
+       VwJtSpolecnostuserpravo.TOPAS_ID, 
+       VwJtSpolecnostuserpravo.QUEST_ID, 
+
+       VwJtSpolecnostuserpravo.S_DBLINK, 
+       VwJtSpolecnostuserpravo.S_ZKRATKA, 
+
+       VwJtSpolecnostuserpravo.ID_KATEGORIE, 
+       VwJtSpolecnostuserpravo.ID_KTGCISSPOLECNOSTPRAVO, 
+
+       VwJtSpolecnostuserpravo.S_USERID, 
+       VwJtSpolecnostuserpravo.ROWID, 
+
+       VwJtSpolecnostuserpravo.ID_KTGPROJEKT, 
+       VwJtSpolecnostuserpravo.ID_KTGODBOR, 
+
+       VwJtSpolecnostuserpravo.C_ONLINE, 
+       VwJtSpolecnostuserpravo.STD_UOSTART, 
+
+       VwJtSpolecnostuserpravo.STD_UOKONEC, 
+       VwJtSpolecnostuserpravo.ID_MNGSEGMENT"
+   FromList="DB_JT.VW_JT_SPOLECNOSTUSERPRAVO VwJtSpolecnostuserpravo"
+   OrderBy="VwJtSpolecnostuserpravo.S_NAZEV"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   RowClass="cz.jtbank.konsolidace.doklady.ViewJtSpolUserPravaRowImpl"
+   ComponentClass="cz.jtbank.konsolidace.doklady.ViewJtSpolUserPravaImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.doklady.common.ViewJtSpolUserPravaRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwJtSpolecnostuserpravo"
+      Entity="cz.jtbank.konsolidace.doklady.VwJtSpolecnostuserpravo" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="VwJtSpolecnostuserpravo.S_NAZEV" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsUpdateable="false"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsUpdateable="false"
+      EntityAttrName="SNazev"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SSouborpredpona"
+      IsUpdateable="false"
+      IsNotNull="true"
+      EntityAttrName="SSouborpredpona"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="S_SOUBORPREDPONA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCissubject"
+      IsUpdateable="false"
+      IsNotNull="true"
+      EntityAttrName="IdCissubject"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsUpdateable="false"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Lastclosedate"
+      IsUpdateable="false"
+      EntityAttrName="Lastclosedate"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="LASTCLOSEDATE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CAutomatickegenerovani"
+      EntityAttrName="CAutomatickegenerovani"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="C_AUTOMATICKEGENEROVANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CRkc"
+      IsUpdateable="false"
+      EntityAttrName="CRkc"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="C_RKC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SpinId"
+      IsUpdateable="false"
+      EntityAttrName="SpinId"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="SPIN_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="TopasId"
+      IsUpdateable="false"
+      EntityAttrName="TopasId"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="TOPAS_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="QuestId"
+      IsUpdateable="false"
+      EntityAttrName="QuestId"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="QUEST_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SDblink"
+      IsUpdateable="false"
+      IsNotNull="true"
+      EntityAttrName="SDblink"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="S_DBLINK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZkratka"
+      IsUpdateable="false"
+      EntityAttrName="SZkratka"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="S_ZKRATKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKategorie"
+      IsUpdateable="false"
+      IsNotNull="true"
+      EntityAttrName="IdKategorie"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="ID_KATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgcisspolecnostpravo"
+      IsUpdateable="false"
+      IsNotNull="true"
+      EntityAttrName="IdKtgcisspolecnostpravo"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="ID_KTGCISSPOLECNOSTPRAVO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUserid"
+      IsUpdateable="false"
+      IsNotNull="true"
+      EntityAttrName="SUserid"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="S_USERID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DirBilanceMan"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="VIEW_ATTR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="OwnGroupId"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="VIEW_ATTR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DirSkupiny"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="VIEW_ATTR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="FrontaClass"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="VIEW_ATTR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DirSkupinyVse"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="VIEW_ATTR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DirBilanceManVse"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="VIEW_ATTR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="COnline"
+      EntityAttrName="COnline"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="C_ONLINE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="StdUostart"
+      EntityAttrName="StdUostart"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="STD_UOSTART"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="StdUokonec"
+      EntityAttrName="StdUokonec"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="STD_UOKONEC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegment"
+      EntityAttrName="IdMngsegment"
+      EntityUsage="VwJtSpolecnostuserpravo"
+      AliasName="ID_MNGSEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwRepDocnezauctovano"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_REP_DOCNEZAUCTOVANO"
+   AliasName="VwRepDocnezauctovano"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.report.VwRepDocnezauctovanoImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Mesic"
+      Precision="7"
+      Type="java.lang.String"
+      ColumnName="MESIC"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_DOCNEZAUCTOVANO"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Zodpovednaucetni"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="ZODPOVEDNAUCETNI"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_DOCNEZAUCTOVANO"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Nezauctovanych"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NEZAUCTOVANYCH"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REP_DOCNEZAUCTOVANO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Schvalenych"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="SCHVALENYCH"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REP_DOCNEZAUCTOVANO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pomer"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="POMER"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REP_DOCNEZAUCTOVANO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwrepdocnezauctovanoPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.report.VwRepDocnezauctovano.Mesic" />
+         <Item Value="cz.jtbank.konsolidace.report.VwRepDocnezauctovano.Zodpovednaucetni" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWREPDOCNEZAUCTOVANO_PRIMARY_K" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpKtgEviadminspolecnost"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_KTG_EVIADMINSPOLECNOST"
+   AliasName="KpKtgEviadminspolecnost"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnostImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazev"
+      IsNotNull="true"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SStat"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_STAT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdExterniadmin"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_EXTERNIADMIN"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdAdministrator"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_ADMINISTRATOR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdStatus"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_STATUS"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SIco"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_ICO"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumzalozeni"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMZALOZENI"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CNavrh"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_NAVRH"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazevnavrh"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_NAZEVNAVRH"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SIconavrh"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_ICONAVRH"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdAdministratornavrh"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_ADMINISTRATORNAVRH"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTypspol"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TYPSPOL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SIcodokumenty"
+      Precision="25"
+      Type="java.lang.String"
+      ColumnName="S_ICODOKUMENTY"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_KTG_EVIADMINSPOLECNOST" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="25" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpKtgEviexterniadmin"
+      Association="cz.jtbank.konsolidace.evi.FkKtgeviadminspolExtadminAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkKtgeviadminspolExtadminAssoc.KpKtgEviexterniadmin"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkKtgeviadminspolExtadminAssoc.KpKtgEviadminspolecnost"
+      Type="cz.jtbank.konsolidace.evi.KpKtgEviexterniadminImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpCisEvistatus"
+      Association="cz.jtbank.konsolidace.evi.FkKtgeviadminspolStatusAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkKtgeviadminspolStatusAssoc.KpCisEvistatus"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkKtgeviadminspolStatusAssoc.KpKtgEviadminspolecnost"
+      Type="cz.jtbank.konsolidace.evi.KpCisEvistatusImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatEvibanky"
+      Association="cz.jtbank.konsolidace.evi.FkEvibankyAdminspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkEvibankyAdminspolAssoc.KpDatEvibanky"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkEvibankyAdminspolAssoc.KpKtgEviadminspolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatEvidoidentifikace"
+      Association="cz.jtbank.konsolidace.evi.FkEvidoidentifikaceAdminspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkEvidoidentifikaceAdminspolAssoc.KpDatEvidoidentifikace"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkEvidoidentifikaceAdminspolAssoc.KpKtgEviadminspolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatEvidokument"
+      Association="cz.jtbank.konsolidace.evi.FkEvidokumentAdminspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkEvidokumentAdminspolAssoc.KpDatEvidokument"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkEvidokumentAdminspolAssoc.KpKtgEviadminspolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatEvikomisionarskesmlouvy"
+      Association="cz.jtbank.konsolidace.evi.FkEvikomissmlouvyAdminspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkEvikomissmlouvyAdminspolAssoc.KpDatEvikomisionarskesmlouvy"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkEvikomissmlouvyAdminspolAssoc.KpKtgEviadminspolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatEvikorespondence"
+      Association="cz.jtbank.konsolidace.evi.FkEvikorespondenceAdminspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkEvikorespondenceAdminspolAssoc.KpDatEvikorespondence"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkEvikorespondenceAdminspolAssoc.KpKtgEviadminspolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatEvizplnomocneni"
+      Association="cz.jtbank.konsolidace.evi.FkEvizplnomocneniAdminspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkEvizplnomocneniAdminspolAssoc.KpDatEvizplnomocneni"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkEvizplnomocneniAdminspolAssoc.KpKtgEviadminspolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpKtgEvisidlo"
+      Association="cz.jtbank.konsolidace.evi.FkKtgevisidloAdminspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkKtgevisidloAdminspolAssoc.KpKtgEvisidlo"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkKtgevisidloAdminspolAssoc.KpKtgEviadminspolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpKtgEvistatutarnizastupce"
+      Association="cz.jtbank.konsolidace.evi.FkKtgevistatzastupAdminspolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkKtgevistatzastupAdminspolAssoc.KpKtgEvistatutarnizastupce"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkKtgevistatzastupAdminspolAssoc.KpKtgEviadminspolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpDatEviadmindodavatel"
+      Association="cz.jtbank.konsolidace.evi.FkEviadminspolSpolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.evi.FkEviadminspolSpolAssoc.KpDatEviadmindodavatel"
+      AssociationOtherEnd="cz.jtbank.konsolidace.evi.FkEviadminspolSpolAssoc.KpKtgEviadminspolecnost"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKtgeviadminspolId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnost.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KTGEVIADMINSPOL_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKtgeviadminspolNazev" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnost.SNazev" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KTGEVIADMINSPOL_NAZEV" />
+         <Attr Name="_checkCondition" Value="&#34;S_NAZEV&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKtgeviadminspolStatus" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnost.IdStatus" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KTGEVIADMINSPOL_STATUS" />
+         <Attr Name="_checkCondition" Value="&#34;ID_STATUS&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKtgeviadminspol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnost.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KTGEVIADMINSPOL" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKtgeviadminspolStat" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnost.SStat" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KTGEVIADMINSPOL_STAT" />
+         <Attr Name="_referencedKey" Value="PK_CISSTAT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKtgeviadminspolExtadmin" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnost.IdExterniadmin" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KTGEVIADMINSPOL_EXTADMIN" />
+         <Attr Name="_referencedKey" Value="PK_EVIEXTERNIADMIN" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKtgeviadminspolStatus" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnost.IdStatus" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KTGEVIADMINSPOL_STATUS" />
+         <Attr Name="_referencedKey" Value="PK_CISEVISTATUS" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKtgeviadminspolUcspol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnost.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KTGEVIADMINSPOL_UCSPOL" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

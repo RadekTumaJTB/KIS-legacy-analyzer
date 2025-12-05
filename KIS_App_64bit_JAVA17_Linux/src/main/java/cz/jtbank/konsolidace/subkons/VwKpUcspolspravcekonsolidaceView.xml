@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpUcspolspravcekonsolidaceView"
+   SelectList="VwKpUcspolspravcekonsolidace.ID_KTGUCETNISKUPINA, 
+       VwKpUcspolspravcekonsolidace.ID, 
+
+       VwKpUcspolspravcekonsolidace.S_NAZEV, 
+       VwKpUcspolspravcekonsolidace.S_ICO, 
+
+       VwKpUcspolspravcekonsolidace.SUBJECT, 
+       VwKpUcspolspravcekonsolidace.S_MENA, 
+
+       VwKpUcspolspravcekonsolidace.S_COUNTRY, 
+       VwKpUcspolspravcekonsolidace.DT_PLATNOSTOD, 
+
+       VwKpUcspolspravcekonsolidace.DT_PLATNOSTDO, 
+       VwKpUcspolspravcekonsolidace.SPRAVCEKONSOLIDACE, 
+
+       VwKpUcspolspravcekonsolidace.SK_EMAIL, 
+       VwKpUcspolspravcekonsolidace.SK_TELEFON, 
+
+       VwKpUcspolspravcekonsolidace.EXTERNIUCETNI, 
+       VwKpUcspolspravcekonsolidace.EU_EMAIL, 
+
+       VwKpUcspolspravcekonsolidace.EU_TELEFON, 
+       VwKpUcspolspravcekonsolidace.ID_CISSUBTYPCLENSTVI, 
+
+       VwKpUcspolspravcekonsolidace.ODPOVEDNA_OSOBA, 
+      
+ VwKpUcspolspravcekonsolidace.MNG_SEGMENT, 
+       VwKpUcspolspravcekonsolidace.SEF_SEGMENTU"
+   FromList="DB_JT.VW_KP_UCSPOLSPRAVCEKONSOLIDACE VwKpUcspolspravcekonsolidace"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.subkons.VwKpUcspolspravcekonsolidaceViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpUcspolspravcekonsolidace"
+      Entity="cz.jtbank.konsolidace.subkons.VwKpUcspolspravcekonsolidace" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgucetniskupina"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetniskupina"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="ID_KTGUCETNISKUPINA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      IsNotNull="true"
+      EntityAttrName="SIco"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Subject"
+      EntityAttrName="Subject"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="SUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SCountry"
+      EntityAttrName="SCountry"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="S_COUNTRY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spravcekonsolidace"
+      EntityAttrName="Spravcekonsolidace"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="SPRAVCEKONSOLIDACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SkEmail"
+      EntityAttrName="SkEmail"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="SK_EMAIL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SkTelefon"
+      EntityAttrName="SkTelefon"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="SK_TELEFON"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Externiucetni"
+      EntityAttrName="Externiucetni"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="EXTERNIUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="EuEmail"
+      EntityAttrName="EuEmail"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="EU_EMAIL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="EuTelefon"
+      EntityAttrName="EuTelefon"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="EU_TELEFON"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCissubtypclenstvi"
+      EntityAttrName="IdCissubtypclenstvi"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="ID_CISSUBTYPCLENSTVI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="OdpovednaOsoba"
+      EntityAttrName="OdpovednaOsoba"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="ODPOVEDNA_OSOBA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="MngSegment"
+      EntityAttrName="MngSegment"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="MNG_SEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SefSegmentu"
+      EntityAttrName="SefSegmentu"
+      EntityUsage="VwKpUcspolspravcekonsolidace"
+      AliasName="SEF_SEGMENTU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

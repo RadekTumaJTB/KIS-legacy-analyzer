@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpEmailParamView"
+   SelectList="KpEmailParam.ID, 
+       KpEmailParam.S_POPIS, 
+       KpEmailParam.C_POVOLENO, 
+       KpEmailParam.NL_POCETDNI"
+   FromList="DB_JT.KP_EMAIL_PARAM KpEmailParam"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpEmailParamViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpEmailParam"
+      Entity="cz.jtbank.konsolidace.doklady.KpEmailParam" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpEmailParam"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpEmailParam"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPovoleno"
+      IsNotNull="true"
+      EntityAttrName="CPovoleno"
+      EntityUsage="KpEmailParam"
+      AliasName="C_POVOLENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlPocetdni"
+      EntityAttrName="NlPocetdni"
+      EntityUsage="KpEmailParam"
+      AliasName="NL_POCETDNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

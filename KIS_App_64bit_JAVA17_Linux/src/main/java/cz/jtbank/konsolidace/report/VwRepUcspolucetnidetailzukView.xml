@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepUcspolucetnidetailzukView"
+   SelectList="VwRepUcspolucetnidetailzuk.ZODPOVEDNAUCETNI, 
+       VwRepUcspolucetnidetailzuk.SPOLECNOST, 
+
+       VwRepUcspolucetnidetailzuk.HLASKA, 
+       VwRepUcspolucetnidetailzuk.ID_DOKLAD, 
+
+       VwRepUcspolucetnidetailzuk.DATUM, 
+       VwRepUcspolucetnidetailzuk.ID_KTGUCETNISPOLECNOST"
+   FromList="DB_JT.VW_REP_UCSPOLUCETNIDETAILZUK VwRepUcspolucetnidetailzuk"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepUcspolucetnidetailzukViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepUcspolucetnidetailzuk"
+      Entity="cz.jtbank.konsolidace.report.VwRepUcspolucetnidetailzuk" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Zodpovednaucetni"
+      EntityAttrName="Zodpovednaucetni"
+      EntityUsage="VwRepUcspolucetnidetailzuk"
+      AliasName="ZODPOVEDNAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwRepUcspolucetnidetailzuk"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Hlaska"
+      EntityAttrName="Hlaska"
+      EntityUsage="VwRepUcspolucetnidetailzuk"
+      AliasName="HLASKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwRepUcspolucetnidetailzuk"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datum"
+      EntityAttrName="Datum"
+      EntityUsage="VwRepUcspolucetnidetailzuk"
+      AliasName="DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwRepUcspolucetnidetailzuk"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

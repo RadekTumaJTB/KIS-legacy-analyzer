@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="KapitalModule"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KapitalModuleImpl"
+   ComponentInterface="cz.jtbank.konsolidace.kapital.common.KapitalModule" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="KpKtgTypnastrojeView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpKtgTypnastrojeView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgTypoperaceView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpKtgTypoperaceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDefListbunkanastrojView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpDefListbunkanastrojView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDefUcetportfolioView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpDefUcetportfolioView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisZisksrskupinaView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpCisZisksrskupinaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgZisksrView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpKtgZisksrView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisIndustrytypeView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpCisIndustrytypeView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisKategorieprotistranView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistranView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisUceluveruView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpCisUceluveruView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisCpindexView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpCisCpindexView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisTypzajisteniView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpCisTypzajisteniView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgSpolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisExterniratingView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpCisExterniratingView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelSpolecnostexterniratingView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpRelSpolecnostexterniratingView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgCennypapirView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KtgCennypapirView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelCennypapirindexView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpRelCennypapirindexView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDefNastrojoperaceView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpDefNastrojoperaceView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpTmpCissubjectView1"
+      ViewObjectName="cz.jtbank.konsolidace.mustky.KpTmpCissubjectView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisBusinesslinieView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpCisBusinesslinieView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDefUcetbusinesslinieView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpDefUcetbusinesslinieView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="TestOperacnirizikoView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.TestOperacnirizikoView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDefVyjimkaucetproduktView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpDefVyjimkaucetproduktView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatOperacnirizikoView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpDatOperacnirizikoView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDatOperacnirizikodetailView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpDatOperacnirizikodetailView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpDefKapitalovkaduplicityView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.KpDefKapitalovkaduplicityView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwKpKpduplicitydetailView1"
+      ViewObjectName="cz.jtbank.konsolidace.kapital.VwKpKpduplicitydetailView" >
+   </ViewUsage>
+</AppModule>

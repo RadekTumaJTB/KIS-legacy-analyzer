@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKtgOdborView"
+   SelectList="VwKtgOdbor.ID, 
+       VwKtgOdbor.ID_KTGUCETNISPOLECNOST, 
+  
+     VwKtgOdbor.S_NAZEV, 
+       VwKtgOdbor.S_KOD, 
+       VwKtgOdbor.ID_ODPOVEDNAOSOBA, 
+
+       VwKtgOdbor.DT_PLATNOSTOD, 
+       VwKtgOdbor.DT_PLATNOSTDO, 
+
+       VwKtgOdbor.ID_USEK, 
+       VwKtgOdbor.SPOLECNOST, 
+ 
+      VwKtgOdbor.ODPOVEDNAOSOBA, 
+       VwKtgOdbor.USEK, 
+  
+     VwKtgOdbor.ND_DOCUROVEN1, 
+       VwKtgOdbor.ND_DOCUROVEN2, 
+
+       VwKtgOdbor.ID_TOPMNG, 
+       VwKtgOdbor.C_BUDGETING, 
+
+       VwKtgOdbor.C_ARCHIVNI, 
+       VwKtgOdbor.ID_SPONZOR, 
+
+       VwKtgOdbor.SPONZOR, 
+       VwKtgOdbor.ID_MNGSEGMENT, 
+
+       VwKtgOdbor.MNGSEGMENT"
+   FromList="DB_JT.VW_KTG_ODBOR VwKtgOdbor"
+   OrderBy="SPOLECNOST,S_KOD"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.VwKtgOdborViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKtgOdbor"
+      Entity="cz.jtbank.konsolidace.dokument.VwKtgOdbor" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="SPOLECNOST,S_KOD" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKtgOdbor"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwKtgOdbor"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwKtgOdbor"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKod"
+      EntityAttrName="SKod"
+      EntityUsage="VwKtgOdbor"
+      AliasName="S_KOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdpovednaosoba"
+      EntityAttrName="IdOdpovednaosoba"
+      EntityUsage="VwKtgOdbor"
+      AliasName="ID_ODPOVEDNAOSOBA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwKtgOdbor"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwKtgOdbor"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUsek"
+      EntityAttrName="IdUsek"
+      EntityUsage="VwKtgOdbor"
+      AliasName="ID_USEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwKtgOdbor"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odpovednaosoba"
+      EntityAttrName="Odpovednaosoba"
+      EntityUsage="VwKtgOdbor"
+      AliasName="ODPOVEDNAOSOBA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Usek"
+      EntityAttrName="Usek"
+      EntityUsage="VwKtgOdbor"
+      AliasName="USEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdDocuroven1"
+      EntityAttrName="NdDocuroven1"
+      EntityUsage="VwKtgOdbor"
+      AliasName="ND_DOCUROVEN1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdDocuroven2"
+      EntityAttrName="NdDocuroven2"
+      EntityUsage="VwKtgOdbor"
+      AliasName="ND_DOCUROVEN2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTopmng"
+      EntityAttrName="IdTopmng"
+      EntityUsage="VwKtgOdbor"
+      AliasName="ID_TOPMNG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CBudgeting"
+      EntityAttrName="CBudgeting"
+      EntityUsage="VwKtgOdbor"
+      AliasName="C_BUDGETING"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CArchivni"
+      EntityAttrName="CArchivni"
+      EntityUsage="VwKtgOdbor"
+      AliasName="C_ARCHIVNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSponzor"
+      EntityAttrName="IdSponzor"
+      EntityUsage="VwKtgOdbor"
+      AliasName="ID_SPONZOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Sponzor"
+      EntityAttrName="Sponzor"
+      EntityUsage="VwKtgOdbor"
+      AliasName="SPONZOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegment"
+      EntityAttrName="IdMngsegment"
+      EntityUsage="VwKtgOdbor"
+      AliasName="ID_MNGSEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mngsegment"
+      EntityAttrName="Mngsegment"
+      EntityUsage="VwKtgOdbor"
+      AliasName="MNGSEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

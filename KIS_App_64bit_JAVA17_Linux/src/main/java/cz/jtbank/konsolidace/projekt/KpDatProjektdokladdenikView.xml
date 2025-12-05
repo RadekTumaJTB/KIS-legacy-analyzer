@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatProjektdokladdenikView"
+   SelectList="KpDatProjektdokladdenik.ID_PROJEKTDOKLAD, 
+       KpDatProjektdokladdenik.DT_DATUMZMENY, 
+       KpDatProjektdokladdenik.C_KOD, 
+       KpDatProjektdokladdenik.S_TEXT, 
+       KpDatProjektdokladdenik.ROWID"
+   FromList="DB_JT.KP_DAT_PROJEKTDOKLADDENIK KpDatProjektdokladdenik"
+   OrderBy="ROWNUM"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.KpDatProjektdokladdenikViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatProjektdokladdenik"
+      Entity="cz.jtbank.konsolidace.projekt.KpDatProjektdokladdenik" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="ROWNUM" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdProjektdoklad"
+      IsNotNull="true"
+      EntityAttrName="IdProjektdoklad"
+      EntityUsage="KpDatProjektdokladdenik"
+      AliasName="ID_PROJEKTDOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzmeny"
+      EntityAttrName="DtDatumzmeny"
+      EntityUsage="KpDatProjektdokladdenik"
+      AliasName="DT_DATUMZMENY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CKod"
+      IsNotNull="true"
+      EntityAttrName="CKod"
+      EntityUsage="KpDatProjektdokladdenik"
+      AliasName="C_KOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SText"
+      EntityAttrName="SText"
+      EntityUsage="KpDatProjektdokladdenik"
+      AliasName="S_TEXT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="KpDatProjektdokladdenik"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

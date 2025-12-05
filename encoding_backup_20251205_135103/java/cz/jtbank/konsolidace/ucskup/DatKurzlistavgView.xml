@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="DatKurzlistavgView"
+   SelectList="DatKurzlistavg.DT_DATUM, 
+       DatKurzlistavg.ID_CISBANKA, 
+       DatKurzlistavg.ID_CISMENA, 
+       DatKurzlistavg.ND_KURZ, 
+       DatKurzlistavg.NL_KVANTITA"
+   FromList="DB_JT.DAT_KURZLISTAVG DatKurzlistavg"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.DatKurzlistavgViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="DatKurzlistavg"
+      Entity="cz.jtbank.konsolidace.ucskup.DatKurzlistavg" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="DatKurzlistavg"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisbanka"
+      IsNotNull="true"
+      EntityAttrName="IdCisbanka"
+      EntityUsage="DatKurzlistavg"
+      AliasName="ID_CISBANKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCismena"
+      IsNotNull="true"
+      EntityAttrName="IdCismena"
+      EntityUsage="DatKurzlistavg"
+      AliasName="ID_CISMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdKurz"
+      EntityAttrName="NdKurz"
+      EntityUsage="DatKurzlistavg"
+      AliasName="ND_KURZ"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlKvantita"
+      EntityAttrName="NlKvantita"
+      EntityUsage="DatKurzlistavg"
+      AliasName="NL_KVANTITA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

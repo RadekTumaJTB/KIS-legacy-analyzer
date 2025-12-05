@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpTmpSubvazbyvyjimky"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_TMP_SUBVAZBYVYJIMKY"
+   AliasName="KpTmpSubvazbyvyjimky"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimkyImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdKtgsubkonsolidace"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGSUBKONSOLIDACE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_TMP_SUBVAZBYVYJIMKY"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatum"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUM"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_TMP_SUBVAZBYVYJIMKY"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost1"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST_1"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_TMP_SUBVAZBYVYJIMKY"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost2"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST_2"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_TMP_SUBVAZBYVYJIMKY"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="NnKpsubvazbyvyjimkySpol1" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky.IdKtgucetnispolecnost1" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBVAZBYVYJIMKY_SPOL1" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGUCETNISPOLECNOST_1&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpsubvazbyvyjimkySubkon" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky.IdKtgsubkonsolidace" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBVAZBYVYJIMKY_SUBKON" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGSUBKONSOLIDACE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpsubvazbyvyjimkyDatum" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky.DtDatum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBVAZBYVYJIMKY_DATUM" />
+         <Attr Name="_checkCondition" Value="&#34;DT_DATUM&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKptmpsubvazbyvyjimky" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky.IdKtgsubkonsolidace" />
+         <Item Value="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky.DtDatum" />
+         <Item Value="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky.IdKtgucetnispolecnost1" />
+         <Item Value="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky.IdKtgucetnispolecnost2" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPTMPSUBVAZBYVYJIMKY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpsubvazbyvyjimkySpol2" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky.IdKtgucetnispolecnost2" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPSUBVAZBYVYJIMKY_SPOL2" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGUCETNISPOLECNOST_2&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpsubvazbyvyjimkySpol2" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky.IdKtgucetnispolecnost2" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPSUBVAZBYVYJIMKY_SPOL2" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpsubvazbyvyjimkySpol1" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky.IdKtgucetnispolecnost1" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPSUBVAZBYVYJIMKY_SPOL1" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpsubvazbyvyjimkySubkon" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky.IdKtgsubkonsolidace" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPSUBVAZBYVYJIMKY_SUBKON" />
+         <Attr Name="_referencedKey" Value="PK_KPSUBKONSOLIDACE" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

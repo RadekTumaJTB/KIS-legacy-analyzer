@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+
+<Association
+   Name="FkKpucspolecnostLocaleAssoc" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+   </DesignTime>
+   <AssociationEnd
+      Name="CisLocale"
+      Cardinality="1"
+      Source="true"
+      Owner="cz.jtbank.konsolidace.doklady.CisLocale" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.CisLocale.SLocale" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_minCardinality" Value="1" />
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="CisLocale" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.doklady.CisLocale.PkCislocale" />
+      </DesignTime>
+   </AssociationEnd>
+   <AssociationEnd
+      Name="KpKtgUcetnispolecnost"
+      Cardinality="-1"
+      Owner="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.SLocale" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="KpKtgUcetnispolecnost" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.FkKpucspolecnostLocale" />
+      </DesignTime>
+   </AssociationEnd>
+</Association>

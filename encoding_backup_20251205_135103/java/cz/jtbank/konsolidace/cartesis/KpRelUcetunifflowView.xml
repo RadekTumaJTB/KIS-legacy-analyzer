@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelUcetunifflowView"
+   SelectList="KpRelUcetunifflow.ID_CISUCETUNIF, 
+       KpRelUcetunifflow.ID_CISFLOW"
+   FromList="DB_JT.KP_REL_UCETUNIFFLOW KpRelUcetunifflow"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflowViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelUcetunifflow"
+      Entity="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflow" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdCisucetunif"
+      IsNotNull="true"
+      EntityAttrName="IdCisucetunif"
+      EntityUsage="KpRelUcetunifflow"
+      AliasName="ID_CISUCETUNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisflow"
+      IsNotNull="true"
+      EntityAttrName="IdCisflow"
+      EntityUsage="KpRelUcetunifflow"
+      AliasName="ID_CISFLOW"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

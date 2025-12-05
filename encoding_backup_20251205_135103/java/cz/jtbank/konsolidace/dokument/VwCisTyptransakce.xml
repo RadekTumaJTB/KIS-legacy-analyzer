@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwCisTyptransakce"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_CIS_TYPTRANSAKCE"
+   AliasName="VwCisTyptransakce"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.dokument.VwCisTyptransakceImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="60"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="60" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SKod"
+      Precision="15"
+      Type="java.lang.String"
+      ColumnName="S_KOD"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="15" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdGestorCz"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_GESTOR_CZ"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdGestorSk"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_GESTOR_SK"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdGestorZ"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_GESTOR_Z"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTyptransakcegroup"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TYPTRANSAKCEGROUP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CProzastupce"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_PROZASTUPCE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdBudgetnavyseniGestor"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_BUDGETNAVYSENI_GESTOR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CDeveloper"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_DEVELOPER"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SKomentar"
+      Precision="2000"
+      Type="java.lang.String"
+      ColumnName="S_KOMENTAR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="2000" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CSpecial"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_SPECIAL"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CPodvojnemis"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_PODVOJNEMIS"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdUrovenprojekt"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_UROVENPROJEKT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdUrovenspolecnost"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_UROVENSPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdUroventop"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_UROVENTOP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMenaup"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENAUP"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMenaus"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENAUS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMenaut"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENAUT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CTiskmajetek"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_TISKMAJETEK"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CBudgetovat"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_BUDGETOVAT"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CCapexOpex"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_CAPEX_OPEX"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CIS_TYPTRANSAKCE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwcistyptransakcePrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.VwCisTyptransakce.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWCISTYPTRANSAKCE_PRIMARY_KEY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

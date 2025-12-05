@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDefQuestorvazbaproductView"
+   SelectList="KpDefQuestorvazbaproduct.ID, 
+       KpDefQuestorvazbaproduct.ID_KTGUCETNISPOLECNOST, 
+       KpDefQuestorvazbaproduct.S_PRODUCT_1, 
+       KpDefQuestorvazbaproduct.S_PRODUCT_2"
+   FromList="DB_JT.KP_DEF_QUESTORVAZBAPRODUCT KpDefQuestorvazbaproduct"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproductViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDefQuestorvazbaproduct"
+      Entity="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproduct" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsUnique="true"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDefQuestorvazbaproduct"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDefQuestorvazbaproduct"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SProduct1"
+      IsNotNull="true"
+      EntityAttrName="SProduct1"
+      EntityUsage="KpDefQuestorvazbaproduct"
+      AliasName="S_PRODUCT_1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SProduct2"
+      IsNotNull="true"
+      EntityAttrName="SProduct2"
+      EntityUsage="KpDefQuestorvazbaproduct"
+      AliasName="S_PRODUCT_2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

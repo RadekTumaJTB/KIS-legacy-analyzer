@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisBusinesslinieView"
+   SelectList="KpCisBusinesslinie.ID, 
+       KpCisBusinesslinie.S_KOD, 
+       KpCisBusinesslinie.S_POPIS, 
+       KpCisBusinesslinie.ND_BETA"
+   FromList="DB_JT.KP_CIS_BUSINESSLINIE KpCisBusinesslinie"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KpCisBusinesslinieViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisBusinesslinie"
+      Entity="cz.jtbank.konsolidace.kapital.KpCisBusinesslinie" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisBusinesslinie"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKod"
+      IsNotNull="true"
+      EntityAttrName="SKod"
+      EntityUsage="KpCisBusinesslinie"
+      AliasName="S_KOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisBusinesslinie"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdBeta"
+      IsNotNull="true"
+      EntityAttrName="NdBeta"
+      EntityUsage="KpCisBusinesslinie"
+      AliasName="ND_BETA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

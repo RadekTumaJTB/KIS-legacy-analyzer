@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="budget"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.budget" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="KpDefBudgetmustek"
+      FullName="cz.jtbank.konsolidace.budget.KpDefBudgetmustek"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDefBudgetmustekView"
+      FullName="cz.jtbank.konsolidace.budget.KpDefBudgetmustekView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="BudgetModule"
+      FullName="cz.jtbank.konsolidace.budget.BudgetModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="KpCisSubject"
+      FullName="cz.jtbank.konsolidace.budget.KpCisSubject"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetpolozka"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetpolozka"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetpolozkaView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudget"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudget"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgettransakce"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgettransakce"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgettransakceView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgettransakceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetpolozkadata1"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata1"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetpolozkadata1View"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata1View"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetpolozkadata2"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata2"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetpolozkadata2View"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata2View"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgettransakcedoc"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgettransakcedoc"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgettransakcedocView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgettransakcedocView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisTyptransakcegroup"
+      FullName="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroup"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisTyptransakcegroupView"
+      FullName="cz.jtbank.konsolidace.budget.KpCisTyptransakcegroupView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatBudgetzastup"
+      FullName="cz.jtbank.konsolidace.budget.KpDatBudgetzastup"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatBudgetzastupView"
+      FullName="cz.jtbank.konsolidace.budget.KpDatBudgetzastupView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisTyptransakceExcelView"
+      FullName="cz.jtbank.konsolidace.budget.KpCisTyptransakceExcelView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetpolozkadata1PARView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata1PARView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetpolozkadata2PARView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata2PARView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetprojekt"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetprojekt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetprojektView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetprojektView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetProjektpolozkadata1PARView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetProjektpolozkadata1PARView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetProjektpolozkadata2PARView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetProjektpolozkadata2PARView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetprojekttransakce"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetprojekttransakce"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetprojekttransakceView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetprojekttransakceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetprojtransakcedoc"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetprojtransakcedoc"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetprojtransakcedocView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetprojtransakcedocView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpLogBudgetnavyseni"
+      FullName="cz.jtbank.konsolidace.budget.KpLogBudgetnavyseni"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpLogBudgetnavyseniView"
+      FullName="cz.jtbank.konsolidace.budget.KpLogBudgetnavyseniView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="NastaveniUrovniSchvalovaniView"
+      FullName="cz.jtbank.konsolidace.budget.NastaveniUrovniSchvalovaniView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetschvalovani"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetschvalovani"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatBudgetschvalovaniView"
+      FullName="cz.jtbank.konsolidace.budget.VwDatBudgetschvalovaniView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="WvDatBudgetpolozkadata2XPARView"
+      FullName="cz.jtbank.konsolidace.budget.WvDatBudgetpolozkadata2XPARView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisTypTranCapexOpex"
+      FullName="cz.jtbank.konsolidace.budget.KpCisTypTranCapexOpex"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisTypTranCapexOpexView"
+      FullName="cz.jtbank.konsolidace.budget.KpCisTypTranCapexOpexView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

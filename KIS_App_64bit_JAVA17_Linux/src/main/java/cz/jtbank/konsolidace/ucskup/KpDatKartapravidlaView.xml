@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatKartapravidlaView"
+   SelectList="KpDatKartapravidla.ID, 
+       KpDatKartapravidla.ID_KARTATYP, 
+       KpDatKartapravidla.S_TEXT, 
+       KpDatKartapravidla.DT_PLATNOSTOD, 
+       KpDatKartapravidla.DT_PLATNOSTDO"
+   FromList="DB_JT.KP_DAT_KARTAPRAVIDLA KpDatKartapravidla"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.KpDatKartapravidlaViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatKartapravidla"
+      Entity="cz.jtbank.konsolidace.ucskup.KpDatKartapravidla" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatKartapravidla"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKartatyp"
+      IsNotNull="true"
+      EntityAttrName="IdKartatyp"
+      EntityUsage="KpDatKartapravidla"
+      AliasName="ID_KARTATYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SText"
+      EntityAttrName="SText"
+      EntityUsage="KpDatKartapravidla"
+      AliasName="S_TEXT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDatKartapravidla"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDatKartapravidla"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

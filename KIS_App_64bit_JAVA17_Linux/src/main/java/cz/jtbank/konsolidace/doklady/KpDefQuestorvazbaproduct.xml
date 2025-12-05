@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDefQuestorvazbaproduct"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DEF_QUESTORVAZBAPRODUCT"
+   AliasName="KpDefQuestorvazbaproduct"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproductImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsUnique="true"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_QUESTORVAZBAPRODUCT" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_QUESTORVAZBAPRODUCT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SProduct1"
+      IsNotNull="true"
+      Precision="11"
+      Type="java.lang.String"
+      ColumnName="S_PRODUCT_1"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DEF_QUESTORVAZBAPRODUCT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="11" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SProduct2"
+      IsNotNull="true"
+      Precision="11"
+      Type="java.lang.String"
+      ColumnName="S_PRODUCT_2"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DEF_QUESTORVAZBAPRODUCT"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="11" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="NnKpdefquesvazbaprodP1" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproduct.SProduct1" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFQUESVAZBAPROD_P1" />
+         <Attr Name="_checkCondition" Value="&#34;S_PRODUCT_1&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefquesvazbaprodUs" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproduct.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFQUESVAZBAPROD_US" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGUCETNISPOLECNOST&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="UiKpdefquesvazbaprod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproduct.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="UI_KPDEFQUESVAZBAPROD" />
+         <Attr Name="_isUnique" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefquesvazbaprodP2" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproduct.SProduct2" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFQUESVAZBAPROD_P2" />
+         <Attr Name="_checkCondition" Value="&#34;S_PRODUCT_2&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefquesvazbaprodId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproduct.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFQUESVAZBAPROD_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpDefQuestorvazbaproduct" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproduct.IdKtgucetnispolecnost" />
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproduct.SProduct1" />
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDefQuestorvazbaproduct.SProduct2" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KP_DEF_QUESTORVAZBAPRODUCT" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

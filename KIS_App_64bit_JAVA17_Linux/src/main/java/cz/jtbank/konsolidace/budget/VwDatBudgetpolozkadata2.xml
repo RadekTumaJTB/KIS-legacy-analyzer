@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwDatBudgetpolozkadata2"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_DAT_BUDGETPOLOZKADATA2"
+   AliasName="VwDatBudgetpolozkadata2"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata2Impl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="NdCastkalocalSch"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKALOCAL_SCH"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKADATA2" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMenaSch"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA_SCH"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKADATA2" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdBudget"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_BUDGET"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKADATA2"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCistyptran"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISTYPTRAN"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_DAT_BUDGETPOLOZKADATA2"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="Vwdatbudgetpolozkadata2PrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata2.IdBudget" />
+         <Item Value="cz.jtbank.konsolidace.budget.VwDatBudgetpolozkadata2.IdCistyptran" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWDATBUDGETPOLOZKADATA2PRIMARY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

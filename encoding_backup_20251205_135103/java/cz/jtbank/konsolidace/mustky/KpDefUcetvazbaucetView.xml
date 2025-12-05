@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDefUcetvazbaucetView"
+   SelectList="KpDefUcetvazbaucet.ID, 
+       KpDefUcetvazbaucet.ID_KTGDOKLAD, 
+
+       KpDefUcetvazbaucet.S_UCET_1, 
+       KpDefUcetvazbaucet.S_UCET_2, 
+
+       KpDefUcetvazbaucet.DT_PLATNOSTOD, 
+       KpDefUcetvazbaucet.DT_PLATNOSTDO, 
+
+       KpDefUcetvazbaucet.S_POPIS, 
+       KpDefUcetvazbaucet.S_UZIVATEL, 
+
+       KpDefUcetvazbaucet.DT_ZMENA, 
+       KpDefUcetvazbaucet.ID_TYP"
+   FromList="DB_JT.KP_DEF_UCETVAZBAUCET KpDefUcetvazbaucet"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucetViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDefUcetvazbaucet"
+      Entity="cz.jtbank.konsolidace.mustky.KpDefUcetvazbaucet" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDefUcetvazbaucet"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgdoklad"
+      IsNotNull="true"
+      EntityAttrName="IdKtgdoklad"
+      EntityUsage="KpDefUcetvazbaucet"
+      AliasName="ID_KTGDOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet1"
+      IsNotNull="true"
+      EntityAttrName="SUcet1"
+      EntityUsage="KpDefUcetvazbaucet"
+      AliasName="S_UCET_1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet2"
+      IsNotNull="true"
+      EntityAttrName="SUcet2"
+      EntityUsage="KpDefUcetvazbaucet"
+      AliasName="S_UCET_2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDefUcetvazbaucet"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDefUcetvazbaucet"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpDefUcetvazbaucet"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpDefUcetvazbaucet"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZmena"
+      EntityAttrName="DtZmena"
+      EntityUsage="KpDefUcetvazbaucet"
+      AliasName="DT_ZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyp"
+      EntityAttrName="IdTyp"
+      EntityUsage="KpDefUcetvazbaucet"
+      AliasName="ID_TYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

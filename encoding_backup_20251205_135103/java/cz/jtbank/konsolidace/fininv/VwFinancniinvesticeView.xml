@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwFinancniinvesticeView"
+   SelectList="VwFinancniinvestice.ID, 
+       VwFinancniinvestice.ID_KTGSPOLECNOST, 
+
+       VwFinancniinvestice.S_MENA, 
+       VwFinancniinvestice.DT_ZMENA, 
+
+       VwFinancniinvestice.S_UZIVATEL, 
+       VwFinancniinvestice.S_ICO, 
+
+       VwFinancniinvestice.S_NAZEV, 
+       VwFinancniinvestice.ROWID, 
+
+       VwFinancniinvestice.S_ISIN"
+   FromList="DB_JT.VW_FINANCNIINVESTICE VwFinancniinvestice"
+   OrderBy="S_NAZEV, S_MENA"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.fininv.VwFinancniinvesticeViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.fininv.common.VwFinancniinvesticeViewRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwFinancniinvestice"
+      Entity="cz.jtbank.konsolidace.fininv.VwFinancniinvestice" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="S_NAZEV, S_MENA" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwFinancniinvestice"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="VwFinancniinvestice"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwFinancniinvestice"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZmena"
+      IsNotNull="true"
+      EntityAttrName="DtZmena"
+      EntityUsage="VwFinancniinvestice"
+      AliasName="DT_ZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      EntityAttrName="SUzivatel"
+      EntityUsage="VwFinancniinvestice"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      IsNotNull="true"
+      EntityAttrName="SIco"
+      EntityUsage="VwFinancniinvestice"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="VwFinancniinvestice"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="VwFinancniinvestice"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIsin"
+      EntityAttrName="SIsin"
+      EntityUsage="VwFinancniinvestice"
+      AliasName="S_ISIN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

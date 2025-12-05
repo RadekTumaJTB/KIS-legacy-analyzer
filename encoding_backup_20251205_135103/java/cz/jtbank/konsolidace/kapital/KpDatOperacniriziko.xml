@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatOperacniriziko"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_OPERACNIRIZIKO"
+   AliasName="KpDatOperacniriziko"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.kapital.KpDatOperacnirizikoImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_OPERACNIRIZIKO"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_OPERACNIRIZIKO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumod"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_OPERACNIRIZIKO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumdo"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_OPERACNIRIZIKO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpDatOperacnirizikodetail"
+      Association="cz.jtbank.konsolidace.kapital.FkKpoperacnirizikodRizikoAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.kapital.FkKpoperacnirizikodRizikoAssoc.KpDatOperacnirizikodetail"
+      AssociationOtherEnd="cz.jtbank.konsolidace.kapital.FkKpoperacnirizikodRizikoAssoc.KpDatOperacniriziko"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpoperacnirizikoDatumod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpDatOperacniriziko.DtDatumod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPOPERACNIRIZIKO_DATUMOD" />
+         <Attr Name="_checkCondition" Value="&#34;DT_DATUMOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpoperacniriziko" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpDatOperacniriziko.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPOPERACNIRIZIKO" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpoperacnirizikoId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpDatOperacniriziko.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPOPERACNIRIZIKO_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpoperacnirizikoDatumdo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpDatOperacniriziko.DtDatumdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPOPERACNIRIZIKO_DATUMDO" />
+         <Attr Name="_checkCondition" Value="&#34;DT_DATUMDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpoperacnirizikoSpolecnost" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpDatOperacniriziko.IdKtgucetnispolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPOPERACNIRIZIKO_SPOLECNOST" />
+         <Attr Name="_referencedKey" Value="PK_KPUCSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

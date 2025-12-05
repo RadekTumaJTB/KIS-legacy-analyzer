@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="subkons"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.subkons" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="VwKpSubkonsolidace"
+      FullName="cz.jtbank.konsolidace.subkons.VwKpSubkonsolidace"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpSubkonsolidaceView"
+      FullName="cz.jtbank.konsolidace.subkons.VwKpSubkonsolidaceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelSubkonsolidaceclen"
+      FullName="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelSubkonsolidaceclenView"
+      FullName="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclenView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="SubkonsModule"
+      FullName="cz.jtbank.konsolidace.subkons.SubkonsModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="KpKtgSubkonsolidaceetapa"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidaceetapa"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgSubkonsolidaceetapaView"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidaceetapaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgSubkonsolidacepravidlo"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidacepravidlo"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgSubkonsolidacepravidloView"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolidacepravidloView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgSubkonsolpravidlodetail"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgSubkonsolpravidlodetailView"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgSubkonsolpravidlodetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkKpsubkonpravdetailPravidloAssoc"
+      FullName="cz.jtbank.konsolidace.subkons.FkKpsubkonpravdetailPravidloAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpCisSubtypclenstvi"
+      FullName="cz.jtbank.konsolidace.subkons.KpCisSubtypclenstvi"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisSubtypclenstviView"
+      FullName="cz.jtbank.konsolidace.subkons.KpCisSubtypclenstviView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkKprelsubkonclenTypclenstviAssoc"
+      FullName="cz.jtbank.konsolidace.subkons.FkKprelsubkonclenTypclenstviAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpRelSubkonsolidaceclenSpecial"
+      FullName="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclenSpecial"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDokladvazbySpecialView"
+      FullName="cz.jtbank.konsolidace.subkons.KpDatDokladvazbySpecialView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpDokladvazbyView"
+      FullName="cz.jtbank.konsolidace.subkons.VwKpDokladvazbyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpLogSubkonsolidace"
+      FullName="cz.jtbank.konsolidace.subkons.KpLogSubkonsolidace"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpLogSubkonsolidaceView"
+      FullName="cz.jtbank.konsolidace.subkons.KpLogSubkonsolidaceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpLogSubkonsolidaceclen"
+      FullName="cz.jtbank.konsolidace.subkons.KpLogSubkonsolidaceclen"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpLogSubkonsolidaceclenView"
+      FullName="cz.jtbank.konsolidace.subkons.KpLogSubkonsolidaceclenView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpUcspolskupinaporovnani"
+      FullName="cz.jtbank.konsolidace.subkons.VwKpUcspolskupinaporovnani"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpUcspolskupinaporovnaniView"
+      FullName="cz.jtbank.konsolidace.subkons.VwKpUcspolskupinaporovnaniView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpUcspolskupinadata"
+      FullName="cz.jtbank.konsolidace.subkons.VwKpUcspolskupinadata"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpUcspolskupinadataView"
+      FullName="cz.jtbank.konsolidace.subkons.VwKpUcspolskupinadataView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpTmpSubvazbyvyjimky"
+      FullName="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimky"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpTmpSubvazbyvyjimkyView"
+      FullName="cz.jtbank.konsolidace.subkons.KpTmpSubvazbyvyjimkyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpUcspolspravcekonsolidace"
+      FullName="cz.jtbank.konsolidace.subkons.VwKpUcspolspravcekonsolidace"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisTypsubetapa"
+      FullName="cz.jtbank.konsolidace.subkons.KpCisTypsubetapa"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisTypsubetapaView"
+      FullName="cz.jtbank.konsolidace.subkons.KpCisTypsubetapaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgTypsubetapa"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgTypsubetapa"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgTypsubetapaView"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgTypsubetapaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgTypsubpravidlo"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgTypsubpravidlo"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgTypsubpravidloView"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgTypsubpravidloView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgTypsubpravidlodetail"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgTypsubpravidlodetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgTypsubpravidlodetailView"
+      FullName="cz.jtbank.konsolidace.subkons.KpKtgTypsubpravidlodetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkTypsubpravdetailPravidloAssoc"
+      FullName="cz.jtbank.konsolidace.subkons.FkTypsubpravdetailPravidloAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpRelSubkonsolidaceclenRp"
+      FullName="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclenRp"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelSubkonsolidaceclenRpView"
+      FullName="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclenRpView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatSpolecnostlist"
+      FullName="cz.jtbank.konsolidace.subkons.KpDatSpolecnostlist"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatSpolecnostlistView"
+      FullName="cz.jtbank.konsolidace.subkons.KpDatSpolecnostlistView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatSpolecnostlistdetail"
+      FullName="cz.jtbank.konsolidace.subkons.KpDatSpolecnostlistdetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatSpolecnostlistdetailView"
+      FullName="cz.jtbank.konsolidace.subkons.KpDatSpolecnostlistdetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkSpolecnostlistdetSlistAssoc"
+      FullName="cz.jtbank.konsolidace.subkons.FkSpolecnostlistdetSlistAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="VwRelUcetniSpolecnostSkupinaView"
+      FullName="cz.jtbank.konsolidace.subkons.VwRelUcetniSpolecnostSkupinaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpUcspolspravcekonsolidaceView"
+      FullName="cz.jtbank.konsolidace.subkons.VwKpUcspolspravcekonsolidaceView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

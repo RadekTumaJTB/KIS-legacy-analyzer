@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="UsersModule"
+   ComponentClass="cz.jtbank.konsolidace.users.UsersModuleImpl"
+   ComponentInterface="cz.jtbank.konsolidace.users.common.UsersModule" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="KpRelAppuserSpolecnostpravoView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KpRelAppuserSpolecnostpravoView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ViewJtSpol1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.ViewJtSpol" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisSpolecnostpravoView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KpCisSpolecnostpravoView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgAppuserView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KtgAppuserView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetnispolecnostView1"
+      ViewObjectName="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnostView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgEmailzpravyView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KpKtgEmailzpravyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpCisEmailzpravyView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KpCisEmailzpravyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpTmpAppuserspolVyjimkyView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KpTmpAppuserspolVyjimkyView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgAppuserNadrizenaView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KtgAppuserNadrizenaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgAppuserNadrizenaView2"
+      ViewObjectName="cz.jtbank.konsolidace.users.KtgAppuserNadrizenaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgAppuserEditView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KtgAppuserEditView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpKtgUcetniskupinaView1"
+      ViewObjectName="cz.jtbank.konsolidace.ucskup.KpKtgUcetniskupinaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KpRelAppuserskupinaView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KpRelAppuserskupinaView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="KtgAppuserIExterniView1"
+      ViewObjectName="cz.jtbank.konsolidace.users.KtgAppuserIExterniView" >
+   </ViewUsage>
+</AppModule>

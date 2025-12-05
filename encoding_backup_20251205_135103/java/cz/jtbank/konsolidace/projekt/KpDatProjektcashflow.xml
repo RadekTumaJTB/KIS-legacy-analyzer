@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatProjektcashflow"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_PROJEKTCASHFLOW"
+   AliasName="KpDatProjektcashflow"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="132"
+   RowClass="cz.jtbank.konsolidace.projekt.KpDatProjektcashflowImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.projekt.common.KpDatProjektcashflowImplMsgBundle" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_PROJEKTCASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgprojekt"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGPROJEKT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_PROJEKTCASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTyp"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TYP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_PROJEKTCASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatum"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUM"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_PROJEKTCASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastka"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_PROJEKTCASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DAT_PROJEKTCASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SInout"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_INOUT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DAT_PROJEKTCASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdInouttyp"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_INOUTTYP"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_PROJEKTCASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPoznamka"
+      Precision="150"
+      Type="java.lang.String"
+      ColumnName="S_POZNAMKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DAT_PROJEKTCASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="150" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisProjektcashflowtyp"
+      Association="cz.jtbank.konsolidace.projekt.FkKpprojcfIdtypAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.projekt.FkKpprojcfIdtypAssoc.KpCisProjektcashflowtyp"
+      AssociationOtherEnd="cz.jtbank.konsolidace.projekt.FkKpprojcfIdtypAssoc.KpDatProjektcashflow"
+      Type="cz.jtbank.konsolidace.projekt.KpCisProjektcashflowtypImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpCisProjektinouttyp"
+      Association="cz.jtbank.konsolidace.projekt.FkKpprojinoutIdtypAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.projekt.FkKpprojinoutIdtypAssoc.KpCisProjektinouttyp"
+      AssociationOtherEnd="cz.jtbank.konsolidace.projekt.FkKpprojinoutIdtypAssoc.KpDatProjektcashflow"
+      Type="cz.jtbank.konsolidace.projekt.KpCisProjektinouttypImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpprojcfIdprojekt" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.IdKtgprojekt" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPPROJCF_IDPROJEKT" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGPROJEKT&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0011472" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.IdTyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0011472" />
+         <Attr Name="_checkCondition" Value="&#34;ID_TYP&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0011476" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.IdInouttyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0011476" />
+         <Attr Name="_checkCondition" Value="&#34;ID_INOUTTYP&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0011471" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.IdKtgprojekt" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0011471" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGPROJEKT&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpprojcfDatum" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.DtDatum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPPROJCF_DATUM" />
+         <Attr Name="_checkCondition" Value="&#34;DT_DATUM&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0011473" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.DtDatum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0011473" />
+         <Attr Name="_checkCondition" Value="&#34;DT_DATUM&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0011470" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0011470" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpprojcfId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPPROJCF_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpprojcfIdtyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.IdTyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPPROJCF_IDTYP" />
+         <Attr Name="_checkCondition" Value="&#34;ID_TYP&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0011474" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.SMena" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0011474" />
+         <Attr Name="_checkCondition" Value="&#34;S_MENA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpprojcf" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPPROJCF" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC0011475" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.SInout" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C0011475" />
+         <Attr Name="_checkCondition" Value="&#34;S_INOUT&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpprojcfIdtyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.IdTyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPPROJCF_IDTYP" />
+         <Attr Name="_referencedKey" Value="PK_KPPROJCFTYP" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpprojcfIdprojekt" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.IdKtgprojekt" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPPROJCF_IDPROJEKT" />
+         <Attr Name="_referencedKey" Value="PK_KPPROJEKT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpprojinoutIdtyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.IdInouttyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPPROJINOUT_IDTYP" />
+         <Attr Name="_referencedKey" Value="PK_CISPROJCFTYP" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

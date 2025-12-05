@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+
+<Association
+   Name="FkKpprojinoutIdtypAssoc" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+   </DesignTime>
+   <AssociationEnd
+      Name="KpCisProjektinouttyp"
+      Cardinality="1"
+      Source="true"
+      Owner="cz.jtbank.konsolidace.projekt.KpCisProjektinouttyp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpCisProjektinouttyp.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_minCardinality" Value="1" />
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="KpCisProjektinouttyp" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.projekt.KpCisProjektinouttyp.PkCisprojcftyp" />
+      </DesignTime>
+   </AssociationEnd>
+   <AssociationEnd
+      Name="KpDatProjektcashflow"
+      Cardinality="-1"
+      Owner="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.IdInouttyp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="KpDatProjektcashflow" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow.FkKpprojinoutIdtyp" />
+      </DesignTime>
+   </AssociationEnd>
+</Association>

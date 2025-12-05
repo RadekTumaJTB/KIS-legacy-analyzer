@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKtgUcspolpredavaniView"
+   SelectList="VwKtgUcspolpredavani.ID_KTGUCETNISPOLECNOST, 
+       VwKtgUcspolpredavani.ID_CISPRENOSPRIORITA, 
+
+       VwKtgUcspolpredavani.PRENOSPRIORITA, 
+       VwKtgUcspolpredavani.S_ACCSTATUS, 
+
+       VwKtgUcspolpredavani.S_UZAVRENEUCETNICTVI, 
+       VwKtgUcspolpredavani.DT_DATUM, 
+
+       VwKtgUcspolpredavani.DT_ODSOUHLASENOJARKA, 
+       VwKtgUcspolpredavani.ID_ODSOUHLASENOJARKA, 
+
+       VwKtgUcspolpredavani.DT_ODSOUHLASENOJANKA, 
+       VwKtgUcspolpredavani.ID_ODSOUHLASENOJANKA, 
+
+       VwKtgUcspolpredavani.DT_ODSOUHLASENOTOP, 
+       VwKtgUcspolpredavani.ID_ODSOUHLASENOTOP, 
+
+       VwKtgUcspolpredavani.ODSOUHLASENOJARKA, 
+       VwKtgUcspolpredavani.ODSOUHLASENOJANKA, 
+
+       VwKtgUcspolpredavani.ODSOUHLASENOTOP, 
+       VwKtgUcspolpredavani.SPOLECNOST, 
+
+       VwKtgUcspolpredavani.ID_CISPRENOSKATEGORIE, 
+       VwKtgUcspolpredavani.PRENOSKATEGORIE"
+   FromList="DB_JT.VW_KTG_UCSPOLPREDAVANI VwKtgUcspolpredavani"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.VwKtgUcspolpredavaniViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKtgUcspolpredavani"
+      Entity="cz.jtbank.konsolidace.ucskup.VwKtgUcspolpredavani" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisprenospriorita"
+      EntityAttrName="IdCisprenospriorita"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="ID_CISPRENOSPRIORITA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Prenospriorita"
+      EntityAttrName="Prenospriorita"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="PRENOSPRIORITA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SAccstatus"
+      EntityAttrName="SAccstatus"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="S_ACCSTATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzavreneucetnictvi"
+      EntityAttrName="SUzavreneucetnictvi"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="S_UZAVRENEUCETNICTVI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtOdsouhlasenojarka"
+      EntityAttrName="DtOdsouhlasenojarka"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="DT_ODSOUHLASENOJARKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdsouhlasenojarka"
+      EntityAttrName="IdOdsouhlasenojarka"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="ID_ODSOUHLASENOJARKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtOdsouhlasenojanka"
+      EntityAttrName="DtOdsouhlasenojanka"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="DT_ODSOUHLASENOJANKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdsouhlasenojanka"
+      EntityAttrName="IdOdsouhlasenojanka"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="ID_ODSOUHLASENOJANKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtOdsouhlasenotop"
+      EntityAttrName="DtOdsouhlasenotop"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="DT_ODSOUHLASENOTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdsouhlasenotop"
+      EntityAttrName="IdOdsouhlasenotop"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="ID_ODSOUHLASENOTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odsouhlasenojarka"
+      EntityAttrName="Odsouhlasenojarka"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="ODSOUHLASENOJARKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odsouhlasenojanka"
+      EntityAttrName="Odsouhlasenojanka"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="ODSOUHLASENOJANKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odsouhlasenotop"
+      EntityAttrName="Odsouhlasenotop"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="ODSOUHLASENOTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisprenoskategorie"
+      EntityAttrName="IdCisprenoskategorie"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="ID_CISPRENOSKATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Prenoskategorie"
+      EntityAttrName="Prenoskategorie"
+      EntityUsage="VwKtgUcspolpredavani"
+      AliasName="PRENOSKATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

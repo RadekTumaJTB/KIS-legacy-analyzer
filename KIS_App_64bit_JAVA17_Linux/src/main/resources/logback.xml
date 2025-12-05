@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Logback Configuration for KIS Application
+  Replaces: Log4j 1.x (removes CVE-2021-44228 vulnerability)
+  Java 17 + Spring Boot 3.2.1
+-->
+<configuration>
+
+    <!-- Property definitions -->
+    <property name="LOG_PATH" value="${LOG_PATH:-/app/logs}" />
+    <property name="LOG_FILE" value="${LOG_FILE:-kis-application}" />
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n" />
+    <property name="CONSOLE_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} - %highlight(%-5level) %cyan(%logger{36}) - %msg%n" />
+
+    <!-- Console Appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- File Appender - Main Application Log -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/${LOG_FILE}.log</file>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Daily rollover -->
+            <fileNamePattern>${LOG_PATH}/${LOG_FILE}.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- Keep 30 days of history -->
+            <maxHistory>30</maxHistory>
+            <!-- Max total size of all log files -->
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- File Appender - Error Log -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/${LOG_FILE}-error.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/${LOG_FILE}-error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>90</maxHistory>
+            <totalSizeCap>500MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- File Appender - SQL Log -->
+    <appender name="SQL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/sql.log</file>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/sql.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>7</maxHistory>
+            <totalSizeCap>200MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Async Appender for better performance -->
+    <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="FILE" />
+        <queueSize>512</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+    </appender>
+
+    <!-- ============================================ -->
+    <!-- Logger Configurations                        -->
+    <!-- ============================================ -->
+
+    <!-- Application Loggers -->
+    <logger name="cz.jtbank" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ASYNC_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </logger>
+
+    <!-- Spring Framework -->
+    <logger name="org.springframework" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ASYNC_FILE" />
+    </logger>
+
+    <!-- Spring Boot -->
+    <logger name="org.springframework.boot" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ASYNC_FILE" />
+    </logger>
+
+    <!-- Hibernate/JPA -->
+    <logger name="org.hibernate" level="WARN" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ASYNC_FILE" />
+    </logger>
+
+    <!-- SQL Logging (for debugging) -->
+    <logger name="org.hibernate.SQL" level="DEBUG" additivity="false">
+        <appender-ref ref="SQL_FILE" />
+    </logger>
+
+    <!-- SQL Parameter Values (for debugging) -->
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE" additivity="false">
+        <appender-ref ref="SQL_FILE" />
+    </logger>
+
+    <!-- Oracle JDBC -->
+    <logger name="oracle.jdbc" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ASYNC_FILE" />
+    </logger>
+
+    <!-- HikariCP Connection Pool -->
+    <logger name="com.zaxxer.hikari" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ASYNC_FILE" />
+    </logger>
+
+    <!-- Apache POI (Excel) -->
+    <logger name="org.apache.poi" level="WARN" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ASYNC_FILE" />
+    </logger>
+
+    <!-- Mail -->
+    <logger name="org.springframework.mail" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ASYNC_FILE" />
+    </logger>
+
+    <!-- Migration Note: Log4j 1.x compatibility layer -->
+    <!-- If using log4j-over-slf4j bridge, Log4j calls will be redirected here -->
+    <logger name="org.apache.log4j" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ASYNC_FILE" />
+    </logger>
+
+    <!-- Root Logger -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ASYNC_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </root>
+
+    <!-- ============================================ -->
+    <!-- Development Profile                          -->
+    <!-- ============================================ -->
+    <springProfile name="dev">
+        <logger name="cz.jtbank" level="DEBUG" />
+        <logger name="org.hibernate.SQL" level="DEBUG" />
+        <logger name="org.hibernate.type" level="TRACE" />
+    </springProfile>
+
+    <!-- ============================================ -->
+    <!-- Production Profile                           -->
+    <!-- ============================================ -->
+    <springProfile name="prod">
+        <logger name="cz.jtbank" level="INFO" />
+        <logger name="org.hibernate.SQL" level="WARN" />
+        <root level="WARN" />
+    </springProfile>
+
+</configuration>

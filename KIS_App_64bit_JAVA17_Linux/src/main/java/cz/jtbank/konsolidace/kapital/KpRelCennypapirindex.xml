@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpRelCennypapirindex"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_REL_CENNYPAPIRINDEX"
+   AliasName="KpRelCennypapirindex"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.kapital.KpRelCennypapirindexImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdCennypapir"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CENNYPAPIR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_CENNYPAPIRINDEX"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCpindex"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CPINDEX"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_REL_CENNYPAPIRINDEX" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisCpindex"
+      Association="cz.jtbank.konsolidace.kapital.FkRelcennypapirindexIndexAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.kapital.FkRelcennypapirindexIndexAssoc.KpCisCpindex"
+      AssociationOtherEnd="cz.jtbank.konsolidace.kapital.FkRelcennypapirindexIndexAssoc.KpRelCennypapirindex"
+      Type="cz.jtbank.konsolidace.kapital.KpCisCpindexImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KtgCennypapir"
+      Association="cz.jtbank.konsolidace.kapital.FkRelcennypapirindexCpAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.kapital.FkRelcennypapirindexCpAssoc.KtgCennypapir"
+      AssociationOtherEnd="cz.jtbank.konsolidace.kapital.FkRelcennypapirindexCpAssoc.KpRelCennypapirindex"
+      Type="cz.jtbank.konsolidace.kapital.KtgCennypapirImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnRelcennypapirindexIndex" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpRelCennypapirindex.IdCpindex" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_RELCENNYPAPIRINDEX_INDEX" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CPINDEX&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnRelcennypapirindexCp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpRelCennypapirindex.IdCennypapir" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_RELCENNYPAPIRINDEX_CP" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CENNYPAPIR&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkRelcennypapirindex" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpRelCennypapirindex.IdCennypapir" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_RELCENNYPAPIRINDEX" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkRelcennypapirindexIndex" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpRelCennypapirindex.IdCpindex" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_RELCENNYPAPIRINDEX_INDEX" />
+         <Attr Name="_referencedKey" Value="PK_KPCISCPINDEX" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkRelcennypapirindexCp" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpRelCennypapirindex.IdCennypapir" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_RELCENNYPAPIRINDEX_CP" />
+         <Attr Name="_referencedKey" Value="PK_KTGCENNYPAPIR" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

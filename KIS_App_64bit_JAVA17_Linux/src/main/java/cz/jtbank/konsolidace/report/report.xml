@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="report"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.report" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="ReportModule"
+      FullName="cz.jtbank.konsolidace.report.ReportModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="VwRepDocprehled"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocprehled"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepDocprehledView"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocprehledView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepDocprumernaspol"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocprumernaspol"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepDocprumernaspolView"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocprumernaspolView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepDocschvalano"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocschvalano"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepDocschvalanoView"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocschvalanoView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepDocschvalne"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocschvalne"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepDocschvalneView"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocschvalneView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepDocschvalnerel"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocschvalnerel"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepDocschvalnerelView"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocschvalnerelView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepDocucspolporadi"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocucspolporadi"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepDocucspolporadiView"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocucspolporadiView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepDoczadavatelmax"
+      FullName="cz.jtbank.konsolidace.report.VwRepDoczadavatelmax"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepDoczadavatelmaxView"
+      FullName="cz.jtbank.konsolidace.report.VwRepDoczadavatelmaxView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspollastclosedate"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspollastclosedate"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspollastclosedateView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspollastclosedateView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolmaxtransakci"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolmaxtransakci"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolmaxtransakciView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolmaxtransakciView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolprehled"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolprehled"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolprehledView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolprehledView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolucetni"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolucetni"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolucetniView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolucetniView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolucetniproblemmu"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolucetniproblemmu"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolucetniproblemmuView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolucetniproblemmuView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolucetniproblemzuk"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolucetniproblemzuk"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolucetniproblemzukView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolucetniproblemzukView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolpodiltransakci"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolpodiltransakci"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolpodiltransakciView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolpodiltransakciView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolucetnidetailmu"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolucetnidetailmu"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolucetnidetailmuView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolucetnidetailmuView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolucetnidetailzuk"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolucetnidetailzuk"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolucetnidetailzukView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolucetnidetailzukView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspoldetailclosedate"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspoldetailclosedate"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspoldetailclosedateView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspoldetailclosedateView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepDocnezauctovano"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocnezauctovano"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepDocnezauctovanoView"
+      FullName="cz.jtbank.konsolidace.report.VwRepDocnezauctovanoView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekucetni"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekucetni"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekucetniView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekucetniView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekoo"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekoo"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekooView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekooView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekschybou"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybou"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekschybouView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybouView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekschybouspol"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybouspol"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekschybouspolView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybouspolView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolpodiltransakcibil"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolpodiltransakcibil"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolpodiltransakcibilView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolpodiltransakcibilView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekucetnine"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekucetnine"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekucetnineView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekucetnineView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekoone"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekoone"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepUcspolzamekooneView"
+      FullName="cz.jtbank.konsolidace.report.VwRepUcspolzamekooneView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelProjektcfexportView"
+   SelectList="KpRelProjektcfexport.ID_PROJEKT, 
+       KpRelProjektcfexport.ID_TYP"
+   FromList="DB_JT.KP_REL_PROJEKTCFEXPORT KpRelProjektcfexport"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.KpRelProjektcfexportViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelProjektcfexport"
+      Entity="cz.jtbank.konsolidace.projekt.KpRelProjektcfexport" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdProjekt"
+      IsNotNull="true"
+      EntityAttrName="IdProjekt"
+      EntityUsage="KpRelProjektcfexport"
+      AliasName="ID_PROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyp"
+      EntityAttrName="IdTyp"
+      EntityUsage="KpRelProjektcfexport"
+      AliasName="ID_TYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

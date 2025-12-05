@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwJtSpolecnostpravifrsdetailView"
+   SelectList="VwJtSpolecnostpravifrsdetail.ID, 
+       VwJtSpolecnostpravifrsdetail.ID_PORADI, 
+
+       VwJtSpolecnostpravifrsdetail.ID_PORADIPODMINKA, 
+    
+   VwJtSpolecnostpravifrsdetail.ID_KTGIFRSPRAVIDLO, 
+       VwJtSpolecnostpravifrsdetail.ID_CISIFRSPRAVDETAILTYP, 
+
+       VwJtSpolecnostpravifrsdetail.S_POZNAMKA, 
+       VwJtSpolecnostpravifrsdetail.S_UCETMD, 
+
+       VwJtSpolecnostpravifrsdetail.S_UCETD, 
+       VwJtSpolecnostpravifrsdetail.S_MENA, 
+
+       VwJtSpolecnostpravifrsdetail.ND_CASTKA, 
+       VwJtSpolecnostpravifrsdetail.S_UCETZBYTEK, 
+
+       VwJtSpolecnostpravifrsdetail.S_PODMINKA, 
+       VwJtSpolecnostpravifrsdetail.DT_ZMENA, 
+
+       VwJtSpolecnostpravifrsdetail.S_UZIVATEL, 
+       VwJtSpolecnostpravifrsdetail.S_POPIS, 
+
+       VwJtSpolecnostpravifrsdetail.S_ZKRATKA, 
+       VwJtSpolecnostpravifrsdetail.ROWID, 
+
+       VwJtSpolecnostpravifrsdetail.ND_CASTKALOCAL, 
+       
+VwJtSpolecnostpravifrsdetail.ID_KTGUCETNISPOLECNOST, 
+       
+VwJtSpolecnostpravifrsdetail.ID_PORADIKOREKCEFIX, 
+       VwJtSpolecnostpravifrsdetail.ID_KTGSPOLECNOST, 
+
+       VwJtSpolecnostpravifrsdetail.ID_KTGPROJEKT, 
+       VwJtSpolecnostpravifrsdetail.ID_KTGODBOR, 
+
+       VwJtSpolecnostpravifrsdetail.ID_UCETMD_UNIF, 
+       
+VwJtSpolecnostpravifrsdetail.ID_UCETD_UNIF, 
+       VwJtSpolecnostpravifrsdetail.S_UUMD, 
+
+       VwJtSpolecnostpravifrsdetail.S_UUD"
+   FromList="DB_JT.VW_JT_SPOLECNOSTPRAVIFRSDETAIL VwJtSpolecnostpravifrsdetail"
+   OrderBy="ID_PORADI"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravifrsdetailViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwJtSpolecnostpravifrsdetail"
+      Entity="cz.jtbank.konsolidace.ifrs.VwJtSpolecnostpravifrsdetail" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="ID_PORADI" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPoradi"
+      IsNotNull="true"
+      EntityAttrName="IdPoradi"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID_PORADI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPoradipodminka"
+      IsNotNull="true"
+      EntityAttrName="IdPoradipodminka"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID_PORADIPODMINKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgifrspravidlo"
+      IsNotNull="true"
+      EntityAttrName="IdKtgifrspravidlo"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID_KTGIFRSPRAVIDLO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisifrspravdetailtyp"
+      IsNotNull="true"
+      EntityAttrName="IdCisifrspravdetailtyp"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID_CISIFRSPRAVDETAILTYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetmd"
+      EntityAttrName="SUcetmd"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="S_UCETMD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetd"
+      EntityAttrName="SUcetd"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="S_UCETD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastka"
+      EntityAttrName="NdCastka"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetzbytek"
+      EntityAttrName="SUcetzbytek"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="S_UCETZBYTEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPodminka"
+      EntityAttrName="SPodminka"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="S_PODMINKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZmena"
+      IsNotNull="true"
+      EntityAttrName="DtZmena"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="DT_ZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      IsNotNull="true"
+      EntityAttrName="SUzivatel"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZkratka"
+      IsNotNull="true"
+      EntityAttrName="SZkratka"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="S_ZKRATKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPoradikorekcefix"
+      EntityAttrName="IdPoradikorekcefix"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID_PORADIKOREKCEFIX"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcetmdUnif"
+      EntityAttrName="IdUcetmdUnif"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID_UCETMD_UNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcetdUnif"
+      EntityAttrName="IdUcetdUnif"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="ID_UCETD_UNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUumd"
+      EntityAttrName="SUumd"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="S_UUMD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUud"
+      EntityAttrName="SUud"
+      EntityUsage="VwJtSpolecnostpravifrsdetail"
+      AliasName="S_UUD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

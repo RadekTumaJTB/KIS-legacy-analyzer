@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepUcspolzamekschybouView"
+   SelectList="VwRepUcspolzamekschybou.DT_DATUM, 
+       VwRepUcspolzamekschybou.S_NAZEV, 
+       VwRepUcspolzamekschybou.S_HLASKA, 
+       VwRepUcspolzamekschybou.ID"
+   FromList="DB_JT.VW_REP_UCSPOLZAMEKSCHYBOU VwRepUcspolzamekschybou"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybouViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepUcspolzamekschybou"
+      Entity="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybou" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwRepUcspolzamekschybou"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwRepUcspolzamekschybou"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SHlaska"
+      EntityAttrName="SHlaska"
+      EntityUsage="VwRepUcspolzamekschybou"
+      AliasName="S_HLASKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwRepUcspolzamekschybou"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

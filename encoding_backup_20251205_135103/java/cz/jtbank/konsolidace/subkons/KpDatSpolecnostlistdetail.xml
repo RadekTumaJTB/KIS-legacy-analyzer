@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatSpolecnostlistdetail"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_SPOLECNOSTLISTDETAIL"
+   AliasName="KpDatSpolecnostlistdetail"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.subkons.KpDatSpolecnostlistdetailImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_SPOLECNOSTLISTDETAIL"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgspolecnost"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGSPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_SPOLECNOSTLISTDETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdSpolecnostlist"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_SPOLECNOSTLIST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_SPOLECNOSTLISTDETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_SPOLECNOSTLISTDETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_SPOLECNOSTLISTDETAIL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpDatSpolecnostlist"
+      Association="cz.jtbank.konsolidace.subkons.FkSpolecnostlistdetSlistAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.subkons.FkSpolecnostlistdetSlistAssoc.KpDatSpolecnostlist"
+      AssociationOtherEnd="cz.jtbank.konsolidace.subkons.FkSpolecnostlistdetSlistAssoc.KpDatSpolecnostlistdetail"
+      Type="cz.jtbank.konsolidace.subkons.KpDatSpolecnostlistImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="PkSpolecnostlistdet" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpDatSpolecnostlistdetail.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_SPOLECNOSTLISTDET" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnSpolecnostlistdetSpol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpDatSpolecnostlistdetail.IdKtgspolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_SPOLECNOSTLISTDET_SPOL" />
+         <Attr Name="_checkCondition" Value="&#34;ID_KTGSPOLECNOST&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnSpolecnostlistdetSlist" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpDatSpolecnostlistdetail.IdSpolecnostlist" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_SPOLECNOSTLISTDET_SLIST" />
+         <Attr Name="_checkCondition" Value="&#34;ID_SPOLECNOSTLIST&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkSpolecnostlistdetSpol" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpDatSpolecnostlistdetail.IdKtgspolecnost" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_SPOLECNOSTLISTDET_SPOL" />
+         <Attr Name="_referencedKey" Value="PK_KPKTGSPOLECNOST" />
+         <Attr Name="_isForeign" Value="true" />
+         <Attr Name="_isCascadeDelete" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkSpolecnostlistdetSlist" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpDatSpolecnostlistdetail.IdSpolecnostlist" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_SPOLECNOSTLISTDET_SLIST" />
+         <Attr Name="_referencedKey" Value="PK_SPOLECNOSTLIST" />
+         <Attr Name="_isForeign" Value="true" />
+         <Attr Name="_isCascadeDelete" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

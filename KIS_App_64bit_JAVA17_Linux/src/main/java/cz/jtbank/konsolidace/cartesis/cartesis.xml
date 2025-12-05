@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="cartesis"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.cartesis" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="VwRepSpolecnostcartesis"
+      FullName="cz.jtbank.konsolidace.cartesis.VwRepSpolecnostcartesis"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepSpolecnostcartesisView"
+      FullName="cz.jtbank.konsolidace.cartesis.VwRepSpolecnostcartesisView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="CartesisModule"
+      FullName="cz.jtbank.konsolidace.cartesis.CartesisModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="VwRepOsobycartesis"
+      FullName="cz.jtbank.konsolidace.cartesis.VwRepOsobycartesis"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepOsobycartesisView"
+      FullName="cz.jtbank.konsolidace.cartesis.VwRepOsobycartesisView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisFlow"
+      FullName="cz.jtbank.konsolidace.cartesis.KpCisFlow"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisFlowView"
+      FullName="cz.jtbank.konsolidace.cartesis.KpCisFlowView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelUcetunifflow"
+      FullName="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflow"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpreluuflowFlowAssoc"
+      FullName="cz.jtbank.konsolidace.cartesis.FkKpreluuflowFlowAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpRelUcetunifflowView"
+      FullName="cz.jtbank.konsolidace.cartesis.KpRelUcetunifflowView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatZdaFlowZustatekView"
+      FullName="cz.jtbank.konsolidace.cartesis.KpDatZdaFlowZustatekView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatZdaFlowZustatekLocalView"
+      FullName="cz.jtbank.konsolidace.cartesis.KpDatZdaFlowZustatekLocalView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatZdaFlowProtistranaView"
+      FullName="cz.jtbank.konsolidace.cartesis.KpDatZdaFlowProtistranaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatZdaFlowProtistranaLocalView"
+      FullName="cz.jtbank.konsolidace.cartesis.KpDatZdaFlowProtistranaLocalView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatZdaFlowSegmentLocalView"
+      FullName="cz.jtbank.konsolidace.cartesis.KpDatZdaFlowSegmentLocalView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

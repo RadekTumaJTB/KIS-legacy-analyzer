@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpSManualView"
+   SelectList="KpSManual.S_DBLINK, 
+       KpSManual.S_EXTID, 
+       KpSManual.S_NAZEV, 
+       KpSManual.ID_KTGSPOLECNOST, 
+       KpSManual.ID_KTGSPOLECNOSTAUTO, 
+       KpSManual.DT_DATUM, 
+       KpSManual.S_UZIVATEL"
+   FromList="DB_DSA.KP_S_MANUAL KpSManual"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.protistrany.KpSManualViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpSManual"
+      Entity="cz.jtbank.konsolidace.protistrany.KpSManual" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SDblink"
+      IsNotNull="true"
+      EntityAttrName="SDblink"
+      EntityUsage="KpSManual"
+      AliasName="S_DBLINK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SExtid"
+      IsNotNull="true"
+      EntityAttrName="SExtid"
+      EntityUsage="KpSManual"
+      AliasName="S_EXTID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="KpSManual"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="KpSManual"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnostauto"
+      EntityAttrName="IdKtgspolecnostauto"
+      EntityUsage="KpSManual"
+      AliasName="ID_KTGSPOLECNOSTAUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpSManual"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpSManual"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpSpolecnostInGroupView"
+   OrderBy="S_NAZEV"
+   BindingStyle="Oracle"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.protistrany.VwKpSpolecnostInGroupViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT DISTINCT KpKtgSpolecnost.ID ID_SPOLECNOST, 
+       KpKtgSpolecnost.S_NAZEV
+FROM DB_JT.KP_KTG_SPOLECNOST_GROUP KpKtgSpolecnostGroup, DB_JT.KP_KTG_SPOLECNOST KpKtgSpolecnost
+WHERE KpKtgSpolecnostGroup.ID_SPOLECNOST = KpKtgSpolecnost.ID
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpKtgSpolecnostGroup"
+      Entity="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostGroup"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgSpolecnost"
+      Entity="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnost"
+      Association="cz.jtbank.konsolidace.protistrany.FkKpspolgroupSpolAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.protistrany.FkKpspolgroupSpolAssoc.KpKtgSpolecnost"
+      SourceUsage="cz.jtbank.konsolidace.protistrany.VwKpSpolecnostInGroupView.KpKtgSpolecnostGroup"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnostGroup.IdSpolecnost" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.protistrany.KpKtgSpolecnost.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgSpolecnost"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgSpolecnost"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

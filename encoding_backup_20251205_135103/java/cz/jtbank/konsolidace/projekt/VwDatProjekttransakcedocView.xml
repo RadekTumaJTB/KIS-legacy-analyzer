@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatProjekttransakcedocView"
+   SelectList="VwDatProjekttransakcedoc.ID, 
+       VwDatProjekttransakcedoc.S_POPIS, 
+
+       VwDatProjekttransakcedoc.ND_CASTKAMENA, 
+       VwDatProjekttransakcedoc.S_MENA, 
+
+       VwDatProjekttransakcedoc.ND_CASTKALOCAL, 
+       VwDatProjekttransakcedoc.UCSPOL_MENA, 
+
+       VwDatProjekttransakcedoc.DATUM, 
+       VwDatProjekttransakcedoc.SPOLECNOST, 
+
+       VwDatProjekttransakcedoc.S_UNIFSPOL, 
+       VwDatProjekttransakcedoc.ID_KTGPROJEKT"
+   FromList="DB_JT.VW_DAT_PROJEKTTRANSAKCEDOC VwDatProjekttransakcedoc"
+   OrderBy="ID_KTGPROJEKT,DATUM,S_MENA"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.VwDatProjekttransakcedocViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatProjekttransakcedoc"
+      Entity="cz.jtbank.konsolidace.projekt.VwDatProjekttransakcedoc" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="ID_KTGPROJEKT,DATUM,S_MENA" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwDatProjekttransakcedoc"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwDatProjekttransakcedoc"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwDatProjekttransakcedoc"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="VwDatProjekttransakcedoc"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwDatProjekttransakcedoc"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="UcspolMena"
+      IsNotNull="true"
+      EntityAttrName="UcspolMena"
+      EntityUsage="VwDatProjekttransakcedoc"
+      AliasName="UCSPOL_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datum"
+      EntityAttrName="Datum"
+      EntityUsage="VwDatProjekttransakcedoc"
+      AliasName="DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwDatProjekttransakcedoc"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUnifspol"
+      EntityAttrName="SUnifspol"
+      EntityUsage="VwDatProjekttransakcedoc"
+      AliasName="S_UNIFSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      IsNotNull="true"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwDatProjekttransakcedoc"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

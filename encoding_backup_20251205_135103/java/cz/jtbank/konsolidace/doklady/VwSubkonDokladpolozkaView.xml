@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwSubkonDokladpolozkaView"
+   SelectList="VwSubkonDokladpolozka.ID_DOKLAD, 
+       VwSubkonDokladpolozka.ND_CASTKALOCAL, 
+       VwSubkonDokladpolozka.ND_CASTKACZK, 
+       VwSubkonDokladpolozka.NL_RADEK, 
+       VwSubkonDokladpolozka.NL_SLOUPEC, 
+       VwSubkonDokladpolozka.NL_PORADILIST"
+   FromList="DB_JT.VW_SUBKON_DOKLADPOLOZKA VwSubkonDokladpolozka"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwSubkonDokladpolozkaViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwSubkonDokladpolozka"
+      Entity="cz.jtbank.konsolidace.doklady.VwSubkonDokladpolozka" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdDoklad"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwSubkonDokladpolozka"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwSubkonDokladpolozka"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkaczk"
+      EntityAttrName="NdCastkaczk"
+      EntityUsage="VwSubkonDokladpolozka"
+      AliasName="ND_CASTKACZK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      EntityAttrName="NlRadek"
+      EntityUsage="VwSubkonDokladpolozka"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlSloupec"
+      EntityAttrName="NlSloupec"
+      EntityUsage="VwSubkonDokladpolozka"
+      AliasName="NL_SLOUPEC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlPoradilist"
+      EntityAttrName="NlPoradilist"
+      EntityUsage="VwSubkonDokladpolozka"
+      AliasName="NL_PORADILIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

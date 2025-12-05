@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwCashflowView"
+   SelectList="VwCashflow.LINK, 
+       VwCashflow.SID, 
+       VwCashflow.NAZEV, 
+
+       VwCashflow.CHAR_CASTKY, 
+       VwCashflow.TYP_SMLOUVY, 
+
+       VwCashflow.DATUM_PREDPISU, 
+       VwCashflow.CASTKA, 
+
+       VwCashflow.MENA, 
+       VwCashflow.UHRADA, 
+       VwCashflow.K_UHRADE, 
+
+       VwCashflow.COUNTERPARTY, 
+       VwCashflow.SMLOUVA, 
+
+       VwCashflow.PORADI, 
+       VwCashflow.CML_NAZEV, 
+   
+    VwCashflow.PREDMET, 
+       VwCashflow.VAR_SYMBOL, 
+     
+  VwCashflow.BU_SPOLECNOSTI, 
+       VwCashflow.UCET_SALDA, 
+ 
+      VwCashflow.PROTIUCET, 
+       VwCashflow.CHAR_SMLOUVY, 
+
+       VwCashflow.MANAZER_ID, 
+       VwCashflow.PROJEKT_ID, 
+
+       VwCashflow.DRUH_SMLOUVY, 
+       VwCashflow.POPIS_DRUHU, 
+
+       VwCashflow.STAV_SMLOUVY, 
+       VwCashflow.STAVID, 
+ 
+      VwCashflow.P1V0, 
+       VwCashflow.DOID, 
+       VwCashflow.C_CLENSCOPE8, 
+
+       VwCashflow.C_INTERNI"
+   FromList="DB_JT.VW_CASHFLOW VwCashflow"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwCashflowViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwCashflow"
+      Entity="cz.jtbank.konsolidace.doklady.VwCashflow" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Link"
+      EntityAttrName="Link"
+      EntityUsage="VwCashflow"
+      AliasName="LINK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Sid"
+      EntityAttrName="Sid"
+      EntityUsage="VwCashflow"
+      AliasName="SID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Nazev"
+      EntityAttrName="Nazev"
+      EntityUsage="VwCashflow"
+      AliasName="NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CharCastky"
+      EntityAttrName="CharCastky"
+      EntityUsage="VwCashflow"
+      AliasName="CHAR_CASTKY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="TypSmlouvy"
+      EntityAttrName="TypSmlouvy"
+      EntityUsage="VwCashflow"
+      AliasName="TYP_SMLOUVY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DatumPredpisu"
+      EntityAttrName="DatumPredpisu"
+      EntityUsage="VwCashflow"
+      AliasName="DATUM_PREDPISU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Castka"
+      EntityAttrName="Castka"
+      EntityUsage="VwCashflow"
+      AliasName="CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mena"
+      EntityAttrName="Mena"
+      EntityUsage="VwCashflow"
+      AliasName="MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Uhrada"
+      EntityAttrName="Uhrada"
+      EntityUsage="VwCashflow"
+      AliasName="UHRADA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="KUhrade"
+      EntityAttrName="KUhrade"
+      EntityUsage="VwCashflow"
+      AliasName="K_UHRADE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Counterparty"
+      EntityAttrName="Counterparty"
+      EntityUsage="VwCashflow"
+      AliasName="COUNTERPARTY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Smlouva"
+      EntityAttrName="Smlouva"
+      EntityUsage="VwCashflow"
+      AliasName="SMLOUVA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Poradi"
+      EntityAttrName="Poradi"
+      EntityUsage="VwCashflow"
+      AliasName="PORADI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CmlNazev"
+      EntityAttrName="CmlNazev"
+      EntityUsage="VwCashflow"
+      AliasName="CML_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Predmet"
+      EntityAttrName="Predmet"
+      EntityUsage="VwCashflow"
+      AliasName="PREDMET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="VarSymbol"
+      EntityAttrName="VarSymbol"
+      EntityUsage="VwCashflow"
+      AliasName="VAR_SYMBOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="BuSpolecnosti"
+      EntityAttrName="BuSpolecnosti"
+      EntityUsage="VwCashflow"
+      AliasName="BU_SPOLECNOSTI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="UcetSalda"
+      EntityAttrName="UcetSalda"
+      EntityUsage="VwCashflow"
+      AliasName="UCET_SALDA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Protiucet"
+      EntityAttrName="Protiucet"
+      EntityUsage="VwCashflow"
+      AliasName="PROTIUCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CharSmlouvy"
+      EntityAttrName="CharSmlouvy"
+      EntityUsage="VwCashflow"
+      AliasName="CHAR_SMLOUVY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ManazerId"
+      EntityAttrName="ManazerId"
+      EntityUsage="VwCashflow"
+      AliasName="MANAZER_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ProjektId"
+      EntityAttrName="ProjektId"
+      EntityUsage="VwCashflow"
+      AliasName="PROJEKT_ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DruhSmlouvy"
+      EntityAttrName="DruhSmlouvy"
+      EntityUsage="VwCashflow"
+      AliasName="DRUH_SMLOUVY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="PopisDruhu"
+      EntityAttrName="PopisDruhu"
+      EntityUsage="VwCashflow"
+      AliasName="POPIS_DRUHU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="StavSmlouvy"
+      EntityAttrName="StavSmlouvy"
+      EntityUsage="VwCashflow"
+      AliasName="STAV_SMLOUVY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Stavid"
+      EntityAttrName="Stavid"
+      EntityUsage="VwCashflow"
+      AliasName="STAVID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="P1v0"
+      EntityAttrName="P1v0"
+      EntityUsage="VwCashflow"
+      AliasName="P1V0"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Doid"
+      EntityAttrName="Doid"
+      EntityUsage="VwCashflow"
+      AliasName="DOID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CClenscope8"
+      EntityAttrName="CClenscope8"
+      EntityUsage="VwCashflow"
+      AliasName="C_CLENSCOPE8"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CInterni"
+      EntityAttrName="CInterni"
+      EntityUsage="VwCashflow"
+      AliasName="C_INTERNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

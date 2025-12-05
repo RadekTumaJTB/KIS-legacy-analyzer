@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKtgProjektnavrhView"
+   SelectList="VwKtgProjektnavrh.ID, 
+       VwKtgProjektnavrh.S_NAZEV, 
+   
+    VwKtgProjektnavrh.ID_NAVRHUJE, 
+       VwKtgProjektnavrh.S_EMAIL, 
+
+       VwKtgProjektnavrh.ID_SPONZOR, 
+       VwKtgProjektnavrh.ID_PMANAGER, 
+
+       VwKtgProjektnavrh.ND_VYNOS, 
+       VwKtgProjektnavrh.S_MENAVYNOS, 
+
+       VwKtgProjektnavrh.ND_NAKLAD, 
+       VwKtgProjektnavrh.S_MENANAKLAD, 
+
+       VwKtgProjektnavrh.DT_ZACATEK, 
+       VwKtgProjektnavrh.DT_KONEC, 
+
+       VwKtgProjektnavrh.NAVRHUJE, 
+       VwKtgProjektnavrh.SPONZOR, 
+
+       VwKtgProjektnavrh.PMANAGER, 
+       VwKtgProjektnavrh.S_POPIS"
+   FromList="DB_JT.VW_KTG_PROJEKTNAVRH VwKtgProjektnavrh"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.VwKtgProjektnavrhViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKtgProjektnavrh"
+      Entity="cz.jtbank.konsolidace.projekt.VwKtgProjektnavrh" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdNavrhuje"
+      EntityAttrName="IdNavrhuje"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="ID_NAVRHUJE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SEmail"
+      EntityAttrName="SEmail"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="S_EMAIL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSponzor"
+      EntityAttrName="IdSponzor"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="ID_SPONZOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPmanager"
+      EntityAttrName="IdPmanager"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="ID_PMANAGER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdVynos"
+      EntityAttrName="NdVynos"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="ND_VYNOS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenavynos"
+      EntityAttrName="SMenavynos"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="S_MENAVYNOS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdNaklad"
+      EntityAttrName="NdNaklad"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="ND_NAKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenanaklad"
+      EntityAttrName="SMenanaklad"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="S_MENANAKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZacatek"
+      EntityAttrName="DtZacatek"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="DT_ZACATEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtKonec"
+      EntityAttrName="DtKonec"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="DT_KONEC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Navrhuje"
+      EntityAttrName="Navrhuje"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="NAVRHUJE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Sponzor"
+      EntityAttrName="Sponzor"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="SPONZOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pmanager"
+      EntityAttrName="Pmanager"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="PMANAGER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwKtgProjektnavrh"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpDokladprehledView"
+   SelectList="VwKpDokladprehled.ID_DOKLAD, 
+       VwKpDokladprehled.ND_CASTKALOCAL, 
+       VwKpDokladprehled.NL_RADEK, 
+       VwKpDokladprehled.ID_CISRADEKTYP"
+   FromList="DB_JT.VW_KP_DOKLADPREHLED VwKpDokladprehled"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwKpDokladprehledViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpDokladprehled"
+      Entity="cz.jtbank.konsolidace.doklady.VwKpDokladprehled" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwKpDokladprehled"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwKpDokladprehled"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      IsNotNull="true"
+      EntityAttrName="NlRadek"
+      EntityUsage="VwKpDokladprehled"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisradektyp"
+      IsNotNull="true"
+      EntityAttrName="IdCisradektyp"
+      EntityUsage="VwKpDokladprehled"
+      AliasName="ID_CISRADEKTYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKtgUversplatkyView"
+   SelectList="VwKtgUversplatky.DT_DATUM, 
+       VwKtgUversplatky.ND_CASTKA_LNS, 
+       VwKtgUversplatky.ND_CASTKA_RED, 
+       VwKtgUversplatky.ND_CASTKA_INT, 
+       VwKtgUversplatky.S_POZNAMKA, 
+       VwKtgUversplatky.ID_EXTSYSTEM"
+   FromList="DB_JT.VW_KTG_UVERSPLATKY VwKtgUversplatky"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.VwKtgUversplatkyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKtgUversplatky"
+      Entity="cz.jtbank.konsolidace.projekt.VwKtgUversplatky" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwKtgUversplatky"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkaLns"
+      EntityAttrName="NdCastkaLns"
+      EntityUsage="VwKtgUversplatky"
+      AliasName="ND_CASTKA_LNS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkaRed"
+      EntityAttrName="NdCastkaRed"
+      EntityUsage="VwKtgUversplatky"
+      AliasName="ND_CASTKA_RED"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkaInt"
+      EntityAttrName="NdCastkaInt"
+      EntityUsage="VwKtgUversplatky"
+      AliasName="ND_CASTKA_INT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="VwKtgUversplatky"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdExtsystem"
+      IsNotNull="true"
+      EntityAttrName="IdExtsystem"
+      EntityUsage="VwKtgUversplatky"
+      AliasName="ID_EXTSYSTEM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

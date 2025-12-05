@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKtgEviadminspolecnostView"
+   SelectList="KpKtgEviadminspolecnost.ID, 
+       KpKtgEviadminspolecnost.S_NAZEV, 
+
+       KpKtgEviadminspolecnost.S_STAT, 
+       KpKtgEviadminspolecnost.ID_EXTERNIADMIN, 
+
+       KpKtgEviadminspolecnost.ID_ADMINISTRATOR, 
+       KpKtgEviadminspolecnost.ID_STATUS, 
+
+       KpCisStat.S_POPIS AS STAT, 
+       KpCisStat.ID AS ID_STAT, 
+
+       KpKtgEviexterniadmin.S_NAZEV AS EXTADMIN, 
+       KpKtgEviexterniadmin.ID 
+AS ID_EXTADMIN, 
+       KtgAppuser.ID AS ID_JMENO, 
+       KpCisEvistatus.S_POPIS 
+AS STATUS, 
+       KpCisEvistatus.ID AS ID_EVISTATUS, 
+      
+ KtgAppuser.S_KRESTNI || &#39; &#39; || KtgAppuser.S_PRIJMENI AS JMENO, 
+
+       KpKtgEviadminspolecnost.ID_KTGUCETNISPOLECNOST, 
+    
+   case    when ((select count(*) from db_jt.kp_ktg_eviSidlo 
+s where                s.id_adminspolecnost = KpKtgEviadminspolecnost.id 
+    and     s.c_navrh=&#39;1&#39;)&#62;0)        then &#39;1&#39;   when ((select 
+ count(*)      from   db_jt.kp_dat_eviZplnomocneni        s where 
+ s.id_adminspolecnost        = KpKtgEviadminspolecnost.id    
+  and    s.c_navrh=&#39;1&#39;)&#62;0)     then    &#39;1&#39;   when ((select count(*) 
+   from   db_jt.kp_ktg_eviStatutarniZastupce           s where 
+ s.id_adminspolecnost     = KpKtgEviadminspolecnost.id       
+  and    s.c_navrh=&#39;1&#39;)&#62;0) then   &#39;1&#39;     when ((select count(*) 
+        from db_jt.kp_dat_eviKorespondence        s where s.id_adminspolecnost 
+        = KpKtgEviadminspolecnost.id    and     s.c_navrh=&#39;1&#39;)&#62;0) 
+     then    &#39;1&#39;   when ((select count(*)   from  db_jt.kp_dat_eviBanky 
+            s where s.id_adminspolecnost   = KpKtgEviadminspolecnost.id 
+          and    s.c_navrh=&#39;1&#39;)&#62;0) then   &#39;1&#39;   when ((select 
+ count(*)        from   db_jt.kp_dat_eviKomisionarskeSmlouvy 
+      s where    s.id_adminspolecnost       = KpKtgEviadminspolecnost.id 
+   and       s.c_navrh=&#39;1&#39;)&#62;0)  then    &#39;1&#39;     when ((select 
+ count(*)      from db_jt.kp_dat_eviDokument        s  where 
+  s.id_adminspolecnost      = KpKtgEviadminspolecnost.id     
+and      s.c_navrh=&#39;1&#39;)&#62;0)     then   &#39;1&#39;   when ((select count(*) 
+     from  db_jt.kp_dat_eviDoidentifikace          s where s.id_adminspolecnost 
+      = KpKtgEviadminspolecnost.id       and    s.c_navrh=&#39;1&#39;)&#62;0) 
+  then    &#39;1&#39;   when (KpKtgEviadminspolecnost.c_navrh=&#39;1&#39;)   
+    then  &#39;1&#39;   else  &#39;0&#39;  end AS OBSAHUJE_NAVRH, 
+       KpKtgEviadminspolecnost.S_ICO, 
+
+       KpKtgEviadminspolecnost.DT_DATUMZALOZENI, 
+       KpKtgEviadminspolecnost.C_NAVRH, 
+
+       KpKtgEviadminspolecnost.S_NAZEVNAVRH, 
+       KpKtgEviadminspolecnost.S_ICONAVRH, 
+
+       KpKtgEviadminspolecnost.ID_ADMINISTRATORNAVRH, 
+     
+  KpKtgEviadminspolecnost.ID_TYPSPOL, 
+       KpKtgEviadminspolecnost.S_ICODOKUMENTY"
+   FromList="DB_JT.KP_KTG_EVIADMINSPOLECNOST KpKtgEviadminspolecnost, DB_JT.KP_CIS_STAT KpCisStat, DB_JT.KP_KTG_EVIEXTERNIADMIN KpKtgEviexterniadmin, DB_JT.KTG_APPUSER KtgAppuser, DB_JT.KP_CIS_EVISTATUS KpCisEvistatus"
+   Where="KpKtgEviadminspolecnost.S_STAT = KpCisStat.ID (+) AND KpKtgEviadminspolecnost.ID_EXTERNIADMIN = KpKtgEviexterniadmin.ID (+) AND KpKtgEviadminspolecnost.ID_ADMINISTRATOR = KtgAppuser.ID (+) AND KpKtgEviadminspolecnost.ID_STATUS = KpCisEvistatus.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.evi.VwKtgEviadminspolecnostViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpKtgEviadminspolecnost"
+      Entity="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnost"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpKtgEviadminspolecnost.S_STAT = KpCisStat.ID (+) AND KpKtgEviadminspolecnost.ID_EXTERNIADMIN = KpKtgEviexterniadmin.ID (+) AND KpKtgEviadminspolecnost.ID_ADMINISTRATOR = KtgAppuser.ID (+) AND KpKtgEviadminspolecnost.ID_STATUS = KpCisEvistatus.ID" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpCisStat"
+      Entity="cz.jtbank.konsolidace.ucskup.KpCisStat"
+      SourceUsage="cz.jtbank.konsolidace.evi.VwKtgEviadminspolecnostView.KpKtgEviadminspolecnost"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviadminspolecnost.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.ucskup.KpCisStat.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgEviexterniadmin"
+      Entity="cz.jtbank.konsolidace.evi.KpKtgEviexterniadmin"
+      SourceUsage="cz.jtbank.konsolidace.evi.VwKtgEviadminspolecnostView.KpCisStat"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.ucskup.KpCisStat.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviexterniadmin.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KtgAppuser"
+      Entity="cz.jtbank.konsolidace.users.KtgAppuser"
+      SourceUsage="cz.jtbank.konsolidace.evi.VwKtgEviadminspolecnostView.KpKtgEviexterniadmin"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviexterniadmin.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpCisEvistatus"
+      Entity="cz.jtbank.konsolidace.evi.KpCisEvistatus"
+      SourceUsage="cz.jtbank.konsolidace.evi.VwKtgEviadminspolecnostView.KtgAppuser"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpCisEvistatus.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SStat"
+      EntityAttrName="SStat"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="S_STAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdExterniadmin"
+      EntityAttrName="IdExterniadmin"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="ID_EXTERNIADMIN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdministrator"
+      EntityAttrName="IdAdministrator"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="ID_ADMINISTRATOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdStatus"
+      IsNotNull="true"
+      EntityAttrName="IdStatus"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="ID_STATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Stat"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisStat"
+      AliasName="STAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdStat"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisStat"
+      AliasName="ID_STAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ExtAdmin"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgEviexterniadmin"
+      AliasName="EXTADMIN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdExtadmin"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgEviexterniadmin"
+      AliasName="ID_EXTADMIN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdJmeno"
+      EntityAttrName="Id"
+      EntityUsage="KtgAppuser"
+      AliasName="ID_JMENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Status"
+      IsNotNull="true"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisEvistatus"
+      AliasName="STATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdEvistatus"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisEvistatus"
+      AliasName="ID_EVISTATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Jmeno"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="JMENO"
+      ColumnType="VARCHAR2"
+      Expression="KtgAppuser.S_KRESTNI || &#39; &#39; || KtgAppuser.S_PRIJMENI"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ObsahujeNavrh"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="1"
+      Type="java.lang.String"
+      AliasName="OBSAHUJE_NAVRH"
+      ColumnType="CHAR"
+      Expression="case    when ((select count(*) from db_jt.kp_ktg_eviSidlo s where 
+               s.id_adminspolecnost = KpKtgEviadminspolecnost.id 
+    and     s.c_navrh=&#39;1&#39;)&#62;0)        then &#39;1&#39;   when ((select 
+ count(*)      from   db_jt.kp_dat_eviZplnomocneni        s where 
+ s.id_adminspolecnost        = KpKtgEviadminspolecnost.id    
+  and    s.c_navrh=&#39;1&#39;)&#62;0)     then    &#39;1&#39;   when ((select count(*) 
+   from   db_jt.kp_ktg_eviStatutarniZastupce           s where 
+ s.id_adminspolecnost     = KpKtgEviadminspolecnost.id       
+  and    s.c_navrh=&#39;1&#39;)&#62;0) then   &#39;1&#39;     when ((select count(*) 
+        from db_jt.kp_dat_eviKorespondence        s where s.id_adminspolecnost 
+        = KpKtgEviadminspolecnost.id    and     s.c_navrh=&#39;1&#39;)&#62;0) 
+     then    &#39;1&#39;   when ((select count(*)   from  db_jt.kp_dat_eviBanky 
+            s where s.id_adminspolecnost   = KpKtgEviadminspolecnost.id 
+          and    s.c_navrh=&#39;1&#39;)&#62;0) then   &#39;1&#39;   when ((select 
+ count(*)        from   db_jt.kp_dat_eviKomisionarskeSmlouvy 
+      s where    s.id_adminspolecnost       = KpKtgEviadminspolecnost.id 
+   and       s.c_navrh=&#39;1&#39;)&#62;0)  then    &#39;1&#39;     when ((select 
+ count(*)      from db_jt.kp_dat_eviDokument        s  where 
+  s.id_adminspolecnost      = KpKtgEviadminspolecnost.id     
+and      s.c_navrh=&#39;1&#39;)&#62;0)     then   &#39;1&#39;   when ((select count(*) 
+     from  db_jt.kp_dat_eviDoidentifikace          s where s.id_adminspolecnost 
+      = KpKtgEviadminspolecnost.id       and    s.c_navrh=&#39;1&#39;)&#62;0) 
+  then    &#39;1&#39;   when (KpKtgEviadminspolecnost.c_navrh=&#39;1&#39;)   
+    then  &#39;1&#39;   else  &#39;0&#39;  end"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      EntityAttrName="SIco"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzalozeni"
+      EntityAttrName="DtDatumzalozeni"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="DT_DATUMZALOZENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CNavrh"
+      EntityAttrName="CNavrh"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="C_NAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazevnavrh"
+      EntityAttrName="SNazevnavrh"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="S_NAZEVNAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIconavrh"
+      EntityAttrName="SIconavrh"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="S_ICONAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdministratornavrh"
+      EntityAttrName="IdAdministratornavrh"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="ID_ADMINISTRATORNAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypspol"
+      EntityAttrName="IdTypspol"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="ID_TYPSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIcodokumenty"
+      EntityAttrName="SIcodokumenty"
+      EntityUsage="KpKtgEviadminspolecnost"
+      AliasName="S_ICODOKUMENTY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <AttrArray Name="KeyAttributes">
+      <Item Value="Id" />
+   </AttrArray>
+</ViewObject>

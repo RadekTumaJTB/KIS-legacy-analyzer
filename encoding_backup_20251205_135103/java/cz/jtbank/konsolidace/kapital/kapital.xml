@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="kapital"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.kapital" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="KpKtgTypnastroje"
+      FullName="cz.jtbank.konsolidace.kapital.KpKtgTypnastroje"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgTypnastrojeView"
+      FullName="cz.jtbank.konsolidace.kapital.KpKtgTypnastrojeView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgTypoperace"
+      FullName="cz.jtbank.konsolidace.kapital.KpKtgTypoperace"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgTypoperaceView"
+      FullName="cz.jtbank.konsolidace.kapital.KpKtgTypoperaceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDefListbunkanastroj"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefListbunkanastroj"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDefListbunkanastrojView"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefListbunkanastrojView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDefUcetportfolio"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefUcetportfolio"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDefUcetportfolioView"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefUcetportfolioView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisZisksrskupina"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisZisksrskupina"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisZisksrskupinaView"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisZisksrskupinaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgZisksr"
+      FullName="cz.jtbank.konsolidace.kapital.KpKtgZisksr"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgZisksrView"
+      FullName="cz.jtbank.konsolidace.kapital.KpKtgZisksrView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisIndustrytype"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisIndustrytype"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisIndustrytypeView"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisIndustrytypeView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisKategorieprotistran"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistran"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisKategorieprotistranView"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisKategorieprotistranView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisUceluveru"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisUceluveru"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisUceluveruView"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisUceluveruView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisCpindex"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisCpindex"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisCpindexView"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisCpindexView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisTypzajisteni"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisTypzajisteni"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisTypzajisteniView"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisTypzajisteniView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KapitalModule"
+      FullName="cz.jtbank.konsolidace.kapital.KapitalModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="FkKplistbunkanastrTypnastrAssoc"
+      FullName="cz.jtbank.konsolidace.kapital.FkKplistbunkanastrTypnastrAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpCisExternirating"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisExternirating"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisExterniratingView"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisExterniratingView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelSpolecnostexternirating"
+      FullName="cz.jtbank.konsolidace.kapital.KpRelSpolecnostexternirating"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelSpolecnostexterniratingView"
+      FullName="cz.jtbank.konsolidace.kapital.KpRelSpolecnostexterniratingView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KtgCennypapir"
+      FullName="cz.jtbank.konsolidace.kapital.KtgCennypapir"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KtgCennypapirView"
+      FullName="cz.jtbank.konsolidace.kapital.KtgCennypapirView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelCennypapirindex"
+      FullName="cz.jtbank.konsolidace.kapital.KpRelCennypapirindex"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkRelcennypapirindexIndexAssoc"
+      FullName="cz.jtbank.konsolidace.kapital.FkRelcennypapirindexIndexAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkRelcennypapirindexCpAssoc"
+      FullName="cz.jtbank.konsolidace.kapital.FkRelcennypapirindexCpAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpRelCennypapirindexView"
+      FullName="cz.jtbank.konsolidace.kapital.KpRelCennypapirindexView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkKpktgtypoperaceTypnastrAssoc"
+      FullName="cz.jtbank.konsolidace.kapital.FkKpktgtypoperaceTypnastrAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDefNastrojoperace"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefNastrojoperace"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpdefnastoperTypnastAssoc"
+      FullName="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypnastAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkKpdefnastoperTypoperAssoc"
+      FullName="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypoperAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDefNastrojoperaceView"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefNastrojoperaceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisBusinesslinie"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisBusinesslinie"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisBusinesslinieView"
+      FullName="cz.jtbank.konsolidace.kapital.KpCisBusinesslinieView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDefUcetbusinesslinie"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefUcetbusinesslinie"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkDefucetbusinesslinieBlAssoc"
+      FullName="cz.jtbank.konsolidace.kapital.FkDefucetbusinesslinieBlAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDefUcetbusinesslinieView"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefUcetbusinesslinieView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="TestOperacniriziko"
+      FullName="cz.jtbank.konsolidace.kapital.TestOperacniriziko"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="TestOperacnirizikoView"
+      FullName="cz.jtbank.konsolidace.kapital.TestOperacnirizikoView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDefVyjimkaucetprodukt"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefVyjimkaucetprodukt"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDefVyjimkaucetproduktView"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefVyjimkaucetproduktView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatOperacniriziko"
+      FullName="cz.jtbank.konsolidace.kapital.KpDatOperacniriziko"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatOperacnirizikoView"
+      FullName="cz.jtbank.konsolidace.kapital.KpDatOperacnirizikoView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatOperacnirizikodetail"
+      FullName="cz.jtbank.konsolidace.kapital.KpDatOperacnirizikodetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKpoperacnirizikodRizikoAssoc"
+      FullName="cz.jtbank.konsolidace.kapital.FkKpoperacnirizikodRizikoAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="FkKpoperacnirizikodBuslineAssoc"
+      FullName="cz.jtbank.konsolidace.kapital.FkKpoperacnirizikodBuslineAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpDatOperacnirizikodetailView"
+      FullName="cz.jtbank.konsolidace.kapital.KpDatOperacnirizikodetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDefKapitalovkaduplicity"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefKapitalovkaduplicity"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDefKapitalovkaduplicityView"
+      FullName="cz.jtbank.konsolidace.kapital.KpDefKapitalovkaduplicityView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpKpduplicitydetail"
+      FullName="cz.jtbank.konsolidace.kapital.VwKpKpduplicitydetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpKpduplicitydetailView"
+      FullName="cz.jtbank.konsolidace.kapital.VwKpKpduplicitydetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

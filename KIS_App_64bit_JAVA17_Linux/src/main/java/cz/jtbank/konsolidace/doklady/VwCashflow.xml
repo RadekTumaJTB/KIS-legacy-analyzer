@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwCashflow"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_CASHFLOW"
+   AliasName="VwCashflow"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.VwCashflowImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Link"
+      Precision="8"
+      Type="java.lang.String"
+      ColumnName="LINK"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="8" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Sid"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="SID"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Nazev"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnName="NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CharCastky"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="CHAR_CASTKY"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="TypSmlouvy"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="TYP_SMLOUVY"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DatumPredpisu"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DATUM_PREDPISU"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_CASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Castka"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="CASTKA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Mena"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Uhrada"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="UHRADA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="KUhrade"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="K_UHRADE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Counterparty"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnName="COUNTERPARTY"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Smlouva"
+      Precision="30"
+      Type="java.lang.String"
+      ColumnName="SMLOUVA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Poradi"
+      Precision="5"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="PORADI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CmlNazev"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnName="CML_NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Predmet"
+      Precision="250"
+      Type="java.lang.String"
+      ColumnName="PREDMET"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="250" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="VarSymbol"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="VAR_SYMBOL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="BuSpolecnosti"
+      Precision="40"
+      Type="java.lang.String"
+      ColumnName="BU_SPOLECNOSTI"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="40" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="UcetSalda"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="UCET_SALDA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Protiucet"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="PROTIUCET"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CharSmlouvy"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="CHAR_SMLOUVY"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="ManazerId"
+      Precision="6"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="MANAZER_ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="ProjektId"
+      Precision="7"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="PROJEKT_ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DruhSmlouvy"
+      Precision="4"
+      Type="java.lang.String"
+      ColumnName="DRUH_SMLOUVY"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="4" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="PopisDruhu"
+      Precision="40"
+      Type="java.lang.String"
+      ColumnName="POPIS_DRUHU"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="40" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="StavSmlouvy"
+      Precision="8"
+      Type="java.lang.String"
+      ColumnName="STAV_SMLOUVY"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="8" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Stavid"
+      Precision="10"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="STAVID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="P1v0"
+      Precision="1"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="P1V0"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_CASHFLOW"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Doid"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="DOID"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CClenscope8"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_CLENSCOPE8"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_CASHFLOW" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CInterni"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_INTERNI"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_CASHFLOW"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwcashflowPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.Link" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.Sid" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.Nazev" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.TypSmlouvy" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.Mena" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.Counterparty" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.Smlouva" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.Poradi" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.CmlNazev" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.Predmet" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.VarSymbol" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.BuSpolecnosti" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.UcetSalda" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.Protiucet" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.CharSmlouvy" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.ManazerId" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.ProjektId" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.DruhSmlouvy" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.PopisDruhu" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.StavSmlouvy" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.Stavid" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwCashflow.P1v0" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWCASHFLOW_PRIMARY_KEY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

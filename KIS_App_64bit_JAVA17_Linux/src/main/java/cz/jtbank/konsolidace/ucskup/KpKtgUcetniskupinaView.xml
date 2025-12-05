@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpKtgUcetniskupinaView"
+   SelectList="KpKtgUcetniskupina.ID, 
+       KpKtgUcetniskupina.S_KOD, 
+   
+    KpKtgUcetniskupina.S_POPIS, 
+       KpKtgUcetniskupina.S_TYPKURSLISTEK, 
+
+       KpKtgUcetniskupina.ID_CISBANKA, 
+       KpKtgUcetniskupina.S_SKUPINALIKE, 
+
+       KpKtgUcetniskupina.C_POROVNAVAT, 
+       KpKtgUcetniskupina.C_EXPORTOLAP, 
+
+       KpKtgUcetniskupina.C_GENERUJSUBKONKAMIL, 
+       KpKtgUcetniskupina.C_TESTOVATVAZBY, 
+
+       KpKtgUcetniskupina.S_UZIVATEL"
+   FromList="DB_JT.KP_KTG_UCETNISKUPINA KpKtgUcetniskupina"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.KpKtgUcetniskupinaViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpKtgUcetniskupina"
+      Entity="cz.jtbank.konsolidace.ucskup.KpKtgUcetniskupina" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgUcetniskupina"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKod"
+      IsUnique="true"
+      IsNotNull="true"
+      EntityAttrName="SKod"
+      EntityUsage="KpKtgUcetniskupina"
+      AliasName="S_KOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpKtgUcetniskupina"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="STypkurslistek"
+      EntityAttrName="STypkurslistek"
+      EntityUsage="KpKtgUcetniskupina"
+      AliasName="S_TYPKURSLISTEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisbanka"
+      EntityAttrName="IdCisbanka"
+      EntityUsage="KpKtgUcetniskupina"
+      AliasName="ID_CISBANKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SSkupinalike"
+      EntityAttrName="SSkupinalike"
+      EntityUsage="KpKtgUcetniskupina"
+      AliasName="S_SKUPINALIKE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPorovnavat"
+      EntityAttrName="CPorovnavat"
+      EntityUsage="KpKtgUcetniskupina"
+      AliasName="C_POROVNAVAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CExportolap"
+      EntityAttrName="CExportolap"
+      EntityUsage="KpKtgUcetniskupina"
+      AliasName="C_EXPORTOLAP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CGenerujsubkonkamil"
+      EntityAttrName="CGenerujsubkonkamil"
+      EntityUsage="KpKtgUcetniskupina"
+      AliasName="C_GENERUJSUBKONKAMIL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CTestovatvazby"
+      EntityAttrName="CTestovatvazby"
+      EntityUsage="KpKtgUcetniskupina"
+      AliasName="C_TESTOVATVAZBY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpKtgUcetniskupina"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

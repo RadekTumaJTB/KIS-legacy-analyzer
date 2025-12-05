@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpKalendarakciView"
+   SelectList="KpKalendarakci.ID, 
+       KpKalendarakci.S_DEN, 
+       KpKalendarakci.C_POSILATEMAILY"
+   FromList="DB_JT.KP_KALENDARAKCI KpKalendarakci"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.admin.KpKalendarakciViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpKalendarakci"
+      Entity="cz.jtbank.konsolidace.admin.KpKalendarakci" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKalendarakci"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SDen"
+      IsNotNull="true"
+      EntityAttrName="SDen"
+      EntityUsage="KpKalendarakci"
+      AliasName="S_DEN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPosilatemaily"
+      IsNotNull="true"
+      EntityAttrName="CPosilatemaily"
+      EntityUsage="KpKalendarakci"
+      AliasName="C_POSILATEMAILY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

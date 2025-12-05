@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwRepSchvalovakpostup"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_REP_SCHVALOVAKPOSTUP"
+   AliasName="VwRepSchvalovakpostup"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostupImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Spolecnost"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="SPOLECNOST"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumsplatnosti"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMSPLATNOSTI"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumzadani"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMZADANI"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="A0"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="A0"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumzadaniradku"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMZADANIRADKU"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="D1"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="D1"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Alarm1"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="ALARM1"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumschvaleni"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMSCHVALENI"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="D2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="D2"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Alarm2"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="ALARM2"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatumzauctovani"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUMZAUCTOVANI"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="D3"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="D3"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Alarm3"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="ALARM3"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Appuser"
+      Precision="101"
+      Type="java.lang.String"
+      ColumnName="APPUSER"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="101" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Zadavatel"
+      Precision="101"
+      Type="java.lang.String"
+      ColumnName="ZADAVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="101" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Ucetni"
+      Precision="101"
+      Type="java.lang.String"
+      ColumnName="UCETNI"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="101" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Schvalujici"
+      Precision="101"
+      Type="java.lang.String"
+      ColumnName="SCHVALUJICI"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_SCHVALOVAKPOSTUP" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="101" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwrepschvalovakpostupPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostup.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWREPSCHVALOVAKPOSTUP_PRIMARY_" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

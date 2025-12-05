@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KtgCennypapirView"
+   SelectList="KtgCennypapir.ID, 
+       KtgCennypapir.S_ISIN, 
+       KtgCennypapir.S_MENA, 
+
+       KtgCennypapir.S_ICO, 
+       KtgCennypapir.S_POPIS, 
+ 
+      KtgCennypapir.C_REGISTROVANY, 
+       KtgCennypapir.C_TYPFREKVENCEPERIODY, 
+
+       KtgCennypapir.NL_KUPONFREKVENCE, 
+       KtgCennypapir.DT_KUPONDATUM1, 
+
+       KtgCennypapir.DT_KUPONDATUM2, 
+       KtgCennypapir.DT_KUPONDATUM3, 
+
+       KtgCennypapir.DT_KUPONDATUM4, 
+       KtgCennypapir.ND_KUPONPROCENTA"
+   FromList="DB_JT.KTG_CENNYPAPIR KtgCennypapir"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KtgCennypapirViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KtgCennypapir"
+      Entity="cz.jtbank.konsolidace.kapital.KtgCennypapir" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KtgCennypapir"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIsin"
+      EntityAttrName="SIsin"
+      EntityUsage="KtgCennypapir"
+      AliasName="S_ISIN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="KtgCennypapir"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      EntityAttrName="SIco"
+      EntityUsage="KtgCennypapir"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      IsNotNull="true"
+      EntityAttrName="SPopis"
+      EntityUsage="KtgCennypapir"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CRegistrovany"
+      IsNotNull="true"
+      EntityAttrName="CRegistrovany"
+      EntityUsage="KtgCennypapir"
+      AliasName="C_REGISTROVANY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CTypfrekvenceperiody"
+      EntityAttrName="CTypfrekvenceperiody"
+      EntityUsage="KtgCennypapir"
+      AliasName="C_TYPFREKVENCEPERIODY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlKuponfrekvence"
+      EntityAttrName="NlKuponfrekvence"
+      EntityUsage="KtgCennypapir"
+      AliasName="NL_KUPONFREKVENCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtKupondatum1"
+      EntityAttrName="DtKupondatum1"
+      EntityUsage="KtgCennypapir"
+      AliasName="DT_KUPONDATUM1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtKupondatum2"
+      EntityAttrName="DtKupondatum2"
+      EntityUsage="KtgCennypapir"
+      AliasName="DT_KUPONDATUM2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtKupondatum3"
+      EntityAttrName="DtKupondatum3"
+      EntityUsage="KtgCennypapir"
+      AliasName="DT_KUPONDATUM3"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtKupondatum4"
+      EntityAttrName="DtKupondatum4"
+      EntityUsage="KtgCennypapir"
+      AliasName="DT_KUPONDATUM4"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdKuponprocenta"
+      EntityAttrName="NdKuponprocenta"
+      EntityUsage="KtgCennypapir"
+      AliasName="ND_KUPONPROCENTA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

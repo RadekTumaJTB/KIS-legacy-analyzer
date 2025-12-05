@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatBudgettransakceView"
+   SelectList="VwDatBudgettransakce.S_POPIS, 
+       VwDatBudgettransakce.ND_CASTKAMENA, 
+
+       VwDatBudgettransakce.S_MENA, 
+       VwDatBudgettransakce.ND_CASTKALOCAL, 
+
+       VwDatBudgettransakce.UCSPOL_MENA, 
+       VwDatBudgettransakce.DATUM, 
+
+       VwDatBudgettransakce.SPOLECNOST, 
+       VwDatBudgettransakce.S_UCET, 
+
+       VwDatBudgettransakce.S_UNIFSPOL, 
+       VwDatBudgettransakce.ID_BUDGET, 
+
+       VwDatBudgettransakce.ID_CISTYPTRANSAKCE, 
+       VwDatBudgettransakce.ID, 
+
+       VwDatBudgettransakce.ID_KTGPROJEKT, 
+       VwDatBudgettransakce.SPOL_DOC, 
+
+       case when (id_ktgprojekt is null or id_ktgprojekt = 1000001) 
+then &#39;0&#39; else &#39;1&#39; end AS PROJ_DOC, 
+       VwDatBudgettransakce.XIDSL"
+   FromList="DB_JT.VW_DAT_BUDGETTRANSAKCE VwDatBudgettransakce"
+   OrderBy="SPOL_DOC ASC,PROJ_DOC DESC,DATUM,S_MENA"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.budget.VwDatBudgettransakceViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatBudgettransakce"
+      Entity="cz.jtbank.konsolidace.budget.VwDatBudgettransakce" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="SPOL_DOC ASC,PROJ_DOC DESC,DATUM,S_MENA" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="UcspolMena"
+      IsNotNull="true"
+      EntityAttrName="UcspolMena"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="UCSPOL_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datum"
+      EntityAttrName="Datum"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUnifspol"
+      EntityAttrName="SUnifspol"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="S_UNIFSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdBudget"
+      IsNotNull="true"
+      EntityAttrName="IdBudget"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="ID_BUDGET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCistyptransakce"
+      IsNotNull="true"
+      EntityAttrName="IdCistyptransakce"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="ID_CISTYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SpolDoc"
+      EntityAttrName="SpolDoc"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="SPOL_DOC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ProjDoc"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="1"
+      Type="java.lang.String"
+      AliasName="PROJ_DOC"
+      ColumnType="CHAR"
+      Expression="case when (id_ktgprojekt is null or id_ktgprojekt = 1000001) then &#39;0&#39; else &#39;1&#39; end"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Xidsl"
+      EntityAttrName="Xidsl"
+      EntityUsage="VwDatBudgettransakce"
+      AliasName="XIDSL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

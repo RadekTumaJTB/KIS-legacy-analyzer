@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatProjektnakladydetailView"
+   SelectList="KpDatProjektnakladydetail.ID, 
+       KpDatProjektnakladydetail.ID_KTGPROJEKT, 
+
+       KpDatProjektnakladydetail.S_TYP, 
+       KpDatProjektnakladydetail.S_POPIS, 
+
+       KpDatProjektnakladydetail.ND_CASTKA, 
+       KpDatProjektnakladydetail.S_MENA, 
+
+       KpDatProjektnakladydetail.DT_DATUM, 
+       KpDatProjektnakladydetail.S_SPOLECNOST, 
+
+       KpDatProjektnakladydetail.S_DODAVATELE, 
+       KpKtgProjekt.S_NAZEV, 
+
+       KpKtgProjekt.ROWID"
+   FromList="DB_JT.KP_DAT_PROJEKTNAKLADYDETAIL KpDatProjektnakladydetail, DB_JT.KP_KTG_PROJEKT KpKtgProjekt"
+   Where="(KpDatProjektnakladydetail.ID_KTGPROJEKT = KpKtgProjekt.ID)"
+   OrderBy="ID_KTGPROJEKT,DT_DATUM,S_MENA"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.KpDatProjektnakladydetailViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatProjektnakladydetail"
+      Entity="cz.jtbank.konsolidace.projekt.KpDatProjektnakladydetail" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="(KpDatProjektnakladydetail.ID_KTGPROJEKT = KpKtgProjekt.ID)" />
+         <Attr Name="_queryOrderBy" Value="ID_KTGPROJEKT,DT_DATUM,S_MENA" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgProjekt"
+      Entity="cz.jtbank.konsolidace.projekt.KpKtgProjekt"
+      SourceUsage="cz.jtbank.konsolidace.projekt.KpDatProjektnakladydetailView.KpDatProjektnakladydetail"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektnakladydetail.Id" />
+            <Item Value="cz.jtbank.konsolidace.projekt.KpDatProjektnakladydetail.SPopis" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.projekt.KpKtgProjekt.Id" />
+            <Item Value="cz.jtbank.konsolidace.projekt.KpKtgProjekt.SPopis" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatProjektnakladydetail"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      IsNotNull="true"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="KpDatProjektnakladydetail"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="STyp"
+      IsNotNull="true"
+      EntityAttrName="STyp"
+      EntityUsage="KpDatProjektnakladydetail"
+      AliasName="S_TYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpDatProjektnakladydetail"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastka"
+      EntityAttrName="NdCastka"
+      EntityUsage="KpDatProjektnakladydetail"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="KpDatProjektnakladydetail"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatProjektnakladydetail"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SSpolecnost"
+      EntityAttrName="SSpolecnost"
+      EntityUsage="KpDatProjektnakladydetail"
+      AliasName="S_SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SDodavatele"
+      EntityAttrName="SDodavatele"
+      EntityUsage="KpDatProjektnakladydetail"
+      AliasName="S_DODAVATELE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgProjekt"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="KpKtgProjekt"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

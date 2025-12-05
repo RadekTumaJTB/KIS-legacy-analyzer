@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwRepOsobycartesis"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_REP_OSOBYCARTESIS"
+   AliasName="VwRepOsobycartesis"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.cartesis.VwRepOsobycartesisImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_REP_OSOBYCARTESIS"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CeleJmeno"
+      Precision="203"
+      Type="java.lang.String"
+      ColumnName="CELE_JMENO"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_OSOBYCARTESIS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="203" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SEmail"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnName="S_EMAIL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_OSOBYCARTESIS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="STelefonformated"
+      Precision="36"
+      Type="java.lang.String"
+      ColumnName="S_TELEFONFORMATED"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_REP_OSOBYCARTESIS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="36" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwreposobycartesisPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.cartesis.VwRepOsobycartesis.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWREPOSOBYCARTESIS_PRIMARY_KEY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

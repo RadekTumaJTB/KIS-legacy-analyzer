@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="VwLogGenerovanizamekprotokol"
+   DBObjectType="table"
+   DBObjectName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL"
+   AliasName="VwLogGenerovanizamekprotokol"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokolImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="DtDatum"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUM"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlKrok"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_KROK"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Akce"
+      Precision="17"
+      Type="java.lang.String"
+      ColumnName="AKCE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="17" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Uroven"
+      Precision="1048"
+      Type="java.lang.String"
+      ColumnName="UROVEN"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1048" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUzivatel"
+      Precision="101"
+      Type="java.lang.String"
+      ColumnName="S_UZIVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="101" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtTimestamp"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_TIMESTAMP"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SDuvod"
+      Precision="1000"
+      Type="java.lang.String"
+      ColumnName="S_DUVOD"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1000" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazev"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SIco"
+      IsNotNull="true"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_ICO"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Soubor"
+      Precision="26"
+      Type="java.lang.String"
+      ColumnName="SOUBOR"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="26" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtVytvoreno"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_VYTVORENO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SNazevSkupina4"
+      Precision="128"
+      Type="java.lang.String"
+      ColumnName="S_NAZEV_SKUPINA4"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.VW_LOG_GENEROVANIZAMEKPROTOKOL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="VwloggenerovanizamekprotokolPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokol.DtDatum" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokol.NlKrok" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokol.Uroven" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokol.IdKtgucetnispolecnost" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokol.Akce" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokol.IdDoklad" />
+         <Item Value="cz.jtbank.konsolidace.doklady.VwLogGenerovanizamekprotokol.DtTimestamp" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="VWLOGGENEROVANIZAMEKPROTOKOL_P" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

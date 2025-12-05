@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatMngsegmentboss"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_MNGSEGMENTBOSS"
+   AliasName="KpDatMngsegmentboss"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentbossImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_MNGSEGMENTBOSS"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdMngsegment"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_MNGSEGMENT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_MNGSEGMENTBOSS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdBoss"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_BOSS"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_MNGSEGMENTBOSS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_MNGSEGMENTBOSS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_MNGSEGMENTBOSS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdTopmng"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_TOPMNG"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_MNGSEGMENTBOSS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdSponzor"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_SPONZOR"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_MNGSEGMENTBOSS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisMngsegment"
+      Association="cz.jtbank.konsolidace.ifrs.FkMngsegmentbossMngsegAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.ifrs.FkMngsegmentbossMngsegAssoc.KpCisMngsegment"
+      AssociationOtherEnd="cz.jtbank.konsolidace.ifrs.FkMngsegmentbossMngsegAssoc.KpDatMngsegmentboss"
+      Type="cz.jtbank.konsolidace.ifrs.KpCisMngsegmentImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnMngsegmentbossDtdo" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentboss.DtPlatnostdo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_MNGSEGMENTBOSS_DTDO" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTDO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnMngsegmentbossBoss" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentboss.IdBoss" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_MNGSEGMENTBOSS_BOSS" />
+         <Attr Name="_checkCondition" Value="&#34;ID_BOSS&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnMngsegmentbossDtod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentboss.DtPlatnostod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_MNGSEGMENTBOSS_DTOD" />
+         <Attr Name="_checkCondition" Value="&#34;DT_PLATNOSTOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnMngsegmentbossId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentboss.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_MNGSEGMENTBOSS_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkMngsegmentboss" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentboss.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_MNGSEGMENTBOSS" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnMngsegmentbossMngseg" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentboss.IdMngsegment" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_MNGSEGMENTBOSS_MNGSEG" />
+         <Attr Name="_checkCondition" Value="&#34;ID_MNGSEGMENT&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkMngsegmentbossBoss" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentboss.IdBoss" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_MNGSEGMENTBOSS_BOSS" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkMngsegmentbossTop" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentboss.IdTopmng" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_MNGSEGMENTBOSS_TOP" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkMngsegmentbossSponzor" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentboss.IdSponzor" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_MNGSEGMENTBOSS_SPONZOR" />
+         <Attr Name="_referencedKey" Value="PK_KTGAPPUSER" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkMngsegmentbossMngseg" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ifrs.KpDatMngsegmentboss.IdMngsegment" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_MNGSEGMENTBOSS_MNGSEG" />
+         <Attr Name="_referencedKey" Value="PK_KPCISMNGSEGMENT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

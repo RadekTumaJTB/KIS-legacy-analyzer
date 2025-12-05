@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDefNastrojoperace"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DEF_NASTROJOPERACE"
+   AliasName="KpDefNastrojoperace"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.kapital.KpDefNastrojoperaceImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_NASTROJOPERACE"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgtypnastroje"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGTYPNASTROJE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_NASTROJOPERACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISSUBJECT"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_NASTROJOPERACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgtypoperace"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGTYPOPERACE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DEF_NASTROJOPERACE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPcprodkind"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_PCPRODKIND"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_DEF_NASTROJOPERACE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPcprodtype"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_PCPRODTYPE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_DEF_NASTROJOPERACE"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpKtgTypnastroje"
+      Association="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypnastAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypnastAssoc.KpKtgTypnastroje"
+      AssociationOtherEnd="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypnastAssoc.KpDefNastrojoperace"
+      Type="cz.jtbank.konsolidace.kapital.KpKtgTypnastrojeImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="KpKtgTypoperace"
+      Association="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypoperAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypoperAssoc.KpKtgTypoperace"
+      AssociationOtherEnd="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypoperAssoc.KpDefNastrojoperace"
+      Type="cz.jtbank.konsolidace.kapital.KpKtgTypoperaceImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpdefnastrojoperaceId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpDefNastrojoperace.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFNASTROJOPERACE_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdefnastoperSubject" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpDefNastrojoperace.IdCissubject" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDEFNASTOPER_SUBJECT" />
+         <Attr Name="_checkCondition" Value="&#34;ID_CISSUBJECT&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpdefnastrojoperace" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpDefNastrojoperace.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPDEFNASTROJOPERACE" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpdefnastoperTypnast" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpDefNastrojoperace.IdKtgtypnastroje" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPDEFNASTOPER_TYPNAST" />
+         <Attr Name="_referencedKey" Value="PK_KPKTGTYPNASTROJE" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpdefnastoperSubject" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpDefNastrojoperace.IdCissubject" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPDEFNASTOPER_SUBJECT" />
+         <Attr Name="_referencedKey" Value="PK_KPSUBJECT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpdefnastoperTypoper" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpDefNastrojoperace.IdKtgtypoperace" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPDEFNASTOPER_TYPOPER" />
+         <Attr Name="_referencedKey" Value="PK_KPKTGTYPOPERACE" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

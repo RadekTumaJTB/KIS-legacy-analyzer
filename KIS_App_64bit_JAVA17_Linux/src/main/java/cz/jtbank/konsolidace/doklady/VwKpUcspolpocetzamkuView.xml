@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpUcspolpocetzamkuView"
+   SelectList="VwKpUcspolpocetzamku.ID, 
+       VwKpUcspolpocetzamku.S_NAZEV, 
+
+       VwKpUcspolpocetzamku.UCETNI, 
+       VwKpUcspolpocetzamku.OO, 
+
+       VwKpUcspolpocetzamku.SS, 
+       VwKpUcspolpocetzamku.DT_DATUM, 
+
+       VwKpUcspolpocetzamku.NL_POCETSCHVALENI, 
+       VwKpUcspolpocetzamku.ID_DOKLAD, 
+
+       VwKpUcspolpocetzamku.C_EXTSYSTEM, 
+       VwKpUcspolpocetzamku.SK"
+   FromList="DB_JT.VW_KP_UCSPOLPOCETZAMKU VwKpUcspolpocetzamku"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwKpUcspolpocetzamkuViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpUcspolpocetzamku"
+      Entity="cz.jtbank.konsolidace.doklady.VwKpUcspolpocetzamku" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKpUcspolpocetzamku"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwKpUcspolpocetzamku"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucetni"
+      EntityAttrName="Ucetni"
+      EntityUsage="VwKpUcspolpocetzamku"
+      AliasName="UCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Oo"
+      EntityAttrName="Oo"
+      EntityUsage="VwKpUcspolpocetzamku"
+      AliasName="OO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ss"
+      EntityAttrName="Ss"
+      EntityUsage="VwKpUcspolpocetzamku"
+      AliasName="SS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwKpUcspolpocetzamku"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlPocetschvaleni"
+      EntityAttrName="NlPocetschvaleni"
+      EntityUsage="VwKpUcspolpocetzamku"
+      AliasName="NL_POCETSCHVALENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwKpUcspolpocetzamku"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CExtsystem"
+      EntityAttrName="CExtsystem"
+      EntityUsage="VwKpUcspolpocetzamku"
+      AliasName="C_EXTSYSTEM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Sk"
+      EntityAttrName="Sk"
+      EntityUsage="VwKpUcspolpocetzamku"
+      AliasName="SK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

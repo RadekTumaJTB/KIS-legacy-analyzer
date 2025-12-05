@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpLogSubkonsolidaceclen"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN"
+   AliasName="KpLogSubkonsolidaceclen"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="132"
+   RowClass="cz.jtbank.konsolidace.subkons.KpLogSubkonsolidaceclenImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.subkons.common.KpLogSubkonsolidaceclenImplMsgBundle" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="SAkce"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="S_AKCE"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN"
+      PrimaryKey="true"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgsubkonsolidace"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGSUBKONSOLIDACE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnost"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CEquity"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_EQUITY"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtZmena"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_ZMENA"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUzivatel"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_UZIVATEL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CClen"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_CLEN"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdCissubtypclenstvi"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_CISSUBTYPCLENSTVI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdPomerucasti"
+      Precision="5"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_POMERUCASTI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="RowID"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.RowID"
+      ColumnName="ROWID"
+      ColumnType="ROWID"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_LOG_SUBKONSOLIDACECLEN"
+      PrimaryKey="true" >
+   </Attribute>
+   <Key
+      Name="KplogsubkonsolidaceclenPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpLogSubkonsolidaceclen.RowID" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="KPLOGSUBKONSOLIDACECLEN_PRIMAR" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="DbJtKpLogSubkonsolidaceclenRowid1Check" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.subkons.KpLogSubkonsolidaceclen.RowID" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="DB_JT_KP_LOG_SUBKONSOLIDACECLE" />
+         <Attr Name="_checkCondition" Value="&#34;ROWID&#34; IS NOT NULL" />
+         <Attr Name="_isNotNull" Value="true" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

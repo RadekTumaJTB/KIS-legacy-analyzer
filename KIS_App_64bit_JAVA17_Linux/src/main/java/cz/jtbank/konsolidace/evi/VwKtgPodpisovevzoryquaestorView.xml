@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKtgPodpisovevzoryquaestorView"
+   SelectList="VwKtgPodpisovevzoryquaestor.SPOLECNOST, 
+       VwKtgPodpisovevzoryquaestor.S_ICO, 
+
+       VwKtgPodpisovevzoryquaestor.S_COUNTRY, 
+       VwKtgPodpisovevzoryquaestor.DT_PLATNOSTOD, 
+
+       VwKtgPodpisovevzoryquaestor.DT_PLATNOSTDO, 
+       VwKtgPodpisovevzoryquaestor.S_POPISSKUPINY, 
+
+       VwKtgPodpisovevzoryquaestor.NL_MINPOCETCLENU, 
+      
+ VwKtgPodpisovevzoryquaestor.S_VZORICO, 
+       VwKtgPodpisovevzoryquaestor.S_VZORJMENO, 
+
+       VwKtgPodpisovevzoryquaestor.S_VZORULICE, 
+       VwKtgPodpisovevzoryquaestor.S_VZORCISLO, 
+
+       VwKtgPodpisovevzoryquaestor.S_VZORMESTO, 
+       VwKtgPodpisovevzoryquaestor.S_VZORPSC, 
+
+       VwKtgPodpisovevzoryquaestor.S_VZORSTAT"
+   FromList="DB_JT.VW_KTG_PODPISOVEVZORYQUAESTOR VwKtgPodpisovevzoryquaestor"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.evi.VwKtgPodpisovevzoryquaestorViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKtgPodpisovevzoryquaestor"
+      Entity="cz.jtbank.konsolidace.evi.VwKtgPodpisovevzoryquaestor" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Spolecnost"
+      IsNotNull="true"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      IsNotNull="true"
+      EntityAttrName="SIco"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SCountry"
+      EntityAttrName="SCountry"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="S_COUNTRY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopisskupiny"
+      EntityAttrName="SPopisskupiny"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="S_POPISSKUPINY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlMinpocetclenu"
+      EntityAttrName="NlMinpocetclenu"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="NL_MINPOCETCLENU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SVzorico"
+      EntityAttrName="SVzorico"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="S_VZORICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SVzorjmeno"
+      EntityAttrName="SVzorjmeno"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="S_VZORJMENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SVzorulice"
+      EntityAttrName="SVzorulice"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="S_VZORULICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SVzorcislo"
+      EntityAttrName="SVzorcislo"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="S_VZORCISLO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SVzormesto"
+      EntityAttrName="SVzormesto"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="S_VZORMESTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SVzorpsc"
+      EntityAttrName="SVzorpsc"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="S_VZORPSC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SVzorstat"
+      EntityAttrName="SVzorstat"
+      EntityUsage="VwKtgPodpisovevzoryquaestor"
+      AliasName="S_VZORSTAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

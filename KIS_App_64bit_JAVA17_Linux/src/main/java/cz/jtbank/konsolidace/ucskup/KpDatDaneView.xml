@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatDaneView"
+   SelectList="KpDatDane.ID_KTGUCETNISPOLECNOST, 
+       KpDatDane.DT_DATUM, 
+
+       KpDatDane.C_DANOVAZTRATA, 
+       KpDatDane.ND_CASTKADANZTRATA, 
+
+       KpDatDane.ND_VYUZITIDANZTRATA, 
+       KpDatDane.ND_ODHADHOSPVYSL, 
+
+       KpDatDane.ND_ODHADZAKLADUDANE, 
+       KpDatDane.C_PLATCEDPH, 
+
+       KpDatDane.ID_FREKVENCEDPH"
+   FromList="DB_JT.KP_DAT_DANE KpDatDane"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.ucskup.KpDatDaneViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatDane"
+      Entity="cz.jtbank.konsolidace.ucskup.KpDatDane" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDatDane"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatDane"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CDanovaztrata"
+      EntityAttrName="CDanovaztrata"
+      EntityUsage="KpDatDane"
+      AliasName="C_DANOVAZTRATA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkadanztrata"
+      EntityAttrName="NdCastkadanztrata"
+      EntityUsage="KpDatDane"
+      AliasName="ND_CASTKADANZTRATA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdVyuzitidanztrata"
+      EntityAttrName="NdVyuzitidanztrata"
+      EntityUsage="KpDatDane"
+      AliasName="ND_VYUZITIDANZTRATA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdOdhadhospvysl"
+      EntityAttrName="NdOdhadhospvysl"
+      EntityUsage="KpDatDane"
+      AliasName="ND_ODHADHOSPVYSL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdOdhadzakladudane"
+      EntityAttrName="NdOdhadzakladudane"
+      EntityUsage="KpDatDane"
+      AliasName="ND_ODHADZAKLADUDANE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPlatcedph"
+      EntityAttrName="CPlatcedph"
+      EntityUsage="KpDatDane"
+      AliasName="C_PLATCEDPH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdFrekvencedph"
+      EntityAttrName="IdFrekvencedph"
+      EntityUsage="KpDatDane"
+      AliasName="ID_FREKVENCEDPH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

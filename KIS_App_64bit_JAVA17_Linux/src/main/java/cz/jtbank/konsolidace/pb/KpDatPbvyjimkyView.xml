@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatPbvyjimkyView"
+   SelectList="KpDatPbvyjimky.ID, 
+       KpDatPbvyjimky.DT_PLATNOSTOD, 
+       KpDatPbvyjimky.DT_PLATNOSTDO, 
+       KpDatPbvyjimky.S_POZNAMKA, 
+       KpDatPbvyjimky.ID_ADMINSPOLECNOST"
+   FromList="DB_JT.KP_DAT_PBVYJIMKY KpDatPbvyjimky"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.pb.KpDatPbvyjimkyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatPbvyjimky"
+      Entity="cz.jtbank.konsolidace.pb.KpDatPbvyjimky" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatPbvyjimky"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDatPbvyjimky"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDatPbvyjimky"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="KpDatPbvyjimky"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdminspolecnost"
+      EntityAttrName="IdAdminspolecnost"
+      EntityUsage="KpDatPbvyjimky"
+      AliasName="ID_ADMINSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKtgUverView"
+   SelectList="VwKtgUver.ID, 
+       VwKtgUver.DATUM, 
+       VwKtgUver.ID_KTGPROJEKT, 
+
+       VwKtgUver.PROJEKT, 
+       VwKtgUver.ID_KTGODBOR, 
+  
+     VwKtgUver.ODBOR, 
+       VwKtgUver.ID_TYPKATEGORIE, 
+   
+    VwKtgUver.TYPKATEGORIE, 
+       VwKtgUver.S_UCET, 
+      
+ VwKtgUver.S_POPIS, 
+       VwKtgUver.ID_KTGSPOLECNOST, 
+    
+   VwKtgUver.SPOLECNOST, 
+       VwKtgUver.ND_CASTKAMENA, 
+  
+     VwKtgUver.S_MENA, 
+       VwKtgUver.ND_CASTKACZK, 
+     
+  VwKtgUver.ID_EXTSYSTEM, 
+       VwKtgUver.ID_EXTSYSTEM2, 
+ 
+      VwKtgUver.ID_KTGUCETNISPOLECNOST, 
+       VwKtgUver.ID_DOKLAD, 
+
+       VwKtgUver.ND_UROK, 
+       VwKtgUver.DT_OPENDATE, 
+  
+     VwKtgUver.DT_ENDDATE, 
+       VwKtgUver.ND_CASTKAMENA_CR, 
+
+       VwKtgUver.ND_CASTKACZK_CR, 
+       VwKtgUver.DT_PLATNOSTOD_CR, 
+
+       VwKtgUver.DT_PLATNOSTDO_CR, 
+       VwKtgUver.S_UCET_CR, 
+
+       VwKtgUver.CLENJTFGKONS, 
+       VwKtgUver.S_NUMBER0, 
+
+       VwKtgUver.KO, 
+       VwKtgUver.SPRAVCE, 
+       VwKtgUver.ID_MNGSEGMENTSPOL, 
+
+       VwKtgUver.ID_MNGSEGMENTPROJ, 
+       VwKtgUver.MNGSEGMENTSPOL, 
+
+       VwKtgUver.MNGSEGMENTPROJ, 
+       VwKtgUver.SCORINGREF_1, 
+
+       VwKtgUver.KLASIFIKACE, 
+       VwKtgUver.AVAIL_KONTOKORENT, 
+
+       VwKtgUver.DOC_DESCRIPTION"
+   FromList="DB_JT.VW_KTG_UVER VwKtgUver"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.VwKtgUverViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKtgUver"
+      Entity="cz.jtbank.konsolidace.projekt.VwKtgUver" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKtgUver"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datum"
+      EntityAttrName="Datum"
+      EntityUsage="VwKtgUver"
+      AliasName="DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwKtgUver"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Projekt"
+      IsNotNull="true"
+      EntityAttrName="Projekt"
+      EntityUsage="VwKtgUver"
+      AliasName="PROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="VwKtgUver"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odbor"
+      EntityAttrName="Odbor"
+      EntityUsage="VwKtgUver"
+      AliasName="ODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypkategorie"
+      EntityAttrName="IdTypkategorie"
+      EntityUsage="VwKtgUver"
+      AliasName="ID_TYPKATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typkategorie"
+      EntityAttrName="Typkategorie"
+      EntityUsage="VwKtgUver"
+      AliasName="TYPKATEGORIE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="VwKtgUver"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwKtgUver"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="VwKtgUver"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwKtgUver"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      IsNotNull="true"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwKtgUver"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwKtgUver"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkaczk"
+      EntityAttrName="NdCastkaczk"
+      EntityUsage="VwKtgUver"
+      AliasName="ND_CASTKACZK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdExtsystem"
+      IsNotNull="true"
+      EntityAttrName="IdExtsystem"
+      EntityUsage="VwKtgUver"
+      AliasName="ID_EXTSYSTEM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdExtsystem2"
+      EntityAttrName="IdExtsystem2"
+      EntityUsage="VwKtgUver"
+      AliasName="ID_EXTSYSTEM2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwKtgUver"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwKtgUver"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdUrok"
+      EntityAttrName="NdUrok"
+      EntityUsage="VwKtgUver"
+      AliasName="ND_UROK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtOpendate"
+      EntityAttrName="DtOpendate"
+      EntityUsage="VwKtgUver"
+      AliasName="DT_OPENDATE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtEnddate"
+      EntityAttrName="DtEnddate"
+      EntityUsage="VwKtgUver"
+      AliasName="DT_ENDDATE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamenaCr"
+      IsNotNull="true"
+      EntityAttrName="NdCastkamenaCr"
+      EntityUsage="VwKtgUver"
+      AliasName="ND_CASTKAMENA_CR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkaczkCr"
+      EntityAttrName="NdCastkaczkCr"
+      EntityUsage="VwKtgUver"
+      AliasName="ND_CASTKACZK_CR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostodCr"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostodCr"
+      EntityUsage="VwKtgUver"
+      AliasName="DT_PLATNOSTOD_CR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdoCr"
+      IsNotNull="true"
+      EntityAttrName="DtPlatnostdoCr"
+      EntityUsage="VwKtgUver"
+      AliasName="DT_PLATNOSTDO_CR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetCr"
+      IsNotNull="true"
+      EntityAttrName="SUcetCr"
+      EntityUsage="VwKtgUver"
+      AliasName="S_UCET_CR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Clenjtfgkons"
+      EntityAttrName="Clenjtfgkons"
+      EntityUsage="VwKtgUver"
+      AliasName="CLENJTFGKONS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNumber0"
+      EntityAttrName="SNumber0"
+      EntityUsage="VwKtgUver"
+      AliasName="S_NUMBER0"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ko"
+      EntityAttrName="Ko"
+      EntityUsage="VwKtgUver"
+      AliasName="KO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spravce"
+      EntityAttrName="Spravce"
+      EntityUsage="VwKtgUver"
+      AliasName="SPRAVCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegmentspol"
+      EntityAttrName="IdMngsegmentspol"
+      EntityUsage="VwKtgUver"
+      AliasName="ID_MNGSEGMENTSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMngsegmentproj"
+      EntityAttrName="IdMngsegmentproj"
+      EntityUsage="VwKtgUver"
+      AliasName="ID_MNGSEGMENTPROJ"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mngsegmentspol"
+      EntityAttrName="Mngsegmentspol"
+      EntityUsage="VwKtgUver"
+      AliasName="MNGSEGMENTSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mngsegmentproj"
+      EntityAttrName="Mngsegmentproj"
+      EntityUsage="VwKtgUver"
+      AliasName="MNGSEGMENTPROJ"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Scoringref1"
+      EntityAttrName="Scoringref1"
+      EntityUsage="VwKtgUver"
+      AliasName="SCORINGREF_1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Klasifikace"
+      EntityAttrName="Klasifikace"
+      EntityUsage="VwKtgUver"
+      AliasName="KLASIFIKACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="AvailKontokorent"
+      EntityAttrName="AvailKontokorent"
+      EntityUsage="VwKtgUver"
+      AliasName="AVAIL_KONTOKORENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DocDescription"
+      EntityAttrName="DocDescription"
+      EntityUsage="VwKtgUver"
+      AliasName="DOC_DESCRIPTION"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

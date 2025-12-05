@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelCennypapirindexView"
+   SelectList="KpRelCennypapirindex.ID_CENNYPAPIR, 
+       KpRelCennypapirindex.ID_CPINDEX"
+   FromList="DB_JT.KP_REL_CENNYPAPIRINDEX KpRelCennypapirindex"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KpRelCennypapirindexViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelCennypapirindex"
+      Entity="cz.jtbank.konsolidace.kapital.KpRelCennypapirindex" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdCennypapir"
+      IsNotNull="true"
+      EntityAttrName="IdCennypapir"
+      EntityUsage="KpRelCennypapirindex"
+      AliasName="ID_CENNYPAPIR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCpindex"
+      IsNotNull="true"
+      EntityAttrName="IdCpindex"
+      EntityUsage="KpRelCennypapirindex"
+      AliasName="ID_CPINDEX"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+
+<ViewLink
+   Name="ViewLinkStructBunkaOpr" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+   </DesignTime>
+   <ViewLinkDefEnd
+      Name="VwKpBilanceDokladStrukturaView1"
+      Cardinality="1"
+      Owner="cz.jtbank.konsolidace.mustky.VwKpBilanceDokladStrukturaView"
+      Source="true" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.VwKpBilanceDokladStrukturaView.IdTmpktgdeflistbunkaopravna" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_minCardinality" Value="1" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="VwKpBilanceDokladStrukturaView1" />
+         <Attr Name="_accessor" Value="true" />
+      </DesignTime>
+   </ViewLinkDefEnd>
+   <ViewLinkDefEnd
+      Name="VwKpBunkadefiniceuctuView1"
+      Cardinality="-1"
+      Owner="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuView" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.mustky.VwKpBunkadefiniceuctuView.IdTmpdeflistbunka" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="VwKpBunkadefiniceuctuView1" />
+         <Attr Name="_accessor" Value="true" />
+      </DesignTime>
+   </ViewLinkDefEnd>
+</ViewLink>

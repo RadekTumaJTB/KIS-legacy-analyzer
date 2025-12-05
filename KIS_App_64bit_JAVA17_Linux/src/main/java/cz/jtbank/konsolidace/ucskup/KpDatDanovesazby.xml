@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatDanovesazby"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_DANOVESAZBY"
+   AliasName="KpDatDanovesazby"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="132"
+   RowClass="cz.jtbank.konsolidace.ucskup.KpDatDanovesazbyImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.ucskup.common.KpDatDanovesazbyImplMsgBundle" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DANOVESAZBY"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SStat"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_STAT"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DAT_DANOVESAZBY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdPasmood"
+      IsNotNull="true"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_PASMOOD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DANOVESAZBY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdPasmodo"
+      IsNotNull="true"
+      Precision="15"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_PASMODO"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DANOVESAZBY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DAT_DANOVESAZBY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdSazbadane"
+      IsNotNull="true"
+      Precision="5"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_SAZBADANE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DANOVESAZBY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostod"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTOD"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_DANOVESAZBY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtPlatnostdo"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_PLATNOSTDO"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_DANOVESAZBY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpCisStat"
+      Association="cz.jtbank.konsolidace.ucskup.FkDanovesazbyStatAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.ucskup.FkDanovesazbyStatAssoc.KpCisStat"
+      AssociationOtherEnd="cz.jtbank.konsolidace.ucskup.FkDanovesazbyStatAssoc.KpDatDanovesazby"
+      Type="cz.jtbank.konsolidace.ucskup.KpCisStatImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="SysC003007" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ucskup.KpDatDanovesazby.NdPasmood" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C003007" />
+         <Attr Name="_checkCondition" Value="&#34;ND_PASMOOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkDanovesazby" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ucskup.KpDatDanovesazby.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_DANOVESAZBY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC003006" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ucskup.KpDatDanovesazby.SStat" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C003006" />
+         <Attr Name="_checkCondition" Value="&#34;S_STAT&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC003005" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ucskup.KpDatDanovesazby.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C003005" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC003008" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ucskup.KpDatDanovesazby.NdPasmodo" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C003008" />
+         <Attr Name="_checkCondition" Value="&#34;ND_PASMODO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC003009" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ucskup.KpDatDanovesazby.SMena" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C003009" />
+         <Attr Name="_checkCondition" Value="&#34;S_MENA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC003010" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ucskup.KpDatDanovesazby.NdSazbadane" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SYS_C003010" />
+         <Attr Name="_checkCondition" Value="&#34;ND_SAZBADANE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkDanovesazbyStat" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ucskup.KpDatDanovesazby.SStat" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_DANOVESAZBY_STAT" />
+         <Attr Name="_referencedKey" Value="PK_CISSTAT" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkDanovesazbyMeny" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.ucskup.KpDatDanovesazby.SMena" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_DANOVESAZBY_MENY" />
+         <Attr Name="_referencedKey" Value="PK_KPCISMENA" />
+         <Attr Name="_isForeign" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

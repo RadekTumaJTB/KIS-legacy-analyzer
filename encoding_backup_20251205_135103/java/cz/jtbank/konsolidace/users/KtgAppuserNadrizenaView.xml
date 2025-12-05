@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KtgAppuserNadrizenaView"
+   SelectList="KtgAppuser.ID, 
+       KtgAppuser.S_TITULYPRED || &#39; &#39; || KtgAppuser.S_KRESTNI || &#39; &#39; || KtgAppuser.S_PRIJMENI || &#39; &#39; || KtgAppuser.S_TITULYPO AS JMENO, 
+       KtgAppuser.ID_NADRIZENAUCETNI"
+   FromList="DB_JT.KTG_APPUSER KtgAppuser"
+   Where="C_ARCHIVNI &#60;&#62; &#39;1&#39; AND C_EXTERNI &#60;&#62; &#39;1&#39;"
+   OrderBy="S_PRIJMENI, S_KRESTNI, S_USERNAME"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.users.KtgAppuserNadrizenaViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KtgAppuser"
+      Entity="cz.jtbank.konsolidace.users.KtgAppuser"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="C_ARCHIVNI &#60;&#62; &#39;1&#39; AND C_EXTERNI &#60;&#62; &#39;1&#39;" />
+         <Attr Name="_queryOrderBy" Value="S_PRIJMENI, S_KRESTNI, S_USERNAME" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      EntityAttrName="Id"
+      EntityUsage="KtgAppuser"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Jmeno"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="JMENO"
+      ColumnType="VARCHAR2"
+      Expression="KtgAppuser.S_TITULYPRED || &#39; &#39; || KtgAppuser.S_KRESTNI || &#39; &#39; || KtgAppuser.S_PRIJMENI || &#39; &#39; || KtgAppuser.S_TITULYPO"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdNadrizenaucetni"
+      EntityAttrName="IdNadrizenaucetni"
+      EntityUsage="KtgAppuser"
+      AliasName="ID_NADRIZENAUCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

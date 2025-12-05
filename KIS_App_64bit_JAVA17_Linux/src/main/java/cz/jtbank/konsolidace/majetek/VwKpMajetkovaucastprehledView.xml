@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpMajetkovaucastprehledView"
+   OrderBy="emitent"
+   BindingStyle="JDBC"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.majetek.VwKpMajetkovaucastprehledViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+select s.S_NAZEV emitent,
+   db_jt.f_getPodilInvestice(mu.ID_KTGUCETNISPOLECNOST, s.id, ?)*100.0 podil,
+	   (select s_nazev from db_jt.kp_ktg_ucetniSpolecnost us where us.id = mu.ID_KTGUCETNISPOLECNOST) vlastnik,
+	   (select id_cisKatSpol from db_jt.kp_ktg_ucetniSpolecnost us where us.id = mu.ID_KTGUCETNISPOLECNOST) ID_CISKATSPOL,
+mu.ID_KTGUCETNISPOLECNOST 
+from db_jt.KP_dat_MajetkovaUcast mu, 
+	 db_jt.KP_ktg_FinInvesticeEmise fe, 
+	 db_jt.KP_ktg_FinancniInvestice fi, 
+	 db_jt.KP_ktg_Spolecnost s 
+where mu.id_ktgFinInvesticeEmise = fe.id 
+  and fe.id_ktgFinancniInvestice = fi.id 
+  and fi.id_ktgSpolecnost = s.id
+  and ? between mu.DT_PLATNOSTOD and mu.DT_PLATNOSTDO 
+  and ? between fe.DT_PLATNOSTOD and fe.DT_PLATNOSTDO
+group by s.S_NAZEV, s.id, mu.ID_KTGUCETNISPOLECNOST
+having sum(mu.NL_POCETKUSU) <> 0
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <ViewAttribute
+      Name="Emitent"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="256"
+      Type="java.lang.String"
+      AliasName="EMITENT"
+      ColumnType="VARCHAR2"
+      Expression="EMITENT"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="256" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Podil"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="PODIL"
+      ColumnType="NUMBER"
+      Expression="PODIL"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Vlastnik"
+      IsPersistent="false"
+      Precision="128"
+      Type="java.lang.String"
+      AliasName="VLASTNIK"
+      ColumnType="VARCHAR2"
+      Expression="VLASTNIK"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCiskatspol"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_CISKATSPOL"
+      ColumnType="VARCHAR2"
+      Expression="ID_CISKATSPOL"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="NUMBER"
+      Expression="ID_KTGUCETNISPOLECNOST"
+      SQLType="NUMERIC" >
+   </ViewAttribute>
+</ViewObject>

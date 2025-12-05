@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwCisTyptransakceView"
+   SelectList="VwCisTyptransakce.ID, 
+       VwCisTyptransakce.S_POPIS, 
+   
+    VwCisTyptransakce.S_KOD, 
+       VwCisTyptransakce.ID_GESTOR_CZ, 
+
+       VwCisTyptransakce.ID_GESTOR_SK, 
+       VwCisTyptransakce.ID_GESTOR_Z, 
+
+       VwCisTyptransakce.ID_TYPTRANSAKCEGROUP, 
+       VwCisTyptransakce.DT_PLATNOSTOD, 
+
+       VwCisTyptransakce.DT_PLATNOSTDO, 
+       VwCisTyptransakce.C_PROZASTUPCE, 
+
+       VwCisTyptransakce.ND_BUDGETNAVYSENI_GESTOR, 
+       VwCisTyptransakce.C_DEVELOPER, 
+
+       VwCisTyptransakce.S_KOMENTAR, 
+       VwCisTyptransakce.C_SPECIAL, 
+
+       VwCisTyptransakce.C_PODVOJNEMIS, 
+       VwCisTyptransakce.ND_UROVENPROJEKT, 
+
+       VwCisTyptransakce.ND_UROVENSPOLECNOST, 
+       VwCisTyptransakce.ND_UROVENTOP, 
+
+       VwCisTyptransakce.S_MENAUP, 
+       VwCisTyptransakce.S_MENAUS, 
+
+       VwCisTyptransakce.S_MENAUT, 
+       VwCisTyptransakce.C_TISKMAJETEK, 
+
+       VwCisTyptransakce.C_BUDGETOVAT, 
+       VwCisTyptransakce.C_CAPEX_OPEX"
+   FromList="DB_JT.VW_CIS_TYPTRANSAKCE VwCisTyptransakce"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.VwCisTyptransakceViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwCisTyptransakce"
+      Entity="cz.jtbank.konsolidace.dokument.VwCisTyptransakce" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      EntityAttrName="Id"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKod"
+      EntityAttrName="SKod"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="S_KOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdGestorCz"
+      EntityAttrName="IdGestorCz"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="ID_GESTOR_CZ"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdGestorSk"
+      EntityAttrName="IdGestorSk"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="ID_GESTOR_SK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdGestorZ"
+      EntityAttrName="IdGestorZ"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="ID_GESTOR_Z"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyptransakcegroup"
+      EntityAttrName="IdTyptransakcegroup"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="ID_TYPTRANSAKCEGROUP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CProzastupce"
+      EntityAttrName="CProzastupce"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="C_PROZASTUPCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdBudgetnavyseniGestor"
+      EntityAttrName="NdBudgetnavyseniGestor"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="ND_BUDGETNAVYSENI_GESTOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CDeveloper"
+      EntityAttrName="CDeveloper"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="C_DEVELOPER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKomentar"
+      EntityAttrName="SKomentar"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="S_KOMENTAR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CSpecial"
+      EntityAttrName="CSpecial"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="C_SPECIAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPodvojnemis"
+      EntityAttrName="CPodvojnemis"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="C_PODVOJNEMIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdUrovenprojekt"
+      EntityAttrName="NdUrovenprojekt"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="ND_UROVENPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdUrovenspolecnost"
+      EntityAttrName="NdUrovenspolecnost"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="ND_UROVENSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdUroventop"
+      EntityAttrName="NdUroventop"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="ND_UROVENTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenaup"
+      EntityAttrName="SMenaup"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="S_MENAUP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenaus"
+      EntityAttrName="SMenaus"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="S_MENAUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenaut"
+      EntityAttrName="SMenaut"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="S_MENAUT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CTiskmajetek"
+      EntityAttrName="CTiskmajetek"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="C_TISKMAJETEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CBudgetovat"
+      EntityAttrName="CBudgetovat"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="C_BUDGETOVAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CCapexOpex"
+      EntityAttrName="CCapexOpex"
+      EntityUsage="VwCisTyptransakce"
+      AliasName="C_CAPEX_OPEX"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

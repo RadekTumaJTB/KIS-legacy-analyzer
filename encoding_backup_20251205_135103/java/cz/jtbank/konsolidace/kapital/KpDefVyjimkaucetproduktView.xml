@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDefVyjimkaucetproduktView"
+   SelectList="KpDefVyjimkaucetprodukt.ID_CISSUBJECT, 
+       KpDefVyjimkaucetprodukt.S_UCET, 
+       KpDefVyjimkaucetprodukt.S_POPIS, 
+       KpTmpCissubject.S_POPIS AS SPOPIS1, 
+       KpTmpCissubject.ID"
+   FromList="DB_JT.KP_DEF_VYJIMKAUCETPRODUKT KpDefVyjimkaucetprodukt, DB_JT.KP_CIS_SUBJECT KpTmpCissubject"
+   Where="KpDefVyjimkaucetprodukt.ID_CISSUBJECT = KpTmpCissubject.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KpDefVyjimkaucetproduktViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDefVyjimkaucetprodukt"
+      Entity="cz.jtbank.konsolidace.kapital.KpDefVyjimkaucetprodukt" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpDefVyjimkaucetprodukt.ID_CISSUBJECT = KpTmpCissubject.ID" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpTmpCissubject"
+      Entity="cz.jtbank.konsolidace.mustky.KpTmpCissubject"
+      SourceUsage="cz.jtbank.konsolidace.kapital.KpDefVyjimkaucetproduktView.KpDefVyjimkaucetprodukt"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.kapital.KpDefVyjimkaucetprodukt.SPopis" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCissubject.SPopis" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      EntityAttrName="IdCissubject"
+      EntityUsage="KpDefVyjimkaucetprodukt"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="KpDefVyjimkaucetprodukt"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="KpDefVyjimkaucetprodukt"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Subject"
+      EntityAttrName="SPopis"
+      EntityUsage="KpTmpCissubject"
+      AliasName="SPOPIS1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSub"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpTmpCissubject"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

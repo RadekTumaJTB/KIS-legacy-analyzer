@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpCisUcetunifView"
+   SelectList="KpCisUcetunif.ID, 
+       KpCisUcetunif.S_UCET, 
+       KpCisUcetunif.C_POCITATVAZBY, 
+       KpCisUcetunif.C_CLASS, 
+       KpCisUcetunif.C_SHARES, 
+       KpCisUcetunif.C_MULTISEGMENT"
+   FromList="DB_JT.KP_CIS_UCETUNIF KpCisUcetunif"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.mustky.KpCisUcetunifViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpCisUcetunif"
+      Entity="cz.jtbank.konsolidace.mustky.KpCisUcetunif" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisUcetunif"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="KpCisUcetunif"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPocitatvazby"
+      EntityAttrName="CPocitatvazby"
+      EntityUsage="KpCisUcetunif"
+      AliasName="C_POCITATVAZBY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CClass"
+      EntityAttrName="CClass"
+      EntityUsage="KpCisUcetunif"
+      AliasName="C_CLASS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CShares"
+      EntityAttrName="CShares"
+      EntityUsage="KpCisUcetunif"
+      AliasName="C_SHARES"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CMultisegment"
+      EntityAttrName="CMultisegment"
+      EntityUsage="KpCisUcetunif"
+      AliasName="C_MULTISEGMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

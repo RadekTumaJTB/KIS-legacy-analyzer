@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDefBudgetmustekView"
+   SelectList="KpDefBudgetmustek.ID, 
+       KpDefBudgetmustek.ID_CISSUBJECT, 
+       KpDefBudgetmustek.ID_CISTYPTRANSAKCE, 
+       KpDefBudgetmustek.S_UCET, 
+       KpDefBudgetmustek.DT_PLATNOSTOD, 
+       KpDefBudgetmustek.DT_PLATNOSTDO"
+   FromList="DB_JT.KP_DEF_BUDGETMUSTEK KpDefBudgetmustek"
+   OrderBy="ID_CISSUBJECT,ID_CISTYPTRANSAKCE,S_UCET"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.budget.KpDefBudgetmustekViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDefBudgetmustek"
+      Entity="cz.jtbank.konsolidace.budget.KpDefBudgetmustek" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="ID_CISSUBJECT,ID_CISTYPTRANSAKCE,S_UCET" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDefBudgetmustek"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      EntityAttrName="IdCissubject"
+      EntityUsage="KpDefBudgetmustek"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCistyptransakce"
+      IsNotNull="true"
+      EntityAttrName="IdCistyptransakce"
+      EntityUsage="KpDefBudgetmustek"
+      AliasName="ID_CISTYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="KpDefBudgetmustek"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDefBudgetmustek"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDefBudgetmustek"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

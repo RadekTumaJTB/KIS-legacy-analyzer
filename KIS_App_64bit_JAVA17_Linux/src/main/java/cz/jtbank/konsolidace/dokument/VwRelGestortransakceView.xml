@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRelGestortransakceView"
+   SelectList="VwRelGestortransakce.ID, 
+       VwRelGestortransakce.ID_MNG, 
+
+       VwRelGestortransakce.S_POPIS_MNG, 
+       VwRelGestortransakce.ID_TRAN, 
+
+       VwRelGestortransakce.S_KOD_TRAN, 
+       VwRelGestortransakce.S_KOMENT_TRAN, 
+
+       VwRelGestortransakce.ID_USR, 
+       VwRelGestortransakce.S_NAME_USR"
+   FromList="DB_JT.VW_REL_GESTORTRANSAKCE VwRelGestortransakce"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.VwRelGestortransakceViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRelGestortransakce"
+      Entity="cz.jtbank.konsolidace.dokument.VwRelGestortransakce" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwRelGestortransakce"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdMng"
+      IsNotNull="true"
+      EntityAttrName="IdMng"
+      EntityUsage="VwRelGestortransakce"
+      AliasName="ID_MNG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopisMng"
+      IsNotNull="true"
+      EntityAttrName="SPopisMng"
+      EntityUsage="VwRelGestortransakce"
+      AliasName="S_POPIS_MNG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTran"
+      IsNotNull="true"
+      EntityAttrName="IdTran"
+      EntityUsage="VwRelGestortransakce"
+      AliasName="ID_TRAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKodTran"
+      EntityAttrName="SKodTran"
+      EntityUsage="VwRelGestortransakce"
+      AliasName="S_KOD_TRAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKomentTran"
+      EntityAttrName="SKomentTran"
+      EntityUsage="VwRelGestortransakce"
+      AliasName="S_KOMENT_TRAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUsr"
+      IsNotNull="true"
+      EntityAttrName="IdUsr"
+      EntityUsage="VwRelGestortransakce"
+      AliasName="ID_USR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNameUsr"
+      EntityAttrName="SNameUsr"
+      EntityUsage="VwRelGestortransakce"
+      AliasName="S_NAME_USR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

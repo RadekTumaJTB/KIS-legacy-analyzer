@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatSlprojektdeveloperView"
+   SelectList="VwDatSlprojektdeveloper.ID_PROJEKT, 
+       VwDatSlprojektdeveloper.ID_DOKUMENT, 
+
+       VwDatSlprojektdeveloper.ND_CASTKA, 
+       VwDatSlprojektdeveloper.S_MENA, 
+
+       VwDatSlprojektdeveloper.S_POPIS, 
+       VwDatSlprojektdeveloper.DT_DATUMZADANI, 
+
+       VwDatSlprojektdeveloper.TYPTRANSAKCE"
+   FromList="DB_JT.VW_DAT_SLPROJEKTDEVELOPER VwDatSlprojektdeveloper"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.VwDatSlprojektdeveloperViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatSlprojektdeveloper"
+      Entity="cz.jtbank.konsolidace.projekt.VwDatSlprojektdeveloper" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdProjekt"
+      EntityAttrName="IdProjekt"
+      EntityUsage="VwDatSlprojektdeveloper"
+      AliasName="ID_PROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokument"
+      IsNotNull="true"
+      EntityAttrName="IdDokument"
+      EntityUsage="VwDatSlprojektdeveloper"
+      AliasName="ID_DOKUMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastka"
+      EntityAttrName="NdCastka"
+      EntityUsage="VwDatSlprojektdeveloper"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="VwDatSlprojektdeveloper"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwDatSlprojektdeveloper"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzadani"
+      EntityAttrName="DtDatumzadani"
+      EntityUsage="VwDatSlprojektdeveloper"
+      AliasName="DT_DATUMZADANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typtransakce"
+      EntityAttrName="Typtransakce"
+      EntityUsage="VwDatSlprojektdeveloper"
+      AliasName="TYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpDokladpolozkadenikView"
+   SelectList="VwKpDokladpolozkadenik.ND_OLD_VALUE, 
+       VwKpDokladpolozkadenik.ND_NEW_VALUE, 
+
+       VwKpDokladpolozkadenik.ND_ZMENA, 
+       VwKpDokladpolozkadenik.S_POPIS, 
+
+       VwKpDokladpolozkadenik.ID_DOKLAD, 
+       VwKpDokladpolozkadenik.S_NAZEV_SPOL, 
+
+       VwKpDokladpolozkadenik.S_POPIS_LIST, 
+       VwKpDokladpolozkadenik.NL_SLOUPEC, 
+
+       VwKpDokladpolozkadenik.NL_RADEK, 
+       VwKpDokladpolozkadenik.ID"
+   FromList="DB_JT.VW_KP_DOKLADPOLOZKADENIK VwKpDokladpolozkadenik"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwKpDokladpolozkadenikViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpDokladpolozkadenik"
+      Entity="cz.jtbank.konsolidace.doklady.VwKpDokladpolozkadenik" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="NdOldValue"
+      EntityAttrName="NdOldValue"
+      EntityUsage="VwKpDokladpolozkadenik"
+      AliasName="ND_OLD_VALUE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdNewValue"
+      EntityAttrName="NdNewValue"
+      EntityUsage="VwKpDokladpolozkadenik"
+      AliasName="ND_NEW_VALUE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdZmena"
+      EntityAttrName="NdZmena"
+      EntityUsage="VwKpDokladpolozkadenik"
+      AliasName="ND_ZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwKpDokladpolozkadenik"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="VwKpDokladpolozkadenik"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazevSpol"
+      EntityAttrName="SNazevSpol"
+      EntityUsage="VwKpDokladpolozkadenik"
+      AliasName="S_NAZEV_SPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopisList"
+      EntityAttrName="SPopisList"
+      EntityUsage="VwKpDokladpolozkadenik"
+      AliasName="S_POPIS_LIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlSloupec"
+      EntityAttrName="NlSloupec"
+      EntityUsage="VwKpDokladpolozkadenik"
+      AliasName="NL_SLOUPEC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      EntityAttrName="NlRadek"
+      EntityUsage="VwKpDokladpolozkadenik"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwKpDokladpolozkadenik"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

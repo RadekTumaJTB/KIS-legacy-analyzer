@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="TmpKpDokladuverovapoziceEsc"
+   DBObjectType="table"
+   DBObjectName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC"
+   AliasName="TmpKpDokladuverovapoziceEsc"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.TmpKpDokladuverovapoziceEscImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="SUcet"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_UCET"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkamena"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKAMENA"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkalocal"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKALOCAL"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCastkacnb"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CASTKACNB"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SMena"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnName="S_MENA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUnifprotiIco"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnName="S_UNIFPROTI_ICO"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUnifproti"
+      Precision="256"
+      Type="java.lang.String"
+      ColumnName="S_UNIFPROTI"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="256" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDoklad"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SListgroup"
+      Precision="43"
+      Type="java.lang.String"
+      ColumnName="S_LISTGROUP"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="43" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SListgroupcode"
+      Precision="5"
+      Type="java.lang.String"
+      ColumnName="S_LISTGROUPCODE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="5" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopis"
+      Precision="4000"
+      Type="java.lang.String"
+      ColumnName="S_POPIS"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="4000" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdKategorieKoef"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_KATEGORIE_KOEF"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SLocale"
+      Precision="6"
+      Type="java.lang.String"
+      ColumnName="S_LOCALE"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="6" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SUcetunif"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnName="S_UCETUNIF"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdUnifproti"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_UNIFPROTI"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SPopisoriginal"
+      Precision="64"
+      Type="java.lang.String"
+      ColumnName="S_POPISORIGINAL"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="64" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CBanka"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_BANKA"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NdCistaangazovanost"
+      Precision="18"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ND_CISTAANGAZOVANOST"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="RowID"
+      IsUpdateable="false"
+      Type="oracle.jbo.domain.RowID"
+      ColumnName="ROWID"
+      ColumnType="ROWID"
+      SQLType="VARCHAR"
+      PrimaryKey="true" >
+   </Attribute>
+</Entity>

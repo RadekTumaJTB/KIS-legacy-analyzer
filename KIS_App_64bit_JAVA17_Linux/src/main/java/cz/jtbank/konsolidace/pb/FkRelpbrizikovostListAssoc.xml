@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+
+<Association
+   Name="FkRelpbrizikovostListAssoc" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+   </DesignTime>
+   <AssociationEnd
+      Name="KpKtgPblistrizikovosti"
+      Cardinality="1"
+      Source="true"
+      Owner="cz.jtbank.konsolidace.pb.KpKtgPblistrizikovosti" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpKtgPblistrizikovosti.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_minCardinality" Value="1" />
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="KpKtgPblistrizikovosti" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.pb.KpKtgPblistrizikovosti.PkPblistrizikovosti" />
+      </DesignTime>
+   </AssociationEnd>
+   <AssociationEnd
+      Name="KpRelPbrizikovost"
+      Cardinality="-1"
+      Owner="cz.jtbank.konsolidace.pb.KpRelPbrizikovost" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.pb.KpRelPbrizikovost.IdListrizikovosti" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="KpRelPbrizikovost" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.pb.KpRelPbrizikovost.FkRelpbrizikovostList" />
+      </DesignTime>
+   </AssociationEnd>
+</Association>

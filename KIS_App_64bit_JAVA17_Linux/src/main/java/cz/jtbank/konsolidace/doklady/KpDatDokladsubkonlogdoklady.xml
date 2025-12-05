@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatDokladsubkonlogdoklady"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_DOKLADSUBKONLOGDOKLADY"
+   AliasName="KpDatDokladsubkonlogdoklady"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="4"
+   RowClass="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdokladyImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADSUBKONLOGDOKLADY"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgsubkonsolidace"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGSUBKONSOLIDACE"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADSUBKONLOGDOKLADY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatum"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUM"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_DOKLADSUBKONLOGDOKLADY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDokladclen"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLADCLEN"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADSUBKONLOGDOKLADY"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgucetnispolecnostclen"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGUCETNISPOLECNOSTCLEN"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADSUBKONLOGDOKLADY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdKtgsubkonsolidaceclen"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_KTGSUBKONSOLIDACECLEN"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADSUBKONLOGDOKLADY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NlKrokdokladclen"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="NL_KROKDOKLADCLEN"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADSUBKONLOGDOKLADY" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpDatDoklad"
+      Association="cz.jtbank.konsolidace.doklady.FkKpdokladsubkonlogdDokclAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpdokladsubkonlogdDokclAssoc.KpDatDoklad"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkKpdokladsubkonlogdDokclAssoc.KpDatDokladsubkonlogdoklady"
+      Type="cz.jtbank.konsolidace.doklady.KpDatDokladImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpdokladsubkonlogdDokcl" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdoklady.IdDokladclen" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDOKLADSUBKONLOGD_DOKCL" />
+         <Attr Name="_checkCondition" Value="&#34;ID_DOKLADCLEN&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpdatdokladsubkonlogdoklady" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdoklady.IdDoklad" />
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdoklady.IdDokladclen" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPDATDOKLADSUBKONLOGDOKLADY" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdokladsubkonlogdDoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdoklady.IdDoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDOKLADSUBKONLOGD_DOKLAD" />
+         <Attr Name="_checkCondition" Value="&#34;ID_DOKLAD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="CnKpdokladsubkonlogClen" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdoklady.IdKtgucetnispolecnostclen" />
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdoklady.IdKtgsubkonsolidaceclen" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="CN_KPDOKLADSUBKONLOG_CLEN" />
+         <Attr Name="_checkCondition" Value="
+				  ( id_ktgUcetniSpolecnostClen is null and id_ktgSubkonsolidaceClen is not null ) or
+				  ( id_ktgUcetniSpolecnostClen is not null and id_ktgSubkonsolidaceClen is null )
+   " />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpdokladsubkonlogdDokcl" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdoklady.IdDokladclen" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPDOKLADSUBKONLOGD_DOKCL" />
+         <Attr Name="_referencedKey" Value="PK_KPDOKLAD" />
+         <Attr Name="_isForeign" Value="true" />
+         <Attr Name="_isCascadeDelete" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkKpdokladsubkonlogdDok" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdoklady.IdDoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_KPDOKLADSUBKONLOGD_DOK" />
+         <Attr Name="_referencedKey" Value="PK_KPDOKLAD" />
+         <Attr Name="_isForeign" Value="true" />
+         <Attr Name="_isCascadeDelete" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

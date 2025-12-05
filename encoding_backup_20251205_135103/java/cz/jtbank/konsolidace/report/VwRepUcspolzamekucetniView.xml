@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepUcspolzamekucetniView"
+   SelectList="VwRepUcspolzamekucetni.DT_DATUM, 
+       VwRepUcspolzamekucetni.S_UZIVATEL, 
+       VwRepUcspolzamekucetni.DT_TIMESTAMP, 
+       VwRepUcspolzamekucetni.S_NAZEV, 
+       VwRepUcspolzamekucetni.ID"
+   FromList="DB_JT.VW_REP_UCSPOLZAMEKUCETNI VwRepUcspolzamekucetni"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepUcspolzamekucetniViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepUcspolzamekucetni"
+      Entity="cz.jtbank.konsolidace.report.VwRepUcspolzamekucetni" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwRepUcspolzamekucetni"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="VwRepUcspolzamekucetni"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtTimestamp"
+      EntityAttrName="DtTimestamp"
+      EntityUsage="VwRepUcspolzamekucetni"
+      AliasName="DT_TIMESTAMP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwRepUcspolzamekucetni"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwRepUcspolzamekucetni"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="dokument"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.dokument" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="KpKtgUsek"
+      FullName="cz.jtbank.konsolidace.dokument.KpKtgUsek"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgUsekView"
+      FullName="cz.jtbank.konsolidace.dokument.KpKtgUsekView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgOdbor"
+      FullName="cz.jtbank.konsolidace.dokument.KpKtgOdbor"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgOdborView"
+      FullName="cz.jtbank.konsolidace.dokument.KpKtgOdborView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisTyptransakce"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisTyptransakce"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisTyptransakceEditView"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisTyptransakceEditView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisDokument"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisDokument"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisDokumentView"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisDokumentView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatSchvalovak"
+      FullName="cz.jtbank.konsolidace.dokument.VwDatSchvalovak"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatSchvalovakView_OLD"
+      FullName="cz.jtbank.konsolidace.dokument.VwDatSchvalovakView_OLD"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatSchvalovakradek"
+      FullName="cz.jtbank.konsolidace.dokument.VwDatSchvalovakradek"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatSchvalovakradekView"
+      FullName="cz.jtbank.konsolidace.dokument.VwDatSchvalovakradekView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="DokumentModule"
+      FullName="cz.jtbank.konsolidace.dokument.DokumentModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="VwKtgOdbor"
+      FullName="cz.jtbank.konsolidace.dokument.VwKtgOdbor"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKtgOdborView"
+      FullName="cz.jtbank.konsolidace.dokument.VwKtgOdborView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDatDoczastup"
+      FullName="cz.jtbank.konsolidace.dokument.KpDatDoczastup"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDatDoczastupView"
+      FullName="cz.jtbank.konsolidace.dokument.KpDatDoczastupView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisDokumentstatus"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisDokumentstatus"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisDokumentstatusView"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisDokumentstatusView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisDokumentspoltyp"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisDokumentspoltyp"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisDokumentspoltypView"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisDokumentspoltypView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpRelAppuserDocucspol"
+      FullName="cz.jtbank.konsolidace.dokument.KpRelAppuserDocucspol"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpRelAppuserDocucspolView"
+      FullName="cz.jtbank.konsolidace.dokument.KpRelAppuserDocucspolView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwKpZemeucspol"
+      FullName="cz.jtbank.konsolidace.dokument.VwKpZemeucspol"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwKpZemeucspolView"
+      FullName="cz.jtbank.konsolidace.dokument.VwKpZemeucspolView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisMisuctymdd"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisMisuctymdd"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisMisuctymddView"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisMisuctymddView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisTyptransakceView"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisTyptransakceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpDefDeveloperspolecnost"
+      FullName="cz.jtbank.konsolidace.dokument.KpDefDeveloperspolecnost"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpDefDeveloperspolecnostView"
+      FullName="cz.jtbank.konsolidace.dokument.KpDefDeveloperspolecnostView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisDokumentuhrada"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisDokumentuhrada"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisDokumentuhradaView"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisDokumentuhradaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepSchvalovakpostup"
+      FullName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostup"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepSchvalovakpostupView"
+      FullName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostupView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FkMisuctymddTtAssoc"
+      FullName="cz.jtbank.konsolidace.dokument.FkMisuctymddTtAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpRelMisurovenschvalovani"
+      FullName="cz.jtbank.konsolidace.dokument.KpRelMisurovenschvalovani"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FkKprelmisurovenTtAssoc"
+      FullName="cz.jtbank.konsolidace.dokument.FkKprelmisurovenTtAssoc"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="KpRelMisurovenschvalovaniView"
+      FullName="cz.jtbank.konsolidace.dokument.KpRelMisurovenschvalovaniView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepSchvalovakpostupDetail"
+      FullName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostupDetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepSchvalovakpostupDetailView"
+      FullName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostupDetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRelGestortransakce"
+      FullName="cz.jtbank.konsolidace.dokument.VwRelGestortransakce"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRelGestortransakceView"
+      FullName="cz.jtbank.konsolidace.dokument.VwRelGestortransakceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepSchvalovakhlava"
+      FullName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakhlava"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepSchvalovakhlavaView"
+      FullName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakhlavaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRepSchvalovakhlavadetail"
+      FullName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakhlavadetail"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRepSchvalovakhlavadetailView"
+      FullName="cz.jtbank.konsolidace.dokument.VwRepSchvalovakhlavadetailView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwRelGestortransakceSpol"
+      FullName="cz.jtbank.konsolidace.dokument.VwRelGestortransakceSpol"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwRelGestortransakceSpolView"
+      FullName="cz.jtbank.konsolidace.dokument.VwRelGestortransakceSpolView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatSchvalovakAll"
+      FullName="cz.jtbank.konsolidace.dokument.VwDatSchvalovakAll"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatSchvalovakAllView"
+      FullName="cz.jtbank.konsolidace.dokument.VwDatSchvalovakAllView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisTypfaktury"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisTypfaktury"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisTypfakturyView"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisTypfakturyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwDatSchvalovak_2012"
+      FullName="cz.jtbank.konsolidace.dokument.VwDatSchvalovak_2012"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwDatSchvalovakView"
+      FullName="cz.jtbank.konsolidace.dokument.VwDatSchvalovakView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisTypTranCapexOpex"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisTypTranCapexOpex"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisTypTranCapexOpexView"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisTypTranCapexOpexView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisBankar"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisBankar"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisBankarView"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisBankarView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwCisTyptransakce"
+      FullName="cz.jtbank.konsolidace.dokument.VwCisTyptransakce"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwCisTyptransakceView"
+      FullName="cz.jtbank.konsolidace.dokument.VwCisTyptransakceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwCisTypfaktury"
+      FullName="cz.jtbank.konsolidace.dokument.VwCisTypfaktury"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwCisTypfakturyView"
+      FullName="cz.jtbank.konsolidace.dokument.VwCisTypfakturyView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcetnispolecnostLink"
+      FullName="cz.jtbank.konsolidace.dokument.KpKtgUcetnispolecnostLink"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpKtgUcetnispolecnostLinkView"
+      FullName="cz.jtbank.konsolidace.dokument.KpKtgUcetnispolecnostLinkView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="KpCisIsitBudget"
+      FullName="cz.jtbank.konsolidace.dokument.KpCisIsitBudget"
+      ObjectType="Entity" >
+   </Containee>
+</JboPackage>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="fininv"
+   SeparateXMLFiles="true"
+   PackageName="cz.jtbank.konsolidace.fininv" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_ejbPackage" Value="false" />
+   </DesignTime>
+   <Containee
+      Name="VwFinancniinvestice"
+      FullName="cz.jtbank.konsolidace.fininv.VwFinancniinvestice"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwFinancniinvesticeView"
+      FullName="cz.jtbank.konsolidace.fininv.VwFinancniinvesticeView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwFinancniinvemise"
+      FullName="cz.jtbank.konsolidace.fininv.VwFinancniinvemise"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwFinancniinvemiseView"
+      FullName="cz.jtbank.konsolidace.fininv.VwFinancniinvemiseView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwFinancniinvemisehistor"
+      FullName="cz.jtbank.konsolidace.fininv.VwFinancniinvemisehistor"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="VwFinancniinvemisehistorView"
+      FullName="cz.jtbank.konsolidace.fininv.VwFinancniinvemisehistorView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FininvModule"
+      FullName="cz.jtbank.konsolidace.fininv.FininvModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="KpCisMena"
+      FullName="cz.jtbank.konsolidace.fininv.KpCisMena"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="KpCisMenaView"
+      FullName="cz.jtbank.konsolidace.fininv.KpCisMenaView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwProtistranyLimitedView"
+      FullName="cz.jtbank.konsolidace.fininv.VwProtistranyLimitedView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="VwFininvemiseExportView"
+      FullName="cz.jtbank.konsolidace.fininv.VwFininvemiseExportView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

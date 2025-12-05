@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelSubkonsolidaceclenSpecial"
+   SelectList="KpRelSubkonsolidaceclen.ID_KTGUCETNISPOLECNOST, 
+       KpRelSubkonsolidaceclen.ID_KTGSUBKONSOLIDACE, 
+
+       decode(KpKtgUcetnispolecnost.ID_CISSUBJECT,200,&#39;1&#39;,&#39;0&#39;) 
+AS c_subkonsolidace, 
+       KpKtgUcetnispolecnost.S_NAZEV, 
+ 
+      KpKtgUcetnispolecnost.ID, 
+       KpRelSubkonsolidaceclen.ID_KTGUCETNISKUPINA, 
+
+       KpRelSubkonsolidaceclen.DT_CLENSTVIOD"
+   FromList="DB_JT.KP_REL_SUBKONSOLIDACECLEN KpRelSubkonsolidaceclen, DB_JT.KP_KTG_UCETNISPOLECNOST KpKtgUcetnispolecnost"
+   Where="KpRelSubkonsolidaceclen.ID_KTGUCETNISPOLECNOST = KpKtgUcetnispolecnost.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclenSpecialImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelSubkonsolidaceclen"
+      Entity="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclen"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpRelSubkonsolidaceclen.ID_KTGUCETNISPOLECNOST = KpKtgUcetnispolecnost.ID" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgUcetnispolecnost"
+      Entity="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost"
+      SourceUsage="cz.jtbank.konsolidace.subkons.KpRelSubkonsolidaceclenSpecial.KpRelSubkonsolidaceclen"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpRelSubkonsolidaceclen"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgsubkonsolidace"
+      IsNotNull="true"
+      EntityAttrName="IdKtgsubkonsolidace"
+      EntityUsage="KpRelSubkonsolidaceclen"
+      AliasName="ID_KTGSUBKONSOLIDACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CSubkonsolidace"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="1"
+      Type="java.lang.String"
+      AliasName="c_subkonsolidace"
+      ColumnType="CHAR"
+      Expression="decode(KpKtgUcetnispolecnost.ID_CISSUBJECT,200,&#39;1&#39;,&#39;0&#39;)"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetniskupina"
+      EntityUsage="KpRelSubkonsolidaceclen"
+      AliasName="ID_KTGUCETNISKUPINA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtClenstviod"
+      IsNotNull="true"
+      EntityAttrName="DtClenstviod"
+      EntityUsage="KpRelSubkonsolidaceclen"
+      AliasName="DT_CLENSTVIOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

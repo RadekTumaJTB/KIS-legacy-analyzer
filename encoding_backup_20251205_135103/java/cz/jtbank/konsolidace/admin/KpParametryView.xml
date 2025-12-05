@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpParametryView"
+   SelectList="KpParametry.C_NG_POVOLENO, 
+       KpParametry.DT_NG_DATUM_DO, 
+
+       KpParametry.S_NG_HODINY, 
+       KpParametry.S_UZIVATEL, 
+
+       KpParametry.DT_ZMENA, 
+       KpParametry.ROWID, 
+   
+    KpParametry.DT_NG_DATUM_MUSTEK, 
+       KpParametry.ID_KTGUCETNISKUPINA, 
+
+       KpParametry.ID_KTGUCETNISKUPINA2, 
+       KpParametry.ND_KAPITAL, 
+
+       KpParametry.ND_TOLERANCEVAZBY, 
+       KpParametry.DT_GENEROVANI, 
+
+       KpParametry.ID_KTGUCETNISKUPINA3, 
+       KpParametry.ID_KTGUCETNISKUPINA4, 
+
+       KpParametry.NL_MAXXLS, 
+       KpParametry.ID_KTGUCETNISKUPINA6, 
+
+       KpParametry.ID_KTGUCETNISKUPINA7, 
+       KpParametry.C_RELOADPROTISTRAN, 
+
+       KpParametry.DT_GENSUBKONSOLIDACI, 
+       KpParametry.C_RELOADOLAP, 
+
+       KpParametry.APPSERVER_PASSWORD, 
+       KpParametry.DT_UNIFIKOVANEDOKLADY, 
+
+       KpParametry.C_MENU_MU_BANKA, 
+       KpParametry.ID_KTGUCETNISKUPINA8"
+   FromList="DB_JT.KP_PARAMETRY KpParametry"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   RowClass="cz.jtbank.konsolidace.admin.KpParametryViewRowImpl"
+   ComponentClass="cz.jtbank.konsolidace.admin.KpParametryViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.admin.common.KpParametryViewRowImplMsgBundle"
+   RowInterface="cz.jtbank.konsolidace.admin.common.KpParametryViewRow"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpParametry"
+      Entity="cz.jtbank.konsolidace.admin.KpParametry" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="CNgPovoleno"
+      IsNotNull="true"
+      EntityAttrName="CNgPovoleno"
+      EntityUsage="KpParametry"
+      AliasName="C_NG_POVOLENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtNgDatumDo"
+      IsNotNull="true"
+      EntityAttrName="DtNgDatumDo"
+      EntityUsage="KpParametry"
+      AliasName="DT_NG_DATUM_DO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNgHodiny"
+      EntityAttrName="SNgHodiny"
+      EntityUsage="KpParametry"
+      AliasName="S_NG_HODINY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpParametry"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZmena"
+      EntityAttrName="DtZmena"
+      EntityUsage="KpParametry"
+      AliasName="DT_ZMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="KpParametry"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtNgDatumMustek"
+      EntityAttrName="DtNgDatumMustek"
+      EntityUsage="KpParametry"
+      AliasName="DT_NG_DATUM_MUSTEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina"
+      EntityAttrName="IdKtgucetniskupina"
+      EntityUsage="KpParametry"
+      AliasName="ID_KTGUCETNISKUPINA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina2"
+      EntityAttrName="IdKtgucetniskupina2"
+      EntityUsage="KpParametry"
+      AliasName="ID_KTGUCETNISKUPINA2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdKapital"
+      EntityAttrName="NdKapital"
+      EntityUsage="KpParametry"
+      AliasName="ND_KAPITAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdTolerancevazby"
+      EntityAttrName="NdTolerancevazby"
+      EntityUsage="KpParametry"
+      AliasName="ND_TOLERANCEVAZBY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtGenerovani"
+      EntityAttrName="DtGenerovani"
+      EntityUsage="KpParametry"
+      AliasName="DT_GENEROVANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina3"
+      EntityAttrName="IdKtgucetniskupina3"
+      EntityUsage="KpParametry"
+      AliasName="ID_KTGUCETNISKUPINA3"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina4"
+      EntityAttrName="IdKtgucetniskupina4"
+      EntityUsage="KpParametry"
+      AliasName="ID_KTGUCETNISKUPINA4"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlMaxxls"
+      EntityAttrName="NlMaxxls"
+      EntityUsage="KpParametry"
+      AliasName="NL_MAXXLS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina6"
+      EntityAttrName="IdKtgucetniskupina6"
+      EntityUsage="KpParametry"
+      AliasName="ID_KTGUCETNISKUPINA6"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina7"
+      EntityAttrName="IdKtgucetniskupina7"
+      EntityUsage="KpParametry"
+      AliasName="ID_KTGUCETNISKUPINA7"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CReloadprotistran"
+      EntityAttrName="CReloadprotistran"
+      EntityUsage="KpParametry"
+      AliasName="C_RELOADPROTISTRAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtGensubkonsolidaci"
+      EntityAttrName="DtGensubkonsolidaci"
+      EntityUsage="KpParametry"
+      AliasName="DT_GENSUBKONSOLIDACI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CReloadolap"
+      EntityAttrName="CReloadolap"
+      EntityUsage="KpParametry"
+      AliasName="C_RELOADOLAP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="AppserverPassword"
+      EntityAttrName="AppserverPassword"
+      EntityUsage="KpParametry"
+      AliasName="APPSERVER_PASSWORD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtUnifikovanedoklady"
+      EntityAttrName="DtUnifikovanedoklady"
+      EntityUsage="KpParametry"
+      AliasName="DT_UNIFIKOVANEDOKLADY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CMenuMuBanka"
+      EntityAttrName="CMenuMuBanka"
+      EntityUsage="KpParametry"
+      AliasName="C_MENU_MU_BANKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina8"
+      EntityAttrName="IdKtgucetniskupina8"
+      EntityUsage="KpParametry"
+      AliasName="ID_KTGUCETNISKUPINA8"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

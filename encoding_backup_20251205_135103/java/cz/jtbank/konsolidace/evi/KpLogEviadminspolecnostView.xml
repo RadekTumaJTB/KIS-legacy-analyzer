@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpLogEviadminspolecnostView"
+   SelectList="KpLogEviadminspolecnost.S_AKCE, 
+       KpLogEviadminspolecnost.ID, 
+
+       KpLogEviadminspolecnost.S_NAZEV, 
+       KpLogEviadminspolecnost.S_STAT, 
+
+       KpLogEviadminspolecnost.ID_EXTERNIADMIN, 
+       KpKtgEviexterniadmin.S_NAZEV 
+AS SNAZEV1, 
+       KpLogEviadminspolecnost.ID_ADMINISTRATOR, 
+
+       KtgAppuser.S_KRESTNI || &#39; &#39; || KtgAppuser.S_PRIJMENI 
+AS ADMIN, 
+       KpLogEviadminspolecnost.ID_STATUS, 
+       
+KpCisEvistatus.S_POPIS, 
+       KpLogEviadminspolecnost.ID_KTGUCETNISPOLECNOST, 
+
+       KpLogEviadminspolecnost.S_ICO, 
+       KpLogEviadminspolecnost.S_ICODOKUMENTY, 
+
+       KpLogEviadminspolecnost.DT_DATUMZALOZENI, 
+       KpLogEviadminspolecnost.C_NAVRH, 
+
+       KpLogEviadminspolecnost.S_NAZEVNAVRH, 
+       KpLogEviadminspolecnost.S_ICONAVRH, 
+
+       KpLogEviadminspolecnost.ID_ADMINISTRATORNAVRH, 
+     
+  KtgAppuser1.S_KRESTNI || &#39; &#39; || KtgAppuser1.S_PRIJMENI AS ADMINNAVRH, 
+
+       KpLogEviadminspolecnost.ID_TYPSPOL, 
+       KpLogEviadminspolecnost.DT_DATUMZMENY, 
+
+       KpLogEviadminspolecnost.S_UZIVATEL, 
+       KpKtgEviexterniadmin.ID 
+AS ID1, 
+       KpCisEvistatus.ID AS ID2, 
+       KtgAppuser.ID 
+AS ID3, 
+       KtgAppuser1.ID AS ID4"
+   FromList="DB_JT.KP_LOG_EVIADMINSPOLECNOST KpLogEviadminspolecnost, DB_JT.KP_KTG_EVIEXTERNIADMIN KpKtgEviexterniadmin, DB_JT.KTG_APPUSER KtgAppuser, DB_JT.KTG_APPUSER KtgAppuser1, DB_JT.KP_CIS_EVISTATUS KpCisEvistatus"
+   Where="KpLogEviadminspolecnost.ID_EXTERNIADMIN = KpKtgEviexterniadmin.ID (+) AND KpLogEviadminspolecnost.ID_ADMINISTRATOR = KtgAppuser.ID (+) AND KpLogEviadminspolecnost.ID_STATUS = KpCisEvistatus.ID AND KpLogEviadminspolecnost.ID_ADMINISTRATORNAVRH = KtgAppuser1.ID (+)"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnostViewImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.evi.common.KpLogEviadminspolecnostViewRowImplMsgBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="164" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpLogEviadminspolecnost"
+      Entity="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnost" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpLogEviadminspolecnost.ID_EXTERNIADMIN = KpKtgEviexterniadmin.ID (+) AND KpLogEviadminspolecnost.ID_ADMINISTRATOR = KtgAppuser.ID (+) AND KpLogEviadminspolecnost.ID_STATUS = KpCisEvistatus.ID AND KpLogEviadminspolecnost.ID_ADMINISTRATORNAVRH = KtgAppuser1.ID (+)" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgEviexterniadmin"
+      Entity="cz.jtbank.konsolidace.evi.KpKtgEviexterniadmin"
+      SourceUsage="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnostView.KpLogEviadminspolecnost"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnost.Id" />
+            <Item Value="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnost.SNazev" />
+            <Item Value="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnost.SStat" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviexterniadmin.Id" />
+            <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviexterniadmin.SNazev" />
+            <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviexterniadmin.SStat" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KtgAppuser"
+      Entity="cz.jtbank.konsolidace.users.KtgAppuser"
+      SourceUsage="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnostView.KpKtgEviexterniadmin"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpKtgEviexterniadmin.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KtgAppuser1"
+      Entity="cz.jtbank.konsolidace.users.KtgAppuser"
+      SourceUsage="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnostView.KtgAppuser"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.Id" />
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.SUserid" />
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.SUsername" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.Id" />
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.SUserid" />
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.SUsername" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpCisEvistatus"
+      Entity="cz.jtbank.konsolidace.evi.KpCisEvistatus"
+      SourceUsage="cz.jtbank.konsolidace.evi.KpLogEviadminspolecnostView.KtgAppuser1"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.users.KtgAppuser.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpCisEvistatus.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SAkce"
+      EntityAttrName="SAkce"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="S_AKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      EntityAttrName="Id"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SStat"
+      EntityAttrName="SStat"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="S_STAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdExterniadmin"
+      EntityAttrName="IdExterniadmin"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="ID_EXTERNIADMIN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ExtAdmin"
+      IsNotNull="true"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgEviexterniadmin"
+      AliasName="SNAZEV1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdministrator"
+      EntityAttrName="IdAdministrator"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="ID_ADMINISTRATOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Administrator"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="ADMIN"
+      ColumnType="VARCHAR2"
+      Expression="KtgAppuser.S_KRESTNI || &#39; &#39; || KtgAppuser.S_PRIJMENI"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdStatus"
+      EntityAttrName="IdStatus"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="ID_STATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Status"
+      IsNotNull="true"
+      EntityAttrName="SPopis"
+      EntityUsage="KpCisEvistatus"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIco"
+      EntityAttrName="SIco"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIcodokumenty"
+      EntityAttrName="SIcodokumenty"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="S_ICODOKUMENTY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzalozeni"
+      EntityAttrName="DtDatumzalozeni"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="DT_DATUMZALOZENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CNavrh"
+      EntityAttrName="CNavrh"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="C_NAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazevnavrh"
+      EntityAttrName="SNazevnavrh"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="S_NAZEVNAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SIconavrh"
+      EntityAttrName="SIconavrh"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="S_ICONAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdministratornavrh"
+      EntityAttrName="IdAdministratornavrh"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="ID_ADMINISTRATORNAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="AdministratorNavrh"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="ADMINNAVRH"
+      ColumnType="VARCHAR2"
+      Expression="KtgAppuser1.S_KRESTNI || &#39; &#39; || KtgAppuser1.S_PRIJMENI"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypspol"
+      EntityAttrName="IdTypspol"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="ID_TYPSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzmeny"
+      EntityAttrName="DtDatumzmeny"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="DT_DATUMZMENY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="KpLogEviadminspolecnost"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id1"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgEviexterniadmin"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id2"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisEvistatus"
+      AliasName="ID2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id3"
+      EntityAttrName="Id"
+      EntityUsage="KtgAppuser"
+      AliasName="ID3"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id4"
+      EntityAttrName="Id"
+      EntityUsage="KtgAppuser1"
+      AliasName="ID4"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

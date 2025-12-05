@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatBudgetprojtransakcedocView"
+   SelectList="VwDatBudgetprojtransakcedoc.ID, 
+       VwDatBudgetprojtransakcedoc.S_POPIS, 
+
+       VwDatBudgetprojtransakcedoc.ND_CASTKAMENA, 
+       VwDatBudgetprojtransakcedoc.S_MENA, 
+
+       VwDatBudgetprojtransakcedoc.ND_CASTKALOCAL, 
+       VwDatBudgetprojtransakcedoc.UCSPOL_MENA, 
+
+       VwDatBudgetprojtransakcedoc.DATUM, 
+       VwDatBudgetprojtransakcedoc.SPOLECNOST, 
+
+       VwDatBudgetprojtransakcedoc.S_UNIFSPOL, 
+       VwDatBudgetprojtransakcedoc.ID_BUDGET, 
+
+       VwDatBudgetprojtransakcedoc.ID_CISTYPTRANSAKCE, 
+    
+   VwDatBudgetprojtransakcedoc.ID_KTGODBOR, 
+       VwDatBudgetprojtransakcedoc.SPOL_DOC, 
+
+       VwDatBudgetprojtransakcedoc.ID_DOKUMENT, 
+       VwDatBudgetprojtransakcedoc.BUDGET_MENA"
+   FromList="DB_JT.VW_DAT_BUDGETPROJTRANSAKCEDOC VwDatBudgetprojtransakcedoc"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.budget.VwDatBudgetprojtransakcedocViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatBudgetprojtransakcedoc"
+      Entity="cz.jtbank.konsolidace.budget.VwDatBudgetprojtransakcedoc" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="UcspolMena"
+      EntityAttrName="UcspolMena"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="UCSPOL_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Datum"
+      EntityAttrName="Datum"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUnifspol"
+      EntityAttrName="SUnifspol"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="S_UNIFSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdBudget"
+      IsNotNull="true"
+      EntityAttrName="IdBudget"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="ID_BUDGET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCistyptransakce"
+      EntityAttrName="IdCistyptransakce"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="ID_CISTYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgodbor"
+      EntityAttrName="IdKtgodbor"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="ID_KTGODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SpolDoc"
+      EntityAttrName="SpolDoc"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="SPOL_DOC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokument"
+      IsNotNull="true"
+      EntityAttrName="IdDokument"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="ID_DOKUMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="BudgetMena"
+      EntityAttrName="BudgetMena"
+      EntityUsage="VwDatBudgetprojtransakcedoc"
+      AliasName="BUDGET_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

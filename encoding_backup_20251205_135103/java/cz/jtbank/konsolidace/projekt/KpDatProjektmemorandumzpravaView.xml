@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatProjektmemorandumzpravaView"
+   SelectList="KpDatProjektmemorandumzprava.ID, 
+       KpDatProjektmemorandumzprava.ID_KTGPROJEKT, 
+       KpDatProjektmemorandumzprava.DT_DATUM, 
+       KpDatProjektmemorandumzprava.S_ZPRAVA"
+   FromList="DB_JT.KP_DAT_PROJEKTMEMORANDUMZPRAVA KpDatProjektmemorandumzprava"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.KpDatProjektmemorandumzpravaViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatProjektmemorandumzprava"
+      Entity="cz.jtbank.konsolidace.projekt.KpDatProjektmemorandumzprava" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatProjektmemorandumzprava"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      IsNotNull="true"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="KpDatProjektmemorandumzprava"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatProjektmemorandumzprava"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZprava"
+      EntityAttrName="SZprava"
+      EntityUsage="KpDatProjektmemorandumzprava"
+      AliasName="S_ZPRAVA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

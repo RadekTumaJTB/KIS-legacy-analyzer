@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatProjektcashflowView"
+   SelectList="KpDatProjektcashflow.ID, 
+       KpDatProjektcashflow.ID_KTGPROJEKT, 
+
+       KpDatProjektcashflow.ID_TYP, 
+       KpDatProjektcashflow.DT_DATUM, 
+
+       KpDatProjektcashflow.ND_CASTKA, 
+       KpDatProjektcashflow.S_MENA, 
+
+       KpDatProjektcashflow.S_INOUT, 
+       KpDatProjektcashflow.ID_INOUTTYP, 
+
+       KpDatProjektcashflow.S_POZNAMKA, 
+       DB_JT.kurzy.f_getMenaKurs(&#39;ČNB&#39;,&#39;CZK&#39;,KpDatProjektcashflow.S_MENA,NULL) 
+AS XRATE"
+   FromList="DB_JT.KP_DAT_PROJEKTCASHFLOW KpDatProjektcashflow"
+   OrderBy="ID_TYP,DT_DATUM,S_MENA"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.projekt.KpDatProjektcashflowViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatProjektcashflow"
+      Entity="cz.jtbank.konsolidace.projekt.KpDatProjektcashflow" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="ID_TYP,DT_DATUM,S_MENA" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatProjektcashflow"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      IsNotNull="true"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="KpDatProjektcashflow"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyp"
+      IsNotNull="true"
+      EntityAttrName="IdTyp"
+      EntityUsage="KpDatProjektcashflow"
+      AliasName="ID_TYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatProjektcashflow"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastka"
+      EntityAttrName="NdCastka"
+      EntityUsage="KpDatProjektcashflow"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="KpDatProjektcashflow"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SInout"
+      IsNotNull="true"
+      EntityAttrName="SInout"
+      EntityUsage="KpDatProjektcashflow"
+      AliasName="S_INOUT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdInouttyp"
+      IsNotNull="true"
+      EntityAttrName="IdInouttyp"
+      EntityUsage="KpDatProjektcashflow"
+      AliasName="ID_INOUTTYP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="KpDatProjektcashflow"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="XRate"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="XRATE"
+      ColumnType="NUMBER"
+      Expression="DB_JT.kurzy.f_getMenaKurs(&#39;ČNB&#39;,&#39;CZK&#39;,KpDatProjektcashflow.S_MENA,NULL)"
+      SQLType="NUMERIC" >
+   </ViewAttribute>
+</ViewObject>

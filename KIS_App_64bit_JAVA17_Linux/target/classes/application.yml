@@ -1,0 +1,129 @@
+# KIS Application Configuration
+# Java 17 + Spring Boot 3.2.1 + Linux UBI-base10
+
+spring:
+  application:
+    name: kis-konsolidace
+
+  # Database Configuration - Oracle 23c Free
+  datasource:
+    url: jdbc:oracle:thin:@${DB_HOST:oracle}:${DB_PORT:1521}/${DB_SERVICE:FREEPDB1}
+    username: ${DB_USER:kis_user}
+    password: ${DB_PASSWORD:kis_user_2024}
+    driver-class-name: oracle.jdbc.OracleDriver
+
+    # Connection Pool (HikariCP)
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  # JPA/Hibernate Configuration
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    hibernate:
+      ddl-auto: validate  # Never auto-create in production!
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        jdbc:
+          batch_size: 20
+        order_inserts: true
+        order_updates: true
+
+  # Logging Configuration
+  logging:
+    level:
+      root: INFO
+      cz.jtbank: DEBUG
+      org.springframework: INFO
+      org.hibernate: WARN
+    pattern:
+      console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+      file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file:
+      name: /app/logs/kis-application.log
+      max-size: 10MB
+      max-history: 30
+
+  # Mail Configuration (Jakarta Mail)
+  mail:
+    host: ${MAIL_HOST:smtp.example.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+# Application Specific Configuration
+kis:
+  # Platform-independent paths (Linux)
+  paths:
+    export:
+      base: ${EXPORT_BASE_PATH:/opt/kis-banking/exports}
+      projects: ${kis.paths.export.base}/projects
+      documents: ${kis.paths.export.base}/documents
+    template:
+      base: ${TEMPLATE_BASE_PATH:/opt/kis-banking/templates}
+      excel: ${kis.paths.template.base}/excel
+      reports: ${kis.paths.template.base}/reports
+    backup:
+      base: ${BACKUP_BASE_PATH:/var/backup/kis-banking}
+      daily: ${kis.paths.backup.base}/daily
+      monthly: ${kis.paths.backup.base}/monthly
+
+  # Excel/POI Configuration
+  excel:
+    max-rows: 1000000  # XSSF supports 1M+ rows (vs HSSF 65K)
+    buffer-size: 8192
+    streaming-enabled: true
+
+  # Consolidation Settings
+  consolidation:
+    batch-size: 100
+    parallel-processing: true
+    max-threads: 10
+
+# Server Configuration
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    context-path: /kis
+    session:
+      timeout: 30m
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,application/javascript,application/json
+  error:
+    include-message: always
+    include-stacktrace: on_param
+
+# Management/Actuator Endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Character Encoding (UTF-8 everywhere!)
+server.servlet.encoding:
+  charset: UTF-8
+  enabled: true
+  force: true

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepUcspolzamekucetnineView"
+   SelectList="VwRepUcspolzamekucetnine.DT_DATUM, 
+       VwRepUcspolzamekucetnine.S_UZIVATEL, 
+
+       VwRepUcspolzamekucetnine.DT_TIMESTAMP, 
+       VwRepUcspolzamekucetnine.S_NAZEV, 
+
+       VwRepUcspolzamekucetnine.ID, 
+       VwRepUcspolzamekucetnine.DT_LASTCLOSEDATE"
+   FromList="DB_JT.VW_REP_UCSPOLZAMEKUCETNINE VwRepUcspolzamekucetnine"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.report.VwRepUcspolzamekucetnineViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepUcspolzamekucetnine"
+      Entity="cz.jtbank.konsolidace.report.VwRepUcspolzamekucetnine" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="DtDatum"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwRepUcspolzamekucetnine"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUzivatel"
+      EntityAttrName="SUzivatel"
+      EntityUsage="VwRepUcspolzamekucetnine"
+      AliasName="S_UZIVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtTimestamp"
+      EntityAttrName="DtTimestamp"
+      EntityUsage="VwRepUcspolzamekucetnine"
+      AliasName="DT_TIMESTAMP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwRepUcspolzamekucetnine"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      EntityAttrName="Id"
+      EntityUsage="VwRepUcspolzamekucetnine"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtLastclosedate"
+      EntityAttrName="DtLastclosedate"
+      EntityUsage="VwRepUcspolzamekucetnine"
+      AliasName="DT_LASTCLOSEDATE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

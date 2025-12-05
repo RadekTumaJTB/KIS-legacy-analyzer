@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDefNastrojoperaceView"
+   SelectList="KpDefNastrojoperace.ID, 
+       KpDefNastrojoperace.ID_KTGTYPNASTROJE, 
+
+       KpDefNastrojoperace.ID_CISSUBJECT, 
+       KpDefNastrojoperace.ID_KTGTYPOPERACE, 
+
+       KpDefNastrojoperace.S_PCPRODKIND, 
+       KpDefNastrojoperace.S_PCPRODTYPE, 
+
+       KpKtgTypnastroje.S_POPIS AS TYP_NASTROJE, 
+       KpKtgTypnastroje.ID 
+AS ID_TN, 
+       KpKtgTypoperace.S_POPIS AS TYP_OPERACE, 
+  
+     KpKtgTypoperace.ID AS ID_TO, 
+       KpTmpCissubject.S_POPIS 
+AS SUBJECT, 
+       KpTmpCissubject.ID AS ID_S"
+   FromList="DB_JT.KP_DEF_NASTROJOPERACE KpDefNastrojoperace, DB_JT.KP_KTG_TYPNASTROJE KpKtgTypnastroje, DB_JT.KP_KTG_TYPOPERACE KpKtgTypoperace, DB_JT.KP_CIS_SUBJECT KpTmpCissubject"
+   Where="KpDefNastrojoperace.ID_KTGTYPNASTROJE = KpKtgTypnastroje.ID AND KpDefNastrojoperace.ID_KTGTYPOPERACE = KpKtgTypoperace.ID AND KpDefNastrojoperace.ID_CISSUBJECT = KpTmpCissubject.ID (+)"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KpDefNastrojoperaceViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDefNastrojoperace"
+      Entity="cz.jtbank.konsolidace.kapital.KpDefNastrojoperace" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpDefNastrojoperace.ID_KTGTYPNASTROJE = KpKtgTypnastroje.ID AND KpDefNastrojoperace.ID_KTGTYPOPERACE = KpKtgTypoperace.ID AND KpDefNastrojoperace.ID_CISSUBJECT = KpTmpCissubject.ID (+)" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgTypnastroje"
+      Entity="cz.jtbank.konsolidace.kapital.KpKtgTypnastroje"
+      Association="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypnastAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypnastAssoc.KpKtgTypnastroje"
+      SourceUsage="cz.jtbank.konsolidace.kapital.KpDefNastrojoperaceView.KpDefNastrojoperace"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.kapital.KpDefNastrojoperace.IdKtgtypnastroje" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.kapital.KpKtgTypnastroje.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgTypoperace"
+      Entity="cz.jtbank.konsolidace.kapital.KpKtgTypoperace"
+      Association="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypoperAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.kapital.FkKpdefnastoperTypoperAssoc.KpKtgTypoperace"
+      SourceUsage="cz.jtbank.konsolidace.kapital.KpDefNastrojoperaceView.KpDefNastrojoperace"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.kapital.KpDefNastrojoperace.IdKtgtypoperace" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.kapital.KpKtgTypoperace.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpTmpCissubject"
+      Entity="cz.jtbank.konsolidace.mustky.KpTmpCissubject"
+      SourceUsage="cz.jtbank.konsolidace.kapital.KpDefNastrojoperaceView.KpKtgTypoperace"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.kapital.KpKtgTypoperace.Id" />
+            <Item Value="cz.jtbank.konsolidace.kapital.KpKtgTypoperace.SPopis" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCissubject.Id" />
+            <Item Value="cz.jtbank.konsolidace.mustky.KpTmpCissubject.SPopis" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDefNastrojoperace"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgtypnastroje"
+      EntityAttrName="IdKtgtypnastroje"
+      EntityUsage="KpDefNastrojoperace"
+      AliasName="ID_KTGTYPNASTROJE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      EntityAttrName="IdCissubject"
+      EntityUsage="KpDefNastrojoperace"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgtypoperace"
+      EntityAttrName="IdKtgtypoperace"
+      EntityUsage="KpDefNastrojoperace"
+      AliasName="ID_KTGTYPOPERACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPcprodkind"
+      EntityAttrName="SPcprodkind"
+      EntityUsage="KpDefNastrojoperace"
+      AliasName="S_PCPRODKIND"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPcprodtype"
+      EntityAttrName="SPcprodtype"
+      EntityUsage="KpDefNastrojoperace"
+      AliasName="S_PCPRODTYPE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="TypNastroje"
+      IsNotNull="true"
+      EntityAttrName="SPopis"
+      EntityUsage="KpKtgTypnastroje"
+      AliasName="TYP_NASTROJE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTN"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgTypnastroje"
+      AliasName="ID_TN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="TypOperace"
+      IsNotNull="true"
+      EntityAttrName="SPopis"
+      EntityUsage="KpKtgTypoperace"
+      AliasName="TYP_OPERACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTO"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgTypoperace"
+      AliasName="ID_TO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Subject"
+      EntityAttrName="SPopis"
+      EntityUsage="KpTmpCissubject"
+      AliasName="SUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdS"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpTmpCissubject"
+      AliasName="ID_S"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

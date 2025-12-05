@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatEvidoidentifikaceView"
+   SelectList="KpDatEvidoidentifikace.ID, 
+       KpDatEvidoidentifikace.ID_CISDOIDENTIFIKACE, 
+
+       KpDatEvidoidentifikace.DT_PLATNOSTOD, 
+       KpDatEvidoidentifikace.DT_PLATNOSTDO, 
+
+       KpDatEvidoidentifikace.S_POZNAMKA, 
+       KpCisEvidoidentifikace.S_NAZEV 
+AS CIS, 
+       KpCisEvidoidentifikace.ID AS ID_CIS, 
+       
+KpDatEvidoidentifikace.ID_ADMINSPOLECNOST, 
+       KpDatEvidoidentifikace.C_NAVRH"
+   FromList="DB_JT.KP_DAT_EVIDOIDENTIFIKACE KpDatEvidoidentifikace, DB_JT.KP_CIS_EVIDOIDENTIFIKACE KpCisEvidoidentifikace"
+   Where="KpDatEvidoidentifikace.ID_CISDOIDENTIFIKACE = KpCisEvidoidentifikace.ID (+)"
+   OrderBy="KpDatEvidoidentifikace.DT_PLATNOSTOD DESC,KpDatEvidoidentifikace.DT_PLATNOSTDO"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.evi.KpDatEvidoidentifikaceViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatEvidoidentifikace"
+      Entity="cz.jtbank.konsolidace.evi.KpDatEvidoidentifikace" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpDatEvidoidentifikace.ID_CISDOIDENTIFIKACE = KpCisEvidoidentifikace.ID (+)" />
+         <Attr Name="_queryOrderBy" Value="KpDatEvidoidentifikace.DT_PLATNOSTOD DESC,KpDatEvidoidentifikace.DT_PLATNOSTDO" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpCisEvidoidentifikace"
+      Entity="cz.jtbank.konsolidace.evi.KpCisEvidoidentifikace"
+      SourceUsage="cz.jtbank.konsolidace.evi.KpDatEvidoidentifikaceView.KpDatEvidoidentifikace"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpDatEvidoidentifikace.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.evi.KpCisEvidoidentifikace.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatEvidoidentifikace"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisdoidentifikace"
+      IsNotNull="true"
+      EntityAttrName="IdCisdoidentifikace"
+      EntityUsage="KpDatEvidoidentifikace"
+      AliasName="ID_CISDOIDENTIFIKACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDatEvidoidentifikace"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDatEvidoidentifikace"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="KpDatEvidoidentifikace"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Cis"
+      EntityAttrName="SNazev"
+      EntityUsage="KpCisEvidoidentifikace"
+      AliasName="CIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCis"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisEvidoidentifikace"
+      AliasName="ID_CIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAdminspolecnost"
+      EntityAttrName="IdAdminspolecnost"
+      EntityUsage="KpDatEvidoidentifikace"
+      AliasName="ID_ADMINSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CNavrh"
+      EntityAttrName="CNavrh"
+      EntityUsage="KpDatEvidoidentifikace"
+      AliasName="C_NAVRH"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

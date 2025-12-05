@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="ReportModule"
+   ComponentClass="cz.jtbank.konsolidace.report.ReportModuleImpl"
+   ComponentInterface="cz.jtbank.konsolidace.report.common.ReportModule" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="VwRepDocprehledView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepDocprehledView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepDocprumernaspolView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepDocprumernaspolView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepDocschvalanoView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepDocschvalanoView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepDocschvalneView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepDocschvalneView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepDocschvalnerelView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepDocschvalnerelView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepDocucspolporadiView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepDocucspolporadiView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepDoczadavatelmaxView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepDoczadavatelmaxView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspollastclosedateView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspollastclosedateView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolmaxtransakciView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolmaxtransakciView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolprehledView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolprehledView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolucetniView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolucetniView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolucetniproblemmuView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolucetniproblemmuView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolucetniproblemzukView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolucetniproblemzukView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolpodiltransakciView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolpodiltransakciView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolucetnidetailmuView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolucetnidetailmuView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolucetnidetailzukView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolucetnidetailzukView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspoldetailclosedateView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspoldetailclosedateView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepDocnezauctovanoView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepDocnezauctovanoView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolzamekucetniView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolzamekucetniView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolzamekooView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolzamekooView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolzamekschybouView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybouView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolzamekschybouspolView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolzamekschybouspolView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolpodiltransakcibilView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolpodiltransakcibilView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolzamekucetnineView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolzamekucetnineView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="VwRepUcspolzamekooneView1"
+      ViewObjectName="cz.jtbank.konsolidace.report.VwRepUcspolzamekooneView" >
+   </ViewUsage>
+</AppModule>

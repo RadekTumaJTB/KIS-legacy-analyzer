@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatDokladvazbyView"
+   SelectList="KpDatDokladvazby.ID_KTGUCETNISPOLECNOSTTO, 
+       KpDatDokladvazby.ID, 
+
+       KpDatDokladvazby.NL_PORADILIST, 
+       KpDatDokladvazby.ID_DOKLAD, 
+
+       KpDatDokladvazby.ID_KTGUCETNISKUPINA, 
+       KpDatDokladvazby.ID_KTGUCETNISPOLECNOSTFROM, 
+
+       KpDatDokladvazby.ID_CISRADEKTEXT, 
+       KpDatDokladvazby.S_MENA, 
+
+       KpDatDokladvazby.S_UCET, 
+       KpDatDokladvazby.ND_CASTKAMENA, 
+
+       KpDatDokladvazby.ND_CASTKALOCAL, 
+       KpDatDokladvazby.ND_CASTKAVYPAROVAT, 
+
+       KpDatDokladvazby.ID_PAR, 
+       KpDatDokladvazby.NL_RADEK, 
+
+       KpDatDokladvazby.ND_CASTKAMENAORIGINAL, 
+       KpDatDokladvazby.ID_DOKLADPROTISTRANA, 
+
+       KpDatDokladvazby.ND_CASTKALOCALORIGINAL, 
+       KpDatDokladvazby.NL_USERINDEXVAZBA, 
+
+       KpDatDokladvazby.C_PROPISUJVAZBY, 
+       KpDatDokladvazby.ID_KTGSUBKONSOLIDACE, 
+
+       KpDatDokladvazby.ID_CISUCETUNIF, 
+       KpCisUcetunif.S_UCET 
+AS S_UCETUNIF, 
+       KpCisUcetunif.ID AS ID_UCETUNIF, 
+    
+   KpCisUcetunif.C_CLASS"
+   FromList="DB_JT.KP_DAT_DOKLADVAZBY KpDatDokladvazby, DB_JT.KP_CIS_UCETUNIF KpCisUcetunif"
+   Where="KpDatDokladvazby.ID_CISUCETUNIF = KpCisUcetunif.ID(+)"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatDokladvazbyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatDokladvazby"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatDokladvazby"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpDatDokladvazby.ID_CISUCETUNIF = KpCisUcetunif.ID(+)" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpCisUcetunif"
+      Entity="cz.jtbank.konsolidace.mustky.KpCisUcetunif"
+      SourceUsage="cz.jtbank.konsolidace.doklady.KpDatDokladvazbyView.KpDatDokladvazby"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladvazby.Id" />
+            <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladvazby.SUcet" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetunif.Id" />
+            <Item Value="cz.jtbank.konsolidace.mustky.KpCisUcetunif.SUcet" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnostto"
+      EntityAttrName="IdKtgucetnispolecnostto"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ID_KTGUCETNISPOLECNOSTTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlPoradilist"
+      EntityAttrName="NlPoradilist"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="NL_PORADILIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetniskupina"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetniskupina"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ID_KTGUCETNISKUPINA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnostfrom"
+      EntityAttrName="IdKtgucetnispolecnostfrom"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ID_KTGUCETNISPOLECNOSTFROM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisradektext"
+      EntityAttrName="IdCisradektext"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ID_CISRADEKTEXT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      EntityAttrName="SUcet"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkavyparovat"
+      EntityAttrName="NdCastkavyparovat"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ND_CASTKAVYPAROVAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPar"
+      EntityAttrName="IdPar"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ID_PAR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      EntityAttrName="NlRadek"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamenaoriginal"
+      EntityAttrName="NdCastkamenaoriginal"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ND_CASTKAMENAORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokladprotistrana"
+      EntityAttrName="IdDokladprotistrana"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ID_DOKLADPROTISTRANA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocaloriginal"
+      EntityAttrName="NdCastkalocaloriginal"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ND_CASTKALOCALORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlUserindexvazba"
+      EntityAttrName="NlUserindexvazba"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="NL_USERINDEXVAZBA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPropisujvazby"
+      EntityAttrName="CPropisujvazby"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="C_PROPISUJVAZBY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgsubkonsolidace"
+      EntityAttrName="IdKtgsubkonsolidace"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ID_KTGSUBKONSOLIDACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisucetunif"
+      EntityAttrName="IdCisucetunif"
+      EntityUsage="KpDatDokladvazby"
+      AliasName="ID_CISUCETUNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetunif"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="KpCisUcetunif"
+      AliasName="S_UCETUNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id1"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpCisUcetunif"
+      AliasName="ID_UCETUNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CClass"
+      EntityAttrName="CClass"
+      EntityUsage="KpCisUcetunif"
+      AliasName="C_CLASS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+
+<Association
+   Name="FkRelcennypapirindexCpAssoc" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+   </DesignTime>
+   <AssociationEnd
+      Name="KtgCennypapir"
+      Cardinality="1"
+      Source="true"
+      Owner="cz.jtbank.konsolidace.kapital.KtgCennypapir" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KtgCennypapir.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_minCardinality" Value="1" />
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="KtgCennypapir" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.kapital.KtgCennypapir.PkKtgcennypapir" />
+      </DesignTime>
+   </AssociationEnd>
+   <AssociationEnd
+      Name="KpRelCennypapirindex"
+      Cardinality="1"
+      Owner="cz.jtbank.konsolidace.kapital.KpRelCennypapirindex" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.kapital.KpRelCennypapirindex.IdCennypapir" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+         <Attr Name="_finderName" Value="KpRelCennypapirindex" />
+         <Attr Name="_foreignKey" Value="cz.jtbank.konsolidace.kapital.KpRelCennypapirindex.FkRelcennypapirindexCp" />
+      </DesignTime>
+   </AssociationEnd>
+</Association>

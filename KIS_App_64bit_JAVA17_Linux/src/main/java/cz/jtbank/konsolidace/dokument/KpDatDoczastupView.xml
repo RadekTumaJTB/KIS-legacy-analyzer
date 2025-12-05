@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatDoczastupView"
+   SelectList="KpDatDoczastup.ID, 
+       KpDatDoczastup.ID_KOHO, 
+       KpDatDoczastup.ID_KDO, 
+       KpDatDoczastup.DT_PLATNOSTOD, 
+       KpDatDoczastup.DT_PLATNOSTDO, 
+       KpDatDoczastup.C_FWDEMAIL"
+   FromList="DB_JT.KP_DAT_DOCZASTUP KpDatDoczastup"
+   OrderBy="DT_PLATNOSTOD"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.KpDatDoczastupViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatDoczastup"
+      Entity="cz.jtbank.konsolidace.dokument.KpDatDoczastup" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="DT_PLATNOSTOD" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatDoczastup"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKoho"
+      EntityAttrName="IdKoho"
+      EntityUsage="KpDatDoczastup"
+      AliasName="ID_KOHO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKdo"
+      EntityAttrName="IdKdo"
+      EntityUsage="KpDatDoczastup"
+      AliasName="ID_KDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostod"
+      EntityAttrName="DtPlatnostod"
+      EntityUsage="KpDatDoczastup"
+      AliasName="DT_PLATNOSTOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtPlatnostdo"
+      EntityAttrName="DtPlatnostdo"
+      EntityUsage="KpDatDoczastup"
+      AliasName="DT_PLATNOSTDO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CFwdemail"
+      EntityAttrName="CFwdemail"
+      EntityUsage="KpDatDoczastup"
+      AliasName="C_FWDEMAIL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpTmpAppuserspolVyjimkyView"
+   SelectList="KpTmpAppuserspolVyjimky.ID_APPUSER, 
+       KpTmpAppuserspolVyjimky.C_VSECHNO, 
+       KtgAppuser.ID AS ID_AU, 
+       S_PRIJMENI || &#39; &#39; || S_KRESTNI AS JMENO"
+   FromList="DB_JT.KP_TMP_APPUSERSPOL_VYJIMKY KpTmpAppuserspolVyjimky, DB_JT.KTG_APPUSER KtgAppuser"
+   Where="KpTmpAppuserspolVyjimky.ID_APPUSER = KtgAppuser.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.users.KpTmpAppuserspolVyjimkyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpTmpAppuserspolVyjimky"
+      Entity="cz.jtbank.konsolidace.users.KpTmpAppuserspolVyjimky" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpTmpAppuserspolVyjimky.ID_APPUSER = KtgAppuser.ID" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KtgAppuser"
+      Entity="cz.jtbank.konsolidace.users.KtgAppuser"
+      SourceUsage="cz.jtbank.konsolidace.users.KpTmpAppuserspolVyjimkyView.KpTmpAppuserspolVyjimky"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdAppuser"
+      IsNotNull="true"
+      EntityAttrName="IdAppuser"
+      EntityUsage="KpTmpAppuserspolVyjimky"
+      AliasName="ID_APPUSER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CVsechno"
+      EntityAttrName="CVsechno"
+      EntityUsage="KpTmpAppuserspolVyjimky"
+      AliasName="C_VSECHNO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAU"
+      EntityAttrName="Id"
+      EntityUsage="KtgAppuser"
+      AliasName="ID_AU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Jmeno"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="JMENO"
+      ColumnType="VARCHAR2"
+      Expression="S_PRIJMENI || &#39; &#39; || S_KRESTNI"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+</ViewObject>

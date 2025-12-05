@@ -1,0 +1,272 @@
+================================================================================
+KIS DEPENDENCY ANALYSIS - EXECUTIVE SUMMARY
+================================================================================
+
+ANALÝZA PROVEDENA: 2025-12-05
+ANALYZOVÁNO: 1,043 Java souborů
+CELKEM IMPORTŮ: 222 unikátních, ~5,200 celkem
+
+================================================================================
+🔥 KRITICKÁ ZJIŠTĚNÍ
+================================================================================
+
+1. ORACLE ADF JBO (3,146 importů - 60% kódu)
+   ❌ Proprietární framework
+   ❌ Vyžaduje Oracle licenci
+   ❌ Nekompatibilní s Java 17
+   ❌ HLAVNÍ BLOKÁTOR MODERNIZACE
+
+   → Migrace: Spring Boot + JPA (6-12 měsíců)
+
+2. APACHE LOG4J 1.x (101 importů)
+   🔥 CVE-2021-44228 (Log4Shell)
+   🔥 End of Life od 2015
+   🔥 KRITICKÉ BEZPEČNOSTNÍ RIZIKO
+
+   → Migrace: SLF4J + Logback (1-2 týdny) - OKAMŽITĚ!
+
+3. WINDOWS-SPECIFIC KÓD
+   ❌ Hardcoded "D:\" cesty v Constants.java
+   ❌ Hostname-based konfigurace
+   ❌ Nekompatibilní s Linux/cloud
+
+   → Migrace: application.yml + env vars (1-2 týdny)
+
+4. JAVAX.* PACKAGES (12 importů)
+   ⚠️  javax.mail → jakarta.mail
+   ⚠️  javax.servlet → jakarta.servlet
+   ⚠️  Vyžadováno pro Java 17
+
+   → Migrace: Jakarta EE (1 týden)
+
+5. APACHE POI HSSF (211 importů)
+   ⚠️  Stará verze, .xls formát
+   ⚠️  Pravděpodobně verze 3.x
+
+   → Migrace: POI 5.x XSSF (2-4 týdny)
+
+================================================================================
+📊 BREAKDOWN IMPORTŮ
+================================================================================
+
+KATEGORIE                    POČET    STATUS          JAVA 17    PRIORITA
+------------------------------------------------------------------------------
+Oracle ADF JBO               3,146    Proprietární    ❌ Ne      🔥 Kritická
+Custom (cz.jtbank.*)          522    Internal        ✅ Ano     ⚠️  Refactor
+Apache POI                    211    Zastaralé       ⚠️  Asi    📋 Střední
+Standard Java (java.*)        ~200   OK              ✅ Ano     ✅ OK
+Apache Log4j 1.x              101    End of Life     ❌ CVE     🔥 OKAMŽITĚ
+javax.mail                     10    Deprecated      ❌ Ne      ⚠️  Vysoká
+javax.servlet                   2    Deprecated      ❌ Ne      ⚠️  Vysoká
+
+================================================================================
+📋 MIGRACE PLÁN - PRIORITIZACE
+================================================================================
+
+FÁZE 1: BEZPEČNOST (1-2 týdny)
+─────────────────────────────────────────────────────────────────────────────
+✓ Log4j 1.x → SLF4J + Logback
+  - 101 importů k nahrazení
+  - Bridge dependency: log4j-over-slf4j
+  - Risk: NÍZKÉ
+  - Benefit: Odstranění CVE-2021-44228
+
+FÁZE 2: PLATFORM COMPATIBILITY (2-3 týdny)
+─────────────────────────────────────────────────────────────────────────────
+✓ Windows → Linux cesty
+  - Refactor Constants.java
+  - Externalizace do application.yml
+  - Environment variables
+  - Risk: STŘEDNÍ
+
+✓ Javax → Jakarta migrace
+  - javax.mail.* → jakarta.mail.*
+  - javax.servlet.* → jakarta.servlet.*
+  - Risk: NÍZKÉ
+
+FÁZE 3: LIBRARY MODERNIZATION (2-4 týdny)
+─────────────────────────────────────────────────────────────────────────────
+✓ Apache POI HSSF → XSSF
+  - HSSFWorkbook → XSSFWorkbook
+  - .xls → .xlsx formát
+  - ~18 souborů v excel/* modulech
+  - Risk: NÍZKÉ
+
+FÁZE 4: FRAMEWORK MIGRATION (6-12 měsíců)
+─────────────────────────────────────────────────────────────────────────────
+⚠️  Oracle ADF → Spring Boot
+  - 3,146 importů
+  - EntityImpl → @Entity + JPA
+  - ViewObjectImpl → @Repository
+  - ApplicationModuleImpl → @Service
+  - Risk: VYSOKÉ
+  - Strategie: Strangler Fig Pattern
+
+================================================================================
+🎯 TOP 10 NEJVÍCE POUŽÍVANÝCH IMPORTŮ
+================================================================================
+
+1.  485 × oracle.jbo.domain.Number
+2.  423 × oracle.jbo.server.ViewObjectImpl
+3.  387 × oracle.jbo.server.AttributeDefImpl
+4.  373 × oracle.jbo.server.EntityImpl
+5.  373 × oracle.jbo.server.EntityDefImpl
+6.  343 × oracle.jbo.Key
+7.  266 × oracle.jbo.domain.Date
+8.  109 × java.util.*
+9.  102 × oracle.jbo.*
+10.  99 × cz.jtbank.konsolidace.common.Logging
+
+📈 Oracle ADF dominance: 8/10 top importů
+
+================================================================================
+📦 CUSTOM MODULY (cz.jtbank.konsolidace)
+================================================================================
+
+MODULE              IMPORTS    ÚČEL
+────────────────────────────────────────────────────────────────────────────
+common               260       Logging, Utils, Constants, Exceptions
+doklady               41       Document management
+projekt               30       Project management
+dokument              19       Documentation
+evi                   19       Evidence
+excel                 18       Excel import/export (POI wrapper)
+budget                18       Budget planning
+protistrany           16       Counterparties
+users                 15       User management
+ifrs                  15       IFRS reporting
+[+10 dalších]        ~60       Various modules
+
+Celkem: ~520 custom importů
+
+KRITICKÉ SOUBORY:
+• cz.jtbank.konsolidace.common.Constants
+  - Hardcoded Windows paths
+  - Hostname-based logic
+
+• cz.jtbank.konsolidace.common.Logging
+  - Log4j 1.x wrapper
+  - Custom appender management
+
+================================================================================
+💻 MAVEN DEPENDENCIES - DOPORUČENÍ
+================================================================================
+
+NOVÉ DEPENDENCIES PRO JAVA 17:
+
+<!-- Logging -->
+<slf4j.version>2.0.9</slf4j.version>
+<logback.version>1.4.14</logback.version>
+
+<!-- Jakarta EE -->
+<jakarta-mail.version>2.1.1</jakarta-mail.version>
+<jakarta-servlet.version>6.0.0</jakarta-servlet.version>
+
+<!-- Apache POI -->
+<apache-poi.version>5.2.5</apache-poi.version>
+
+<!-- Spring Boot (Oracle ADF replacement) -->
+<spring-boot.version>3.2.1</spring-boot.version>
+
+<!-- Oracle JDBC -->
+<oracle-jdbc.version>21.9.0.0</oracle-jdbc.version> (ojdbc11)
+
+ODSTRANĚNÉ DEPENDENCIES:
+❌ Oracle ADF JBO (proprietární)
+❌ Apache Log4j 1.x (CVE)
+❌ javax.mail (deprecated)
+❌ javax.servlet 2.x (deprecated)
+❌ Apache POI 3.x (zastaralé)
+
+================================================================================
+⚠️  RIZIKA A BLOCKERS
+================================================================================
+
+VYSOKÉ RIZIKO:
+• Oracle ADF závislost je hluboce zakořeněná (60% kódu)
+• EntityImpl/ViewObjectImpl jsou všude
+• Bez ADF nelze spustit současnou aplikaci
+• Vyžaduje kompletní re-architekturu
+
+STŘEDNÍ RIZIKO:
+• Windows-specific cesty v celé aplikaci
+• Constants.java používáno ve stovkách souborů
+• Hostname-based logic v produkčním kódu
+
+NÍZKÉ RIZIKO:
+• Log4j má bridge (log4j-over-slf4j)
+• Javax → Jakarta je přímočará změna
+• POI HSSF → XSSF má podobné API
+
+================================================================================
+💰 ODHAD EFFORT
+================================================================================
+
+KOMPONENTA                    EFFORT         TRVÁNÍ      RISK
+────────────────────────────────────────────────────────────────────────────
+Log4j → SLF4J                 80-120h        1-2 týdny   Nízké
+Windows → Linux paths         80-120h        1-2 týdny   Střední
+Javax → Jakarta               40-60h         1 týden     Nízké
+Apache POI upgrade            120-160h       2-4 týdny   Nízké
+────────────────────────────────────────────────────────────────────────────
+SUBTOTAL (Quick wins)         320-460h       6-9 týdnů   Nízké-Střední
+
+Oracle ADF → Spring Boot      3000-4500h     12-18 měs   Vysoké
+────────────────────────────────────────────────────────────────────────────
+TOTAL                         3320-4960h     12-20 měs   Vysoké
+
+DOPORUČENÍ: Začít quick wins (Fáze 1-3), pak strategické rozhodnutí o ADF
+
+================================================================================
+✅ AKČNÍ PLÁN - PRVNÍ 3 MĚSÍCE
+================================================================================
+
+MĚSÍC 1: BEZPEČNOST
+Week 1-2: Setup Maven/Gradle build
+Week 3-4: Log4j migrace + testing
+Result: Odstranění CVE-2021-44228
+
+MĚSÍC 2: PLATFORM
+Week 5-6: Windows → Linux cesty
+Week 7-8: Javax → Jakarta migrace
+Result: Java 17 ready (bez ADF)
+
+MĚSÍC 3: MODERNIZACE
+Week 9-10: Apache POI upgrade
+Week 11-12: Integration testing
+Result: Moderní dependencies
+
+PO 3 MĚSÍCÍCH: Review a rozhodnutí o Oracle ADF strategii
+
+================================================================================
+📞 DOPORUČENÍ
+================================================================================
+
+OKAMŽITÁ AKCE (DO 1 MĚSÍCE):
+1. 🔥 Migrace Log4j → SLF4J (bezpečnostní CVE)
+2. 🔥 Externalizace Constants.java (Linux kompatibilita)
+3. 🔥 Javax → Jakarta migrace (Java 17 prep)
+
+STRATEGICKÉ ROZHODNUTÍ (DO 3 MĚSÍCŮ):
+• Oracle ADF → Spring Boot migrace strategie
+• Strangler Fig vs Big Bang
+• Budget a timeline approval
+• Team capacity planning
+
+DLOUHODOBÝ PLÁN (12-24 MĚSÍCŮ):
+• Postupná migrace modul po modulu
+• Paralelní běh ADF + Spring Boot
+• Regression testing
+• Kompletní odstranění ADF závislosti
+
+================================================================================
+📄 VYGENEROVANÉ DOKUMENTY
+================================================================================
+
+✓ DEPENDENCY_ANALYSIS.md       - Detailní technická analýza
+✓ DEPENDENCY_SUMMARY.txt       - Executive summary (tento soubor)
+✓ Maven POM proposal           - Nový dependency management
+✓ Migration roadmap            - Fáze 1-5 migration plán
+✓ Security assessment          - CVE a rizika
+
+================================================================================

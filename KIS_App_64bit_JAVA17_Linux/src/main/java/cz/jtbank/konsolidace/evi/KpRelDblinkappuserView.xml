@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelDblinkappuserView"
+   SelectList="KpRelDblinkappuser.S_DBLINK, 
+       KpRelDblinkappuser.ID_APPUSER"
+   FromList="DB_JT.KP_REL_DBLINKAPPUSER KpRelDblinkappuser"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.evi.KpRelDblinkappuserViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelDblinkappuser"
+      Entity="cz.jtbank.konsolidace.evi.KpRelDblinkappuser" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SDblink"
+      IsNotNull="true"
+      EntityAttrName="SDblink"
+      EntityUsage="KpRelDblinkappuser"
+      AliasName="S_DBLINK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdAppuser"
+      IsNotNull="true"
+      EntityAttrName="IdAppuser"
+      EntityUsage="KpRelDblinkappuser"
+      AliasName="ID_APPUSER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

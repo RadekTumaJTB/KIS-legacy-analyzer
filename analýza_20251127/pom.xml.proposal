@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  KIS Konsolidace - Modernized Maven POM
+
+  Migration from Oracle ADF to Spring Boot
+  Target: Java 17, Spring Boot 3.x, Jakarta EE
+
+  Generated: 2025-12-05
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cz.jtbank</groupId>
+    <artifactId>konsolidace-kis</artifactId>
+    <version>2.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>KIS Konsolidace - Modernized</name>
+    <description>KIS Consolidation System - Migration from Oracle ADF to Spring Boot</description>
+
+    <properties>
+        <!-- Java Version -->
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Dependency Versions -->
+        <spring-boot.version>3.2.1</spring-boot.version>
+        <apache-poi.version>5.2.5</apache-poi.version>
+        <logback.version>1.4.14</logback.version>
+        <slf4j.version>2.0.9</slf4j.version>
+        <jakarta-mail.version>2.1.1</jakarta-mail.version>
+        <jakarta-servlet.version>6.0.0</jakarta-servlet.version>
+        <oracle-jdbc.version>21.9.0.0</oracle-jdbc.version>
+        <junit.version>5.10.1</junit.version>
+    </properties>
+
+    <dependencies>
+        <!-- ========================================== -->
+        <!-- SPRING BOOT - Replacement for Oracle ADF -->
+        <!-- ========================================== -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
+            <!--
+              Replaces: Oracle ADF JSF/Servlet layer
+              Provides: REST API, MVC, embedded Tomcat
+            -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring-boot.version}</version>
+            <!--
+              Replaces: Oracle JBO Entity/ViewObject/ApplicationModule
+              Provides: JPA, Hibernate, @Entity, @Repository, @Transactional
+            -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <version>${spring-boot.version}</version>
+            <!-- For Jakarta Bean Validation -->
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- LOGGING - Migration from Log4j 1.x       -->
+        <!-- ========================================== -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+            <!-- Standard logging facade -->
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+            <!--
+              Replaces: Apache Log4j 1.x
+              Removes: CVE-2021-44228 (Log4Shell) vulnerability
+            -->
+        </dependency>
+
+        <!-- Bridge for migrating Log4j 1.x code -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+            <!--
+              Migration bridge: Redirects Log4j 1.x calls to SLF4J
+              Allows gradual migration without changing all code at once
+            -->
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- EXCEL - Apache POI Migration             -->
+        <!-- ========================================== -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${apache-poi.version}</version>
+            <!-- Core POI library -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${apache-poi.version}</version>
+            <!--
+              For .xlsx support (XSSF)
+              Replaces: Old HSSF (.xls) format
+              Affects: ~18 files in cz.jtbank.konsolidace.excel.*
+            -->
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- MAIL - Migration from javax.mail         -->
+        <!-- ========================================== -->
+        <dependency>
+            <groupId>org.eclipse.angus</groupId>
+            <artifactId>jakarta.mail</artifactId>
+            <version>${jakarta-mail.version}</version>
+            <!--
+              Replaces: javax.mail.* → jakarta.mail.*
+              Required for Java 17+ compatibility
+            -->
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- SERVLET - Migration from javax.servlet   -->
+        <!-- ========================================== -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>${jakarta-servlet.version}</version>
+            <scope>provided</scope>
+            <!--
+              Replaces: javax.servlet.* → jakarta.servlet.*
+              Required for Java 17+ compatibility
+            -->
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- DATABASE - Oracle JDBC                   -->
+        <!-- ========================================== -->
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc11</artifactId>
+            <version>${oracle-jdbc.version}</version>
+            <!--
+              Oracle JDBC driver for Java 11+
+              Compatible with Java 17
+            -->
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- UTILITIES                                -->
+        <!-- ========================================== -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+            <!-- Optional: Reduces boilerplate code -->
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- TESTING                                  -->
+        <!-- ========================================== -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
+            <scope>test</scope>
+            <!-- Includes JUnit 5, Mockito, AssertJ -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- ============================================ -->
+    <!-- MIGRATION NOTES                             -->
+    <!-- ============================================ -->
+    <!--
+
+    REMOVED DEPENDENCIES (from old project):
+    ========================================
+
+    ❌ Oracle ADF JBO (oracle.jbo.*)
+       - Reason: Proprietary, requires Oracle license
+       - Replaced by: Spring Boot + JPA
+       - Migration effort: 6-12 months
+
+    ❌ Apache Log4j 1.x (org.apache.log4j.*)
+       - Reason: CVE-2021-44228 (Log4Shell), End of Life
+       - Replaced by: SLF4J + Logback
+       - Migration effort: 1-2 weeks
+
+    ❌ javax.mail (javax.mail.*)
+       - Reason: Moved to Jakarta EE
+       - Replaced by: jakarta.mail.*
+       - Migration effort: 1 week
+
+    ❌ javax.servlet 2.x (javax.servlet.*)
+       - Reason: Moved to Jakarta EE
+       - Replaced by: jakarta.servlet.*
+       - Migration effort: 1 week
+
+    ❌ Apache POI 3.x HSSF
+       - Reason: Old .xls format
+       - Replaced by: Apache POI 5.x XSSF (.xlsx)
+       - Migration effort: 2-4 weeks
+
+
+    CONFIGURATION CHANGES:
+    ======================
+
+    1. Externalize hardcoded paths from Constants.java:
+       - D:\Konsolidace_JT\ → application.yml properties
+       - Use environment variables: ${KIS_FILES_ROOT}
+
+    2. Remove hostname-based logic:
+       - KIS_ADMINS from Constants.java → database/config file
+       - Environment-specific config → Spring profiles
+
+    3. Database configuration:
+       - Move from hardcoded JDBC URL to application.yml
+       - Use Spring Boot's datasource configuration
+
+
+    ORACLE ADF → SPRING BOOT MAPPING:
+    ==================================
+
+    EntityImpl              → @Entity + JPA
+    ViewObjectImpl          → @Repository + JPQL
+    ApplicationModuleImpl   → @Service
+    DBTransaction           → @Transactional
+    oracle.jbo.Key          → @Id / @EmbeddedId
+    oracle.jbo.domain.Date  → java.time.LocalDate
+    oracle.jbo.domain.Number → BigDecimal
+    ViewRowImpl             → DTO / Entity
+
+
+    MIGRATION STRATEGY:
+    ===================
+
+    Phase 1: Quick wins (6-9 weeks)
+      ✓ Log4j → SLF4J
+      ✓ Windows paths → externalized config
+      ✓ javax.* → jakarta.*
+      ✓ POI HSSF → XSSF
+
+    Phase 2: Framework migration (12-18 months)
+      ⚠️  Oracle ADF → Spring Boot (Strangler Fig pattern)
+      ⚠️  Module-by-module migration
+      ⚠️  Parallel execution of old and new systems
+
+    -->
+</project>

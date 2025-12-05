@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwDatSchvalovakradekView"
+   SelectList="VwDatSchvalovakradek.ID, 
+       VwDatSchvalovakradek.ID_DOKUMENT, 
+
+       VwDatSchvalovakradek.ID_ODBOR, 
+       VwDatSchvalovakradek.ID_PROJEKT, 
+
+       VwDatSchvalovakradek.ND_CASTKA, 
+       VwDatSchvalovakradek.ID_ODBOROO, 
+
+       VwDatSchvalovakradek.DT_SCHVALENOODBOR, 
+       VwDatSchvalovakradek.ID_PROJEKTMAN, 
+
+       VwDatSchvalovakradek.DT_SCHVALENOPROJEKT, 
+       VwDatSchvalovakradek.ID_UCSPOLOO, 
+
+       VwDatSchvalovakradek.DT_SCHVALENOUCSPOL, 
+       VwDatSchvalovakradek.ID_UCSPOLTOP, 
+
+       VwDatSchvalovakradek.DT_SCHVALENOTOP, 
+       VwDatSchvalovakradek.ODBOR, 
+
+       VwDatSchvalovakradek.PROJEKT, 
+       VwDatSchvalovakradek.ODBOROO, 
+
+       VwDatSchvalovakradek.PROJEKTMAN, 
+       VwDatSchvalovakradek.UCSPOLOO, 
+
+       VwDatSchvalovakradek.UCSPOLTOP, 
+       VwDatSchvalovakradek.ROWID, 
+
+       VwDatSchvalovakradek.S_KOMENTAR, 
+       VwDatSchvalovakradek.ID_KTGUCETNISPOLECNOST, 
+
+       VwDatSchvalovakradek.DT_DATUMPREFAKT, 
+       VwDatSchvalovakradek.ID_PREFAKT, 
+
+       VwDatSchvalovakradek.DT_DATUMZADANI, 
+       VwDatSchvalovakradek.ID_TOP, 
+
+       VwDatSchvalovakradek.C_KPREFAKT, 
+       VwDatSchvalovakradek.DT_DATUMZADANIRADEK, 
+
+       VwDatSchvalovakradek.C_REMOVED, 
+       VwDatSchvalovakradek.ID_CISSTATUS, 
+
+       VwDatSchvalovakradek.C_ZOBJEDNAVKY, 
+       VwDatSchvalovakradek.ODBOR_KOD, 
+
+       VwDatSchvalovakradek.ID_ZAMITNUTO, 
+       VwDatSchvalovakradek.DT_ZAMITNUTO, 
+
+       VwDatSchvalovakradek.S_ZAMITNUTO, 
+       VwDatSchvalovakradek.NESCHVALENO_TOP_PAR, 
+
+       VwDatSchvalovakradek.ZAMITNUTO, 
+       VwDatSchvalovakradek.ID_ZADAVATEL, 
+
+       VwDatSchvalovakradek.ID_CISDOKUMENT, 
+       VwDatSchvalovakradek.ID_GESTOR, 
+
+       VwDatSchvalovakradek.DT_GESTORSCHVALENO, 
+       VwDatSchvalovakradek.GESTOR, 
+
+       VwDatSchvalovakradek.ID_DOKUMENTORIG, 
+       VwDatSchvalovakradek.ODBOROOREAL, 
+
+       VwDatSchvalovakradek.PROJEKTMANREAL, 
+       VwDatSchvalovakradek.UCSPOLOOREAL, 
+
+       VwDatSchvalovakradek.UCSPOLTOPREAL, 
+       VwDatSchvalovakradek.C_DOCZAMITNUTO, 
+
+       VwDatSchvalovakradek.ID_TYPTRANSAKCE, 
+       VwDatSchvalovakradek.TYPTRANSAKCE, 
+
+       VwDatSchvalovakradek.ND_DOCUROVEN1, 
+       VwDatSchvalovakradek.ND_DOCUROVEN2, 
+
+       VwDatSchvalovakradek.ND_PROJEKTUROVEN, 
+       VwDatSchvalovakradek.ND_OBJ_CASTKA_VOLNA, 
+
+       VwDatSchvalovakradek.ID_OBJ_RADEK, 
+       VwDatSchvalovakradek.ID_TYPIZLINK, 
+
+       VwDatSchvalovakradek.NAZEV_SPOLECNOSTI, 
+       VwDatSchvalovakradek.PROTISTRANA, 
+
+       VwDatSchvalovakradek.MENA, 
+       VwDatSchvalovakradek.ID_BANKAR, 
+
+       VwDatSchvalovakradek.BANKAR, 
+       VwDatSchvalovakradek.ISIT_BUDGET"
+   FromList="DB_JT.VW_DAT_SCHVALOVAKRADEK VwDatSchvalovakradek"
+   OrderBy="ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.VwDatSchvalovakradekViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwDatSchvalovakradek"
+      Entity="cz.jtbank.konsolidace.dokument.VwDatSchvalovakradek" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="ID" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokument"
+      IsNotNull="true"
+      EntityAttrName="IdDokument"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_DOKUMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdbor"
+      EntityAttrName="IdOdbor"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_ODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjekt"
+      EntityAttrName="IdProjekt"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_PROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastka"
+      EntityAttrName="NdCastka"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdOdboroo"
+      EntityAttrName="IdOdboroo"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_ODBOROO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenoodbor"
+      EntityAttrName="DtSchvalenoodbor"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="DT_SCHVALENOODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdProjektman"
+      EntityAttrName="IdProjektman"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_PROJEKTMAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenoprojekt"
+      EntityAttrName="DtSchvalenoprojekt"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="DT_SCHVALENOPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoloo"
+      EntityAttrName="IdUcspoloo"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_UCSPOLOO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenoucspol"
+      EntityAttrName="DtSchvalenoucspol"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="DT_SCHVALENOUCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUcspoltop"
+      EntityAttrName="IdUcspoltop"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_UCSPOLTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtSchvalenotop"
+      EntityAttrName="DtSchvalenotop"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="DT_SCHVALENOTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odbor"
+      EntityAttrName="Odbor"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ODBOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Projekt"
+      EntityAttrName="Projekt"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="PROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odboroo"
+      EntityAttrName="Odboroo"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ODBOROO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Projektman"
+      EntityAttrName="Projektman"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="PROJEKTMAN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucspoloo"
+      EntityAttrName="Ucspoloo"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="UCSPOLOO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucspoltop"
+      EntityAttrName="Ucspoltop"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="UCSPOLTOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKomentar"
+      EntityAttrName="SKomentar"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="S_KOMENTAR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumprefakt"
+      EntityAttrName="DtDatumprefakt"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="DT_DATUMPREFAKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdPrefakt"
+      EntityAttrName="IdPrefakt"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_PREFAKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzadani"
+      EntityAttrName="DtDatumzadani"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="DT_DATUMZADANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTop"
+      EntityAttrName="IdTop"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_TOP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CKprefakt"
+      EntityAttrName="CKprefakt"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="C_KPREFAKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzadaniradek"
+      EntityAttrName="DtDatumzadaniradek"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="DT_DATUMZADANIRADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CRemoved"
+      EntityAttrName="CRemoved"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="C_REMOVED"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisstatus"
+      EntityAttrName="IdCisstatus"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_CISSTATUS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CZobjednavky"
+      EntityAttrName="CZobjednavky"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="C_ZOBJEDNAVKY"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="OdborKod"
+      EntityAttrName="OdborKod"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ODBOR_KOD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdZamitnuto"
+      EntityAttrName="IdZamitnuto"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZamitnuto"
+      EntityAttrName="DtZamitnuto"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="DT_ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZamitnuto"
+      EntityAttrName="SZamitnuto"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="S_ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NeschvalenoTopPar"
+      EntityAttrName="NeschvalenoTopPar"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="NESCHVALENO_TOP_PAR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Zamitnuto"
+      EntityAttrName="Zamitnuto"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdZadavatel"
+      EntityAttrName="IdZadavatel"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_ZADAVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCisdokument"
+      IsNotNull="true"
+      EntityAttrName="IdCisdokument"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_CISDOKUMENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdGestor"
+      EntityAttrName="IdGestor"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_GESTOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtGestorschvaleno"
+      EntityAttrName="DtGestorschvaleno"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="DT_GESTORSCHVALENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Gestor"
+      EntityAttrName="Gestor"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="GESTOR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokumentorig"
+      EntityAttrName="IdDokumentorig"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_DOKUMENTORIG"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Odborooreal"
+      EntityAttrName="Odborooreal"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ODBOROOREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Projektmanreal"
+      EntityAttrName="Projektmanreal"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="PROJEKTMANREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucspolooreal"
+      EntityAttrName="Ucspolooreal"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="UCSPOLOOREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucspoltopreal"
+      EntityAttrName="Ucspoltopreal"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="UCSPOLTOPREAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CDoczamitnuto"
+      EntityAttrName="CDoczamitnuto"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="C_DOCZAMITNUTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTyptransakce"
+      EntityAttrName="IdTyptransakce"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_TYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Typtransakce"
+      EntityAttrName="Typtransakce"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="TYPTRANSAKCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdDocuroven1"
+      EntityAttrName="NdDocuroven1"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ND_DOCUROVEN1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdDocuroven2"
+      EntityAttrName="NdDocuroven2"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ND_DOCUROVEN2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdProjekturoven"
+      EntityAttrName="NdProjekturoven"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ND_PROJEKTUROVEN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdObjCastkaVolna"
+      EntityAttrName="NdObjCastkaVolna"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ND_OBJ_CASTKA_VOLNA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdObjRadek"
+      EntityAttrName="IdObjRadek"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_OBJ_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdTypizlink"
+      EntityAttrName="IdTypizlink"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_TYPIZLINK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NazevSpolecnosti"
+      EntityAttrName="NazevSpolecnosti"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="NAZEV_SPOLECNOSTI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Protistrana"
+      EntityAttrName="Protistrana"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="PROTISTRANA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mena"
+      EntityAttrName="Mena"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdBankar"
+      EntityAttrName="IdBankar"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ID_BANKAR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Bankar"
+      EntityAttrName="Bankar"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="BANKAR"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IsitBudget"
+      EntityAttrName="IsitBudget"
+      EntityUsage="VwDatSchvalovakradek"
+      AliasName="ISIT_BUDGET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

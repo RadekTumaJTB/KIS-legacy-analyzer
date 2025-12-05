@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwCisReadekView"
+   SelectList="VwCisReadek.NL_LISTPORADI, 
+       VwCisReadek.RADEK, 
+       VwCisReadek.S_LOCALE, 
+       VwCisReadek.NL_RADEK"
+   FromList="DB_JT.VW_CIS_READEK VwCisReadek"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwCisReadekViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwCisReadek"
+      Entity="cz.jtbank.konsolidace.doklady.VwCisReadek" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="NlListporadi"
+      IsNotNull="true"
+      EntityAttrName="NlListporadi"
+      EntityUsage="VwCisReadek"
+      AliasName="NL_LISTPORADI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Radek"
+      EntityAttrName="Radek"
+      EntityUsage="VwCisReadek"
+      AliasName="RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SLocale"
+      IsNotNull="true"
+      EntityAttrName="SLocale"
+      EntityUsage="VwCisReadek"
+      AliasName="S_LOCALE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      IsNotNull="true"
+      EntityAttrName="NlRadek"
+      EntityUsage="VwCisReadek"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

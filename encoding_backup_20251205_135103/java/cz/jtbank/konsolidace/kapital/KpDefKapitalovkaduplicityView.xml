@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDefKapitalovkaduplicityView"
+   SelectList="KpDefKapitalovkaduplicity.ID, 
+       KpDefKapitalovkaduplicity.DT_DATUMDOKLAD, 
+
+       KpDefKapitalovkaduplicity.ID_KTGUCETNISPOLECNOST, 
+  
+     KpDefKapitalovkaduplicity.ID_KTGTYPNASTROJE, 
+       KpDefKapitalovkaduplicity.S_PRODUKTUCET, 
+
+       KpDefKapitalovkaduplicity.C_IGNOROVAT, 
+       KpDefKapitalovkaduplicity.S_POZNAMKA, 
+
+       KpDefKapitalovkaduplicity.DT_ZALOZENO, 
+       KpKtgTypnastroje.S_POPIS, 
+
+       KpKtgTypnastroje.ID AS ID1"
+   FromList="DB_JT.KP_DEF_KAPITALOVKADUPLICITY KpDefKapitalovkaduplicity, DB_JT.KP_KTG_TYPNASTROJE KpKtgTypnastroje"
+   Where="KpDefKapitalovkaduplicity.ID_KTGTYPNASTROJE = KpKtgTypnastroje.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KpDefKapitalovkaduplicityViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDefKapitalovkaduplicity"
+      Entity="cz.jtbank.konsolidace.kapital.KpDefKapitalovkaduplicity" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpDefKapitalovkaduplicity.ID_KTGTYPNASTROJE = KpKtgTypnastroje.ID" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgTypnastroje"
+      Entity="cz.jtbank.konsolidace.kapital.KpKtgTypnastroje"
+      SourceUsage="cz.jtbank.konsolidace.kapital.KpDefKapitalovkaduplicityView.KpDefKapitalovkaduplicity"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.kapital.KpDefKapitalovkaduplicity.Id" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.kapital.KpKtgTypnastroje.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDefKapitalovkaduplicity"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumdoklad"
+      EntityAttrName="DtDatumdoklad"
+      EntityUsage="KpDefKapitalovkaduplicity"
+      AliasName="DT_DATUMDOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="KpDefKapitalovkaduplicity"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgtypnastroje"
+      EntityAttrName="IdKtgtypnastroje"
+      EntityUsage="KpDefKapitalovkaduplicity"
+      AliasName="ID_KTGTYPNASTROJE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SProduktucet"
+      EntityAttrName="SProduktucet"
+      EntityUsage="KpDefKapitalovkaduplicity"
+      AliasName="S_PRODUKTUCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CIgnorovat"
+      EntityAttrName="CIgnorovat"
+      EntityUsage="KpDefKapitalovkaduplicity"
+      AliasName="C_IGNOROVAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPoznamka"
+      EntityAttrName="SPoznamka"
+      EntityUsage="KpDefKapitalovkaduplicity"
+      AliasName="S_POZNAMKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtZalozeno"
+      EntityAttrName="DtZalozeno"
+      EntityUsage="KpDefKapitalovkaduplicity"
+      AliasName="DT_ZALOZENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      IsNotNull="true"
+      EntityAttrName="SPopis"
+      EntityUsage="KpKtgTypnastroje"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id1"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgTypnastroje"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

@@ -12,7 +12,8 @@ export interface UserSummaryDTO {
 export interface CompanySummaryDTO {
   id: number;
   name: string;
-  ico: string;
+  registrationNumber: string;
+  address: string;
 }
 
 export interface DocumentDTO {
@@ -60,6 +61,7 @@ export interface DocumentLineItemDTO {
   id: number;
   description: string;
   quantity: number;
+  unit: string;
   unitPrice: number;
   total: number;
 }
@@ -69,6 +71,10 @@ export interface DocumentMetadataDTO {
   canApprove: boolean;
   canReject: boolean;
   pendingApproverName: string;
+  createdAt: string;
+  modifiedAt: string;
+  modifiedBy: string;
+  version: number;
 }
 
 export interface DocumentDetailDTO {

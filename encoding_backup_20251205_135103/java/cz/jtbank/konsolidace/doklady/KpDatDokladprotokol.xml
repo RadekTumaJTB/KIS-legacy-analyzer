@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="KpDatDokladprotokol"
+   DBObjectType="table"
+   DBObjectName="DB_JT.KP_DAT_DOKLADPROTOKOL"
+   AliasName="KpDatDokladprotokol"
+   BindingStyle="Oracle"
+   UseGlueCode="false"
+   CodeGenFlag="132"
+   RowClass="cz.jtbank.konsolidace.doklady.KpDatDokladprotokolImpl"
+   MsgBundleClass="cz.jtbank.konsolidace.doklady.common.KpDatDokladprotokolImplMsgBundle" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADPROTOKOL"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="DtDatum"
+      Type="oracle.jbo.domain.Date"
+      ColumnName="DT_DATUM"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="DB_JT.KP_DAT_DOKLADPROTOKOL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnName="ID_DOKLAD"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="DB_JT.KP_DAT_DOKLADPROTOKOL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CKod"
+      IsNotNull="true"
+      Precision="1"
+      Type="java.lang.String"
+      ColumnName="C_KOD"
+      ColumnType="CHAR"
+      SQLType="CHAR"
+      TableName="DB_JT.KP_DAT_DOKLADPROTOKOL"
+      RetrievedOnUpdate="true"
+      RetrievedOnInsert="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SHlaska"
+      Precision="512"
+      Type="java.lang.String"
+      ColumnName="S_HLASKA"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="DB_JT.KP_DAT_DOKLADPROTOKOL" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="512" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="KpDatDoklad"
+      Association="cz.jtbank.konsolidace.doklady.FkDokladprotokolDokladAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkDokladprotokolDokladAssoc.KpDatDoklad"
+      AssociationOtherEnd="cz.jtbank.konsolidace.doklady.FkDokladprotokolDokladAssoc.KpDatDokladprotokol"
+      Type="cz.jtbank.konsolidace.doklady.KpDatDokladImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="NnKpdokladprotokolDoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladprotokol.IdDoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDOKLADPROTOKOL_DOKLAD" />
+         <Attr Name="_checkCondition" Value="&#34;ID_DOKLAD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdokladprotokolId" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladprotokol.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDOKLADPROTOKOL_ID" />
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="NnKpdokladprotokolKod" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladprotokol.CKod" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="NN_KPDOKLADPROTOKOL_KOD" />
+         <Attr Name="_checkCondition" Value="&#34;C_KOD&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="PkKpdokladprotokoldat" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladprotokol.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="PK_KPDOKLADPROTOKOLDAT" />
+         <Attr Name="_isPrimary" Value="true" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FkDokladprotokolDoklad" >
+      <AttrArray Name="Attributes">
+         <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladprotokol.IdDoklad" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="FK_DOKLADPROTOKOL_DOKLAD" />
+         <Attr Name="_referencedKey" Value="PK_KPDOKLAD" />
+         <Attr Name="_isForeign" Value="true" />
+         <Attr Name="_isCascadeDelete" Value="true" />
+      </DesignTime>
+   </Key>
+</Entity>

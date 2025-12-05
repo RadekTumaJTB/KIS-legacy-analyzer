@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpDokladprehledprotistranaSum"
+   BindingStyle="JDBC"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwKpDokladprehledprotistranaSumImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+select sum(nd_castkaLocal * db_jt.kurzy.f_getMenaKurs(?,?,v.S_MENADOKLAD,?)) nd_castka,
+	   v.NL_PORADILIST,
+	   v.NL_RADEK,
+	   v.S_UCET,
+		(select decode(count(*),0,'0','1')
+		 from db_jt.kp_ktg_spolecnost s, db_jt.kp_rel_subkonsolidaceClen sc
+		 where v.id_ktgspolecnost = s.id
+		   and s.id_ktgSpolecnost = sc.ID_KTGUCETNISPOLECNOST
+		   and ? between sc.DT_CLENSTVIOD and sc.DT_CLENSTVIDO
+		   and sc.ID_KTGSUBKONSOLIDACE = ? 
+		 ) cnt_vazby
+from db_jt.vw_kp_dokladProtiUcetList v
+where v.id_doklad = ?
+  and v.id_ktgSpolecnost in (select id_ktgSpolecnost from db_jt.kp_rep_defSkupina where id_cisSkupina = ? and ? between dt_platnostOd and dt_platnostDo)
+group by v.NL_PORADILIST,
+	     v.NL_RADEK,
+	     v.S_UCET,
+	     v.ID_KTGSPOLECNOST
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <ViewAttribute
+      Name="NdCastka"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ND_CASTKA"
+      ColumnType="VARCHAR2"
+      Expression="ND_CASTKA"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlPoradilist"
+      IsPersistent="false"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      AliasName="NL_PORADILIST"
+      ColumnType="VARCHAR2"
+      Expression="NL_PORADILIST"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      IsPersistent="false"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2"
+      Expression="NL_RADEK"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="10"
+      Type="java.lang.String"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2"
+      Expression="S_UCET"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CntVazby"
+      IsPersistent="false"
+      Precision="1"
+      Type="java.lang.String"
+      AliasName="CNT_VAZBY"
+      ColumnType="VARCHAR2"
+      Expression="CNT_VAZBY"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="1" />
+      </DesignTime>
+   </ViewAttribute>
+</ViewObject>

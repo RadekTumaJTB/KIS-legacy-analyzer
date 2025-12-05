@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatDokladzdrojdatagregaceMis1View"
+   OrderBy="PORADI,DT_DATUM,ID_KTGUCETNISPOLECNOST,id_ktgUcetniSpolecnostTo"
+   BindingStyle="Oracle"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatDokladzdrojdatagregaceMis1ViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+--ORIGINAL
+select mis.DT_DATUM,
+	   mis.ID_KTGUCETNISPOLECNOST, 
+	   nvl(uu.S_UCET,mis.S_UCET) s_ucetUnif,
+	   mis.S_MENA,
+	   decode(uu.c_class,'A',1,'3',1,-1)*decode(mis.C_STRANA,'D',-1,1)*mis.ND_CASTKALOCAL,
+	   decode(uu.c_class,'A',1,'3',1,-1)*decode(mis.C_STRANA,'D',-1,1)*mis.ND_CASTKAMENA,
+	   (select distinct s.id_ktgSpolecnost
+	    from db_jt.kp_ktg_spolecnost s,
+			 db_jt.kp_rel_subkonsolidaceClen sub
+		where s.id = mis.ID_KTGSPOLECNOST
+		  and sub.ID_KTGUCETNISKUPINA = 8
+		  and sub.ID_KTGUCETNISPOLECNOST = s.id_ktgSpolecnost
+	   ) id_ktgUcetniSpolecnostTo,
+	   null id_segment, 1 poradi, f.s_kod, us.s_mena menaUcSpol		
+	   ,mis.ID_DOKUMENT , mis.ID_KTGPROJEKT
+from db_jt.kp_dat_misTransakce mis,
+	 db_jt.kp_cis_ucetUnif uu,
+    db_jt.kp_rel_ucetunifflow rf,
+    db_jt.kp_cis_flow f,
+	db_jt.kp_ktg_ucetniSpolecnost us
+where 
+	mis.ID_KTGUCETNISPOLECNOST = us.id and
+	rf.id_cisflow = f.id   and
+	uu.id = rf.id_cisucetunif  and
+	mis.ID_CISUCETUNIF = uu.ID
+union all
+--MULTISEGMENT
+select mis.DT_DATUM,
+	   mis.ID_KTGUCETNISPOLECNOST, 
+	   nvl(uu.S_UCET,mis.S_UCET) s_ucetUnif,
+	   mis.S_MENA,
+	   decode(uu.c_class,'A',1,'3',1,-1)*decode(mis.C_STRANA,'D',-1,1)*mis.ND_CASTKALOCAL,
+	   decode(uu.c_class,'A',1,'3',1,-1)*decode(mis.C_STRANA,'D',-1,1)*mis.ND_CASTKAMENA,
+	   (select distinct s.id_ktgSpolecnost
+	    from db_jt.kp_ktg_spolecnost s,
+			 db_jt.kp_rel_subkonsolidaceClen sub
+		where s.id = mis.ID_KTGSPOLECNOST
+		  and sub.ID_KTGUCETNISKUPINA = 8
+		  and sub.ID_KTGUCETNISPOLECNOST = s.id_ktgSpolecnost
+	   ) id_ktgUcetniSpolecnostTo,
+	   cis.id_ktgSubkonsolidace, 2 poradi, f.s_kod, us.s_mena
+    ,mis.ID_DOKUMENT , mis.ID_KTGPROJEKT 
+from db_jt.kp_dat_misTransakce mis,
+	 db_jt.kp_ktg_projekt p,
+	 db_jt.kp_cis_mngSegment cis,
+	 db_jt.kp_cis_ucetUnif uu,
+    db_jt.kp_rel_ucetunifflow rf,
+    db_jt.kp_cis_flow f,
+	db_jt.kp_ktg_ucetniSpolecnost us
+where 
+	us.id = mis.id_ktgUcetniSpolecnost and
+	rf.id_cisflow = f.id  and
+	uu.id = rf.id_cisucetunif and
+	mis.id_ktgProjekt = p.id
+  and p.id_mngSegment = cis.id
+  and p.c_pouzitMngSegment = '1'
+  and mis.ID_CISUCETUNIF = uu.ID
+union all
+--IFRS-SUBSEGMENT
+select mis.DT_DATUM,
+	   mis.ID_KTGUCETNISPOLECNOST, 
+	   nvl(uu.S_UCET,mis.S_UCET) s_ucetUnif,
+	   mis.S_MENA,
+	   decode(uu.c_class,'A',1,'3',1,-1)*decode(mis.C_STRANA,'D',-1,1)*mis.ND_CASTKALOCAL,
+	   decode(uu.c_class,'A',1,'3',1,-1)*decode(mis.C_STRANA,'D',-1,1)*mis.ND_CASTKAMENA,
+	   (select distinct s.id_ktgSpolecnost
+	    from db_jt.kp_ktg_spolecnost s,
+			 db_jt.kp_rel_subkonsolidaceClen sub
+		where s.id = mis.ID_KTGSPOLECNOST
+		  and sub.ID_KTGUCETNISKUPINA = 8
+		  and sub.ID_KTGUCETNISPOLECNOST = s.id_ktgSpolecnost
+	   ) id_ktgUcetniSpolecnostTo,
+	   cis.id_ktgSubkonsolidace, 3  poradi, f.s_kod, us.s_mena 
+	   ,mis.ID_DOKUMENT , mis.ID_KTGPROJEKT	   
+from db_jt.kp_dat_misTransakce mis,
+	 db_jt.kp_ktg_projekt p,
+	 db_jt.kp_cis_ifrsSubSegment cis,
+	 db_jt.kp_cis_ucetUnif uu,
+    db_jt.kp_rel_ucetunifflow rf,
+    db_jt.kp_cis_flow f,
+	db_jt.kp_ktg_ucetniSpolecnost us
+where 
+	us.id = mis.id_ktgUcetniSpolecnost and
+	rf.id_cisflow = f.id   and
+	uu.id = rf.id_cisucetunif  and
+	mis.id_ktgProjekt = p.id 
+  and p.id_ifrsSubSegment = cis.id
+  and mis.ID_CISUCETUNIF = uu.ID
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <ViewAttribute
+      Name="DtDatum"
+      IsPersistent="false"
+      IsNotNull="true"
+      Type="oracle.jbo.domain.Date"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2"
+      Expression="DT_DATUM"
+      SQLType="DATE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2"
+      Expression="ID_KTGUCETNISPOLECNOST"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetunif"
+      IsPersistent="false"
+      Precision="15"
+      Type="java.lang.String"
+      AliasName="S_UCETUNIF"
+      ColumnType="VARCHAR2"
+      Expression="S_UCETUNIF"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="3"
+      Type="java.lang.String"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2"
+      Expression="S_MENA"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="18"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2"
+      Expression="ND_CASTKALOCAL"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="18"
+      Scale="2"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2"
+      Expression="ND_CASTKAMENA"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnostto"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_KTGUCETNISPOLECNOSTTO"
+      ColumnType="VARCHAR2"
+      Expression="ID_KTGUCETNISPOLECNOSTTO"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdSegment"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_SEGMENT"
+      ColumnType="VARCHAR2"
+      Expression="ID_SEGMENT"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Poradi"
+      IsPersistent="false"
+      Precision="5"
+      Type="oracle.jbo.domain.Number"
+      AliasName="PORADI"
+      ColumnType="VARCHAR2"
+      Expression="PORADI"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKod"
+      IsPersistent="false"
+      Precision="5"
+      Type="java.lang.String"
+      AliasName="S_KOD"
+      ColumnType="VARCHAR2"
+      Expression="S_KOD"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="5" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Menaucspol"
+      IsPersistent="false"
+      Precision="3"
+      Type="java.lang.String"
+      AliasName="MENAUCSPOL"
+      ColumnType="VARCHAR2"
+      Expression="MENAUCSPOL"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokument"
+      IsPersistent="false"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_DOKUMENT"
+      ColumnType="VARCHAR2"
+      Expression="ID_DOKUMENT"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      IsPersistent="false"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2"
+      Expression="ID_KTGPROJEKT"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+</ViewObject>

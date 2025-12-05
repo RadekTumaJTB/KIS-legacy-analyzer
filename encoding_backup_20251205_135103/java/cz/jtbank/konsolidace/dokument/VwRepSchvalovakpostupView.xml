@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwRepSchvalovakpostupView"
+   SelectList="VwRepSchvalovakpostup.ID, 
+       VwRepSchvalovakpostup.ID_KTGUCETNISPOLECNOST, 
+
+       VwRepSchvalovakpostup.SPOLECNOST, 
+       VwRepSchvalovakpostup.DT_DATUMSPLATNOSTI, 
+
+       VwRepSchvalovakpostup.DT_DATUMZADANI, 
+       VwRepSchvalovakpostup.A0, 
+
+       VwRepSchvalovakpostup.DT_DATUMZADANIRADKU, 
+       VwRepSchvalovakpostup.D1, 
+
+       VwRepSchvalovakpostup.ALARM1, 
+       VwRepSchvalovakpostup.DT_DATUMSCHVALENI, 
+
+       VwRepSchvalovakpostup.D2, 
+       VwRepSchvalovakpostup.ALARM2, 
+
+       VwRepSchvalovakpostup.DT_DATUMZAUCTOVANI, 
+       VwRepSchvalovakpostup.D3, 
+
+       VwRepSchvalovakpostup.ALARM3, 
+       VwRepSchvalovakpostup.APPUSER, 
+
+       VwRepSchvalovakpostup.ZADAVATEL, 
+       VwRepSchvalovakpostup.UCETNI, 
+
+       VwRepSchvalovakpostup.SCHVALUJICI"
+   FromList="DB_JT.VW_REP_SCHVALOVAKPOSTUP VwRepSchvalovakpostup"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostupViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwRepSchvalovakpostup"
+      Entity="cz.jtbank.konsolidace.dokument.VwRepSchvalovakpostup" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Spolecnost"
+      EntityAttrName="Spolecnost"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="SPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumsplatnosti"
+      EntityAttrName="DtDatumsplatnosti"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="DT_DATUMSPLATNOSTI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzadani"
+      EntityAttrName="DtDatumzadani"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="DT_DATUMZADANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="A0"
+      EntityAttrName="A0"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="A0"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzadaniradku"
+      EntityAttrName="DtDatumzadaniradku"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="DT_DATUMZADANIRADKU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="D1"
+      EntityAttrName="D1"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="D1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Alarm1"
+      EntityAttrName="Alarm1"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="ALARM1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumschvaleni"
+      EntityAttrName="DtDatumschvaleni"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="DT_DATUMSCHVALENI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="D2"
+      EntityAttrName="D2"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="D2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Alarm2"
+      EntityAttrName="Alarm2"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="ALARM2"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatumzauctovani"
+      EntityAttrName="DtDatumzauctovani"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="DT_DATUMZAUCTOVANI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="D3"
+      EntityAttrName="D3"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="D3"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Alarm3"
+      EntityAttrName="Alarm3"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="ALARM3"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Appuser"
+      EntityAttrName="Appuser"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="APPUSER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Zadavatel"
+      EntityAttrName="Zadavatel"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="ZADAVATEL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ucetni"
+      EntityAttrName="Ucetni"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="UCETNI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Schvalujici"
+      EntityAttrName="Schvalujici"
+      EntityUsage="VwRepSchvalovakpostup"
+      AliasName="SCHVALUJICI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

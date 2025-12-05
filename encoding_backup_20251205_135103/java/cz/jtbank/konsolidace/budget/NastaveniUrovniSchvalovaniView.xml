@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="NastaveniUrovniSchvalovaniView"
+   OrderBy="TYP, S_NAZEV"
+   BindingStyle="Oracle"
+   CustomQuery="true"
+   ComponentClass="cz.jtbank.konsolidace.budget.NastaveniUrovniSchvalovaniViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+select 1 TYP,
+       s.ID, 
+       s.S_NAZEV,
+	   s.ND_BUDGETNAVYSENI_OO,
+	   s.ND_BUDGETNAVYSENI_TOP,
+s.S_MENA
+from db_jt.kp_ktg_ucetniSpolecnost s
+where s.id in (select o.ID_KTGUCETNISPOLECNOST from db_jt.kp_ktg_odbor o where o.C_BUDGETING = '1')
+union
+select 2 TYP,
+       ID,
+       S_NAZEV,
+	   KpKtgProjekt.ND_BUDGETNAVYSENI_PM,
+	   KpKtgProjekt.ND_BUDGETNAVYSENI_TOP,
+KpKtgProjekt.S_MENANAKLADY
+from db_jt.kp_ktg_projekt KpKtgProjekt
+where exists (select null
+              from db_jt.kp_dat_budget b
+			  where b.ID_KTGPROJEKT = KpKtgProjekt.ID
+			    and sysdate between b.DT_PLATNOSTOD and b.DT_PLATNOSTDO)
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <ViewAttribute
+      Name="Typ"
+      IsPersistent="false"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="TYP"
+      ColumnType="VARCHAR2"
+      Expression="TYP"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsPersistent="false"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ID"
+      ColumnType="VARCHAR2"
+      Expression="ID"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      IsPersistent="false"
+      Precision="128"
+      Type="java.lang.String"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2"
+      Expression="S_NAZEV"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="128" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdBudgetnavyseniOo"
+      IsPersistent="false"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ND_BUDGETNAVYSENI_OO"
+      ColumnType="VARCHAR2"
+      Expression="ND_BUDGETNAVYSENI_OO"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdBudgetnavyseniTop"
+      IsPersistent="false"
+      Precision="255"
+      Type="oracle.jbo.domain.Number"
+      AliasName="ND_BUDGETNAVYSENI_TOP"
+      ColumnType="VARCHAR2"
+      Expression="ND_BUDGETNAVYSENI_TOP"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="3"
+      Type="java.lang.String"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2"
+      Expression="S_MENA"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <AttrArray Name="KeyAttributes">
+      <Item Value="Typ" />
+      <Item Value="Id" />
+   </AttrArray>
+</ViewObject>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwAcKlientipbView"
+   SelectList="VwAcKlientipb.S_ICO, 
+       VwAcKlientipb.S_NAZEV, 
+       VwAcKlientipb.S_ULICE, 
+
+       VwAcKlientipb.S_MESTO, 
+       VwAcKlientipb.S_PSC, 
+ 
+      VwAcKlientipb.S_STAT, 
+       VwAcKlientipb.C_PERSONCORP, 
+
+       VwAcKlientipb.S_PRIVATNIBANKER, 
+       VwAcKlientipb.NUMBER0, 
+
+       VwAcKlientipb.KID, 
+       VwAcKlientipb.ID_EPERSPEKTIVA, 
+
+       VwAcKlientipb.SHORT_NAME, 
+       VwAcKlientipb.S_SPRAVCE, 
+
+       VwAcKlientipb.S_KO, 
+       VwAcKlientipb.NUMBER0_SK"
+   FromList="DB_JT.VW_AC_KLIENTIPB VwAcKlientipb"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.pb.VwAcKlientipbViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwAcKlientipb"
+      Entity="cz.jtbank.konsolidace.pb.VwAcKlientipb" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SIco"
+      IsNotNull="true"
+      EntityAttrName="SIco"
+      EntityUsage="VwAcKlientipb"
+      AliasName="S_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwAcKlientipb"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUlice"
+      EntityAttrName="SUlice"
+      EntityUsage="VwAcKlientipb"
+      AliasName="S_ULICE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMesto"
+      EntityAttrName="SMesto"
+      EntityUsage="VwAcKlientipb"
+      AliasName="S_MESTO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPsc"
+      EntityAttrName="SPsc"
+      EntityUsage="VwAcKlientipb"
+      AliasName="S_PSC"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SStat"
+      EntityAttrName="SStat"
+      EntityUsage="VwAcKlientipb"
+      AliasName="S_STAT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CPersoncorp"
+      EntityAttrName="CPersoncorp"
+      EntityUsage="VwAcKlientipb"
+      AliasName="C_PERSONCORP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPrivatnibanker"
+      EntityAttrName="SPrivatnibanker"
+      EntityUsage="VwAcKlientipb"
+      AliasName="S_PRIVATNIBANKER"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Number0"
+      EntityAttrName="Number0"
+      EntityUsage="VwAcKlientipb"
+      AliasName="NUMBER0"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Kid"
+      EntityAttrName="Kid"
+      EntityUsage="VwAcKlientipb"
+      AliasName="KID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdEperspektiva"
+      EntityAttrName="IdEperspektiva"
+      EntityUsage="VwAcKlientipb"
+      AliasName="ID_EPERSPEKTIVA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ShortName"
+      EntityAttrName="ShortName"
+      EntityUsage="VwAcKlientipb"
+      AliasName="SHORT_NAME"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SSpravce"
+      EntityAttrName="SSpravce"
+      EntityUsage="VwAcKlientipb"
+      AliasName="S_SPRAVCE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SKo"
+      EntityAttrName="SKo"
+      EntityUsage="VwAcKlientipb"
+      AliasName="S_KO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Number0Sk"
+      EntityAttrName="Number0Sk"
+      EntityUsage="VwAcKlientipb"
+      AliasName="NUMBER0_SK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

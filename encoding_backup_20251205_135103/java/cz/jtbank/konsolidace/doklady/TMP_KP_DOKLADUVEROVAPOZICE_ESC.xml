@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="TMP_KP_DOKLADUVEROVAPOZICE_ESC"
+   SelectList="TmpKpDokladuverovapoziceEsc.S_UCET, 
+       TmpKpDokladuverovapoziceEsc.ND_CASTKAMENA, 
+
+       TmpKpDokladuverovapoziceEsc.ND_CASTKALOCAL, 
+       TmpKpDokladuverovapoziceEsc.S_MENA, 
+
+       TmpKpDokladuverovapoziceEsc.S_UNIFPROTI_ICO, 
+       
+TmpKpDokladuverovapoziceEsc.S_UNIFPROTI, 
+       TmpKpDokladuverovapoziceEsc.ID_DOKLAD, 
+
+       TmpKpDokladuverovapoziceEsc.S_LISTGROUP, 
+       TmpKpDokladuverovapoziceEsc.S_LISTGROUPCODE, 
+
+       TmpKpDokladuverovapoziceEsc.S_POPIS, 
+       TmpKpDokladuverovapoziceEsc.ND_KATEGORIE_KOEF, 
+
+       db_jt.f_getSpolecnostDoklad(VwKpDokladuverovapozice.id_doklad) 
+AS NAZEV_SPOL, 
+       db_jt.f_getMenaDoklad(VwKpDokladuverovapozice.id_doklad) 
+AS MENA_SPOL, 
+       TmpKpDokladuverovapoziceEsc.ND_CASTKACNB, 
+
+       TmpKpDokladuverovapoziceEsc.S_LOCALE, 
+       TmpKpDokladuverovapoziceEsc.S_UCETUNIF, 
+
+       TmpKpDokladuverovapoziceEsc.ID_UNIFPROTI, 
+       TmpKpDokladuverovapoziceEsc.S_POPISORIGINAL, 
+
+       TmpKpDokladuverovapoziceEsc.C_BANKA, 
+       TmpKpDokladuverovapoziceEsc.ND_CISTAANGAZOVANOST, 
+
+       TmpKpDokladuverovapoziceEsc.ROWID"
+   FromList="DB_JT.TMP_KP_DOKLADUVEROVAPOZICE_ESC TmpKpDokladuverovapoziceEsc"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.TMP_KP_DOKLADUVEROVAPOZICE_ESCImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="TmpKpDokladuverovapoziceEsc"
+      Entity="cz.jtbank.konsolidace.doklady.TmpKpDokladuverovapoziceEsc"
+      ReadOnly="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SUcet"
+      EntityAttrName="SUcet"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      EntityAttrName="SMena"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUnifprotiIco"
+      EntityAttrName="SUnifprotiIco"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="S_UNIFPROTI_ICO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUnifproti"
+      EntityAttrName="SUnifproti"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="S_UNIFPROTI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDoklad"
+      EntityAttrName="IdDoklad"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SListgroup"
+      EntityAttrName="SListgroup"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="S_LISTGROUP"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SListgroupcode"
+      EntityAttrName="SListgroupcode"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="S_LISTGROUPCODE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      EntityAttrName="SPopis"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdKategorieKoef"
+      EntityAttrName="NdKategorieKoef"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="ND_KATEGORIE_KOEF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="nazevSpol"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="NAZEV_SPOL"
+      ColumnType="VARCHAR2"
+      Expression="db_jt.f_getSpolecnostDoklad(VwKpDokladuverovapozice.id_doklad)"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="menaSpol"
+      IsUpdateable="false"
+      IsPersistent="false"
+      Precision="255"
+      Type="java.lang.String"
+      AliasName="MENA_SPOL"
+      ColumnType="VARCHAR2"
+      Expression="db_jt.f_getMenaDoklad(VwKpDokladuverovapozice.id_doklad)"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CastkaCZK"
+      EntityAttrName="NdCastkacnb"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="ND_CASTKACNB"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SLocale"
+      EntityAttrName="SLocale"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="S_LOCALE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetunif"
+      EntityAttrName="SUcetunif"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="S_UCETUNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdUnifproti"
+      EntityAttrName="IdUnifproti"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="ID_UNIFPROTI"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopisoriginal"
+      EntityAttrName="SPopisoriginal"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="S_POPISORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CBanka"
+      EntityAttrName="CBanka"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="C_BANKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCistaangazovanost"
+      EntityAttrName="NdCistaangazovanost"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="ND_CISTAANGAZOVANOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RowID"
+      IsUpdateable="false"
+      EntityAttrName="RowID"
+      EntityUsage="TmpKpDokladuverovapoziceEsc"
+      AliasName="ROWID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

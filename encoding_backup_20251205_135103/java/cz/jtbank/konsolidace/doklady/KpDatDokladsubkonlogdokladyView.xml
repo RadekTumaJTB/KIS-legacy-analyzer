@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpDatDokladsubkonlogdokladyView"
+   SelectList="KpDatDokladsubkonlogdoklady.ID_DOKLAD, 
+       KpDatDokladsubkonlogdoklady.ID_KTGSUBKONSOLIDACE, 
+
+       KpDatDokladsubkonlogdoklady.DT_DATUM, 
+       KpDatDokladsubkonlogdoklady.ID_DOKLADCLEN, 
+
+       KpDatDokladsubkonlogdoklady.ID_KTGUCETNISPOLECNOSTCLEN, 
+
+       KpDatDokladsubkonlogdoklady.ID_KTGSUBKONSOLIDACECLEN, 
+
+       KpDatDokladsubkonlogdoklady.NL_KROKDOKLADCLEN, 
+     
+  KpDatDoklad.ID_PARENT, 
+       KpDatDoklad.ID, 
+       KpKtgUcetnispolecnost.S_NAZEV, 
+
+       KpKtgUcetnispolecnost.ID AS ID1, 
+       KpDatDoklad.DT_VYTVORENO"
+   FromList="DB_JT.KP_DAT_DOKLADSUBKONLOGDOKLADY KpDatDokladsubkonlogdoklady, DB_JT.KP_DAT_DOKLAD KpDatDoklad, DB_JT.KP_KTG_UCETNISPOLECNOST KpKtgUcetnispolecnost"
+   Where="KpDatDokladsubkonlogdoklady.ID_DOKLADCLEN = KpDatDoklad.ID AND KpDatDoklad.ID_KTGUCETNISPOLECNOST = KpKtgUcetnispolecnost.ID"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdokladyViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpDatDokladsubkonlogdoklady"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdoklady" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryWhere" Value="KpDatDokladsubkonlogdoklady.ID_DOKLADCLEN = KpDatDoklad.ID AND KpDatDoklad.ID_KTGUCETNISPOLECNOST = KpKtgUcetnispolecnost.ID" />
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpDatDoklad"
+      Entity="cz.jtbank.konsolidace.doklady.KpDatDoklad"
+      Association="cz.jtbank.konsolidace.doklady.FkKpdokladsubkonlogdDokclAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpdokladsubkonlogdDokclAssoc.KpDatDoklad"
+      SourceUsage="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdokladyView.KpDatDokladsubkonlogdoklady"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdoklady.IdDokladclen" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.doklady.KpDatDoklad.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <EntityUsage
+      Name="KpKtgUcetnispolecnost"
+      Entity="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost"
+      Association="cz.jtbank.konsolidace.doklady.FkKpdokladSpolecnostAssoc"
+      AssociationEnd="cz.jtbank.konsolidace.doklady.FkKpdokladSpolecnostAssoc.KpKtgUcetnispolecnost"
+      SourceUsage="cz.jtbank.konsolidace.doklady.KpDatDokladsubkonlogdokladyView.KpDatDoklad"
+      ReadOnly="true"
+      Reference="true" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+         <AttrArray Name="_srcAttributes">
+            <Item Value="cz.jtbank.konsolidace.doklady.KpDatDoklad.IdKtgucetnispolecnost" />
+         </AttrArray>
+         <AttrArray Name="_dstAttributes">
+            <Item Value="cz.jtbank.konsolidace.doklady.KpKtgUcetnispolecnost.Id" />
+         </AttrArray>
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdDoklad"
+      IsNotNull="true"
+      EntityAttrName="IdDoklad"
+      EntityUsage="KpDatDokladsubkonlogdoklady"
+      AliasName="ID_DOKLAD"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgsubkonsolidace"
+      EntityAttrName="IdKtgsubkonsolidace"
+      EntityUsage="KpDatDokladsubkonlogdoklady"
+      AliasName="ID_KTGSUBKONSOLIDACE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      EntityAttrName="DtDatum"
+      EntityUsage="KpDatDokladsubkonlogdoklady"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdDokladclen"
+      IsNotNull="true"
+      EntityAttrName="IdDokladclen"
+      EntityUsage="KpDatDokladsubkonlogdoklady"
+      AliasName="ID_DOKLADCLEN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnostclen"
+      EntityAttrName="IdKtgucetnispolecnostclen"
+      EntityUsage="KpDatDokladsubkonlogdoklady"
+      AliasName="ID_KTGUCETNISPOLECNOSTCLEN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgsubkonsolidaceclen"
+      EntityAttrName="IdKtgsubkonsolidaceclen"
+      EntityUsage="KpDatDokladsubkonlogdoklady"
+      AliasName="ID_KTGSUBKONSOLIDACECLEN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlKrokdokladclen"
+      EntityAttrName="NlKrokdokladclen"
+      EntityUsage="KpDatDokladsubkonlogdoklady"
+      AliasName="NL_KROKDOKLADCLEN"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdParent"
+      IsNotNull="true"
+      EntityAttrName="IdParent"
+      EntityUsage="KpDatDoklad"
+      AliasName="ID_PARENT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpDatDoklad"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id1"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpKtgUcetnispolecnost"
+      AliasName="ID1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtVytvoreno"
+      EntityAttrName="DtVytvoreno"
+      EntityUsage="KpDatDoklad"
+      AliasName="DT_VYTVORENO"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

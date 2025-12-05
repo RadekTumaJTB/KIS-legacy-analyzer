@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpTmpCisucetsumatypView"
+   SelectList="KpTmpCisucetsumatyp.ID, 
+       KpTmpCisucetsumatyp.S_ZKRATKA, 
+       KpTmpCisucetsumatyp.POCET_UCTU, 
+       KpTmpCisucetsumatyp.C_SHOWINUNIF"
+   FromList="DB_JT.KP_CIS_UCETSUMATYP KpTmpCisucetsumatyp"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.mustky.KpTmpCisucetsumatypViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpTmpCisucetsumatyp"
+      Entity="cz.jtbank.konsolidace.mustky.KpTmpCisucetsumatyp" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="true" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="KpTmpCisucetsumatyp"
+      AliasName="ID"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SZkratka"
+      IsNotNull="true"
+      EntityAttrName="SZkratka"
+      EntityUsage="KpTmpCisucetsumatyp"
+      AliasName="S_ZKRATKA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="PocetUctu"
+      IsNotNull="true"
+      EntityAttrName="PocetUctu"
+      EntityUsage="KpTmpCisucetsumatyp"
+      AliasName="POCET_UCTU"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopis"
+      IsQueriable="false"
+      IsPersistent="false"
+      EntityAttrName="SPopis"
+      EntityUsage="KpTmpCisucetsumatyp"
+      AliasName="S_POPIS"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CShowinunif"
+      IsNotNull="true"
+      EntityAttrName="CShowinunif"
+      EntityUsage="KpTmpCisucetsumatyp"
+      AliasName="C_SHOWINUNIF"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

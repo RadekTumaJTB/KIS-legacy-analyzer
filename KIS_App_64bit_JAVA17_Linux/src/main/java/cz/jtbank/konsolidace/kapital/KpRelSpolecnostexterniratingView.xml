@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="KpRelSpolecnostexterniratingView"
+   SelectList="KpRelSpolecnostexternirating.ID_EXTERNIRATING, 
+       KpRelSpolecnostexternirating.ID_KTGSPOLECNOST"
+   FromList="DB_JT.KP_REL_SPOLECNOSTEXTERNIRATING KpRelSpolecnostexternirating"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.kapital.KpRelSpolecnostexterniratingViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="KpRelSpolecnostexternirating"
+      Entity="cz.jtbank.konsolidace.kapital.KpRelSpolecnostexternirating" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="IdExternirating"
+      IsNotNull="true"
+      EntityAttrName="IdExternirating"
+      EntityUsage="KpRelSpolecnostexternirating"
+      AliasName="ID_EXTERNIRATING"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="KpRelSpolecnostexternirating"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>

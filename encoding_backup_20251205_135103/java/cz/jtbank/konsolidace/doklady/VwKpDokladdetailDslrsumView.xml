@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding='windows-1250'?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="VwKpDokladdetailDslrsumView"
+   SelectList="VwKpDokladdetailDslrsum.S_NAZEV, 
+       VwKpDokladdetailDslrsum.NL_RADEK, 
+
+       VwKpDokladdetailDslrsum.TEXTRADEK, 
+       VwKpDokladdetailDslrsum.ND_CASTKAMENA, 
+
+       VwKpDokladdetailDslrsum.S_MENA, 
+       VwKpDokladdetailDslrsum.ND_CASTKALOCAL, 
+
+       VwKpDokladdetailDslrsum.S_MENAUCSPOL, 
+       VwKpDokladdetailDslrsum.ND_CASTKACZK, 
+
+       VwKpDokladdetailDslrsum.PROTISTRANA, 
+       VwKpDokladdetailDslrsum.DT_DATUM, 
+
+       VwKpDokladdetailDslrsum.ID_KTGUCETNISPOLECNOST, 
+    
+   VwKpDokladdetailDslrsum.NL_PORADILIST, 
+       VwKpDokladdetailDslrsum.S_LOCALE, 
+
+       VwKpDokladdetailDslrsum.S_UCET, 
+       VwKpDokladdetailDslrsum.ID_KTGSPOLECNOST, 
+
+       VwKpDokladdetailDslrsum.ID_CISSUBJECT, 
+       VwKpDokladdetailDslrsum.S_UCETORIGINAL, 
+
+       VwKpDokladdetailDslrsum.ID_KTGPROJEKT, 
+       VwKpDokladdetailDslrsum.S_POPISORIGINAL, 
+
+       VwKpDokladdetailDslrsum.ID_KTGPROJEKT AS ID_KTGPROJEKT1"
+   FromList="DB_JT.VW_KP_DOKLADDETAIL_DSLRSUM VwKpDokladdetailDslrsum"
+   BindingStyle="Oracle"
+   CustomQuery="false"
+   ComponentClass="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsumViewImpl"
+   MsgBundleClass="oracle.jbo.common.JboResourceBundle"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_version" Value="9.0.4.13.65" />
+      <Attr Name="_CodeGenFlagNew" Value="36" />
+   </DesignTime>
+   <EntityUsage
+      Name="VwKpDokladdetailDslrsum"
+      Entity="cz.jtbank.konsolidace.doklady.VwKpDokladdetailDslrsum" >
+      <DesignTime>
+         <Attr Name="_EntireObjectTable" Value="false" />
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="SNazev"
+      EntityAttrName="SNazev"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="S_NAZEV"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlRadek"
+      EntityAttrName="NlRadek"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="NL_RADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Textradek"
+      EntityAttrName="Textradek"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="TEXTRADEK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkamena"
+      EntityAttrName="NdCastkamena"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="ND_CASTKAMENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMena"
+      IsNotNull="true"
+      EntityAttrName="SMena"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="S_MENA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkalocal"
+      EntityAttrName="NdCastkalocal"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="ND_CASTKALOCAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SMenaucspol"
+      IsNotNull="true"
+      EntityAttrName="SMenaucspol"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="S_MENAUCSPOL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NdCastkaczk"
+      EntityAttrName="NdCastkaczk"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="ND_CASTKACZK"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Protistrana"
+      EntityAttrName="Protistrana"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="PROTISTRANA"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="DtDatum"
+      IsNotNull="true"
+      EntityAttrName="DtDatum"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="DT_DATUM"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgucetnispolecnost"
+      IsNotNull="true"
+      EntityAttrName="IdKtgucetnispolecnost"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="ID_KTGUCETNISPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NlPoradilist"
+      EntityAttrName="NlPoradilist"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="NL_PORADILIST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SLocale"
+      IsNotNull="true"
+      EntityAttrName="SLocale"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="S_LOCALE"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcet"
+      IsNotNull="true"
+      EntityAttrName="SUcet"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="S_UCET"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgspolecnost"
+      EntityAttrName="IdKtgspolecnost"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="ID_KTGSPOLECNOST"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdCissubject"
+      IsNotNull="true"
+      EntityAttrName="IdCissubject"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="ID_CISSUBJECT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SUcetoriginal"
+      EntityAttrName="SUcetoriginal"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="S_UCETORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="ID_KTGPROJEKT"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SPopisoriginal"
+      EntityAttrName="SPopisoriginal"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="S_POPISORIGINAL"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IdKtgprojekt1"
+      EntityAttrName="IdKtgprojekt"
+      EntityUsage="VwKpDokladdetailDslrsum"
+      AliasName="ID_KTGPROJEKT1"
+      ColumnType="VARCHAR2" >
+   </ViewAttribute>
+</ViewObject>
