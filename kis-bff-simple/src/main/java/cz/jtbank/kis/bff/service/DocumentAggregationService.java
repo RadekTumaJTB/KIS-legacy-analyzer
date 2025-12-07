@@ -74,6 +74,188 @@ public class DocumentAggregationService {
                 .build();
     }
 
+    /**
+     * Create new document
+     *
+     * @param request Document creation request
+     * @return Created document detail
+     */
+    public DocumentDetailDTO createDocument(DocumentCreateRequestDTO request) {
+        logger.info("Creating new document: " + request.getType());
+
+        // TODO: Call actual backend creation endpoint
+        // For now, generate mock document with new ID
+
+        Long newId = System.currentTimeMillis(); // Generate unique ID
+        String documentNumber = "DOC-" + LocalDate.now().getYear() + "-" + String.format("%05d", newId % 100000);
+
+        DocumentDTO newDocument = DocumentDTO.builder()
+                .id(newId)
+                .number(documentNumber)
+                .type(request.getType())
+                .amount(request.getAmount())
+                .currency("CZK")
+                .dueDate(LocalDate.parse(request.getDueDate()))
+                .status("DRAFT")
+                .createdBy("Eva Černá")
+                .company(request.getCompanyName())
+                .createdAt(LocalDateTime.now())
+                .updatedAt(LocalDateTime.now())
+                .build();
+
+        // Create empty approval chain for new document
+        List<ApprovalChainItemDTO> approvalChain = List.of();
+
+        // Create empty transactions and line items
+        List<RelatedTransactionDTO> transactions = List.of();
+        List<DocumentLineItemDTO> lineItems = List.of();
+
+        DocumentMetadataDTO metadata = DocumentMetadataDTO.builder()
+                .canEdit(true)
+                .canApprove(false)
+                .canReject(false)
+                .canComment(true)
+                .build();
+
+        return DocumentDetailDTO.builder()
+                .document(newDocument)
+                .approvalChain(approvalChain)
+                .relatedTransactions(transactions)
+                .lineItems(lineItems)
+                .metadata(metadata)
+                .build();
+    }
+
+    /**
+     * Update document
+     *
+     * @param id Document ID
+     * @param request Update request
+     * @return Updated document detail
+     */
+    public DocumentDetailDTO updateDocument(Long id, DocumentUpdateRequestDTO request) {
+        logger.info("Updating document: " + id);
+
+        // TODO: Call actual backend update endpoint
+        // For now, simulate update and return modified data
+
+        DocumentDetailDTO current = getFullDocumentDetail(id);
+        DocumentDTO document = current.getDocument();
+
+        // Apply updates
+        if (request.getType() != null) {
+            document = DocumentDTO.builder()
+                    .id(document.getId())
+                    .number(document.getNumber())
+                    .type(request.getType())
+                    .amount(request.getAmount() != null ? request.getAmount() : document.getAmount())
+                    .currency(document.getCurrency())
+                    .dueDate(request.getDueDate() != null ? LocalDate.parse(request.getDueDate()) : document.getDueDate())
+                    .status(document.getStatus())
+                    .createdBy(document.getCreatedBy())
+                    .company(document.getCompany())
+                    .createdAt(document.getCreatedAt())
+                    .updatedAt(LocalDateTime.now())
+                    .build();
+        }
+
+        return DocumentDetailDTO.builder()
+                .document(document)
+                .approvalChain(current.getApprovalChain())
+                .relatedTransactions(current.getRelatedTransactions())
+                .lineItems(current.getLineItems())
+                .metadata(current.getMetadata())
+                .build();
+    }
+
+    /**
+     * Add comment to document
+     *
+     * @param id Document ID
+     * @param request Comment request
+     * @return Updated document detail
+     */
+    public DocumentDetailDTO addComment(Long id, CommentRequestDTO request) {
+        logger.info("Adding comment to document: " + id + ", type: " + request.getType());
+
+        // TODO: Call actual backend to persist comment
+        // For now, just return current state (comment would be in a separate comments list)
+
+        return getFullDocumentDetail(id);
+    }
+
+    /**
+     * Perform approval action on document
+     *
+     * @param id Document ID
+     * @param request Approval action request
+     * @return Updated document detail
+     */
+    public DocumentDetailDTO performApprovalAction(Long id, ApprovalActionRequestDTO request) {
+        logger.info("Performing " + request.getAction() + " on document: " + id);
+
+        // TODO: Call actual backend approval endpoint
+        // For now, simulate approval by updating approval chain status
+
+        DocumentDetailDTO current = getFullDocumentDetail(id);
+
+        // Update approval chain - mark current pending as approved/rejected
+        List<ApprovalChainItemDTO> updatedChain = current.getApprovalChain().stream()
+                .map(item -> {
+                    if ("PENDING".equals(item.getStatus())) {
+                        return ApprovalChainItemDTO.builder()
+                                .level(item.getLevel())
+                                .approver(item.getApprover())
+                                .status("approve".equals(request.getAction()) ? "APPROVED" : "REJECTED")
+                                .approvedAt(LocalDateTime.now())
+                                .comment(request.getComment())
+                                .build();
+                    }
+                    return item;
+                })
+                .toList();
+
+        // Update document status
+        DocumentDTO updatedDocument = DocumentDTO.builder()
+                .id(current.getDocument().getId())
+                .number(current.getDocument().getNumber())
+                .type(current.getDocument().getType())
+                .amount(current.getDocument().getAmount())
+                .currency(current.getDocument().getCurrency())
+                .dueDate(current.getDocument().getDueDate())
+                .status("approve".equals(request.getAction()) ? "APPROVED" : "REJECTED")
+                .createdBy(current.getDocument().getCreatedBy())
+                .company(current.getDocument().getCompany())
+                .createdAt(current.getDocument().getCreatedAt())
+                .updatedAt(LocalDateTime.now())
+                .build();
+
+        return DocumentDetailDTO.builder()
+                .document(updatedDocument)
+                .approvalChain(updatedChain)
+                .relatedTransactions(current.getRelatedTransactions())
+                .lineItems(current.getLineItems())
+                .metadata(current.getMetadata())
+                .build();
+    }
+
+    /**
+     * Perform bulk approval action
+     *
+     * @param request Approval action request with multiple document IDs
+     */
+    public void performBulkApprovalAction(ApprovalActionRequestDTO request) {
+        logger.info("Performing bulk " + request.getAction() +
+                   " on " + request.getDocumentIds().size() + " documents");
+
+        // TODO: Call actual backend bulk approval endpoint
+        // For now, just simulate by logging
+
+        for (Long docId : request.getDocumentIds()) {
+            logger.info("  - Document " + docId + ": " + request.getAction());
+        }
+    }
+
     // ========== MOCK DATA METHODS ==========
     // TODO: Remove when real backend is available
 
@@ -95,7 +277,8 @@ public class DocumentAggregationService {
                 .company(CompanySummaryDTO.builder()
                         .id(10L)
                         .name("JT Bank a.s.")
-                        .ico("12345678")
+                        .registrationNumber("12345678")
+                        .address("Na Příkopě 28, 110 00 Praha 1")
                         .build())
                 .createdAt(LocalDateTime.of(2025, 12, 1, 9, 0))
                 .updatedAt(LocalDateTime.of(2025, 12, 1, 14, 30))
@@ -148,6 +331,7 @@ public class DocumentAggregationService {
                         .id(1001L)
                         .description("Consulting services")
                         .quantity(10)
+                        .unit("hours")
                         .unitPrice(new BigDecimal("15000.00"))
                         .total(new BigDecimal("150000.00"))
                         .build()
@@ -160,6 +344,10 @@ public class DocumentAggregationService {
                 .canApprove(true) // Current user is Eva (level 2 approver)
                 .canReject(true)
                 .pendingApproverName("Eva Černá")
+                .createdAt(LocalDateTime.of(2025, 12, 1, 9, 0))
+                .modifiedAt(LocalDateTime.of(2025, 12, 1, 14, 30))
+                .modifiedBy("Martin Novák")
+                .version(1)
                 .build();
     }
 

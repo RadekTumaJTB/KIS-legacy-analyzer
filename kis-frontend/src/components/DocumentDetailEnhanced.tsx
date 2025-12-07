@@ -1,10 +1,21 @@
 import { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
 import { Button } from './ui/Button';
 import { Input } from './ui/Input';
 import { formatCurrency, formatDate } from '../lib/utils';
 import type { DocumentDetailDTO } from '../types/document';
-import { fetchDocumentDetail } from '../api/documentApi';
+import { fetchDocumentDetail, updateDocument, addComment as addCommentApi, performApprovalAction } from '../api/documentApi';
 import './DocumentDetailEnhanced.css';
+
+// Form validation schema
+const documentFormSchema = z.object({
+  type: z.string().min(1, 'Typ dokumentu je povinný'),
+  amount: z.number().min(0, 'Částka musí být kladné číslo'),
+  dueDate: z.string().min(1, 'Datum splatnosti je povinné'),
+  companyName: z.string().min(1, 'Název společnosti je povinný'),
+});
 
 interface Comment {
   id: number;
@@ -27,13 +38,27 @@ interface DocumentDetailEnhancedProps {
   documentId: number;
 }
 
+type DocumentFormData = z.infer<typeof documentFormSchema>;
+
 export default function DocumentDetailEnhanced({ documentId }: DocumentDetailEnhancedProps) {
   const [documentDetail, setDocumentDetail] = useState<DocumentDetailDTO | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isEditing, setIsEditing] = useState(false);
-  const [editedValues, setEditedValues] = useState<any>({});
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+  const [lastSavedAt, setLastSavedAt] = useState<Date | null>(null);
   const [newComment, setNewComment] = useState('');
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+    reset,
+    watch,
+  } = useForm<DocumentFormData>({
+    resolver: zodResolver(documentFormSchema),
+    mode: 'onChange',
+  });
   const [comments, setComments] = useState<Comment[]>([
     {
       id: 1,
@@ -90,7 +115,15 @@ export default function DocumentDetailEnhanced({ documentId }: DocumentDetailEnh
         setLoading(true);
         const result = await fetchDocumentDetail(documentId);
         setDocumentDetail(result);
-        setEditedValues(result.document);
+
+        // Initialize form with document data
+        reset({
+          type: result.document.type,
+          amount: result.document.amount,
+          dueDate: result.document.dueDate.toString(),
+          companyName: result.document.company.name,
+        });
+
         setError(null);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load document');
@@ -100,7 +133,7 @@ export default function DocumentDetailEnhanced({ documentId }: DocumentDetailEnh
     };
 
     loadDocument();
-  }, [documentId]);
+  }, [documentId, reset]);
 
   const document = documentDetail?.document;
 
@@ -108,43 +141,108 @@ export default function DocumentDetailEnhanced({ documentId }: DocumentDetailEnh
     setIsEditing(true);
   };
 
-  const handleSave = async () => {
-    console.log('Saving changes:', editedValues);
-    // TODO: Implement API call to save changes
-    // await updateDocument(documentId, editedValues);
-
-    if (documentDetail) {
-      setDocumentDetail({
-        ...documentDetail,
-        document: { ...documentDetail.document, ...editedValues }
+  const onSubmit = async (data: DocumentFormData) => {
+    try {
+      const updated = await updateDocument(documentId, {
+        type: data.type,
+        amount: data.amount,
+        dueDate: data.dueDate,
+        companyName: data.companyName
       });
+
+      setDocumentDetail(updated);
+      setIsEditing(false);
+      setHasUnsavedChanges(false);
+      setLastSavedAt(new Date());
+    } catch (error) {
+      console.error('Failed to save document:', error);
+      alert('Nepodařilo se uložit změny');
     }
-    setIsEditing(false);
   };
 
   const handleCancel = () => {
-    setEditedValues(document!);
+    reset(); // Reset form to initial values
     setIsEditing(false);
+    setHasUnsavedChanges(false);
   };
 
-  const handleFieldChange = (field: string, value: any) => {
-    setEditedValues((prev: any) => ({ ...prev, [field]: value }));
-  };
+  // Watch for form changes to trigger auto-save
+  const formValues = watch();
 
-  const handleAddComment = () => {
+  useEffect(() => {
+    if (isEditing) {
+      setHasUnsavedChanges(true);
+    }
+  }, [formValues, isEditing]);
+
+  // Auto-save every 10 seconds when there are unsaved changes
+  useEffect(() => {
+    if (!isEditing || !hasUnsavedChanges || !isValid) return;
+
+    const autoSaveInterval = setInterval(async () => {
+      if (hasUnsavedChanges && isValid) {
+        try {
+          const updated = await updateDocument(documentId, {
+            type: formValues.type,
+            amount: formValues.amount,
+            dueDate: formValues.dueDate,
+            companyName: formValues.companyName
+          });
+
+          setDocumentDetail(updated);
+          setHasUnsavedChanges(false);
+          setLastSavedAt(new Date());
+        } catch (error) {
+          console.error('Auto-save failed:', error);
+          // Don't alert on auto-save failures to avoid interrupting user
+        }
+      }
+    }, 10000); // 10 seconds
+
+    return () => clearInterval(autoSaveInterval);
+  }, [isEditing, hasUnsavedChanges, isValid, formValues, documentId]);
+
+  const handleAddComment = async () => {
     if (!newComment.trim()) return;
 
-    const comment: Comment = {
-      id: comments.length + 1,
-      author: 'Aktuální uživatel',
-      authorRole: 'CFO',
-      timestamp: new Date().toISOString(),
-      text: newComment,
-      type: 'comment',
-    };
+    try {
+      await addCommentApi(documentId, newComment, 'comment');
 
-    setComments([...comments, comment]);
-    setNewComment('');
+      const comment: Comment = {
+        id: comments.length + 1,
+        author: 'Aktuální uživatel',
+        authorRole: 'CFO',
+        timestamp: new Date().toISOString(),
+        text: newComment,
+        type: 'comment',
+      };
+
+      setComments([...comments, comment]);
+      setNewComment('');
+    } catch (error) {
+      console.error('Failed to add comment:', error);
+      alert('Nepodařilo se přidat komentář');
+    }
+  };
+
+  const handleApproval = async (action: 'approve' | 'reject') => {
+    const commentText = action === 'reject'
+      ? prompt('Důvod zamítnutí (povinné):')
+      : prompt('Komentář (volitelné):');
+
+    if (action === 'reject' && !commentText?.trim()) {
+      alert('Důvod zamítnutí je povinný');
+      return;
+    }
+
+    try {
+      const updated = await performApprovalAction(documentId, action, commentText || undefined);
+      setDocumentDetail(updated);
+      alert(action === 'approve' ? 'Dokument schválen' : 'Dokument zamítnut');
+    } catch (error) {
+      console.error(`Failed to ${action} document:`, error);
+      alert(`Nepodařilo se ${action === 'approve' ? 'schválit' : 'zamítnout'} dokument`);
+    }
   };
 
   if (loading) {
@@ -174,6 +272,15 @@ export default function DocumentDetailEnhanced({ documentId }: DocumentDetailEnh
           <span className={`status-badge ${document.status.toLowerCase()}`}>
             {document.status}
           </span>
+          {isEditing && (
+            <span className="text-sm text-gray-500 ml-4">
+              {hasUnsavedChanges ? (
+                <span className="text-orange-600">● Neuložené změny</span>
+              ) : lastSavedAt ? (
+                <span className="text-green-600">✓ Uloženo {new Date().getTime() - lastSavedAt.getTime() < 60000 ? 'právě teď' : formatDate(lastSavedAt.toISOString(), 'long')}</span>
+              ) : null}
+            </span>
+          )}
         </div>
         <div className="header-actions">
           {!isEditing ? (
@@ -181,15 +288,19 @@ export default function DocumentDetailEnhanced({ documentId }: DocumentDetailEnh
               <Button variant="secondary" onClick={handleEdit}>
                 ✏️ Upravit
               </Button>
-              <Button variant="success">✓ Schválit</Button>
-              <Button variant="danger">✗ Zamítnout</Button>
+              <Button variant="success" onClick={() => handleApproval('approve')}>✓ Schválit</Button>
+              <Button variant="danger" onClick={() => handleApproval('reject')}>✗ Zamítnout</Button>
             </>
           ) : (
             <>
               <Button variant="secondary" onClick={handleCancel}>
                 Zrušit
               </Button>
-              <Button variant="primary" onClick={handleSave}>
+              <Button
+                variant="primary"
+                onClick={handleSubmit(onSubmit)}
+                disabled={!isValid}
+              >
                 💾 Uložit změny
               </Button>
             </>
@@ -211,10 +322,15 @@ export default function DocumentDetailEnhanced({ documentId }: DocumentDetailEnh
               <div className="detail-field">
                 <label>Typ</label>
                 {isEditing ? (
-                  <Input
-                    value={editedValues.type || ''}
-                    onChange={(e) => handleFieldChange('type', e.target.value)}
-                  />
+                  <div>
+                    <Input
+                      {...register('type')}
+                      className={errors.type ? 'border-red-500' : ''}
+                    />
+                    {errors.type && (
+                      <p className="text-red-500 text-sm mt-1">{errors.type.message}</p>
+                    )}
+                  </div>
                 ) : (
                   <div className="field-value">{document.type}</div>
                 )}
@@ -222,11 +338,17 @@ export default function DocumentDetailEnhanced({ documentId }: DocumentDetailEnh
               <div className="detail-field">
                 <label>Částka</label>
                 {isEditing ? (
-                  <Input
-                    type="number"
-                    value={editedValues.amount || ''}
-                    onChange={(e) => handleFieldChange('amount', parseFloat(e.target.value))}
-                  />
+                  <div>
+                    <Input
+                      type="number"
+                      step="0.01"
+                      {...register('amount', { valueAsNumber: true })}
+                      className={errors.amount ? 'border-red-500' : ''}
+                    />
+                    {errors.amount && (
+                      <p className="text-red-500 text-sm mt-1">{errors.amount.message}</p>
+                    )}
+                  </div>
                 ) : (
                   <div className="field-value amount">
                     {formatCurrency(document.amount, document.currency)}
@@ -240,11 +362,16 @@ export default function DocumentDetailEnhanced({ documentId }: DocumentDetailEnh
               <div className="detail-field">
                 <label>Datum splatnosti</label>
                 {isEditing ? (
-                  <Input
-                    type="date"
-                    value={editedValues.dueDate || ''}
-                    onChange={(e) => handleFieldChange('dueDate', e.target.value)}
-                  />
+                  <div>
+                    <Input
+                      type="date"
+                      {...register('dueDate')}
+                      className={errors.dueDate ? 'border-red-500' : ''}
+                    />
+                    {errors.dueDate && (
+                      <p className="text-red-500 text-sm mt-1">{errors.dueDate.message}</p>
+                    )}
+                  </div>
                 ) : (
                   <div className="field-value">{formatDate(document.dueDate)}</div>
                 )}
@@ -267,13 +394,15 @@ export default function DocumentDetailEnhanced({ documentId }: DocumentDetailEnh
               <div className="detail-field">
                 <label>Název společnosti</label>
                 {isEditing ? (
-                  <Input
-                    value={editedValues.company?.name || ''}
-                    onChange={(e) => handleFieldChange('company', {
-                      ...editedValues.company!,
-                      name: e.target.value
-                    })}
-                  />
+                  <div>
+                    <Input
+                      {...register('companyName')}
+                      className={errors.companyName ? 'border-red-500' : ''}
+                    />
+                    {errors.companyName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.companyName.message}</p>
+                    )}
+                  </div>
                 ) : (
                   <div className="field-value">{document.company.name}</div>
                 )}

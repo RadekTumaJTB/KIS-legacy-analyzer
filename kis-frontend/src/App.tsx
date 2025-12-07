@@ -3,6 +3,9 @@ import Navigation from './components/Navigation';
 import DashboardPage from './pages/DashboardPage';
 import DocumentsListPageAdvanced from './pages/DocumentsListPageAdvanced';
 import DocumentDetailPage from './pages/DocumentDetailPage';
+import BudgetDashboard from './pages/BudgetDashboard';
+import BudgetListPage from './pages/BudgetListPage';
+import BudgetDetailPage from './pages/BudgetDetailPage';
 import './App.css';
 
 function App() {
@@ -16,6 +19,9 @@ function App() {
             <Route path="/" element={<DashboardPage />} />
             <Route path="/documents" element={<DocumentsListPageAdvanced />} />
             <Route path="/documents/:id" element={<DocumentDetailPage />} />
+            <Route path="/budgets/dashboard" element={<BudgetDashboard />} />
+            <Route path="/budgets/:id" element={<BudgetDetailPage />} />
+            <Route path="/budgets" element={<BudgetListPage />} />
           </Routes>
         </main>
 

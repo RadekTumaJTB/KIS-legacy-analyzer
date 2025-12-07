@@ -7,15 +7,17 @@ public class CompanySummaryDTO {
 
     private Long id;
     private String name;
-    private String ico;
+    private String registrationNumber; // Changed from ico
+    private String address;
 
     public CompanySummaryDTO() {
     }
 
-    public CompanySummaryDTO(Long id, String name, String ico) {
+    public CompanySummaryDTO(Long id, String name, String registrationNumber, String address) {
         this.id = id;
         this.name = name;
-        this.ico = ico;
+        this.registrationNumber = registrationNumber;
+        this.address = address;
     }
 
     public static Builder builder() {
@@ -38,18 +40,27 @@ public class CompanySummaryDTO {
         this.name = name;
     }
 
-    public String getIco() {
-        return ico;
+    public String getRegistrationNumber() {
+        return registrationNumber;
     }
 
-    public void setIco(String ico) {
-        this.ico = ico;
+    public void setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public static class Builder {
         private Long id;
         private String name;
-        private String ico;
+        private String registrationNumber;
+        private String address;
 
         public Builder id(Long id) {
             this.id = id;
@@ -61,13 +72,24 @@ public class CompanySummaryDTO {
             return this;
         }
 
+        public Builder registrationNumber(String registrationNumber) {
+            this.registrationNumber = registrationNumber;
+            return this;
+        }
+
+        public Builder address(String address) {
+            this.address = address;
+            return this;
+        }
+
+        // Keep ico() for backward compatibility
         public Builder ico(String ico) {
-            this.ico = ico;
+            this.registrationNumber = ico;
             return this;
         }
 
         public CompanySummaryDTO build() {
-            return new CompanySummaryDTO(id, name, ico);
+            return new CompanySummaryDTO(id, name, registrationNumber, address);
         }
     }
 }

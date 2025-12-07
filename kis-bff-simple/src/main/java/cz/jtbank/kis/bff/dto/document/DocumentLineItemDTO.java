@@ -10,16 +10,18 @@ public class DocumentLineItemDTO {
     private Long id;
     private String description;
     private Integer quantity;
+    private String unit;
     private BigDecimal unitPrice;
     private BigDecimal total;
 
     public DocumentLineItemDTO() {
     }
 
-    public DocumentLineItemDTO(Long id, String description, Integer quantity, BigDecimal unitPrice, BigDecimal total) {
+    public DocumentLineItemDTO(Long id, String description, Integer quantity, String unit, BigDecimal unitPrice, BigDecimal total) {
         this.id = id;
         this.description = description;
         this.quantity = quantity;
+        this.unit = unit;
         this.unitPrice = unitPrice;
         this.total = total;
     }
@@ -52,6 +54,14 @@ public class DocumentLineItemDTO {
         this.quantity = quantity;
     }
 
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
     public BigDecimal getUnitPrice() {
         return unitPrice;
     }
@@ -72,6 +82,7 @@ public class DocumentLineItemDTO {
         private Long id;
         private String description;
         private Integer quantity;
+        private String unit;
         private BigDecimal unitPrice;
         private BigDecimal total;
 
@@ -90,6 +101,11 @@ public class DocumentLineItemDTO {
             return this;
         }
 
+        public Builder unit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+
         public Builder unitPrice(BigDecimal unitPrice) {
             this.unitPrice = unitPrice;
             return this;
@@ -101,7 +117,7 @@ public class DocumentLineItemDTO {
         }
 
         public DocumentLineItemDTO build() {
-            return new DocumentLineItemDTO(id, description, quantity, unitPrice, total);
+            return new DocumentLineItemDTO(id, description, quantity, unit, unitPrice, total);
         }
     }
 }

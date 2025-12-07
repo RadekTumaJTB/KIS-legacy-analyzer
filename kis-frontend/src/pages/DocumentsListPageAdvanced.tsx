@@ -14,11 +14,12 @@ import type {
   ColumnFiltersState,
 } from '@tanstack/react-table';
 import type { DocumentSummaryDTO } from '../types/document';
-import { fetchDocuments } from '../api/documentApi';
+import { fetchDocuments, bulkApprovalAction, createDocument } from '../api/documentApi';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { Checkbox } from '../components/ui/Checkbox';
 import ApprovalModal from '../components/ApprovalModal';
+import NewDocumentModal from '../components/NewDocumentModal';
 import DocumentFiltersPanel from '../components/DocumentFiltersPanel';
 import type { DocumentFilters } from '../components/DocumentFiltersPanel';
 import { formatCurrency, formatDate, cn } from '../lib/utils';
@@ -28,6 +29,8 @@ export default function DocumentsListPageAdvanced() {
   const [documents, setDocuments] = useState<DocumentSummaryDTO[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [hasMore, setHasMore] = useState(true);
+  const [page, setPage] = useState(1);
 
   // Table state
   const [sorting, setSorting] = useState<SortingState>([]);
@@ -38,6 +41,7 @@ export default function DocumentsListPageAdvanced() {
   // Modal state
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalAction, setModalAction] = useState<'approve' | 'reject'>('approve');
+  const [isNewDocModalOpen, setIsNewDocModalOpen] = useState(false);
 
   // Advanced filters state
   const [advancedFilters, setAdvancedFilters] = useState<DocumentFilters>({
@@ -58,6 +62,9 @@ export default function DocumentsListPageAdvanced() {
         const result = await fetchDocuments();
         setDocuments(result);
         setError(null);
+        // In a real implementation, check if there are more pages available
+        // For now, with mock data, we only have one page
+        setHasMore(false);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load documents');
       } finally {
@@ -67,6 +74,44 @@ export default function DocumentsListPageAdvanced() {
 
     loadDocuments();
   }, []);
+
+  // Infinite scroll handler
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollableDiv = document.querySelector('.table-container');
+      if (!scrollableDiv || !hasMore || loading) return;
+
+      const { scrollTop, scrollHeight, clientHeight } = scrollableDiv;
+
+      // Load more when user scrolls to within 200px of bottom
+      if (scrollHeight - scrollTop - clientHeight < 200) {
+        loadMoreDocuments();
+      }
+    };
+
+    const scrollableDiv = document.querySelector('.table-container');
+    scrollableDiv?.addEventListener('scroll', handleScroll);
+
+    return () => scrollableDiv?.removeEventListener('scroll', handleScroll);
+  }, [hasMore, loading]);
+
+  const loadMoreDocuments = async () => {
+    if (!hasMore || loading) return;
+
+    try {
+      setLoading(true);
+      const nextPage = page + 1;
+      // In real implementation: const result = await fetchDocuments({ page: nextPage });
+      // For now with mock data, we don't have more pages
+      setPage(nextPage);
+      // setDocuments(prev => [...prev, ...result]);
+      // setHasMore(result.length > 0);
+    } catch (err) {
+      console.error('Failed to load more documents:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const columns = useMemo<ColumnDef<DocumentSummaryDTO>[]>(
     () => [
@@ -275,17 +320,21 @@ export default function DocumentsListPageAdvanced() {
     const selectedRows = table.getFilteredSelectedRowModel().rows;
     const selectedIds = selectedRows.map(row => row.original.id);
 
-    console.log(`${action} documents:`, selectedIds, 'with comment:', comment);
+    try {
+      await bulkApprovalAction(selectedIds, action, comment);
 
-    // TODO: Implement actual API call to BFF
-    // await approveDocuments(selectedIds, comment);
-    // await rejectDocuments(selectedIds, comment);
+      // Reload documents to reflect changes
+      const refreshed = await fetchDocuments();
+      setDocuments(refreshed);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+      // Clear selection after successful operation
+      table.resetRowSelection();
 
-    // Clear selection after successful operation
-    table.resetRowSelection();
+      alert(`Úspěšně ${action === 'approve' ? 'schváleno' : 'zamítnuto'} ${selectedIds.length} dokumentů`);
+    } catch (error) {
+      console.error('Bulk approval action failed:', error);
+      alert(`Nepodařilo se ${action === 'approve' ? 'schválit' : 'zamítnout'} dokumenty`);
+    }
 
     // Optionally reload documents
     // loadDocuments();
@@ -309,6 +358,61 @@ export default function DocumentsListPageAdvanced() {
     // Clear table column filters as well
     table.resetColumnFilters();
     setGlobalFilter('');
+  };
+
+  const handleArchiveDocuments = async () => {
+    const selectedRows = table.getFilteredSelectedRowModel().rows;
+    const selectedIds = selectedRows.map(row => row.original.id);
+
+    if (!confirm(`Opravdu chcete archivovat ${selectedIds.length} dokumentů?`)) {
+      return;
+    }
+
+    try {
+      // TODO: Implement archive endpoint in BFF
+      // For now, we'll simulate it by removing from the list
+      console.log('Archiving documents:', selectedIds);
+
+      setDocuments(prev => prev.filter(doc => !selectedIds.includes(doc.id)));
+      table.resetRowSelection();
+
+      alert(`Úspěšně archivováno ${selectedIds.length} dokumentů`);
+    } catch (error) {
+      console.error('Archive action failed:', error);
+      alert('Nepodařilo se archivovat dokumenty');
+    }
+  };
+
+  const handleCreateDocument = async (data: {
+    type: string;
+    amount: string;
+    dueDate: string;
+    companyName: string;
+    description?: string;
+  }) => {
+    try {
+      const created = await createDocument(data);
+
+      // Add new document to the list
+      const newSummary: DocumentSummaryDTO = {
+        id: created.document.id,
+        number: created.document.number,
+        type: created.document.type,
+        amount: created.document.amount,
+        currency: created.document.currency,
+        status: created.document.status,
+        dueDate: created.document.dueDate.toString(),
+        companyName: data.companyName,
+        createdByName: 'Eva Černá',
+      };
+
+      setDocuments(prev => [newSummary, ...prev]);
+      alert('✓ Dokument byl úspěšně vytvořen');
+    } catch (error) {
+      console.error('Failed to create document:', error);
+      alert('Nepodařilo se vytvořit dokument');
+      throw error;
+    }
   };
 
   if (loading) {
@@ -341,7 +445,9 @@ export default function DocumentsListPageAdvanced() {
           </p>
         </div>
         <div className="header-actions">
-          <Button variant="primary">+ Nový dokument</Button>
+          <Button variant="primary" onClick={() => setIsNewDocModalOpen(true)}>
+            + Nový dokument
+          </Button>
         </div>
       </div>
 
@@ -368,6 +474,13 @@ export default function DocumentsListPageAdvanced() {
             </Button>
             <Button variant="secondary" size="sm">
               📧 Odeslat email
+            </Button>
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={handleArchiveDocuments}
+            >
+              📦 Archivovat ({selectedCount})
             </Button>
             <Button
               variant="ghost"
@@ -524,6 +637,13 @@ export default function DocumentsListPageAdvanced() {
         onSubmit={handleSubmitApproval}
         selectedCount={selectedCount}
         action={modalAction}
+      />
+
+      {/* New Document Modal */}
+      <NewDocumentModal
+        isOpen={isNewDocModalOpen}
+        onClose={() => setIsNewDocModalOpen(false)}
+        onSubmit={handleCreateDocument}
       />
     </div>
   );

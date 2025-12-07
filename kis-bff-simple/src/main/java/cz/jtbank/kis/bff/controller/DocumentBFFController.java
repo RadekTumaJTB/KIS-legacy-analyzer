@@ -1,7 +1,6 @@
 package cz.jtbank.kis.bff.controller;
 
-import cz.jtbank.kis.bff.dto.document.DocumentDetailDTO;
-import cz.jtbank.kis.bff.dto.document.DocumentSummaryDTO;
+import cz.jtbank.kis.bff.dto.document.*;
 import cz.jtbank.kis.bff.service.DocumentAggregationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -70,6 +69,98 @@ public class DocumentBFFController {
         DocumentDetailDTO detail = documentAggregationService.getFullDocumentDetail(id);
 
         return ResponseEntity.ok(detail);
+    }
+
+    /**
+     * Create new document
+     *
+     * Creates a new document with the provided data
+     *
+     * @param request Document creation request
+     * @return Created document detail
+     */
+    @PostMapping
+    public ResponseEntity<DocumentDetailDTO> createDocument(@RequestBody DocumentCreateRequestDTO request) {
+        logger.info("POST /bff/documents - Creating new document: " + request.getType());
+
+        DocumentDetailDTO created = documentAggregationService.createDocument(request);
+
+        return ResponseEntity.ok(created);
+    }
+
+    /**
+     * Update document
+     *
+     * Updates editable fields of a document
+     *
+     * @param id Document ID
+     * @param request Update request with changed fields
+     * @return Updated document detail
+     */
+    @PutMapping("/{id}")
+    public ResponseEntity<DocumentDetailDTO> updateDocument(
+            @PathVariable Long id,
+            @RequestBody DocumentUpdateRequestDTO request) {
+        logger.info("PUT /bff/documents/" + id);
+
+        DocumentDetailDTO updated = documentAggregationService.updateDocument(id, request);
+
+        return ResponseEntity.ok(updated);
+    }
+
+    /**
+     * Add comment to document
+     *
+     * @param id Document ID
+     * @param request Comment request
+     * @return Updated document detail with new comment
+     */
+    @PostMapping("/{id}/comments")
+    public ResponseEntity<DocumentDetailDTO> addComment(
+            @PathVariable Long id,
+            @RequestBody CommentRequestDTO request) {
+        logger.info("POST /bff/documents/" + id + "/comments");
+
+        DocumentDetailDTO updated = documentAggregationService.addComment(id, request);
+
+        return ResponseEntity.ok(updated);
+    }
+
+    /**
+     * Approve or reject document(s)
+     *
+     * Supports both single document approval and bulk operations
+     *
+     * @param id Document ID (for single document operation)
+     * @param request Approval action request
+     * @return Updated document detail
+     */
+    @PostMapping("/{id}/approval-action")
+    public ResponseEntity<DocumentDetailDTO> approvalAction(
+            @PathVariable Long id,
+            @RequestBody ApprovalActionRequestDTO request) {
+        logger.info("POST /bff/documents/" + id + "/approval-action: " + request.getAction());
+
+        DocumentDetailDTO updated = documentAggregationService.performApprovalAction(id, request);
+
+        return ResponseEntity.ok(updated);
+    }
+
+    /**
+     * Bulk approval action for multiple documents
+     *
+     * @param request Approval action request with list of document IDs
+     * @return Success message
+     */
+    @PostMapping("/bulk-approval-action")
+    public ResponseEntity<String> bulkApprovalAction(@RequestBody ApprovalActionRequestDTO request) {
+        logger.info("POST /bff/documents/bulk-approval-action: " + request.getAction() +
+                   " for " + request.getDocumentIds().size() + " documents");
+
+        documentAggregationService.performBulkApprovalAction(request);
+
+        return ResponseEntity.ok("Bulk " + request.getAction() + " completed for " +
+                                request.getDocumentIds().size() + " documents");
     }
 
     /**
