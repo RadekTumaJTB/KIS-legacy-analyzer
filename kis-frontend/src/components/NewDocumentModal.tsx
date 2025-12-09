@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -32,8 +33,15 @@ export default function NewDocumentModal({ isOpen, onClose, onSubmit }: NewDocum
     reset,
   } = useForm<DocumentFormData>({
     resolver: zodResolver(documentSchema),
-    mode: 'onChange',
+    mode: 'onSubmit', // Changed from 'onChange' to 'onSubmit' for proper validation
   });
+
+  // Reset form when modal opens
+  useEffect(() => {
+    if (isOpen) {
+      reset();
+    }
+  }, [isOpen, reset]);
 
   const handleFormSubmit = async (data: DocumentFormData) => {
     try {

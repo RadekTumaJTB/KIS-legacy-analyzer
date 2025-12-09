@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -32,20 +33,25 @@ export default function EditBudgetModal({ isOpen, budget, onClose, onSubmit }: E
     reset,
   } = useForm<BudgetFormData>({
     resolver: zodResolver(budgetSchema),
-    mode: 'onChange',
-    defaultValues: budget ? {
-      name: budget.name,
-      plannedAmount: budget.totalPlanned.toString(),
-      description: budget.description || '',
-    } : undefined,
+    mode: 'onSubmit', // Changed from 'onChange' to 'onSubmit'
   });
+
+  // Reset form with budget values when modal opens or budget changes
+  useEffect(() => {
+    if (isOpen && budget) {
+      reset({
+        name: budget.name,
+        plannedAmount: budget.totalPlanned.toString(),
+        description: budget.description || '',
+      });
+    }
+  }, [isOpen, budget, reset]);
 
   const handleFormSubmit = async (data: BudgetFormData) => {
     if (!budget) return;
 
     try {
       await onSubmit(budget.id, data);
-      reset();
       onClose();
     } catch (error) {
       console.error('Failed to update budget:', error);
@@ -53,7 +59,6 @@ export default function EditBudgetModal({ isOpen, budget, onClose, onSubmit }: E
   };
 
   const handleClose = () => {
-    reset();
     onClose();
   };
 
@@ -106,13 +111,17 @@ export default function EditBudgetModal({ isOpen, budget, onClose, onSubmit }: E
           </div>
 
           <div className="form-group">
-            <label htmlFor="plannedAmount">Plánovaná částka (CZK) *</label>
+            <label htmlFor="plannedAmount">Celková plánovaná částka pro celý rok (CZK) *</label>
             <Input
               id="plannedAmount"
               type="text"
               {...register('plannedAmount')}
               className={errors.plannedAmount ? 'input-error' : ''}
+              placeholder="např. 12000000"
             />
+            <span className="text-xs text-gray-500">
+              Částka bude automaticky rozdělena na 12 měsíců
+            </span>
             {errors.plannedAmount && (
               <span className="error-message">{errors.plannedAmount.message}</span>
             )}

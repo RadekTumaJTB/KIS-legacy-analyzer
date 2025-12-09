@@ -35,6 +35,12 @@ export default function Navigation() {
           >
             💰 Rozpočty
           </Link>
+          <Link
+            to="/projects"
+            className={`nav-link ${isActive('/projects') || location.pathname.startsWith('/projects') ? 'active' : ''}`}
+          >
+            📋 Projekty
+          </Link>
         </div>
 
         <div className="nav-user">

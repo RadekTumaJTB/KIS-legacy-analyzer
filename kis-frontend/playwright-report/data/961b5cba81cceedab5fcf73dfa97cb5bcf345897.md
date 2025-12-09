@@ -1,0 +1,146 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "🏦 KIS Banking" [ref=e6]:
+        - /url: /
+        - generic [ref=e7]: 🏦
+        - generic [ref=e8]: KIS Banking
+      - generic [ref=e9]:
+        - link "📊 Dashboard" [ref=e10]:
+          - /url: /
+        - link "📄 Dokumenty" [ref=e11]:
+          - /url: /documents
+        - link "💰 Rozpočty" [ref=e12]:
+          - /url: /budgets
+      - generic [ref=e13]:
+        - generic [ref=e14]: Eva Černá
+        - generic [ref=e15]: CFO
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - heading "📄 Dokumenty" [level=1] [ref=e20]
+          - paragraph [ref=e21]: 3 dokumentů (1 vybráno)
+        - button "+ Nový dokument" [ref=e23]
+      - generic [ref=e24]:
+        - generic [ref=e25]: 1 položek vybráno
+        - generic [ref=e26]:
+          - button "✓ Schválit (1)" [ref=e27]
+          - button "✗ Zamítnout (1)" [ref=e28]
+          - button "📧 Odeslat email" [ref=e29]
+          - button "📦 Archivovat (1)" [ref=e30]
+          - button "Zrušit výběr" [ref=e31]
+      - button "▶ 🔍 Pokročilé filtry" [ref=e34] [cursor=pointer]:
+        - generic [ref=e35]: ▶
+        - generic [ref=e36]: 🔍 Pokročilé filtry
+      - generic [ref=e37]:
+        - searchbox "Hledat v dokumentech..." [ref=e39]
+        - combobox [ref=e41] [cursor=pointer]:
+          - option "Všechny statusy" [selected]
+          - option "Čeká na schválení"
+          - option "Schváleno"
+          - option "Po splatnosti"
+          - option "Koncept"
+      - table [ref=e43]:
+        - rowgroup [ref=e44]:
+          - row "Select all Číslo dokumentu ↕ Typ ↕ Společnost ↕ Částka ↕ Splatnost ↕ Status ↕ Vytvořil ↕ Akce" [ref=e45]:
+            - columnheader "Select all" [ref=e46]:
+              - checkbox "Select all" [checked=mixed] [ref=e48]
+            - columnheader "Číslo dokumentu ↕" [ref=e49]:
+              - generic [ref=e50] [cursor=pointer]:
+                - text: Číslo dokumentu
+                - generic [ref=e51]: ↕
+            - columnheader "Typ ↕" [ref=e52]:
+              - generic [ref=e53] [cursor=pointer]:
+                - text: Typ
+                - generic [ref=e54]: ↕
+            - columnheader "Společnost ↕" [ref=e55]:
+              - generic [ref=e56] [cursor=pointer]:
+                - text: Společnost
+                - generic [ref=e57]: ↕
+            - columnheader "Částka ↕" [ref=e58]:
+              - generic [ref=e59] [cursor=pointer]:
+                - text: Částka
+                - generic [ref=e60]: ↕
+            - columnheader "Splatnost ↕" [ref=e61]:
+              - generic [ref=e62] [cursor=pointer]:
+                - text: Splatnost
+                - generic [ref=e63]: ↕
+            - columnheader "Status ↕" [ref=e64]:
+              - generic [ref=e65] [cursor=pointer]:
+                - text: Status
+                - generic [ref=e66]: ↕
+            - columnheader "Vytvořil ↕" [ref=e67]:
+              - generic [ref=e68] [cursor=pointer]:
+                - text: Vytvořil
+                - generic [ref=e69]: ↕
+            - columnheader "Akce" [ref=e70]:
+              - generic [ref=e71]: Akce
+        - rowgroup [ref=e72]:
+          - row "Select row DOC-2025-0003 Faktura Tech Solutions s.r.o. 220 000,00 Kč 27. 11. 2025 DRAFT Eva Černá Detail" [ref=e73]:
+            - cell "Select row" [ref=e74]:
+              - checkbox "Select row" [checked] [ref=e75]
+            - cell "DOC-2025-0003" [ref=e76]:
+              - link "DOC-2025-0003" [ref=e77]:
+                - /url: /documents/3
+            - cell "Faktura" [ref=e78]
+            - cell "Tech Solutions s.r.o." [ref=e79]
+            - cell "220 000,00 Kč" [ref=e80]
+            - cell "27. 11. 2025" [ref=e81]
+            - cell "DRAFT" [ref=e82]
+            - cell "Eva Černá" [ref=e83]
+            - cell "Detail" [ref=e84]:
+              - link "Detail" [ref=e86]:
+                - /url: /documents/3
+                - button "Detail" [ref=e87]
+          - row "Select row DOC-2025-0002 Objednávka ACME Corp 85 000,00 Kč 17. 12. 2025 APPROVED Petra Svobodová Detail" [ref=e88]:
+            - cell "Select row" [ref=e89]:
+              - checkbox "Select row" [ref=e90]
+            - cell "DOC-2025-0002" [ref=e91]:
+              - link "DOC-2025-0002" [ref=e92]:
+                - /url: /documents/2
+            - cell "Objednávka" [ref=e93]
+            - cell "ACME Corp" [ref=e94]
+            - cell "85 000,00 Kč" [ref=e95]
+            - cell "17. 12. 2025" [ref=e96]
+            - cell "APPROVED" [ref=e97]
+            - cell "Petra Svobodová" [ref=e98]
+            - cell "Detail" [ref=e99]:
+              - link "Detail" [ref=e101]:
+                - /url: /documents/2
+                - button "Detail" [ref=e102]
+          - row "Select row DOC-2025-0001 Faktura JT Bank a.s. 150 000,00 Kč 12. 12. 2025 PENDING_APPROVAL Martin Novák Detail" [ref=e103]:
+            - cell "Select row" [ref=e104]:
+              - checkbox "Select row" [ref=e105]
+            - cell "DOC-2025-0001" [ref=e106]:
+              - link "DOC-2025-0001" [ref=e107]:
+                - /url: /documents/1
+            - cell "Faktura" [ref=e108]
+            - cell "JT Bank a.s." [ref=e109]
+            - cell "150 000,00 Kč" [ref=e110]
+            - cell "12. 12. 2025" [ref=e111]
+            - cell "PENDING_APPROVAL" [ref=e112]
+            - cell "Martin Novák" [ref=e113]
+            - cell "Detail" [ref=e114]:
+              - link "Detail" [ref=e116]:
+                - /url: /documents/1
+                - button "Detail" [ref=e117]
+      - generic [ref=e118]:
+        - generic [ref=e119]: Stránka 1 z 1
+        - generic [ref=e120]:
+          - button "<<" [disabled] [ref=e121]
+          - button "<" [disabled] [ref=e122]
+          - button ">" [disabled] [ref=e123]
+          - button ">>" [disabled] [ref=e124]
+        - combobox [ref=e125] [cursor=pointer]:
+          - option "Zobrazit 5"
+          - option "Zobrazit 10" [selected]
+          - option "Zobrazit 20"
+          - option "Zobrazit 50"
+  - contentinfo [ref=e126]:
+    - paragraph [ref=e127]: ⚡ Powered by BFF - 1 API call instead of 5 (80% faster)
+    - text: Spring Boot 3.2.1 + React 19 + Vite + TypeScript + React Router
+```

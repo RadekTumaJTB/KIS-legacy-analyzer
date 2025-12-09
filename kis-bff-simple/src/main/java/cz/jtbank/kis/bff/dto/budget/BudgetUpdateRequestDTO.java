@@ -4,21 +4,15 @@ import java.math.BigDecimal;
 
 /**
  * Request DTO for updating a budget
+ * UI sends total amount, backend distributes it across months
+ * and calls updateBudgetPolozka() for each month (like original)
  */
 public class BudgetUpdateRequestDTO {
-    private String name;
-    private BigDecimal plannedAmount;
+    private BigDecimal plannedAmount;  // Celková plánovaná částka (UI posílá total)
     private String description;
+    private String notes;
 
     // Getters and Setters
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public BigDecimal getPlannedAmount() {
         return plannedAmount;
@@ -34,5 +28,13 @@ public class BudgetUpdateRequestDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 }

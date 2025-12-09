@@ -2,12 +2,15 @@ package cz.jtbank.kis.bff.service;
 
 import cz.jtbank.kis.bff.dto.budget.*;
 import cz.jtbank.kis.bff.dto.document.UserSummaryDTO;
+import cz.jtbank.kis.bff.entity.*;
+import cz.jtbank.kis.bff.repository.*;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -15,15 +18,32 @@ import java.util.logging.Logger;
 /**
  * Budget Aggregation Service
  *
- * Aggregates budget data from multiple backend services
- *
- * TODO: Replace mock data with actual Feign client calls
- * when core backend endpoints are available
+ * Aggregates budget data from Oracle database
+ * Replaces mock data with real repository calls
  */
 @Service
 public class BudgetAggregationService {
 
     private static final Logger logger = Logger.getLogger(BudgetAggregationService.class.getName());
+
+    private final BudgetRepository budgetRepository;
+    private final BudgetPolozkaRepository budgetPolozkaRepository;
+    private final OdborRepository odborRepository;
+    private final AppUserRepository appUserRepository;
+    private final EmailNotificationService emailNotificationService;
+
+    public BudgetAggregationService(
+            BudgetRepository budgetRepository,
+            BudgetPolozkaRepository budgetPolozkaRepository,
+            OdborRepository odborRepository,
+            AppUserRepository appUserRepository,
+            EmailNotificationService emailNotificationService) {
+        this.budgetRepository = budgetRepository;
+        this.budgetPolozkaRepository = budgetPolozkaRepository;
+        this.odborRepository = odborRepository;
+        this.appUserRepository = appUserRepository;
+        this.emailNotificationService = emailNotificationService;
+    }
 
     private static final String[] MONTH_NAMES_CZ = {
             "Leden", "Únor", "Březen", "Duben", "Květen", "Červen",
@@ -44,54 +64,251 @@ public class BudgetAggregationService {
      * Get list of budgets (summary view)
      */
     public List<BudgetSummaryDTO> getBudgetList() {
-        logger.info("Fetching budget list");
+        logger.info("Fetching budget list from Oracle");
 
-        // TODO: Replace with actual backend call
-        return createMockBudgetList();
+        List<BudgetEntity> budgets = budgetRepository.findAll();
+        List<BudgetSummaryDTO> result = new ArrayList<>();
+
+        for (BudgetEntity budget : budgets) {
+            // Fetch related data
+            OdborEntity odbor = odborRepository.findById(budget.getIdKtgOdbor()).orElse(null);
+            List<BudgetPolozkaEntity> polozky = budgetPolozkaRepository.findAll().stream()
+                    .filter(p -> p.getIdBudget().equals(budget.getId()))
+                    .toList();
+
+            // Calculate totals from line items
+            BigDecimal totalPlanned = polozky.stream()
+                    .map(p -> p.getPlanAmount() != null ? p.getPlanAmount() : BigDecimal.ZERO)
+                    .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+            BigDecimal totalActual = polozky.stream()
+                    .map(p -> p.getActualAmount() != null ? p.getActualAmount() : BigDecimal.ZERO)
+                    .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+            BigDecimal variance = totalActual.subtract(totalPlanned);
+
+            double utilization = totalPlanned.compareTo(BigDecimal.ZERO) > 0
+                    ? totalActual.divide(totalPlanned, 4, RoundingMode.HALF_UP)
+                            .multiply(new BigDecimal("100"))
+                            .doubleValue()
+                    : 0.0;
+
+            // Determine status based on utilization
+            String status = "ACTIVE";
+            if (budget.getPlatnostOd().isAfter(LocalDate.now())) {
+                status = "DRAFT";
+            }
+
+            // Convert dates
+            LocalDate validFrom = budget.getPlatnostOd();
+            LocalDate validTo = budget.getPlatnostDo();
+            int year = validFrom.getYear();
+
+            result.add(BudgetSummaryDTO.builder()
+                    .id(budget.getId())
+                    .code("BUD-" + year + "-" + String.format("%03d", budget.getId()))
+                    .name(odbor != null ? odbor.getNazev() + " " + year : "Budget " + year)
+                    .type("EXPENSE")
+                    .year(year)
+                    .status(status)
+                    .plannedAmount(totalPlanned)
+                    .actualAmount(totalActual)
+                    .variance(variance)
+                    .utilizationPercent(utilization)
+                    .departmentName(odbor != null ? odbor.getNazev() : "N/A")
+                    .ownerName("N/A") // TODO: Join with user when available
+                    .validFrom(validFrom)
+                    .validTo(validTo)
+                    .build());
+        }
+
+        return result;
     }
 
     /**
      * Get complete budget detail with line items
      */
     public BudgetDetailDTO getBudgetDetail(Long id) {
-        logger.info("Fetching budget detail for ID: " + id);
+        logger.info("Fetching budget detail for ID: " + id + " from Oracle");
 
-        // TODO: Replace with actual backend call
-        return createMockBudgetDetail(id);
+        BudgetEntity budget = budgetRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Budget not found: " + id));
+
+        // Fetch related data
+        OdborEntity odbor = odborRepository.findById(budget.getIdKtgOdbor()).orElse(null);
+        List<BudgetPolozkaEntity> polozky = budgetPolozkaRepository.findAll().stream()
+                .filter(p -> p.getIdBudget().equals(budget.getId()))
+                .sorted((a, b) -> a.getMesic().compareTo(b.getMesic()))
+                .toList();
+
+        // Create line items
+        List<BudgetLineItemDTO> lineItems = new ArrayList<>();
+        for (BudgetPolozkaEntity polozka : polozky) {
+            BigDecimal planned = polozka.getPlanAmount() != null ? polozka.getPlanAmount() : BigDecimal.ZERO;
+            BigDecimal actual = polozka.getActualAmount() != null ? polozka.getActualAmount() : BigDecimal.ZERO;
+            BigDecimal variance = actual.subtract(planned);
+
+            double utilization = planned.compareTo(BigDecimal.ZERO) > 0
+                    ? actual.divide(planned, 4, RoundingMode.HALF_UP)
+                            .multiply(new BigDecimal("100"))
+                            .doubleValue()
+                    : 0.0;
+
+            String status;
+            if (polozka.getMesic() > LocalDate.now().getMonthValue()) {
+                status = "PENDING";
+            } else if (utilization > 105) {
+                status = "OVER_BUDGET";
+            } else if (utilization < 90) {
+                status = "UNDER_BUDGET";
+            } else if (utilization > 95 && utilization <= 105) {
+                status = "ON_TRACK";
+            } else {
+                status = "WARNING";
+            }
+
+            lineItems.add(BudgetLineItemDTO.builder()
+                    .id(polozka.getId())
+                    .month(polozka.getMesic())
+                    .monthName(MONTH_NAMES_CZ[polozka.getMesic() - 1])
+                    .plannedAmount(planned)
+                    .actualAmount(actual)
+                    .variance(variance)
+                    .utilizationPercent(utilization)
+                    .status(status)
+                    .notes("")
+                    .build());
+        }
+
+        // Calculate totals
+        BigDecimal totalPlanned = lineItems.stream()
+                .map(BudgetLineItemDTO::getPlannedAmount)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        BigDecimal totalActual = lineItems.stream()
+                .map(BudgetLineItemDTO::getActualAmount)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        BigDecimal totalVariance = totalActual.subtract(totalPlanned);
+
+        double utilization = totalPlanned.compareTo(BigDecimal.ZERO) > 0
+                ? totalActual.divide(totalPlanned, 4, RoundingMode.HALF_UP)
+                        .multiply(new BigDecimal("100"))
+                        .doubleValue()
+                : 0.0;
+
+        LocalDate validFrom = budget.getPlatnostOd();
+        LocalDate validTo = budget.getPlatnostDo();
+        int year = validFrom.getYear();
+
+        return BudgetDetailDTO.builder()
+                .id(budget.getId())
+                .code("BUD-" + year + "-" + String.format("%03d", budget.getId()))
+                .name(odbor != null ? odbor.getNazev() + " " + year : "Budget " + year)
+                .description("Budget pro " + (odbor != null ? odbor.getNazev() : "N/A"))
+                .type("EXPENSE")
+                .year(year)
+                .status("ACTIVE")
+                .totalPlanned(totalPlanned)
+                .totalActual(totalActual)
+                .totalVariance(totalVariance)
+                .utilizationPercent(utilization)
+                .departmentName(odbor != null ? odbor.getNazev() : "N/A")
+                .owner(UserSummaryDTO.builder()
+                        .id(1L)
+                        .name("N/A")
+                        .email("N/A")
+                        .position("Manager")
+                        .build())
+                .validFrom(validFrom)
+                .validTo(validTo)
+                .createdAt(budget.getCreatedAt() != null
+                        ? budget.getCreatedAt().atZone(ZoneId.systemDefault()).toLocalDateTime()
+                        : LocalDateTime.now())
+                .updatedAt(budget.getUpdatedAt() != null
+                        ? budget.getUpdatedAt().atZone(ZoneId.systemDefault()).toLocalDateTime()
+                        : LocalDateTime.now())
+                .lineItems(lineItems)
+                .notes("")
+                .build();
     }
 
     /**
-     * Update budget
+     * Update budget by distributing total amount across months
+     * UI sends total amount, backend distributes it across 12 months
+     * and calls updateBudgetPolozka() for each month (like original)
      */
     public BudgetDetailDTO updateBudget(Long id, BudgetUpdateRequestDTO request) {
-        logger.info("Updating budget: " + id);
+        logger.info("Updating budget: " + id + " - distributing total across months");
 
-        // TODO: Call actual backend update endpoint
-        // For now, get current budget and update fields
+        // Fetch existing budget from database
+        BudgetEntity budget = budgetRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Budget not found: " + id));
 
-        BudgetDetailDTO current = getBudgetDetail(id);
+        if (request.getPlannedAmount() != null) {
+            // Get all 12 monthly line items for this budget
+            List<BudgetPolozkaEntity> polozky = budgetPolozkaRepository.findAll().stream()
+                    .filter(p -> p.getIdBudget().equals(budget.getId()))
+                    .sorted((a, b) -> a.getMesic().compareTo(b.getMesic()))
+                    .toList();
 
-        return BudgetDetailDTO.builder()
-                .id(current.getId())
-                .code(current.getCode())
-                .name(request.getName() != null ? request.getName() : current.getName())
-                .description(request.getDescription() != null ? request.getDescription() : current.getDescription())
-                .type(current.getType())
-                .year(current.getYear())
-                .status(current.getStatus())
-                .totalPlanned(request.getPlannedAmount() != null ? request.getPlannedAmount() : current.getTotalPlanned())
-                .totalActual(current.getTotalActual())
-                .totalVariance(current.getTotalVariance())
-                .utilizationPercent(current.getUtilizationPercent())
-                .departmentName(current.getDepartmentName())
-                .owner(current.getOwner())
-                .validFrom(current.getValidFrom())
-                .validTo(current.getValidTo())
-                .lineItems(current.getLineItems())
-                .notes(request.getDescription())
-                .createdAt(current.getCreatedAt())
-                .updatedAt(LocalDateTime.now())
-                .build();
+            if (polozky.isEmpty()) {
+                throw new RuntimeException("No monthly line items found for budget: " + id);
+            }
+
+            // Calculate monthly amount (total ÷ 12)
+            // Like original: updateBudgetPolozka() called for each month
+            BigDecimal monthlyAmount = request.getPlannedAmount()
+                    .divide(new BigDecimal(12), 2, RoundingMode.HALF_UP);
+
+            logger.info("Total amount: " + request.getPlannedAmount() +
+                       " -> Monthly amount: " + monthlyAmount +
+                       " (" + polozky.size() + " months)");
+
+            // Budget code for email notifications
+            String budgetCode = "BUD-" + budget.getPlatnostOd().getYear() + "-" +
+                               String.format("%03d", budget.getId());
+
+            // Update each month individually (like original updateBudgetPolozka)
+            int updatedCount = 0;
+            for (BudgetPolozkaEntity polozka : polozky) {
+                BigDecimal origAmount = polozka.getPlanAmount();
+
+                // Only update and notify if changed (like original code)
+                // Use compareTo for BigDecimal comparison (ignores scale)
+                if (origAmount.compareTo(monthlyAmount) != 0) {
+                    polozka.setPlanAmount(monthlyAmount);
+                    polozka.setUpdatedAt(LocalDateTime.now());
+                    budgetPolozkaRepository.save(polozka);
+                    updatedCount++;
+
+                    logger.info("Updated month " + polozka.getMesic() +
+                               " from " + origAmount + " to " + monthlyAmount);
+
+                    // Send email for this month (like original sendBudgetZmenaCastky)
+                    String monthName = MONTH_NAMES_CZ[polozka.getMesic() - 1];
+                    emailNotificationService.sendBudgetAmountChangeNotification(
+                            budgetCode,
+                            "Budget " + budget.getId(),
+                            polozka.getMesic(),
+                            monthName,
+                            origAmount,
+                            monthlyAmount,
+                            "CZK",
+                            "System User" // TODO: Get actual username from security context
+                    );
+                }
+            }
+
+            logger.info("Updated " + updatedCount + " out of " + polozky.size() + " months");
+        }
+
+        // Update budget timestamp
+        budget.setUpdatedAt(LocalDateTime.now());
+        budgetRepository.save(budget);
+
+        // Return updated budget detail
+        return getBudgetDetail(id);
     }
 
     /**

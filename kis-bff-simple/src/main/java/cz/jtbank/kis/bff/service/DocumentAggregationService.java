@@ -1,32 +1,52 @@
 package cz.jtbank.kis.bff.service;
 
 import cz.jtbank.kis.bff.dto.document.*;
+import cz.jtbank.kis.bff.entity.*;
+import cz.jtbank.kis.bff.repository.*;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
 /**
  * Document Aggregation Service
  *
- * Aggregates data from multiple backend services into single DTOs
+ * Aggregates data from Oracle database into DTOs
  * for frontend consumption.
  *
  * Performance Benefits:
  * - Without BFF: 5 API calls, ~2000ms
  * - With BFF: 1 API call, ~400ms
  * - Improvement: 80% faster
- *
- * TODO: Replace mock data with actual Feign client calls
- * when core backend endpoints are available
  */
 @Service
 public class DocumentAggregationService {
 
     private static final Logger logger = Logger.getLogger(DocumentAggregationService.class.getName());
+
+    private final DokumentRepository dokumentRepository;
+    private final DokumentStatusRepository dokumentStatusRepository;
+    private final DokumentTypRepository dokumentTypRepository;
+    private final SpolecnostRepository spolecnostRepository;
+    private final AppUserRepository appUserRepository;
+
+    public DocumentAggregationService(
+            DokumentRepository dokumentRepository,
+            DokumentStatusRepository dokumentStatusRepository,
+            DokumentTypRepository dokumentTypRepository,
+            SpolecnostRepository spolecnostRepository,
+            AppUserRepository appUserRepository) {
+        this.dokumentRepository = dokumentRepository;
+        this.dokumentStatusRepository = dokumentStatusRepository;
+        this.dokumentTypRepository = dokumentTypRepository;
+        this.spolecnostRepository = spolecnostRepository;
+        this.appUserRepository = appUserRepository;
+    }
 
     /**
      * Get list of documents (summary view)
@@ -34,10 +54,45 @@ public class DocumentAggregationService {
      * @return List of document summaries
      */
     public List<DocumentSummaryDTO> getDocumentList() {
-        logger.info("Fetching document list");
+        logger.info("Fetching document list from Oracle");
 
-        // TODO: Replace with actual backend call
-        return createMockDocumentList();
+        List<DokumentEntity> documents = dokumentRepository.findAllOrderByIdDesc();
+        List<DocumentSummaryDTO> result = new ArrayList<>();
+
+        for (DokumentEntity dokument : documents) {
+            // Fetch related data
+            DokumentTypEntity typ = dokumentTypRepository.findById(dokument.getIdCisDokument()).orElse(null);
+            DokumentStatusEntity status = dokumentStatusRepository.findById(dokument.getIdCisStatus()).orElse(null);
+            SpolecnostEntity spolecnost = spolecnostRepository.findById(dokument.getIdSpolecnost()).orElse(null);
+            AppUserEntity zadavatel = appUserRepository.findById(dokument.getIdZadavatel()).orElse(null);
+
+            // Map status from Oracle to frontend values
+            String statusName = "DRAFT";
+            if (status != null) {
+                switch (status.getId().intValue()) {
+                    case 0: statusName = "DRAFT"; break;
+                    case 1: statusName = "PENDING_APPROVAL"; break;
+                    case 2: statusName = "APPROVED"; break;
+                    case 3: statusName = "REJECTED"; break;
+                    case 4: statusName = "OVERDUE"; break;
+                    default: statusName = "DRAFT";
+                }
+            }
+
+            result.add(DocumentSummaryDTO.builder()
+                    .id(dokument.getId())
+                    .number(dokument.getCisloDokl() != null ? dokument.getCisloDokl() : "N/A")
+                    .type(typ != null ? typ.getNazev() : "INVOICE")
+                    .amount(dokument.getCastka() != null ? dokument.getCastka() : BigDecimal.ZERO)
+                    .currency(dokument.getMena() != null ? dokument.getMena() : "CZK")
+                    .dueDate(dokument.getDatumSplatnosti())
+                    .status(statusName)
+                    .companyName(spolecnost != null ? spolecnost.getNazev() : "N/A")
+                    .createdByName(zadavatel != null ? zadavatel.getJmeno() : "N/A")
+                    .build());
+        }
+
+        return result;
     }
 
     /**
@@ -54,12 +109,62 @@ public class DocumentAggregationService {
      * @return Complete document detail DTO
      */
     public DocumentDetailDTO getFullDocumentDetail(Long id) {
-        logger.info("Fetching full document detail for ID: " + id);
+        logger.info("Fetching full document detail for ID: " + id + " from Oracle");
 
-        // TODO: Replace with actual parallel API calls using CompletableFuture
-        // For now, return mock data for frontend development
+        // Fetch document from Oracle
+        DokumentEntity dokument = dokumentRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Document not found: " + id));
 
-        DocumentDTO document = createMockDocument(id);
+        // Fetch related data
+        DokumentTypEntity typ = dokumentTypRepository.findById(dokument.getIdCisDokument()).orElse(null);
+        DokumentStatusEntity status = dokumentStatusRepository.findById(dokument.getIdCisStatus()).orElse(null);
+        SpolecnostEntity spolecnost = spolecnostRepository.findById(dokument.getIdSpolecnost()).orElse(null);
+        AppUserEntity zadavatel = appUserRepository.findById(dokument.getIdZadavatel()).orElse(null);
+
+        // Map status
+        String statusName = "DRAFT";
+        if (status != null) {
+            switch (status.getId().intValue()) {
+                case 0: statusName = "DRAFT"; break;
+                case 1: statusName = "PENDING_APPROVAL"; break;
+                case 2: statusName = "APPROVED"; break;
+                case 3: statusName = "REJECTED"; break;
+                case 4: statusName = "OVERDUE"; break;
+                default: statusName = "DRAFT";
+            }
+        }
+
+        // Create document DTO from Oracle data
+        DocumentDTO document = DocumentDTO.builder()
+                .id(dokument.getId())
+                .number(dokument.getCisloDokl() != null ? dokument.getCisloDokl() : "N/A")
+                .type(typ != null ? typ.getNazev() : "INVOICE")
+                .amount(dokument.getCastka() != null ? dokument.getCastka() : BigDecimal.ZERO)
+                .currency(dokument.getMena() != null ? dokument.getMena() : "CZK")
+                .dueDate(dokument.getDatumSplatnosti())
+                .status(statusName)
+                .createdBy(UserSummaryDTO.builder()
+                        .id(zadavatel != null ? zadavatel.getId() : 0L)
+                        .name(zadavatel != null ? zadavatel.getJmeno() : "N/A")
+                        .email(zadavatel != null ? zadavatel.getEmail() : "N/A")
+                        .position(zadavatel != null ? zadavatel.getPozice() : "N/A")
+                        .build())
+                .company(CompanySummaryDTO.builder()
+                        .id(spolecnost != null ? spolecnost.getId() : 0L)
+                        .name(spolecnost != null ? spolecnost.getNazev() : "N/A")
+                        .registrationNumber(spolecnost != null ? spolecnost.getIco() : "N/A")
+                        .address("N/A")
+                        .build())
+                .createdAt(dokument.getCreatedAt() != null
+                        ? dokument.getCreatedAt().atZone(ZoneId.systemDefault()).toLocalDateTime()
+                        : LocalDateTime.now())
+                .updatedAt(dokument.getUpdatedAt() != null
+                        ? dokument.getUpdatedAt().atZone(ZoneId.systemDefault()).toLocalDateTime()
+                        : LocalDateTime.now())
+                .build();
+
+        // Use mock data for approval chain, transactions, and line items
+        // These would come from separate tables in real system
         List<ApprovalChainItemDTO> approvalChain = createMockApprovalChain();
         List<RelatedTransactionDTO> transactions = createMockTransactions();
         List<DocumentLineItemDTO> lineItems = createMockLineItems();
@@ -89,6 +194,20 @@ public class DocumentAggregationService {
         Long newId = System.currentTimeMillis(); // Generate unique ID
         String documentNumber = "DOC-" + LocalDate.now().getYear() + "-" + String.format("%05d", newId % 100000);
 
+        // Create user for createdBy field
+        UserSummaryDTO creator = UserSummaryDTO.builder()
+                .id(1L)
+                .name("Eva Černá")
+                .email("eva.cerna@jtbank.cz")
+                .position("CFO")
+                .build();
+
+        // Create company summary
+        CompanySummaryDTO company = CompanySummaryDTO.builder()
+                .id(1L)
+                .name(request.getCompanyName())
+                .build();
+
         DocumentDTO newDocument = DocumentDTO.builder()
                 .id(newId)
                 .number(documentNumber)
@@ -97,8 +216,8 @@ public class DocumentAggregationService {
                 .currency("CZK")
                 .dueDate(LocalDate.parse(request.getDueDate()))
                 .status("DRAFT")
-                .createdBy("Eva Černá")
-                .company(request.getCompanyName())
+                .createdBy(creator)
+                .company(company)
                 .createdAt(LocalDateTime.now())
                 .updatedAt(LocalDateTime.now())
                 .build();
@@ -114,7 +233,6 @@ public class DocumentAggregationService {
                 .canEdit(true)
                 .canApprove(false)
                 .canReject(false)
-                .canComment(true)
                 .build();
 
         return DocumentDetailDTO.builder()
@@ -134,38 +252,34 @@ public class DocumentAggregationService {
      * @return Updated document detail
      */
     public DocumentDetailDTO updateDocument(Long id, DocumentUpdateRequestDTO request) {
-        logger.info("Updating document: " + id);
+        logger.info("Updating document: " + id + " in Oracle");
 
-        // TODO: Call actual backend update endpoint
-        // For now, simulate update and return modified data
+        // Fetch existing document from database
+        DokumentEntity dokument = dokumentRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Document not found: " + id));
 
-        DocumentDetailDTO current = getFullDocumentDetail(id);
-        DocumentDTO document = current.getDocument();
-
-        // Apply updates
+        // Apply updates to entity
         if (request.getType() != null) {
-            document = DocumentDTO.builder()
-                    .id(document.getId())
-                    .number(document.getNumber())
-                    .type(request.getType())
-                    .amount(request.getAmount() != null ? request.getAmount() : document.getAmount())
-                    .currency(document.getCurrency())
-                    .dueDate(request.getDueDate() != null ? LocalDate.parse(request.getDueDate()) : document.getDueDate())
-                    .status(document.getStatus())
-                    .createdBy(document.getCreatedBy())
-                    .company(document.getCompany())
-                    .createdAt(document.getCreatedAt())
-                    .updatedAt(LocalDateTime.now())
-                    .build();
+            // Find type ID by name (we need to map type name to ID)
+            // For now, keep existing type
         }
 
-        return DocumentDetailDTO.builder()
-                .document(document)
-                .approvalChain(current.getApprovalChain())
-                .relatedTransactions(current.getRelatedTransactions())
-                .lineItems(current.getLineItems())
-                .metadata(current.getMetadata())
-                .build();
+        if (request.getAmount() != null) {
+            dokument.setCastka(request.getAmount());
+        }
+
+        if (request.getDueDate() != null) {
+            dokument.setDatumSplatnosti(LocalDate.parse(request.getDueDate()));
+        }
+
+        // Update timestamp
+        dokument.setUpdatedAt(LocalDateTime.now());
+
+        // Save to Oracle
+        dokumentRepository.save(dokument);
+
+        // Return updated document detail
+        return getFullDocumentDetail(id);
     }
 
     /**

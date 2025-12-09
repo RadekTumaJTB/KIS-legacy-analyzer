@@ -6,6 +6,8 @@ import DocumentDetailPage from './pages/DocumentDetailPage';
 import BudgetDashboard from './pages/BudgetDashboard';
 import BudgetListPage from './pages/BudgetListPage';
 import BudgetDetailPage from './pages/BudgetDetailPage';
+import ProjectListPage from './pages/ProjectListPage';
+import ProjectDetailPage from './pages/ProjectDetailPage';
 import './App.css';
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
             <Route path="/budgets/dashboard" element={<BudgetDashboard />} />
             <Route path="/budgets/:id" element={<BudgetDetailPage />} />
             <Route path="/budgets" element={<BudgetListPage />} />
+            <Route path="/projects" element={<ProjectListPage />} />
+            <Route path="/projects/:id" element={<ProjectDetailPage />} />
           </Routes>
         </main>
 
