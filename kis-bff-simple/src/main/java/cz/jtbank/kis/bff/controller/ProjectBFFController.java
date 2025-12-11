@@ -1,6 +1,7 @@
 package cz.jtbank.kis.bff.controller;
 
 import cz.jtbank.kis.bff.dto.project.*;
+import cz.jtbank.kis.bff.service.ProjectService;
 import cz.jtbank.kis.bff.service.ProjectAggregationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,9 @@ import java.util.logging.Logger;
 /**
  * Project BFF Controller
  *
- * Provides aggregated project endpoints for the frontend
+ * Provides aggregated project endpoints for the frontend.
+ * Uses Oracle stored procedures for CUD operations (ProjectService)
+ * and views for read operations (ProjectAggregationService)
  */
 @RestController
 @RequestMapping("/bff/projects")
@@ -20,9 +23,9 @@ public class ProjectBFFController {
 
     private static final Logger logger = Logger.getLogger(ProjectBFFController.class.getName());
 
-    private final ProjectAggregationService projectService;
+    private final ProjectService projectService;
 
-    public ProjectBFFController(ProjectAggregationService projectService) {
+    public ProjectBFFController(ProjectService projectService) {
         this.projectService = projectService;
     }
 
@@ -35,7 +38,7 @@ public class ProjectBFFController {
     public ResponseEntity<List<ProjectSummaryDTO>> getProjectList() {
         logger.info("GET /bff/projects");
 
-        List<ProjectSummaryDTO> projects = projectService.getProjectList();
+        List<ProjectSummaryDTO> projects = projectService.getAllProjects();
         return ResponseEntity.ok(projects);
     }
 
@@ -48,17 +51,17 @@ public class ProjectBFFController {
     public ResponseEntity<ProjectDetailDTO> getProjectDetail(@PathVariable Long id) {
         logger.info("GET /bff/projects/" + id);
 
-        ProjectDetailDTO project = projectService.getProjectDetail(id);
+        ProjectDetailDTO project = projectService.getProjectById(id);
         return ResponseEntity.ok(project);
     }
 
     /**
      * POST /bff/projects
      *
-     * Create new project
+     * Create new project via Oracle procedure KAP_PROJEKT.p_KpProjekt
      */
     @PostMapping
-    public ResponseEntity<ProjectDetailDTO> createProject(@RequestBody ProjectCreateRequestDTO request) {
+    public ResponseEntity<ProjectDetailDTO> createProject(@RequestBody ProjectFormData request) {
         logger.info("POST /bff/projects - Creating new project: " + request.getName());
 
         ProjectDetailDTO project = projectService.createProject(request);
@@ -68,12 +71,12 @@ public class ProjectBFFController {
     /**
      * PUT /bff/projects/{id}
      *
-     * Update existing project
+     * Update existing project via Oracle procedure KAP_PROJEKT.p_KpProjekt
      */
     @PutMapping("/{id}")
     public ResponseEntity<ProjectDetailDTO> updateProject(
             @PathVariable Long id,
-            @RequestBody ProjectUpdateRequestDTO request) {
+            @RequestBody ProjectFormData request) {
         logger.info("PUT /bff/projects/" + id);
 
         ProjectDetailDTO project = projectService.updateProject(id, request);
@@ -81,15 +84,15 @@ public class ProjectBFFController {
     }
 
     /**
-     * GET /bff/projects/{id}/cash-flow
+     * DELETE /bff/projects/{id}
      *
-     * Get project cash flow entries
+     * Delete project via Oracle procedure KAP_PROJEKT.p_KpProjekt
      */
-    @GetMapping("/{id}/cash-flow")
-    public ResponseEntity<List<ProjectCashFlowDTO>> getProjectCashFlow(@PathVariable Long id) {
-        logger.info("GET /bff/projects/" + id + "/cash-flow");
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteProject(@PathVariable Long id) {
+        logger.info("DELETE /bff/projects/" + id);
 
-        List<ProjectCashFlowDTO> cashFlow = projectService.getProjectCashFlow(id);
-        return ResponseEntity.ok(cashFlow);
+        projectService.deleteProject(id);
+        return ResponseEntity.ok().build();
     }
 }

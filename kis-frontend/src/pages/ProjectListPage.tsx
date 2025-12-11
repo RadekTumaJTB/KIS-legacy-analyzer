@@ -13,7 +13,7 @@ import type {
   SortingState,
   ColumnFiltersState,
 } from '@tanstack/react-table';
-import type { ProjectSummaryDTO } from '../types/project';
+import type { ProjectSummaryDTO, ProjectFormData } from '../types/project';
 import { fetchProjects, createProject } from '../api/projectApi';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
@@ -49,12 +49,7 @@ export default function ProjectListPage() {
     loadProjects();
   }, []);
 
-  const handleCreateProject = async (data: {
-    name: string;
-    projectNumber: string;
-    description?: string;
-    startDate: string;
-  }) => {
+  const handleCreateProject = async (data: ProjectFormData) => {
     try {
       const created = await createProject(data);
 
@@ -64,14 +59,14 @@ export default function ProjectListPage() {
         projectNumber: created.projectNumber,
         status: created.status,
         statusCode: created.statusCode,
-        projectManagerName: created.projectManager.name,
-        managementSegmentName: created.managementSegment.name,
-        startDate: created.startDate,
+        projectManagerName: created.projectManagerName,
+        managementSegmentName: created.managementSegmentName,
+        startDate: created.valuationStartDate,
         description: created.description,
       };
 
       setProjects(prev => [newSummary, ...prev]);
-      alert('✓ Projekt byl úspěšně vytvořen');
+      alert('Projekt byl úspěšně vytvořen');
     } catch (error) {
       console.error('Failed to create project:', error);
       alert('Nepodařilo se vytvořit projekt');
@@ -197,7 +192,7 @@ export default function ProjectListPage() {
   if (error) {
     return (
       <div className="project-list error">
-        <h2>❌ Chyba</h2>
+        <h2>Chyba</h2>
         <p>{error}</p>
       </div>
     );
@@ -208,7 +203,7 @@ export default function ProjectListPage() {
       {/* Header */}
       <div className="list-header">
         <div>
-          <h1>📋 Projekty</h1>
+          <h1>Projekty</h1>
           <p className="text-gray-600">
             {table.getFilteredRowModel().rows.length} projektů
           </p>

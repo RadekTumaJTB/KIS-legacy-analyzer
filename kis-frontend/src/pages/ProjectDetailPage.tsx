@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import type { ProjectDetailDTO } from '../types/project';
+import type { ProjectDetailDTO, ProjectFormData } from '../types/project';
 import { fetchProjectDetail, updateProject } from '../api/projectApi';
 import { Button } from '../components/ui/Button';
 import EditProjectModal from '../components/EditProjectModal';
@@ -33,15 +33,11 @@ export default function ProjectDetailPage() {
     loadProject();
   }, [id]);
 
-  const handleUpdateProject = async (projectId: number, data: {
-    name: string;
-    description?: string;
-    startDate: string;
-  }) => {
+  const handleUpdateProject = async (projectId: number, data: ProjectFormData) => {
     try {
       const updated = await updateProject(projectId, data);
       setProject(updated);
-      alert('✓ Projekt byl úspěšně aktualizován');
+      alert('Projekt byl úspěšně aktualizován');
     } catch (error) {
       console.error('Failed to update project:', error);
       alert('Nepodařilo se aktualizovat projekt');
@@ -61,7 +57,7 @@ export default function ProjectDetailPage() {
   if (error || !project) {
     return (
       <div className="project-detail error">
-        <h2>❌ Chyba</h2>
+        <h2>Chyba</h2>
         <p>{error || 'Projekt nenalezen'}</p>
       </div>
     );
@@ -77,7 +73,7 @@ export default function ProjectDetailPage() {
             <span className="breadcrumb-separator">›</span>
             <span className="breadcrumb-current">{project.projectNumber}</span>
           </div>
-          <h1>📋 {project.name}</h1>
+          <h1>{project.name}</h1>
           <div className="header-status">
             <span className={cn(
               'status-badge',
@@ -95,10 +91,10 @@ export default function ProjectDetailPage() {
         </div>
         <div className="header-actions">
           <Link to="/projects">
-            <Button variant="secondary">← Zpět na seznam</Button>
+            <Button variant="secondary">Zpět na seznam</Button>
           </Link>
           <Button variant="primary" onClick={() => setIsEditModalOpen(true)}>
-            ✏️ Upravit
+            Upravit
           </Button>
         </div>
       </div>
@@ -107,7 +103,7 @@ export default function ProjectDetailPage() {
       <div className="detail-content">
         {/* Left Column - Project Information */}
         <div className="project-info-section">
-          <h2>📊 Informace o projektu</h2>
+          <h2>Informace o projektu</h2>
 
           <div className="info-grid">
             <div className="info-item">
@@ -115,10 +111,24 @@ export default function ProjectDetailPage() {
               <div className="info-value">{project.projectNumber}</div>
             </div>
 
+            {project.oldProjectNumber && (
+              <div className="info-item">
+                <label>Staré číslo projektu</label>
+                <div className="info-value">{project.oldProjectNumber}</div>
+              </div>
+            )}
+
             <div className="info-item">
               <label>Projektový manažer</label>
               <div className="info-value">{project.projectManagerName}</div>
             </div>
+
+            {project.proposedByName && (
+              <div className="info-item">
+                <label>Navrhuje</label>
+                <div className="info-value">{project.proposedByName}</div>
+              </div>
+            )}
 
             <div className="info-item">
               <label>Oddělení</label>
@@ -131,9 +141,16 @@ export default function ProjectDetailPage() {
             </div>
 
             <div className="info-item">
-              <label>Datum zahájení</label>
+              <label>Datum zahájení přecenění</label>
               <div className="info-value">{formatDate(project.valuationStartDate)}</div>
             </div>
+
+            {project.valuationEndDate && (
+              <div className="info-item">
+                <label>Datum konce přecenění</label>
+                <div className="info-value">{formatDate(project.valuationEndDate)}</div>
+              </div>
+            )}
 
             <div className="info-item">
               <label>Frekvence</label>
@@ -158,14 +175,28 @@ export default function ProjectDetailPage() {
             <div className="info-item">
               <label>Sledování rozpočtu</label>
               <div className="info-value">
-                {project.budgetTrackingFlag === 'A' ? '✓ Ano' : '✗ Ne'}
+                {project.budgetTrackingFlag === 'A' || project.budgetTrackingFlag === '1' ? 'Ano' : 'Ne'}
               </div>
             </div>
+
+            {project.nextProjectCardReport && (
+              <div className="info-item">
+                <label>Další zpráva karty projektu</label>
+                <div className="info-value">{formatDate(project.nextProjectCardReport)}</div>
+              </div>
+            )}
+
+            {project.reportPeriodMonths && (
+              <div className="info-item">
+                <label>Perioda zpráv</label>
+                <div className="info-value">{project.reportPeriodMonths} měsíců</div>
+              </div>
+            )}
           </div>
 
           {/* Approval Levels */}
           <div className="approval-levels">
-            <h3>💰 Schvalovací úrovně</h3>
+            <h3>Schvalovací úrovně</h3>
             <div className="approval-grid">
               <div className="approval-item">
                 <label>Úroveň 1</label>
@@ -190,7 +221,7 @@ export default function ProjectDetailPage() {
 
           {/* Budget Increases */}
           <div className="budget-increases">
-            <h3>📈 Navýšení rozpočtu</h3>
+            <h3>Navýšení rozpočtu</h3>
             <div className="budget-grid">
               <div className="budget-item">
                 <label>PM navýšení</label>
@@ -210,7 +241,7 @@ export default function ProjectDetailPage() {
           {/* Description */}
           {project.description && (
             <div className="description-section">
-              <h3>📝 Popis</h3>
+              <h3>Popis</h3>
               <p>{project.description}</p>
             </div>
           )}
@@ -231,7 +262,7 @@ export default function ProjectDetailPage() {
 
         {/* Right Column - Cash Flow List */}
         <div className="cashflow-section">
-          <h2>💵 Cash Flow</h2>
+          <h2>Cash Flow</h2>
 
           {project.cashFlowList.length === 0 ? (
             <div className="empty-state">

@@ -1,0 +1,145 @@
+/* Reuse styles from DocumentsListPageAdvanced.css */
+@import './DocumentsListPageAdvanced.css';
+
+.asset-companies-page {
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.asset-companies-page.loading,
+.asset-companies-page.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 1rem;
+}
+
+/* Statistics Panel */
+.statistics-panel {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.stat-value.success {
+  color: #059669;
+}
+
+.stat-value.info {
+  color: #3b82f6;
+}
+
+/* Info Panel */
+.info-panel {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.info-panel h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin: 0 0 0.75rem 0;
+}
+
+.info-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-panel li {
+  font-size: 0.875rem;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.info-panel li:last-child {
+  margin-bottom: 0;
+}
+
+.info-panel strong {
+  font-weight: 600;
+}
+
+/* Permission badges in table */
+.permission-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.permission-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.permission-badge.view {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.permission-badge.edit {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* Company row hover effect */
+.data-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Company name styling */
+.company-name {
+  font-weight: 600;
+  color: #111827;
+}
+
+.company-ico {
+  font-family: 'Courier New', monospace;
+  color: #6b7280;
+  font-size: 0.875rem;
+}

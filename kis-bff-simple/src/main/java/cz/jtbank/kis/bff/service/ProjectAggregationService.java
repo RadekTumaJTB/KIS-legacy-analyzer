@@ -29,18 +29,42 @@ public class ProjectAggregationService {
     private final ProjectProposalRepository projectProposalRepository;
     private final ProjectStatusRepository projectStatusRepository;
     private final AppUserRepository appUserRepository;
+    private final CurrencyRepository currencyRepository;
+    private final ProjektFrekvenceRepository projektFrekvenceRepository;
+    private final ManagementSegmentRepository managementSegmentRepository;
+    private final TypProjektoveBilanceRepository typProjektoveBilanceRepository;
+    private final TypBudgetuProjektuRepository typBudgetuProjektuRepository;
+    private final ProjektKategorieRepository projektKategorieRepository;
+    private final ProjektCashFlowTypRepository projektCashFlowTypRepository;
+    private final ProjektInOutTypRepository projektInOutTypRepository;
 
     public ProjectAggregationService(
             ProjectRepository projectRepository,
             ProjectCashFlowRepository projectCashFlowRepository,
             ProjectProposalRepository projectProposalRepository,
             ProjectStatusRepository projectStatusRepository,
-            AppUserRepository appUserRepository) {
+            AppUserRepository appUserRepository,
+            CurrencyRepository currencyRepository,
+            ProjektFrekvenceRepository projektFrekvenceRepository,
+            ManagementSegmentRepository managementSegmentRepository,
+            TypProjektoveBilanceRepository typProjektoveBilanceRepository,
+            TypBudgetuProjektuRepository typBudgetuProjektuRepository,
+            ProjektKategorieRepository projektKategorieRepository,
+            ProjektCashFlowTypRepository projektCashFlowTypRepository,
+            ProjektInOutTypRepository projektInOutTypRepository) {
         this.projectRepository = projectRepository;
         this.projectCashFlowRepository = projectCashFlowRepository;
         this.projectProposalRepository = projectProposalRepository;
         this.projectStatusRepository = projectStatusRepository;
         this.appUserRepository = appUserRepository;
+        this.currencyRepository = currencyRepository;
+        this.projektFrekvenceRepository = projektFrekvenceRepository;
+        this.managementSegmentRepository = managementSegmentRepository;
+        this.typProjektoveBilanceRepository = typProjektoveBilanceRepository;
+        this.typBudgetuProjektuRepository = typBudgetuProjektuRepository;
+        this.projektKategorieRepository = projektKategorieRepository;
+        this.projektCashFlowTypRepository = projektCashFlowTypRepository;
+        this.projektInOutTypRepository = projektInOutTypRepository;
     }
 
     /**
@@ -75,7 +99,10 @@ public class ProjectAggregationService {
                     .status(status != null ? status.getName() : "N/A")
                     .statusCode(status != null ? status.getCode() : "UNKNOWN")
                     .projectManagerName(projectManager != null ? projectManager.getJmeno() : "N/A")
-                    .managementSegmentName("N/A") // TODO: Join with management segment table
+                    .managementSegmentName(project.getIdManagementSegment() != null
+                            ? managementSegmentRepository.findById(project.getIdManagementSegment())
+                                .map(ManagementSegmentEntity::getName).orElse("N/A")
+                            : "N/A")
                     .startDate(project.getCreatedAt() != null ? project.getCreatedAt().toLocalDate() : null)
                     .valuationStartDate(project.getValuationStartDate())
                     .description(project.getDescription())
@@ -118,12 +145,21 @@ public class ProjectAggregationService {
             cashFlowList.add(ProjectCashFlowDTO.builder()
                     .id(cashFlow.getId())
                     .idProject(cashFlow.getIdProject())
-                    .cashFlowTypeName("N/A") // TODO: Join with cash flow type table
+                    .cashFlowTypeName(cashFlow.getIdCashFlowType() != null
+                            ? projektCashFlowTypRepository.findById(cashFlow.getIdCashFlowType())
+                                .map(ProjektCashFlowTypEntity::getName).orElse("N/A")
+                            : "N/A")
                     .date(cashFlow.getDate())
                     .amount(cashFlow.getAmount())
-                    .currencyCode("N/A") // TODO: Join with currency table
-                    .inOutTypeName("N/A") // TODO: Join with in/out type table
-                    .positionTypeName("N/A") // TODO: Join with position type table
+                    .currencyCode(cashFlow.getIdCurrency() != null
+                            ? currencyRepository.findById(cashFlow.getIdCurrency())
+                                .map(CurrencyEntity::getCode).orElse("N/A")
+                            : "N/A")
+                    .inOutTypeName(cashFlow.getIdInOutType() != null
+                            ? projektInOutTypRepository.findById(cashFlow.getIdInOutType())
+                                .map(ProjektInOutTypEntity::getName).orElse("N/A")
+                            : "N/A")
+                    .positionTypeName("N/A") // Position type table doesn't exist
                     .notes(cashFlow.getNotes())
                     .build());
         }
@@ -136,12 +172,21 @@ public class ProjectAggregationService {
                 .statusCode(status != null ? status.getCode() : "UNKNOWN")
                 .projectManagerName(projectManager != null ? projectManager.getJmeno() : "N/A")
                 .idProjectManager(project.getIdProjectManager())
-                .managementSegmentName("N/A") // TODO: Join with management segment table
+                .managementSegmentName(project.getIdManagementSegment() != null
+                        ? managementSegmentRepository.findById(project.getIdManagementSegment())
+                            .map(ManagementSegmentEntity::getName).orElse("N/A")
+                        : "N/A")
                 .idManagementSegment(project.getIdManagementSegment())
-                .currencyCode("N/A") // TODO: Join with currency table
+                .currencyCode(project.getIdCurrency() != null
+                        ? currencyRepository.findById(project.getIdCurrency())
+                            .map(CurrencyEntity::getCode).orElse("N/A")
+                        : "N/A")
                 .idCurrency(project.getIdCurrency())
                 .valuationStartDate(project.getValuationStartDate())
-                .frequencyName("N/A") // TODO: Join with frequency table
+                .frequencyName(project.getIdFrequency() != null
+                        ? projektFrekvenceRepository.findById(project.getIdFrequency())
+                            .map(ProjektFrekvenceEntity::getName).orElse("N/A")
+                        : "N/A")
                 .idFrequency(project.getIdFrequency())
                 .description(project.getDescription())
                 .approvalLevel1Amount(project.getApprovalLevel1Amount())
@@ -150,11 +195,20 @@ public class ProjectAggregationService {
                 .budgetTrackingFlag(project.getBudgetTrackingFlag())
                 .budgetIncreaseAmountPM(project.getBudgetIncreaseAmountPM())
                 .budgetIncreaseAmountTop(project.getBudgetIncreaseAmountTop())
-                .balanceTypeName("N/A") // TODO: Join with balance type table
+                .balanceTypeName(project.getIdBalanceType() != null
+                        ? typProjektoveBilanceRepository.findById(project.getIdBalanceType())
+                            .map(TypProjektoveBilanceEntity::getName).orElse("N/A")
+                        : "N/A")
                 .idBalanceType(project.getIdBalanceType())
-                .budgetTypeName("N/A") // TODO: Join with budget type table
+                .budgetTypeName(project.getIdBudgetType() != null
+                        ? typBudgetuProjektuRepository.findById(project.getIdBudgetType())
+                            .map(TypBudgetuProjektuEntity::getName).orElse("N/A")
+                        : "N/A")
                 .idBudgetType(project.getIdBudgetType())
-                .categoryName("N/A") // TODO: Join with category table
+                .categoryName(project.getIdCategory() != null
+                        ? projektKategorieRepository.findById(project.getIdCategory())
+                            .map(ProjektKategorieEntity::getName).orElse("N/A")
+                        : "N/A")
                 .idCategory(project.getIdCategory())
                 .createdAt(project.getCreatedAt())
                 .createdBy(project.getCreatedBy())
@@ -190,7 +244,7 @@ public class ProjectAggregationService {
         project.setIdBudgetType(request.getIdBudgetType());
         project.setIdCategory(request.getIdCategory());
         project.setCreatedAt(LocalDateTime.now());
-        project.setCreatedBy("SYSTEM"); // TODO: Get from security context
+        project.setCreatedBy("SYSTEM"); // TODO: Implement Spring Security context when available
         project.setUpdatedAt(LocalDateTime.now());
 
         ProjectEntity savedProject = projectRepository.save(project);
@@ -292,12 +346,21 @@ public class ProjectAggregationService {
             result.add(ProjectCashFlowDTO.builder()
                     .id(cashFlow.getId())
                     .idProject(cashFlow.getIdProject())
-                    .cashFlowTypeName("N/A") // TODO: Join with cash flow type table
+                    .cashFlowTypeName(cashFlow.getIdCashFlowType() != null
+                            ? projektCashFlowTypRepository.findById(cashFlow.getIdCashFlowType())
+                                .map(ProjektCashFlowTypEntity::getName).orElse("N/A")
+                            : "N/A")
                     .date(cashFlow.getDate())
                     .amount(cashFlow.getAmount())
-                    .currencyCode("N/A") // TODO: Join with currency table
-                    .inOutTypeName("N/A") // TODO: Join with in/out type table
-                    .positionTypeName("N/A") // TODO: Join with position type table
+                    .currencyCode(cashFlow.getIdCurrency() != null
+                            ? currencyRepository.findById(cashFlow.getIdCurrency())
+                                .map(CurrencyEntity::getCode).orElse("N/A")
+                            : "N/A")
+                    .inOutTypeName(cashFlow.getIdInOutType() != null
+                            ? projektInOutTypRepository.findById(cashFlow.getIdInOutType())
+                                .map(ProjektInOutTypEntity::getName).orElse("N/A")
+                            : "N/A")
+                    .positionTypeName("N/A") // Position type table doesn't exist
                     .notes(cashFlow.getNotes())
                     .build());
         }

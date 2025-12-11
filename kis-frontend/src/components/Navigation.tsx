@@ -41,6 +41,12 @@ export default function Navigation() {
           >
             📋 Projekty
           </Link>
+          <Link
+            to="/assets/companies"
+            className={`nav-link ${location.pathname.startsWith('/assets') ? 'active' : ''}`}
+          >
+            🏢 Majetek
+          </Link>
         </div>
 
         <div className="nav-user">

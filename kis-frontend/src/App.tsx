@@ -8,6 +8,15 @@ import BudgetListPage from './pages/BudgetListPage';
 import BudgetDetailPage from './pages/BudgetDetailPage';
 import ProjectListPage from './pages/ProjectListPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
+// Assets Module
+import AssetCompaniesPage from './pages/AssetCompaniesPage';
+import AssetParticipationPage from './pages/AssetParticipationPage';
+// TODO: Move remaining Assets pages to src/pages/
+import {
+  EmissionListPage,
+  AssetOverviewPage,
+  AssetControlPage
+} from './components/assets';
 import './App.css';
 
 function App() {
@@ -26,6 +35,12 @@ function App() {
             <Route path="/budgets" element={<BudgetListPage />} />
             <Route path="/projects" element={<ProjectListPage />} />
             <Route path="/projects/:id" element={<ProjectDetailPage />} />
+            {/* Assets Module Routes */}
+            <Route path="/assets/emissions" element={<EmissionListPage />} />
+            <Route path="/assets/companies" element={<AssetCompaniesPage />} />
+            <Route path="/assets/participations/:companyId" element={<AssetParticipationPage />} />
+            <Route path="/assets/overview" element={<AssetOverviewPage />} />
+            <Route path="/assets/controls" element={<AssetControlPage />} />
           </Routes>
         </main>
 

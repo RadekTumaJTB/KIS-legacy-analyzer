@@ -1,0 +1,248 @@
+/* Reuse styles from DocumentsListPageAdvanced.css */
+@import './DocumentsListPageAdvanced.css';
+
+.asset-participation-page {
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.asset-participation-page.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 1rem;
+}
+
+/* Header with back button */
+.page-header-with-back {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.back-button {
+  padding: 0.5rem 1rem;
+  color: #374151;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+}
+
+.back-button:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* Filter panel */
+.filter-panel {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-field label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.filter-field input[type="text"],
+.filter-field input[type="date"] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #374151;
+  transition: all 0.2s;
+}
+
+.filter-field input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  ring: 2px;
+  ring-color: rgba(59, 130, 246, 0.5);
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+}
+
+.filter-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+  cursor: pointer;
+}
+
+.filter-checkbox input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  color: #3b82f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.new-button-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.results-count {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.results-count strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Totals footer in table */
+.data-table tfoot {
+  background-color: #f9fafb;
+  border-top: 2px solid #d1d5db;
+}
+
+.data-table tfoot td {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Currency columns */
+.currency-amount {
+  font-weight: 500;
+  color: #111827;
+}
+
+.currency-rate {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Account number (monospace) */
+.account-number {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Validity dates */
+.validity-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.validity-dates .main-date {
+  color: #111827;
+}
+
+.validity-dates .end-date {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Transaction type and method */
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.transaction-info .type {
+  font-weight: 500;
+  color: #111827;
+}
+
+.transaction-info .method {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Inactive row styling */
+.data-table tbody tr.inactive {
+  background-color: #f9fafb;
+  opacity: 0.75;
+}
+
+/* Action buttons in table */
+.action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.action-buttons button {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-buttons button.edit {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.action-buttons button.edit:hover {
+  background-color: #2563eb;
+}
+
+.action-buttons button.delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.action-buttons button.delete:hover {
+  background-color: #dc2626;
+}
+
+/* Empty state */
+.empty-state-with-action {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+}
+
+.empty-state-with-action p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state-with-action button {
+  margin-top: 1rem;
+}
